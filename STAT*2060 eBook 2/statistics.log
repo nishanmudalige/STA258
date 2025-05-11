@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.10)  24 AUG 2024 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.10)  11 MAY 2025 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1048,7 +1048,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \c@pmfstyle=\count345
 
 
-Package amsthm Warning: Unknown theoremstyle `pdf' on input line 319.
+Package amsthm Warning: Unknown theoremstyle `pdf' on input line 320.
 
 \c@pdfstyle=\count346
 \c@transstyle=\count347
@@ -1081,7 +1081,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \c@exinn=\count355
 
 
-Package amsthm Warning: Unknown theoremstyle `defin' on input line 573.
+Package amsthm Warning: Unknown theoremstyle `defin' on input line 574.
 
 \c@defin=\count356
 \c@ntstyle=\count357
@@ -1138,24 +1138,24 @@ LaTeX Warning: Label `figureSSR' multiply defined.
 )
 \openout1 = `statistics.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 727.
-LaTeX Font Info:    ... okay on input line 727.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 728.
+LaTeX Font Info:    ... okay on input line 728.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count359
@@ -1212,7 +1212,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 727.
+Package hyperref Info: Link coloring ON on input line 728.
 (./statistics.out) (./statistics.out)
 \@outlinefile=\write5
 \openout5 = `statistics.out'.
@@ -1220,27 +1220,27 @@ Package hyperref Info: Link coloring ON on input line 727.
 <cover_jgreen.jpg, id=441, 1405.25pt x 875.27pt>
 File: cover_jgreen.jpg Graphic file (type jpg)
 <use cover_jgreen.jpg>
-Package pdftex.def Info: cover_jgreen.jpg  used on input line 872.
+Package pdftex.def Info: cover_jgreen.jpg  used on input line 873.
 (pdftex.def)             Requested size: 1276.3351pt x 794.96999pt.
  [1
 
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./cover
 _jgreen.jpg>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 872
+LaTeX Font Info:    Trying to load font information for U+msa on input line 873
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 872
+LaTeX Font Info:    Trying to load font information for U+msb on input line 873
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 87
-2.
+3.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1249,16 +1249,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.872 
+l.873 
        [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 924--931
+Underfull \hbox (badness 10000) in paragraph at lines 925--932
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 935--938
+Underfull \hbox (badness 10000) in paragraph at lines 936--939
 
  []
 
@@ -1267,7 +1267,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.944 \clearpage
+l.945 \clearpage
                  [1{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super
 /cm-super-ts1.enc}] (./statistics.toc [2
 
@@ -1365,16 +1365,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
 
-
-./Section1/section1.tex:365: LaTeX Error: Invalid UTF-8 byte "92.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.365 ... thirty employees working in Company ABC’
-                                                  s IT department.
-? 
 [10] [11]) (./Section2/section2.tex
 Chapter 2.
 
@@ -2240,33 +2230,12 @@ as been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.930 \begin{example}
                      ]
-
-./Section6/section6.tex:949: LaTeX Error: Invalid UTF-8 byte "95.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.949 \multicolumn{2}{c}{•}
-                            & Mean $\bar{x}_d$ & 3,500 \\
-? 
-
-./Section6/section6.tex:951: LaTeX Error: Invalid UTF-8 byte "95.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.951 \multicolumn{2}{c}{•}
-                            & Standard Deviation $s_d$ & 1,750 \\
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 958--960
+Underfull \hbox (badness 10000) in paragraph at lines 957--959
 
  []
 
 [93]
-Underfull \hbox (badness 10000) in paragraph at lines 985--987
+Underfull \hbox (badness 10000) in paragraph at lines 984--986
 
  []
 
@@ -3124,20 +3093,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `statistics.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `statistics.out':
-(rerunfilecheck)             Before: 5FE5D7A5665222C25F2FFF57F4D4EC4C;8511
-(rerunfilecheck)             After:  49EA93EC7D6F9B4CAD391014C56E7345;21873.
+Package rerunfilecheck Info: File `statistics.out' has not changed.
+(rerunfilecheck)             Checksum: 49EA93EC7D6F9B4CAD391014C56E7345;21873.
  ) 
 Here is how much of TeX's memory you used:
- 29709 strings out of 474116
- 572789 string characters out of 5743682
+ 29708 strings out of 474116
+ 572774 string characters out of 5743682
  1962187 words of memory out of 5000000
- 50631 multiletter control sequences out of 15000+600000
+ 50630 multiletter control sequences out of 15000+600000
  572152 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  88i,20n,93p,1127b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3164,7 +3127,7 @@ ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texm
 f-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2024/texmf-
 dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on statistics.pdf (160 pages, 14794866 bytes).
+Output written on statistics.pdf (160 pages, 14795576 bytes).
 PDF statistics:
  2801 PDF objects out of 2984 (max. 8388607)
  2401 compressed objects within 25 object streams
