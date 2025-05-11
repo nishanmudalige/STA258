@@ -1,0 +1,955 @@
+\setcounter{equation}{0}
+
+\chapter{Vector Spaces}
+\label{sec.vspace} \pagestyle{myheadings}
+\markboth{\ref{sec.vspace}. \titleref{sec.vspace}}{}
+
+Up to now, we have described vectors as $n-$tuples in
+$\mbox{\tebbb R}^n$. They have been presented geometrically as
+arrows in 2 and 3-space. In this section we view vectors in a
+broader perspective. Ten axioms are presented. Any set that
+satisfies these axioms will be called a vector space and the
+elements in the set are called vectors. We will learn to identify
+subspaces of a vector space, to write vectors as a linear
+combination of one another and to construct a basis for a vector
+space. Every vector in the vector space can be written as a linear
+combination of the basis vectors.
+
+\noindent {\bf Learning Objectives}
+\index{linear combination}
+\begin{itemize}
+\item determine whether or not a set is a subspace of a vector space
+\item express vectors as linear combinations of other vectors
+\item determine whether a set of vectors is linearly independent
+or linearly dependent
+\item determine whether a set of vectors spans a vector space
+\item determine whether a set of vectors is a basis for a vector
+space
+\item find the dimension of a vector space
+\item find the coordinates of a vector with respect to a basis
+\end{itemize}
+
+\section{Definition of a Vector Space} \label{ssec.defvs}\markright{\ref{ssec.defvs} \titleref{ssec.defvs}}
+\index{vector space}\index{basis}
+Let $V$ be any non-empty set of objects on which two operations
+are defined: ${\bf u}+{\bf v}$ and $k{\bf v}$.  If the following
+axioms are met by all objects {\bf u,v} and {\bf w} in $V$, for
+all scalars $k$ and $l$, then $V$ is called a {\bf vector space},
+and the objects in $V$ are called {\bf vectors}.
+\begin{enumerate}
+\item For all ${\bf u, v}$ in $ V$, the sum ${\bf u}+{\bf v}$ is also in $V$ .
+\item ${\bf u}+{\bf v}={\bf v}+{\bf u}$.
+\item ${\bf u}+({\bf v}+{\bf w})=({\bf u}+{\bf v})+{\bf w}$.
+\item There exists a zero element, ${\bf 0}$ in $V$, such that ${\bf 0+v}={\bf
+v+0}={\bf v}$.
+\item For all ${\bf u}$ in $V$, there exists a ${\bf -u}$ in $V$, such that
+${\bf u +(-u)}={\bf (-u)+u}={\bf 0}$.
+\item For all ${\bf u}$ in $V$, the product $k{\bf u}$ is also in $V$.
+\item $k({\bf u}+{\bf v})=k{\bf u}+k{\bf v}$.
+\item $(k+l){\bf u}=k{\bf u}+l{\bf u}$.
+\item $k(l{\bf u})=(kl){\bf u}$.
+\item $1{\bf u}={\bf u}$.
+\end{enumerate}
+
+A vector space need not be composed of the vectors introduced in
+the previous sections.  A vector space is any set of elements that
+satisfies the above ten axioms.  The elements in that set are called vectors.
+Thus, a vector can be
+a matrix or even a function. Similarly, although the operations of
+a vector space are given as ``addition" and ``scalar
+multiplication", they need not be defined in the usual sense of
+addition and scalar multiplication. The only requirement is that
+the ten vector space axioms be met.
+
+In this course we will consider primarily the vector spaces
+$\mbox{\tebbb R}^n$ $(n\geq1)$. It is not intended that you
+memorize the ten axioms above. The axioms do no more than dictate
+that vector addition and scalar multiplication behave in a
+sensible way.
+
+\section{Subspaces}
+\label{ssec.subspace}\markright{\ref{ssec.subspace}
+\titleref{ssec.subspace}}
+\index{subspace}
+A subset $W$ of a vector space $V$ is a {\bf subspace} of $V$ if
+it is also a vector space under the addition and scalar
+multiplication of $V$.
+
+In the case of a subspace, it is not necessary to show that all
+ten axioms are satisfied. If $W$ is a subset of $V$, most of
+axioms will hold for $W$ because they hold for $V$. In fact, $W$
+is a subspace of $V$ if and only if the following conditions are
+met.
+
+\begin{enumerate}
+\item  $W$ is non-empty.
+\item For all ${\bf u,v}$ in $W$,  ${\bf u}+{\bf v}$ is in $W$ (closed
+under addition). \item For all $ k$ in $\mbox{\tebbb R}$ and for
+all ${\bf u}$ in $W$, $k{\bf u}$ is in $W$ (closed under scalar
+multiplication).
+\end{enumerate}
+
+Since every vector space has to have a zero vector, an easy way to
+show that $W$ is non-empty is to show that ${\bf 0}~\in~W$.
+
+\subsection*{Examples of Subspaces}
+
+The following is a list of the subspaces of $\mbox{\tebbb R}^2$
+and $\mbox{\tebbb R}^3$. Verification is left as an exercise.
+
+\begin{enumerate}
+\item Subspaces of $\mbox{\tebbb R}^2$:
+\begin{itemize}
+\item \{{\bf 0}\}=\{(0,0)\}, the set consisting of the zero vector alone.
+This subspace consists of a single point: the origin.
+\item Lines through the origin.  If ($x_0,y_0$) is a non-zero
+vector in $\mbox{\tebbb R}^2$ then the set \{$c(x_0,y_0)$:$c$ $\in$ $\mbox{\tebbb R}$\},
+the set of all multiples of ($x_0,y_0$), is the line through the origin and ($x_0,y_0$).
+\item $\mbox{\tebbb R}^2$.  We can think of  $\mbox{\tebbb R}^2$ as a subset of itself,
+and so viewed it is a vector subspace.  The subspaces \{{\bf 0}\} and $\mbox{\tebbb R}^2$
+are called improper subspaces.\\
+\end{itemize}
+\item Subspaces of $\mbox{\tebbb R}^3$
+\begin{itemize}
+\item \{{\bf 0}\}=\{(0,0,0)\}, the set consisting of the zero vector alone.
+This subspace consists of a single point: the origin.
+\item Lines through the origin.  If ($x_0,y_0,z_0$) is a non-zero
+vector in $\mbox{\tebbb R}^3$ then the set \{$c(x_0,y_0,z_0)$: $c$ $\in$ $\mbox{\tebbb R}$\},
+the set of all multiples of ($x_0,y_0,z_0$), is the line through the origin and ($x_0,y_0,z_0$).
+\item Planes through the origin.  If ($x_0,y_0,z_0$), ($x_1,y_1,z_1$) are non-zero points in
+$\mbox{\tebbb R}^3$, not on the same straight line through the origin
+(so neither is a multiple of the other),
+then \{$c_0(x_0,y_0,z_0)+c_1(x_1,y_1,z_1)$: $c_0, c_1$ $\in$ $\mbox{\tebbb R}$\} is a plane
+through the origin.  To evaluate the expression $c_0(x_0,y_0,z_0)+c_1(x_1,y_1,z_1)$, we extend
+the vectors $(x_0,y_0,z_0)$, $(x_1,y_1,z_1)$ by factors $c_0$, $c_1$ respectively and then add
+using the parallelogram law.  By varying $c_0$ and $c_1$ (remember $c_0$, $c_1$ can be negative
+as well as positive) we obtain all the points in the plane through the origin $(x_0,y_0,z_0)$ and $(x_1,y_1,z_1)$.
+\item $\mbox{\tebbb R}^3$.  We can think of $\mbox{\tebbb R}^3$ as a subset
+of itself, and then it is a vector subspace of itself.  The subspaces \{{\bf 0}\} and $\mbox{\tebbb R}^3$ are called improper subspaces.
+\end{itemize}
+\item The solution set of the homogeneous linear system $A{\bf
+x}={\bf 0}$ with $m$ equations and $n$ unknowns, is a subspace of
+$\mbox{\tebbb R}^n$.  This set is called the solution space of the
+system.
+\end{enumerate}
+
+\begin{example}
+\label{exam5.subspaces1}
+
+\noindent Let $W=\{(x,y,z): x,y,z \in ${\tebbb R} and $
+x^2+y^2+z^2 \leq 1 \}$. Is $W$ a subspace of {\tebbb R}$^{3}$? Why
+or why not?
+
+To prove that $W$ is a subspace of {\tebbb R}$^{3}$ we must show
+that it is non-empty,
+
+closed under addition and closed under scalar multiplication.
+
+Is $W$ closed under scalar multiplication?
+
+Note that for example, $(0,1,0)~\in~W$ because $0^2+1^2+0^2=1$. However
+
+$2(0,1,0)=$ $(0,2,0)$ does not belong to $W$ because $0^2+2^2+0^2=4$. Thus $W$
+
+is not closed under scalar multiplication. $W$ is therefore not a subspace.
+
+As a matter of fact, $W$ is not closed under addition either. Examine
+
+two vectors in $W$, ${\bf v}=(1,0,0)\ \ and\ \ {\bf u}=(0,0,1)$. The sum of these
+
+vectors is: $${\bf v}+ {\bf u}= (1,0,0)+(0,0,1)=(1,0,1)$$
+
+but $(1,0,1)$ is not in $W$ because $1^2+0^2+1^2=1+0+1=2$ which is
+not
+
+less than or equal to 1.
+
+\end{example}
+
+\noindent {\bf Activity \ref{ssec.subspace}:}
+
+\begin{enumerate}
+\item Verify that vectors on a line through the origin make up a
+subspace of $\mbox{\tebbb R}^2$. Why is it important that the line
+pass through the origin?
+\item The solution set of $A{\bf x}={\bf 0}$ consists of vectors
+of the form ${\bf x}=\left [ \begin{array}{c} x_1\\x_2\\ \vdots\\
+x_n \end{array} \right ]$.  Show that the set of
+solutions is a subspace by verifying the three axioms. Why isn't
+the set of solutions to $A{\bf x}={\bf b}$ a subspace when ${\bf
+b}\neq {\bf 0}$?
+\end{enumerate}
+
+\noindent Hints are given in the section \ref{answers5}.
+
+\section{Linear Combinations of Vectors}\index{linear combination of vectors}
+\label{ssec.lincomb}\markright{\ref{ssec.lincomb}
+\titleref{ssec.lincomb}}
+
+In this section, we introduce the idea of writing one vector as
+the sum of other vectors.
+
+The vector {\bf w} is a {\bf linear combination} of the vectors
+${\bf v}_1,{\bf v}_2, \ldots ,{\bf v}_r$ if it can be expressed as
+follows: $${\bf w}=k_1{\bf v}_1+k_2{\bf v}_2+ \cdots + k_r{\bf
+v}_r$$ where $k_i \in \mbox{\tebbb R}$.
+
+\begin{example}
+\label{exam5.standvec}
+
+The standard unit vectors for $\mbox{\tebbb R}^3$, are {\bf
+i}=$(1,0,0)$, {\bf j}=$(0,1,0)$ and {\bf k}=$(0,0,1)$.  All
+vectors of the form ${\bf v}=(v_1,v_2,v_3)$ can be written as a
+linear combination of the standard unit vectors. $${\bf v}=v_1{\bf
+i}+v_2{\bf j}+v_3{\bf k}=v_1(1,0,0)+v_2(0,1,0)+v_3(0,0,1).$$
+\end{example}
+
+By expressing linear combinations, we are essentially referencing
+a vector with respect to other known vectors.  The previous
+example demonstrated this by using the standard unit vectors as
+these references.  This is similar to the coordinate axes of the
+Cartesian coordinate system.  When we express vectors in terms of
+the coordinate system, we are expressing them with respect to the
+mutually perpendicular $x,y$ and $z$ axes.
+
+The vectors we use as reference points need not be perpendicular
+to each other.  The following example shows how to express a
+vector with respect to other vectors which are not necessarily
+standard unit vectors.
+
+\begin{example}
+\label{exam5.lincomb} Let ${\bf u}=(-1,3,2)$ and ${\bf
+v}=(6,-7,1)$.  Show that ${\bf w}=(-9,16,5)$ is a linear
+combination of {\bf u} and {\bf v}.
+
+We need to find $k_1$ and $k_2$ such that
+\begin{eqnarray*}
+{\bf w}&=&k_1{\bf u}+k_2{\bf v}\\
+(-9,16,5)&=&k_1(-1,3,2)+k_2(6,-7,1)\\
+\\ &\Rightarrow& \left \{ \begin{array}{l}
+                            -9=-k_1+6k_2\\
+                            16=3k_1-7k_2 \quad \quad .  \\
+                            5=2k_1+k_2\end{array} \right .
+\end{eqnarray*}
+The augmented matrix of this system is $$\left[
+\begin{array}{rrcr}-1&6&\vline&-9 \\ 3&-7&\vline&16 \\
+2&1&\vline&5 \end{array} \right]~which~reduces~to~\left[
+\begin{array}{rrcr}1&0&\vline&3 \\ 0&1&\vline&-1 \\
+0&0&\vline&0 \end{array} \right].$$ This means that the system is
+consistent and $k_1=3$, $k_2=-1$.
+
+\noindent Therefore {\bf w} is a linear combination of {\bf u} and
+{\bf v}: $$(-9,16,5)=3(-1,3,2)-(6,-7,1).$$
+\end{example}
+\begin{example}
+\label{exam5.lincomb2}
+Let ${\bf u}=(1,2,-1)$ and ${\bf v}=(0,1,3)$.  Write ${\bf w}=(-1,1,-2)$ as
+a linear combination of {\bf u} and {\bf v}.
+
+We must find $k_1, k_2$ such that
+${\bf w}=k_1{\bf u}+k_2{\bf v}$,
+$$i.e. (-1,1,-2)=k_1(1,2,-1)+k_2(0,1,3),$$
+or
+$$ 1k_1+0k_2=-1$$
+$$2k_1+1k_2=1$$
+$$-1k_1+3k_2=-2.$$
+The augmented matrix of the system is
+$$\left[\begin{array}{rrcr} 1&0&\vline&-1\\
+2&1&\vline&1\\
+-1&3&\vline&-2\end{array}\right]~which~reduces~to~\left[
+\begin{array}{rrcr}1&0&\vline&-1 \\ 0&1&\vline&3 \\
+0&0&\vline&-12 \end{array} \right].$$
+The system is inconsistent, so {\bf w} cannot be written as a linear combination of
+{\bf u} and {\bf v}.
+\end{example}
+
+\noindent {\bf Activity \ref{ssec.lincomb}:}
+
+Express the vectors $(1,0,0)$, $(0,1,0)$ and $(0,0,1)$ as linear
+combinations of the vectors $(1,2,0)$, $(1,3,4)$, and $(0,-1,4)$.
+Answers can be found in section \ref{answers5}.
+
+\section{Linear Independence}
+\label{ssec.li} \markright{\ref{ssec.li} \titleref{ssec.li}} This
+\index{linear independence}\index{linearly dependent}section deals with a topic which will prove to be very important
+to this course. Give extra attention to the definitions and
+statements given; do the activity questions prior to moving on.
+
+Let $S=\{{\bf v}_1,{\bf v}_2, \ldots, {\bf v}_n\}$ be a non-empty
+set of vectors, and consider the equation $$k_1{\bf v}_1+k_2{\bf
+v}_2+\cdots+k_n{\bf v}_n={\bf 0}$$ where $k_1,k_2,\cdots,k_n$ are
+scalars.
+
+This system is always consistent since $k_1=k_2=\cdots=k_n=0$ is
+always a solution. If that is the {\bf only} solution to the
+equation, then we call the set of vectors $S$ a {\bf linearly
+independent set}.  If there are other solutions, then $S$ is
+called {\bf linearly dependent}.
+
+\noindent We now give some examples dealing with linearly
+independent and dependent sets.
+
+\begin{example}
+\label{exam5.standardRn} Let $S=\{ {\bf e}_1, {\bf e}_2, {\bf
+e}_3, \ldots ,{\bf e}_n \}$ where \\ ${\bf e}_1=(1,0,\ldots, 0)$,
+${\bf e}_2=(0,1,0,\ldots,0), \quad \ldots \quad, {\bf
+e}_n=(0,0,\ldots,1)$.
+\begin{eqnarray*}
+k_1{\bf e}_1+k_2{\bf e}_2+\cdots+k_n{\bf
+e}_n&=&(k_1,k_2,\ldots,k_n)={\bf 0}\\ &\Leftrightarrow&
+k_1=k_2=\cdots=k_n=0. \end{eqnarray*} Therefore $S$ is linearly
+independent.
+\end{example}
+
+\begin{example}
+\label{exam5.ld}
+ Let ${\bf v}_1=(2,1,0,1)$, ${\bf v}_2=(1,5,3,1)$
+and ${\bf v}_3=(-3,3,3,-1)$ $$2{\bf v}_1-{\bf v}_2+{\bf
+v}_3=(4,2,0,2)-(1,5,3,1)+(-3,3,3,-1)=(0,0,0,0).$$ Therefore
+$S=\{{\bf v}_1,{\bf v}_2,{\bf v}_3\}$ is linearly dependent.
+\end{example}
+
+It has already been mentioned many times how important solving
+linear systems is to the course, and that many of the concepts
+introduced in previous sections would prove to be useful
+throughout the course. The next example illustrates this point.
+
+\begin{example}
+\label{exam5.li}  Let ${\bf v}_1=(1,2,3), {\bf v}_2=(3,8,1),
+\mbox{ and } {\bf v}_3=(4,4,7)$. Determine if the vectors are
+linearly independent or linearly dependent
+\begin{eqnarray*}
+{\bf 0}&=&k_1{\bf v}_1+k_2{\bf v}_2+k_3{\bf v}_3\\
+&=&k_1(1,2,3)+k_2(3,8,1)+k_3(4,4,7) \Leftrightarrow
+\end{eqnarray*} $$\left \{
+\begin{array}{r} k_1+3k_2+4k_3=0\\ 2k_1+8k_2+4k_3=0\\
+3k_1+k_2+7k_3=0 \end{array} \right . . $$ This system can be
+written in matrix form $$\left [\begin{array}{rrr}
+        1&3&4\\
+        2&8&4\\
+        3&1&7 \end{array} \right ]
+         \left [ \begin{array}{c}
+                       k_1\\
+                       k_2\\
+                       k_3 \end{array} \right ]=
+         \left [ \begin{array}{c}
+                    0\\0\\0 \end{array} \right ].$$
+The determinant of the matrix is not zero.  By theorem
+\ref{eq3invert} this system will have only the trivial solution
+(it is homogeneous).  Thus $k_1=k_2=k_3=0$ and ${\bf v}_1,{\bf
+v}_2$ and ${\bf v}_3$ are linearly independent.
+\end{example}
+
+\noindent A set $S$ with two or more vectors is:
+
+\parbox{2in}{(a) linearly dependent $\Leftrightarrow$}
+\parbox[t]{4in}{at least one of the vectors in $S$ is express-
+
+ible as a linear
+combination of the
+
+other vectors.}\\
+
+\parbox{2in}{(b) linearly independent $\Leftrightarrow$}
+\parbox[t]{4in}{ no vector in $S$ is expressible as a linear
+
+ combination of the other vectors in $S$.}
+
+\vspace{4mm}
+This result is not surprising and explains why we use the
+terminology ``linear independence''.  We said originally that a
+set of vectors is linearly dependent if at least one $k_i$ is not
+zero in the expression $$k_1{\bf v}_1+k_2{\bf v}_2+\cdots+k_n{\bf
+v}_n={\bf 0}.$$ Assume that some $k_j$ is not zero. Notice that we
+can rewrite the expression as:$$-\frac{k_1}{k_j}{\bf
+v}_1-\frac{k_2}{k_j}{\bf v}_2+\cdots- \frac{k_{n}}{k_j}{\bf
+v}_{n}={\bf v}_j.$$ Now, notice that we have expressed the vector
+${\bf v}_j$ in terms of the other vectors. That is, we have
+expressed it as a linear combination of the other vectors. It is
+\textit{linearly dependent} on the other vectors. If all constants
+are zero we cannot divide by any of them and thus we cannot
+express one vector as a linear combination of the others. The set
+of vectors must be linearly independent.
+
+A set that contains the zero vector will always be linearly
+dependent.  This is due to the fact that the equation $$k_1{\bf
+v}_1+k_2{\bf v}_2+\cdots+k_r{\bf v}_r+k_0({\bf 0})={\bf 0}$$ has
+solution, $k_1=k_2=\cdots=k_r=0, k_0=1$.
+
+\begin{example}
+\label{exam5.li4}
+Let $S=\{(x_1,y_1),(x_2,y_2),(x_3,y_3)\}$ be a set
+of 3 vectors in $\mbox{\tebbb R}^2$.  Is $S$ independent?
+
+We have to determine whether
+$$c_1(x_1,y_1)+c_2(x_2,y_2)+c_3(x_3,y_3)=(0,0)$$
+has a unique solution $(c_1=c_2=c_3=0)$.  As a system of equations in $c_1, c_2, c_3$ the augmented matrix is
+$$\left [\begin{array}{rrrcr} x_1&x_2&x_3&\vline&0\\
+y_1&y_2&y_3&\vline&0\end{array}\right]$$
+When we reduce this matrix, there will necessarily be at least one free variable because there are more columns than rows in the matrix.  The existence of a free variable means the solution is not unique, and so the vectors are dependent.
+\end{example}
+
+Although we considered three vectors in $\mbox{\tebbb R}^2$, exactly the same considerations would apply if we had $r$ vectors in $\mbox{\tebbb R}^n$ with $r>n$.  The left hand portion of the augmented matrix would have $r$ columns and $n$ rows, hence more columns than rows.  There would be at least one free variable and so a unique solution would be impossible.  Thus when $r>n$, a set of $r$ vectors in $\mbox{\tebbb R}^n$ is dependent.  Put another way, a linearly independent set in $\mbox{\tebbb R}^n$ can have at most $n$ vectors.
+
+\begin{example}
+\label{exam5.li5}
+Is the set $\{(1,0,6,5), (2,3,0,1), (-1,-2,2,1)\}$ linearly independent?
+
+We must determine whether
+$$c_1(1,0,6,5)+c_2(2,3,0,1)+c_3(-1,-2,2,1)=(0,0,0,0)$$
+has a unique solution $(c_1=c_2=c_3=0)$.  The matrix for this system of equations is
+$$\left [\begin{array}{rrrcr} 1&2&-1&\vline&0\\
+0&3&-2&\vline&0\\
+6&0&2&\vline&0\\
+5&1&1&\vline&0\end{array}\right]
+\leadsto
+\left[\begin{array}{rrrcr} 1&2&-1&\vline&0\\
+0&1&-\frac{2}{3}&\vline&0\\
+0&0&0&\vline&0\\
+0&0&0&\vline&0\end{array}\right].$$
+There is a free variable $(c_3)$, and so the solution is not unique.  The vectors are dependent.  In fact by solving the system of equations we see
+$$-1(1,0,6,5)+2(2,3,0,1)+3(-1,-2,2,1)=(0,0,0,0).$$
+\end{example}
+
+In summary, if we have $r$ vectors in $\mbox{\tebbb R}^n$, then
+\begin{enumerate}
+\item  if $r>n$ the vectors are dependent,
+\item  if $r=n$, check independence using the determinant (see example \ref{exam5.li}).
+\item  if $r<n$, check independence by solving a system of equations (see example \ref{exam5.li5}).
+\end{enumerate}
+
+Geometrically, linear dependence of two vectors in 2-space means
+that both vectors, with their initial points placed at the same
+point, lie on the same line. One vector is a scalar multiple of
+the other, thus, it is a linear combination of the other.
+
+In $\mbox{\tebbb R}^3$, if two or three vectors lie on the same
+line they will be linearly dependent as in $\mbox{\tebbb R}^2$.
+Three vectors, with their initial points all placed at the same
+point, will be linearly independent if none of the vectors lie in
+the same plane as the other two.
+
+\noindent {\bf Activity \ref{ssec.li}:}
+
+Determine whether the following sets are linearly independent or
+linearly dependent.
+
+\begin{enumerate}
+\item $S=\{ (2,1,0,1), \ (-1,-2,3,4), \ (3,0,3,6) \}$
+\item $S=\{ (1,0,1), \ (-2,1,1), \ (4,-1,3) \}$
+\end{enumerate}
+
+The solutions can be found in section \ref{answers5}.
+
+\section{Span of a Set of Vectors} \label{ssec.span} \markright{\ref{ssec.span} \titleref{ssec.span}}
+
+In this section, we define the span of a set of vectors $S=\{{\bf
+v}_1,{\bf v}_2, \cdots, {\bf v}_r\}\subseteq V$. The {\bf span}\index{span} of
+$S$, written span$(S)$ is the set of all linear combinations of
+the vectors is $S$. Hence
+$$span(S)=\{ c_1{\bf v}_1+c_2{\bf v}_2+ \cdots+ c_r{\bf v}_r :
+c_1,~c_2,\cdots, c_r~\epsilon~\mbox{\tebbb R} \}.$$
+
+\noindent Other common notation for this is $$lin(S), or~
+span\{{\bf v}_1,{\bf v}_2, \cdots, {\bf v}_r\}, or~lin\{{\bf
+v}_1,{\bf v}_2, \cdots, {\bf v}_r\}.$$
+
+The span of a set of vectors $S$ is always a subspace of $V$. This
+is because if $c_1{\bf v}_1+c_2{\bf v}_2+ \cdots+ c_r{\bf v}_r$
+and $d_1{\bf v}_1+d_2{\bf v}_2+ \cdots+ d_r{\bf v}_r$ are two
+vectors in span$(S)$, then their sum,
+$$ (c_1+d_1){\bf v}_1+(c_2+d_2){\bf v}_2+ \cdots+ (c_r+d_r){\bf v}_r$$
+can be seen to be a vector in span$(S)$ and so span$(S)$ is closed
+under vector addition. Similarly for any scalar $k$,$$k(c_1{\bf
+v}_1+c_2{\bf v}_2+ \cdots+ c_r{\bf v}_r)=(kc_1){\bf v}_1+(kc_2)
+{\bf v}_2+ \cdots+ (kc_r){\bf v}_r$$ and span$(S)$ is closed under
+scalar multiplication.
+
+For some sets of vectors $S$, span$(S)$ will actually equal ${
+V}$. In this case we say that $S$ {\bf spans} $V$, or $S$ is a
+{\bf spanning set}\index{spanning set} for $V$. The point is that when $S$ spans $V$,
+{any} vector {\bf v} can be written as a linear combination
+$${\bf v}=c_1{\bf v}_1+c_2{\bf v}_2+ \cdots + c_r{\bf v}_r,$$
+though not necessarily uniquely.
+
+The idea of a spanning set is intuitive in $\mbox{\tebbb R}^2$.
+For example, because any vector $$(x,y)=x(1,0)+y(0,1),$$ we can
+say that the set $\{(1,0),(0,1)\}$ spans $\mbox{\tebbb R}^2$. Here
+we are describing $(x,y)$ relative to the $x$ and $y$-axis of
+Cartesian geometry. Similarly, $$(x,y)=(x-y)(1,0)+y(1,1).$$ This
+means that the set $\{(1,0),(1,1)\}$ also spans $\mbox{\tebbb
+R}^2$, because any vector in $\mbox{\tebbb R}^2$ can be written as
+a linear combination of $(1,0)$ and $(1,1)$. Note that
+$\{(1,0),(0,1),(1,1)\}$ also spans $\mbox{\tebbb R}^2$, because
+\begin{eqnarray*}
+(x,y)&=&(y-x)(0,1)+x(1,1) \\ &=&-y(1,0)-x(0,1)+(x+y)(1,1)~etc.
+\end{eqnarray*}
+
+\noindent In this case, the expression for $(x,y)$ as a linear
+combination of $\{(1,0),(0,1),(1,1)\}$ is not unique.
+
+\begin{example}
+\label{exam5.span} Determine whether ${\bf v}_1=(1,-2,1)$,${\bf
+v}_2=(2,1,-1)$ and ${\bf v}_3=(7,-4,1)$ span the vector space
+$\mbox{\tebbb R}^3$.
+
+The question can be reworded to:  can the vector ${\bf
+w}=(w_1,w_2,w_3)$ be expressed as a linear combination of ${\bf
+v}_1,{\bf v}_2$ and ${\bf v}_3$? That is, can we find $a,b,c$ so
+that
+\begin{eqnarray*}
+(w_1,w_2,w_3)&=&a(1,-2,1)+b(2,1,-1)+c(7,-4,1)\\
+&=&(a+2b+7c,-2a+b-4c,a-b+c)? \\
+\end{eqnarray*}
+
+As a system of equations:
+$$ \begin{array}{rrrrrrr}
+                a&+&2b&+&7c&=&w_1\\
+              -2a&+& b&-&4c &=&w_2\\
+                a&-&b&+&c&=&w_3 \end{array}  $$
+
+Written in matrix form:
+                      $$\left [ \begin{array}{rrr}
+                                        1&2&7\\
+                                        -2&1&-4\\
+                                        1&-1&1 \end{array} \right ] \left [ \begin{array}{c} a\\b\\c \end{array}
+                                        \right ] = \left [ \begin{array}{c} w_1\\w_2\\w_3 \end{array} \right ] .$$
+We must now determine whether this system is consistent.  By
+theorem \ref{eq3invert}, there is a solution for all $w_1,w_2,w_3$
+if and only if the coefficient matrix is invertible (if the
+determinant is non-zero).  In this case, the determinant is zero,
+therefore ${\bf v}_1,{\bf v}_2$ and ${\bf v}_3$ do not span
+$\mbox{\tebbb R}^3$.
+\end{example}
+\begin{example}
+\label{exam5.span2}
+Do the two vectors {$(x_1,y_1,z_1),(x_2,y_2,z_2)$} span $\mbox{\tebbb R}^3$?
+
+We have to determine whether
+$$c_1(x_1,y_1,z_1)+c_2(x_2,y_2,z_2)=(w_1,w_2,w_3)$$
+has a solution for {\bf all} choices of $w_1,w_2,w_3$.  As a system
+of equations in $c_1,c_2,$ the matrix is
+$$\left [\begin{array}{rrcr} x_1&x_2&\vline&w_1\\
+y_1&y_2&\vline&w_2\\
+z_1&z_2&\vline&w_3\end{array}\right].$$
+When we reduce the left hand portion of the matrix
+to the row-echelon form(using e.g. Gaussian elimination) the bottom row of the reduced matrix becomes
+$$\left [\begin{array}{rrcr} 0&0&\vline&\alpha(w_1,w_2,w_3)\end{array}\right],$$
+where $\alpha(w_1,w_2,w_3)$ is some function of $w_1,w_2,w_3$ depending on the arithmetic used during the reduction process.  It is guaranteed that the $(3,1)$ and $(3,2)$ places of the reduced matrix are both zero.  This is because there are more rows than columns.  By choosing $w_1,w_2,w_3$ so that $\alpha(w_1,w_2,w_3) \neq 0$, we achieve an inconsistent system of equations.  This means that the $(w_1,w_2,w_3)$ chosen is not in the span of
+{$(x_1,y_1,z_1),(x_2,y_2,z_2)$}.  These vectors therefore do not span $\mbox{\tebbb R}^3$.
+\end{example}
+
+Although we considered two vectors in $\mbox{\tebbb R}^3$, exactly the same considerations would apply if we had $r$ vectors in $\mbox{\tebbb R}^n$, with $r<n$.  The left hand portion of the augmented matrix would have $r$ columns and $n$ rows, and hence more rows than columns.  This would guarantee a bottom row of
+$$\left [\begin{array}{rrrrcr} 0&0&\cdots&0&\vline&\alpha(w_1,\cdots,w_n)\end{array}\right],$$
+in the reduced form of the matrix.  By selecting $w_1,w_2,\cdots,w_n$ so that $\alpha(w_1,w_2, $ \\ $\cdots,w_n)\neq 0$ we would obtain an inconsistent system.  Not every vector $(w_1,w_2,$\\$\cdots,w_n)$ could be written as a linear combination of the $r$ given vectors.  The $r$ vectors would therefore not span $\mbox{\tebbb R}^n$.
+
+\begin{example}
+\label{exam5.span3}
+Do the vectors {$(1,2),(2,-1),(-1,3)$} span $\mbox{\tebbb R}^2$?
+
+We have to determine whether
+$$c_1(1,2)+c_2(2,-1)+c_3(-1,3)=(w_1,w_2)$$
+has a solution for all choices of $w_1,w_2$.  The matrix of the system of equations is
+$$\left [\begin{array}{rrrcr} 1&2&-1&\vline&w_1\\
+2&-1&3&\vline&w_2\end{array}\right] \leadsto
+\left [\begin{array}{rrrcr} 1&0&1&\vline&\frac{(w_1+2w_2)}{5}\\
+0&1&-1&\vline&\frac{(2w_1-w_2)}{5}\end{array}\right].$$
+This always has a solution, e.g.
+$$c_1=\frac{(w_1+2w_2)}{5},\ c_2=\frac{(2w_1-w_2)}{5},\ c_3=0.$$
+Thus the vectors span $\mbox{\tebbb R}^2$.
+\end{example}
+
+In summary, if we have $r$ vectors in $\mbox{\tebbb R}^n$ then
+\begin{enumerate}
+\item  if $r<n$ the vectors do not span $\mbox{\tebbb R}^n$,
+\item  if $r=n$, you determine whether the vectors span by evaluating a determinant
+(see Example \ref{exam5.span})
+\item  if $r>n$, you check whether the vectors span $\mbox{\tebbb R}^n$ by solving
+a system of equations (see Example \ref{exam5.span3}).
+\end{enumerate}
+Many different sets of vectors can span a given vector space.
+Geometrically, this is illustrated best with a plane in 3-space.
+The plane is spanned by any two non-zero vectors in the plane that are not colinear.
+
+\noindent {\bf Activity \ref{ssec.span}:}
+
+\begin{enumerate}
+\item Does $(1,0,1)$ lie in the span of \{$(2,-3,-4),(3,-2,-1)$\}?
+\item Does $(4,-6,-7)$ lie in the span of \{$(1,0,1),(-1,2,3)$\}?
+\end{enumerate}
+
+\noindent The answers can be found in section \ref{answers5}.
+
+\section{Basis of a Vector Space}\index{basis of a vector space}
+\label{ssec.basis}\markright{\ref{ssec.basis}
+\titleref{ssec.basis}}
+
+In this section we define a basis of a vector space, and indicate
+its importance.
+
+For a vector space $V$, and $S=\{{\bf v}_1,{\bf v}_2, \ldots, {\bf
+v}_n\}$ such that $S \subseteq V$, $S$ is called a {\bf basis} for
+$V$ if :
+\begin{enumerate}
+\item $S$ is \textit{linearly independent}
+\item $S$ $spans$ $V$.
+\end{enumerate}
+
+\noindent{\bf Note:  It is very important at this point that you
+fully understand what these two terms really mean!}
+
+The importance of a basis is that if $S=\{{\bf v}_1,{\bf v}_2,
+\ldots, {\bf v}_n\}$ is a basis for $V$, then every vector in $V$
+can be expressed as a {\bf unique}\index{unique} linear combination of vectors
+in $S$. That is, for all ${\bf w} \in V$, there exist unique
+$c_1,c_2,\cdots, c_n$ such that
+$${\bf w}=c_1{\bf v}_1+c_2{\bf v}_2+\cdots+c_n{\bf v}_n.$$
+
+It was noted in the previous section that if $S$ spans $V$, all
+vectors in $V$ must be linear combinations of the vectors in $S$.
+Suppose there are two different linear combinations to represent
+one vector {\bf w} in $V$.  That is, suppose
+
+\begin{eqnarray}
+\label{unique1} {\bf w}&=& c_1{\bf v}_1+ \cdots +c_n{\bf v}_n\\
+\label{unique2} {\bf w}&=& k_1{\bf v}_1+ \cdots +k_n{\bf v}_n.
+\end{eqnarray}
+
+Now, subtract equations \ref{unique1} and \ref{unique2}.  $${\bf
+0}=(c_1-k_1){\bf v}_1 +\cdots +(c_n-k_n){\bf v}_n.$$ But remember
+that $S$ is a \textit{basis} for $V$, meaning that the vectors
+${\bf v}_1, {\bf v}_2, \ldots, {\bf v}_n$ are \textit{linearly
+independent}. Therefore $$(c_1-k_1)=0,\quad \ldots
+\quad,(c_n-k_n)=0.$$ So, we have $c_1=k_1, \ c_2=k_2 \ \ldots \
+,c_n=k_n$. This shows us that the equations \ref{unique1} and
+\ref{unique2} are identical and there is only one expansion for
+{\bf w}. The unique representation of a vector ${\bf w} \in V$,
+$${\bf w}=c_1{\bf v}_1+c_2{\bf v}_2+\cdots+c_n{\bf v}_n$$ is the
+expression for {\bf w} in terms of $S$. Since the scalars
+$c_1,c_2,\cdots,c_n$ are uniquely defined given {\bf w} and $S$,
+we call $c_1,c_2,\ldots,c_n$ the {\bf coordinates} of {\bf w}
+relative to the basis $S$. We represent this symbolically as
+$$({\bf w})_S=(c_1,c_2,\ldots, c_n).$$
+
+\begin{example}
+\label{exam5.basisR3}
+
+Let $V=\mbox{\tebbb R}^3$, ${\bf i}=(1,0,0)$, ${\bf j}=(0,1,0)$,
+${\bf k}=(0,0,1)$ and $S=\{{\bf i,j,k}\}$.  $S$ is linearly
+independent and spans $\mbox{\tebbb R}^3$.  Let ${\bf v}= (a,b,c)$
+be a vector in $\mbox{\tebbb R}^3$, in terms of the basis $S$.  So
+$(a,b,c)=a{\bf i}+b{\bf j}+c{\bf k}$ and $({\bf v})_S=(a,b,c)$.
+$S$ is the {\bf standard basis} for $\mbox{\tebbb R}^3$.
+\end{example}
+
+\begin{example}
+\label{exam5.basisRn}
+
+Let $V=\mbox{\tebbb R}^n$, ${\bf e}_1=(1,0,0,\ldots,0)$, ${\bf
+e}_2=(0,1,0,\ldots,0), \ldots$, ${\bf e}_n=(0,0,\ldots,1)$, and
+$S=\{ {\bf e}_1,{\bf e}_2,{\bf e}_3,\ldots, {\bf e}_n\}$.  $S$ is
+called the {\bf standard basis} for $\mbox{\tebbb R}^n$.
+\end{example}
+
+\noindent When a vector is expressed in terms of the standard
+basis, by convention no subscript is needed.  The vector ${\bf
+v}=(4,3,2)$ is actually $4{\bf i}+3{\bf j}+2{\bf k}$. The standard
+basis is only one example of a basis.
+
+There are many bases for the same vector space, as the following
+example shows.
+
+\begin{example}
+\label{exam5.isitbasis} Let ${\bf v}_1=(1,3,-1)$, ${\bf
+v}_2=(1,4,3)$ and ${\bf v}_3=(1,5,8)$.  Is $S=\{ {\bf v}_1, {\bf
+v}_2,{\bf v}_3\}$ a basis for $\mbox{\tebbb R}^3$?
+
+Condition 1:  $S$ spans $\mbox{\tebbb R}^3$.  Let ${\bf
+b}=(b_1,b_2,b_3)$ be any vector in  $\mbox{\tebbb R}^3$. To
+determine whether the set of vectors spans $\mbox{\tebbb R}^3$, we
+need to find a linear combination to represent {\bf b} in terms of
+$S$. Mathematically, we need to solve
+
+$$\begin{array}{ccc} {\bf b}&=&a{\bf v}_1+b{\bf v}_2+c{\bf v}_3\\
+(b_1,b_2,b_3)&=&a(1,3,-1)+b(1,4,3)+c(1,5,8)\\ \left [
+\begin{array}{c} b_1\\b_2\\b_3 \end{array} \right ]&=& \left [
+\begin{array}{rrr} 1&1&1\\
+    3&4&5\\
+    -1&3&8  \end{array} \right ] \left [ \begin{array}{c}
+    a\\b\\c \end{array} \right ]
+\end{array}$$
+This is a linear system, with coefficient matrix $$A=\left [
+\begin{array}{rrr}
+    1&1&1\\
+    3&4&5\\
+    -1&3&8 \end{array} \right ] \mbox{ and } \rm{det}(A)=1 \neq 0.$$
+    The determinant of the coefficient matrix
+is not 0, thus by theorem \ref{eq3invert}, there is a solution to
+the system for all {\bf b}. This means that for all {\bf b} in
+$\mbox{\tebbb R}^3$, a solution $(a,b,c)$ can be found, and thus
+{\bf b} can always be written in terms of $S$. In other words, $S$
+spans $\mbox{\tebbb R}^3$.
+
+ Condition 2:  $S$ is linearly independent.
+Recall that the system is linearly independent if $$a{\bf
+v}_1+b{\bf v}_2+c{\bf v}_3={\bf 0} \Rightarrow a=b=c=0 \mbox{ is
+the only solution }.$$  Again, the coefficient matrix for the
+system has a nonzero determinant, so by theorem \ref{eq3invert},
+the only solution to the system is \mbox{$a=b=c=0$}. Therefore,
+$S$ is linearly independent.
+
+Both conditions for a basis are met, therefore $S$ is a basis for
+$\mbox{\tebbb R}^3$.
+\end{example}
+
+\begin{example}
+\label{exam5.wrtbasis} Express the vector ${\bf v}=(0,1,3)$ with
+respect to $S$ the basis given in example \ref{exam5.isitbasis}.
+$$ (0,1,3)=c_1(1,3,-1)+c_2(1,4,3)+c_3(1,5,8)$$
+$$\Rightarrow \left
+\{ \begin{array}{rrrrrrr}
+                                c_1&+&c_2&+&c_3&=&0\\
+                                3c_1&+&4c_2&+&5c_3&=&1\\
+                                -c_1&+&3c_2&+&8c_3&=&3 \end{array} \right
+                                . . $$
+Using any of the methods described to solve a system of linear
+equations yields the answer $c_1=-2$, $c_2=3$ and $c_3=-1$.
+Therefore the vector ${\bf v}=(0,1,3)$ expressed in terms of $S$
+is $({\bf v})_S=(-2,3,-1)$. \end{example}
+
+\begin{example}
+\label{exam5.wrtbasisR3} Express the vector $({\bf v})_S=(0,1,3)$
+where $S$ is from example \ref{exam5.isitbasis}, in terms of the
+standard basis of $\mbox{\tebbb R}^3$.
+\begin{eqnarray*}
+{\bf v}&=&0{\bf v}_1+1{\bf v}_2+3{\bf v}_3\\
+&=&1(1,4,3)+3(1,5,8)\\ &=&(4,19,27) \\ &=& 4{\bf i}+19{\bf
+j}+27{\bf k} .
+\end{eqnarray*}
+\end{example}
+
+Let $S=\{{\bf v}_1,{\bf v}_2, \ldots, {\bf v}_n\}$ be any linearly
+independent set of vectors in $V$.  The linear span of $S$ is a
+vector subspace of $V$. Since $S$ is linearly independent and
+spans lin($S$), $S$ will be a basis for lin($S$).
+
+{\bf Activity \ref{ssec.basis}:}
+
+\begin{enumerate}
+\item Using the vectors from activity \ref{ssec.span}, which of
+the two sets of vectors form a basis for
+$W=\rm{lin}(S)=\rm{lin}(S')$?
+\item Let $S=\{{\bf v}_1=(1,0,1,0), {\bf v}_2=(-1,2,2,0), {\bf v}_3=(0,3,4,1),
+{\bf v}_4=(1,-1,$\\$0,-1) \}$ span $V$. Note that ${\bf w}={\bf
+v}_1-{\bf v}_2+{\bf v}_3$ and ${\bf w}=-{\bf v}_1-2{\bf v}_2+2{\bf
+v}_3+{\bf v}_4$. In this section we stated that every vector in
+$V$ can be expressed as a unique linear combination of the basis
+vectors. Does this example contradict that statement? Why or why
+not?
+\end{enumerate}
+
+\noindent Answers can be found in section \ref{answers5}
+
+\section{Dimension of a Vector Space}\index{dimension of a vector space}
+\label{ssec.dimension} \markright{\ref{ssec.dimension}
+\titleref{ssec.dimension}}
+
+In this section, we define the dimension of a vector space. This
+will give us some idea as to the nature of the sizes of vector
+spaces. We think (intuitively) that this piece of paper is
+two-dimensional and that the space we live in is three
+dimensional. What, for example, is the dimension of the space
+spanned by three $4$-tuple vectors?
+
+The dimension of a vector space $V$ is defined to be the number of
+vectors in a basis for $V$. This only makes sense if all bases for
+$V$ have the same number of vectors. To see that this is true, we
+consider a set of vectors $S=\{ {\bf u}_1, {\bf u}_2,{\bf u}_3\}$
+in $V$, and $B=\{ {\bf v}_1, {\bf v}_2\}$ a basis of $V$. We ask
+the question: is $S$ dependent or independent?
+
+For $S$ to be independent, the equation
+\begin{equation} \label{unique3}
+c_1{\bf u}_1+c_2{\bf u}_2+c_3{\bf u}_3={\bf 0}
+\end{equation}
+must have a unique solution $(c_1=c_2=c_3=0)$. Since $\{ {\bf
+v}_1, {\bf v}_2 \}$ is a basis for $V$ and ${\bf u}_1,{\bf
+u}_2,{\bf u}_3 \in V$, we can write
+\begin{eqnarray*}
+{\bf u}_1&=&a_{11}{\bf v}_1+a_{21}{\bf v}_2 \\
+{\bf u}_2&=&a_{12}{\bf v}_1+a_{22}{\bf v}_2 \\
+{\bf u}_3&=&a_{13}{\bf v}_1+a_{23}{\bf v}_2
+\end{eqnarray*}
+for scalars $a_{ij}$. The equation \ref{unique3} becomes
+$$c_1(a_{11}{\bf v}_1+a_{21}{\bf v}_2)+c_2(a_{12}{\bf v}_1+a_{22}{\bf
+v}_2)+c_3(a_{13}{\bf v}_1+a_{23}{\bf v}_2)={\bf 0}, $$
+$$i.e.~(c_1a_{11}+c_2a_{12}+c_3a_{13}){\bf v}_1+ (c_1a_{21}+c_2a_{22}+c_3a_{23}){\bf
+v}_2={\bf 0}.$$ Since the set $\{ {\bf v}_1,{\bf v}_2 \}$ is
+independent (it is a basis) we have
+\begin{eqnarray*}
+c_1a_{11}+c_2a_{12}+c_3a_{13}&=&0 \\
+c_1a_{21}+c_2a_{22}+c_3a_{23}&=&0.
+\end{eqnarray*}
+The augmented matrix for this system of equations (in the unknowns
+$c_1$, $c_2$, $c_3$) is $$ \left [ \begin{array}{rrrcr}
+        a_{11} & a_{12} & a_{13} & \vline& 0 \\
+        a_{21} & a_{22} & a_{23} & \vline& 0 \end{array} \right ].$$
+When this is reduced, there must result a free (or non-leading)
+variable, because there are more unknowns than equations. Thus
+there is an infinite number of solutions for $c_1$, $c_2$, $c_3$.
+Thus equation \ref{unique3} does not have a unique solution and
+the set ${{\bf u}_1, {\bf u}_2, {\bf u}_3}$ is dependent.
+
+This shows that if there is a basis with 2 vectors, then any set
+of 3 vectors is dependent. It is an illustration of the more
+general fact: {\em if a basis $\mbox {\tebbb B}$ has n vectors,
+then any set S with more than n vectors is dependent}. This fact
+is worth remembering.
+
+The contrapositive of the last statement is: {\em if a set S is
+independent and $\mbox {\tebbb B}$ is a basis}, {\em then $\#S
+\leq \#\mbox {\tebbb B}$ }, where $\#S, \#\mbox {\tebbb B}$
+denotes the number of vectors in the set. This fact is worth
+remembering too.
+
+Now let $\mbox {\tebbb B}$, $\mbox {\tebbb B}'$ be two bases of
+the same vector space. Then
+\begin{eqnarray*}
+&~&\mbox {\tebbb B}~is~a~basis~and ~\mbox {\tebbb
+B}'~is~independent,~so ~\#\mbox {\tebbb B}'\leq \#\mbox
+{\tebbb B}, \\
+&~&\mbox {\tebbb B}'~is~a~basis~and~ \mbox {\tebbb
+B}~is~independent,~so ~\#\mbox {\tebbb B}\leq \#\mbox {\tebbb B}'.
+\end{eqnarray*}
+Thus any of two bases of a vector space $V$ have the same number
+of vectors. This number is called the {\bf dimension} of $V$ or
+$dim(V)$. For example, $dim \mbox {\tebbb R}^n=n$ because there
+are $n$ vectors in the standard basis ${ {\bf e}_1,{\bf
+e}_2,\ldots,{\bf e}_n}$. Any other basis of $\mbox {\tebbb R}^n$
+will have $n$ vectors.
+
+\begin{example}
+\label{exam5.basishomog} Find a basis and the dimension for the
+solution space (set of all solutions) to the homogeneous system:
+\begin{eqnarray*}
+x_1-x_3-x_4+x_5&=&0\\ 2x_1+x_2-x_4+2x_5&=&0 \quad . \\
+2x_1+x_2+x_3-x_4+2x_5&=&0\\ x_2+x_3+x_4&=&0 \end{eqnarray*} There
+are 4 equations in 5 unknowns, therefore, there are infinitely
+many solutions. Row reducing the matrix of the system yields
+$$\left[ \begin{array}{rrrrr} 1&0&-1&-1&1 \\ 2&1&0&-1&2 \\ 2&1&1&-1&2
+\\ 0&1&1&1&0 \end{array} \right] {\leadsto} \left[
+\begin{array}{rrrrr} 1&0&-1&-1&1 \\ 0&1&2&1&0 \\ 0&0&1&0&0
+\\ 0&0&0&0&0 \end{array} \right].$$ The solution set is therefore
+$$x_1=s-t \quad x_2=-s \quad x_3=0 \quad x_4=s \quad x_5=t,$$
+$$i.e.~\{ s(1,-1,0,1,0)+t(-1,0,0,0,1):s,~t~\epsilon~\mbox {\tebbb
+R} \}.$$
+
+Notice that all solutions {\bf x} can be written as a linear
+combination of the two vectors $${\bf v}_1=(1,-1,0,1,0),~{\bf
+v}_2=(-1,0,0,0,1).$$ These vectors are linearly independent and
+therefore form a basis for the solution space of the system.
+Therefore {\rm lin}$\{{\bf v}_1,{\bf v}_2\}$ inside $\mbox{\tebbb
+R}^5$ is a 2-dimensional vector space.
+
+\end{example}
+
+Let $V$ be the vector space of dimension $n$, and let $S$ be a
+subset of $V$. The following table indicates the independence of
+$S$ and whether $S$ spans $V$, depending on $\#S$ (the number of
+vectors in $S$).
+$$\#S$$
+$$\cdots~~~n-2~~~n-1~|~n~|~n+1~~~n+2~~~\cdots$$
+
+\begin{center}
+\begin{picture}(35,35)(-50,-50)
+\put(-180,-2){\line(1,0){300}}
+\put(-160,-25){S~possibly~independent} \put(5,-25){S~dependent}
+\put(-150,-50){S~does~not~span~V} \put(-5,-50){S~possibly~spans~V}
+\put(-23,-27){\line(0,1){10}} \put(-40,-51){\line(0,1){10}}
+\put(-162,-23){\vector(-1,0){20}} \put(1,-23){\vector(-1,0){23}}
+\put(-40,-23){\vector(1,0){17}} \put(70,-23){\vector(1,0){50}}
+\put(-155,-47){\vector(-1,0){28}} \put(-11,-47){\vector(-1,0){28}}
+\put(-54,-47){\vector(1,0){15}} \put(90,-47){\vector(1,0){30}}
+\end{picture}
+\end{center}
+
+A basis of $V$ has $n$ vectors. From the table you can see that a
+basis is a minimal spanning set (in the sense that if you omit any
+vector the set would no longer span) and a maximal independent set
+(in the sense that if you append a vector to the set, the set
+would no longer be independent).
+
+When $S$ has precisely $n$ elements, then it is independent if and
+only if it spans $V$. To see that this is true, consider the three
+vectors ${(x_1,y_1,z_1),(x_2,y_2,z_2),(x_3,y_3,z_3)}$ in $\mbox
+{\tebbb R}^3$ (which has dimension $3$). These vectors are
+independent if and only if
+$$c_1(x_1,y_1,z_1)+c_2(x_2,y_2,z_2)+c_3(x_3,y_3,z_3)=(0,0,0)$$
+has a unique solution, i.e. if and only if
+$$ \left[ \begin{array}{rrrcr} x_1 & x_2 & x_3 & \vline & 0
+\\ y_1 & y_2 & y_3 & \vline & 0 \\ z_1 & z_2 & z_3 & \vline & 0
+\end{array}  \right] \quad reduces~to \quad \left [
+\begin{array}{rrrcr}
+1 & 0 & 0 & \vline & 0 \\ 0 & 1 & 0 & \vline & 0 \\
+0 & 0 & 1 & \vline & 0 \end{array} \right ]. $$
+
+On the other hand, the vector span $\mbox {\tebbb R}^3$ if for any
+$(a,b,c)$ we can find $c_1,c_2,c_3$ such that
+$$c_1(x_1,y_1,z_1)+c_2(x_2,y_2,z_2)+c_3(x_3,y_3,z_3)=(a,b,c),$$
+i.e. if and only if
+$$ \left[ \begin{array}{rrrcr} x_1 & x_2 & x_3 & \vline & a
+\\ y_1 & y_2 & y_3 & \vline & b \\ z_1 & z_2 & z_3 & \vline & c
+\end{array}  \right]~is~a~consistent~system.$$
+This will be the case precisely when the matrix reduces to
+$$ \left[ \begin{array}{rrrcr} 1 & 0 & 0 & \vline & \alpha
+\\ 0 & 1 & 0 & \vline & \beta \\ 0 & 0 & 1 & \vline & \gamma
+\end{array}  \right]$$
+for some $\alpha,\beta,\gamma$. The conditions for independence
+and spanning are exactly the same:
+$$ \left[ \begin{array}{rrr} x_1 & x_2 & x_3 \\
+y_1 & y_2 & y_3 \\ z_1 & z_2 & z_3 \end{array}  \right] \quad
+reduces~to \quad \left [ \begin{array}{rrr} 1 & 0 & 0 \\ 0 & 1 & 0
+\\ 0 & 0 & 1 \end{array} \right ], $$
+or
+$$det\left[ \begin{array}{rrr} x_1 & x_2 & x_3 \\
+y_1 & y_2 & y_3 \\ z_1 & z_2 & z_3 \end{array}  \right]\neq 0.$$
+In the same way we can conclude that $n$ vector in $\mbox {\tebbb
+R}^n$ (or any vector space of dimension $n$) are independent if and only if
+they span the space. An easy way to check is via the determinant
+as above.
+
+\noindent {\bf Activity \ref{ssec.dimension}:} Let $S=\{{\bf
+v}_1=(2,1,0), {\bf v}_2=(0,3,-1)\}$. Find a third vector so that
+the set is a basis for $\real{3}$. The answers can be found in
+section \ref{answers5}
+
+\section{Summary} \label{ssec.sum5}\markright{\ref{ssec.sum5} \titleref{ssec.sum5}}
+
+{\bf Keywords: basis of a vector space, dimension of a vector space, subspace, span, vector space }
+\\ \\
+This chapter contains some abstract concepts. A vector space $V$ is
+defined as a set that satisfies ten given axioms. Subspaces are
+defined as non-empty subsets of $V$ that are closed under scalar
+multiplication and vector addition. If $c_1,c_2,\cdots,c_n$ are
+scalars the expression $c_1{\bf v}_1+c_2{\bf v}_2+\cdots+c_n{\bf
+v}_n$ is a linear combination of the vectors ${\bf v}_1,{\bf
+v}_2,\cdots,{\bf v}_n$. The set of all linear combinations of
+$S=\{ {\bf v}_1,{\bf v}_2,\cdots,{\bf v}_n \}$ is a subspace of
+$V$ called the span of $S$. The set $S$ is (linearly) independent
+if $c_1{\bf v}_1+c_2{\bf v}_2+\cdots+c_n{\bf v}_n={\bf
+0}\Rightarrow c_1=c_2=\cdots=c_n=0$, or equivalently if none of
+the ${\bf v}_1,{\bf v}_2,\cdots,{\bf v}_n$ is a linear combination
+of the others. A set of vectors that is both linearly independent
+and spans $V$ is a basis for $V$. Every vector in $V$ can be
+uniquely written as a linear combination of the basis vectors:
+$${\bf v}=a_1{\bf v}_1+a_2{\bf v}_2+\cdots+a_n{\bf v}_n.$$ The
+scalars $a_1,a_2,\cdots,a_n$ are the coordinates of {\bf v} with
+respect to the basis $\{ {\bf v}_1,{\bf v}_2,\cdots,{\bf v}_n \}$.
+A vector space has more than one basis, but all bases of the same
+vector space have the same number of vectors. This number is
+called the dimension of $V$. The dimension of $\mbox {\tebbb R}^n$
+is $n$.
+
+\input{exercise5b.tex}
+
+%\end{document}

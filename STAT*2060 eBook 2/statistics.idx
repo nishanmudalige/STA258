@@ -1,0 +1,157 @@
+\indexentry{Overview|hyperpage}{1}
+\indexentry{Statistics!Introduction|hyperpage}{1}
+\indexentry{Introduction|hyperpage}{2}
+\indexentry{Statistics!Definition|hyperpage}{2}
+\indexentry{Statistics!Descriptive statistics|hyperpage}{2}
+\indexentry{Statistics!Inferential statistics|hyperpage}{2}
+\indexentry{Population!Definition|hyperpage}{3}
+\indexentry{Sample!Definition|hyperpage}{3}
+\indexentry{Data!Types of data|hyperpage}{4}
+\indexentry{Data!Quantitative data|hyperpage}{4}
+\indexentry{Data!Discrete data|hyperpage}{4}
+\indexentry{Data!Continuous data|hyperpage}{4}
+\indexentry{Data!Qualitative data|hyperpage}{5}
+\indexentry{Studies!Observational studies|hyperpage}{6}
+\indexentry{Studies!Experimental studies|hyperpage}{6}
+\indexentry{Sample!Sample surveys|hyperpage}{7}
+\indexentry{Inference!Introduction to inferential statistics|hyperpage}{7}
+\indexentry{Parameter!Definition|hyperpage}{7}
+\indexentry{Statistic!Definition|hyperpage}{8}
+\indexentry{Bias!Selection bias|hyperpage}{9}
+\indexentry{Bias!Non-response bias|hyperpage}{10}
+\indexentry{Bias!Measurement error bias|hyperpage}{10}
+\indexentry{Statistics!Descriptive statistics|hyperpage}{12}
+\indexentry{Mean|hyperpage}{13}
+\indexentry{Mean!Sample mean|hyperpage}{13}
+\indexentry{Median|hyperpage}{13}
+\indexentry{Mode|hyperpage}{14}
+\indexentry{Variance|hyperpage}{14}
+\indexentry{Variance!Sample variance|hyperpage}{14}
+\indexentry{Sample!Sample variance|hyperpage}{14}
+\indexentry{Standard deviation|hyperpage}{15}
+\indexentry{Standard deviation!Sample standard deviation|hyperpage}{15}
+\indexentry{Sample!Sample standard deviation|hyperpage}{15}
+\indexentry{Percentile|hyperpage}{15}
+\indexentry{Quartile|hyperpage}{15}
+\indexentry{Inter-quartile range|hyperpage}{16}
+\indexentry{Skewness|hyperpage}{19}
+\indexentry{Outlier|hyperpage}{21}
+\indexentry{Histograms|hyperpage}{21}
+\indexentry{Plots!Histograms|hyperpage}{21}
+\indexentry{Frequency|hyperpage}{22}
+\indexentry{Frequency!Relative frequency|hyperpage}{22}
+\indexentry{Boxplots|hyperpage}{24}
+\indexentry{Plots!Bosplots|hyperpage}{24}
+\indexentry{Plots!Stem and leaf plots|hyperpage}{28}
+\indexentry{Stem and leaf plots|hyperpage}{28}
+\indexentry{Probability|hyperpage}{30}
+\indexentry{Experiment|hyperpage}{30}
+\indexentry{Sample!Sample space|hyperpage}{30}
+\indexentry{Sample!Sample point|hyperpage}{31}
+\indexentry{Event|hyperpage}{31}
+\indexentry{Intersection|hyperpage}{33}
+\indexentry{Union|hyperpage}{33}
+\indexentry{Complement|hyperpage}{33}
+\indexentry{Event!Mutually exclusive events|hyperpage}{34}
+\indexentry{Additive property|hyperpage}{34}
+\indexentry{Additive property!Of mutually exclusive events|hyperpage}{34}
+\indexentry{Complement!Property of complements|hyperpage}{34}
+\indexentry{Venn diagrams|hyperpage}{36}
+\indexentry{Probability!Conditional probability|hyperpage}{39}
+\indexentry{Probability!Conditional probability|hyperpage}{39}
+\indexentry{Probability!Independence|hyperpage}{39}
+\indexentry{Probability!Independence|hyperpage}{39}
+\indexentry{Bayes' Theorem|hyperpage}{40}
+\indexentry{Factorial|hyperpage}{44}
+\indexentry{Combinations|hyperpage}{44}
+\indexentry{Binomial coefficient|hyperpage}{44}
+\indexentry{Random variables|hyperpage}{46}
+\indexentry{Random variables!Definition|hyperpage}{46}
+\indexentry{Random variables!Discrete|hyperpage}{46}
+\indexentry{Probability!Mass function|hyperpage}{47}
+\indexentry{Random variables!Continuous|hyperpage}{51}
+\indexentry{Probability!Density function|hyperpage}{51}
+\indexentry{Distribution!Bernoulli|hyperpage}{54}
+\indexentry{Distribution!Binomial|hyperpage}{55}
+\indexentry{Distribution!Continuous uniform|hyperpage}{57}
+\indexentry{Distribution!Normal|hyperpage}{58}
+\indexentry{Z score|hyperpage}{60}
+\indexentry{Empirical rule|hyperpage}{62}
+\indexentry{Distribution!t-distribution|hyperpage}{66}
+\indexentry{Degrees of freedom|hyperpage}{67}
+\indexentry{Distribution!Sampling distribution|hyperpage}{70}
+\indexentry{Point estimate|hyperpage}{70}
+\indexentry{Distribution!Sampling distribution|hyperpage}{70}
+\indexentry{Central limit theorem|hyperpage}{70}
+\indexentry{Inference|hyperpage}{72}
+\indexentry{Standard error|hyperpage}{73}
+\indexentry{Confidence intervals|hyperpage}{74}
+\indexentry{Confidence intervals!Definition|hyperpage}{74}
+\indexentry{Confidence intervals!One sample|hyperpage}{76}
+\indexentry{Confidence intervals!On the mean|hyperpage}{76}
+\indexentry{Confidence intervals!On a proportion|hyperpage}{79}
+\indexentry{Confidence intervals!Assumptions|hyperpage}{80}
+\indexentry{Confidence intervals!Assumptions|hyperpage}{80}
+\indexentry{Confidence intervals!Two sample|hyperpage}{81}
+\indexentry{Confidence intervals!On a difference of two means|hyperpage}{81}
+\indexentry{Welch-Satterthwaite method|hyperpage}{85}
+\indexentry{Variance!Pooled sample variance|hyperpage}{87}
+\indexentry{Sample!Pooled sample standard deviation|hyperpage}{87}
+\indexentry{Pooled method|hyperpage}{87}
+\indexentry{Confidence intervals!Assumptions|hyperpage}{88}
+\indexentry{Confidence intervals!On a difference of two proportions|hyperpage}{89}
+\indexentry{Confidence intervals!Assumptions|hyperpage}{91}
+\indexentry{Confidence intervals!On paired data|hyperpage}{91}
+\indexentry{Data!Paired data|hyperpage}{91}
+\indexentry{Confidence intervals!Assumptions|hyperpage}{94}
+\indexentry{Hypothesis tests|hyperpage}{95}
+\indexentry{Decision rule|hyperpage}{95}
+\indexentry{Hypothesis!Null hypothesis|hyperpage}{96}
+\indexentry{Hypothesis!Alternative hypothesis|hyperpage}{96}
+\indexentry{Hypothesis tests!Types of|hyperpage}{96}
+\indexentry{Statistic!Test statistic|hyperpage}{97}
+\indexentry{P-value|hyperpage}{98}
+\indexentry{Level of significance|hyperpage}{99}
+\indexentry{Hypothesis tests!One sample|hyperpage}{101}
+\indexentry{Hypothesis tests!On the mean|hyperpage}{101}
+\indexentry{Hypothesis tests!On a proportion|hyperpage}{104}
+\indexentry{Hypothesis tests!Assumptions|hyperpage}{105}
+\indexentry{Hypothesis tests!Two sample|hyperpage}{106}
+\indexentry{Hypothesis tests!On a difference of two means|hyperpage}{106}
+\indexentry{Hypothesis tests!Assumptions|hyperpage}{110}
+\indexentry{Hypothesis tests!On a difference of two proportions|hyperpage}{111}
+\indexentry{Hypothesis tests!Assumptions|hyperpage}{113}
+\indexentry{Hypothesis tests!On paired data|hyperpage}{113}
+\indexentry{Hypothesis tests!Assumptions|hyperpage}{114}
+\indexentry{Decision error|hyperpage}{115}
+\indexentry{Decision error!Type I error|hyperpage}{115}
+\indexentry{Decision error!Type II error|hyperpage}{116}
+\indexentry{Significance|hyperpage}{117}
+\indexentry{Significance!Statistical significance|hyperpage}{117}
+\indexentry{Significance!Practical significance|hyperpage}{117}
+\indexentry{Regression!Simple linear regression|hyperpage}{119}
+\indexentry{Variable!Independent variable|hyperpage}{119}
+\indexentry{Variable!Dependent variable|hyperpage}{119}
+\indexentry{Slope|hyperpage}{122}
+\indexentry{Intercept|hyperpage}{122}
+\indexentry{Slope!Interpretation|hyperpage}{128}
+\indexentry{Intercept!Interpretation|hyperpage}{129}
+\indexentry{Interpolation|hyperpage}{129}
+\indexentry{Extrapolation|hyperpage}{129}
+\indexentry{Residuals|hyperpage}{132}
+\indexentry{Sum of squared error|hyperpage}{133}
+\indexentry{Regression!Least squares regression line|hyperpage}{134}
+\indexentry{Plots!Residual plots|hyperpage}{134}
+\indexentry{Residuals!Residual plots|hyperpage}{134}
+\indexentry{Regression!Assumptions|hyperpage}{139}
+\indexentry{Residuals!Homoscedacity|hyperpage}{139}
+\indexentry{Residuals!Heteroscedasticity|hyperpage}{139}
+\indexentry{sum of squares of regression|hyperpage}{140}
+\indexentry{Total sum of squares|hyperpage}{141}
+\indexentry{Coefficient of determination|hyperpage}{142}
+\indexentry{Coefficient of correlation|hyperpage}{143}
+\indexentry{Inference!On the slope|hyperpage}{144}
+\indexentry{s$^{2}$|hyperpage}{144}
+\indexentry{Standard error of the regression|hyperpage}{145}
+\indexentry{Confidence intervals!On the slope|hyperpage}{145}
+\indexentry{Hypothesis tests!On the slope|hyperpage}{146}

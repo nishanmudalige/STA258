@@ -1,0 +1,222 @@
+\begin{theindex}
+
+  \item Additive property, \hyperpage{34}
+    \subitem Of mutually exclusive events, \hyperpage{34}
+
+  \indexspace
+
+  \item Bayes' Theorem, \hyperpage{40}
+  \item Bias
+    \subitem Measurement error bias, \hyperpage{10}
+    \subitem Non-response bias, \hyperpage{10}
+    \subitem Selection bias, \hyperpage{9}
+  \item Binomial coefficient, \hyperpage{44}
+  \item Boxplots, \hyperpage{24}
+
+  \indexspace
+
+  \item Central limit theorem, \hyperpage{70}
+  \item Coefficient of correlation, \hyperpage{143}
+  \item Coefficient of determination, \hyperpage{142}
+  \item Combinations, \hyperpage{44}
+  \item Complement, \hyperpage{33}
+    \subitem Property of complements, \hyperpage{34}
+  \item Confidence intervals, \hyperpage{74}
+    \subitem Assumptions, \hyperpage{80}, \hyperpage{88}, 
+		\hyperpage{91}, \hyperpage{94}
+    \subitem Definition, \hyperpage{74}
+    \subitem On a difference of two means, \hyperpage{81}
+    \subitem On a difference of two proportions, \hyperpage{89}
+    \subitem On a proportion, \hyperpage{79}
+    \subitem On paired data, \hyperpage{91}
+    \subitem On the mean, \hyperpage{76}
+    \subitem On the slope, \hyperpage{145}
+    \subitem One sample, \hyperpage{76}
+    \subitem Two sample, \hyperpage{81}
+
+  \indexspace
+
+  \item Data
+    \subitem Continuous data, \hyperpage{4}
+    \subitem Discrete data, \hyperpage{4}
+    \subitem Paired data, \hyperpage{91}
+    \subitem Qualitative data, \hyperpage{5}
+    \subitem Quantitative data, \hyperpage{4}
+    \subitem Types of data, \hyperpage{4}
+  \item Decision error, \hyperpage{115}
+    \subitem Type I error, \hyperpage{115}
+    \subitem Type II error, \hyperpage{116}
+  \item Decision rule, \hyperpage{95}
+  \item Degrees of freedom, \hyperpage{67}
+  \item Distribution
+    \subitem Bernoulli, \hyperpage{54}
+    \subitem Binomial, \hyperpage{55}
+    \subitem Continuous uniform, \hyperpage{57}
+    \subitem Normal, \hyperpage{58}
+    \subitem Sampling distribution, \hyperpage{70}
+    \subitem t-distribution, \hyperpage{66}
+
+  \indexspace
+
+  \item Empirical rule, \hyperpage{62}
+  \item Event, \hyperpage{31}
+    \subitem Mutually exclusive events, \hyperpage{34}
+  \item Experiment, \hyperpage{30}
+  \item Extrapolation, \hyperpage{129}
+
+  \indexspace
+
+  \item Factorial, \hyperpage{44}
+  \item Frequency, \hyperpage{22}
+    \subitem Relative frequency, \hyperpage{22}
+
+  \indexspace
+
+  \item Histograms, \hyperpage{21}
+  \item Hypothesis
+    \subitem Alternative hypothesis, \hyperpage{96}
+    \subitem Null hypothesis, \hyperpage{96}
+  \item Hypothesis tests, \hyperpage{95}
+    \subitem Assumptions, \hyperpage{105}, \hyperpage{110}, 
+		\hyperpage{113, 114}
+    \subitem On a difference of two means, \hyperpage{106}
+    \subitem On a difference of two proportions, \hyperpage{111}
+    \subitem On a proportion, \hyperpage{104}
+    \subitem On paired data, \hyperpage{113}
+    \subitem On the mean, \hyperpage{101}
+    \subitem On the slope, \hyperpage{146}
+    \subitem One sample, \hyperpage{101}
+    \subitem Two sample, \hyperpage{106}
+    \subitem Types of, \hyperpage{96}
+
+  \indexspace
+
+  \item Inference, \hyperpage{72}
+    \subitem Introduction to inferential statistics, \hyperpage{7}
+    \subitem On the slope, \hyperpage{144}
+  \item Inter-quartile range, \hyperpage{16}
+  \item Intercept, \hyperpage{122}
+    \subitem Interpretation, \hyperpage{129}
+  \item Interpolation, \hyperpage{129}
+  \item Intersection, \hyperpage{33}
+  \item Introduction, \hyperpage{2}
+
+  \indexspace
+
+  \item Level of significance, \hyperpage{99}
+
+  \indexspace
+
+  \item Mean, \hyperpage{13}
+    \subitem Sample mean, \hyperpage{13}
+  \item Median, \hyperpage{13}
+  \item Mode, \hyperpage{14}
+
+  \indexspace
+
+  \item Outlier, \hyperpage{21}
+  \item Overview, \hyperpage{1}
+
+  \indexspace
+
+  \item P-value, \hyperpage{98}
+  \item Parameter
+    \subitem Definition, \hyperpage{7}
+  \item Percentile, \hyperpage{15}
+  \item Plots
+    \subitem Bosplots, \hyperpage{24}
+    \subitem Histograms, \hyperpage{21}
+    \subitem Residual plots, \hyperpage{134}
+    \subitem Stem and leaf plots, \hyperpage{28}
+  \item Point estimate, \hyperpage{70}
+  \item Pooled method, \hyperpage{87}
+  \item Population
+    \subitem Definition, \hyperpage{3}
+  \item Probability, \hyperpage{30}
+    \subitem Conditional probability, \hyperpage{39}
+    \subitem Density function, \hyperpage{51}
+    \subitem Independence, \hyperpage{39}
+    \subitem Mass function, \hyperpage{47}
+
+  \indexspace
+
+  \item Quartile, \hyperpage{15}
+
+  \indexspace
+
+  \item Random variables, \hyperpage{46}
+    \subitem Continuous, \hyperpage{51}
+    \subitem Definition, \hyperpage{46}
+    \subitem Discrete, \hyperpage{46}
+  \item Regression
+    \subitem Assumptions, \hyperpage{139}
+    \subitem Least squares regression line, \hyperpage{134}
+    \subitem Simple linear regression, \hyperpage{119}
+  \item Residuals, \hyperpage{132}
+    \subitem Heteroscedasticity, \hyperpage{139}
+    \subitem Homoscedacity, \hyperpage{139}
+    \subitem Residual plots, \hyperpage{134}
+
+  \indexspace
+
+  \item s$^{2}$, \hyperpage{144}
+  \item Sample
+    \subitem Definition, \hyperpage{3}
+    \subitem Pooled sample standard deviation, \hyperpage{87}
+    \subitem Sample point, \hyperpage{31}
+    \subitem Sample space, \hyperpage{30}
+    \subitem Sample standard deviation, \hyperpage{15}
+    \subitem Sample surveys, \hyperpage{7}
+    \subitem Sample variance, \hyperpage{14}
+  \item Significance, \hyperpage{117}
+    \subitem Practical significance, \hyperpage{117}
+    \subitem Statistical significance, \hyperpage{117}
+  \item Skewness, \hyperpage{19}
+  \item Slope, \hyperpage{122}
+    \subitem Interpretation, \hyperpage{128}
+  \item Standard deviation, \hyperpage{15}
+    \subitem Sample standard deviation, \hyperpage{15}
+  \item Standard error, \hyperpage{73}
+  \item Standard error of the regression, \hyperpage{145}
+  \item Statistic
+    \subitem Definition, \hyperpage{8}
+    \subitem Test statistic, \hyperpage{97}
+  \item Statistics
+    \subitem Definition, \hyperpage{2}
+    \subitem Descriptive statistics, \hyperpage{2}, \hyperpage{12}
+    \subitem Inferential statistics, \hyperpage{2}
+    \subitem Introduction, \hyperpage{1}
+  \item Stem and leaf plots, \hyperpage{28}
+  \item Studies
+    \subitem Experimental studies, \hyperpage{6}
+    \subitem Observational studies, \hyperpage{6}
+  \item Sum of squared error, \hyperpage{133}
+  \item sum of squares of regression, \hyperpage{140}
+
+  \indexspace
+
+  \item Total sum of squares, \hyperpage{141}
+
+  \indexspace
+
+  \item Union, \hyperpage{33}
+
+  \indexspace
+
+  \item Variable
+    \subitem Dependent variable, \hyperpage{119}
+    \subitem Independent variable, \hyperpage{119}
+  \item Variance, \hyperpage{14}
+    \subitem Pooled sample variance, \hyperpage{87}
+    \subitem Sample variance, \hyperpage{14}
+  \item Venn diagrams, \hyperpage{36}
+
+  \indexspace
+
+  \item Welch-Satterthwaite method, \hyperpage{85}
+
+  \indexspace
+
+  \item Z score, \hyperpage{60}
+
+\end{theindex}
