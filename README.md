@@ -1,2 +1,2 @@
 # STA258
-Repository for STA258 related content
+Repository for STA258 related content.
