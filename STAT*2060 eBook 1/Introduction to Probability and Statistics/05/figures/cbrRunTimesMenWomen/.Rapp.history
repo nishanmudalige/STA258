@@ -1,0 +1,368 @@
+require(openintro)#
+#
+set.seed(1)#
+data(run10)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+pdf('cbrRunTimesMenWomen.pdf', 3.5, 2.7)#
+#
+par(mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+pdf('cbrRunTimesMenWomen.pdf', 3.5, 2.7, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, add=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+pdf('cbrRunTimesMenWomen.pdf', 3.5, 2.7, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+dev.off()
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+pdf('cbrRunTimesMenWomen.pdf', 3.5, 2.7, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+pdf('cbrRunTimesMenWomen.pdf', 3.5, 2.55, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.5, 2.55, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)')#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+require(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$netTime[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$netTime[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', col="#225588")#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$time[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$time[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', col="#225588")#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$time[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$time[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', col="#225588", lcol="#225588")#
+boxPlot(f, add=2, axes=FALSE)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$time[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$time[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588")#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588")#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$time[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$time[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588")#
+boxPlot(f, add=2, axes=FALSE, lcol="#AA5500")#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$time[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$time[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588")#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588")#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$time[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$time[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", lwd=1.5, medianLwd=3)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588")#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10)#
+#
+set.seed(1)#
+m <- sample(run10$time[run10$gender=='M'], 100)#
+mean(m); sd(m)#
+f <- sample(run10$time[run10$gender=='F'], 100)#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", lwd=1.5, medianLwd=3)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588", lwd=1.5, medianLwd=3)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+#
+set.seed(1)#
+m <- run10Samp$time[run10Samp$gender=='M']#
+mean(m); sd(m)#
+f <- run10Samp$time[run10Samp$gender=='F']#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", lwd=1.5, medianLwd=3)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588", lwd=1.5, medianLwd=3)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+#
+set.seed(1)#
+m <- run10Samp$time[run10Samp$gender=='M']#
+mean(m); sd(m)#
+f <- run10Samp$time[run10Samp$gender=='F']#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", col="#225588", lwd=1.5, medianLwd=3)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588", col="#225588", lwd=1.5, medianLwd=3)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+#
+set.seed(1)#
+m <- run10Samp$time[run10Samp$gender=='M']#
+mean(m); sd(m)#
+f <- run10Samp$time[run10Samp$gender=='F']#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", col="#225588", lwd=1.5, medianLwd=3)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588", col="#22558866", lwd=1.5, medianLwd=3)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+#
+set.seed(1)#
+m <- run10Samp$time[run10Samp$gender=='M']#
+mean(m); sd(m)#
+f <- run10Samp$time[run10Samp$gender=='F']#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", col="#22558866", lwd=1.5, medianLwd=3)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588", col="#22558866", lwd=1.5, medianLwd=3)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+#
+set.seed(1)#
+m <- run10Samp$time[run10Samp$gender=='M']#
+mean(m); sd(m)#
+f <- run10Samp$time[run10Samp$gender=='F']#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", col="#22558866", lwd=1, medianLwd=3)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588", col="#22558866", lwd=1, medianLwd=3)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+#
+set.seed(1)#
+m <- run10Samp$time[run10Samp$gender=='M']#
+mean(m); sd(m)#
+f <- run10Samp$time[run10Samp$gender=='F']#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol="#225588", col="#22558866", lwd=1)#
+boxPlot(f, add=2, axes=FALSE, lcol="#225588", col="#22558866", lwd=1)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+data(run10Samp)#
+#
+set.seed(1)#
+m <- run10Samp$time[run10Samp$gender=='M']#
+mean(m); sd(m)#
+f <- run10Samp$time[run10Samp$gender=='F']#
+mean(f); sd(f)#
+#
+myPDF('cbrRunTimesMenWomen.pdf', 3.8, 3, mgp=c(2.5, 0.7, 0), las=1, mar=c(2, 4, 0.5, 1))#
+boxPlot(m, at=1, xlim=c(0.5, 2.5), ylim=range(c(45,150)), axes=FALSE, ylab='run time (minutes)', lcol=COL[1], col=COL[1,3], lwd=1)#
+boxPlot(f, add=2, axes=FALSE, lcol=COL[1], col=COL[1,3], lwd=1)#
+axis(1, at=1:2, labels=c('men', 'women'))#
+axis(2, at=c(50, 100, 150))#
+#
+dev.off()

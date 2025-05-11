@@ -1,0 +1,923 @@
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tcl=-0.3, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2, axes=FALSE)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tcl=-0.2, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2, axes=FALSE)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tck=-0.05, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2, axes=FALSE)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tck=-0.05, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, ...)#
+}
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tck=-0.03, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tck=-0.03, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, tck=tck, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tcl=-0.3, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, tcl=tcl, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tcl=-0.35, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, tcl=tcl, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tcl=-0.5, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, tcl=tcl, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tcl=-0.35, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, tcl=tcl, ...)#
+}
+myPDF <-#
+function(fileName, width=5, height=3,#
+    mar=c(3.9, 3.9, 1, 1), mgp=c(2.8, 0.55, 0),#
+    las=1, tcl=-0.33, ...){#
+  pdf(fileName, width, height)#
+  par(mar=mar, mgp=mgp, las=las, tcl=tcl, ...)#
+}
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.02), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.01), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='% change in NASDAQ', ylab='% change in IBM stock')#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf")#
+plot(gr$R, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock')#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1))#
+plot(gr$R, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock')#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1))#
+plot(gr$R, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock')#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock')#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=seq(-0.12, 0.12, 0.04))#
+axis(2, at=seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock')#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1), mgp=c(2.8, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 4, 1, 1), mgp=c(2.6, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04), labels=as.character(100*seq(-0.12, 0.12, 0.04)))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+#rect(-1000, -1000, 1000, 1000, col='#00000011')#
+#abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+#abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+#abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+#abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+#rect(-1000, -1000, 1000, 1000, col='#00000011')#
+#abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+#abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+#abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+#abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+#rect(-1000, -1000, 1000, 1000, col='#00000011')#
+#abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+#abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+#abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+#abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+#box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558877', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000088', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000066', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000066', lwd=1.5)#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000066', lwd=1.5)#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+abline(g, col='#00000033', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000066', lwd=1.5)#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+abline(g, col='#00000022', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()#
+#
+#plot(g)#
+#
+#
+#save()
+save(gr, file="SP500andIBM.rda")
+library(stockPortfolio)#
+ticker <- c("^IXIC", "IBM")#
+gr <- getReturns(ticker, "day", start="2010-01-01", end="2010-11-01")#
+save(gr, file="SP500andIBM.rda")
+load("SP500andIBM.rda")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+g <- lm(gr$R[,2] ~ gr$R[,1])#
+abline(g, col='#00000066', lwd=1.5)#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+abline(g, col='#00000022', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()
+load("SP500andIBM.rda")#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+g <- lm(I(100*gr$R[,2]) ~ I(100*gr$R[,1]))#
+abline(g, col='#00000066', lwd=1.5)#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+abline(g, col='#00000022', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()
+library(openintro)#
+load("SP500andIBM.rda")#
+#
+#
+myPDF("SP500andIBM.pdf", mar=c(3.2, 3.6, 1, 1), mgp=c(2.4, 0.55, 0))#
+plot(gr$R*100, type='n', axes=FALSE, xlab='', ylab='% change in IBM stock', xlim=c(-5, 5), ylim=c(-5, 5.2))#
+mtext("% change in NASDAQ", 1, 2)#
+rect(-1000, -1000, 1000, 1000, col='#00000011')#
+abline(h=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(h=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+abline(v=100*seq(-1.24, 1.28, 0.04), lwd=2.3, col='#FFFFFF')#
+abline(v=100*seq(-1.22, 1.28, 0.02), lwd=0.8, col='#FFFFFF')#
+g <- lm(I(100*gr$R[,2]) ~ I(100*gr$R[,1]))#
+abline(g, col='#00000066', lwd=1.5)#
+points(gr$R*100, pch=20, col='#22558866', cex=1.2)#
+abline(g, col='#00000022', lwd=1.5)#
+axis(1, at=100*seq(-0.12, 0.12, 0.04))#
+axis(2, at=100*seq(-0.12, 0.12, 0.04))#
+box()#
+dev.off()

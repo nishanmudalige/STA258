@@ -1,0 +1,76 @@
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+require(openintro)#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, xlab='Poker winnings and losses (US$)', ylab='Frequency', col='#22558822', border='#225588')#
+dev.off()
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+require(openintro)#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, xlab='Poker winnings and losses (US$)', ylab='Frequency', col='#22558822', border='#003366')#
+dev.off()
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+require(openintro)#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, xlab='Poker winnings and losses (US$)', ylab='Frequency', col='#22558828', border='#003366')#
+dev.off()
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+require(openintro)#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, xlab='Poker winnings and losses (US$)', ylab='Frequency', col='#22558822', border='#005588')#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, xlab='Poker winnings and losses (US$)', ylab='Frequency', col=COL[1])#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, 20, xlab='Poker winnings and losses (US$)', ylab='Frequency', col=COL[1])#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, breaks=20, xlab='Poker winnings and losses (US$)', ylab='Frequency', col=COL[1])#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+d <- read.delim('poker.txt', FALSE)#
+profit <- d$V1#
+#
+pdf('pokerProfitsCanApplyNormalToSampMean.pdf', 5, 3)#
+par(mar=c(4,4,1,1), mgp=c(2.6, 0.7, 0), las=1)#
+histPlot(profit, xlab='Poker winnings and losses (US$)', ylab='Frequency', col=COL[1])#
+dev.off()

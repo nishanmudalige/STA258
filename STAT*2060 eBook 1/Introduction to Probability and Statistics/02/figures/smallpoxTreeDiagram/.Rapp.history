@@ -1,0 +1,1525 @@
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1)   pos1[i] <- mean(pos2[i,])#
+	for(i in 1:n1){#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2)	points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0)#
+		temp <- (n1 + 1)/2#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.05*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2)   temp <- temp + .03#
+			if(temp > .03)   temp <- 0#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])) final.prob <- final.prob.sub[[i]][j]#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.03*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.07*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.05*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 0.2*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 - 0.2*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 0.2*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 - 0.2*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 0.5*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+library(openintro)#
+# must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf")#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)#
+dev.off()
+library(openintro)#
+# must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6, 4)#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)#
+dev.off()
+library(openintro)#
+# must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.08*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)#
+dev.off()
+library(openintro)#
+# must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.1*sign(y[2]-y[1]+0.001)*c(1,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)#
+dev.off()
+library(openintro)#
+# must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.1*sign(y[2]-y[1]+0.001)*c(0.5,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)#
+dev.off()
+library(openintro)#
+# must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.1*sign(y[2]-y[1]+0.001)*c(0.7,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+tree.diag('Innoculated','Result',c(0.0268,0.9732),#
+	list(c(0.9791, 0.0209),c(0.9191, 0.0809)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)#
+dev.off()
+library(openintro)#
+# must generalize for more than 4 branches (6, 8, etc.)#
+tree.diag <- function(var1, var2, p1=c(), p2=list(), resp1=c('yes','no'), resp2=c('yes','no'), header.size=1.5,space.left=0, space.right=0, final.prob.sub=list(NA), digits=4){#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(sum(p1) != 1) warning('marginal probabilities do not sum to 1')#
+	if(n1 != length(resp1)) stop('the number of responses for the first variable is not equal to the number of probabilities')#
+	for(i in 1:n1){#
+		if(sum(p2[[i]]) != 1) warning(paste('marginal probabilities for p2, position',i,'do not sum to 1'))#
+		if(length(p2[[i]]) != n2) stop(paste('the number of responses for the second variable does not equal the number of probabilities in position',i))#
+	}#
+#
+	bounds <- c(-.9,.6)#
+	ctr <- mean(bounds)#
+	par(mar=rep(0,4))#
+	plot(1,1,type='n', axes=F, ylim=c(-1,1),#
+		xlim=c(-space.left,1+space.right*.62), xlab='', ylab='')#
+#
+	pos2 <- seq(bounds[1],bounds[2],length.out=n1*n2)#
+	pos2 <- matrix(pos2, n1,n2,byrow=T)#
+	pos1 <- vector()#
+	for(i in 1:n1){#
+		pos1[i] <- mean(pos2[i,])#
+		points(c(0,.3),c(ctr,pos1[i]),type='l')#
+		for(j in 1:n2){#
+			points(c(.3,.7),c(pos1[i],pos2[i,j]),type='l')#
+		}#
+	}#
+#
+	#===> headers <===##
+	text(.12,.8,var1,cex=header.size)#
+	text(.46,.9,var2,cex=header.size)#
+#
+	#===> names and probabilities <===##
+	if(as.integer(n1) - n1 == 0){#
+		temp <- (n1 + 1)/2#
+	}#
+	x <- c(0,.3)#
+	mult <- 0.06 - 0.025*n1*n2/9#
+	if(n1 == 3 & n2 == 3) mult <- 0.035#
+	for(i in 1:n1){#
+		y <- c(ctr,pos1[n1-i+1])#
+		text(c(.09,.21), ((2:1)*y[1] + (1:2)*y[2])/3 + 0.1*sign(y[2]-y[1]+0.001)*c(0.7,-1), c(resp1[i],as.character(p1[i])))#
+		temp <- 0#
+		for(j in 1:n2){#
+			y1 <- c(y[2],pos2[n1-i+1,n2-j+1])#
+			text(c(.44,.58)+temp, ((2:1)*y1[1] + (1:2)*y1[2])/3 + 1.3*mult*sign(y1[2]-y1[1]+0.001)*c(1,-1), c(resp2[j],as.character(p2[[i]][j])))#
+			if(n2 > 2){#
+				temp <- temp + .03#
+			}#
+			if(temp > .03){#
+				temp <- 0#
+			}#
+			final.prob <- paste(p1[i],'*',p2[[i]][j],' = ',round(p1[i]*p2[[i]][j], digits),sep='')#
+			if(!is.na(final.prob.sub[[1]][1])){#
+				final.prob <- final.prob.sub[[i]][j]#
+			}#
+			text(.7,y1[2],final.prob,pos=4)#
+		}#
+	}#
+}#
+#
+myPDF('testTree.pdf', 5, 3)#
+tree.diag('Midterm','Final',c(0.13,0.87),#
+	list(c(0.47,0.53),c(0.11,0.89)),#
+	c('A','other'),c('A','other'))#
+dev.off()
+treeDiag <- function(main, p1, p2, out1=c('Yes','No'), out2=c('Yes','No'), textwd=0.15, solwd=0.2, SBS=c(TRUE,TRUE), showSol=TRUE, solSub=NULL, digits=4, textadj=0.015, cex.main=1.3, col.main="#999999", showWork=FALSE){#
+	#=====> Checks <=====##
+	SBS <- rep(SBS, 2)#
+	if(length(p1) != length(out1)){#
+		stop("p1 and out1 must have the same length")#
+	}#
+	P1 <- format(p1)#
+	P2 <- list()#
+	for(i in 1:length(p1)){#
+		P2[[i]] <- format(p2[[i]])#
+		if(length(p2[[i]]) != length(out2)){#
+			stop("Each list item of p2 must have the same length as out2")#
+		}#
+	}#
+	#=====> Prepare Formatting <=====##
+	x <- (0.75-2*textwd)/2#
+	x <- c(0, x, x+textwd, 2*x+textwd, 2*x+2*textwd+0.05)#
+	y1 <- c(.4, -.4)#
+	y2 <- c(.21, -.21)#
+	n1 <- length(p1)#
+	n2 <- length(p2[[1]])#
+	if(n1 == 2 && n2 > 2){#
+		y2 <- seq(.23, -.23, len=n2)#
+	} else if(n1 > 2 && n2 == 2){#
+		y1 <- seq(.5, -.5, len=n1)#
+	} else if(n1 > 2 && n2 > 2){#
+		y1 <- seq(.5, -.5, len=n1)#
+		y2 <- seq(.15, -.15, len=n2)#
+	}#
+	#=====> Basic Plot <=====##
+	par(mar=c(0,0,0,0))#
+	plot(1,1,type='n', axes=F, ylim=c(-.76,1.03), xlim=c(0,0.8+solwd), xlab='', ylab='')#
+	text(mean(x[2:3]), 0.95, main[1], cex=cex.main, col=col.main)#
+	text(mean(x[4:5]), 0.95, main[2], cex=cex.main, col=col.main)#
+	#=====> Branches <=====##
+	for(i in 1:n1){#
+		lines(x[1:2], c(0,y1[i]))#
+		lines(x[2:3], c(y1[i],y1[i]), lty=2)#
+		if(SBS[1]){#
+			temp <- paste(out1[i], P1[i], sep=",  ")#
+			text(mean(x[2:3]), y1[i]-textadj, temp, pos=3)#
+		} else {#
+			text(mean(x[2:3]), y1[i], P1[i]+textadj, pos=1)#
+			text(mean(x[2:3]), y1[i], out1[i]-textadj, pos=3)#
+		}#
+		for(j in 1:n2){#
+			lines(x[3:4], y1[i]+c(0, y2[j]))#
+			lines(x[4:5], y1[i]+c(y2[j], y2[j]), lty=2)#
+			if(SBS[2]){#
+				temp <- paste(out2[j], P2[[i]][j], sep=",  ")#
+				text(mean(x[4:5]), y1[i]+y2[j]-textadj, temp, pos=3)#
+			} else {#
+				text(mean(x[4:5]), y1[i]+y2[j], P2[[i]][j], pos=1)#
+				text(mean(x[4:5]), y1[i]+y2[j], out2[j], pos=3)#
+			}#
+			if(showSol){#
+				sol <- round(p1[i]*p2[[i]][j], digits)#
+				if(showWork){#
+					temp <- paste(p1[i], p2[[i]][j], sep="*")#
+					sol  <- paste(temp, sol, sep=" = ")#
+				}#
+				if(!is.null(solSub)[1]){#
+					sol  <- solSub[[i]][j]#
+				}#
+				text(x[5], y1[i]+y2[j], sol, pos=4)#
+			}#
+		}#
+	}#
+}#
+#
+# Examples#
+# generic with random probabilities#
+treeDiag(c('Flight on time?','Luggage on time?'),c(.8,.2),list(c(.97,.03),c(.15,.85)))#
+treeDiag(c('Breakfast?','Go to class'),c(.4,.6),list(c(.4,.36,.34),c(.6,.3,.1)),c('Yes','No'),c('Statistics','English','Sociology'), showWork=TRUE)#
+treeDiag(c('Breakfast?','Go to class'),c(.4,.11,.49),list(c(.4,.36,.24),c(.6,.3,.1),c(.1,.4,.5)),c('one','two','three'),c('Statistics','English','Sociology'))#
+treeDiag(c('Dow Jones rise?', 'NASDAQ rise?'), c(0.53, 0.47), list(c(0.75, 0.25), c(0.72, 0.28)), solSub=list(c("(a)", "(b)"), c("(c)", "(d)")), solwd=0.08)
+prompt(treeDiag)
+treeDiag('Innoculated','Result',c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),
+list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	c('yes','no'),c('lived     ','died      '), digits=5)
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	c('yes','no'),c('lived','died'), digits=5)
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	c('yes','no'),c('lived','died'), digits=5)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	c('yes','no'),c('lived','died'), digits=5, col.main="#666666")#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#666666", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	c('yes','no'),c('lived','died'), digits=4,#
+	col.main="#666666", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	solwd=0.25,#
+	c('yes','no'),c('lived','died'), digits=5)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	solwd=0.25,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	solwd=0.3,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 6.5, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	solwd=0.35,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	solwd=0.35,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	textwd=0.2, solwd=0.35,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	textwd=0.2, solwd=0.35, cex.main=1.5,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+# must load tree.diag#
+myPDF("smallpoxTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+#
+myPDF("smallpoxTreeDiagram.pdf", 7, 3.5)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+#
+myPDF("smallpoxTreeDiagram.pdf", 7, 3)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+#
+myPDF("smallpoxTreeDiagram.pdf", 7, 3.5)#
+treeDiag(c('Innoculated','Result'),c(0.0392, 0.9608),#
+	list(c(0.9754, 0.0246),c(0.8589, 0.1411)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('yes','no'),c('lived','died'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()

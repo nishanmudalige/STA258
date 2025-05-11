@@ -1,0 +1,866 @@
+pdf('tDistConvergeToNormalDist.pdf', 5.4, 2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#000000FF', '#00000091', '#0000006F', '#0000004B', '#00000022')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend('topright', legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 5.4, 2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#000000FF', '#00000091', '#0000006F', '#0000004B', '#00000022')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(5, 0.3, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 5.4, 2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#000000FF', '#00000091', '#0000006F', '#0000004B', '#00000022')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 5.4, 2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#000000FF', '#00000091', '#0000006F', '#0000004B', '#00000022')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#000000FF', '#00000091', '#0000006F', '#0000004B', '#00000022')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#225588FF', '#22558891', '#2255886F', '#2255884B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#225588FF', '#22558891', '#2255886F', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#225588FF', '#18447791', '#2255886F', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255886F', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#00', '#18447791', '#2255886F', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#000000', '#18447791', '#2255886F', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255886F', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#184477A1', '#2255887F', '#2A66995B', '#3388AA44')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255887F', '#2A66995B', '#3388AA44')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255886F', '#2A66995B', '#3388AA44')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255886F', '#2A669955', '#3388AA44')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255886F', '#2A669955', '#3388AA40')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255886F', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL <- c('#113366FF', '#18447791', '#2255886B', '#2A66994B', '#3388AA33')#
+DF <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, lty=rep(1, 5))#
+#
+dev.off()
+?legend
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2A66994B', '#3388AA33')#
+COLt <- c('#113366FF', '#184477B1', '#2255889B', '#2A66997B', '#3388AA63')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2A66994B', '#3388AA33')#
+COLt <- c('#113366FF', '#184477C1', '#225588B0', '#2A66999B', '#3388AA83')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2A66994B', '#3388AA33')#
+COLt <- c('#113366FF', '#184477C1', '#225588B0', '#2A66999B', '#3388AA')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2A66994B', '#3388AA33')#
+COLt <- c('#113366FF', '#184477C1', '#225588B0', '#2A66999B', '#3388AA83')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2E66994B', '#3F88AA33')#
+COLt <- c('#113366FF', '#184477C1', '#225588B0', '#2A66999B', '#3388AA83')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2E66994B', '#3F88AA33')#
+COLt <- c('#113366FF', '#184477C1', '#225588B0', '#2A66999B', '#3F88AA83')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2E66994B', '#3F88AA33')#
+COLt <- c('#113366FF', '#184477C1', '#225588B0', '#2A66999B', '#3F88AA93')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL  <- c('#113366FF', '#18447791', '#2255886B', '#2E66994B', '#3F88AA33')#
+COLt <- c('#113366FF', '#184477C8', '#225588B8', '#2A6699A8', '#3F88AA98')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)
+fadeColor(COL[1], c("33", "55"))
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL.  <- fadeColor(COL[1], c("33", "55", "77", "AA", "FF"))#
+COLt <- c('#113366FF', '#184477C8', '#225588B8', '#2A6699A8', '#3F88AA98')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL, text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL.  <- fadeColor(COL[1], c("33", "55", "77", "AA", "FF"))#
+COLt <- c('#113366FF', '#184477C8', '#225588B8', '#2A6699A8', '#3F88AA98')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL.  <- fadeColor(COL[1], c("FF", "AA", "77", "55", "33"))#
+COLt <- c('#113366FF', '#184477C8', '#225588B8', '#2A6699A8', '#3F88AA98')#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL. <- fadeColor(COL[1], c("FF", "AA", "77", "55", "33"))#
+COLt <- COL.#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL. <- fadeColor(COL[1], c("FF", "90", "70", "50", "33"))#
+COLt <- COL.#
+DF   <- c('normal', 10, 5, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL. <- fadeColor(COL[1], c("FF", "90", "70", "50", "33"))#
+COLt <- COL.#
+DF   <- c('normal', 8, 4, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL. <- fadeColor(COL[1], c("FF", "89", "68", "4C", "33"))#
+COLt <- COL.#
+DF   <- c('normal', 8, 4, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL. <- fadeColor(COL[1], c("FF", "89", "68", "4C", "33"))#
+COLt <- fadeColor(COL[1], c("FF", "99", "78", "5C", "43"))#
+DF   <- c('normal', 8, 4, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL. <- fadeColor(COL[1], c("FF", "89", "68", "4C", "33"))#
+COLt <- fadeColor(COL[1], c("FF", "AA", "78", "5C", "43"))#
+DF   <- c('normal', 8, 4, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+pdf('tDistConvergeToNormalDist.pdf', 1.1*5.4, 1.1*2.3)#
+#
+par(mar=c(2, 1, 1, 1), mgp=c(5, 0.6, 0))#
+plot(c(-3.5, 8), c(0, dnorm(0)), type='n', axes=FALSE)#
+axis(1)#
+abline(h=0)#
+#
+COL. <- fadeColor(COL[1], c("FF", "89", "68", "4C", "33"))#
+COLt <- fadeColor(COL[1], c("FF", "AA", "85", "60", "45"))#
+DF   <- c('normal', 8, 4, 2, 1)#
+#
+X <- seq(-5, 10, 0.02)#
+Y <- dnorm(X)#
+lines(X, Y, col=COL.[1])#
+#
+for(i in 2:5){#
+	Y <- dt(X, as.numeric(DF[i]))#
+	lines(X, Y, col=COL.[i])#
+}#
+#
+legend(4.5, 0.4, legend=c(DF[1], paste('t, df=', DF[2:5], sep='')), col=COL., text.col=COLt, lty=rep(1, 5))#
+#
+dev.off()

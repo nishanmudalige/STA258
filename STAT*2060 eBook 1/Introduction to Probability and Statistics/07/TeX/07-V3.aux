@@ -1,0 +1,235 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {9}Introduction to linear regression}{288}{chapter.9}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{linRegrForTwoVar}{{9}{288}{Introduction to linear regression}{chapter.9}{}}
+\newlabel{genLinModelWNoErrorTerm}{{9.1}{288}{Introduction to linear regression}{equation.9.0.1}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.1}{\ignorespaces Requests from twelve separate buyers were simultaneously placed with a trading company to purchase Target Corporation stock (ticker \texttt  {TGT}, April 26th, 2012), and the total cost of the shares were reported. Because the cost is computed using a linear formula, the linear fit is perfect.\relax }}{289}{figure.caption.195}}
+\newlabel{perfLinearModel}{{9.1}{289}{Requests from twelve separate buyers were simultaneously placed with a trading company to purchase Target Corporation stock (ticker \texttt {TGT}, April 26th, 2012), and the total cost of the shares were reported. Because the cost is computed using a linear formula, the linear fit is perfect.\relax }{figure.caption.195}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.2}{\ignorespaces Three data sets where a linear model may be useful even though the data do not all fall exactly on the line.\relax }}{289}{figure.caption.196}}
+\newlabel{imperfLinearModel}{{9.2}{289}{Three data sets where a linear model may be useful even though the data do not all fall exactly on the line.\relax }{figure.caption.196}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {9.1}Line fitting, residuals, and correlation}{289}{section.9.1}}
+\newlabel{lineFittingResidualsCorrelation}{{9.1}{289}{Line fitting, residuals, and correlation}{section.9.1}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.3}{\ignorespaces A linear model is not useful in this nonlinear case. These data are from an introductory physics experiment.\relax }}{290}{figure.caption.197}}
+\newlabel{notGoodAtAllForALinearModel}{{9.3}{290}{A linear model is not useful in this nonlinear case. These data are from an introductory physics experiment.\relax }{figure.caption.197}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.1}Beginning with straight lines}{290}{subsection.9.1.1}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.2}Fitting a line by eye}{290}{subsection.9.1.2}}
+\newlabel{headLLinModTotalL}{{9.2}{290}{Fitting a line by eye}{equation.9.1.2}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.4}{\ignorespaces A scatterplot showing head length against total length for 104 brushtail possums. A point representing a possum with head length 94.1mm and total length 89cm is highlighted.\relax }}{291}{figure.caption.198}}
+\newlabel{scattHeadLTotalL}{{9.4}{291}{A scatterplot showing head length against total length for 104 brushtail possums. A point representing a possum with head length 94.1mm and total length 89cm is highlighted.\relax }{figure.caption.198}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.5}{\ignorespaces The common brushtail possum of Australia.\vspace  {-1mm}   -----------------------------\vspace  {-2mm}  {\relax \fontsize  {8}{9.5}\selectfont  \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Photo by wollombi on Flickr: \href  {http://flickr.com/photos/wollombi/58499575/}{www.flickr.com/photos/wollombi/58499575}}\vspace  {-8mm}\relax }}{291}{figure.caption.199}}
+\newlabel{possumPic}{{9.5}{291}{The common brushtail possum of Australia.\vspace {-1mm} \\ -----------------------------\vspace {-2mm}\\ {\footnotesize Photo by wollombi on Flickr: \href {http://flickr.com/photos/wollombi/58499575/}{www.flickr.com/photos/wollombi/58499575}}\vspace {-8mm}\relax }{figure.caption.199}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.6}{\ignorespaces The figure on the left shows head length versus total length, and reveals that many of the points could be captured by a straight band. On the right, we see that a curved band is more appropriate in the scatterplot for \texttt  {weight} and \texttt  {mpgCity} from the \texttt  {cars} data set.\relax }}{292}{figure.caption.200}}
+\newlabel{scattHeadLTotalLTube}{{9.6}{292}{The figure on the left shows head length versus total length, and reveals that many of the points could be captured by a straight band. On the right, we see that a curved band is more appropriate in the scatterplot for \var {weight} and \var {mpgCity} from the \data {cars} data set.\relax }{figure.caption.200}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.3}Residuals}{292}{subsection.9.1.3}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.7}{\ignorespaces A reasonable linear model was fit to represent the relationship between head length and total length.\relax }}{293}{figure.caption.201}}
+\newlabel{scattHeadLTotalLLine}{{9.7}{293}{A reasonable linear model was fit to represent the relationship between head length and total length.\relax }{figure.caption.201}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.8}{\ignorespaces Residual plot for the model in Figure\nobreakspace  {}\ref  {scattHeadLTotalLLine}.\relax }}{294}{figure.caption.202}}
+\newlabel{scattHeadLTotalLResidualPlot}{{9.8}{294}{Residual plot for the model in Figure~\ref {scattHeadLTotalLLine}.\relax }{figure.caption.202}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.9}{\ignorespaces Sample data with their best fitting lines (top row) and their corresponding residual plots (bottom row).\relax }}{295}{figure.caption.203}}
+\newlabel{sampleLinesAndResPlots}{{9.9}{295}{Sample data with their best fitting lines (top row) and their corresponding residual plots (bottom row).\relax }{figure.caption.203}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.1.4}Describing linear relationships with correlation}{295}{subsection.9.1.4}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.10}{\ignorespaces Sample scatterplots and their correlations. The first row shows variables with a positive relationship, represented by the trend up and to the right. The second row shows variables with a negative trend, where a large value in one variable is associated with a low value in the other.\relax }}{296}{figure.caption.204}}
+\newlabel{posNegCorPlots}{{9.10}{296}{Sample scatterplots and their correlations. The first row shows variables with a positive relationship, represented by the trend up and to the right. The second row shows variables with a negative trend, where a large value in one variable is associated with a low value in the other.\relax }{figure.caption.204}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.11}{\ignorespaces Sample scatterplots and their correlations. In each case, there is a strong relationship between the variables. However, the correlation is not very strong, and the relationship is not linear.\relax }}{296}{figure.caption.205}}
+\newlabel{corForNonLinearPlots}{{9.11}{296}{Sample scatterplots and their correlations. In each case, there is a strong relationship between the variables. However, the correlation is not very strong, and the relationship is not linear.\relax }{figure.caption.205}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.12}{\ignorespaces Gift aid and family income for a random sample of 50 freshman students from Elmhurst College. Two lines are fit to the data, the solid line being the \emph  {least squares line}.\relax }}{297}{figure.caption.206}}
+\newlabel{elmhurstScatterW2Lines}{{9.12}{297}{Gift aid and family income for a random sample of 50 freshman students from Elmhurst College. Two lines are fit to the data, the solid line being the \emph {least squares line}.\relax }{figure.caption.206}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {9.2}Fitting a line by least squares regression}{297}{section.9.2}}
+\newlabel{fittingALineByLSR}{{9.2}{297}{Fitting a line by least squares regression}{section.9.2}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.1}An objective measure for finding the best line}{297}{subsection.9.2.1}}
+\newlabel{sumOfAbsoluteValueOfResiduals}{{9.9}{297}{An objective measure for finding the best line}{equation.9.2.9}{}}
+\newlabel{sumOfSquaresForResiduals}{{9.10}{297}{An objective measure for finding the best line}{equation.9.2.10}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.2}Conditions for the least squares line}{298}{subsection.9.2.2}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.3}Finding the least squares line}{298}{subsection.9.2.3}}
+\newlabel{findingTheLeastSquaresLineSection}{{9.2.3}{298}{Finding the least squares line}{subsection.9.2.3}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.13}{\ignorespaces Four examples showing when the methods in this chapter are insufficient to apply to the data. In the left panel, a straight line does not fit the data. In the second panel, there are outliers; two points on the left are relatively distant from the rest of the data, and one of these points is very far away from the line. In the third panel, the variability of the data around the line increases with larger values of $x$. In the last panel, a time series data set is shown, where successive observations are highly correlated.\relax }}{299}{figure.caption.207}}
+\newlabel{whatCanGoWrongWithLinearModel}{{9.13}{299}{Four examples showing when the methods in this chapter are insufficient to apply to the data. In the left panel, a straight line does not fit the data. In the second panel, there are outliers; two points on the left are relatively distant from the rest of the data, and one of these points is very far away from the line. In the third panel, the variability of the data around the line increases with larger values of $x$. In the last panel, a time series data set is shown, where successive observations are highly correlated.\relax }{figure.caption.207}{}}
+\newlabel{slopeOfLSRLine}{{9.12}{299}{Finding the least squares line}{equation.9.2.12}{}}
+\newlabel{27@xvr}{{}{299}{Finding the least squares line}{equation.9.2.13}{}}
+\newlabel{27@vr}{{}{299}{Finding the least squares line}{equation.9.2.13}{}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {9.14}{\ignorespaces Summary statistics for family income and gift aid.\relax }}{299}{table.caption.208}}
+\newlabel{summaryStatsOfSATGPAData}{{9.14}{299}{Summary statistics for family income and gift aid.\relax }{table.caption.208}{}}
+\newlabel{findingTheSlopeOfTheLSRLineForIncomeAndAid}{{9.14}{300}{Finding the least squares line}{equation.9.2.14}{}}
+\newlabel{pointSlopeFormForALine}{{9.15}{300}{Finding the least squares line}{equation.9.2.15}{}}
+\newlabel{exampleToFindLSRLineOfElmhurstData}{{9.16}{300}{Finding the least squares line}{equation.9.2.16}{}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {9.15}{\ignorespaces Summary of least squares fit for the Elmhurst data. Compare the parameter estimates in the first column to the results of Example\nobreakspace  {}\ref  {exampleToFindLSRLineOfElmhurstData}.\relax }}{301}{table.caption.209}}
+\newlabel{rOutputForIncomeAidLSRLine}{{9.15}{301}{Summary of least squares fit for the Elmhurst data. Compare the parameter estimates in the first column to the results of Example~\ref {exampleToFindLSRLineOfElmhurstData}.\relax }{table.caption.209}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.4}Interpreting regression line parameter estimates}{301}{subsection.9.2.4}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.5}Extrapolation is treacherous}{302}{subsection.9.2.5}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.6}Using $R^2$ to describe the strength of a fit}{302}{subsection.9.2.6}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.16}{\ignorespaces Gift aid and family income for a random sample of 50 freshman students from Elmhurst College, shown with the least squares regression line.\relax }}{303}{figure.caption.210}}
+\newlabel{elmhurstScatterWLSROnly}{{9.16}{303}{Gift aid and family income for a random sample of 50 freshman students from Elmhurst College, shown with the least squares regression line.\relax }{figure.caption.210}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.2.7}Categorical predictors with two levels}{303}{subsection.9.2.7}}
+\newlabel{categoricalPredictorsWithTwoLevels}{{9.2.7}{303}{Categorical predictors with two levels}{subsection.9.2.7}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.17}{\ignorespaces Total auction prices for the video game \emph  {Mario Kart}, divided into used ($x=0$) and new ($x=1$) condition games. The least squares regression line is also shown.\relax }}{304}{figure.caption.211}}
+\newlabel{marioKartNewUsed}{{9.17}{304}{Total auction prices for the video game \emph {Mario Kart}, divided into used ($x=0$) and new ($x=1$) condition games. The least squares regression line is also shown.\relax }{figure.caption.211}{}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {9.18}{\ignorespaces Least squares regression summary for the final auction price against the condition of the game.\relax }}{304}{table.caption.212}}
+\newlabel{marioKartNewUsedRegrSummary}{{9.18}{304}{Least squares regression summary for the final auction price against the condition of the game.\relax }{table.caption.212}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {9.3}Types of outliers in linear regression}{305}{section.9.3}}
+\newlabel{typesOfOutliersInLinearRegression}{{9.3}{305}{Types of outliers in linear regression}{section.9.3}{}}
+\newlabel{outlierPlotsExample}{{9.23}{305}{Types of outliers in linear regression}{equation.9.3.23}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.19}{\ignorespaces Six plots, each with a least squares line and residual plot. All data sets have at least one outlier.\relax }}{306}{figure.caption.213}}
+\newlabel{outlierPlots}{{9.19}{306}{Six plots, each with a least squares line and residual plot. All data sets have at least one outlier.\relax }{figure.caption.213}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {9.4}Inference for linear regression}{307}{section.9.4}}
+\newlabel{inferenceForLinearRegression}{{9.4}{307}{Inference for linear regression}{section.9.4}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.1}Midterm elections and unemployment}{307}{subsection.9.4.1}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.20}{\ignorespaces The percent change in House seats for the President's party in each election from 1898 to 2010 plotted against the unemployment rate. The two points for the Great Depression have been removed, and a least squares regression line has been fit to the data.\relax }}{308}{figure.caption.214}}
+\newlabel{unemploymentAndChangeInHouse}{{9.20}{308}{The percent change in House seats for the President's party in each election from 1898 to 2010 plotted against the unemployment rate. The two points for the Great Depression have been removed, and a least squares regression line has been fit to the data.\relax }{figure.caption.214}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.2}Understanding regression output from software}{309}{subsection.9.4.2}}
+\newlabel{testStatisticForTheSlope}{{9.4.2}{309}{Understanding regression output from software}{subsection.9.4.2}{}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {9.21}{\ignorespaces Output from statistical software for the regression line modeling the midterm election losses for the President's party as a response to unemployment.\relax }}{309}{table.caption.215}}
+\newlabel{midtermElectionUnemploymentRRegressionOutput}{{9.21}{309}{Output from statistical software for the regression line modeling the midterm election losses for the President's party as a response to unemployment.\relax }{table.caption.215}{}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {9.22}{\ignorespaces The distribution shown here is the sampling distribution for $b_1$, if the null hypothesis was true. The shaded tail represents the p-value for the hypothesis test evaluating whether there is convincing evidence that higher unemployment corresponds to a greater loss of House seats for the President's party during a midterm election.\relax }}{310}{figure.caption.216}}
+\newlabel{oneSidedTailForMidtermUnemploymentHT}{{9.22}{310}{The distribution shown here is the sampling distribution for $b_1$, if the null hypothesis was true. The shaded tail represents the p-value for the hypothesis test evaluating whether there is convincing evidence that higher unemployment corresponds to a greater loss of House seats for the President's party during a midterm election.\relax }{figure.caption.216}{}}
+\newlabel{28@xvr}{{}{310}{Understanding regression output from software}{equation.9.4.27}{}}
+\newlabel{28@vr}{{}{310}{Understanding regression output from software}{equation.9.4.27}{}}
+\newlabel{overallAidIncomeInformalAssessmentOfRegressionLineSlope}{{9.27}{310}{Understanding regression output from software}{equation.9.4.27}{}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {9.23}{\ignorespaces Summary of least squares fit for the Elmhurst College data.\relax }}{311}{table.caption.217}}
+\newlabel{rOutputForIncomeAidLSRLineInInferenceSection}{{9.23}{311}{Summary of least squares fit for the Elmhurst College data.\relax }{table.caption.217}{}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {9.4.3}An alternative test statistic}{311}{subsection.9.4.3}}
+\@setckpt{07/TeX/07-V3}{
+\setcounter{page}{312}
+\setcounter{equation}{28}
+\setcounter{enumi}{3}
+\setcounter{enumii}{3}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{15}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{9}
+\setcounter{section}{4}
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{23}
+\setcounter{table}{23}
+\setcounter{OptionTest}{0}
+\setcounter{vrcnt}{28}
+\setcounter{parentequation}{0}
+\setcounter{ContinuedFloat}{0}
+\setcounter{pp@next@reset}{0}
+\setcounter{subfigure}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{lotdepth}{1}
+\setcounter{cp@cntr}{0}
+\setcounter{Item}{317}
+\setcounter{Hfootnote}{317}
+\setcounter{bookmark@seq@number}{216}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{36}
+\setcounter{maxnames}{2}
+\setcounter{minnames}{1}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextrayear}{0}
+\setcounter{maxextraalpha}{0}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{float@type}{4}
+\setcounter{alwaysOne}{1}
+\setcounter{alwaysTwo}{2}
+\setcounter{alwaysThree}{3}
+\setcounter{alwaysFour}{4}
+\setcounter{withinChNum}{0}
+\setcounter{eoce}{0}
+\setcounter{eocesolch}{0}
+\setcounter{eocesol}{0}
+\setcounter{section@level}{0}
+}

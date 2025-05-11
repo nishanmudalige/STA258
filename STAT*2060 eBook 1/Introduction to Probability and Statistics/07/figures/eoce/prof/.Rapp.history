@@ -1,0 +1,16 @@
+library(openintro)#
+data(COL)#
+#
+d = read.csv(file = "ProfEvaltnsBeautyPublic.csv", header = TRUE, stringsAsFactors = FALSE)
+dim(d)
+d[1:5,]
+beauty <- d$btystdave#
+eval <- d$courseevaluation#
+beauty_eval_lm = lm(eval ~ beauty)
+beauty_eval_lm
+mean(beauty)
+mean(eval)
+summary(beauty_eval_lm)
+(4.010-3.9983)
+(4.010-3.9983)/0.0883
+4.13*.0322

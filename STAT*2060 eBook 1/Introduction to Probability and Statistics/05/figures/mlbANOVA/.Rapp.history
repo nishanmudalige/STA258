@@ -1,0 +1,3464 @@
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf")#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE)#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf")#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=0.8, col="#22558844")#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf")#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, col="#22558844")#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, col="#22558844")#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4, col="#22558844", cex=0.5)#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", pchCex=1, col="#22558844")
+rev(POS)
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, col="#22558844")#
+dotPlot(rev(out), rev(gp), TRUE, axes=FALSE, add=TRUE, at=1:4, col="#22558844", cex=0.5)#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, col="#22558844")#
+dotPlot(rev(out), rev(gp), TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+fact=NULL; horiz=FALSE; width=2/3; lwd=1; lcol='black'; medianLwd=2; pch=20; pchCex=1.8; col=fadeColor('black', '44'); add=FALSE; key=NULL; axes=TRUE; xlab=''; ylab=''; xlim=NULL; ylim=NULL
+x <- out
+fact <- gp
+axes=FALSE
+pchCex=1
+if(!is.null(fact)[1]){#
+		fact <- as.character(fact)#
+	} else {#
+		fact <- rep('', length(x))#
+	}#
+	if(is.null(key)[1]){#
+		uFact <- sort(unique(fact))#
+	} else {#
+		uFact <- key#
+	}#
+	N <- length(uFact)#
+	fiveNum <- matrix(NA, N, 5)#
+	for(i in 1:N){#
+		fiveNum[i,] <- fivenum(x[fact == uFact[i]])#
+	}#
+	iqrAdj <- 1.5*(fiveNum[,4] - fiveNum[,2])#
+	below <- which(fiveNum[,1] < fiveNum[,2]-iqrAdj)#
+	if(length(below) > 0){#
+		for(i in 1:length(below)){#
+			fiveNum[below[i],1] <- min(x[x > fiveNum[below[i],2]-iqrAdj[below[i]] & fact == uFact[i]])#
+		}#
+	}#
+	above <- which(fiveNum[,5] > fiveNum[,4]+iqrAdj)#
+	if(length(above) > 0){#
+		for(i in 1:length(above)){#
+			fiveNum[above[i],5] <- max(x[x < fiveNum[above[i],4]+iqrAdj[above[i]] & fact == uFact[i]])#
+		}#
+	}
+w <- width/2
+horiz
+if(is.null(ylim)){#
+			yR <- range(x)#
+			yR <- yR + c(-1,1)*diff(yR)/30#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- c(1-2*w,N+2*w)#
+		} else {#
+			xR <- xlim#
+		}#
+		if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR, ...)#
+			}#
+			add <- 1:N#
+		}#
+		if(N == 1){#
+			w <- w/1.3#
+		}
+if(is.null(ylim)){#
+			yR <- range(x)#
+			yR <- yR + c(-1,1)*diff(yR)/30#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- c(1-2*w,N+2*w)#
+		} else {#
+			xR <- xlim#
+		}#
+		if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR)#
+			}#
+			add <- 1:N#
+		}#
+		if(N == 1){#
+			w <- w/1.3#
+		}
+i <- 1
+bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)
+rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}
+N
+N <- N-1
+for(i in 1:N){#
+			bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+		}
+i <- 4
+bds <- add[i]+w*c(-1,1)#
+			lines(rep(fiveNum[i,1],2), bds, col=lcol, lwd=lwd)#
+			lines(fiveNum[i,1:2], c(add[i],add[i]), col=lcol, lwd=lwd)
+add[i]
+fiveNum[i,]
+rect(fiveNum[i,2], add[i]-w, fiveNum[i,4], add[i]+w, border=lcol, lwd=lwd)
+horiz=FALSE; width=2/3; lwd=1; lcol='black'; medianLwd=2; pch=20; pchCex=1.8; col=fadeColor('black', '44'); add=FALSE; key=NULL; axes=TRUE; xlab=''; ylab=''; xlim=NULL; ylim=NULL
+axes=FALSE; pchCex=1
+if(!is.null(fact)[1]){#
+		fact <- as.character(fact)#
+	} else {#
+		fact <- rep('', length(x))#
+	}#
+	if(is.null(key)[1]){#
+		uFact <- sort(unique(fact))#
+	} else {#
+		uFact <- key#
+	}#
+	N <- length(uFact)#
+	fiveNum <- matrix(NA, N, 5)#
+	for(i in 1:N){#
+		fiveNum[i,] <- fivenum(x[fact == uFact[i]])#
+	}#
+	iqrAdj <- 1.5*(fiveNum[,4] - fiveNum[,2])#
+	below <- which(fiveNum[,1] < fiveNum[,2]-iqrAdj)#
+	if(length(below) > 0){#
+		for(i in 1:length(below)){#
+			fiveNum[below[i],1] <- min(x[x > fiveNum[below[i],2]-iqrAdj[below[i]] & fact == uFact[i]])#
+		}#
+	}#
+	above <- which(fiveNum[,5] > fiveNum[,4]+iqrAdj)#
+	if(length(above) > 0){#
+		for(i in 1:length(above)){#
+			fiveNum[above[i],5] <- max(x[x < fiveNum[above[i],4]+iqrAdj[above[i]] & fact == uFact[i]])#
+		}#
+	}#
+#	below <- fiveNum[,1] < fiveNum[,2]-iqrAdj#
+#	fiveNum[below,1] <- fiveNum[below,2]-iqrAdj[below]#
+#	above <- fiveNum[,5] > fiveNum[,4]+iqrAdj#
+#	fiveNum[above,5] <- fiveNum[above,4]+iqrAdj[above]#
+	w <- width/2
+if(is.null(ylim)){#
+			yR <- range(x)#
+			yR <- yR + c(-1,1)*diff(yR)/30#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- c(1-2*w,N+2*w)#
+		} else {#
+			xR <- xlim#
+		}#
+		if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR, ...)#
+			}#
+			add <- 1:N#
+		}#
+		if(N == 1){#
+			w <- w/1.3#
+		}
+plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR)
+i <- 1
+bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}
+horiz=FALSE; width=2/3; lwd=1; lcol='black'; medianLwd=2; pch=20; pchCex=1.8; col=fadeColor('black', '44'); add=FALSE; key=NULL; axes=TRUE; xlab=''; ylab=''; xlim=NULL; ylim=NULL
+fact <- gp
+fact
+axes=FALSE
+pchCex=1
+if(!is.null(fact)[1]){#
+		fact <- as.character(fact)#
+	} else {#
+		fact <- rep('', length(x))#
+	}#
+	if(is.null(key)[1]){#
+		uFact <- sort(unique(fact))#
+	} else {#
+		uFact <- key#
+	}#
+	N <- length(uFact)#
+	fiveNum <- matrix(NA, N, 5)#
+	for(i in 1:N){#
+		fiveNum[i,] <- fivenum(x[fact == uFact[i]])#
+	}#
+	iqrAdj <- 1.5*(fiveNum[,4] - fiveNum[,2])#
+	below <- which(fiveNum[,1] < fiveNum[,2]-iqrAdj)#
+	if(length(below) > 0){#
+		for(i in 1:length(below)){#
+			fiveNum[below[i],1] <- min(x[x > fiveNum[below[i],2]-iqrAdj[below[i]] & fact == uFact[i]])#
+		}#
+	}#
+	above <- which(fiveNum[,5] > fiveNum[,4]+iqrAdj)#
+	if(length(above) > 0){#
+		for(i in 1:length(above)){#
+			fiveNum[above[i],5] <- max(x[x < fiveNum[above[i],4]+iqrAdj[above[i]] & fact == uFact[i]])#
+		}#
+	}#
+#	below <- fiveNum[,1] < fiveNum[,2]-iqrAdj#
+#	fiveNum[below,1] <- fiveNum[below,2]-iqrAdj[below]#
+#	above <- fiveNum[,5] > fiveNum[,4]+iqrAdj#
+#	fiveNum[above,5] <- fiveNum[above,4]+iqrAdj[above]#
+	w <- width/2
+horiz
+if(is.null(ylim)){#
+			yR <- range(x)#
+			yR <- yR + c(-1,1)*diff(yR)/30#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- c(1-2*w,N+2*w)#
+		} else {#
+			xR <- xlim#
+		}
+if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR)#
+			}#
+			add <- 1:N#
+		}#
+		if(N == 1){#
+			w <- w/1.3#
+		}
+i <- 1
+N
+bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}
+i <- 2
+bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}
+i <- 3
+bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}
+i <- 4
+bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}
+fiveNum
+X
+iqrAdj
+fiveNum[,4] - fiveNum[,2]
+below
+above
+fact=NULL; horiz=FALSE; width=2/3; lwd=1; lcol='black'; medianLwd=2; pch=20; pchCex=1.8; col=fadeColor('black', '44'); add=FALSE; key=NULL; axes=TRUE; xlab=''; ylab=''; xlim=NULL; ylim=NULL#
+`boxPlot` <-#
+function(x, fact=NULL, horiz=FALSE, width=2/3, lwd=1, lcol='black', medianLwd=2, pch=20, pchCex=1.8, col=fadeColor('black', '44'), add=FALSE, key=NULL, axes=TRUE, xlab='', ylab='', xlim=NULL, ylim=NULL, ...){#
+	if(!is.null(fact)[1]){#
+		fact <- as.character(fact)#
+	} else {#
+		fact <- rep('', length(x))#
+	}#
+	if(is.null(key)[1]){#
+		uFact <- sort(unique(fact))#
+	} else {#
+		uFact <- key#
+	}#
+	N <- length(uFact)#
+	fiveNum <- matrix(NA, N, 5)#
+	for(i in 1:N){#
+		fiveNum[i,] <- fivenum(x[fact == uFact[i]])#
+	}#
+	iqrAdj <- 1.5*(fiveNum[,4] - fiveNum[,2])#
+	below <- which(fiveNum[,1] < fiveNum[,2]-iqrAdj)#
+	if(length(below) > 0){#
+		for(i in below){#
+			fiveNum[below[i],1] <- min(x[x > fiveNum[below[i],2]-iqrAdj[below[i]] & fact == uFact[i]])#
+		}#
+	}#
+	above <- which(fiveNum[,5] > fiveNum[,4]+iqrAdj)#
+	if(length(above) > 0){#
+		for(i in above){#
+			fiveNum[above[i],5] <- max(x[x < fiveNum[above[i],4]+iqrAdj[above[i]] & fact == uFact[i]])#
+		}#
+	}#
+#	below <- fiveNum[,1] < fiveNum[,2]-iqrAdj#
+#	fiveNum[below,1] <- fiveNum[below,2]-iqrAdj[below]#
+#	above <- fiveNum[,5] > fiveNum[,4]+iqrAdj#
+#	fiveNum[above,5] <- fiveNum[above,4]+iqrAdj[above]#
+	w <- width/2#
+	if(horiz){#
+		if(is.null(ylim)){#
+			yR <- c(1-2*w,N+2*w)#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- range(x)#
+			xR <- xR + c(-1,1)*diff(xR)/30#
+		} else {#
+			xR <- xlim#
+		}#
+		if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR, ...)#
+			}#
+			add <- 1:N#
+		} #
+		if(N == 1){#
+			w <- w/1.3#
+		}#
+		for(i in 1:N){#
+			bds <- add[i]+w*c(-1,1)#
+			lines(rep(fiveNum[i,1],2), bds, col=lcol, lwd=lwd)#
+			lines(fiveNum[i,1:2], c(add[i],add[i]), col=lcol, lwd=lwd)#
+			rect(fiveNum[i,2], add[i]-w, fiveNum[i,4], add[i]+w, border=lcol, lwd=lwd)#
+			lines(rep(fiveNum[i,3], 2), bds, col=lcol, lwd=medianLwd)#
+			lines(fiveNum[i,4:5], c(add[i],add[i]), col=lcol, lwd=lwd)#
+			lines(rep(fiveNum[i,5],2), bds, col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(X, rep(add[i], length(X)), pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(X, rep(add[i], length(X)), pch=pch, col=col, cex=pchCex)#
+			}#
+		}#
+		if(axes){#
+			if(N > 1){#
+				axis(2, at=add, labels=uFact)#
+			}#
+			axis(1)#
+			box()#
+		}#
+	} else {#
+		if(is.null(ylim)){#
+			yR <- range(x)#
+			yR <- yR + c(-1,1)*diff(yR)/30#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- c(1-2*w,N+2*w)#
+		} else {#
+			xR <- xlim#
+		}#
+		if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR, ...)#
+			}#
+			add <- 1:N#
+		}#
+		if(N == 1){#
+			w <- w/1.3#
+		}#
+		for(i in 1:N){#
+			bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+		}#
+		if(axes){#
+			if(N > 1){#
+				axis(1, at=add, labels=uFact)#
+			}#
+			axis(2)#
+			box()#
+		}#
+	}#
+}
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, col="#22558844")#
+dotPlot(rev(out), rev(gp), TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+i
+i <- 1
+length(above)
+fiveNum[above[i],5]
+x[x < fiveNum[above[i],4]+iqrAdj[above[i]] & fact == uFact[i]]
+x[x < (fiveNum[above[i],4]+iqrAdj[above[i]]) & fact == uFact[i]]
+fiveNum[above[i],4]
+iqrAdj[above[i]]
+fiveNum[above[i],4]+iqrAdj[above[i]]
+x < (fiveNum[above[i],4]+iqrAdj[above[i]]
+)
+fact == uFact[i]
+fact=NULL; horiz=FALSE; width=2/3; lwd=1; lcol='black'; medianLwd=2; pch=20; pchCex=1.8; col=fadeColor('black', '44'); add=FALSE; key=NULL; axes=TRUE; xlab=''; ylab=''; xlim=NULL; ylim=NULL#
+`boxPlot` <-#
+function(x, fact=NULL, horiz=FALSE, width=2/3, lwd=1, lcol='black', medianLwd=2, pch=20, pchCex=1.8, col=fadeColor('black', '44'), add=FALSE, key=NULL, axes=TRUE, xlab='', ylab='', xlim=NULL, ylim=NULL, ...){#
+	if(!is.null(fact)[1]){#
+		fact <- as.character(fact)#
+	} else {#
+		fact <- rep('', length(x))#
+	}#
+	if(is.null(key)[1]){#
+		uFact <- sort(unique(fact))#
+	} else {#
+		uFact <- key#
+	}#
+	N <- length(uFact)#
+	fiveNum <- matrix(NA, N, 5)#
+	for(i in 1:N){#
+		fiveNum[i,] <- fivenum(x[fact == uFact[i]])#
+	}#
+	iqrAdj <- 1.5*(fiveNum[,4] - fiveNum[,2])#
+	below <- which(fiveNum[,1] < fiveNum[,2]-iqrAdj)#
+	if(length(below) > 0){#
+		for(i in 1:length(below)){#
+			fiveNum[below[i],1] <- min(x[x > fiveNum[below[i],2]-iqrAdj[below[i]] & fact == uFact[i]])#
+		}#
+	}#
+	above <- which(fiveNum[,5] > fiveNum[,4]+iqrAdj)#
+	if(length(above) > 0){#
+		for(i in 1:length(above)){#
+			fiveNum[above[i],5] <- max(x[x < fiveNum[above[i],4]+iqrAdj[above[i]] & fact == uFact[i]])#
+		}#
+	}#
+#	below <- fiveNum[,1] < fiveNum[,2]-iqrAdj#
+#	fiveNum[below,1] <- fiveNum[below,2]-iqrAdj[below]#
+#	above <- fiveNum[,5] > fiveNum[,4]+iqrAdj#
+#	fiveNum[above,5] <- fiveNum[above,4]+iqrAdj[above]#
+	w <- width/2#
+	if(horiz){#
+		if(is.null(ylim)){#
+			yR <- c(1-2*w,N+2*w)#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- range(x)#
+			xR <- xR + c(-1,1)*diff(xR)/30#
+		} else {#
+			xR <- xlim#
+		}#
+		if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR, ...)#
+			}#
+			add <- 1:N#
+		} #
+		if(N == 1){#
+			w <- w/1.3#
+		}#
+		for(i in 1:N){#
+			bds <- add[i]+w*c(-1,1)#
+			lines(rep(fiveNum[i,1],2), bds, col=lcol, lwd=lwd)#
+			lines(fiveNum[i,1:2], c(add[i],add[i]), col=lcol, lwd=lwd)#
+			rect(fiveNum[i,2], add[i]-w, fiveNum[i,4], add[i]+w, border=lcol, lwd=lwd)#
+			lines(rep(fiveNum[i,3], 2), bds, col=lcol, lwd=medianLwd)#
+			lines(fiveNum[i,4:5], c(add[i],add[i]), col=lcol, lwd=lwd)#
+			lines(rep(fiveNum[i,5],2), bds, col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(X, rep(add[i], length(X)), pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(X, rep(add[i], length(X)), pch=pch, col=col, cex=pchCex)#
+			}#
+		}#
+		if(axes){#
+			if(N > 1){#
+				axis(2, at=add, labels=uFact)#
+			}#
+			axis(1)#
+			box()#
+		}#
+	} else {#
+		if(is.null(ylim)){#
+			yR <- range(x)#
+			yR <- yR + c(-1,1)*diff(yR)/30#
+		} else {#
+			yR <- ylim#
+		}#
+		if(is.null(xlim)){#
+			xR <- c(1-2*w,N+2*w)#
+		} else {#
+			xR <- xlim#
+		}#
+		if(is.logical(add[1])){#
+			if(!add[1]){#
+				plot(1:length(x),x,type='n',axes=FALSE, xlim=xR, xlab=xlab, ylab=ylab, ylim=yR, ...)#
+			}#
+			add <- 1:N#
+		}#
+		if(N == 1){#
+			w <- w/1.3#
+		}#
+		for(i in 1:N){#
+			bds <- add[i]+w*c(-1,1)#
+			lines(bds, rep(fiveNum[i,1],2), col=lcol, lwd=lwd)#
+			lines(c(add[i],add[i]), fiveNum[i,1:2], col=lcol, lwd=lwd)#
+			rect(add[i]-w, fiveNum[i,2], add[i]+w, fiveNum[i,4], border=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,3], 2), col=lcol, lwd=medianLwd)#
+			lines(c(add[i],add[i]), fiveNum[i,4:5], col=lcol, lwd=lwd)#
+			lines(bds, rep(fiveNum[i,5],2), col=lcol, lwd=lwd)#
+			if(i %in% above){#
+				X <- x[fact == uFact[i] & x > fiveNum[i,5]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+			if(i %in% below){#
+				X <- x[fact == uFact[i] & x < fiveNum[i,1]]#
+				points(rep(add[i], length(X)), X, pch=pch, col=col, cex=pchCex)#
+			}#
+		}#
+		if(axes){#
+			if(N > 1){#
+				axis(1, at=add, labels=uFact)#
+			}#
+			axis(2)#
+			box()#
+		}#
+	}#
+}
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(rev(out), rev(gp), TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, rev(POS))#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+table(d$pos)
+table(d$position)
+table(gp)
+by(data.frame(out, gp), gp, mean))
+by(data.frame(out, gp), gp, mean)
+by(out, gp, mean)
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+0.006366/3
+0.099745/323
+0.002122 / 0.099745/323
+0.002122 / (0.099745/323)
+mean(out)
+mean(out) -> m
+by(out, gp, mean)
+by(out, gp, mean) -> hold
+hold
+hold[1]
+hold[1][1]
+(hold - m)
+(hold - m)^2
+anova(lm(out ~ as.factor(gp)))
+by(out, gp, sd)
+by(out, gp, mean)
+var(by(out, gp, mean))
+sqrt(var(by(out, gp, mean)))
+var(out) - var(by(out, gp, mean))
+var(by(out, gp, mean))/(var(out) - var(by(out, gp, mean)))
+(var(out) - var(by(out, gp, mean))) / var(by(out, gp, mean))
+anova(lm(out ~ as.factor(gp)))
+xtable(anova(lm(out ~ as.factor(gp))))
+library(xtable)
+xtable(anova(lm(out ~ as.factor(gp))))
+rf(10000, 3, 321) -> hold
+mean(hold)
+hist(hold)
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"AVG"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Batting average", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"AVG"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Batting average", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()
+by(out, gp, mean)
+by(out, gp, sd)
+d[1:5,]
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"SLB"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Batting average", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()
+rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd))
+library(xtable)
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=4)
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"SLB"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Batting average", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)
+d
+d[1:3,]
+d[1:3+324,]
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)
+d[1:3,]
+d[1:3+324,]
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)
+g <- rep(1:3, c(10, 1000, 1000)))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}
+g <- rep(1:3, c(10, 1000, 1000))
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+anova(lm(x ~ g))
+by(x, g, mean)
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+by(x, g, mean)#
+anova(lm(x ~ g))
+g <- rep(1:3, c(10, 10000, 10000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+by(x, g, mean)#
+anova(lm(x ~ g))
+sum((by(x, g, mean) - mean(x))^2)
+sum((by(x, g, mean) - mean(x))^2)/3
+sum((by(x, g, mean) - mean(x))^2)/2
+g <- rep(1:3, c(10, 10000, 10000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum((by(x, g, mean) - mean(x))^2)/3#
+anova(lm(x ~ g))
+g <- rep(1:3, c(100, 10000, 10000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum((by(x, g, mean) - mean(x))^2)/3#
+anova(lm(x ~ g))
+g <- rep(1:3, c(1000, 10000, 10000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum((by(x, g, mean) - mean(x))^2)/3#
+anova(lm(x ~ g))
+g <- rep(1:3, c(1000, 10000, 10000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum((by(x, g, mean) - mean(x))^2)/3#
+anova(lm(x ~ as.factor(g)))
+sum((by(x, g, mean) - mean(x))^2)/2
+g <- rep(1:3, c(1000, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum((by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))
+rm(list=ls())#
+library(openintro)#
+#
+X <- seq(0, 6, len=300)#
+Y <- df(X, 3, 323)#
+#
+myPDF("fDist3And323.pdf", 5, 2.8, mar=c(3.1, 0.5, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(X, Y, type="l", xlab="F", ylab="", axes=FALSE)#
+abline(h=0)#
+axis(1)#
+dev.off()#
+myPDF("fDist3And323Shaded.pdf", 5, 2.8, mar=c(3.1, 0.5, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(X, Y, type="l", xlab="F", ylab="", axes=FALSE)#
+abline(h=0)#
+axis(1)#
+temp <- which(X > 1.994)#
+x    <- X[c(temp, rev(temp), temp[1])]#
+y    <- Y[c(temp, rev(temp), temp[1])]#
+polygon(x, y, col="#CCCCCC", border="#00000000")#
+dev.off()
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))
+xtable(anova(lm(out ~ as.factor(gp))))
+xtable(anova(lm(out ~ as.factor(gp))), digits=4)
+xtable(summary(lm(out ~ as.factor(gp))))
+(summary(lm(out ~ as.factor(gp))))
+plot(mod)
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+plot(mod)
+plot(mod$res)
+acf(mod$res)
+dotPlot(mod$res, mlbBat10$team)
+lm(mod$res ~ mlbBat10$team)
+lm(mlbBat$OBP ~ mlbBat10$team)
+lm(mlbBat10$OBP ~ mlbBat10$team)
+anova(lm(mlbBat10$OBP ~ mlbBat10$team))
+lm(mod$res ~ mlbBat10$team)
+dotPlot(mod$res, mlbBat10$team)
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team)#
+dev.off()
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team)#
+dev.off()
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, axes=FALSE, ylim=c(0, length(unique(mlbBat10$team))))#
+dev.off()
+nTeams <- length(unique(mlbBat10$team))#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, axes=FALSE, ylim=c(0, nTeams))#
+dev.off()
+nTeams <- length(unique(mlbBat10$team))#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, ylim=c(0, nTeams), cex.axis=0.5)#, axes=FALSE)#
+#axis(1)#
+#axis(2, 1:nTeams, #
+dev.off()
+nTeams <- length(unique(mlbBat10$team))#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5, las=1)#
+dotPlot(mod$res, mlbBat10$team, ylim=c(0, nTeams), cex.axis=0.5)#, axes=FALSE)#
+#axis(1)#
+#axis(2, 1:nTeams, #
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE)#
+axis(1)#
+axis(2, 1:nTeams, uTeams)#
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE)#
+par(las=1)#
+axis(1)#
+axis(2, 1:nTeams, uTeams)#
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE)#
+par(las=1)#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE)#
+par(las=1)#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#225588")#
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE)#
+par(las=1)#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE)#
+par(las=1)#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558844", lwd=1.5)#
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE)#
+par(las=1)#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+pdf("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+par(las=1)#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 5)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()
+lm(OBP ~ team + gp, mlbBat10)
+lm(mlbBat10$OBP ~ mlbBat10$team + gp)
+DF  <- data.frame(d, gp=gp)
+lm(OBP ~ team + gp, d)
+lm(OBP ~ team + gp, DF)
+anova(lm(OBP ~ team + gp, DF))
+anova(lm(OBP ~ gp + team, DF))
+myPDF("mlbANOVADiagNormality.pdf", 5, 4)#
+qqnorm(mod$res, main="", ylab="Residuals")#
+dev.off()
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4)#
+qqnorm(mod$res, main="", ylab="Residuals", pch=20, col="#225588")#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+myPDF("mlbANOVADiagNormality.pdf", 5, 4)#
+qqnorm(mod$res, main="", ylab="Residuals", pch=20, col="#22558844")#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4)#
+qqnorm(mod$res, main="", ylab="Residuals", pch=20, col="#22558866")#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4)#
+qqnorm(mod$res, main="", ylab="Residuals", pch=20, cex=0.7, col="#22558866")#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4)#
+qqnorm(mod$res, main="", ylab="Residuals", pch=20, cex=0.7, col="#22558888")#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Residuals", 2, line=2.6)#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+par(las=0)#
+mtext("Residuals", 2, line=2.6)#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", #xlab="", #
+pch=20, cex=0.7, col="#22558888")#
+#mtext("#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+plot(mod$fitted, mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Fitted values", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$fitted, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()
+mod$fit
+gp
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()
+library(xtable)#
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "cond", "stockPhoto", "duration", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes") + 0#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))#
+summary(lm(totalPr ~ condNew + stockPhoto + duration + wheels, d))#
+xtable(summary(lm(totalPr ~ condNew + stockPhoto + wheels, d)))#
+xtable(summary(fit <- lm(totalPr ~ condNew + wheels, d)))
+fit
+summary(fit)
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+mod[1:2,]
+mod[1:2]
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res[gp == "OF"], main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res[gp == "C"], main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 5, 4, mar=c(3.5, 4.4, 1.5, 0.5), mfrow=c(2,2))#
+qqnorm(mod$res[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(3.5, 4.4, 1.5, 0.5), mfrow=c(2,2))#
+qqnorm(mod$res[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(mod$res[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+sum(gp == "IF")
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(3.5, 4.4, 1.5, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(3.5, 4.4, 1.5, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05))#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(3.5, 4.4, 1.5, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(3.5, 4.4, 1.5, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col="#22558844", lcol="#225588")#
+#dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col="#22558844", lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col="#22558866", lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals")#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], col=COL[1])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col="#22558888", axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col="#22558888")#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3], axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3], axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=20, cex=0.9, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3], axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=20, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", cex=0.8, col=COL[1,3], axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))
+rm(list=ls())#
+library(xtable)#
+library(openintro)#
+data(COL)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"OBP"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+DF  <- data.frame(d, gp=gp)#
+mod <- lm(out ~ as.factor(gp))#
+summary(mod)#
+anova(mod)#
+xtable(summary(mod))#
+xtable(anova(mod), digits=4)#
+#plot(mod)#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="On base percentage", axes=FALSE, pchCex=1, key=POS, col=COL[1,3], lcol=COL[1])#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()#
+#
+xtable(rbind(by(out, gp, length),#
+		by(out, gp, mean),#
+		by(out, gp, sd)), digits=3)#
+g <- rep(1:3, c(10, 1000, 1000))#
+x <- c()#
+for(i in 1:3){#
+	n <- sum(g == i)#
+	x <- c(x, rnorm(n))#
+}#
+sum(by(x, g, length)*(by(x, g, mean) - mean(x))^2)/2#
+anova(lm(x ~ as.factor(g)))#
+uTeams <- unique(mlbBat10$team)#
+nTeams <- length(uTeams)#
+myPDF("mlbANOVADiagIndepOfTeam.pdf", 5, 4)#
+dotPlot(mod$res, mlbBat10$team, key=uTeams, ylim=c(0, nTeams), axes=FALSE, ylab="Teams", xlab="Residuals", col=COL[1])#
+axis(1)#
+axis(2, 1:nTeams, uTeams, cex.axis=0.5)#
+abline(h=1:nTeams, col=COL[7], lwd=0.5)#
+abline(h=seq(1, nTeams, 5), col=COL[6], lwd=1.5)#
+dev.off()#
+myPDF("mlbANOVADiagNormality.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+qqnorm(mod$res, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagNormalityGroups.pdf", 1.5*5, 1.5*4, mar=c(4.5, 4.4, 2, 0.5), mfrow=c(2,2))#
+qqnorm(out[gp == "OF"], main="Outfielders", ylab="", xlab="", pch=19, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "IF"], main="In-fielders", ylab="", xlab="", pch=19, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "DH"], main="Designated Hitters", ylab="", xlab="", pch=19, cex=0.8, col=COL[1,3], axes=FALSE); axis(1); axis(2, at=seq(0.3, 0.4, 0.05)); box()#
+mtext("Theoretical Quantiles", 1, 2.2)#
+qqnorm(out[gp == "C"], main="Catchers", ylab="", xlab="", pch=19, cex=0.8, col=COL[1,3])#
+mtext("Theoretical Quantiles", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+myPDF("mlbANOVADiagConstantVar.pdf", 5, 4, mar=c(3.5, 4.4, 0.5, 0.5))#
+boxPlot(mod$res, gp, main="", ylab="", xlab="", pch=20, cex=0.7, col=COL[1,3], lcol=COL[1])#
+mtext("Position", 1, 2.2)#
+par(las=0)#
+mtext("Residuals", 2, line=3.3)#
+dev.off()#
+anova(lm(OBP ~ team + gp, DF))#
+anova(lm(OBP ~ gp + team, DF))

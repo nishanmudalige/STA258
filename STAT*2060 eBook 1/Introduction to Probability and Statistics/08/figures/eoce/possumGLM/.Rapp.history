@@ -1,0 +1,1453 @@
+library(openintro)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)
+possum[1:5,]
+form <- Pop ~ sex + headL + skullW + totalL + tailL
+glm(form, binomial, possum)
+summary(glm(form, binomial, possum))
+library(xtable)
+xtable(glm(form, binomial, possum))
+?possum
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(pop, col=COL[1])#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, col=COL[1])#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.1, 1.1, 0.2), col=COL[1])#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.1, 1.1, 0.2), col=COL[1], axes=FALSE)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"))#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.1, 1.1, 0.2), col=COL[1], axes=FALSE)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), tcl=-0.7)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.1, 1.1, 0.2), col=COL[1], axes=FALSE)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 0.8, 0))#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.1, 1.1, 0.2), col=COL[1], axes=FALSE)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.1, 1.1, 0.2), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.3, 1.3, 0.2), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+form <- Pop ~ sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(ifelse(possum$sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+Sex
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, col=COL[1], xlab="head_length", ylab="Frequency")#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, 12, col=COL[1], xlab="head_length", ylab="Frequency")#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=15, col=COL[1], xlab="total_length", ylab="Frequency")#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=15, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumPredictors.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency")#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumVars.pdf", 10, 5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency")#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumVars.pdf", 8, 4, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency")#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+form <- Pop ~ Sex + headL + skullW + totalL + tailL#
+xtable(glm(form, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency")#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq90, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency")#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq90, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2)#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq90, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq90, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(90, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(90, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, 0.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mar=c(3.7, 3.5, 0.5, 0.5), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+dim(possum)
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ Population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="Population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+33.5095 - 1.4207 - 0.2787*63 + 0.5687*83 - 1.8057*37
+p <- 33.5095 - 1.4207 - 0.2787*63 + 0.5687*83 - 1.8057*37
+logitp <- 33.5095 - 1.4207 - 0.2787*63 + 0.5687*83 - 1.8057*37
+exp(logitp)/(1+exp(logitp))
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\nFemale", "1\nMale"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8, 3.5, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.5*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2.5, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.5*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.5*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="sex_male", ylab="Frequency", mgp=c(2.5, 0.55, 0))#
+#mtext("", 1, 2, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.5*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+mtext("sex_male", 1, 2, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.5*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+mtext("sex_male", 1, 2.7, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.5*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+mtext("sex_male", 1, 2.5, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.5*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+par(mar=c(3.7, 3.2, 0.75, 0.75))#
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+mtext("sex_male", 1, 2.5, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.7*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+par(mar=c(3.7, 3.2, 0.75, 0.75))#
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+mtext("sex_male", 1, 2.5, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.7*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+par(mar=c(3.7, 3.2, 0.75, 0.75))#
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+mtext("sex_male", 1, 2.5, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="population", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2.5, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()
+library(openintro)#
+library(xtable)#
+data(COL)#
+data(possum)#
+#
+Pop  <- ifelse(possum$pop == "Vic", 1, 0)#
+Sex  <- ifelse(possum$sex == "m", 1, 0)#
+xtable(glm(Pop ~ Sex + headL + skullW + totalL + tailL, binomial, possum))#
+xtable(glm(Pop ~ Sex + skullW + totalL + tailL, binomial, possum))#
+myPDF("possumVars.pdf", 8*0.9, 3.7*0.9, mfrow=c(2,3), mar=c(3.7, 3.5, 0.75, 0.75), mgp=c(2, 0.55, 0))#
+#
+#_____ sex _____##
+par(mar=c(3.7, 3.2, 0.75, 0.75))#
+histPlot(Sex, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+mtext("sex_male", 1, 2.5, cex=0.7)#
+axis(1, at=0:1, labels=c("0\n(Female)", "1\n(Male)"), mgp=c(2, 1.5, 0))#
+axis(2, at=seq(0, 60, 20))#
+#
+#_____ head_length _____##
+histPlot(possum$headL, breaks=15, col=COL[1], xlab="head_length (in mm)", ylab="Frequency")#
+#
+#_____ skull_width _____##
+histPlot(possum$skullW, breaks=15, col=COL[1], xlab="skull_width (in mm)", ylab="Frequency")#
+#
+#_____ total_length _____##
+histPlot(possum$totalL, breaks=18, col=COL[1], xlab="total_length (in cm)", ylab="Frequency", axes=FALSE)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+#
+#_____ tail_length _____##
+histPlot(possum$tailL, breaks=18, col=COL[1], xlab="tail_length (in cm)", ylab="Frequency")#
+#
+#_____ population _____##
+histPlot(Pop, breaks=seq(-0.375, 1.375, 0.25), col=COL[1], axes=FALSE, xlab="", ylab="Frequency")#
+axis(1, at=0:1, labels=c("0\n(Not Victoria)", "1\n(Victoria)"), mgp=c(2, 1.5, 0))#
+mtext("population", 1, 2.5, cex=0.7)#
+axis(2, at=seq(0, 60, 20))#
+#
+dev.off()

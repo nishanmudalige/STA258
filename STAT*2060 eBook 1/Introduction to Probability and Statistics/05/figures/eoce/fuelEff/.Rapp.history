@@ -1,0 +1,115 @@
+library(openintro)#
+d = read.csv("epa2012.csv")#
+#
+oiB = "#3E9BC0"
+man_rows = which(d$transmission == "M")#
+aut_rows = which(d$transmission == "A")#
+#
+set.seed(3583)#
+man_rows_samp = sample(man_rows, 26)#
+aut_rows_samp = sample(aut_rows, 26)#
+#
+d_samp = d[c(man_rows_samp,aut_rows_samp),]#
+d_samp$transmission = droplevels(d_samp$transmission)#
+#
+levels(d_samp$transmission) = c("automatic","manual")
+par(mar=c(3.7,2,1,1), las=1, mgp=c(2.5,0.7,0), cex.lab = 1.25, cex.axis = 1.25)#
+boxPlot(d_samp$city_mpg, fact = d_samp$transmission, ylim = c(10,37), xlab = "City MPG", axes = FALSE)#
+axis(1, at = c(1,2), labels = c("automatic","manual"))#
+axis(2, at = c(15,25,35))
+myPDF("fuelEff_hist_city.pdf", 3.5, mar=c(3.7,2,0.3,1), mgp=c(2.5,0.55,0))#
+boxPlot(d_samp$city_mpg, fact = d_samp$transmission, ylim = c(10,37), xlab = "City MPG", axes = FALSE)#
+axis(1, at = c(1,2), labels = c("automatic","manual"))#
+axis(2, at = c(15,25,35))#
+dev.off()
+myPDF("fuelEff_hist_city.pdf", 3.5, mar=c(3.7,2,0.3,1), mgp=c(2.5,0.55,0))#
+boxPlot(d_samp$city_mpg, fact = d_samp$transmission, ylim = c(10,37), xlab = "City MPG", axes = FALSE, xlim=c(0.4, 2.6))#
+axis(1, at = c(1,2), labels = c("automatic","manual"))#
+axis(2, at = c(15,25,35))#
+dev.off()
+library(openintro)#
+d = read.csv("epa2012.csv")#
+#
+oiB = "#3E9BC0"#
+#
+####
+#
+man_rows = which(d$transmission == "M")#
+aut_rows = which(d$transmission == "A")#
+#
+set.seed(3583)#
+man_rows_samp = sample(man_rows, 26)#
+aut_rows_samp = sample(aut_rows, 26)#
+#
+d_samp = d[c(man_rows_samp,aut_rows_samp),]#
+d_samp$transmission = droplevels(d_samp$transmission)#
+#
+levels(d_samp$transmission) = c("automatic","manual")#
+#
+####
+#
+myPDF("fuelEff_hist_city.pdf", 3.5, mar=c(3.7,2,0.3,1), mgp=c(2.5,0.55,0))#
+boxPlot(d_samp$city_mpg, fact = d_samp$transmission, ylim = c(10,37), xlab = "City MPG", axes = FALSE, xlim=c(0.6, 2.4))#
+axis(1, at = c(1,2), labels = c("automatic","manual"))#
+axis(2, at = c(15,25,35))#
+dev.off()
+library(openintro)#
+d = read.csv("epa2012.csv")#
+#
+oiB = "#3E9BC0"#
+#
+####
+#
+man_rows = which(d$transmission == "M")#
+aut_rows = which(d$transmission == "A")#
+#
+set.seed(3583)#
+man_rows_samp = sample(man_rows, 26)#
+aut_rows_samp = sample(aut_rows, 26)#
+#
+d_samp = d[c(man_rows_samp,aut_rows_samp),]#
+d_samp$transmission = droplevels(d_samp$transmission)#
+#
+levels(d_samp$transmission) = c("automatic","manual")#
+#
+####
+#
+myPDF("fuelEff_hist_city.pdf", 3.5, mar=c(3.7,2,0.3,1), mgp=c(2.5,0.55,0))#
+boxPlot(d_samp$city_mpg, fact = d_samp$transmission, ylim = c(10,37), xlab = "City MPG", axes = FALSE, xlim=c(0.5, 2.5))#
+axis(1, at = c(1,2), labels = c("automatic","manual"))#
+axis(2, at = c(15,25,35))#
+dev.off()
+library(openintro)#
+d = read.csv("epa2012.csv")#
+#
+oiB = "#3E9BC0"#
+#
+####
+#
+man_rows = which(d$transmission == "M")#
+aut_rows = which(d$transmission == "A")#
+#
+set.seed(3583)#
+man_rows_samp = sample(man_rows, 26)#
+aut_rows_samp = sample(aut_rows, 26)#
+#
+d_samp = d[c(man_rows_samp,aut_rows_samp),]#
+d_samp$transmission = droplevels(d_samp$transmission)#
+#
+levels(d_samp$transmission) = c("automatic","manual")#
+#
+####
+#
+myPDF("fuelEff_hist_city.pdf", 3.5, mar=c(3.7,2,0.3,1), mgp=c(2.5,0.55,0))#
+boxPlot(d_samp$city_mpg, fact = d_samp$transmission, ylim = c(10,37), xlab = "City MPG", axes = FALSE, xlim=c(0.5, 2.5))#
+axis(1, at = c(1,2), labels = c("automatic","manual"))#
+axis(2, at = c(15,25,35))#
+dev.off()#
+#
+####
+#
+myPDF("fuelEff_hist_hwy.pdf", 3.5, mar=c(3.7,2,0.3,1), mgp=c(2.5,0.55,0))#
+boxPlot(d_samp$hwy_mpg, fact = d_samp$transmission, ylim = c(10,37), xlab = "Hwy MPG", axes = FALSE, xlim=c(0.5, 2.5))#
+axis(1, at = c(1,2), labels = c("automatic","manual"))#
+axis(2, at = c(15,25,35))#
+dev.off()

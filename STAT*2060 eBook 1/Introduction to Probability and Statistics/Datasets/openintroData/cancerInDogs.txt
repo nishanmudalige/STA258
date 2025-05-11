@@ -1,0 +1,1437 @@
+order	response
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+2,4-D	no cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer
+no 2,4-D	no cancer

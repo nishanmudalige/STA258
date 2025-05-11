@@ -1,0 +1,764 @@
+library(openintro)#
+data(run10Samp)#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5)#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 99))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10); set.seed(2); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10); set.seed(3); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10); set.seed(4); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10); set.seed(5); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(10); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(10); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(20); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(50); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(100); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(0); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', ylim=c(84, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=c(85, 90, 95, 100))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(3); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(6); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(7); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(8); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(9); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(11); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2)#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(11); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(12); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(13); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(14); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(15); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(11); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+run10Samp[c(1,2,100),]
+mean(run10Samp$time)
+save(run10Samp, file="run10Samp.rda")
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(2); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(2); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)')#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(2); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=1.5)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(2); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(12); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(13); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(14); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(15); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+xBars
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(16); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(17); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(17); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+tail(xBars, 1)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(18); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+tail(xBars, 1)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+tail(xBars, 1)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+points(xBars, col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+tail(xBars, 1)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+points(xBars, col="#225588")#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+tail(xBars, 1)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+tail(xBars, 1)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2)#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col="#225588", lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(4,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='sample size', ylab='running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.5, mar=c(2.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3.2, mar=c(3.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 3, mar=c(3.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 2.8, mar=c(3.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 6, 3.5, mar=c(3.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5, 2.8, mar=c(3.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5.5, 2.8, mar=c(3.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)
+library(openintro)#
+data(COL)#
+#data(run10Samp)#
+data(run10)#
+set.seed(19); temp <- sample(nrow(run10), 100); run10Samp <- run10[temp,c("time", "age", "gender", "state")]; run10Samp$time <- run10Samp$time + 0.09#
+xBars <- cumsum(run10Samp$time)/(1:100)#
+save(run10Samp, file="run10Samp.rda")#
+myPDF('netTimeRunningMean.pdf', 5.5*0.95, 2.8*0.95, mar=c(3.3,4,1,1))#
+#
+plot(xBars, type='l', axes=FALSE, xlab='', ylab='Running mean (minutes)', col=COL[1], lwd=2, ylim=c(85, 100))#
+axis(1, at=seq(0,100,25))#
+axis(2, at=seq(80, 110, 5))#
+mtext("Sample size", 1, 2)#
+#
+dev.off()#
+#
+mean(run10Samp$time)#
+sd(run10Samp$time)

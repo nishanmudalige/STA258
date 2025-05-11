@@ -1,0 +1,610 @@
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- rnorm(sum(n), t1, s)#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+lecture <- rep(letters[1:3], n)#
+anova(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- rnorm(sum(n), t1, s)#
+lecture <- rep(letters[1:3], n)#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+prompt(classData)
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+data(classData)
+library(openintro)#
+data(classData)#
+#
+boxPlot(classData$m1, classData$lecture)#
+#
+lecture <- rep(letters[1:3], n)#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture)#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rnorm(sum(n), t1, s))#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+load("/Users/ddiez/Dropbox/oiStatistics/08/figures/classData/classData.rda")
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE)#
+at(1, 1:3, c("A", "B", "C"))#
+at(2, seq(0,100,20)#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE)#
+at(1, 1:3, c("A", "B", "C"))#
+at(2, seq(0,100,20))#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE)#
+axis(1, 1:3, c("A", "B", "C"))#
+axis(2, seq(0,100,20))#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, 1:3, c("A", "B", "C"))#
+axis(2, seq(0,100,20))#
+box()#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, 1:3, c("A", "B", "C"))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rnorm(sum(n), t1, s))#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 6)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+boxPlot(m1, lecture)
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 15)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 25)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 1000)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(1)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 100000)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(2)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 15)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(2)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(3)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(4)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(5)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(6)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(7)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(8)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(9)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(10)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+set.seed(5)#
+#
+mu <- c(78, 73, 76)#
+n  <- c(58, 55, 51)#
+s  <- 15#
+t1 <- rep(mu, n)#
+m1 <- round(rt(sum(n), 20)*s+t1)#
+m1[m1 > 100] <- 100 - rpois(sum(m1 > 100), 1)#
+lecture <- rep(letters[1:3], n)#
+#
+boxPlot(m1, lecture)#
+#
+classData <- data.frame(m1, lecture)#
+save(classData, file="classData.rda")#
+#
+anova(lm(m1 ~ lecture))#
+summary(lm(m1 ~ lecture))
+library(openintro)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+anova(lm(m1 ~ lecture, classData))
+by(classData$m1, classData$lecture, mean)
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)
+library(openintro)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+sqrt(13.9^2/58 + 13.8^2/55)
+3.1/2.61
+pt(-1.19, 54)
+pt(-1.19, 54)*2
+sqrt(13.9^2/58 + 13.1^2/51)
+3.8/2.59
+pt(-1.47, 51)*2
+sqrt(13.8^2/55 + 13.1^2/51)
+6.9/2.61
+pt(-2.64, 51)*2
+library(openintro)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf")#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+summary(lm(m1 ~ lecture, classData))
+library(openintro)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3)#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+library(openintro)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3, mgp=c(2, 0.5, 0), mar=c(3.2, 3.2, 0.5, 0.5))#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+library(openintro)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3, mgp=c(2.3, 0.5, 0), mar=c(3.4, 3.2, 0.5, 0.5))#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores")#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+library(openintro)#
+library(xtable)#
+data(classData)
+library(openintro)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3, mgp=c(2.3, 0.5, 0), mar=c(3.4, 3.2, 0.5, 0.5))#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores", lcol="#225588", lwd=1.8, medianLwd=2.8)#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+library(openintro)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3, mgp=c(2.3, 0.5, 0), mar=c(3.4, 3.2, 0.5, 0.5))#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores", lcol="#225588", lwd=1.3, medianLwd=2.5)#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+library(openintro)#
+data(COL)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3, mgp=c(2.3, 0.5, 0), mar=c(3.4, 3.2, 0.5, 0.5))#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores", lcol=COL[1], lwd=1.3, medianLwd=2.5)#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+library(openintro)#
+data(COL)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3, mgp=c(2.3, 0.5, 0), mar=c(3.4, 3.2, 0.5, 0.5))#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores", lcol=COL[1])#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
+library(openintro)#
+data(COL)#
+library(xtable)#
+data(classData)#
+myPDF("classDataSBSBoxPlot.pdf", 5.5, 3.3, mgp=c(2.3, 0.5, 0), mar=c(3.4, 3.2, 0.5, 0.5))#
+boxPlot(classData$m1, classData$lecture, axes=FALSE, xlab="Lecture", ylab="Scores", lcol=COL[1], lwd=1.3, medianLwd=2.5)#
+axis(1, c(-50,1:3,50), c("", "A", "B", "C", ""))#
+axis(2, seq(0,100,20))#
+#box()#
+dev.off()#
+#
+by(classData$m1, classData$lecture, length)#
+by(classData$m1, classData$lecture, mean)#
+by(classData$m1, classData$lecture, sd)#
+#
+anova(lm(m1 ~ lecture, classData))#
+summary(lm(m1 ~ lecture, classData))#
+xtable(anova(lm(m1 ~ lecture, classData)))
