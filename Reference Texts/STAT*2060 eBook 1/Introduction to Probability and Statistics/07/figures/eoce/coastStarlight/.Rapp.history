@@ -1,0 +1,95 @@
+library(openintro)#
+data(COL)#
+#
+cs = read.table("CoastStarlight.txt", h = T, sep = "\t")
+par(mar=c(4,4,0.5,0.5), las=1, mgp=c(2.7,0.7,0), cex.lab = 1.25, cex.axis = 1.25)#
+#
+plot(cs$travel_time ~ cs$distance, xlab = "Distance (miles)", ylab = "Travel Time (minutes)", pch=20, col=COL[1], axes = FALSE)#
+axis(1, at = seq(0,400,100))#
+axis(2, at = seq(0,360,60))#
+box()
+myPDF("coastStarScat.pdf", 5.5, 4.3, mar=c(4,4,0.5,0.5), mgp=c(2.5,0.55,0))#
+#
+plot(cs$travel_time ~ cs$distance, xlab = "Distance (miles)", ylab = "Travel Time (minutes)", pch=20, col=COL[1], axes = FALSE)#
+axis(1, at = seq(0,400,100))#
+axis(2, at = seq(0,360,60))#
+box()#
+#
+dev.off()
+myPDF("coastStarScat.pdf", 5.5, 4.3, mar=c(3.6,3.6,0.5,0.5), mgp=c(2.5,0.55,0))#
+#
+plot(cs$travel_time ~ cs$distance, xlab = "Distance (miles)", ylab = "Travel Time (minutes)", pch=20, col=COL[1], axes = FALSE)#
+axis(1, at = seq(0,400,100))#
+axis(2, at = seq(0,360,60))#
+box()#
+#
+dev.off()
+cs
+cs[1:5,]
+cs[,1:5]
+cs[1:5,]
+mean(cs$distance)
+plot(cs$distance, cs$dist_km)
+dist <- cs$dist_km/1.609#
+plot(cs$travel_time ~ dist, xlab = "Distance (miles)", ylab = "Travel Time (minutes)", pch=20, col=COL[1], axes = FALSE)
+axis(1, at = seq(0,400,100))#
+axis(2, at = seq(0,360,60))
+axis(1, at = seq(0,500,100))#
+axis(2, at = seq(0,360,60))
+axis(1, at = seq(0,600,100))#
+axis(2, at = seq(0,360,60))
+library(openintro)#
+data(COL)#
+#
+cs = read.table("CoastStarlight.txt", h = T, sep = "\t")#
+#
+####
+#
+myPDF("coastStarScat.pdf", 5.5, 4.3, mar=c(3.6,3.6,0.5,0.5), mgp=c(2.5,0.55,0))#
+#
+dist <- cs$dist_km/1.609#
+plot(cs$travel_time ~ dist, xlab = "Distance (miles)", ylab = "Travel Time (minutes)", pch=20, col=COL[1], axes = FALSE)#
+axis(1, at = seq(0,500,250))#
+axis(2, at = seq(0,360,60))#
+box()#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+cs = read.table("CoastStarlight.txt", h = T, sep = "\t")
+dist <- cs$dist_km/1.609
+mean(dist)
+sd(dist)
+library(openintro)#
+data(COL)#
+#
+cs = read.table("CoastStarlight.txt", h = T, sep = "\t")#
+#
+####
+#
+myPDF("coastStarScat.pdf", 5.5, 4.3, mar=c(3.6,3.6,0.5,0.5), mgp=c(2.5,0.55,0))#
+#
+#dist <- cs$dist_km/1.609#
+plot(cs$travel_time ~ cs$dist, xlab = "Distance (miles)", ylab = "Travel Time (minutes)", pch=20, col=COL[1], axes = FALSE)#
+axis(1, at = seq(0,500,250))#
+axis(2, at = seq(0,360,60))#
+box()#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+cs = read.table("CoastStarlight.txt", h = T, sep = "\t")#
+#
+####
+#
+myPDF("coastStarScat.pdf", 5.5, 4.3, mar=c(3.6,3.6,0.5,0.5), mgp=c(2.5,0.55,0))#
+#
+#dist <- cs$dist_km/1.609#
+plot(cs$travel_time ~ cs$dist, xlab = "Distance (miles)", ylab = "Travel Time (minutes)", pch=20, col=COL[1], axes = FALSE)#
+axis(1, at = seq(0,400,100))#
+axis(2, at = seq(0,360,60))#
+box()#
+#
+dev.off()

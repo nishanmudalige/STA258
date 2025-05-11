@@ -1,0 +1,2178 @@
+library(openintro)#
+data(email)#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+table(email[,c("spam", "number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/2+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.7, 0.9, 'only small numbers')#
+text(1.3, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(17, 5, 11), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()
+library(openintro)#
+data(email)#
+table(email[,c("spam", "number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,0.1,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/2+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(17, 5, 11), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()
+library(openintro)#
+data(email)#
+table(email[,c("spam", "number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/2+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(17, 5, 11), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/2+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(17, 5, 11), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/2+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.5+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.5+0.5#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.7+0.5#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.3+0.5#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.3+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other cars: 54-17-5-11 = 21')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+3842-2672-102-129
+457 + 95 + 482
+457 + 482
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.3#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.3+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.3+1.6#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.6#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1, 1.45), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1, 1.45), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.5, 0.9, 'spam')#
+text(c(0.55, 1.3, 1.7), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.3, 1.7), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.55, 1.4, 1.8), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.4, 1.8), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.55, 1.45, 1.8), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.45, 1.8), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.2+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.55, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.45, 1.9), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1+0.9#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.55, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.45, 1.9), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.55, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.45, 1.9), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.7#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.55, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.45, 1.9), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.55, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.55, 1.45, 1.9), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.6, 1.45, 1.9), rep(0.41, 3), c('17/54', '5/54', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+102/3842
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.6, 1.45, 1.9), rep(0.41, 3), c('17/54', '0.0265', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=1.3)#
+text(c(0.6, 1.45, 1.9), rep(0.42, 3), c('17/54', '0.0265', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.5,1.3,1.3))#
+text(c(0.6, 1.45, 1.9), rep(0.42, 3), c('17/54', '0.0265', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.5,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), rep(0.42, 3), c('17/54', '0.0265', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.7,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), rep(0.42, 3), c('17/54', '0.0265', '11/54'),#
+	cex=1, col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.7,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), rep(0.42, 3), c('17/54', '0.0265', '11/54'), cex=c(1.4,0.95,0.95), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.7,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), c(0.35, 0.43, 0.43), c('17/54', '0.0265', '11/54'), cex=c(1.4,0.95,0.95), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.7,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), c(0.35, 0.43, 0.43), c('17/54', '0.0265', '11/54'), cex=c(1.25,0.95,0.95), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.7,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.43, 0.43), c('17/54', '0.0265', '11/54'), cex=c(1.25,0.95,0.95), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+129/3842
+2672/3842
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), rep(0.57, 3), c(2672, 102, 129), cex=c(1.7,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.43, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.25,0.95,0.95), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.57, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.2))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.25,0.95,0.95), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.57, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.25,0.95,1), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.5, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.57, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.25,0.95,1), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.57, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.25,0.95,1), col='#888888'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.57, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.25,0.95,1), col='#225588'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.57, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.38, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.25,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.35,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.35,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.5,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.8,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.5,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col='#5588BB'); text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(.3,.4,.8))#
+text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+1.6/16
+7/16
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(.1,.1,.44))#
+text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+6.45/16
+9.3/16
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(1, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.8, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+939/3842
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.8, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2, 0.07, '0.2444', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.8, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2.1, 0.07, '0.2444', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.8, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2.05, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.8, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2.07, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'emails with only small numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2.07, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+6955 + 265 + 336 + 2444
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 4.5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2.07, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2.07, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(2, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,3,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.7#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.8, 0.9, 'spam')#
+text(c(0.6, 1.45, 1.9), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 1.9), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.45, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.45, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.55, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.55, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.5, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.5, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1.05+0.75#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.51, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.51, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.51, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.51, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)/1+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.55, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.55, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.03+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.55, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.55, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.55, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.55, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.9, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.88, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,2,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.86, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.7,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.86, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.6,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.84, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2672, 102, 129), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6955', '0.0265', '0.0336'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3842-2672-102-129 = 939')#
+text(1.84, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])
+2830-103
+2727/3918
+103/3918
+133/3918
+3918-2727-103-133
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2727, 103, 133), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6960', '0.0265', '0.0339'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3918-2727-103-133 = 955')#
+text(1.84, 0.07, '(0.2444)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+955/3918
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2727, 103, 133), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6960', '0.0265', '0.0339'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3918-2727-103-133 = 955')#
+text(1.84, 0.07, '(0.2437)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+103/3918
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2727, 103, 133), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6960', '0.0263', '0.0339'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3918-2727-103-133 = 955')#
+text(1.84, 0.07, '(0.2437)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+0.6960 + 0.0263 + 0.0339
+3921-2723-104-133
+961/3921
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2727, 103, 133), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.6960', '0.0263', '0.0339'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3921-2723-104-133 = 961')#
+text(1.84, 0.07, '(0.245)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+104/3921
+133/3921
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2723, 104, 133), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.694', '0.026', '0.034'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3921-2723-104-133 = 961')#
+text(1.84, 0.07, '(0.245)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+.694+.026+.034+.245
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2723, 104, 133), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.694', '0.027', '0.034'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3921-2723-104-133 = 961')#
+text(1.84, 0.07, '(0.245)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2659, 168, 199), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.694', '0.027', '0.034'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3921-2723-104-133 = 961')#
+text(1.84, 0.07, '(0.245)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+c(2659, 168, 199)/3921
+3921-2659-168-199
+895/3921
+library(openintro)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2659, 168, 199), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.678', '0.043', '0.051'), cex=c(1.3,0.95,1), col=rgb(0,.4,.58))#
+text(0.77, 0.07, 'Other emails: 3921-2659-168-199 = 895')#
+text(1.84, 0.07, '(0.228)', col=rgb(0,.4,.58))#
+#
+dev.off()#
+table(email[,c("spam", "number")])
+library(openintro)#
+data(COL)#
+data(email)#
+#
+table(email[,c("spam", "number")])#
+#
+table(email[,c("number")])#
+#
+myPDF('emailSpamNumberVenn.pdf', 5, 1.5, mar=c(0.1,1.5,0.1,0.1))#
+plot(c(-0.2,2.2), c(0,1), type='n', ylab="", axes=FALSE)#
+box()#
+#
+z <- seq(0,2*pi, len=99)#
+x1 <- cos(z)*1.04+0.8#
+y1 <- sin(z)/3+0.5#
+lines(c(x1, x1[1]),c(y1, y1[1]))#
+#
+x2 <- cos(z)/2.2+1.8#
+y2 <- sin(z)/3+0.5#
+lines(c(x2, x2[1]),c(y2, y2[1]))#
+#
+text(0.6, 0.9, 'small numbers and no big numbers')#
+text(1.9, 0.9, 'spam')#
+text(c(0.6, 1.56, 2), c(0.6, 0.58, 0.57), c(2659, 168, 199), cex=c(1.7,1.2,1.25))#
+text(c(0.6, 1.56, 2), c(0.4, 0.44, 0.43), c('0.678', '0.043', '0.051'), cex=c(1.3,0.95,1), col=COL[1])#
+text(0.77, 0.07, 'Other emails: 3921-2659-168-199 = 895')#
+text(1.84, 0.07, '(0.228)', col=COL[1])#
+#
+dev.off()#
+table(email[,c("spam", "number")])

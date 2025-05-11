@@ -1,0 +1,136 @@
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+pdf('satImprovementHTDataHistogram.pdf', 3.5, 2.2)#
+par(mar=c(2, 2, 1, 1), mgp=c(0, 0.6, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='')#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.5, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='')#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='')#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+x
+12.76 + c(-1,1)*(1.99)(1.67)
+12.76 + c(-1,1)*(1.99)*(1.67)
+12.76 + c(-1,1)*(1.96)*(1.67)
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='', col="#22558833")#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='', col="#22558833", border="#225588")#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='', col="#22558833", border="#225588", lwd=1.5)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='', col="#22558833", border="#225588", lwd=3)#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='', col="#AA550033", border="#AA5500")#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+require(openintro)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='', col="#22558833", border="#225588")#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+set.seed(2)#
+x <- round(rnorm(30, 120, 70))#
+t.test(x-100)#
+mean(x)#
+sd(x)#
+#
+myPDF('satImprovementHTDataHistogram.pdf', 3.9, 2.2, mar=c(1.6, 2, 0.2, 1), mgp=c(0, 0.45, 0), las=1)#
+histPlot(x, xlab='', ylab='', axes=FALSE, main='', col=COL[1])#
+axis(1)#
+axis(2, at=seq(0, 10, 5))#
+dev.off()

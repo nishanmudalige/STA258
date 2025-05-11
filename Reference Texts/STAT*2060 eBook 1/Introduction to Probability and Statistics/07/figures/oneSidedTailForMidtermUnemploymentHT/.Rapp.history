@@ -1,0 +1,74 @@
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf")#
+normTail(0, 0.9366, L=-0.6491, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", mar=2,0.5,0.5,0.5))#
+normTail(0, 0.9366, L=-0.6491, df=24, col='#22558866')#
+dev.off()
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", mar=2,0.5,0.5,0.5))#
+normTail(0, 0.9366, L=-0.6491, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", mar=c(2,0.5,0.5,0.5))#
+normTail(0, 0.9366, L=-0.6491, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5, 3, mar=c(2,0.5,0.5,0.5))#
+normTail(0, 0.9366, L=-0.6491, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5, 2.7, mar=c(2,0.5,0.5,0.5))#
+normTail(0, 0.9366, L=-0.6491, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5, 2.3, mar=c(2,0.5,0.5,0.5))#
+normTail(0, 0.9366, L=-0.6491, df=24, col='#22558866')#
+dev.off()
+hold <- #
+matrix(c(19, 24,#
+30, 30,#
+17, 17,#
+29, 42,#
+19, 18,#
+283, 1352), ncol=2, byrow=TRUE)
+hold
+apply(hold, 2, sum)
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5, 2.3, mar=c(2,0.5,0.5,0.5))#
+normTail(0, 1.45, L=-1.08, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5.5, 2.5, mar=c(2,0.5,0.5,0.5))#
+normTail(0, 1.45, L=-1.08, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5.5, 2.5, mar=c(1.8,0.5,0.2,0.5))#
+normTail(0, 1.45, L=-1.08, df=24, col='#22558866')#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5.5, 2.5, mar=c(1.8,0.5,0.2,0.5))#
+normTail(0, 1.45, L=-1.08, df=24, col=COL[1])#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5.5, 2.5, mar=c(1.8,0.5,0.2,0.5))#
+normTail(0, 1.45, L=-1.15, df=24, col=COL[1])#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 5.5, 2.5, mar=c(1.8,0.5,0.2,0.5))#
+normTail(0, 0.8717, L=-1.0010, df=24, col=COL[1])#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+myPDF("oneSidedTailForMidtermUnemploymentHT.pdf", 1.15*5.5, 1.15*2.5, mar=c(1.8,0.5,0.2,0.5))#
+normTail(0, 0.8717, L=-1.0010, df=24, col=COL[1])#
+dev.off()

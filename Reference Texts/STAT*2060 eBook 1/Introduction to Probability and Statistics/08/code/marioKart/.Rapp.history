@@ -1,0 +1,547 @@
+library(openintro)#
+data(marioKart)#
+toss <- which(marioKart$totalPr > 80)#
+keep <- c("totalPr", "duration", "cond", "stockPhoto", "wheels")#
+d    <- mk[-toss, keep]#
+summary(lm(totalPr ~ ., d))
+library(openintro)#
+data(marioKart)#
+toss <- which(marioKart$totalPr > 80)#
+keep <- c("totalPr", "duration", "cond", "stockPhoto", "wheels")#
+d    <- marioKart[-toss, keep]#
+summary(lm(totalPr ~ ., d))
+marioKart$shipSp
+levelsmarioKart$shipSp)
+levels(marioKart$shipSp)
+library(openintro)#
+data(marioKart)#
+toss <- which(marioKart$totalPr > 80)#
+keep <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d    <- marioKart[-toss, keep]#
+d$shipSp <- as.character(d$shipSp)#
+these <- c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these <- c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these <- c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+summary(lm(totalPr ~ ., d))
+library(openintro)#
+data(marioKart)#
+toss <- which(marioKart$totalPr > 80)#
+keep <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d    <- marioKart[-toss, keep]#
+d$shipSp <- as.character(d$shipSp)#
+these <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+summary(lm(totalPr ~ ., d))
+library(openintro)#
+data(marioKart)#
+toss <- which(marioKart$totalPr > 80)#
+keep <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d    <- marioKart[-toss, keep]#
+d$shipSp <- as.character(d$shipSp)#
+these <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp <- as.factor(d$shipSp)#
+summary(lm(totalPr ~ ., d))
+anova(lm(totalPr ~ ., d))
+marioKart[1:3,]
+library(openintro)#
+data(marioKart)#
+toss <- which(marioKart$totalPr > 80)#
+keep <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d    <- marioKart[-toss, keep]#
+d$shipSp <- as.character(d$shipSp)#
+these <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp <- as.factor(d$shipSp)#
+d <- d[,-which(colnames(d) == "shipSp")]#
+summary(lm(totalPr ~ ., d))
+summary(lm(totalPr ~ ., d))#
+anova(lm(totalPr ~ ., d))
+anova(lm(totalPr ~ ., d), lm(totalPr ~ totalPr + cond + stockPhoto + wheels, d))
+anova(lm(totalPr ~ totalPr + cond + stockPhoto + wheels, d), lm(totalPr ~ ., d))
+anova(lm(totalPr ~ ., d))
+anova(lm(totalPr ~ totalPr + cond + stockPhoto + wheels + duration, d))
+?anova
+anova(lm(totalPr ~ cond + stockPhoto + wheels + duration, d))
+anova(lm(totalPr ~ duration + cond + stockPhoto + wheels, d))
+pairs(mk)
+pairs(d)
+summar(lm(totalPr ~ duration + cond + stockPhoto + wheels, d))
+summary(lm(totalPr ~ duration + cond + stockPhoto + wheels, d))
+?lm
+require(graphics)#
+#
+## Annette Dobson (1990) "An Introduction to Generalized Linear Models".#
+## Page 9: Plant Weight Data.#
+ctl <- c(4.17,5.58,5.18,6.11,4.50,4.61,5.17,4.53,5.33,5.14)#
+trt <- c(4.81,4.17,4.41,3.59,5.87,3.83,6.03,4.89,4.32,4.69)#
+group <- gl(2,10,20, labels=c("Ctl","Trt"))#
+weight <- c(ctl, trt)#
+anova(lm.D9 <- lm(weight ~ group))#
+summary(lm.D90 <- lm(weight ~ group - 1))# omitting intercept
+require(graphics)#
+#
+## Annette Dobson (1990) "An Introduction to Generalized Linear Models".#
+## Page 9: Plant Weight Data.#
+ctl <- c(4.17,5.58,5.18,6.11,4.50,4.61,5.17,4.53,5.33,5.14)#
+trt <- c(4.81,4.17,4.41,3.59,5.87,3.83,6.03,4.89,4.32,4.69)#
+group <- gl(2,10,20, labels=c("Ctl","Trt"))#
+weight <- c(ctl, trt)#
+anova(lm.D9 <- lm(weight ~ group))#
+summary(lm.D90 <- lm(weight ~ group))# omitting intercept
+opar <- par(mfrow = c(2,2), oma = c(0, 0, 1.1, 0))#
+plot(lm.D9, las = 1)      # Residuals, Fitted, ...#
+par(opar)
+install.packages("R2HTML")
+#
+dir.create(file.path(tempdir(),"R2HTML"))#
+target <- HTMLInitFile(file.path(tempdir(),"R2HTML"),filename="sample", BackGroundColor="#BBBBEE")#
+HTML("<br>Don't forget to use the CSS file in order to benefit from fixed-width font",file=target)#
+tmp <- as.data.frame(matrix(rnorm(100),ncol=10))#
+HTML(tmp,file=target)#
+HTMLEndFile(
+)
+?HTMLInitFile
+library(R2HTML)
+#
+dir.create(file.path(tempdir(),"R2HTML"))#
+target <- HTMLInitFile(file.path(tempdir(),"R2HTML"),filename="sample", BackGroundColor="#BBBBEE")#
+HTML("<br>Don't forget to use the CSS file in order to benefit from fixed-width font",file=target)#
+tmp <- as.data.frame(matrix(rnorm(100),ncol=10))#
+HTML(tmp,file=target)#
+HTMLEndFile()
+tempdir()
+?anova
+require(graphics); require(utils)#
+example(step)#-> swiss#
+add1(lm1, ~ I(Education^2) + .^2)#
+drop1(lm1, test="F")  # So called 'type II' anova#
+#
+example(glm)#
+drop1(glm.D93, test="Chisq")#
+drop1(glm.D93, test="F")
+?anova.lm
+## sequential table#
+fit <- lm(sr ~ ., data = LifeCycleSavings)#
+anova(fit)#
+#
+## same effect via separate models#
+fit0 <- lm(sr ~ 1, data = LifeCycleSavings)#
+fit1 <- update(fit0, . ~ . + pop15)#
+fit2 <- update(fit1, . ~ . + pop75)#
+fit3 <- update(fit2, . ~ . + dpi)#
+fit4 <- update(fit3, . ~ . + ddpi)#
+anova(fit0, fit1, fit2, fit3, fit4, test="F")
+summary(fit)
+anova(fit)
+anova(lm(totalPr ~ duration + cond + stockPhoto + wheels, d))
+summary(lm(totalPr ~ duration, d))
+anova(lm(totalPr ~ duration, d))
+anova(lm(totalPr ~ duration + wheels, d))
+summary(lm(totalPr ~ duration + wheels, d))
+summary(lm(totalPr ~ wheels + duration, d))
+anova(lm(totalPr ~ wheels + duration, d))
+fit1 <- lm(totalPr ~ duration + cond + stockPhoto + wheels, d)#
+fit2 <- lm(totalPr ~ cond + stockPhoto + wheels, d), lm(totalPr ~ ., d)#
+anova(fit1, fit2)
+fit1 <- lm(totalPr ~ duration + cond + stockPhoto + wheels, d)#
+fit2 <- lm(totalPr ~ cond + stockPhoto + wheels, d)#
+anova(fit1, fit2)
+summary(lm(totalPr ~ ., d))#
+fit1 <- lm(totalPr ~ duration + cond + stockPhoto + wheels, d)#
+fit2 <- lm(totalPr ~ cond + stockPhoto + wheels, d)#
+anova(fit1, fit2)
+fit1 <- lm(totalPr ~ cond + stockPhoto, d)#
+fit2 <- lm(totalPr ~ cond, d)#
+anova(fit1, fit2)
+summary(fit1)
+fit1 <- lm(totalPr ~ cond + stockPhoto, d)#
+fit2 <- lm(totalPr ~ stockPhoto, d)#
+anova(fit1, fit2)
+summary(fit)
+summary(lm(totalPr ~ ., d))
+lm(totalPr ~ cond, d)
+lm(totalPr ~ (cond == "new"), d)
+library(openintro)#
+data(marioKart)#
+toss     <- which(marioKart$totalPr > 80)#
+keep     <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d        <- marioKart[-toss, keep]#
+d$cond   <- d$cond == "new"#
+d$shipSp <- as.character(d$shipSp)#
+these    <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$cond    <- d$cond == "new"#
+thisOne   <- names(d) == "new"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$cond    <- d$cond == "new"#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$cond    <- d$cond == "new" + 1#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+(d$cond == "new") + 1
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+summary(lm(totalPr ~ condNew, d))
+summary(lm(totalPr ~ stockPhoto, d))
+summary(lm(totalPr ~ ., d))
+library(xtable)
+xtable(d)
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+summary(lm(totalPr ~ ., d))
+summary(lm(totalPr ~ condNew, d))
+cor(d$condNew, d$stockPhoto)
+class(d$condNew)
+class(d$stockPhoto)
+(d$stockPhoto)
+d$stockPhoto <- (d$stockPhoto == "yes")
+cor(d$condNew, d$stockPhoto)
+summary(lm(totalPr ~ condNew + stockPhoto, d))
+xtable(summary(lm(totalPr ~ condNew + stockPhoto, d)))
+library(xtable)
+xtable(summary(lm(totalPr ~ condNew + stockPhoto, d)))
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes")#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "duration", "cond", "stockPhoto", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes") + 0#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+xtable(summary(lm(totalPr ~ condNew + stockPhoto, d)))
+summary(lm(totalPr ~ ., d))
+xtable(summary(lm(totalPr ~ ., d)))
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "cond", "stockPhoto", "duration", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes") + 0#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+d[1:5,]
+xtable(summary(lm(totalPr ~ condNew + stockPhoto, d)))
+xtable(summary(lm(totalPr ~ ., d)))
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "cond", "stockPhoto", "duration", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes") + 0#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "cond", "stockPhoto", "duration", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes") + 0#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+lm(totalPr ~ ., d) -> a
+a$res
+a$res[1]
+names(a)
+a$fit
+36.21 + 5.13 + 1.08 -0.03*3 + 7.29
+51.55 - (36.21 + 5.13 + 1.08 -0.03*3 + 7.29)
+sum(a$fit)
+var(a$fit)
+var(d$totalPr)
+59.72/83.06
+summary(a)
+dim(d)
+sum(a$res)
+a$res
+var(a$res)
+summary(a)
+var(a$res)/83.06*140/136
+1-var(a$res)/83.06*140/136
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "cond", "stockPhoto", "duration", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes") + 0#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]#
+#
+summary(lm(totalPr ~ ., d))#
+summary(lm(totalPr ~ cond + stockPhoto + duration + wheels, d))
+summary(lm(totalPr ~ condNew + stockPhoto + duration + wheels, d))
+summary(lm(totalPr ~ condNew + stockPhoto + wheels, d))
+xtable(summary(lm(totalPr ~ condNew + stockPhoto + wheels, d)))
+library(xtable)
+xtable(summary(lm(totalPr ~ condNew + stockPhoto + wheels, d)))
+xtable(summary(lm(totalPr ~ condNew + wheels, d)))
+summary(lm(totalPr ~ condNew + wheels, d))
+summary(lm(totalPr ~ condNew, d))
+summary(lm(totalPr ~ stockPhoto, d))
+summary(lm(totalPr ~ duration, d))
+summary(lm(totalPr ~ wheels, d))
+summary(lm(totalPr ~ condNew + wheels, d))
+summary(lm(totalPr ~ duration + wheels, d))
+summary(lm(totalPr ~ stockPhoto + wheels, d))
+summary(lm(totalPr ~ stockPhoto + condNew + wheels, d))
+summary(lm(totalPr ~ duration + condNew + wheels, d))
+5.585 + c(-1.98, 1.98)*0.925
+summary(lm(totalPr ~ condNew + wheels, d))
+7.233 + c(-1.98, 1.98)*.542
+xtable(summary(fit <- lm(totalPr ~ condNew + wheels, d)))
+plot(fit)
+xtable(summary(fit <- lm(totalPr ~ condNew + wheels + condNew*wheels, d)))
+plot(fit)
+xtable(summary(fit <- lm(totalPr ~ condNew + wheels, d)))
+plot(fit)
+xtable(summary(fit <- lm(totalPr ~ condNew + wheels, d[-115,])))
+plot(fit)
+xtable(summary(fit <- lm(totalPr ~ condNew + wheels, dd)))
+dd <- d[-115,]
+xtable(summary(fit <- lm(totalPr ~ condNew + wheels, dd)))
+plot(fit)
+dim(dd)
+dim(d)
+fit <- lm(totalPr ~ condNew + wheels, dd)
+plot(fit)
+fit <- lm(totalPr ~ condNew + wheels, dd)
+plot(fit)
+which(fit$fit > 60)
+d[115,]
+d[84,]
+dd <- d[-113,]
+fit <- lm(totalPr ~ condNew + wheels, dd)
+plot(fit)
+plot(fit$res ~ fit$fit)
+lm(fit$res ~ fit$fit)
+lm(fit$res ~ as.factor(fit$fit))
+summary(lm(fit$res ~ as.factor(fit$fit)))
+anova(lm(fit$res ~ as.factor(fit$fit)))
+plot(fit)
+plot(fit$res)
+plot(dd$wheels, fit$res)
+lm(fit$res ~ dd$wheels)
+summary(lm(fit$res ~ I(dd$wheels^2)))
+fit <- lm(totalPr ~ condNew + wheels + wheels^2, dd)
+fit
+fit <- lm(totalPr ~ condNew + wheels + I(wheels^2), dd)
+summary(fit)
+plot(fit)
+which(fit$fit > 60)
+dd[82,]
+dd <- d[-82,]
+fit <- lm(totalPr ~ condNew + wheels + I(wheels^2), dd)
+summary(fit)
+fit <- lm(totalPr ~ condNew + wheels, dd)
+summary(fit)
+fit <- lm(totalPr ~ condNew + wheels + I(wheels^2), dd)
+plot(fit)
+plot(fit$res ~ dd$condNew)
+plot(fit)
+library(xtable)#
+library(openintro)#
+data(marioKart)#
+toss      <- which(marioKart$totalPr > 80)#
+keep      <- c("totalPr", "cond", "stockPhoto", "duration", "wheels", "shipSp")#
+d         <- marioKart[-toss, keep]#
+d$stockPhoto <- (d$stockPhoto == "yes") + 0#
+d$cond    <- (d$cond == "new") + 0#
+thisOne   <- names(d) == "cond"#
+names(d)[thisOne] <- "condNew"#
+d$shipSp  <- as.character(d$shipSp)#
+these     <- d$shipSp %in% c("firstClass", "priority", "parcel", "media")#
+d$shipSp[these] <- "usps"#
+these     <- d$shipSp %in% c("ups3Day", "upsGround")#
+d$shipSp[these] <- "ups"#
+these     <- d$shipSp %in% c("other", "standard")#
+d$shipSp[these] <- "unknown"#
+d$shipSp  <- as.factor(d$shipSp)#
+d         <- d[,-which(colnames(d) == "shipSp")]
+summary(lm(totalPr ~ ., d))
+summary(lm(totalPr ~ condNew + stockPhoto + duration + wheels, d))
+summary(lm(totalPr ~ condNew + stockPhoto + duration, d))
+summary(lm(totalPr ~ condNew + stockPhoto + wheels, d))
+summary(lm(totalPr ~ condNew + duration + wheels, d))
+summary(lm(totalPr ~ condNew + stockPhoto + wheels, d))
+summary(lm(totalPr ~ condNew + wheels, d))

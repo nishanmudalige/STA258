@@ -1,0 +1,167 @@
+3.5/120
+.35 / 880
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Mammogram','Has Cancer'),c(0.12, 0.88),#
+	list(c(0.03, 0.97), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('have cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Mammogram','Has Cancer'),c(0.12, 0.88),#
+	list(c(0.04, 0.96), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('have cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Mammogram','Has Cancer'),c(0.12, 0.88),#
+	list(c(0.04, 0.96), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Mammogram','Truth'),c(0.12, 0.88),#
+	list(c(0.04, 0.96), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 4)#
+treeDiag(c('Mammogram','Truth'),c(0.1, 0.9),#
+	list(c(0.03, 0.97), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(base64)
+txt <- "R29vZ2xlIE9mZmVycw0KDQoNCg0KVGVsbCB1cyBhYm91dCB5b3Vyc2VsZiB0byBnZXQgcGVyc29u#
+YWxpemVkIG9mZmVycy4NCg0KDQoNCg0KDQpNYWRlIGJ5IE1lDQoNCiQxNSB0b3dhcmQgYSBnbGFz#
+cyBmdXNpbmcgd29ya3Nob3Agb3IgcG90dGVyeSBwYWludGluZyBhdCBNYWRlIGJ5IE1lICgkMzUg#
+IA0KdmFsdWUpDQoNClZpZXcgYW5kIEJ1eQ0KDQpNYWRlIGJ5IE1lDQoNCg0KDQoNCpUgRHJvcC1p#
+biBwb3R0ZXJ5IHBhaW50aW5nDQqVIFBhaW50IHBsYXRlcywgamFycywgbXVncywgdmFzZXMNCpUg#
+V29yayBvbiBuaWdodCBsaWdodHMgJiBwaWN0dXJlIGZyYW1lcw0KlSBQZXJmZWN0IGJpcnRoZGF5#
+IG9yIFZhbGVudGluZSdzIGdpZnQNCpUgTG9jYXRlZCBiZXR3ZWVuIEhhcnZhcmQgU3F1YXJlIGFu#
+ZCBQb3J0ZXIgU3F1YXJlDQoNCg0KDQpTZWUgbW9yZSBvZmZlcnMgb24gR29vZ2xlIE9mZmVycw0K#
+DQoNCkRvd25sb2FkIG91ciBBbmRyb2lkIGFwcCBhbmQgZ2V0IGdyZWF0IG9mZmVycyBvbiB5b3Vy#
+IHBob25lDQpHZXQgZ3JlYXQgZGVhbHMgb24gdGhlIGdvIQ0KDQpEb3dubG9hZCBvdXIgQW5kcm9p#
+ZCBhcHAgYW5kIGdldCBncmVhdCBvZmZlcnMgb24geW91ciBwaG9uZS4NCnR3aXR0ZXINCkZvbGxv#
+dyB1cw0KDQoNCg0KqTIwMTEgR29vZ2xlIEluYy4gMTYwMCBBbXBoaXRoZWF0cmUgUGFya3dheSwg#
+TW91bnRhaW4gVmlldywgQ0EgOTQwNDMgfCAgDQpQcml2YWN5IFBvbGljeQ0KVW5zdWJzY3JpYmUg#
+ZnJvbSBlbWFpbCBvZmZlcnMgZm9yOiBCb3N0b24NCg0K"
+?base64
+library(help=base64)
+?decode
+decode(txt, output="hold.txt")
+decode(txt)
+library(caTools)
+library(help=caTools)
+?decode
+decode("temp.txt", output="hold.txt")
+hold <- read.delim("hold.txt")
+hold <- read.delim("hold.txt", FALSE)
+hold
+library(ThunderbirdScrape)
+myPDF("BreastCancerTreeDiagram.pdf", 7, 3.5)
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 3.5)#
+treeDiag(c('Mammogram','Truth'),c(0.1, 0.9),#
+	list(c(0.03, 0.97), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 3)#
+treeDiag(c('Mammogram','Truth'),c(0.1, 0.9),#
+	list(c(0.03, 0.97), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 6.5, 3)#
+treeDiag(c('Mammogram','Truth'),c(0.1, 0.9),#
+	list(c(0.03, 0.97), c(0.0005, 0.9995)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('positive','negative'), c('cancer', 'no cancer'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+.35*30
+.003/.00345
+0.097/(0.097 + 0.89955)
+library(openintro)#
+.003/.00345#
+0.097/(0.097 + 0.89955)#
+#
+myPDF("BreastCancerTreeDiagram.pdf", 6.5, 3)#
+treeDiag(c('Truth','Mammogram'),c(0.0035, 0.9965),#
+	list(c(0.87,0.13), c(0.1,0.9)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('cancer', 'no cancer'), c('positive','negative'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+.003/.00345#
+0.097/(0.097 + 0.89955)#
+#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 3)#
+treeDiag(c('Truth','Mammogram'),c(0.0035, 0.9965),#
+	list(c(0.87,0.13), c(0.1,0.9)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('cancer', 'no cancer'), c('positive','negative'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+.003/.00345#
+0.097/(0.097 + 0.89955)#
+#
+myPDF("BreastCancerTreeDiagram.pdf", 7, 3)#
+treeDiag(c('Truth','Mammogram'),c(0.0035, 0.9965),#
+	list(c(0.87,0.13), c(0.1,0.9)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('cancer', 'no cancer'), c('positive','negative'), digits=5, SBS=c(FALSE, TRUE),#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+.003/.00345#
+0.097/(0.097 + 0.89955)#
+#
+myPDF("BreastCancerTreeDiagram.pdf", 8, 3)#
+treeDiag(c('Truth','Mammogram'),c(0.0035, 0.9965),#
+	list(c(0.87,0.13), c(0.1,0.9)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('cancer', 'no cancer'), c('positive','negative'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+library(openintro)#
+.003/.00345#
+0.097/(0.097 + 0.89955)#
+#
+myPDF("BreastCancerTreeDiagram.pdf", 7.5, 3)#
+treeDiag(c('Truth','Mammogram'),c(0.0035, 0.9965),#
+	list(c(0.87,0.13), c(0.1,0.9)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('cancer', 'no cancer'), c('positive','negative'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+0.00035*0.87 + 0.9965*0.1
+.00304/.09995
+7*3000
+1800*12
+library(openintro)#
+myPDF("BreastCancerTreeDiagram.pdf", 7.5, 3)#
+treeDiag(c('Truth','Mammogram'),c(0.0035, 0.9965),#
+	list(c(0.89,0.11), c(0.07,0.93)),#
+	textwd=0.2, solwd=0.35, cex.main=1.4,#
+	c('cancer', 'no cancer'), c('positive','negative'), digits=5,#
+	col.main="#555555", showWork=TRUE)#
+dev.off()
+.00312 + 0.06976
+0.00312/0.07288

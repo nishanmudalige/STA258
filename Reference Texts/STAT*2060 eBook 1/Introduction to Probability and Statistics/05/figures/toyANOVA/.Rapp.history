@@ -1,0 +1,2215 @@
+library(xtable)#
+library(openintro)#
+#
+gps <- c("A", "B", "C")#
+g   <- rep(gps, c(25, 10, 40))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps
+library(xtable)#
+library(openintro)#
+#
+gps <- c("A", "B", "C")#
+g   <- rep(gps, c(25, 10, 40))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+X1  <- rnorm(length(g), M[g], 2)#
+plot(X1 ~ g)
+g
+M
+M[g]
+length(g)
+length(M[g])
+X1
+library(xtable)#
+library(openintro)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(25, 10, 40)))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+X1  <- rnorm(length(g), M[g], 2)#
+plot(X1 ~ g)
+library(xtable)#
+library(openintro)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(25, 10, 40)))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+X1  <- rnorm(length(g), M[g], 2)#
+dotPlot(X1, g, TRUE)
+library(xtable)#
+library(openintro)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+X1  <- rnorm(length(g), M[g], 2)#
+dotPlot(X1, g, TRUE)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+X1  <- rnorm(length(g), M[g], 2)#
+dotPlot(X1, g, TRUE)
+X1  <- rnorm(length(g), M[g], 2)#
+X2  <- rnorm(length(g), M[g], 0.1)#
+#
+dotPlot(X1, g, TRUE)#
+dotPlot(X2, g, TRUE)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+X1  <- rnorm(length(g), M[g], 2)#
+X2  <- rnorm(length(g), M[g], 0.08)#
+#
+dotPlot(X1, g, TRUE)#
+dotPlot(X2, g, TRUE)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.08)#
+#
+dotPlot(X1, g, TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+0.05)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 1.2, 1.1)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.08)#
+#
+dotPlot(X1, g, TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+0.05, add=TRUE)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+dotPlot(X1, g, TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+0.05, add=TRUE)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+dotPlot(X1, g, TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+0.1, add=TRUE)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+dotPlot(X1, g, TRUE, xlim=c(0.5, 6.5))#
+dotPlot(X2, g, TRUE, at=1:3+3.1, add=TRUE)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+dotPlot(X1, g, TRUE, xlim=c(0.5, 6.5))#
+dotPlot(X2, g, TRUE, at=1:3+3.1, add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=3.5)#
+abline(v=3.5, col="#AAAAAA", lwd=2)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=4:6, c("D", "E", "F"))
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+dotPlot(X1, g, TRUE, xlim=c(0.5, 6.5))#
+dotPlot(X2, g, TRUE, at=1:3+3.1, add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=2)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=4:6, c("D", "E", "F"))
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+dotPlot(X1, g, TRUE, xlim=c(0.5, 6.5))#
+dotPlot(X2, g, TRUE, at=1:3+3.1, add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=4:6, c("D", "E", "F"))
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=4:6, c("D", "E", "F"))
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 2)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)
+by(X1, g, mean)
+by(X2, g, mean)
+X2[g=="A"] <- X2[g=="A"] - mean(X2[g=="A"]) + mean(X1[g=="A"])
+by(X2, g, mean)
+mean(X2[g=="A"]) + mean(X1[g=="A"])
+X2[g=="A"] - mean(X2[g=="A"]) + mean(X1[g=="A"])
+X2[g=="A"]
+by(X2, g, mean)
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+by(X1, g, mean)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X2[g==i] <- X2[g==i] - mean(X2[g==i]) + mean(X1[g==i])#
+}#
+by(X2, g, mean)
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, 100, -100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")
+rect(-100, 100, -100, 100, col="#E5E5E5")
+rect(-100, 100, -100, 100, fill="#E5E5E5")
+rect(-100, 100, -100, 100, col="#000000")
+?rect
+require(grDevices)#
+## set up the plot region:#
+op <- par(bg = "thistle")#
+plot(c(100, 250), c(300, 450), type = "n", xlab="", ylab="",#
+     main = "2 x 11 rectangles; 'rect(100+i,300+i,  150+i,380+i)'")#
+i <- 4*(0:10)#
+## draw rectangles with bottom left (100, 300)+i#
+## and top right (150, 380)+i#
+rect(100+i, 300+i, 150+i, 380+i, col=rainbow(11, start=.7,end=.1))#
+rect(240-i, 320+i, 250-i, 410+i, col=heat.colors(11), lwd=i/5)
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, 100, -100, 100, col="#000000")
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, 100, -100, 100, col="#000000")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)
+rect(-100, 100, -100, 100, col="#888888")
+rect(-100, -100, 100, 100, col="#888888")
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf")#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.6, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.6, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0.1))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+axis(2)#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.6, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(c(2, 0.5, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.6, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.5, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.5, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, pch="#22558866")#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, pch="#22558844")#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558866")#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#22558844")#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558866")#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#00336644")#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558866")#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66336644")#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558866")#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66330044")#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558866")#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66660044")#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558866")#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220044")#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558888", cex=0.8)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220033", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558888", cex=0.8)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220044", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558888", cex=0.8)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("A", "B", "C")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("D", "E", "F"))#
+box()#
+dev.off()
+anova(X1 ~ gp)
+anova(lm(X1 ~ gp))
+anova(lm(X1 ~ g))
+library(xtable)
+xtable(anova(lm(X1 ~ g)))
+xtable(anova(lm(X2 ~ g)))
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Home runs per at bat", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+by(out, gp, sd)
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"AVG"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Batting average", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2, at=seq(0, 0.1, 0.05))#
+dev.off()
+rm(list=ls())#
+library(openintro)#
+data(mlbBat10)#
+d   <- mlbBat10[mlbBat10$AB > 200,]#
+pos <- list(c("OF"), c("1B", "2B", "3B", "SS"), "DH", "C")#
+POS <- c("OF", "IF", "DH", "C")#
+#
+out <- c()#
+gp  <- c()#
+for(i in 1:length(pos)){#
+	these <- which(d$pos %in% pos[[i]])#
+	out   <- c(out, d[these,"AVG"]) #d[these,"HR"] / d[these,"AB"])#
+	gp    <- c(gp, rep(POS[i], length(these)))#
+}#
+summary(lm(out ~ as.factor(gp)))#
+anova(lm(out ~ as.factor(gp)))#
+#
+myPDF("mlbANOVABoxPlot.pdf", 6, 4)#
+boxPlot(out, gp, xlab="Position", ylab="Batting average", axes=FALSE, pchCex=1, key=POS, col="#22558844")#
+dotPlot(out, gp, TRUE, axes=FALSE, add=TRUE, at=1:4+0.07, col="#22558844", cex=0.7)#
+axis(1, 1:4, POS)#
+axis(2) #, at=seq(0, 0.1, 0.05))#
+dev.off()
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+set.seed(2)#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+set.seed(1)#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+set.seed(2)#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+set.seed(2)#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()
+library(xtable)#
+library(openintro)#
+set.seed(3)#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(1)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(1)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()
+library(xtable)#
+library(openintro)#
+theSeed <- 1#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 2#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 3#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 4#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 5#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 5#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 5#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 5#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 5#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 6#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100)#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col="#E5E5E5")#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col="#22558899", cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col="#66220055", cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,2], cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,2], cex=0.8)#
+abline(v=3.5, col="#DDDDDD", lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,2], cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,2], cex=0.8)#
+abline(v=3.5, col=COL[7], lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,3], cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,3], cex=0.8)#
+abline(v=3.5, col=COL[7], lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,3])#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,3])#
+abline(v=3.5, col=COL[7], lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,3], cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,3], cex=0.9)#
+abline(v=3.5, col=COL[7], lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,3], cex=0.9)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,3], cex=0.9, pch=19)#
+abline(v=3.5, col=COL[7], lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,3], cex=0.9, pch=19)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,3], cex=0.9, pch=19)#
+abline(v=3.5, col=COL[7], lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))
+library(xtable)#
+library(openintro)#
+data(COL)#
+theSeed <- 7#
+#
+gps <- c("I", "II", "III")#
+g   <- as.factor(rep(gps, c(20, 10, 40)))#
+M   <- c(1, 2, 1.5)#
+names(M) <- gps#
+#
+set.seed(theSeed)#
+X1  <- rnorm(length(g), M[g], 1.5)#
+set.seed(theSeed)#
+X2  <- rnorm(length(g), M[g], 0.5)#
+for(i in gps){#
+	X1[g==i] <- X1[g==i] - mean(X1[g==i]) + mean(X2[g==i])#
+}#
+by(X1, g, mean)#
+by(X2, g, mean)#
+myPDF("toyANOVA.pdf", mar=c(1.7, 3.1, 0.5, 0.5), mgp=c(2, 0.5, 0))#
+plot(c(X1, X2), xlim=c(0.5, 6.5), type="n", axes=FALSE, xlab="", ylab="outcome")#
+rect(-100, -100, 100, 100, col=COL[7,3])#
+abline(h=seq(-10, 10, 2), col="#FFFFFF", lwd=3)#
+abline(h=seq(-10, 10, 1), col="#FFFFFF", lwd=0.8)#
+dotPlot(X1, g, TRUE, at=1:3, add=TRUE, col=COL[1,3], cex=0.9, pch=19)#
+dotPlot(X2, g, TRUE, at=1:3+3., add=TRUE, col=COL[4,3], cex=0.9, pch=19)#
+abline(v=3.5, col=COL[7], lwd=5.5)#
+abline(v=3.5, col="#AAAAAA", lwd=3)#
+abline(v=3.5, col="#333333", lwd=0.8)#
+axis(2)#
+par(mgp=c(2, 0.45, 0.1))#
+axis(1, at=1:3, gps)#
+axis(1, at=4:6, c("IV", "V", "VI"))#
+box()#
+dev.off()#
+#
+xtable(anova(lm(X1 ~ g)))#
+xtable(anova(lm(X2 ~ g)))

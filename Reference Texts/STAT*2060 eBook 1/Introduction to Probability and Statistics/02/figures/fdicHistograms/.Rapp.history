@@ -1,0 +1,1654 @@
+library(openintro)#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=TRUE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=TRUE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+rm(list=ls())
+library(openintro)#
+load("fdicHistograms.rda")
+ls()
+br
+counts
+dens
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+MIDS   <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	MIDS[[i]]   <- BR[[i]][-1] - diff(BR[[i]][1:2])#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}
+i <- 1
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+MIDS   <- list()
+COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	MIDS[[i]]   <- BR[[i]][-1] - diff(BR[[i]][1:2])
+MIDS
+BR[[1]]
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+MIDS   <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	MIDS[[i]]   <- BR[[i]][-1] - diff(BR[[i]][1:2])/2#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	MIDS   <- BR[[i]][-1] - diff(BR[[i]][1:2])/2#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}
+COUNTS
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=TRUE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+COUNTS[[1]]
+i <- 1
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()
+COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	MIDS        <- BR[[i]][-1] - diff(BR[[i]][1:2])/2
+1:(length(BR[[i]])-1)
+j <- 1
+these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)
+counts[these]
+these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)
+these
+library(openintro)#
+load("fdicHistograms.rda")
+br
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}
+COUNTS[[1]]
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=TRUE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=TRUE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], COUNTS[[i]], type='s')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=TRUE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]][-1], COUNTS[[i]], type='s')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+lapply(BR, length)
+lapply(COUNTS, length)
+BR[[i]][-1]
+COUNTS[[i]]
+i
+i <- 4
+histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')
+lines(BR[[i]][-1], COUNTS[[i]], type='s')
+cbind(BR[[i]][-1], COUNTS[[i]])
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]][-1], COUNTS[[i]], type='s')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558840', border='#225588', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#22558810', border='#22558820', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#DDEEFF', border='#BBDDFF', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#E5F3FF', border='#BBDDFF', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#E5F3FF', border='#AACCEE', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#F1F8FF', border='#AACCEE', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#F1F8FF', border='#AAC5DE', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#F1F8FF', border='#A0BBD5', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#F1F8FF', border='#88AAD1', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.7, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#F1F8FF', border='#88AAD1', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.55, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col='#F1F8FF', border='#88AAD1', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+load("/Users/ddiez/Dropbox/Textbook/02/figures/fdicHistograms/fdicHistograms.rda")
+library(openintro)#
+data(COL)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col=fadeColor(COL[1], "08"), border='#88AAD1', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+data(COL)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col=fadeColor(COL[1], "88"), border='#88AAD1', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+data(COL)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col=fadeColor(COL[1], "10"), border='#88AAD1', probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+data(COL)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col=fadeColor(COL[1], "10"), border=COL[1], probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+data(COL)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col=fadeColor(COL[1], "10"), border=COL[1,4], probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col='#225588')#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+data(COL)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col=fadeColor(COL[1], "10"), border=COL[1,4], probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col=COL[1])#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()
+library(openintro)#
+data(COL)#
+load("fdicHistograms.rda")#
+#
+MIDS        <- br[-1] - diff(br[1:2])/2#
+BR <- list()#
+BR[[1]] <- seq(110, 210, 10)#
+BR[[2]] <- seq(115, 210, 5)#
+BR[[3]] <- seq(110, 210, 2)#
+BR[[4]] <- seq(110, 210, 1)#
+COUNTS <- list()#
+for(i in 1:4){#
+	COUNTS[[i]] <- rep(0, length(BR[[i]])-1)#
+	for(j in 1:(length(BR[[i]])-1)){#
+		these <- apply(cbind(MIDS < BR[[i]][j+1], MIDS >= BR[[i]][j]), 1, all)#
+		if(any(these)){#
+			COUNTS[[i]][j] <- sum(counts[these])#
+		}#
+	}#
+}#
+#
+histTemp <- function(BR, COUNTS, col=fadeColor(COL[1], "10"), border=COL[1,4], probability=FALSE, xlab='', ylab=NULL, xlim=NULL, ylim=NULL, ...){#
+	br <- BR#
+	h  <- COUNTS#
+	if(probability){#
+		h <- h/sum(h)/diff(br)#
+	}#
+	if(is.null(ylab)){#
+		ylab <- 'frequency'#
+		if(probability){#
+			ylab <- 'probability'#
+		}#
+	}#
+	if(is.null(xlim)[1]){#
+		xR <- range(br)#
+		xlim <- xR + c(-0.05, 0.05)*diff(xR)#
+	}#
+	if(is.null(ylim)[1]){#
+		ylim <- range(c(0,h))#
+	}#
+#	cat()#
+	plot(-1, -1, xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim, type='n', ...)#
+	abline(h=0)#
+	lines(c(br[1],br[1]), c(0,h[1]), col=border)#
+	for(i in 1:length(h)){#
+		if(i > 1){#
+			if(h[i] > h[i-1]){#
+				lines(rep(br[i],2), h[c(i-1,i)], col=border)#
+			}#
+		}#
+		lines(br[i+0:1], rep(h[i],2), col=border)#
+		lines(rep(br[i+1],2), c(0,h[i]), col=border)#
+		rect(br[i], 0, br[i+1], h[i], col=col, border='#00000000')#
+	}#
+}#
+myPDF('fdicHistograms.pdf', 6.2, 3.3, mfrow=c(2,2), mar=c(2.7, 1, 1, 1), mgp=c(1.6, 0.4, 0))#
+for(i in 1:4){#
+	histTemp(BR[[i]], COUNTS[[i]], xlim=c(125, 210), axes=FALSE, xlab='height (cm)')#
+	lines(BR[[i]], c(COUNTS[[i]],0), type='s', col=COL[1], lwd=2)#
+	axis(1, cex.axis=0.9)#
+}#
+dev.off()

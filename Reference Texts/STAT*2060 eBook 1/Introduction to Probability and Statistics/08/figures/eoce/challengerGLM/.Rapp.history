@@ -1,0 +1,591 @@
+library(faraway)
+data(orings)
+save(orings)
+save(orings, file="orings.rda")
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+plot(orings[,1], orings[,2]/6)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1], orings[,2]/6)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1], orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage")#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1], orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82))#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1], orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1))#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1], orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=20)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1], orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(oring), sd=0.1), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(oring), sd=0.5), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.5), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.1), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.05), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(1)#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.05), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(2)#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.05), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(3)#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.05), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(4)#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.05), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(6)#
+#
+myPDF("oringsData.pdf")#
+plot(orings[,1]+rnorm(nrow(orings), sd=0.05), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+table(orings[,1])
+table(orings[,1])[table(orings[,1]) > 1]
+names(table(orings[,1])[table(orings[,1]) > 1])
+as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(6)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, 0.1, 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(6)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, 0.2, 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(6)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, 0.12, 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(1)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, 0.12, 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(2)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, 0.12, 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(3)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, 0.12, 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+table(orings[,1])[table(orings[,1]) > 1]
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(5)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, 0.12, 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(5)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+rnorm(nrow(orings), sd=ifelse(these, sample(c(-1,1),1), 0)), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(5)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(5)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(1)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(2)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(3)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(4)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(5)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(6)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(7)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(8)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(9)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(10)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(12)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(13)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% as.numeric(names(table(orings[,1])[table(orings[,1]) > 1]))#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(13)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(14)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(15)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(16)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+ifelse(these, sample(0.1*c(-1,1),nrow(orings),TRUE), 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+orings
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+c(rep(0, 5), c(-0.1, 0, 0.1), 0, 0, -0.07, -0.07, 0.07, 0.07, rep(0, 4), -0.07, 0.07, 0, 0, 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf")#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+c(rep(0, 5), c(-0.1, 0, 0.1), 0, 0, -0.07, -0.07, 0.07, 0.07, rep(0, 4), -0.07, 0.07, 0, 0, 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf", mgp=c(2.5, 0.55, 0))#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+c(rep(0, 5), c(-0.1, 0, 0.1), 0, 0, -0.07, -0.07, 0.07, 0.07, rep(0, 4), -0.07, 0.07, 0, 0, 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf", mar=c(3.7, 3.7, 0.8, 0.8), mgp=c(2.5, 0.55, 0))#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+c(rep(0, 5), c(-0.1, 0, 0.1), 0, 0, -0.07, -0.07, 0.07, 0.07, rep(0, 4), -0.07, 0.07, 0, 0, 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf", 4.5, 2.7, mar=c(3.7, 3.7, 0.8, 0.8), mgp=c(2.5, 0.55, 0))#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+c(rep(0, 5), c(-0.1, 0, 0.1), 0, 0, -0.07, -0.07, 0.07, 0.07, rep(0, 4), -0.07, 0.07, 0, 0, 0), orings[,2]/6, xlab="Temperature (Fahrenheit)", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf", 4.5, 2.7, mar=c(3.7, 3.7, 0.8, 0.8), mgp=c(2.5, 0.55, 0))#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+c(rep(0, 5), c(-0.1, 0, 0.1), 0, 0, -0.07, -0.07, 0.07, 0.07, rep(0, 4), -0.07, 0.07, 0, 0, 0), orings[,2]/6, xlab="", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+mtext("Temperature (Fahrenheit)", 1, 2)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()
+library(openintro)#
+data(COL)#
+load("orings.rda")#
+set.seed(17)#
+#
+myPDF("oringsData.pdf", 4.5, 2.7, mar=c(3.2, 3.7, 0.8, 0.8), mgp=c(2.5, 0.55, 0))#
+these <- orings[,1] %in% c(67, 70, 76)#
+plot(orings[,1]+c(rep(0, 5), c(-0.1, 0, 0.1), 0, 0, -0.07, -0.07, 0.07, 0.07, rep(0, 4), -0.07, 0.07, 0, 0, 0), orings[,2]/6, xlab="", ylab="Probability of damage", xlim=c(50, 82), ylim=c(0,1), col=COL[1,3], pch=19)#
+mtext("Temperature (Fahrenheit)", 1, 2)#
+#xtable(summary(g <- glm(cbind(orings[,2], 6-orings[,2]) ~ orings[,1], binomial)))#
+# lines(orings[,1], predict(g, type="response"))#
+#
+dev.off()

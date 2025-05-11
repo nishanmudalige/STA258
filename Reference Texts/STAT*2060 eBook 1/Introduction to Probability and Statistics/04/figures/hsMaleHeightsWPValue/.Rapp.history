@@ -1,0 +1,761 @@
+#
+pdf('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0), mgp=c(3,0.65,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-4,4))#
+axis(1, at=c(-5, 0, .37/.17, 5), label=expression(0, H[0]*': '*mu*' = 7  ', bar(x)*' = 7.42', 0), cex.axis=1)#
+these <- which(X*0.17 + 7 >= 7.37)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+#
+pdf('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0), mgp=c(3,0.65,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-4,4))#
+axis(1, at=c(-5, 0, 1.22, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=1)#
+these <- which(X*0.17 + 7 >= 7.37)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0), mgp=c(3,0.65,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-4,4))#
+axis(1, at=c(-5, 0, 1.22, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=1)#
+these <- which(X*0.17 + 7 >= 7.37)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-4,4))#
+axis(1, at=c(-5, 0, 1.22, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=1)#
+these <- which(X*0.17 + 7 >= 7.37)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-4,4))#
+axis(1, at=c(-5, 0, 1.22, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.8)#
+these <- which(X*0.17 + 7 >= 7.37)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.22, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.8)#
+these <- which(X*0.17 + 7 >= 7.37)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.8)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2)#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2, mgp=c(3, 0.5, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2, mgp=c(3, 0.4, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.993', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.007', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+pnorm(1.22)
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1.2)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.111', pos=3, cex=1.2)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4.5, 2.2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.8))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2.56, yMax/2, 2.562, yMax/10, length=0.1)#
+text(2.56, yMax/2, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.8))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2.56, yMax*.6, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.8))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.4))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.7)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.8)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 2, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 1.8, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.889', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'p-value\n 0.111', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+1-pnorm(1.22)
+1-pnorm(1.12)
+pnorm(1.12)
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 1.8, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.5,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.869', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'p-value\n 0.131', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+(71.8-70.43)/1.22
+pnorm(1.12)
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 1.8, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(2,0,0.5,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.3,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.869', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'p-value\n 0.131', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+1-pnorm(1.12)
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 1.8, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(1.4,0,0.2,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.3,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.869', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'one tail\n 0.131', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 4, 1.5, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(1.4,0,0.2,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-2.3,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.869', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'one tail\n 0.131', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 5, 1.5, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(1.4,0,0.2,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3.3,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.869', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'one tail\n 0.131', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()
+library(openintro)#
+#
+myPDF('hsMaleHeightsWPValue.pdf', 5, 1.5, mgp=c(3, 0.3, 0))#
+#
+#===> plot <===##
+par(las=1, mar=c(1.4,0,0.2,0))#
+X <- seq(-5,5,0.01)#
+Y <- dt(X, 20)#
+plot(X, Y, type='l', axes=F, xlim=c(-3.3,3.3))#
+axis(1, at=c(-5, 0, 1.12, 5), label=expression(0, H[0]*': '*mu*' = 70.43  ', bar(x)*' = 71.8', 0), cex.axis=0.75)#
+these <- which(X >= 1.12)#
+polygon(c(X[these[1]], X[these],X[rev(these)[1]]), c(0,Y[these],0), col='#CCCCCC', border='#000000BB')#
+yMax <- max(Y)#
+#
+text(0, yMax*.4, '0.869', cex=1)#
+#
+arrows(2, yMax*.6, 2, yMax/5, length=0.1)#
+text(2, yMax*.6, 'single tail\n 0.131', pos=3, cex=1)#
+#
+#arrows(1.3,0.28, 0.43, 0.28, length=0.07)#
+#text(-.88, 0.13, '  40%\n(0.40)', cex=0.8)#
+#
+lines(X, Y)#
+abline(h=0)#
+#
+#
+dev.off()

@@ -1,0 +1,167 @@
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf")#
+hist(d$time)#
+hist(d$age)#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", mfrow=1:2)#
+hist(d$time)#
+hist(d$age)#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", mfrow=1:2)#
+hist(d$time, main="", xlab="Time (minutes)")#
+hist(d$age, main="", xlab="Age (years)")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", mfrow=1:2)#
+histPlot(d$time, main="", xlab="Time (minutes)")#
+histPlot(d$age, main="", xlab="Age (years)")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", mfrow=1:2)#
+histPlot(d$time, main="", xlab="Time (minutes)", border="#225588")#
+histPlot(d$age, main="", xlab="Age (years)", border="#884400")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", mfrow=1:2)#
+histPlot(d$time, main="", xlab="Time (minutes)", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2)#
+histPlot(d$time, main="", xlab="Time (minutes)", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2, mgp=c(2.5, 0.55, 0))#
+histPlot(d$time, main="", xlab="Time (minutes)", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2, mgp=c(2.5, 0.55, 0))#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2, mgp=c(2.5, 0.55, 0))#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#663300", col="#66330022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2, mgp=c(2.5, 0.55, 0))#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2, mgp=c(2.2, 0.55, 0))#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2, mar=c(3.5, 3.5, 0.5, 0.5), mgp=c(2.2, 0.55, 0))#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 6, 2.8, mfrow=1:2, mar=c(3.5, 3.5, 0.5, 1.5), mgp=c(2.2, 0.55, 0))#
+#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+#
+par(mar=c(3.5, 4.5, 0.5, 0.5))#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 7, 2.8, mfrow=1:2, mar=c(3.5, 3.5, 0.5, 1.5), mgp=c(2.2, 0.55, 0))#
+#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+#
+par(mar=c(3.5, 4.5, 0.5, 0.5))#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+library(openintro); data(run10Samp); d <- run10Samp; mean(d$age); sd(d$age)/sqrt(100)
+37.18 + c(-2.58, 2.58)*1.1
+37.18 + 1.65*c(-1, 1)*1.1
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 7, 2.8, mfrow=1:2, mar=c(3.5, 3.5, 0.5, 1.5), mgp=c(2.2, 0.55, 0))#
+#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+#
+par(mar=c(3.5, 4.5, 0.5, 0.5))#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+hist(d$age - mean(d$age))/sd(d$age)
+hist((d$age - mean(d$age))/sd(d$age)
+)
+library(openintro)#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 7, 2.8, mfrow=1:2, mar=c(3.5, 3.5, 0.5, 1.5), mgp=c(2.2, 0.55, 0))#
+#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", border="#225588", col="#22558822")#
+#
+par(mar=c(3.5, 4.5, 0.5, 0.5))#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", border="#884400", col="#88440022")#
+dev.off()
+library(openintro)#
+data(COL)#
+#
+data(run10Samp)#
+d <- run10Samp#
+#
+myPDF("run10SampHistograms.pdf", 7, 2.8, mfrow=1:2, mar=c(3.5, 3.5, 0.5, 1.5), mgp=c(2.2, 0.55, 0))#
+#
+histPlot(d$time, main="", xlab="Time (minutes)", ylab="Frequency", col=COL[1])#
+#
+par(mar=c(3.5, 4.5, 0.5, 0.5))#
+histPlot(d$age, main="", xlab="Age (years)", ylab="Frequency", col=COL[1])#
+dev.off()
