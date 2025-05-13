@@ -3,3 +3,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Basics}{2}{section.1.1}%
 \contentsline {chapter}{\numberline {4}Normal Approximation to the Binomial Distribution}{3}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definitions and Setup}{3}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Bernoulli Distribution}{4}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Sampling Distribution of the Sum and MGF Derivation}{4}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Binomial Distribution Summary}{5}{section.4.4}%

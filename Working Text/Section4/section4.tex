@@ -1,5 +1,157 @@
-\setcounter{chapter}{3}  % This makes the next \chapter be "Chapter 4"
+\setcounter{chapter}{3} % Makes this Chapter 4
 \chapter{Normal Approximation to the Binomial Distribution}
 
-% You can now start writing here
-This chapter explains how the binomial distribution can be approximated by the normal distribution under certain conditions...
+\section{Definitions and Setup}
+
+\begin{definitionbox}{Statistic}
+A \textit{statistic} is a function of the observable random variables in a sample and known constants.
+
+Since statistics are functions of the random variables observed in a sample, they themselves are random variables. As such, all statistics have a corresponding probability distribution, which we refer to as their \textit{sampling distribution}.
+\end{definitionbox}
+\begin{tcolorbox}[title=Review from STA256,
+  colback=gray!5, 
+  colframe=gray!40!black, 
+  coltitle=black, 
+  colbacktitle=gray!20,  % <- softer title bar
+  fonttitle=\bfseries,
+  sharp corners=south,
+  breakable]
+
+
+\textbf{Bernoulli Distribution:}
+
+A Bernoulli trial is a single experiment with two outcomes:
+\begin{itemize}
+  \item Success: \( X = 1 \) with probability \( p \)
+  \item Failure: \( X = 0 \) with probability \( 1 - p \)
+\end{itemize}
+
+\medskip
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|}
+\hline
+\( X = x \) & 0 & 1 \\
+\hline
+\( P(X = x) \) & \( 1 - p \) & \( p \) \\
+\hline
+\end{tabular}
+\end{center}
+
+The probability mass function (PMF) is:
+\[
+f(x) = p^x (1 - p)^{1 - x}, \quad x \in \{0, 1\}
+\]
+
+\medskip
+
+\textbf{Binomial Distribution:}
+
+A binomial distribution arises from \( n \) independent Bernoulli trials. Let:
+\[
+X = \text{number of successes in } n \text{ trials}
+\]
+Then:
+\[
+X \sim \text{Binomial}(n, p)
+\]
+
+where:
+\begin{itemize}
+  \item Each trial results in either success (with probability \( p \)) or failure (with probability \( 1 - p \))
+  \item \( X \in \{0, 1, \dots, n\} \)
+\end{itemize}
+
+The PMF is:
+\[
+P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}
+\]
+
+\end{tcolorbox}
+
+\section{Bernoulli Distribution}
+
+Consider the random experiment of rolling a die once. Define the random variable:
+
+\[
+X_i =
+\begin{cases}
+1 & \text{if the } i\text{-th roll is a six}, \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Then \( X_i \sim \text{Bernoulli}(p) \), where \( p = P(\text{rolling a six}) \). 
+
+
+The expected value and variance of a Bernoulli random variable are:
+
+\[
+\mu = \mathbb{E}(X) = p, \quad \sigma^2 = \mathrm{Var}(X) = p(1 - p)
+\]
+
+
+
+\section{Sampling Distribution of the Sum and MGF Derivation}
+
+Consider determining the sampling distribution of the sample total:
+\[
+S_n = X_1 + X_2 + \dots + X_n
+\]
+Suppose \( X_i \overset{iid}{\sim} \text{Bernoulli}(p) \). Then the moment-generating function of \( S_n \) is:
+
+\begin{align*}
+M_{S_n}(t) &= \mathbb{E}[e^{t S_n}] \\
+           &= \mathbb{E}\left[e^{t(X_1 + X_2 + \dots + X_n)}\right] \\
+           &= \mathbb{E}\left[e^{tX_1} e^{tX_2} \dots e^{tX_n} \right] \quad \text{(independence)} \\
+           &= \mathbb{E}[e^{tX_1}] \cdot \mathbb{E}[e^{tX_2}] \cdots \mathbb{E}[e^{tX_n}] \\
+           &= M_{X_1}(t) \cdot M_{X_2}(t) \cdots M_{X_n}(t) \\
+           &= \left[pe^t + (1 - p)\right]^n
+\end{align*}
+
+
+Since this is the MGF of a binomial random variable with parameters \( n \) and \( p \), we conclude:
+
+\[
+S_n \sim \text{Binomial}(n, p)
+\]
+\medskip
+\begin{tcolorbox}[title=Example: Binomial Distribution from Die Rolls,
+  colback=blue!5, colframe=blue!40!black, coltitle=black,
+  colbacktitle=blue!10!white, fonttitle=\bfseries, breakable]
+
+We can think of rolling a die \( n \) times as an example of the binomial setting. Each roll gives either a six (a “success”) or a number different from six (a “failure”).
+
+Knowing the outcome of one roll doesn’t tell us anything about the others, so the \( n \) rolls are independent.
+
+If we call a six a success, then:
+\begin{itemize}
+  \item The probability of success on each trial is \( p = P(\text{rolling a six}) = \frac{1}{6} \)
+  \item The probability of failure is \( 1 - p = \frac{5}{6} \)
+\end{itemize}
+
+Let \( Y \) be the number of sixes rolled in \( n \) trials. Then \( Y \sim \text{Binomial}(n, p) \), and the distribution of \( Y \) is called a \textbf{binomial distribution}.
+\end{tcolorbox}
+
+
+\section{Binomial Distribution Summary} % or \section{4.4 Binomial Distribution} if numbering manually
+
+A random variable \( Y \) is said to have a \textbf{binomial distribution} based on \( n \) trials with success probability \( p \) if and only if:
+
+\[
+p(y) = \frac{n!}{y!(n - y)!} p^y (1 - p)^{n - y}, \quad y = 0, 1, 2, \dots, n \quad \text{and} \quad 0 \leq p \leq 1
+\]
+
+\medskip
+
+The expected value and variance of a binomial random variable are:
+
+\[
+\mu = \mathbb{E}(Y) = np, \quad \sigma^2 = \mathrm{Var}(Y) = np(1 - p)
+\]
+
+
+
+
+
