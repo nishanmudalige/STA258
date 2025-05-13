@@ -151,6 +151,264 @@ The expected value and variance of a binomial random variable are:
 \mu = \mathbb{E}(Y) = np, \quad \sigma^2 = \mathrm{Var}(Y) = np(1 - p)
 \]
 
+\subsection{Visualizing the PMF of Binomial Distributions}
+
+\textbf{R Output:}
+
+
+\begin{center}
+\textit{Image will be inserted here for Slide 11}
+\end{center}
+
+\textbf{Probability Mass Functions (PMFs) for increasing \(n\):}
+
+\vspace{0.5em}
+
+The following plots display the probability mass functions (PMFs) for a binomial distribution with \( p = \frac{1}{6} \) and increasing values of \( n \). As \( n \) increases, the binomial distribution begins to resemble a normal distribution.
+
+\begin{itemize}
+  \item Slide 12: Image will be inserted here
+  \item Slide 13: Image will be inserted here
+  \item Slide 14: Image will be inserted here
+  \item Slide 15: Image will be inserted here
+  \item Slide 16: Image will be inserted here
+  \item Slide 17: Image will be inserted here
+  \item Slide 18: Image will be inserted here
+  \item Slide 19: Image will be inserted here
+  \item Slide 20: Image will be inserted here
+  \item Slide 21: Image will be inserted here
+  \item Slide 22: Image will be inserted here
+  \item Slide 23: Image will be inserted here
+\end{itemize}
+
+\section{Sampling Distribution of a Sample Proportion and the Normal Approximation}
+
+Draw a \textit{Simple Random Sample (SRS)} of size \( n \) from a large population that contains proportion \( p \) of “successes”. Let \( \hat{p} \) be the \textbf{\textit{sample proportion}} of successes:
+
+\[
+\hat{p} = \frac{\text{number of successes in the sample}}{n}
+\]
+
+Then:
+
+\begin{itemize}
+  \item The \textbf{mean} of the sampling distribution of \( \hat{p} \) is \( p \).
+  \item The \textbf{standard deviation} of the sampling distribution is \( \sqrt{ \frac{p(1 - p)}{n} } \).
+\end{itemize}
+
+
+\begin{center}
+\textit{Image will be inserted here (Slide 24)}
+\end{center}
+
+According to the Central Limit Theorem (CLT), the sampling distribution of a sample proportion becomes approximately normal as the sample size increases.
+
+That is:
+\[
+\hat{p} \sim \mathcal{N}\left(p, \sqrt{\frac{p(1 - p)}{n}}\right)
+\]
+
+This approximation is most accurate when both \( np \geq 10 \) and \( n(1 - p) \geq 10 \).
+
+These are called the \textbf{success-failure conditions}.
+
+\medskip
+
+\textit{Key Point:} When the success-failure conditions are met, the normal approximation to the sampling distribution of \( \hat{p} \) can be used for probability calculations.
+\subsection*{Conditions for Using the Normal Approximation}
+
+\vspace{0.5em}
+
+Suppose \( X \sim \text{Binomial}(n, p) \). Then:
+
+\[
+\mu = np, \quad \sigma^2 = np(1 - p)
+\]
+
+\medskip
+
+\textbf{Binomial probabilities can be approximated by the normal distribution:}
+\[
+X \approx \mathcal{N}(np, \, np(1 - p))
+\]
+
+This approximation is \textit{useful for large \( n \)} and valid under the following conditions:
+
+\begin{tcolorbox}[title=Standard Conditions,
+  colback=blue!5, 
+  colframe=blue!50!black, 
+  coltitle=black,
+  colbacktitle=blue!20, % ← LIGHTER blue for the title bar
+  fonttitle=\bfseries,
+  sharp corners=south,
+  boxrule=0.5pt,
+  enhanced,
+  width=\textwidth,
+  breakable]
+The binomial setting holds (i.e., independent trials, fixed \( n \), same probability \( p \)) and
+
+\[
+np \geq 10 \quad \text{and} \quad n(1 - p) \geq 10
+\]
+\end{tcolorbox}
+
+\vspace{0.5em}
+
+Alternatively, a more conservative criterion for using the normal approximation is:
+\[
+n > 9 \cdot \left( \frac{\max(p, \, 1 - p)}{\min(p, \, 1 - p)} \right)
+\]
+
+\medskip
+
+These ensure that the binomial distribution is sufficiently symmetric and smooth to approximate with the normal distribution.
+
+\medskip
+\section{Sampling Distribution of $\hat{p}$}
+\subsection*{Bernoulli Distribution (Binomial with $n = 1$)}
+
+\[
+X_i =
+\begin{cases}
+1 & \text{if the $i$-th roll is a six} \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+\[
+\mu = \mathbb{E}(X_i) = p, \quad \sigma^2 = \mathrm{Var}(X_i) = p(1 - p)
+\]
+
+Let $\hat{p}$ be our estimate of $p$. Note that $\hat{p} = \frac{1}{n} \sum_{i=1}^{n} X_i = \bar{X}$.
+Let $\hat{p} = \frac{\text{\# successes } (X)}{\text{sample size } (n)}$
+
+Recall that for $X \sim \text{Binomial}(n, p)$:
+\[
+X \overset{\cdot}{\sim} \mathcal{N}(np, np(1 - p))
+\]
+
+Let $\hat{p} = \frac{X}{n}$
+
+\paragraph*{Mean of $\hat{p}$:}
+
+\[
+\mathbb{E}(\hat{p}) = \mathbb{E} \left( \frac{X}{n} \right) = \frac{1}{n} \cdot \mathbb{E}(X) = \frac{1}{n} \cdot np = p
+\]
+
+\paragraph*{Variance of $\hat{p}$:}
+
+\[
+\mathrm{Var}(\hat{p}) = \mathrm{Var} \left( \frac{X}{n} \right) = \frac{1}{n^2} \cdot \mathrm{Var}(X) = \frac{1}{n^2} \cdot np(1 - p) = \frac{p(1 - p)}{n}
+\]
+
+By the Central Limit Theorem (CLT), for sufficiently large $n$:
+\[
+\hat{p} \sim \mathcal{N} \left( p, \frac{p(1 - p)}{n} \right)
+\]
+
+\paragraph*{Standardization of $\hat{p}$:}
+\[
+Z = \frac{\hat{p} - p}{\sqrt{ \frac{p(1 - p)}{n} }}
+\]
+
+If $n$ is large, then by the Central Limit Theorem:
+\[
+\bar{X} \approx \mathcal{N} \left( \mu, \frac{\sigma}{\sqrt{n}} \right)
+\quad \Rightarrow \quad
+\hat{p} \sim \mathcal{N} \left( p, \sqrt{\frac{p(1 - p)}{n}} \right)
+\]
+\subsection*{Example: Normal Approximation for Proportions}
+
+\textbf{Problem:}
+
+In the last election, a state representative received 52\% of the votes cast. One year after the election, the representative organized a survey that asked a random sample of 300 people whether they would vote for him in the next election. If we assume that his popularity has not changed, what is the probability that more than half the sample would vote for him?
+
+\vspace{1em}
+\subsubsection*{Solution 1 (using Normal Approximation)}
+
+We want to determine the probability that the sample proportion is greater than 50\%. In other words, we want to find $P(\hat{p} > 0.50)$.
+
+We know that the sample proportion $\hat{p}$ is roughly Normally distributed with mean $p = 0.52$ and standard deviation
+\[
+\sqrt{p(1 - p)/n} = \sqrt{(0.52)(0.48)/300} = 0.0288.
+\]
+Thus, we calculate
+\[
+P(\hat{p} > 0.50) = P\left( \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} > \frac{0.50 - 0.52}{0.0288} \right)
+\]
+\[
+= P(Z > -0.69) = 1 - P(Z < -0.69) \quad \text{(Z is symmetric)}
+\]
+\[
+= P(Z > -0.69) = 1 - P(Z > 0.69)
+\]
+\[
+= 1 - 0.2451 = 0.7549.
+\]
+
+If we assume that the level of support remains at 52\%, the probability that more than half the sample of 300 people would vote for the representative is 0.7549.
+\paragraph*{R code (Normal approximation)}
+
+Just type in the following:
+
+\begin{verbatim}
+1 - pnorm(0.50, mean = 0.52, sd = 0.0288)
+## [1] 0.7562982
+\end{verbatim}
+
+Recall that, \texttt{pnorm} will give you the area to the left of 0.50, for a Normal distribution with mean 0.52 and standard deviation 0.0288.
+\subsubsection*{Solution 2 (using Binomial)}
+
+We want to determine the probability that the sample proportion is greater than 50\%. In other words, we want to find $P(\hat{p} > 0.50)$. We know that 
+$n = 300$ and $p = 0.52$. \\
+Thus, we calculate
+\begin{align*}
+P(\hat{p} > 0.50) &= P\left(\frac{\sum_{i=1}^{n} x_i}{n} > 0.50\right) \\
+&= P\left(\sum_{i=1}^{300} x_i > 150\right) \\
+&= 1 - P\left(\sum_{i=1}^{300} x_i \leq 150\right) \\
+&\text{(it can be shown that } Y = \sum_{i=1}^{300} x_i \text{ has a Binomial distribution with} \\
+&n = 300 \text{ and } p = 0.52\text{)} \\
+&= 1 - F_Y(150)
+\end{align*}
+
+\paragraph*{R code (using Binomial distribution )}
+
+Just type in the following:
+
+\begin{verbatim}
+1- pbinom(150, size = 300, prob = 0.52);
+## [1] 0.7375949
+\end{verbatim}
+
+Recall that, \texttt{pbinom} will give you the CDF at 150, for a Binomial distribution with $n = 300$ and $p = 0.52$.
+
+\subsection*{Solution 3 (using continuity correction)}
+
+
+We have that $n = 300$ and $p = 0.52$.
+Thus, we calculate
+\begin{align*}
+P(\hat{p} > 0.50) &= P\left( \frac{\sum_{i=1}^{n} x_i}{n} > 0.50 \right) \\
+&= P\left( \sum_{i=1}^{300} x_i > 150 \right) \\
+&= 1 - P\left( \sum_{i=1}^{300} x_i \leq 150 \right) \\
+&\text{(it can be shown that } Y = \sum_{i=1}^{300} x_i \text{ has a Binomial distribution with} \\
+&n = 300 \text{ and } p = 0.52\text{)}. \\
+&\approx 1 - P\left( \sum_{i=1}^{300} x_i \leq 150.5 \right) \quad \text{(continuity correction)} \\
+&= 1 - P\left( \frac{\sum_{i=1}^{300} x_i}{n} \leq \frac{150.5}{300} \right) \\
+&= 1 - P(\hat{p} \leq 0.5017) \\
+&= 1 - P\left( Z \leq -0.6354 \right) \quad \text{(Why?)}
+\end{align*}
+\paragraph*{R code (Normal approximation with continuity correction)}
+
+Just type in the following:
+
+\begin{verbatim}
+1 - pnorm(0.5017, mean = 0.52, sd = 0.0288)
+## [1] 0.7374216
+\end{verbatim}
+
+Recall that, \texttt{pnorm} will give you the area to the left of 0.5017, for a Normal distribution with mean 0.52 and standard deviation 0.0288.
+
 
 
 
