@@ -409,6 +409,89 @@ Just type in the following:
 
 Recall that, \texttt{pnorm} will give you the area to the left of 0.5017, for a Normal distribution with mean 0.52 and standard deviation 0.0288.
 
+\section{Continuity Correction}
+
+Suppose that $Y$ has a Binomial distribution with $n = 20$ and $p = 0.4$. We will find the exact probabilities that $Y \leq y$ and compare these to the corresponding values found by using two Normal approximations. One of them, when $X$ is Normally distributed with $\mu_X = np$ and $\sigma_X = \sqrt{np(1 - p)}$.
+\vspace{1em}
+The other one, $W$, a shifted version of $X$.
+
+\vspace{1em}
+
+For example,
+\[
+P(Y \leq 8) = 0.5955987
+\]
+
+As previously stated, we can think of $Y$ as having approximately the same distribution as $X$.
+\[
+P(Y \leq 8) \approx P(X \leq 8)
+= P\left[ \frac{X - np}{\sqrt{np(1 - p)}} \leq \frac{8 - 8}{\sqrt{20(0.4)(0.6)}} \right]
+= P(Z \leq 0) = 0.5
+\]
+
+\vspace{1em}
+
+\[
+P(Y \leq 8) \approx P(W \leq 8.5)
+= P\left[ \frac{W - np}{\sqrt{np(1 - p)}} \leq \frac{8.5 - 8}{\sqrt{20(0.4)(0.6)}} \right]
+= P(Z \leq 0.2282) = 0.5902615
+\]
+% Images from slides 37 and 38 will be inserted here.
+{\noindent\textbf{Example: Normal Approximation with Continuity Correction (Exact Probability)}\\
+
+
+Fifty-one percent of adults in the U. S. whose New Year’s resolution was to exercise more achieved their resolution. You randomly select 65 adults in the U. S. whose resolution was to exercise more and ask each if he or she achieved that resolution. What is the probability that exactly forty of them respond yes?\\
+
+We are given that $p = 0.51$, $n = 65$, and we want to find $P(X = 40)$ where $X \sim Binomial(n = 65, p = 0.51)$.\\
+
+\textbf{Step 1: Use Normal Approximation}
+\vspace{0.5 em}
+We use normal approximation to the binomial. First, compute the mean and standard deviation:
+\[
+\mu = np = 65 \times 0.51 = 33.15, \qquad \sigma^2 = np(1 - p) = 65 \times 0.51 \times 0.49 = 16.485, \quad \sigma = \sqrt{16.485} \approx 4.06
+\]
+
+We apply continuity correction:
+\[
+P(X = 40) = P(39.5 \leq X \leq 40.5)
+\]
+
+\[
+= P\left(\frac{39.5 - 33.15}{4.06} \leq Z \leq \frac{40.5 - 33.15}{4.06}\right) = P(1.56 \leq Z \leq 1.81)
+\]
+
+From the standard normal table:
+\[
+= P(Z \leq 1.81) - P(Z \leq 1.56) = 0.0594 - 0.0352 = 0.0242
+\]
+
+So the approximate probability is:
+\[
+P(X = 40) \approx 0.0242
+\]
+
+\vspace{1em}
+\begin{frame}{Normal Approximation to Binomial}
+
+Let $X = \sum_{i=1}^{n} Y_i$ where $Y_1, Y_2, \ldots, Y_n$ are iid Bernoulli random variables. Note that $X = n\hat{p}$.
+
+\begin{enumerate}
+    \item $n\hat{p}$ is approximately Normally distributed provided that $np \geq 10$ and $n(1 - p) \geq 10$.
+
+    \item Another criterion is that the Normal approximation is adequate if
+    \[
+    n > 9 \left( \frac{\text{larger of $p$ and $q$}}{\text{smaller of $p$ and $q$}} \right)
+    \]
+
+    \item The expected value: $E(\hat{p}) = np$.
+
+    \item The variance: $V(\hat{p}) = np(1 - p) = npq$.
+\end{enumerate}
+
+\end{frame}
+
+\vspace{1\baselineskip}  % Adds vertical space after the frame
+
 
 
 

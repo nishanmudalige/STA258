@@ -10,3 +10,4 @@
 \contentsline {subsection}{\numberline {4.4.1}Visualizing the PMF of Binomial Distributions}{5}{subsection.4.4.1}%
 \contentsline {section}{\numberline {4.5}Sampling Distribution of a Sample Proportion and the Normal Approximation}{6}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Sampling Distribution of $\hat {p}$}{7}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Continuity Correction}{10}{section.4.7}%
