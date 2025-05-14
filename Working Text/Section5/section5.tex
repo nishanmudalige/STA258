@@ -1,0 +1,29 @@
+\chapter{Law of Large Numbers}
+\section{Convergence in Probability}
+
+\begin{definitionbox}{Convergence in Probability}
+The sequence of random variables \( X_1, X_2, X_3, \ldots, X_n, \ldots \) is said to \textbf{converge in probability} to the constant \( c \), if for every \( \epsilon > 0 \),
+\[
+\lim_{n \to \infty} P\left( |X_n - c| \leq \epsilon \right) = 1
+\]
+or equivalently,
+\[
+\lim_{n \to \infty} P\left( |X_n - c| > \epsilon \right) = 0
+\]
+
+\noindent \textbf{Notation:} \( X_n \xrightarrow{P} c \)
+\end{definitionbox}
+
+
+This concept plays a key role in the Law of Large Numbers, where the sample mean of independent and identically distributed random variables converges in probability to the population mean as the sample size grows.
+\begin{definitionbox}{Chebyshev's Inequality}
+Let \( X \) be a random variable with finite mean \( \mu \) and variance \( \sigma^2 \). Then, for any \( k > 0 \),
+\[
+P\left( |X - \mu| \geq k \right) \leq \frac{\sigma^2}{k^2}
+\]
+
+\textit{Using complements:}
+\[
+P\left( |X - \mu| < k \right) \geq 1 - \frac{\sigma^2}{k^2}
+\]
+\end{definitionbox}
