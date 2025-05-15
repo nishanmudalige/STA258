@@ -68,6 +68,17 @@ The PMF is:
 P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}
 \]
 
+\medskip
+
+\textbf{Moment Generating Function (MGF):}
+
+The moment generating function (MGF) of a random variable \( X \) is defined as:
+\[
+M_X(t) = \mathbb{E}[e^{tX}]
+\]
+The MGF uniquely characterizes the distribution of \( X \) (if it exists in an open interval around 0), and it can be used to compute moments such as the mean and variance.
+
+
 \end{tcolorbox}
 
 \section{Bernoulli Distribution}
@@ -97,12 +108,12 @@ The expected value and variance of a Bernoulli random variable are:
 
 Consider determining the sampling distribution of the sample total:
 \[
-S_n = X_1 + X_2 + \dots + X_n
+T_n = X_1 + X_2 + \dots + X_n
 \]
-Suppose \( X_i \overset{iid}{\sim} \text{Bernoulli}(p) \). Then the moment-generating function of \( S_n \) is:
+Suppose \( X_i \overset{iid}{\sim} \text{Bernoulli}(p) \). Then the moment-generating function of \( T_n \) is:
 
 \begin{align*}
-M_{S_n}(t) &= \mathbb{E}[e^{t S_n}] \\
+M_{T_n}(t) &= \mathbb{E}[e^{t T_n}] \\
            &= \mathbb{E}\left[e^{t(X_1 + X_2 + \dots + X_n)}\right] \\
            &= \mathbb{E}\left[e^{tX_1} e^{tX_2} \dots e^{tX_n} \right] \quad \text{(independence)} \\
            &= \mathbb{E}[e^{tX_1}] \cdot \mathbb{E}[e^{tX_2}] \cdots \mathbb{E}[e^{tX_n}] \\
@@ -114,7 +125,7 @@ M_{S_n}(t) &= \mathbb{E}[e^{t S_n}] \\
 Since this is the MGF of a binomial random variable with parameters \( n \) and \( p \), we conclude:
 
 \[
-S_n \sim \text{Binomial}(n, p)
+T_n \sim \text{Binomial}(n, p)
 \]
 \medskip
 \begin{tcolorbox}[title=Example: Binomial Distribution from Die Rolls,
