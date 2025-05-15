@@ -8,9 +8,49 @@
 \usepackage{titleref}
 %\usepackage{maple2e}
 
+\usepackage{needspace}
+\usepackage{xcolor}
+
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\sectionfont{\color{blue!70}}
+
 \usepackage{inputenc}
 \usepackage{imakeidx}
 \usepackage[english]{babel}
+\usepackage[most]{tcolorbox}
+\allowdisplaybreaks
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+
+\tcbset{
+  mydefbox/.style={
+    colback=blue!5!white,
+    colframe=blue!40!black,
+    coltitle=black,
+    colbacktitle=blue!10!white, % <- lightens title bar
+    fonttitle=\bfseries,
+    boxrule=0.5pt,
+    arc=2mm,
+    leftrule=0pt,
+    rightrule=0pt,
+    toprule=0pt,
+    bottomrule=0pt,
+    enhanced,
+    width=\textwidth,
+    sharp corners,
+    before skip=10pt,
+    after skip=10pt,
+    breakable
+  }
+}
+
+ 
+
+\newtcolorbox[auto counter, number within=section]{definitionbox}[2][]{mydefbox,title=Definition \thetcbcounter\ (#2),#1}
+
 
 \makeindex
 
@@ -865,14 +905,16 @@ Mississauga, Ontario, Canada \\
 %% BOOK SECTIONS %%
 %%%%%%%%%%%%%%
 
+
+
 \large 
 \setcounter{chapter}{-1}
 \input{Section0/section0.tex}
 \input{Section1/section1.tex}
 %\input{Section2/section2.tex}
 %\input{Section3/section3.tex}
-%\input{Section4/section4.tex}
-%\input{Section5/section5.tex}
+\input{Section4/section4.tex}
+\input{Section5/section5.tex}
 %\input{Section6/section6.tex}
 %\input{Section7/section7.tex}
 %\input{Section8/section8.tex}
