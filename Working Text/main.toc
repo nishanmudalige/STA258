@@ -13,3 +13,5 @@
 \contentsline {section}{\numberline {4.7}Continuity Correction}{10}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Law of Large Numbers}{12}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Convergence in Probability}{12}{section.5.1}%
+\contentsline {chapter}{\numberline {6}One Sample Confidence Intervals on a Mean When the Population Variance is Known}{16}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Key Concepts and Definitions}{16}{section.6.1}%
