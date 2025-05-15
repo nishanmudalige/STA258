@@ -329,4 +329,106 @@ Playbill magazine reported that the mean annual household income of its readers 
 
 We are 99\% confident the mean household income of magazine readers is between \$110{,}534.96 and \$127{,}775.04.
 
+\section*{Example: Estimating Mean Number of Cars Sold}
+
+\vspace{1em}
+
+\noindent\textbf{Scenario:}
+
+\vspace{0.5em}
+
+The number of cars sold annually by used car salespeople is known to be \textbf{normally distributed}, with a population standard deviation of $\sigma = 15$. A random sample of $n = 15$ salespeople was taken, and the number of cars each sold is recorded below. Construct a \textbf{95\% confidence interval} for the population mean number of cars sold, and provide an interpretation.
+
+\vspace{1em}
+
+\noindent\textbf{Raw data:}
+
+\[
+\begin{matrix}
+79 & 43 & 58 & 66 & 101 \\
+63 & 79 & 33 & 58 & 71 \\
+60 & 101 & 74 & 55 & 88 \\
+\end{matrix}
+\]
+
+\vspace{0.5em}
+
+\noindent The sample mean is:
+
+\[
+\bar{x} = \frac{79 + 43 + \cdots + 55 + 88}{15} = 68.6
+\]
+
+\vspace{1em}
+
+\noindent\textbf{R function:}
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+simple.z.test = function(x, sigma, conf.level = 0.95) {
+  n = length(x);
+  xbar = mean(x);
+  alpha = 1 - conf.level;
+  zstar = qnorm(1 - alpha/2);
+  SE = sigma / sqrt(n);
+  xbar + c(-zstar * SE, zstar * SE);
+}
+\end{verbatim}
+\end{tcolorbox}
+
+\vspace{0.5em}
+
+\noindent\textbf{R output:}
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+# Step 1. Entering data;
+cars = c(79, 43, 58, 66, 101, 63, 79,
+         33, 58, 71, 60, 101, 74, 55, 88)
+
+# Step 2. Finding CI;
+simple.z.test(cars, 15)
+
+## [1] 61.00909 76.19091
+\end{verbatim}
+\end{tcolorbox}
+
+\vspace{1em}
+
+\noindent\textbf{Interpretation:} \textbf{We estimate that the mean number of cars sold annually by all used car salespeople lies between 61 and 76, approximately. This type of estimate is correct 95\% of the time.}
+
+\vspace{1em}
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black,
+  title=\textbf{Cases Where Valid}, fonttitle=\bfseries,
+  coltitle=white, colbacktitle=blue!90!black, arc=2mm]
+
+\begin{itemize}
+  \item Large samples where population is \textbf{normal}.
+  \item Large samples where population is \textbf{not normal} (By CLT).
+  \item Small samples where population is \textbf{normal}.
+\end{itemize}
+
+\textit{Note: A sample is considered large if $n \geq 30$.}
+\end{tcolorbox}
+
+\textbf{Example.} Suppose a student measuring the boiling temperature of a certain liquid observes the readings (in degrees Celsius) 102.5, 101.7, 103.1, 100.9, 100.5, and 102.2 on 6 different samples of the liquid. He calculates the sample mean to be 101.82. If he knows that the distribution of boiling points is Normal, with standard deviation 1.2 degrees, what is the confidence interval for the population mean at a 95\% confidence level?\\
+\textbf{A confidence interval} uses sample data to estimate an unknown population parameter with an indication of how accurate the estimate is and of how confident we are that the result is correct.
+
+\vspace{1em}
+
+The \textbf{interval} often has the form\\
+\hspace*{2em}estimate $\pm$ margin of error
+
+\vspace{1em}
+
+The \textbf{confidence level} is the success rate of the method that produces the interval.
+ A level $C$ \textbf{confidence interval for the mean} $\mu$ of a Normal population with \textbf{known} standard deviation $\sigma$, based on an SRS of size $n$, is given by
+\[
+\bar{x} \pm z^\star \frac{\sigma}{\sqrt{n}}
+\]
+
+The \textbf{critical value} $z^\star$ is chosen so that the standard Normal curve has area $C$ between $-z^\star$ and $z^\star$.
+
+
 
