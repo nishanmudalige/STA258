@@ -15,3 +15,4 @@
 \contentsline {section}{\numberline {5.1}Convergence in Probability}{12}{section.5.1}%
 \contentsline {chapter}{\numberline {6}One Sample Confidence Intervals on a Mean When the Population Variance is Known}{16}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Key Concepts and Definitions}{16}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Confidence Interval for $\mu $ (Known Variance)}{18}{section.6.2}%

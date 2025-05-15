@@ -113,3 +113,220 @@ Suppose we construct a $C\%$ confidence interval.
 
 \vspace{0.5em}
 Approximately 95\% of the 1000 intervals (i.e., approx. 950) capture $\mu$.
+\section{Confidence Interval for $\mu$ (Known Variance)}
+
+Let $X_1, X_2, ..., X_n$ be iid $N(\mu, \sigma^2)$, where $\mu$ is unknown and $\sigma$ is known.
+
+We know that:
+\[
+Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0, 1)
+\]
+and
+\[
+P(-1.96 < Z < 1.96) = 0.95
+\]
+Therefore:
+\[
+P\left( -1.96 < \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} < 1.96 \right) = 0.95
+\Rightarrow P\left( \bar{X} - 1.96 \frac{\sigma}{\sqrt{n}} < \mu < \bar{X} + 1.96 \frac{\sigma}{\sqrt{n}} \right) = 0.95
+\]
+
+\vspace{1.5em}
+\textbf{Interpretation of Confidence Interval:}
+
+\begin{itemize}
+  \item This is a random interval $\bar{X} \pm 1.96 \frac{\sigma}{\sqrt{n}}$
+  \item The interval is random since $\bar{X}$ is random due to sampling.
+  \item The population mean $\mu$ is a fixed, but unknown, number.
+  \item The probability $\mu$ is inside the random interval is 0.95 (success rate of the method).
+  \item 95\% of all samples give an interval that captures $\mu$, and 5\% do not.
+\end{itemize}
+
+\vspace{1em}
+Once we observe our sample:
+
+\begin{itemize}
+  \item This is \textbf{not} a random interval $\bar{X} \pm 1.96 \frac{\sigma}{\sqrt{n}}$
+  \item The probability $\mu$ is inside this interval is either 1 or 0
+\end{itemize}
+
+\vspace{1em}
+\textbf{Confidence Interval Isn’t Always Right:}
+
+Not all CIs contain the true value of the parameter. This can be illustrated by plotting many intervals simultaneously and observing.
+
+---
+
+\vspace{2em}
+\textcolor{gray}{\textbf{R Output:}}
+
+\begin{lstlisting}[language=R]
+## Step 1. Generate random samples;
+set.seed(2017)
+m = 50;       # m = number of samples;
+n = 25;       # n = number of obs in sample;
+mu.i = 0;     # mu.i = mean of obs;
+sigma.i = 5;  # sigma.i = std. dev. of obs;
+
+mu.total = n * mu.i;          # mean of Total;
+sigma.total = sqrt(n) * sigma.i;  # std. dev. of Total;
+\end{lstlisting}
+
+\vspace{1em}
+\textcolor{gray}{\textbf{R Output:}}
+
+\begin{lstlisting}[language=R]
+## Step 2. Construct CIs;
+xbar = rnorm(m, mu.total, sigma.total) / n;
+SE = sigma.i / sqrt(n);
+
+alpha = 0.10;
+z.star = qnorm(1 - alpha / 2);
+\end{lstlisting}
+
+\vspace{1em}
+\textcolor{gray}{\textbf{R Output:}}
+
+\begin{lstlisting}[language=R]
+## Step 3. Graph CIs;
+matplot(rbind(xbar - z.star * SE, xbar + z.star * SE),
+        rbind(1:m, 1:m),
+        type = "l", lty = 1,
+        xlab = " ", ylab = " ");
+abline(v = 0, lty = 2);
+\end{lstlisting}
+\vspace{2em}
+Image for Slide 11 will be inserted here.
+
+\vspace{2em}
+
+\section*{Confidence Interval for the Mean of a Normal Population}
+
+Draw an SRS (Simple Random Sample) of size $n$ from a Normal population having unknown mean $\mu$ and \textbf{known} standard deviation $\sigma$. A level $C$ confidence interval for $\mu$ is:
+
+\[
+\bar{x} \pm z_{\ast} \cdot \frac{\sigma}{\sqrt{n}}
+\]
+
+The critical value $z_{\ast}$ is illustrated in a Figure below and depends on $C$.
+
+\vspace{2em}
+Image for Slide 13 will be inserted here.
+\section*{Large Sample CI for $\mu$ (Normal data)}
+
+\[
+\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}
+\]
+
+Valid if:
+\begin{itemize}
+  \item $n$ large
+  \item random sample from a Normal distribution
+  \item independent observations
+\end{itemize}
+
+Some definitions:
+\begin{itemize}
+  \item $1 - \alpha$ is the confidence coefficient
+  \item $100(1 - \alpha)\%$ is the confidence level
+\end{itemize}
+
+
+\section*{One Sample CI on the Population Mean $\mu$}
+
+\begin{itemize}
+  \item When population standard deviation $\sigma$ is \textbf{known}
+  \item Formula: $\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}$
+  \item Margin of error comes from standard normal and standard error
+\end{itemize}
+
+How to find $z_{\alpha/2}$?
+
+Example: Find $z_{\alpha/2}$ for a 95\% CI on $\mu$:
+\[
+1 - \alpha = 0.95, \quad \alpha = 0.05, \quad \alpha/2 = 0.025
+\]
+\[
+z_{\alpha/2} = 1.96 \quad (\text{from table or R: } \texttt{qnorm(0.975)})
+\]
+
+
+\section*{Table of Common $z$-values}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Confidence coefficient & Confidence level & $z$ \\
+\hline
+0.90 & 90\% & 1.645 \\
+0.95 & 95\% & 1.96 \\
+0.99 & 99\% & 2.576 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\section*{Example}
+
+Playbill magazine reported that the mean annual household income of its readers is \$119{,}155. Assume this estimate is based on a sample of 80 households, and that the population standard deviation is known to be $\sigma = 30{,}000$.
+
+\begin{itemize}
+  \item $\bar{x} = 119{,}155$
+  \item $n = 80$
+  \item $\sigma = 30{,}000$
+\end{itemize}
+
+\textbf{Tasks:}
+\begin{enumerate}
+  \item[(a)] Develop a 90\% confidence interval estimate of the population mean.
+  \item[(b)] Develop a 95\% confidence interval estimate of the population mean.
+  \item[(c)] Develop a 99\% confidence interval estimate of the population mean.
+\end{enumerate}
+
+
+
+\textbf{90\% CI Calculation}
+
+\[
+\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 119{,}155 \pm 1.645 \cdot \frac{30{,}000}{\sqrt{80}}
+\]
+\[
+= 119{,}155 \pm 5{,}500.73
+\]
+\[
+= (113{,}654.27, \; 124{,}655.73)
+\]
+
+\textbf{95\% CI Calculation}
+
+\[
+\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 119{,}155 \pm 1.96 \cdot \frac{30{,}000}{\sqrt{80}}
+\]
+\[
+= 119{,}155 \pm 6{,}574.04
+\]
+\[
+= (112{,}580.96, \; 125{,}729.04)
+\]
+
+
+\textbf{99\% CI Calculation}
+
+\[
+\bar{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} = 119{,}155 \pm 2.576 \cdot \frac{30{,}000}{\sqrt{80}}
+\]
+\[
+= 119{,}155 \pm 8{,}620.04
+\]
+\[
+= (110{,}534.96, \; 127{,}775.04)
+\]
+
+
+\textbf{Interpretation}
+
+
+We are 99\% confident the mean household income of magazine readers is between \$110{,}534.96 and \$127{,}775.04.
+
+

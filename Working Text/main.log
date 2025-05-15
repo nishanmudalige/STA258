@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  15 MAY 2025 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  15 MAY 2025 23:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1485,14 +1485,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--15
 
 ]
 
-[17])
+[17]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mu' on input line 116.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 116.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2024/09/23 1.10c listings language file
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2024/09/23 1.10c listings language file
+)
 
 [18]
+
+[19]
+
+[20])
+
+[21]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
 
-[19
+[22
 
 
 ] (./main.aux)
@@ -1500,31 +1527,21 @@ runsystem(makeindex main.idx)...executed safely (allowed).
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  344FE918380EEC520F1C3BD705F47311;3891.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: B45695C0BB5F781CB086124DBE7F672E;4195.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 451 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 34450 strings out of 473190
- 714618 string characters out of 5715801
- 1266809 words of memory out of 5000000
- 56992 multiletter control sequences out of 15000+600000
- 572112 words of font info for 90 fonts, out of 8000000 for 9000
+ 35503 strings out of 473190
+ 725520 string characters out of 5715801
+ 1462101 words of memory out of 5000000
+ 58006 multiletter control sequences out of 15000+600000
+ 572621 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,13n,96p,541b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,13n,96p,541b,2790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
@@ -1537,13 +1554,14 @@ mr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 .pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.
 pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.p
 fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
-10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900
-.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.p
-fb>
-Output written on main.pdf (24 pages, 220228 bytes).
+10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200
+.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.p
+fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
+>
+Output written on main.pdf (27 pages, 238397 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 381 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 
