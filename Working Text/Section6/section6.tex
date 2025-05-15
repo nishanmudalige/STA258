@@ -428,7 +428,30 @@ The \textbf{confidence level} is the success rate of the method that produces th
 \bar{x} \pm z^\star \frac{\sigma}{\sqrt{n}}
 \]
 
-The \textbf{critical value} $z^\star$ is chosen so that the standard Normal curve has area $C$ between $-z^\star$ and $z^\star$.
+The \textbf{critical value} $z^\star$ is chosen so that the standard Normal curve has area $C$ between $-z^\star$ and $z^\star$. \\
 
+Other things being equal, the \textbf{margin of error} of a confidence interval gets smaller as
+\begin{itemize}
+    \item the confidence level $C$ decreases,
+    \item the population standard deviation $\sigma$ decreases, and
+    \item the sample size $n$ increases.
+\end{itemize}
+\vspace{\baselineskip} 
+\section{APPENDIX}
+
+
+Interval estimators are commonly called \textbf{confidence intervals}. The upper and lower endpoints of a confidence interval are called the \textbf{upper} and \textbf{lower confidence limits}, respectively. The probability that a (random) confidence interval will enclose $\theta$ (a fixed quantity) is called the \textbf{confidence coefficient}.\\
+
+
+Suppose that $\hat{\theta}_L$ and $\hat{\theta}_U$ are the (random) lower and upper confidence limits, respectively, for a parameter $\theta$. Then, if
+$$P(\hat{\theta}_L \leq \theta \leq \hat{\theta}_U) = 1 - \alpha,$$
+the probability $(1 - \alpha)$ is the \textbf{confidence coefficient}.
+
+\subsection*{Pivotal quantities}
+One very useful method for finding confidence intervals is called the \textbf{pivotal method}. This method depends on finding a pivotal quantity that possesses two characteristics:
+\begin{itemize}
+    \item It is a function of the sample measurements and the unknown parameter $\theta$, where $\theta$ is the \textbf{only} unknown quantity.
+    \item Its probability distribution does not depend on the parameter $\theta$.
+\end{itemize}
 
 
