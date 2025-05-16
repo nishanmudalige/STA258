@@ -1,6 +1,6 @@
 \pagenumbering{arabic}
 %\setcounter{page}{1}
-\chapter{Sampling Distribution}
+\chapter{Sampling Distributions Related to a Normal Population}
 \index{Introduction}
 \label{sec.matrix}
 %start relabeling as 2.1 etc
@@ -8,5 +8,45 @@
 \titleref{sec.matrix}}{}
 %\setcounter{equation}{0}
 
-In this section, we will briefly introduce R, a useful tool for statistical computing and data visualisation, discuss quantitative data with its properties, basic statistical value calculation and box plot.\\
+In Chapter $1$, we introduced some basic statistical values, now we are going to introduce some distributions.
+
+\section{Normal Distribution}
+
+Normal distribution or Gaussian distribution in probability theory and statistics, is a type of continuous probability distribution. It is discovered by a German mathematician Carl Friedrich Gauss in 1809, and denoted as $N(\mu, \sigma^{2})$. Generally, its probability density function is the following: \[ f(x) = \frac{1}{\sqrt{2 \pi \sigma^{2}}} \cdot e^{-\frac{(x - \mu)^{2}}{2 \sigma^{2}}}.\]
+
+\noindent
+Normal distribution is important in statistics and is widely used in the natural and social sciences to represent real-valued random variables whose distributions are unknown. Based on that, we have central limit theorem (C.L.T, which we will discuss it in the next chapter) that helps mathematicians and statisticians to solve real world problems.
+
+\begin{definition}
+Let: $x_1, x_2, x_3, ..., x_n$ be a random sample of size $n$ from a normal distribution with mean $\mu$ and variance $\sigma^{2}$. Then: \[ \bar{x} = \frac{1}{n} \sum_{i = 1}^{n}x_i \text{, is normally distributed with mean $\mu_{\bar{x}} = \mu \text{ and variance } \sigma^{2}_{\bar{x}} = \frac{\sigma^{2}}{n}$.}\] We write as: \[ \bar{x} \sim N(\mu_{\bar{x}} = \mu, \sigma^{2}_{\bar{x}} = \frac{\sigma^{2}}{n}).\] Then, for a singe variable $x_i \text{, for $i \in \{1, 2, ..., n\}$}$, it follows: \[ z = \frac{x_i - \mu}{\sigma}, \text{ and } z \sim N(\mu = 0, \sigma^{2} = 1) \text{ which $z$ is standard normal distribution}.\] Next,  $\bar{x}$ (sample mean: average on multiple observations) follows: \[ z = \frac{\bar{x} - \mu_{\bar{x}}}{\sigma_{\bar{x}}} = \frac{\bar{x} - \mu}{(\frac{\sigma}{\sqrt{n}})}, \text{ z is standard normal distribution as well.}\]
+\end{definition}
+
+By using $Definition 2.1$, we are able to solve some probability questions regarding to normal distribution. Next, let's proceed with a classic example.\\
+
+\begin{example}
+Consider marks on a standardised test are \textbf{normally distributed} with $\mu = 75 \text{ and } \sigma = 15$. What is the probability the \textbf{class average}, for a class of 30, is greater than 76?\\
+
+Solution: We are asked to find the probability of class average, which is $\bar{x}$. Then we proceed the transformation of sample mean: $P( \bar{x} > 76)$.\\
+
+Then: \[ P(\bar{x} > 76) = P( \frac{ \bar{x} - \mu_{ \bar{x}} }{ \sigma_{\bar{x}}} > \frac{ 76 - \mu_{ \bar{x}}}{\sigma_{\bar{x}}}) = P(z > \frac{76 - 75}{(\frac{15}{\sqrt{30}})}) = P( z > 0.37)\]
+
+Using the standard normal distribution table, the final answer is: $P(z>0.37) = 0.3557.$
+\end{example}
+
+\section{Chi-squared ($\chi^{2}$) and Gamma Distribution:}\\
+
+\subsection{Chi-squared distribution}
+
+\noident
+
+
+
+
+
+
+
+
+
+
+
 
