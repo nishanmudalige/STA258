@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  15 MAY 2025 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  15 MAY 2025 22:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1244,24 +1244,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
-<Section1/img/SkewnessAll.pdf, id=95, 597.4822pt x 845.1575pt>
-File: Section1/img/SkewnessAll.pdf Graphic file (type pdf)
-<use Section1/img/SkewnessAll.pdf>
-Package pdftex.def Info: Section1/img/SkewnessAll.pdf  used on input line 72.
-(pdftex.def)             Requested size: 746.8509pt x 1056.44429pt.
+<Section1/img/RightSkewed.jpg, id=95, 1917.1625pt x 466.74374pt>
+File: Section1/img/RightSkewed.jpg Graphic file (type jpg)
+<use Section1/img/RightSkewed.jpg>
+Package pdftex.def Info: Section1/img/RightSkewed.jpg  used on input line 71.
+(pdftex.def)             Requested size: 479.28946pt x 116.68564pt.
 
-Overfull \hbox (277.09589pt too wide) in paragraph at lines 72--73
+Overfull \hbox (9.53444pt too wide) in paragraph at lines 71--72
  [][] 
  []
 
 
 
 [3]
-Overfull \vbox (441.95872pt too high) has occurred while \output is active []
+<Section1/img/LeftSkewed.jpg, id=102, 1784.6675pt x 440.64626pt>
+File: Section1/img/LeftSkewed.jpg Graphic file (type jpg)
+<use Section1/img/LeftSkewed.jpg>
+Package pdftex.def Info: Section1/img/LeftSkewed.jpg  used on input line 77.
+(pdftex.def)             Requested size: 446.16579pt x 110.16129pt.
+<Section1/img/Symmetric.jpg, id=103, 1228.59pt x 408.52625pt>
+File: Section1/img/Symmetric.jpg Graphic file (type jpg)
+<use Section1/img/Symmetric.jpg>
+Package pdftex.def Info: Section1/img/Symmetric.jpg  used on input line 83.
+(pdftex.def)             Requested size: 307.14674pt x 102.1313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
 
 
 
@@ -1270,48 +1283,73 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.75 
-      <./Section1/img/SkewnessAll.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+l.101 \end{definition}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.101 \end{definition}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.101 \end{definition}
+                       <./Section1/img/RightSkewed.jpg> <./Section1/img/LeftSke
+wed.jpg> <./Section1/img/Symmetric.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
+Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+<Section1/img/Boxplot.png, id=126, 1009.7725pt x 621.32124pt>
+File: Section1/img/Boxplot.png Graphic file (type png)
+<use Section1/img/Boxplot.png>
+Package pdftex.def Info: Section1/img/Boxplot.png  used on input line 168.
+(pdftex.def)             Requested size: 252.4425pt x 155.32993pt.
+
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 172--173
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
@@ -1323,7 +1361,13 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.3 \chapter
-            {Sampling Distribution} [1]
+            {Sampling Distribution} [1
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.3 \chapter
+            {Sampling Distribution} <./Section1/img/Boxplot.png>]
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
@@ -1367,13 +1411,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 2FD847F6F822CB5AF4FD9198A4A296BF;1996.
  ) 
 Here is how much of TeX's memory you used:
- 27396 strings out of 473190
- 529275 string characters out of 5715801
+ 27426 strings out of 473190
+ 530091 string characters out of 5715801
  1042173 words of memory out of 5000000
- 50075 multiletter control sequences out of 15000+600000
+ 50100 multiletter control sequences out of 15000+600000
  570577 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,7n,93p,684b,500s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,7n,93p,684b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1385,10 +1429,10 @@ al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
 /texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (14 pages, 265587 bytes).
+Output written on main.pdf (15 pages, 862550 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

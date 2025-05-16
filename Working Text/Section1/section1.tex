@@ -28,8 +28,7 @@ R is used for data manipulation, statistics, and graphics. It is made of: operat
 \bigbreak
 
 \noindent
-\textbf{What is RStudio?}
-
+\textbf{What is RStudio?}\\
 RStudio is a relatively new editor specially targeted at R. RStudio is cross-platform, free and open-source software (Please use: https://www.rstudio.com, to download Rstudio).
 
 \newpage
@@ -69,8 +68,20 @@ A common graphical representation of quantitative data is a histogram. This grap
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1.25]{Section1/img/SkewnessAll.pdf}
-	\caption{Visualization of the a population, sample and a unit}
+	\includegraphics[scale=0.25]{Section1/img/RightSkewed.jpg}
+	\caption{Visualization of a right skewed distribution}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Section1/img/LeftSkewed.jpg}
+	\caption{Visualization of a left skewed distribution}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Section1/img/Symmetric.jpg}
+	\caption{Visualization of a symmetric distribution}
 \end{figure}
 
 \section{Basic Statistical Value Calculation:}
@@ -150,14 +161,31 @@ Since we know the median of this collection of data points, we just need to find
 	
 \section{Box Plot:}
 
-It is a relatively simple visualisation of data used to determine skewness and potential outliers. 
+It is a relatively simple visualisation of data used to determine skewness and potential outliers. As the following figure shows:
 	
-% Need image
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{Section1/img/Boxplot}
+	\caption{Visualization of a box plot}
+\end{figure}	
 	
-	
-	
-	
-	
+The most important thing from box plot interpretation in this course is obtaining key information. For example: four quartiles, location of potential outliers. Then we approximate those values to continue our statistical analysis.\\
+
+\noindent
+\textbf{Outliers:}\\
+In statistics, an outlier from a set of data points is the value that significantly differs the other observations from that data set.
+
+\begin{example}
+Consider the following collection of data points: \[ S = \{2, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 100, 200\}. \] Find the outliers in the collection of data points.\\
+
+Solution: Simply finding the values that have huge difference with the other data points, such that the outliers of $S$ are: $2, 100 \text{ and } 200$.
+\end{example}
+
+\noindent
+\textbf{Five number summery:}\\
+In statistics, the five number summery are: minimum value, $25^{th} \text{ } (Q_{1})$, $50^{th} \text{ } (Q_{2})$, $75^{th} \text{ } (Q_{3})$ and maximum from a given collection of data points.
+
+
 
 
 
