@@ -7,4 +7,5 @@
 \contentsline {section}{\numberline {1.4}Basic Statistical Value Calculation:}{5}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Sample Mean, Sample variance and Sample Standard Deviation}{5}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Median, Percentile and Quartile:}{6}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Box Plot:}{7}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Box Plot:}{1}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Sampling Distribution}{2}{chapter.2}%
