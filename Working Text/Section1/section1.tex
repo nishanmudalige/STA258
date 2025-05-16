@@ -27,9 +27,8 @@ R is used for data manipulation, statistics, and graphics. It is made of: operat
 
 \bigbreak
 
+\noindent
 \textbf{What is RStudio?}
-
-\\
 
 RStudio is a relatively new editor specially targeted at R. RStudio is cross-platform, free and open-source software (Please use: https://www.rstudio.com, to download Rstudio).
 
@@ -64,9 +63,15 @@ A common graphical representation of quantitative data is a histogram. This grap
 			\end{itemize}
 		\end{definition}
 		
-	% Need insert image(s) to demonstrate different types of skewness. (!!!!!!!!!!!!!)
-	
 \end{itemize}
+
+% Need insert image(s) to demonstrate different types of skewness. (!!!!!!!!!!!!!)
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1.25]{Section1/img/SkewnessAll.pdf}
+	\caption{Visualization of the a population, sample and a unit}
+\end{figure}
 
 \section{Basic Statistical Value Calculation:}
 
@@ -74,14 +79,19 @@ To begin with this section, we start from three main measures in quantitative st
 
 \subsection{Sample Mean, Sample variance and Sample Standard Deviation}
 
+%\begin{definition}
+%	Let $x_1, x_2, x_3, ..., x_n$ be a sample of data points. We define sample mean of the sample data points ($\bar{x}$) as the following: \[ \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i.\] Also, we define sample variance of the sample data points ($s^2$) as: \[ s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2.\] Moreover, the standard deviation of the sample of data points ($s$) is: \[ s = \sqrt{s^2}, \quad \text{for } s > 0.\]
+%\end{definition}
+
 \begin{definition}
-	Let $x_1, x_2, x_3, ..., x_n$ be a sample of data points. We define sample mean of the sample data points ($\bar{x}$) as the following: \[ \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i.\] Also, we define sample variance of the sample data points ($s^2$) as: \[ s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2.\] Moreover, the standard deviation of the sample of data points ($s$) is: \[ s = \sqrt{s^2}, \quad \text{for } s > 0.\]
+	Let $x_1, x_2, x_3, ..., x_n$ be a sample of data points. We define sample mean of the sample data points ($\bar{x}$) as the following: 
+	$$ \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i. $$
+	Also, we define sample variance of the sample data points ($s^2$) as: \[ s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2.\] Moreover, the standard deviation of the sample of data points ($s$) is: \[ s = \sqrt{s^2}, \quad \text{for } s > 0.\]
 \end{definition}
 	
 \begin{example}
 Let: $x_1 = 1, x_2 = 3$ and $x_3 = 7$. Calculate the sample mean, sample variance and sample standard deviation for this collection of data points.\\
 
-\\
 
 Solution (all results are kept in four digits):\\
 By Definition $1.2$, sample mean: \[ \bar{x} = \frac{1+3+7}{3} \approx 3.6667.\]
@@ -107,7 +117,6 @@ Let: $x_1, x_2, x_3, ... , x_n$ be a collection of data points which is arranged
 \begin{example}
 Given two distinct collections of data points: $S_1$ = $\{2, 4, 6\}$ and $S_2$ = $\{1, 5, 16, 28\}$. Calculate the median of both two sets.\\
 
-\\
 
 Solution: \\
 
@@ -130,7 +139,6 @@ Moreover, we use $Q_3 - Q_1$ to calculate interquartile range (I.P.R), which sho
 \begin{example}
 Consider the data set $S = $ $\{4, 25, 30, 30, 30, 32, 32, 35, 50, 50, 50, 55, 60, 74, 110\}$. Calculate its median and $Q_1$ ($25^{th}$).\\
 
-\\
 
 Solution:\\
 
