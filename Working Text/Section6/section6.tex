@@ -95,8 +95,6 @@ Suppose we construct a $C\%$ confidence interval.
 \vspace{0.5em}
 \textbf{Formal Definition:} In repeated sampling, approximately $C\%$ out of all the $C\%$ CI’s constructed captures the parameter.
 
-\vspace{1em}
-(See Slide 11)
 
 \vspace{2em}
 
@@ -195,8 +193,13 @@ matplot(rbind(xbar - z.star * SE, xbar + z.star * SE),
         xlab = " ", ylab = " ");
 abline(v = 0, lty = 2);
 \end{lstlisting}
-\vspace{2em}
-Image for Slide 11 will be inserted here.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Section6/confidence_intervals.pdf}
+  \caption{Simulated 95\% confidence intervals for the population mean. Red “X” marks indicate intervals that do not contain the true mean (\( \mu = 0 \)).}
+\end{figure}
+
 
 \vspace{2em}
 
@@ -210,8 +213,12 @@ Draw an SRS (Simple Random Sample) of size $n$ from a Normal population having u
 
 The critical value $z_{\ast}$ is illustrated in a Figure below and depends on $C$.
 
-\vspace{2em}
-Image for Slide 13 will be inserted here.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Section6/normal_confidence_curve.pdf}
+  \caption{The central area under the standard normal curve with confidence level \( C \), and tails each containing \( (1 - C)/2 \).}
+\end{figure}
+
 \section*{Large Sample CI for $\mu$ (Normal data)}
 
 \[

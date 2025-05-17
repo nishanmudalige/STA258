@@ -16,4 +16,4 @@
 \contentsline {chapter}{\numberline {6}One Sample Confidence Intervals on a Mean When the Population Variance is Known}{19}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Key Concepts and Definitions}{19}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Confidence Interval for $\mu $ (Known Variance)}{21}{section.6.2}%
-\contentsline {section}{\numberline {6.3}APPENDIX}{26}{section.6.3}%
+\contentsline {section}{\numberline {6.3}APPENDIX}{27}{section.6.3}%
