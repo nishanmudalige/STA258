@@ -130,7 +130,11 @@ P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - 3 \right| \geq \epsilon \rig
 \bar{X}_n \xrightarrow{P} 3
 \]
 
-\vspace{2em}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.72\textwidth]{Section5/simulation_plot.pdf}
+  \caption{Simulation of running sample mean of Bernoulli(\(p = 0.5\)) trials over time.}
+\end{figure}
 
 {\color{gray} \textbf{R Simulation Code (Single Sample Path)}}
 
@@ -144,7 +148,12 @@ points(trial, cumsum(sample)/trial, col = "red")
 abline(h = 0.5, lty = 2, col = "black")
 \end{verbatim}
 
-\vspace{1em}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.72\textwidth]{Section5/simulation_multi.pdf}
+  \caption{Simulation of 10 running sample means of Bernoulli(\(p = 0.5\)) trials converging over 100 trials.}
+\end{figure}
+
 
 {\color{gray} \textbf{R Simulation Code (Multiple Sample Paths)}}
 
@@ -164,6 +173,7 @@ sample8 = rbinom(n, 1, 1/2)
 
 colors = rainbow(8)
 
+
 plot(trial, cumsum(sample1)/trial, type = "l", col = colors[1], ylim = c(0,1))
 lines(trial, cumsum(sample2)/trial, col = colors[2])
 lines(trial, cumsum(sample3)/trial, col = colors[3])
@@ -175,14 +185,6 @@ lines(trial, cumsum(sample8)/trial, col = colors[8])
 abline(h = 0.5, lty = 2, col = "black")
 \end{verbatim}
 
-\vspace{2em}
-
-
-\textit{[Slide Image from Slide 10 will be inserted here — Single Trial Simulation]}
-
-\textit{[Slide Image from Slide 13 will be inserted here — Empirical Probability Explanation]}
-
-\vspace{2em}
 
 \subsection*{Empirical Probability Insight}
 
