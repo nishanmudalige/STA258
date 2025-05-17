@@ -228,9 +228,12 @@ Then:
 \end{itemize}
 
 
-\begin{center}
-\textit{Image will be inserted here (Slide 24)}
-\end{center}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{Section4/binomial_normal.pdf}
+  \caption{Binomial distribution with \(n = 300\), \(p = \frac{1}{6}\) and its Normal approximation.}
+\end{figure}
+
 
 According to the Central Limit Theorem (CLT), the sampling distribution of a sample proportion becomes approximately normal as the sample size increases.
 
@@ -295,7 +298,7 @@ n > 9 \cdot \left( \frac{\max(p, \, 1 - p)}{\min(p, \, 1 - p)} \right)
 These ensure that the binomial distribution is sufficiently symmetric and smooth to approximate with the normal distribution.
 
 \medskip
-\section{Sampling Distribution of $\hat{p}$}
+\section{Sampling Distribution of $\hat{p}$ Derivation}
 \subsection*{Bernoulli Distribution (Binomial with $n = 1$)}
 
 \[
