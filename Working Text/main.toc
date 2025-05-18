@@ -1,13 +1,16 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {0}Overview}{1}{chapter.0}%
-\contentsline {chapter}{\numberline {1}Introduction to R and Assessing Normality}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Basic}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}What Is R?}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Quantitative Data}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Basic Statistical Value Calculation:}{4}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Sample Mean, Sample variance and Sample Standard Deviation}{4}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Median, Percentile and Quartile:}{5}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Box Plot:}{7}{section.1.5}%
+\contentsline {chapter}{\numberline {1}Descriptive Statistics and an Introduction to R}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Overview}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Descriptive statistics}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Sample Mean, Sample variance and Sample Standard Deviation}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Median and Mode}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Percentile and Quartile}{5}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Skewness and Symmetry}{6}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Graphical Techniques}{7}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Histograms}{7}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Box Plot}{9}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Introduction to R}{1}{section.1.4}%
 \contentsline {chapter}{\numberline {2}Sampling Distributions Related to a Normal Population}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Normal Distribution}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Chi-squared ($\chi ^{2}$) and Gamma Distribution:}{3}{section.2.2}%

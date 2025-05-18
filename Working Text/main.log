@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  16 MAY 2025 00:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  17 MAY 2025 22:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1235,121 +1235,294 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
+
+./Section1/section1.tex:29: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 
+     
+? 
 
 
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
 
  []
 
-<Section1/img/RightSkewed.jpg, id=110, 1917.1625pt x 466.74374pt>
-File: Section1/img/RightSkewed.jpg Graphic file (type jpg)
-<use Section1/img/RightSkewed.jpg>
-Package pdftex.def Info: Section1/img/RightSkewed.jpg  used on input line 71.
-(pdftex.def)             Requested size: 479.28946pt x 116.68564pt.
 
-Overfull \hbox (9.53444pt too wide) in paragraph at lines 71--72
- [][] 
+./Section1/section1.tex:52: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 
+     
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
  []
 
 
 
 [3]
-<Section1/img/LeftSkewed.jpg, id=117, 1784.6675pt x 440.64626pt>
-File: Section1/img/LeftSkewed.jpg Graphic file (type jpg)
-<use Section1/img/LeftSkewed.jpg>
-Package pdftex.def Info: Section1/img/LeftSkewed.jpg  used on input line 77.
-(pdftex.def)             Requested size: 446.16579pt x 110.16129pt.
-<Section1/img/Symmetric.jpg, id=118, 1228.59pt x 408.52625pt>
-File: Section1/img/Symmetric.jpg Graphic file (type jpg)
-<use Section1/img/Symmetric.jpg>
-Package pdftex.def Info: Section1/img/Symmetric.jpg  used on input line 83.
-(pdftex.def)             Requested size: 307.14674pt x 102.1313pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+./Section1/section1.tex:84: LaTeX Error: There's no line here to end.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 
+     
+? 
 
 
-
-[4
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.101 \end{definition}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.101 \end{definition}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.101 \end{definition}
-                       <./Section1/img/RightSkewed.jpg> <./Section1/img/LeftSke
-wed.jpg> <./Section1/img/Symmetric.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
 
 
 [5]
+
+./Section1/section1.tex:113: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 
+      
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
+
+ []
+
+<Section1/img/LeftSkewed.jpg, id=148, 1784.6675pt x 440.64626pt>
+File: Section1/img/LeftSkewed.jpg Graphic file (type jpg)
+<use Section1/img/LeftSkewed.jpg>
+Package pdftex.def Info: Section1/img/LeftSkewed.jpg  used on input line 124.
+(pdftex.def)             Requested size: 446.16579pt x 110.16129pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
+<Section1/img/RightSkewed.jpg, id=149, 1917.1625pt x 466.74374pt>
+File: Section1/img/RightSkewed.jpg Graphic file (type jpg)
+<use Section1/img/RightSkewed.jpg>
+Package pdftex.def Info: Section1/img/RightSkewed.jpg  used on input line 136.
+(pdftex.def)             Requested size: 479.28946pt x 116.68564pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Overfull \hbox (9.53444pt too wide) in paragraph at lines 136--137
+ [][] 
+ []
+
+
+Overfull \hbox (20.24693pt too wide) in paragraph at lines 140--142
+\OT1/cmr/m/n/12 Two clas-sic ex-am-ple of right skewed prob-a-bil-ity dis-tri-b
+u-tion is $\OML/cmm/m/it/12 ^^_[]$\OT1/cmr/m/n/12 -distribution and F-distribut
+ion. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--145
 
  []
 
 
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+[6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.148 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.148 
+       <./Section1/img/LeftSkewed.jpg> <./Section1/img/RightSkewed.jpg>]
+<Section1/img/Symmetric.jpg, id=157, 1228.59pt x 408.52625pt>
+File: Section1/img/Symmetric.jpg Graphic file (type jpg)
+<use Section1/img/Symmetric.jpg>
+Package pdftex.def Info: Section1/img/Symmetric.jpg  used on input line 151.
+(pdftex.def)             Requested size: 307.14674pt x 102.1313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+./Section1/section1.tex:170: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.170 
+      
+? 
+
+./Section1/section1.tex:175: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 
+      
+? 
+<Section1/img/Histogram.jpg, id=158, 1027.84pt x 1541.76pt>
+File: Section1/img/Histogram.jpg Graphic file (type jpg)
+<use Section1/img/Histogram.jpg>
+Package pdftex.def Info: Section1/img/Histogram.jpg  used on input line 181.
+(pdftex.def)             Requested size: 154.16934pt x 231.25401pt.
+
+
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.184 
+       <./Section1/img/Symmetric.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
+
+ []
+
+<Section1/img/HisSymm.jpg, id=165, 1231.60126pt x 816.04875pt>
+File: Section1/img/HisSymm.jpg Graphic file (type jpg)
+<use Section1/img/HisSymm.jpg>
+Package pdftex.def Info: Section1/img/HisSymm.jpg  used on input line 205.
+(pdftex.def)             Requested size: 184.73221pt x 122.40202pt.
+
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.208 
+       <./Section1/img/Histogram.jpg>]
+<Section1/img/HisL.jpg, id=172, 1424.32124pt x 1019.81pt>
+File: Section1/img/HisL.jpg Graphic file (type jpg)
+<use Section1/img/HisL.jpg>
+Package pdftex.def Info: Section1/img/HisL.jpg  used on input line 211.
+(pdftex.def)             Requested size: 213.63896pt x 152.96489pt.
+<Section1/img/HisR.jpg, id=173, 490.83376pt x 490.83376pt>
+File: Section1/img/HisR.jpg Graphic file (type jpg)
+<use Section1/img/HisR.jpg>
+Package pdftex.def Info: Section1/img/HisR.jpg  used on input line 217.
+(pdftex.def)             Requested size: 171.79439pt x 171.79439pt.
+
+
+./Section1/section1.tex:222: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 
+      
+? 
+<Section1/img/Boxplot.jpg, id=174, 1576.89125pt x 888.31876pt>
+File: Section1/img/Boxplot.jpg Graphic file (type jpg)
+<use Section1/img/Boxplot.jpg>
+Package pdftex.def Info: Section1/img/Boxplot.jpg  used on input line 228.
+(pdftex.def)             Requested size: 473.07103pt x 266.49768pt.
+
+Overfull \hbox (3.31601pt too wide) in paragraph at lines 228--229
+ [][] 
+ []
+
+
+
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.231 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.231 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.231 
+       <./Section1/img/HisSymm.jpg> <./Section1/img/HisL.jpg> <./Section1/img/H
+isR.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
-<Section1/img/Boxplot.png, id=141, 1009.7725pt x 621.32124pt>
-File: Section1/img/Boxplot.png Graphic file (type png)
-<use Section1/img/Boxplot.png>
-Package pdftex.def Info: Section1/img/Boxplot.png  used on input line 168.
-(pdftex.def)             Requested size: 252.4425pt x 155.32993pt.
+<Section1/img/BoxSk.jpg, id=182, 2122.93124pt x 958.58125pt>
+File: Section1/img/BoxSk.jpg Graphic file (type jpg)
+<use Section1/img/BoxSk.jpg>
+Package pdftex.def Info: Section1/img/BoxSk.jpg  used on input line 242.
+(pdftex.def)             Requested size: 424.57874pt x 191.71284pt.
 
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.245 
+       <./Section1/img/Boxplot.jpg>]
+
+./Section1/section1.tex:247: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 
+      
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
@@ -1362,13 +1535,13 @@ been already used, duplicate ignored
                    \relax 
 l.3 \chapter
             {Sampling Distributions Related to a Normal Population} [1
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) 
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.3 \chapter
             {Sampling Distributions Related to a Normal Population} <./Section1
-/img/Boxplot.png>]
+/img/BoxSk.jpg>]
 Chapter 2.
 
 
@@ -1457,16 +1630,16 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1B82023301F1BDC74061CA97F7B1D063;2856.
+(rerunfilecheck)             Checksum: 677990A097A3861C85939BFA687D5E96;3369.
  ) 
 Here is how much of TeX's memory you used:
- 27443 strings out of 473190
- 530318 string characters out of 5715801
- 1042216 words of memory out of 5000000
- 50111 multiletter control sequences out of 15000+600000
+ 27489 strings out of 473190
+ 531434 string characters out of 5715801
+ 1041221 words of memory out of 5000000
+ 50145 multiletter control sequences out of 15000+600000
  572628 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,8n,93p,958b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,8n,93p,958b,502s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1478,10 +1651,10 @@ al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
 /texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (16 pages, 870726 bytes).
+Output written on main.pdf (19 pages, 2369197 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
