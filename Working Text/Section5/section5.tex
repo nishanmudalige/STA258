@@ -3,7 +3,8 @@
 
 \vspace{1em}
 
-\begin{definitionbox}{Convergence in Probability}
+
+\begin{definition}[Convergence in Probability]
 The sequence of random variables \( X_1, X_2, X_3, \ldots, X_n, \ldots \) is said to \textbf{converge in probability} to the constant \( c \), if for every \( \epsilon > 0 \),
 \[
 \lim_{n \to \infty} P\left( |X_n - c| \leq \epsilon \right) = 1
@@ -14,7 +15,7 @@ or equivalently,
 \]
 
 \noindent \textbf{Notation:} \( X_n \xrightarrow{P} c \)
-\end{definitionbox}
+\end{definition}
 
 \vspace{1em}
 
@@ -22,7 +23,7 @@ This concept plays a key role in the Law of Large Numbers, where the sample mean
 
 \vspace{2em}
 
-\begin{definitionbox}{Chebyshev’s Inequality}
+\begin{definition}[Chebyshev’s Inequality]
 Let \( X \) be a random variable with finite mean \( \mu \) and variance \( \sigma^2 \). Then, for any \( k > 0 \),
 \[
 P\left( |X - \mu| \geq k \right) \leq \frac{\sigma^2}{k^2}
@@ -32,20 +33,20 @@ P\left( |X - \mu| \geq k \right) \leq \frac{\sigma^2}{k^2}
 \[
 P\left( |X - \mu| < k \right) \geq 1 - \frac{\sigma^2}{k^2}
 \]
-\end{definitionbox}
+\end{definition}
 
 \newpage
 
 \vspace*{1em}
 
-\begin{definitionbox}{Weak Law of Large Numbers (WLLN)}
+\begin{definition}[Weak Law of Large Numbers (WLLN)]
 Let \( X_1, X_2, \ldots \) be a sequence of independent and identically distributed random variables, each having finite mean \( E(X_i) = \mu \) and variance \( \mathrm{Var}(X_i) = \sigma^2 \). Then, for any \( \epsilon > 0 \),
 \[
 P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - \mu \right| \geq \epsilon \right) \to 0 \quad \text{as } n \to \infty
 \]
 
 \noindent\textbf{Notation:} \( \bar{X}_n \xrightarrow{P} \mu \)
-\end{definitionbox}
+\end{definition}
 \subsection*{Proof of the Weak Law of Large Numbers (WLLN)}
 
 We aim to show that for every \( \epsilon > 0 \),

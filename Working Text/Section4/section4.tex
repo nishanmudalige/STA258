@@ -3,11 +3,11 @@
 
 \section{Definitions and Setup}
 
-\begin{definitionbox}{Statistic}
+\begin{definition}[Statistic]
 A \textit{statistic} is a function of the observable random variables in a sample and known constants.
 
 Since statistics are functions of the random variables observed in a sample, they themselves are random variables. As such, all statistics have a corresponding probability distribution, which we refer to as their \textit{sampling distribution}.
-\end{definitionbox}
+\end{definition}
 \begin{tcolorbox}[title=Review from STA256,
   colback=gray!5, 
   colframe=gray!40!black, 
@@ -169,11 +169,10 @@ The expected value and variance of a binomial random variable are:
 \vspace{0.5em}
 
 {\ttfamily
-\textcolor{violet!70!black}{\#\# Pmf of Binomial with n=10 and p=1/6.} \\[1em]
+\textcolor{violet!70!black}{\#\# Pmf of Binomial with n=10 and p=1/6.} \\
 
-x \textcolor{red}{$\leftarrow$} \textcolor{red}{seq}(\textcolor{magenta}{0}, \textcolor{magenta}{10}, \textcolor{green!50!black}{by}=\textcolor{magenta}{1}); \\[1em]
-
-y \textcolor{red}{$\leftarrow$} \textcolor{red}{dbinom}(x, \textcolor{magenta}{10}, \textcolor{magenta}{1}\textcolor{black}{/}\textcolor{magenta}{6}); \\[1em]
+x \textcolor{red}{$\leftarrow$} \textcolor{red}{seq}(\textcolor{magenta}{0}, \textcolor{magenta}{10}, \textcolor{green!50!black}{by}=\textcolor{magenta}{1}); \\
+y \textcolor{red}{$\leftarrow$} \textcolor{red}{dbinom}(x, \textcolor{magenta}{10}, \textcolor{magenta}{1}\textcolor{black}{/}\textcolor{magenta}{6}); \\
 
 \textcolor{red}{plot}(x, y, \textcolor{green!50!black}{type}= \textcolor{blue}{"p"}, \textcolor{green!50!black}{col}=\textcolor{blue}{"blue"}, \textcolor{green!50!black}{pch}=\textcolor{magenta}{19});
 }\\
