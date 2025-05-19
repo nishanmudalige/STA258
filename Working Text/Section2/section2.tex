@@ -160,6 +160,12 @@ Another way to obtain Student's t-distribution is both population mean and popul
 
 \subsection{F-distribution}
 
+\begin{definition}
+Let $x \sim \chi_{m}^{2} \text{ and } y \sim \chi_{n}^{2}$, the two random variable $x \text{ and } y$ are independent. F-distribution is defined as the following: \[ F = \frac{(\frac{x}{m})}{(\frac{y}{n})} \sim F_{m, n}, \text{ where $m \text{ and } n$ are degrees of freedom for F-distribution.}}\]
+Then, \[ \frac{1}{F} \sim F_{n,m}\]
+Alternatively, given two random sample with same variance and different mean: $x_1, x_2, ..., x_n \sim N(\mu_{X}, \sigma^2)$ and $y_1, y_2, ..., y_m \sim N( \mu_{Y}, \sigma^{2})$. By $Theorem \text{ } 2.2$, we know that \[ \frac{(n-1)s_{X}^{2}}{\sigma^{2}} \sim \chi_{n-1}^{2} \text{ and } \frac{(m-1)s_{Y}^{2}}{\sigma^2} \sim \chi_{m-1}^{2}, \] then \[ F = \frac{ [\frac{(n-1)s_{X}^{2}}{\sigma^2}]}{[\frac{(m-1)s_{Y}^{2}}{\sigma^2}]} \sim F_{n-1, m-1}, \text{for $n-1 \text{ and } m-1$ are degrees of freedom for F-distribution.}\]
+\end{definition}
+
 
 
 
