@@ -8,169 +8,147 @@
 \titleref{sec.matrix}}{}
 %\setcounter{equation}{0}
 
-In Chapter $1$, we introduced some basic statistical values, now we are going to introduce some distributions.
+Previously, we have introduced lots of definitions and given you a rough idea about what really statistics it and what people do in statistics. Now, we are going to proceed statistical distributions. 
 
 \section{Normal Distribution}
 
-Normal distribution or Gaussian distribution in probability theory and statistics, is a type of continuous probability distribution. It is discovered by a German mathematician Carl Friedrich Gauss in 1809, and denoted as $N(\mu, \sigma^{2})$. Generally, its probability density function is the following: \[ f(x) = \frac{1}{\sqrt{2 \pi \sigma^{2}}} \cdot e^{-\frac{(x - \mu)^{2}}{2 \sigma^{2}}}.\]
+In probability theory and statistics, normal distribution also called Gaussian distribution which is discovered by a famous German mathematician Johann Carl Friedrich Gauss in 1809. It is one of the most important distribution that used to approximate other types of probability distribution, such as binomial, hypergeometric, inverse (or negative) hypergeometric, negative binomial and Poisson distribution. Generally, it is denote as $N(\mu, \sigma^2)$ with probability density function as the following: \[ f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot e^{-\frac{(x - \mu)^2}{2\sigma^2}}.\]
+Formally, let's begin with its definition:
 
-\noindent
-Normal distribution is important in statistics and is widely used in the natural and social sciences to represent real-valued random variables whose distributions are unknown. Based on that, we have central limit theorem (C.L.T, which we will discuss it in the next chapter) that helps mathematicians and statisticians to solve real world problems.
-
-\begin{definition}
-Let: $x_1, x_2, x_3, ..., x_n$ be a random sample of size $n$ from a normal distribution with mean $\mu$ and variance $\sigma^{2}$. Then: \[ \bar{x} = \frac{1}{n} \sum_{i = 1}^{n}x_i \text{, is normally distributed with mean $\mu_{\bar{x}} = \mu \text{ and variance } \sigma^{2}_{\bar{x}} = \frac{\sigma^{2}}{n}$.}\] We write as: \[ \bar{x} \sim N(\mu_{\bar{x}} = \mu, \sigma^{2}_{\bar{x}} = \frac{\sigma^{2}}{n}).\] Then, for a singe variable $x_i \text{, for $i \in \{1, 2, ..., n\}$}$, it follows: \[ z = \frac{x_i - \mu}{\sigma}, \text{ and } z \sim N(\mu = 0, \sigma^{2} = 1) \text{ which $z$ is standard normal distribution}.\] Next,  $\bar{x}$ (sample mean: average on multiple observations) follows: \[ z = \frac{\bar{x} - \mu_{\bar{x}}}{\sigma_{\bar{x}}} = \frac{\bar{x} - \mu}{(\frac{\sigma}{\sqrt{n}})}, \text{ z is standard normal distribution as well.}\]
+\begin{definition}[Normal Distribution]
+Suppose a random variable $X \sim N(\mu, \sigma^2)$, then $E(X) = \mu \text{ and } Var(X) = \sigma^2$. And $-\infty < \mu < \infty, \sigma^2 > 0.$ Moreover, $X$ has probability density function as: \[ f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \cdot e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \text{ for $-\infty < x < \infty$ (same as above).}\]
+The only special case of normal distribution is standard normal distribution, such that a random variable $Y \sim N( \mu = E(Y) = 0, \sigma^2 = Var(Y) = 1)$, then $Y$ has probability density function as: \[ f(y) = \frac{1}{\sqrt{2\pi}} \cdot e^{-\frac{y^2}{2}}.\]
 \end{definition}
 
-By using $Definition 2.1$, we are able to solve some probability questions regarding to normal distribution. Next, let's proceed with a classic example.\\
+\section{Gamma and Chi-square Distribution}
 
-\begin{example}
-Consider marks on a standardised test are \textbf{normally distributed} with $\mu = 75 \text{ and } \sigma = 15$. What is the probability the \textbf{class average}, for a class of 30, is greater than 76?\\
-
-Solution: We are asked to find the probability of class average, which is $\bar{x}$. Then we proceed the transformation of sample mean: $P( \bar{x} > 76)$.\\
-
-Then: \[ P(\bar{x} > 76) = P( \frac{ \bar{x} - \mu_{ \bar{x}} }{ \sigma_{\bar{x}}} > \frac{ 76 - \mu_{ \bar{x}}}{\sigma_{\bar{x}}}) = P(z > \frac{76 - 75}{(\frac{15}{\sqrt{30}})}) = P( z > 0.37)\]
-
-Using the standard normal distribution table, the final answer is: $P(z>0.37) = 0.3557.$
-\end{example}
-
-\section{Gamma and Chi-square Distribution}\\
+The Chi-square and Gamma distributions are two fundamental probability distributions widely used in statistical theory and applications. The Gamma distribution is a continuous distribution characterized by its shape and scale parameters, making it versatile for modeling waiting times and various positively skewed data. The Chi-square distribution, a special case of the Gamma distribution, arises naturally in the context of hypothesis testing and confidence interval estimation, especially in tests involving variance and categorical data.\\
 
 \noindent
-The Chi-square and Gamma distributions are two fundamental probability distributions widely used in statistical theory and applications. The Gamma distribution is a continuous distribution characterized by its shape and scale parameters, making it versatile for modeling waiting times and various positively skewed data. The Chi-square distribution, a special case of the Gamma distribution, arises naturally in the context of hypothesis testing and confidence interval estimation, especially in tests involving variance and categorical data.
+\textbf{Gamma Distribution}
 
-\subsection{Gamma distribution}\\
-
-Let's begin with its definition:
-
-\begin{definition}
-A random variable $X$ has a Gamma distribution with parameters $\alpha > 0$ (shape parameter) and $\beta > 0$ (scale parameter) if and only if the probability density function of $X$ is: \[ f(x) = \frac{ x^{\alpha - 1} \cdot e^{\frac{-x}{\beta}}}{ \beta^{\alpha} \cdot {\Gamma(\alpha)}}, \text{ } 0 < x < \infty.\]
-The Gamma function is defined by: $\Gamma(\alpha) = (\alpha - 1)!$. If $X \sim Gamma(\alpha, \beta)$, then $\mu_{X} = \alpha \beta \text{, } \sigma_{X}^{2} = \alpha \beta^{2}$ and the moment generating function of $X$ is $M_{X}(t) = (1-\beta t)^{-\alpha}$, for $t < \frac{1}{\beta}$.
+\begin{definition}[Gamma Distribution]
+Suppose a random variable $X$ is Gamma distributed with $\alpha > 0$ (shape parameter) and $\beta > 0$ (scale parameter) if and only if the probability density function of $X$ is \[ f(x) = \frac{x^{\alpha - 1} e^{\frac{-x}{\beta}}}{\beta^{\alpha} \Gamma(\alpha)}, \text{ for $0 < x < \infty.$}\]
+Then, $E(X) = \alpha \beta \text{, } Var(X) = \alpha \beta^2 \text{ and its moment generating function is } M_{X}(t) = \frac{1}{(1 - \beta t)^{\alpha}},$ for $t < \frac{1}{\beta}.$
 \end{definition}
 
 \noindent
-Moreover, here is some basic information about Gamma function (the function itself is not a distribution): \[ \Gamma(x) = \int_{0}^{\infty}t^{x - 1} \cdot e^{-t} \,dt.\]
-Some properties of Gamma function:\\
-1. $\Gamma(x) = x \cdot \Gamma(n-1)!$ ;\\
-2. For all $n \in \mathbb{N}$, $\Gamma(n) = (n-1)!$ ;\\
-3. $\Gamma(\frac{1}{2}) = \sqrt{\pi}$.
+Now, let's introduce some properties of Gamma function:
 
-\subsection{Chi-square Distribution}
+\begin{itemize}
+	\item Gamma function (\textbf{not a distribution}): \[ \Gamma(x) = \int_{0}^{\infty}t^{x-1}e^{-t}\,dt, \text{ for $x > 0$.} \]
+	\item Properties
+		\begin{itemize}
+			\item 1. $\Gamma(x) = x \cdot \Gamma(x-1)$;
+			\item 2. For all $n \in \mathbb{N} \text{, } \Gamma(n) = (n - 1)!$; 
+			\item 3. $\Gamma(\frac{1}{2}) = \sqrt{\pi}$.
+		\end{itemize}
+\end{itemize}
 
-\begin{definition}
-A random variable $X$ has a Chi-squared distribution with $n$ degrees of freedom ($\chi_{n}^{2}$) if and only if X is a random variable with a Gamma distribution with parameters: $\alpha = \frac{n}{2} \text{ and } \beta = 2$. Then, $\mu_{X} = k \text{, } \sigma_{X}^{2} = 2k$. Moreover, the probability density function of $X$ is: \[ f(x) = \frac{1}{ 2^{\frac{k}{2}} \Gamma(\frac{k}{2})} x^{\frac{k}{2} - 1} e^{\frac{-x}{2}},\] and its moment generating function is: \[ M_{X}(t) = (1-2t)^{\frac{-k}{2}}, \text{ for } t< \frac{1}{2}.\]
+\noindent
+\textbf{Chi-square Distribution}
+
+\noindent
+Here is its formal definition:
+
+\begin{definition}[Chi-square Distribution]
+A random variable $X$ has a Chi-squared distribution with $n$ degrees of freedom $(\chi_{n}^{2})$ if and only if $X$ is a random variable with a Gamma distribution with parameters $\alpha = \frac{n}{2} \text{ and } \beta = 2.$ Then, the probability density function of $X$ is given by \[ f(x) = \frac{1}{2^{\frac{n}{2}} \Gamma(\frac{n}{2})} x^{\frac{k}{2} - 1} e^{\frac{-x}{2}}.\] Moreover, $E(X) = n \text{, } Var(X) = 2n \text{ and moment generating function of $X$ is } M_{X}(t) = (1 - 2t)^{\frac{-n}{2}}, \text{ for $t < \frac{1}{2}$}.$ 
 \end{definition}
 
-In the definition, we claimed that Chi-square distribution is a special case of Gamma distribution with: $\alpha = \frac{n}{2} \text{ and } \beta = 2$. Now let's prove it by moment generating function method, which is quite straightforward.
-\begin{proof} 
-Suppose $x \sim Gamma($\alpha = \frac{n}{2} \text{, } \beta = 2$)\\
-Then, we compute the moment generating function of $x$, which is: $M_{x}(t) = (1-2t)^{-\frac{n}{2}}$.\\
-Thus, we get $x \sim \chi_{n}^{2}$, comparing with the moment generating function of Chi-square distribution.
+\noindent
+We claim that Chi-square distribution is a special case of Gamma distribution with $\alpha = \frac{n}{2} \text{ and } \beta = 2$. Now, let's prove it by using moment generating function.\\
+
+\noindent
+The proof is quite straightforward as the following shows:
+
+\begin{proof} Suppose $X \sim Gamma( \alpha = \frac{n}{2} \text{, } \beta = 2).$ \\
+Then the following moment generating function holds for $X$: \[ M_{X}(t) = (1- 2t)^{\frac{-n}{2}}, \text{ for $t < \frac{1}{2}$}.\]
+Compare the moment generating function of $X$ under Gamma distribution with Chi-square distribution, we can conclude that $X \sim \chi_{n}^{2}$.
 \end{proof}
 
 \noindent
-At this point, we can summarise a theorem:
+\textbf{Obtaining Chi-square Distribution by Normal Distribution}
 
-\begin{theorem}
-If $x \sim Gamma(\alpha = \frac{n}{2} \text{, } \beta = 2)$, then $x$ is also Chi-square distributed with $n$ degrees of freedom. Also, if $x \sim \chi_{n}^{2}$, then $x$ is also Gamma distributed with $\alpha = \frac{n}{2} \text{ and } \beta = 2$.
+\noindent
+Previously, we showed how to use Gamma distribution to get Chi-square distribution by moment generating function method. Now, let's do something interestingly, to use normal distribution to get Chi-square distribution. We will begin with a theorem, then prove it.
+
+\begin{theorem}[$Z^{2} \sim \chi_{1}^{2}$]
+Suppose a random variable $Z$ is standard normally distributed, such that $Z \sim N(0 \text{, }1).$ Then, $Z^2$ is Chi-square distributed with $1$ degree of freedom, so that $Z^2 \sim \chi_{1}^{2}$.
 \end{theorem}
 
 \noindent
-Now, let's apply an example based on $Theorem \text{ } 2.1$
+The proof of Theorem $2.1$ isn't that trivial to see. We still need moment generating function, but in a different way. Before we get into the proper proof, let's grab everything we need:
 
-\begin{example}
-Given $x \sim \chi_{100}^{2}$. What kind of distribution does $x$ also fit?\\
-Solution:\\
-By $Theorem \text{ } 2.1$: we know that $n = 100$. Thus, $x \sim Gamma(\alpha = 50 \text{, } \beta = 2)$.\\
-Alternatively, you may also use moment generating function method to generalise the proper proof of this question, which we leave this as an exercise to you.
-\end{example}
+\begin{itemize}
+	\item 1. Recall STA256 about how to get moment generating function for a given continuous random variable that: \[ M_{Z}(t) = \int_{-\infty}^{\infty} e^{tx}f_{X}(x)\,dx.\]
+	\item 2. We also need Gaussian integral:
+	\begin{itemize}
+		\item (i) \[ \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi};\]
+		\item (ii) \[ \int_{-\infty}^{\infty} e^{-kx^2}\,dx = \sqrt{\frac{\pi}{k}}, \text{ for $k > 0$};\]
+		\item (iii) \[ \int_{-\infty}^{\infty} e^{kx^2}\,dx = \sqrt{\frac{\pi}{-k}}, \text{ for $k < 0$}.\]
+	\end{itemize}
+\end{itemize}
 
-\begin{theorem}
-\[ \frac{(n-1)s^2}{\sigma^2} \sim \chi_{n-1}^{2}, \text{ where $n$ is sample size, $s^2$ is sample variance and $\sigma^2$ is population variance.}\]
-\end{theorem}
-
-\noindent
-\textbf{Chi-square distribution With Normal Distribution}\\
-
-\noindent
-Perviously, we introduced the relationship between Gamma and Chi-square distribution. Furthermore, we can also obtain Chi-square distribution from normal distribution as well.
-
-\begin{theorem}
-Suppose $z \sim N(\mu = 0, \sigma^{2} = 1)$, then $z^{2} \sim \chi_{1}^{2}$.
-\end{theorem}
-
-\noindent
-The proof of $Theorem \text{ }2.2$ has a different strategy by directly computing the moment generating function of $z^{2}$.\\
-
-\noindent
-Let's begin things we may need, during the following proof. $z$ has probability density function: \[ f(z) = \frac{1}{\sqrt{2\pi}}e^{ \frac{-z^{2}}{2}}.\]
-Then, we also need Gaussian integral: \\
-
-\noindent
-1. \[ \int_{-\infty}^{\infty}e^{-x^{2}}\, dx = \sqrt{\pi};\]
-2.\[ \int_{-\infty}^{\infty}e^{-kx^{2}} \, dx= \sqrt{ \frac{\pi}{k}} \text{, for $k > 0$};\]
-3.\[ \int_{-\infty}^{\infty} e^{kx^{2}} \, dx = \sqrt{ \frac{\pi}{-k}} \text{, for $k < 0$.}\]
-
-\begin{proof} We begin with the moment generating function of $z^{2}$.\\
-\[ M_{z^{2}}(t) = E(e^{tz^{2}}) = \int_{-\infty}^{\infty}e^{tz^{2}}f(z)\, dz\]
-\[= \frac{1}{ \sqrt{2\pi}} \int_{-\infty}^{\infty} e^{tz^{2} - \frac{z^{2}}{2}}\, dz\]
-\[= \frac{1}{ \sqrt{2\pi}} \int_{-\infty}^{\infty} e^{ -( \frac{1}{2} - t)z^{2}}\, dz\]
-Now, let $u = z \sqrt{\frac{1}{2}-t}$ and $du = \sqrt{\frac{1}{2}-t}\, dz$. Then, $dz = \frac{1}{\sqrt{\frac{1}{2} - t}}\, du$.\\
-By substitution: \[ M_{z^{2}}(t) = \frac{1}{ \sqrt{2\pi}} \int_{u = -\infty}^{u = \infty}e^{-u^{2}} \frac{1}{\sqrt{\frac{1}{2} - t}}\, du\]
-\[ = \frac{1}{ \sqrt{2\pi}} \frac{1}{\sqrt{\frac{1}{2} - t}} \int_{u = -\infty}^{u = \infty}e^{-u^{2}}\]
-\[ = \frac{1}{ \sqrt{2\pi}} \frac{1}{\sqrt{\frac{1}{2} - t}} \sqrt{\pi} \text{, By Gaussian integral}\]
-\[ = (1-2t)^{-\frac{1}{2}} \text{, which is the M.G.F of $\chi_{1}^{2}.$}\]
+\begin{proof}
+Suppose that $Z \sim N(0, 1)$, then \[ f_{Z}(z) = \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}.\] 
+\hspace*{2.7em} Next, computing M.G.F for $Z^2$: \[ M_{Z^2}(t) = E(e^{tz^2}) = \int_{-\infty}^{\infty} e^{tz^2} \cdot \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}\, dz.\]
+\hspace*{2.7em} After rearranging: \[  M_{Z^2}(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-(\frac{1}{2} - t)z^2}\, dz. \]
+\hspace*{2.7em} Let $u^2 = (\frac{1}{2} - t)z^2, \text{ then } u = z\sqrt{\frac{1}{2}-t}, \text{ so that } du = \sqrt{\frac{1}{2}-t} \cdot dz, \text{ and } dz = \frac{1}{\sqrt{\frac{1}{2}-t}}du.$
+\hspace*{2.7em} By substitution: \[ M_{Z^2}(t) = \frac{1}{\sqrt{2\pi}} \int_{u = -\infty}^{u = \infty} e^{-u^2} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}}du\]
+\hspace*{2.7em} Rearranging and using 2(i) from above: \[ M_{Z^2}(t) = \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}} \int_{u = -\infty}^{u = \infty} e^{-u^2} = \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}} \cdot \sqrt{\pi}.\]
+\hspace*{2.7em} After all simplification, we get: \[ M_{Z^2}(t) = (1-2t)^{-\frac{1}{2}}, \text{ which is the M.G.F of $\chi_{n = 1}^{2}$, as required.}\]
 \end{proof}
 
 \noindent
-Now, we can use $Theorem \text{ } 2.2$ to prove another theorem, which is the following:
+Now, we can do another proof by using Theorem $2.1$.
 
-\begin{theorem}
-Suppose $z_1, z_2, z_3, ..., z_n \sim N(\mu = 0, \sigma^{2} = 1)$, each $z_i$ is independent to others and identically distributed, for $i = 1, 2, 3, ..., n$. Then, \[ \sum_{i=1}^{n} z_i^2 \sim \chi_{n}^{2}.\]
+\begin{theorem}[$ \sum_{i = 1}^{n}Z_{i}^{2} \sim \chi_{n}^{2}$]
+Suppose $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then the sum of $n$ independent $Z^2$ is going to be Chi-square distributed with $n$ degrees of freedom, as the following: \[ \sum_{i=1}^{n}Z_{i}^{2} \sim \chi_{n}^{2}.\]
 \end{theorem}
 
-\begin{proof} We let \[ v = \sum_{i=1}^{n} z_i^2.\]
-Then, \[ M_{v}(t) = E(e^{tv}) = E(e^{t \sum_{i=1}^{n} z_i^2}) = E[e^{t(z_1^2+...+z_n^2)}]\]
-\[ = E[ e^{tz_1^2} \cdots e^{tz_n^2}]\]
-\[ = E(e^{tz_1^2}) \cdots E(e^{tz_n^2}), \text{ by independence}\]
-\[ = (1-2t)^{-\frac{1}{2}} \cdots (1-2t)^{-\frac{1}{2}}, \text{ by $Theorem \text{ } 2.2$, and there are $n$ times M.G.F}\]
-\[ = [(1-2t)^{-\frac{1}{2}}]^{n}, \text{ which is the M.G.F of $\chi_{n}^{2}.$} \]
+\noindent
+We need Theorem $2.1$ to prove this, but it going to be easier. 
+
+\begin{proof}
+Assume that $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then we compute the M.G.F for the entire summation as well, and we let $\delta = \sum_{i = 1}^{n} Z_{i}^{2}$, which as the following shows: \[ M_{\delta}(t) = E[e^{t\delta}] = E[e^{t(Z_1^2 + \cdots + Z_n^2)}] = E[e^{tZ_1^2} \cdots e^{tZ_n^2}].\]
+\hspace*{2.7em} Since $Z_1, Z_2, ..., Z_n$ are independent and identically distributed, so that: \[ M_{\delta}(t) = E[e^{tZ_1^2}] \cdots E[e^{tZ_n^2}].\]
+\hspace*{2.7em} By Theorem $2.1$, we have: $Z^2 \sim \chi_{1}^{2}$, then: \[ M_{\delta}(t) = E[e^{t\delta}] = E[e^{tZ_1^2} \cdots e^{tZ_n^2}] = [(1-2t)^{-\frac{1}{2}}] \cdots [(1-2t)^{-\frac{1}{2}}].\]
+\hspace*{2.7em} Since there are $n$ individuals of $Z^2$, hence: \[ M_{\delta}(t) = (1-2t)^{-\frac{n}{2}}, \text{ which is the M.G.F of $\chi_{n}^{2}$, as required}.\]
 \end{proof}
 
-Now, let's do a comprehensive exercise to practise.
-
-\begin{example}
-Given: $z_1, ..., z_8 \sim N(0,1)$, each $z_i$ is independent to others and identically distributed, for $i = 1, ..., 8.$ What kind of distribution does \[ \sum_{i=1}^{8} z_i^2 \text{ folloow?}\]
-Solution:\\
-By $Theorem \text{ } 2.3$: \[ \sum_{i=1}^{8} z_i^2 \sim \chi_{8}^{2}}.\]
-Also, by $Theorem \text{ } 2.1$: \[ \sum_{i=1}^{8} z_i^2 \sim \chi_{8}^{2}} \sim Gamma(4, 2).\]
-\end{example}
-
-\section{Student's t-distribution and F-distribution}\\
-
 \noindent
+Here is the last theorem for Chi-square and normal distribution, but we won't show you the proof due to its complexity. For people who are interested in that, please see STA260 lecture notes or power point slide to figure out.
+
+\begin{theorem}[$ \frac{(n-1)s^2}{\sigma^2} \sim \chi_{n-1}^{2}$]
+Let $n$ be sample size, $s^2$ be sample variance and $\sigma^2$ be population variance, then $\frac{(n-1)s^2}{\sigma^2}$ is Chi-square distributed with $n - 1$ degrees of freedom. As the following: \[ \frac{(n-1)s^2}{\sigma^2} \sim \chi_{n-1}^{2}.\]
+\end{theorem}
+
+\section{Student's t-Distribution and F-Distribution}
+
 The t-distribution and F-distribution are essential tools in inferential statistics, particularly in the context of hypothesis testing and variance analysis. The t-distribution, which resembles the normal distribution but with heavier tails, is primarily used when estimating population means in situations where the sample size is small and the population standard deviation is unknown. On the other hand, the F-distribution is used to compare variances between two populations and plays a central role in analysis of variance (ANOVA) and regression analysis.\\
 
 \noindent
-\subsection{Student's t-distribution}
+\textbf{Student's t-Distribution}
 
-\begin{definition}
-Let $z \sim N(0,1)$ and $w \sim \chi_{n}^{2}$, for $z \text{ and } w$ are independent to each other. Student's t-distribution is defined as the following: \[ T = \frac{z}{\sqrt{\frac{w}{n}}}, \text{ with $n$ degrees of freedom.}\]
-Another way to obtain Student's t-distribution is both population mean and population variance are unknown for a sample, then: \[ T = \frac{\bar{x} - \mu_{\bar{x}}}{ (\frac{s_{\bar{x}}}{\sqrt{n}})}, \text{ for $\mu_{\bar{x}}$ be sample mean and $s_{\bar{x}}$ be sample standard deviation.}\]
+\begin{definition}[Student's t-Distribution]
+Suppose $X$ is t-distributed with $n$ degrees of freedom, then the probability density function of $X$ is given by: \[ f_{X}(x) = \frac{\Gamma(\frac{n+1}{2})}{\sqrt{\pi n} \Gamma(\frac{n}{2})} (1+\frac{x^2}{n})^{\frac{-n+1}{2}}.\]
+Alternatively, define a new variable $T$ is the following: \[ T = \frac{W}{\sqrt{\frac{V}{r}}}, \text{ for $W \sim N(0, 1)  \text{ and } V \sim \chi_{r}^{2}$.}\]
+Or suppose $X_1, ..., X_n \overset{\text{i.i.d.}}{\sim} N(\mu, \text{ } \sigma^2)$, then $\bar(X) \sim N(\mu, \text{ } \frac{\sigma^2}{n})$. Thus, \[ T = \frac{ \bar{x} - \mu}{\frac{s}{(\sqrt{n}})}.\]
 \end{definition}
 
-\subsection{F-distribution}
+\noindent
+Same as normal distribution, student's t-distribution is also symmetric. Also, as the degrees of freedom of t-distribution getting larger, the curve of student's t-distribution getting closer to standard normal distribution.\\
+
+\noindent
+\textbf{F-Distribution}
 
 \begin{definition}
-Let $x \sim \chi_{m}^{2} \text{ and } y \sim \chi_{n}^{2}$, the two random variable $x \text{ and } y$ are independent. F-distribution is defined as the following: \[ F = \frac{(\frac{x}{m})}{(\frac{y}{n})} \sim F_{m, n}, \text{ where $m \text{ and } n$ are degrees of freedom for F-distribution.}}\]
-Then, \[ \frac{1}{F} \sim F_{n,m}\]
-Alternatively, given two random sample with same variance and different mean: $x_1, x_2, ..., x_n \sim N(\mu_{X}, \sigma^2)$ and $y_1, y_2, ..., y_m \sim N( \mu_{Y}, \sigma^{2})$. By $Theorem \text{ } 2.2$, we know that \[ \frac{(n-1)s_{X}^{2}}{\sigma^{2}} \sim \chi_{n-1}^{2} \text{ and } \frac{(m-1)s_{Y}^{2}}{\sigma^2} \sim \chi_{m-1}^{2}, \] then \[ F = \frac{ [\frac{(n-1)s_{X}^{2}}{\sigma^2}]}{[\frac{(m-1)s_{Y}^{2}}{\sigma^2}]} \sim F_{n-1, m-1}, \text{for $n-1 \text{ and } m-1$ are degrees of freedom for F-distribution.}\]
+We define a new variable $F$ as the following shows: \[ F = \frac{ (\frac{W_1}{v_1}) }{ (\frac{W_2}{v_2})} \sim F_{v_1, \text{ } v_2}; \text{ for $W_1 \sim \chi_{v_1}^{2}$ and $W_2 \sim \chi_{v_2}^{2}$; also both $W_1$ and $W_2$ are independent.}\]
+Alternatively, we select two samples (with same population variance) with size $n$ and $m$, and also sample variance $s_x$ and $s_y$ respectively. Then, F-distribution is: \[ F = \frac{ [\frac{ (\frac{(n-1)}{\sigma^2}) s_x^2}{n-1}] }{ [\frac{ (\frac{(m-1)}{\sigma^2}) s_y^2}{m-1}] } \sim F_{n-1, \text{ } m-1 }.\]
 \end{definition}
 
-
-
-
-
-
+\noindent
+Both student's t-distribution and F-distribution are highly used in inferential statistics, until confidence interval, testing hypothesis and ANOVA analysis, these two distributions will come to play a lot. At this point, just guarantee that you know how to obtain those distribution from random given information is sufficient.
 
 
 
