@@ -92,7 +92,7 @@ By the definition of convergence in probability,
 \bar{X}_n \xrightarrow{P} \mu.
 \]
 \qed
-\section*{Example: Poisson Convergence via WLLN}
+\begin{example}[Poisson Convergence via WLLN]
 
 Let \( X_i \), for \( i = 1, 2, 3, \ldots \), be independent Poisson random variables with rate parameter \( \lambda = 3 \). Prove that:
 \[
@@ -130,8 +130,8 @@ P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - 3 \right| \geq \epsilon \rig
 \[
 \bar{X}_n \xrightarrow{P} 3
 \]
-
-\begin{figure}[h!]
+\end{example}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{Section5/simulation_plot.pdf}
   \caption{Simulation of running sample mean of Bernoulli(\(p = 0.5\)) trials over time.}
@@ -149,7 +149,7 @@ points(trial, cumsum(sample)/trial, col = "red")
 abline(h = 0.5, lty = 2, col = "black")
 \end{verbatim}
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.72\textwidth]{Section5/simulation_multi.pdf}
   \caption{Simulation of 10 running sample means of Bernoulli(\(p = 0.5\)) trials converging over 100 trials.}
