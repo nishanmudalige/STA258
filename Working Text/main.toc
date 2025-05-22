@@ -5,16 +5,15 @@
 \contentsline {chapter}{\numberline {4}Normal Approximation to the Binomial Distribution}{3}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Definitions and Setup}{3}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Bernoulli Distribution}{4}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Sampling Distribution of the Sum and MGF Derivation}{4}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Binomial Distribution Summary}{5}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Visualizing the PMF of Binomial Distributions}{5}{subsection.4.4.1}%
-\contentsline {section}{\numberline {4.5}Sampling Distribution of a Sample Proportion and the Normal Approximation}{8}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Sampling Distribution of $\hat {p}$ Derivation}{9}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Continuity Correction}{12}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Law of Large Numbers}{14}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Convergence in Probability}{14}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Weak Law of Large Numbers (WLLN)}{15}{section.5.2}%
-\contentsline {chapter}{\numberline {6}One Sample Confidence Intervals on a Mean When the Population Variance is Known}{19}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Key Concepts and Definitions}{19}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Confidence Interval for $\mu $ (Known Variance)}{21}{section.6.2}%
-\contentsline {section}{\numberline {6.3}APPENDIX}{27}{section.6.3}%
+\contentsline {section}{\numberline {4.3}Sampling Distribution of the Sum and MGF Derivation}{6}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Binomial Distribution}{6}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Visualizing the PMF of Binomial Distributions}{7}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}Sampling Distribution of a Sample Proportion and the Normal Approximation}{10}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Continuity Correction}{14}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Law of Large Numbers}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Convergence in Probability}{16}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Weak Law of Large Numbers (WLLN)}{17}{section.5.2}%
+\contentsline {chapter}{\numberline {6}One Sample Confidence Intervals on a Mean When the Population Variance is Known}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Key Concepts and Definitions}{21}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Confidence Interval for $\mu $ (Known Variance)}{23}{section.6.2}%
+\contentsline {section}{\numberline {6.3}APPENDIX}{29}{section.6.3}%

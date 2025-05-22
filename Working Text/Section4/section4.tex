@@ -82,6 +82,24 @@ The MGF uniquely characterizes the distribution of \( X \) (if it exists in an o
 \end{tcolorbox}
 
 \section{Bernoulli Distribution}
+Bernoulli random variable is a discrete random variable that has exactly two possible outcomes which are either a \textbf{success} or a \textbf{failure}. An experiment in which there are exactly 2 outcomes (which are success or failure) is called a \textbf{Bernoulli trial}. \\
+\vspace{1,0em} \\
+When \( x = 1 \) we have a success and when \( x = 0 \) we have a failure. The term success and failure are relative to the problem being studied.
+
+\begin{tcolorbox}[title=\textbf{TIP: ``success'' need not be something positive}, 
+  colback=cyan!5, 
+  colframe=cyan!40!black, 
+  coltitle=black, 
+  colbacktitle=cyan!10,
+  fonttitle=\bfseries,
+  sharp corners=south,
+  breakable]
+
+We chose to label a person who refuses to administer the worst shock a ``success'' and all others as ``failures''. However, we could just as easily have reversed these labels. The mathematical framework we will build does not depend on which outcome is labeled a success and which a failure, as long as we are consistent.
+
+\end{tcolorbox}
+
+\vspace{1,0em} 
 
 Consider the random experiment of rolling a die once. Define the random variable:
 
@@ -94,13 +112,78 @@ X_i =
 \]
 
 Then \( X_i \sim \text{Bernoulli}(p) \), where \( p = P(\text{rolling a six}) \). 
+\begin{tcolorbox}[
+  colback=yellow!10,
+  colframe=yellow!10,
+  boxrule=0pt,
+  sharp corners=south,
+  enhanced,
+  breakable]
 
-
-The expected value and variance of a Bernoulli random variable are:
+\textit{Let \( X \sim \text{Bernoulli}(p) \). The mass function of \( X \) is}
 
 \[
-\mu = \mathbb{E}(X) = p, \quad \sigma^2 = \mathrm{Var}(X) = p(1 - p)
+P(X = x) = p^x (1 - p)^{1 - x}, \quad x = 0, 1
 \]
+
+\textit{where \( p \) represents the probability of success.}
+
+\end{tcolorbox}
+
+
+
+
+\begin{definition}[Mean and Variance of a Bernoulli Random Variable]
+Let \( X \sim \text{Bernoulli}(p) \). The mean of \( X \) is
+\[
+E(X) = \mu = p
+\]
+and the variance of \( X \) is
+\[
+\text{Var}(X) = \sigma^2 = p(1 - p)
+\]
+\end{definition} 
+\textit{To support the earlier result, we now provide a derivation of the mean, variance, and standard deviation of a Bernoulli random variable.}
+\vspace{1,0em}  \\
+Let \( X \) be a Bernoulli random variable with the probability of a success as \( p \). Then
+
+\[
+E[X] = \mu = \sum_{i=1}^{n} x_i \cdot P(X = x_i)
+\]
+\[
+= 0 \cdot P(X = 0) + 1 \cdot P(X = 1)
+\]
+\[
+= 0 \cdot (1 - p) + 1 \cdot p
+\]
+\[
+= p
+\]
+
+Similarly, the variance of \( X \) can be computed:
+
+\[
+V(X) = \sigma^2 = \sum_{i=1}^{k} (x_i - \mu)^2 \cdot P(X = x_i)
+\]
+\[
+= (0 - p)^2 \cdot P(X = 0) + (1 - p)^2 \cdot P(X = 1)
+\]
+\[
+= p^2 (1 - p) + (1 - p)^2 p
+\]
+\[
+= p(1 - p)
+\]
+
+The standard deviation is
+
+\[
+\sigma = \sqrt{\sigma^2}
+\]
+\[
+= \sqrt{p(1 - p)}
+\]
+
 
 
 
@@ -146,21 +229,48 @@ Let \( Y \) be the number of sixes rolled in \( n \) trials. Then \( Y \sim \tex
 \end{tcolorbox}
 
 
-\section{Binomial Distribution Summary} % or \section{4.4 Binomial Distribution} if numbering manually
+\section{Binomial Distribution} % or \section{4.4 Binomial Distribution} if numbering manually
 
-A random variable \( Y \) is said to have a \textbf{binomial distribution} based on \( n \) trials with success probability \( p \) if and only if:
+In section 4.2 we learnt about Bernoulli random variables in which we were interested in the outcome of just a single trial. A \textbf{binomial random variable} is a generalization of several independent Bernoulli trials. Instead of performing just a single Bernoulli trial and observing whether we have a success or not, we are now performing several Bernoulli trials and observing whether we have a certain number of successes and failures. The \textbf{binomial distribution} describes the probability of having exactly \( k \) successes in \( n \) independent Bernoulli trials with probability of a success \( p \). \\
+\begin{tcolorbox}[
+  colback=yellow!10,
+  colframe=yellow!10,
+  boxrule=0pt,
+  sharp corners=south,
+  enhanced,
+  breakable]
+
+\textit{Let \( X \sim \text{Bin}(n, p) \). The probability of observing \( x \) successes in these \( n \) independent trials is given by}
 
 \[
-p(y) = \frac{n!}{y!(n - y)!} p^y (1 - p)^{n - y}, \quad y = 0, 1, 2, \dots, n \quad \text{and} \quad 0 \leq p \leq 1
+P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}
 \]
 
-\medskip
-
-The expected value and variance of a binomial random variable are:
+\textit{where}
+\begin{itemize}
+  \item \( n \) represents the number of trials,
+  \item \( x \) represents the number of successes,
+  \item \( p \) represents the probability of success on any given trial,
+\end{itemize}
 
 \[
-\mu = \mathbb{E}(Y) = np, \quad \sigma^2 = \mathrm{Var}(Y) = np(1 - p)
+\binom{n}{x} = \frac{n!}{x!(n - x)!} \quad \text{is the binomial coefficient.}
 \]
+
+\end{tcolorbox}
+
+\begin{definition}[Mean and Variance of a Binomial Random Variable]
+Let \( X \sim \text{Bin}(n, p) \). The mean of \( X \) is
+\[
+E(X) = \mu = np
+\]
+\textit{and the variance of \( X \) is}
+\[
+\text{Var}(X) = \sigma^2 = np(1 - p)
+\]
+\end{definition}
+
+
 
 \subsection{Visualizing the PMF of Binomial Distributions}
 
@@ -208,10 +318,13 @@ The following plots display the probability mass functions (PMFs) for a binomial
   \includegraphics[width=0.8\textwidth]{Section4/pmf_n300.pdf}
   \caption{PMF of Binomial distribution with \(n = 300\) and \(p = \frac{1}{6}\).}
 \end{figure}
-
+% 🔁 Force figures to be placed before moving on
+\clearpage
 
 
 \section{Sampling Distribution of a Sample Proportion and the Normal Approximation}
+When studying categorical data, we are often interested not just in individual outcomes, but in the proportion of successes observed in a sample. Understanding how this proportion behaves across repeated samples is crucial for making inferences about a population. In this section, we explore the sampling distribution of a sample proportion and how it can be approximated by a normal distribution under certain conditions.\\
+\vspace{0.5em}
 
 Draw a \textit{Simple Random Sample (SRS)} of size \( n \) from a large population that contains proportion \( p \) of “successes”. Let \( \hat{p} \) be the \textbf{\textit{sample proportion}} of successes:
 
@@ -297,7 +410,8 @@ n > 9 \cdot \left( \frac{\max(p, \, 1 - p)}{\min(p, \, 1 - p)} \right)
 These ensure that the binomial distribution is sufficiently symmetric and smooth to approximate with the normal distribution.
 
 \medskip
-\section{Sampling Distribution of $\hat{p}$ Derivation}
+We derive the sampling distribution of \( \hat{p} \) using properties of the Bernoulli distribution.
+
 \subsection*{Bernoulli Distribution (Binomial with $n = 1$)}
 
 \[
@@ -443,7 +557,8 @@ Just type in the following:
 Recall that, \texttt{pnorm} will give you the area to the left of 0.5017, for a Normal distribution with mean 0.52 and standard deviation 0.0288.
 
 \section{Continuity Correction}
-
+The normal distribution is continuous, while the binomial distribution is discrete. When we approximate a binomial probability using the normal distribution, this mismatch can lead to inaccuracy—especially near the boundaries of discrete values. A continuity correction improves the approximation by adjusting for this difference. In this section, we explore how and why this correction is applied. \\
+\vspace{1em} \\
 Suppose that $Y$ has a Binomial distribution with $n = 20$ and $p = 0.4$. We will find the exact probabilities that $Y \leq y$ and compare these to the corresponding values found by using two Normal approximations. One of them, when $X$ is Normally distributed with $\mu_X = np$ and $\sigma_X = \sqrt{np(1 - p)}$.
 \vspace{1em}
 The other one, $W$, a shifted version of $X$.
