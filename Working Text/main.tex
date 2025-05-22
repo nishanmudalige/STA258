@@ -10,13 +10,14 @@
 
 \usepackage{needspace}
 \usepackage{xcolor}
-
 \usepackage{etoolbox}
 \usepackage{xcolor}
 \usepackage{sectsty}
 \sectionfont{\color{blue!70}}
 
 \usepackage{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}  % <-- add this
 \usepackage{imakeidx}
 \usepackage[english]{babel}
 \usepackage[most]{tcolorbox}
@@ -676,7 +677,6 @@
 %\makeindex
 \begin{document}
 
-
 %\BgThispage
 % Some content
 %\clearpage
@@ -911,11 +911,11 @@ Mississauga, Ontario, Canada \\
 \setcounter{chapter}{-1}
 \input{Section0/section0.tex}
 \input{Section1/section1.tex}
-\input{Section2/section2.tex}
-\input{Section3/section3.tex}
-%\input{Section4/section4.tex}
-%\input{Section5/section5.tex}
-%\input{Section6/section6.tex}
+%\input{Section2/section2.tex}
+%\input{Section3/section3.tex}
+\input{Section4/section4.tex}
+\input{Section5/section5.tex}
+\input{Section6/section6.tex}
 %\input{Section7/section7.tex}
 %\input{Section8/section8.tex}
 
