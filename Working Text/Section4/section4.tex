@@ -1,7 +1,7 @@
 \setcounter{chapter}{3} % Makes this Chapter 4
 \chapter{Normal Approximation to the Binomial Distribution}
 
-\section{Definitions and Setup}
+\section{Introduction}
 
 \begin{definition}[Statistic]
 A \textit{statistic} is a function of the observable random variables in a sample and known constants.
@@ -558,7 +558,7 @@ Recall that, \texttt{pnorm} will give you the area to the left of 0.5017, for a 
 
 \section{Continuity Correction}
 The normal distribution is continuous, while the binomial distribution is discrete. When we approximate a binomial probability using the normal distribution, this mismatch can lead to inaccuracy—especially near the boundaries of discrete values. A continuity correction improves the approximation by adjusting for this difference. In this section, we explore how and why this correction is applied. \\
-\vspace{1em} \\
+\vspace{0.5em} \\
 Suppose that $Y$ has a Binomial distribution with $n = 20$ and $p = 0.4$. We will find the exact probabilities that $Y \leq y$ and compare these to the corresponding values found by using two Normal approximations. One of them, when $X$ is Normally distributed with $\mu_X = np$ and $\sigma_X = \sqrt{np(1 - p)}$.
 \vspace{1em}
 The other one, $W$, a shifted version of $X$.

@@ -1,23 +1,23 @@
 \chapter{One Sample Confidence Intervals on a Mean When the Population Variance is Known}
-\section{Key Concepts and Definitions}
+\section{Introduction}
+Statistical inference is concerned primarily with understanding the quality of parameter estimates. For example, a classic inferential question is, ``How sure are we that the estimated mean, $\bar{x}$, is near the true population mean, $\mu$?'' While the equations and details change depending on the setting, the foundations for inference are the same throughout all of statistics. We introduce these common themes by discussing inference about the population mean, $\mu$, and set the stage for other parameters and scenarios. Some advanced considerations are discussed. Understanding this chapter will make the rest of this book, and indeed the rest of statistics, seem much more familiar.
 
 \begin{definition}[Key Terms]
-\textbf{Population:} A group of interest (typically large). \\
-\vspace{0.2em}
+\textbf{Population:} A group of interest (typically large). 
+\vspace{0.1em}
 
-\textbf{Sample:} A subset of a population. \\
+\textbf{Sample:} A subset of a population. 
 
-\textbf{Parameter (of population):} A numerical characteristic of a population. These are usually \textcolor{blue}{unknown} in real-life settings. \\
+\textbf{Parameter (of population):} A numerical characteristic of a population. These are usually \textcolor{blue}{unknown} in real-life settings. 
 \hspace*{1em} $\mu$: population mean \\
 \hspace*{1em} $\sigma^2$: population variance \\
 \hspace*{1em} $\sigma$: population standard deviation \\
-\textcolor{blue}{Note: Different from a parameter of a distribution.} \\
+\textcolor{blue}{Note: Different from a parameter of a distribution.} 
 
-\textbf{Statistic (of sample):} A numerical characteristic of a sample, which is calculated and known (i.e., a function of the data). \\
+\textbf{Statistic (of sample):} A numerical characteristic of a sample, which is calculated and known (i.e., a function of the data). 
 \hspace*{1em} $\bar{x}$: sample mean \\
 \hspace*{1em} $s^2$: sample variance \\
-\hspace*{1em} $s$: sample standard deviation\\
-\vspace{0.2em}
+\hspace*{1em} $s$: sample standard deviation \\
 
 \textbf{Statistical Inference:} Use statistics (known) to make conclusions on parameters (unknown) and quantify the degree of certainty of statements made.
 
@@ -28,7 +28,7 @@ The sample mean, $\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$, is a number we use 
 \vspace{1em}
 
 But, we know it’s not equal to $\mu$. Then, we’d rather estimate the population mean using an \textbf{interval estimate} that gives a \textit{range of real numbers} that we hope contains the population mean, $\mu$.
-\vspace{2em}
+\vspace{1em}
 \textcolor{orange!80!black}{\section*{Examples}}
 
 \begin{itemize}
@@ -48,10 +48,14 @@ Due to the nature of randomness and calculating based on a subset, statistics ar
 
 Therefore, we create \underline{intervals} around statistics which we believe capture the parameter.
 
-\vspace{2em}
+\vspace{0.5em}
 
 \noindent
-\textbf{Confidence Interval:} A range of values we believe captures a parameter with a certain level of confidence.
+\begin{definition}[Confidence Interval]
+A confidence interval is a plausible range of values that captures a parameter with a quantified degree of confidence.
+\end{definition}
+
+
 
 \vspace{1em}
 
@@ -70,49 +74,107 @@ Therefore, we create \underline{intervals} around statistics which we believe ca
 \end{center}
 
 \vspace{2em}
+Suppose we are interested in the average mark for \texttt{STA258} for the current semester. We are 100\% confident that the average mark is between 0 and 100; however, this is not useful information as we already know that the average mark must lie between 0 and 100. Using the marks of previous years, we can construct a 95\% interval for the average mark. If it is determined that the average mark lies within 70\% and 80\%, this is much more meaningful as we can state with a high degree of certainty that the average mark is going to lie within a substantially narrow range.
+
 
 \noindent
-\textbf{Skeleton (general form):}
-\[
-\text{Estimator (statistic)} \pm \left( \text{value from a reference distribution} \times \text{standard error of estimate} \right)
-\]
-
 \vspace{0.5em}
-\textcolor{blue}{\textit{Z or t} \hspace{1em} \textit{Standard error = std. dev. of sampling distribution}}
+In this course, all confidence intervals have the same basic skeleton:
+
+\begin{tcolorbox}[
+    colback=yellow!10, 
+    colframe=black!80, 
+    sharp corners=south, 
+    boxrule=0.5pt,
+    breakable,
+    enhanced
+]
+\[
+\textit{estimator} \pm 
+\underbrace{
+\left(
+\textit{value from reference distribution}
+\right)
+\times 
+\left(
+\textit{standard error of estimate}
+\right)
+}_{\text{\textit{margin of error}}}
+\]
+\end{tcolorbox}
+
+The value from the reference distribution in the skeleton above will be either a value from the standard normal distribution or the Student \textit{t}-distribution. The margin of error (\textit{MOE}) can be considered as the distance around our estimator in which the true value of the parameter of interest will be found, with a specified level of confidence.
 
 \vspace{1em}
-The exact form depends on the parameter of interest and the information available.
 
-\vspace{2em}
-
-\textbf{Interpretation of CI’s:}
-
-Suppose we construct a $C\%$ confidence interval.
-
-\vspace{0.5em}
-\textbf{Intuitive Interpretation:} We are $C\%$ confident the target parameter is inside the CI constructed.
-
-\vspace{0.5em}
-\textbf{Formal Definition:} In repeated sampling, approximately $C\%$ out of all the $C\%$ CI’s constructed captures the parameter.
-
-
-\vspace{2em}
-
+\begin{figure}[H]
+\label{figureVisualization of CI}
 \begin{center}
-% \includegraphics[width=0.85\textwidth]{ci_visual.png}
-\begin{center}
-\fbox{\parbox{0.8\textwidth}{
-\centering
-[Insert visual showing 95\% confidence intervals for $\mu$ -- see slide image with intervals]}
-}
+\begin{tikzpicture}
+\draw[thick, ->] (-5,0) -- (5,0);
+\draw[thick, <-] (-5,0) -- (5,0);
+\node at (-3.5,0) {(};
+\node at (0,0) {$|$};
+\node at (3.5,0) {)};
+\node at (0,-0.5) {$estimator$};
+\node at (-3.2,-0.5) {$estimator \, - \, MOE$};
+\node at (3.2,-0.5) {$estimator \, + \, MOE$};
+\end{tikzpicture}
 \end{center}
+\vspace{-0.60cm}
+\caption{Visualization of a confidence interval on the real number line. The margin of error is abbreviated as $MOE$. The estimator is the centre of the interval. The confidence interval consists of all values between the estimator$- MOE$ and the estimator$+ MOE$.}
+\end{figure}
 
-\end{center}
+\section{Interpretation}
 
-\vspace{0.5em}
-Approximately 95\% of the 1000 intervals (i.e., approx. 950) capture $\mu$.
+We use very specific language when we interpret a confidence interval.
+
+\begin{tcolorbox}[
+    colback=yellow!10, 
+    colframe=black!80, 
+    sharp corners=south, 
+    boxrule=0.5pt,
+    breakable,
+    enhanced
+]
+\textit{Suppose we construct a $C\%$ confidence interval for some parameter such that $C$ is between 0 and 100. In repeated sampling, we are $C\%$ confident that approximately $C\%$ of the intervals will capture the true value of the parameter.}
+\end{tcolorbox}
+
+\bigskip
+
+By this we mean that if we constructed several $C\%$ confidence intervals using different samples (with or without replacing the units), then we should expect approximately $C\%$ of these intervals to capture the parameter of interest. For example suppose we construct 1000 95\% confidence intervals for the population mean $\mu$. We would expect approximately 95\% of these 1000 intervals (i.e.\ $95\% \times 1000 = 950$) to actually capture $\mu$.
+
+
+
+\begin{nt}
+A more intuitive but equivalent interpretation is to state that we are $C$\% confident that our target parameter is inside the interval constructed.
+\end{nt}
+
+It is incorrect to state that there is a $C\%$ probability that 
+the interval we constructed contains the parameter of interest.
+We assume that the value of a parameter is fixed. Therefore when we construct a confidence interval, the interval either contains the parameter or it does not.
 \section{Confidence Interval for $\mu$ (Known Variance)}
+When we know the population standard deviation $\sigma$, we can construct a confidence interval for $\mu$ in the following manner.
 
+\begin{tcolorbox}[
+    colback=yellow!10, 
+    colframe=black!20, 
+    sharp corners=south, 
+    boxrule=0.5pt,
+    breakable,
+    enhanced,
+    title={\textbf{Confidence Interval 6.1} (Confidence Interval on $\mu$ when $\sigma$ is Known)}
+]
+
+\textit{A $(100 - \alpha)\%$ confidence interval on $\mu$ when $\sigma$ is known is}
+\[
+\bar{x} \; \pm \; z_{\alpha/2} \left( \frac{\sigma}{\sqrt{n}} \right)
+\]
+
+\end{tcolorbox}
+
+The $z_{\alpha/2}$ value is obtained from standard normal tables. The standard error is $\frac{\sigma}{\sqrt{n}}$ and the margin of error is $z_{\alpha/2} \left( \frac{\sigma}{\sqrt{n}} \right)$.
+\vspace{0.5em} \\
 Let $X_1, X_2, ..., X_n$ be iid $N(\mu, \sigma^2)$, where $\mu$ is unknown and $\sigma$ is known.
 
 We know that:
