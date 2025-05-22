@@ -28,3 +28,5 @@
 \contentsline {section}{\numberline {6.2}Interpretation}{26}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Confidence Interval for $\mu $ (Known Variance)}{27}{section.6.3}%
 \contentsline {section}{\numberline {6.4}APPENDIX}{33}{section.6.4}%
+\contentsline {chapter}{\numberline {7}One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown}{34}{chapter.7}%
+\contentsline {section}{\numberline {7.1}CIs for \(\mu \)}{34}{section.7.1}%
