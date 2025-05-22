@@ -8,13 +8,13 @@ Statistical inference is concerned primarily with understanding the quality of p
 
 \textbf{Sample:} A subset of a population. 
 
-\textbf{Parameter (of population):} A numerical characteristic of a population. These are usually \textcolor{blue}{unknown} in real-life settings. 
+\textbf{Parameter (of population):} A numerical characteristic of a population. These are usually \textcolor{blue}{unknown} in real-life settings. \\
 \hspace*{1em} $\mu$: population mean \\
 \hspace*{1em} $\sigma^2$: population variance \\
 \hspace*{1em} $\sigma$: population standard deviation \\
 \textcolor{blue}{Note: Different from a parameter of a distribution.} 
 
-\textbf{Statistic (of sample):} A numerical characteristic of a sample, which is calculated and known (i.e., a function of the data). 
+\textbf{Statistic (of sample):} A numerical characteristic of a sample, which is calculated and known (i.e., a function of the data). \\
 \hspace*{1em} $\bar{x}$: sample mean \\
 \hspace*{1em} $s^2$: sample variance \\
 \hspace*{1em} $s$: sample standard deviation \\
@@ -29,7 +29,7 @@ The sample mean, $\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$, is a number we use 
 
 But, we know it’s not equal to $\mu$. Then, we’d rather estimate the population mean using an \textbf{interval estimate} that gives a \textit{range of real numbers} that we hope contains the population mean, $\mu$.
 \vspace{1em}
-\textcolor{orange!80!black}{\section*{Examples}}
+\begin{example}
 
 \begin{itemize}
     \item $\bar{x}$ is a point estimate of $\mu$
@@ -40,7 +40,7 @@ But, we know it’s not equal to $\mu$. Then, we’d rather estimate the populat
 \vspace{0.5em}
 \textcolor{blue}{\textit{(All calculated with data from a sample)}}
 
-\vspace{1.5em}
+\end{example}
 
 Due to the nature of randomness and calculating based on a subset, statistics are not guaranteed to be exactly equal to parameters.
 
@@ -336,8 +336,7 @@ Confidence coefficient & Confidence level & $z$ \\
 
 
 
-\section*{Example}
-
+\begin{example}
 Playbill magazine reported that the mean annual household income of its readers is \$119{,}155. Assume this estimate is based on a sample of 80 households, and that the population standard deviation is known to be $\sigma = 30{,}000$.
 
 \begin{itemize}
@@ -397,8 +396,8 @@ Playbill magazine reported that the mean annual household income of its readers 
 
 
 We are 99\% confident the mean household income of magazine readers is between \$110{,}534.96 and \$127{,}775.04.
-
-\section*{Example: Estimating Mean Number of Cars Sold}
+\end{example}
+\begin{example}
 
 \vspace{1em}
 
@@ -466,7 +465,7 @@ simple.z.test(cars, 15)
 
 \noindent\textbf{Interpretation:} \textbf{We estimate that the mean number of cars sold annually by all used car salespeople lies between 61 and 76, approximately. This type of estimate is correct 95\% of the time.}
 
-\vspace{1em}
+\end{example}
 
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black,
   title=\textbf{Cases Where Valid}, fonttitle=\bfseries,
@@ -481,7 +480,9 @@ simple.z.test(cars, 15)
 \textit{Note: A sample is considered large if $n \geq 30$.}
 \end{tcolorbox}
 
-\textbf{Example.} Suppose a student measuring the boiling temperature of a certain liquid observes the readings (in degrees Celsius) 102.5, 101.7, 103.1, 100.9, 100.5, and 102.2 on 6 different samples of the liquid. He calculates the sample mean to be 101.82. If he knows that the distribution of boiling points is Normal, with standard deviation 1.2 degrees, what is the confidence interval for the population mean at a 95\% confidence level?\\
+\begin{example}
+Suppose a student measuring the boiling temperature of a certain liquid observes the readings (in degrees Celsius) 102.5, 101.7, 103.1, 100.9, 100.5, and 102.2 on 6 different samples of the liquid. He calculates the sample mean to be 101.82. If he knows that the distribution of boiling points is Normal, with standard deviation 1.2 degrees, what is the confidence interval for the population mean at a 95\% confidence level?\\
+\end{example}
 \textbf{A confidence interval} uses sample data to estimate an unknown population parameter with an indication of how accurate the estimate is and of how confident we are that the result is correct.
 
 \vspace{1em}

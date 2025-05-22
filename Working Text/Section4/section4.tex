@@ -464,11 +464,9 @@ If $n$ is large, then by the Central Limit Theorem:
 \quad \Rightarrow \quad
 \hat{p} \sim \mathcal{N} \left( p, \sqrt{\frac{p(1 - p)}{n}} \right)
 \]
-\subsection*{Example: Normal Approximation for Proportions}
-
-\textbf{Problem:}
-
+\begin{example}[Normal Approximation for Proportions]
 In the last election, a state representative received 52\% of the votes cast. One year after the election, the representative organized a survey that asked a random sample of 300 people whether they would vote for him in the next election. If we assume that his popularity has not changed, what is the probability that more than half the sample would vote for him?
+
 
 \vspace{1em}
 \subsubsection*{Solution 1 (using Normal Approximation)}
@@ -555,7 +553,7 @@ Just type in the following:
 \end{verbatim}
 
 Recall that, \texttt{pnorm} will give you the area to the left of 0.5017, for a Normal distribution with mean 0.52 and standard deviation 0.0288.
-
+\end{example}
 \section{Continuity Correction}
 The normal distribution is continuous, while the binomial distribution is discrete. When we approximate a binomial probability using the normal distribution, this mismatch can lead to inaccuracy—especially near the boundaries of discrete values. A continuity correction improves the approximation by adjusting for this difference. In this section, we explore how and why this correction is applied. \\
 \vspace{0.5em} \\
@@ -584,20 +582,24 @@ P(Y \leq 8) \approx P(W \leq 8.5)
 = P\left[ \frac{W - np}{\sqrt{np(1 - p)}} \leq \frac{8.5 - 8}{\sqrt{20(0.4)(0.6)}} \right]
 = P(Z \leq 0.2282) = 0.5902615
 \]
+
 % Images from slides 37 and 38 will be inserted here.
-{\noindent\textbf{Example: Normal Approximation with Continuity Correction (Exact Probability)}\\
+\begin{example}
 
 
 Fifty-one percent of adults in the U. S. whose New Year’s resolution was to exercise more achieved their resolution. You randomly select 65 adults in the U. S. whose resolution was to exercise more and ask each if he or she achieved that resolution. What is the probability that exactly forty of them respond yes?\\
 
 We are given that $p = 0.51$, $n = 65$, and we want to find $P(X = 40)$ where $X \sim Binomial(n = 65, p = 0.51)$.\\
 
-\textbf{Step 1: Use Normal Approximation}
+\textbf{Use Normal Approximation}
 \vspace{0.5 em}
 We use normal approximation to the binomial. First, compute the mean and standard deviation:
-\[
-\mu = np = 65 \times 0.51 = 33.15, \qquad \sigma^2 = np(1 - p) = 65 \times 0.51 \times 0.49 = 16.485, \quad \sigma = \sqrt{16.485} \approx 4.06
-\]
+\begin{align*}
+\mu &= np = 65 \times 0.51 = 33.15 \\
+\sigma^2 &= np(1-p) = 65 \times 0.51 \times 0.49 = 16.485 \\
+\sigma &= \sqrt{16.485} \approx 4.06
+\end{align*}
+
 
 We apply continuity correction:
 \[
@@ -617,7 +619,7 @@ So the approximate probability is:
 \[
 P(X = 40) \approx 0.0242
 \]
-
+\end{example}
 \vspace{1em}
 \begin{frame}{Normal Approximation to Binomial}
 

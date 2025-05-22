@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  22 MAY 2025 06:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  22 MAY 2025 21:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1498,7 +1498,7 @@ omial_normal.pdf>]
 [12]
 
 [13]
-Overfull \hbox (10.09044pt too wide) detected at line 586
+Overfull \hbox (10.09044pt too wide) detected at line 584
 \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 ^^T \OT1
 /cmr/m/n/12 8) \OMS/cmsy/m/n/12 ^^Y \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm
 /m/it/12 W \OMS/cmsy/m/n/12 ^^T \OT1/cmr/m/n/12 8\OML/cmm/m/it/12 :\OT1/cmr/m/n
@@ -1508,82 +1508,65 @@ Overfull \hbox (10.09044pt too wide) detected at line 586
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--589
-
- []
-
-
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+Underfull \hbox (badness 10000) in paragraph at lines 587--588
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--594
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
 
  []
 
 
-Overfull \hbox (22.6085pt too wide) detected at line 600
-\OML/cmm/m/it/12 ^^V \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 np \OT1/cmr/m/n/12 = 65
- \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 51 = 3
-3\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 15\OML/cmm/m/it/12 ;  ^^[[] \OT1/cmr/m/n/12 
-= \OML/cmm/m/it/12 np\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 p
-\OT1/cmr/m/n/12 ) = 65 \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :
-\OT1/cmr/m/n/12 51 \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1
-/cmr/m/n/12 49 = 16\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 485\OML/cmm/m/it/12 ;  ^^[
- \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^Y \OT1/cmr/m/n/12 4\OML/cmm/m/it/12 :\
-OT1/cmr/m/n/12 06
+Underfull \hbox (badness 10000) in paragraph at lines 592--593
+
  []
 
-) (./Section5/section5.tex
 
-[15]
+
+[15]) (./Section5/section5.tex
+
+[16]
 Chapter 5.
 
 
-[16
+[17
 
 ]
 
-[17]
-<Section5/simulation_plot.pdf, id=296, 578.16pt x 361.35pt>
+[18]
+<Section5/simulation_plot.pdf, id=302, 578.16pt x 361.35pt>
 File: Section5/simulation_plot.pdf Graphic file (type pdf)
 <use Section5/simulation_plot.pdf>
 Package pdftex.def Info: Section5/simulation_plot.pdf  used on input line 136.
 (pdftex.def)             Requested size: 338.22418pt x 211.38614pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Section5/simulation_multi.pdf, id=297, 578.16pt x 361.35pt>
+[19]
+<Section5/simulation_multi.pdf, id=308, 578.16pt x 361.35pt>
 File: Section5/simulation_multi.pdf Graphic file (type pdf)
 <use Section5/simulation_multi.pdf>
 Package pdftex.def Info: Section5/simulation_multi.pdf  used on input line 154.
 
 (pdftex.def)             Requested size: 338.22418pt x 211.38614pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-
-[18]
-
-[19
+[20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.173 sample8 = rbinom(n, 1, 1/2)
-                                 
+l.163 n = 100
+             
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.173 sample8 = rbinom(n, 1, 1/2)
-                                  <./Section5/simulation_plot.pdf> <./Section5/
-simulation_multi.pdf>]
+l.163 n = 100
+              <./Section5/simulation_plot.pdf> <./Section5/simulation_multi.pdf
+>]
 Overfull \hbox (11.89522pt too wide) in paragraph at lines 178--178
 []\OT1/cmtt/m/n/12 plot(trial, cumsum(sample1)/trial, type = "l", col = colors[
 1], ylim = c(0,1))[] 
@@ -1591,7 +1574,7 @@ Overfull \hbox (11.89522pt too wide) in paragraph at lines 178--178
 
 ) (./Section6/section6.tex
 
-[20]
+[21]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--21
@@ -1599,12 +1582,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--21
  []
 
 
+Underfull \vbox (badness 2057) detected at line 24
+ []
 
-[21
+
+
+[22
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
-[22]
+ []
+
+
+
+[23]
+
+[24
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.156 ...ence Interval for $\mu$ (Known Variance)}
+                                                  ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 156.
@@ -1619,14 +1619,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[23
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.174 \end{tcolorbox}
-                     ]
-(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+[25] (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -1635,9 +1628,7 @@ File: lstlang2.sty 2024/09/23 1.10c listings language file
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/09/23 1.10c listings language file
 )
-
-[24]
-<Section6/confidence_intervals.pdf, id=345, 722.7pt x 505.89pt>
+<Section6/confidence_intervals.pdf, id=353, 722.7pt x 505.89pt>
 File: Section6/confidence_intervals.pdf Graphic file (type pdf)
 <use Section6/confidence_intervals.pdf>
 Package pdftex.def Info: Section6/confidence_intervals.pdf  used on input line 
@@ -1645,52 +1636,68 @@ Package pdftex.def Info: Section6/confidence_intervals.pdf  used on input line
 (pdftex.def)             Requested size: 281.85587pt x 197.2963pt.
 
 
-[25
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.268 ...rval for the Mean of a Normal Population}
-                                                   <./Section6/confidence_inter
-vals.pdf>]
-<Section6/normal_confidence_curve.pdf, id=381, 433.62pt x 325.215pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Section6/normal_confidence_curve.pdf, id=354, 433.62pt x 325.215pt>
 File: Section6/normal_confidence_curve.pdf Graphic file (type pdf)
 <use Section6/normal_confidence_curve.pdf>
 Package pdftex.def Info: Section6/normal_confidence_curve.pdf  used on input li
 ne 280.
 (pdftex.def)             Requested size: 281.85587pt x 211.40213pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[26
+
+
+[26]
+
+[27
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.300   \item $
+               100(1 - \alpha)\%$ is the confidence level
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.310 \end{itemize}
-                    <./Section6/normal_confidence_curve.pdf>]
-
-[27]
+l.300   \item $
+               100(1 - \alpha)\%$ is the confidence level <./Section6/confidenc
+e_intervals.pdf> <./Section6/normal_confidence_curve.pdf>]
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
 
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 512--513
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
+
+ []
+
+
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--514
 
  []
 
 )
 
-[30]
+[31]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
 
-[31
+[32
 
 
 ] (./main.aux)
@@ -1700,40 +1707,36 @@ L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 23D2C7BEAD4761E5F330416946265FC6;4325.
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 588 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 35620 strings out of 473190
- 728370 string characters out of 5715801
- 1460980 words of memory out of 5000000
- 58097 multiletter control sequences out of 15000+600000
+ 35632 strings out of 473190
+ 728550 string characters out of 5715801
+ 1461545 words of memory out of 5000000
+ 58101 multiletter control sequences out of 15000+600000
  572967 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,13n,96p,751b,2795s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (36 pages, 374245 bytes).
+ 86i,13n,96p,751b,1855s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
+cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (37 pages, 375726 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 398 compressed objects within 4 object streams
- 104 named destinations out of 1000 (max. 500000)
+ 533 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
  354 words of extra memory for PDF output out of 10000 (max. 10000000)
 
