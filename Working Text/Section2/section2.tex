@@ -72,9 +72,9 @@ Compare the moment generating function of $X$ under Gamma distribution with Chi-
 \noindent
 Previously, we showed how to use Gamma distribution to get Chi-square distribution by moment generating function method. Now, let's do something interestingly, to use normal distribution to get Chi-square distribution. We will begin with a theorem, then prove it.
 
-\begin{theorem}[$Z^{2} \sim \chi_{1}^{2}$]
+\begin{thm}[$Z^{2} \sim \chi_{1}^{2}$]
 Suppose a random variable $Z$ is standard normally distributed, such that $Z \sim N(0 \text{, }1).$ Then, $Z^2$ is Chi-square distributed with $1$ degree of freedom, so that $Z^2 \sim \chi_{1}^{2}$.
-\end{theorem}
+\end{thm}
 
 \noindent
 The proof of Theorem $2.1$ isn't that trivial to see. We still need moment generating function, but in a different way. Before we get into the proper proof, let's grab everything we need:
@@ -82,35 +82,39 @@ The proof of Theorem $2.1$ isn't that trivial to see. We still need moment gener
 \begin{itemize}
 	\item 1. Recall STA256 about how to get moment generating function for a given continuous random variable that: \[ M_{Z}(t) = \int_{-\infty}^{\infty} e^{tx}f_{X}(x)\,dx.\]
 	\item 2. We also need Gaussian integral:
-	\begin{itemize}
-		\item (i) \[ \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi};\]
-		\item (ii) \[ \int_{-\infty}^{\infty} e^{-kx^2}\,dx = \sqrt{\frac{\pi}{k}}, \text{ for $k > 0$};\]
-		\item (iii) \[ \int_{-\infty}^{\infty} e^{kx^2}\,dx = \sqrt{\frac{\pi}{-k}}, \text{ for $k < 0$}.\]
-	\end{itemize}
+		\begin{align}
+    			\int_{-\infty}^{\infty} e^{-x^2}\,dx &= \sqrt{\pi}; \label{eq:gaussian1} \\
+    			\int_{-\infty}^{\infty} e^{-kx^2}\,dx &= \sqrt{\frac{\pi}{k}}, \text{ for $k > 0$}; \label{eq:gaussian2} \\
+    			\int_{-\infty}^{\infty} e^{kx^2}\,dx &= \sqrt{\frac{\pi}{-k}}, \text{ for $k < 0$}. \label{eq:gaussian3}
+		\end{align}
 \end{itemize}
 
 \begin{proof}
-Suppose that $Z \sim N(0, 1)$, then \[ f_{Z}(z) = \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}.\] 
-\hspace*{2.7em} Next, computing M.G.F for $Z^2$: \[ M_{Z^2}(t) = E(e^{tz^2}) = \int_{-\infty}^{\infty} e^{tz^2} \cdot \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}\, dz.\]
-\hspace*{2.7em} After rearranging: \[  M_{Z^2}(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-(\frac{1}{2} - t)z^2}\, dz. \]
-\hspace*{2.7em} Let $u^2 = (\frac{1}{2} - t)z^2, \text{ then } u = z\sqrt{\frac{1}{2}-t}, \text{ so that } du = \sqrt{\frac{1}{2}-t} \cdot dz, \text{ and } dz = \frac{1}{\sqrt{\frac{1}{2}-t}}du.$
-\hspace*{2.7em} By substitution: \[ M_{Z^2}(t) = \frac{1}{\sqrt{2\pi}} \int_{u = -\infty}^{u = \infty} e^{-u^2} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}}du\]
-\hspace*{2.7em} Rearranging and using 2(i) from above: \[ M_{Z^2}(t) = \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}} \int_{u = -\infty}^{u = \infty} e^{-u^2} = \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}} \cdot \sqrt{\pi}.\]
-\hspace*{2.7em} After all simplification, we get: \[ M_{Z^2}(t) = (1-2t)^{-\frac{1}{2}}, \text{ which is the M.G.F of $\chi_{n = 1}^{2}$, as required.}\]
+Suppose that \( Z \sim N(0, 1) \), then \( f_{Z}(z) & = \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}} \).
+\begin{align}
+\text{Next, computing M.G.F for $Z^2$: }M_{Z^2}(t) &= \mathbb{E}(e^{tz^2}) = \int_{-\infty}^{\infty} e^{tz^2} \cdot \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}\, dz \\
+\text{After rearranging: }M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-(\frac{1}{2} - t)z^2} \, dz \\
+\text{Let: }u &= z\sqrt{\tfrac{1}{2} - t}, \text{ and then } dz = \frac{1}{\sqrt{\tfrac{1}{2} - t}} \, du \\
+\text{By substitution: }M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-u^2} \cdot \frac{1}{\sqrt{\tfrac{1}{2} - t}} \, du \\
+\text{Rearranging and using $2.2.1$ from above: }M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\tfrac{1}{2} - t}} \cdot \sqrt{\pi} \\
+\text{Then: }M_{Z^2}(t) &= (1 - 2t)^{-\frac{1}{2}} \text{, which is the M.G.F of $\chi_{n = 1}^{2}$.}
+\end{align}
 \end{proof}
+
+
 
 \noindent
 Now, we can do another proof by using Theorem $2.1$.
 
-\begin{theorem}[$ \sum_{i = 1}^{n}Z_{i}^{2} \sim \chi_{n}^{2}$]
+\begin{thm}[$ \sum_{i = 1}^{n}Z_{i}^{2} \sim \chi_{n}^{2}$]
 Suppose $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then the sum of $n$ independent $Z^2$ is going to be Chi-square distributed with $n$ degrees of freedom, as the following: \[ \sum_{i=1}^{n}Z_{i}^{2} \sim \chi_{n}^{2}.\]
-\end{theorem}
+\end{thm}
 
 \noindent
 We need Theorem $2.1$ to prove this, but it going to be easier. 
 
 \begin{proof}
-Assume that $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then we compute the M.G.F for the entire summation as well, and we let $\delta = \sum_{i = 1}^{n} Z_{i}^{2}$, which as the following shows: \[ M_{\delta}(t) = E[e^{t\delta}] = E[e^{t(Z_1^2 + \cdots + Z_n^2)}] = E[e^{tZ_1^2} \cdots e^{tZ_n^2}].\]
+Assume that $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then we compute the M.G.F for the entire summation as well, and we let $\delta = \sum_{i = 1}^{n} Z_{i}^{2}$, which as the following shows:\[ M_{\delta}(t) = E[e^{t\delta}] = E[e^{t(Z_1^2 + \cdots + Z_n^2)}] = E[e^{tZ_1^2} \cdots e^{tZ_n^2}].\]
 \hspace*{2.7em} Since $Z_1, Z_2, ..., Z_n$ are independent and identically distributed, so that: \[ M_{\delta}(t) = E[e^{tZ_1^2}] \cdots E[e^{tZ_n^2}].\]
 \hspace*{2.7em} By Theorem $2.1$, we have: $Z^2 \sim \chi_{1}^{2}$, then: \[ M_{\delta}(t) = E[e^{t\delta}] = E[e^{tZ_1^2} \cdots e^{tZ_n^2}] = [(1-2t)^{-\frac{1}{2}}] \cdots [(1-2t)^{-\frac{1}{2}}].\]
 \hspace*{2.7em} Since there are $n$ individuals of $Z^2$, hence: \[ M_{\delta}(t) = (1-2t)^{-\frac{n}{2}}, \text{ which is the M.G.F of $\chi_{n}^{2}$, as required}.\]
@@ -119,9 +123,9 @@ Assume that $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then we c
 \noindent
 Here is the last theorem for Chi-square and normal distribution, but we won't show you the proof due to its complexity. For people who are interested in that, please see STA260 lecture notes or power point slide to figure out.
 
-\begin{theorem}[$ \frac{(n-1)s^2}{\sigma^2} \sim \chi_{n-1}^{2}$]
+\begin{thm}[$ \frac{(n-1)s^2}{\sigma^2} \sim \chi_{n-1}^{2}$]
 Let $n$ be sample size, $s^2$ be sample variance and $\sigma^2$ be population variance, then $\frac{(n-1)s^2}{\sigma^2}$ is Chi-square distributed with $n - 1$ degrees of freedom. As the following: \[ \frac{(n-1)s^2}{\sigma^2} \sim \chi_{n-1}^{2}.\]
-\end{theorem}
+\end{thm}
 
 \section{Student's t-Distribution and F-Distribution}
 
@@ -149,8 +153,3 @@ Alternatively, we select two samples (with same population variance) with size $
 
 \noindent
 Both student's t-distribution and F-distribution are highly used in inferential statistics, until confidence interval, testing hypothesis and ANOVA analysis, these two distributions will come to play a lot. At this point, just guarantee that you know how to obtain those distribution from random given information is sufficient.
-
-
-
-
-

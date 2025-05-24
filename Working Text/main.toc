@@ -12,3 +12,4 @@
 \contentsline {section}{\numberline {2.2}Gamma and Chi-square Distribution}{4}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Student's t-Distribution and F-Distribution}{7}{section.2.3}%
 \contentsline {chapter}{\numberline {3}The Central Limit Theorem}{2}{chapter.3}%
+\contentsline {chapter}{\numberline {8}One Sample Confidence Intervals On a Proportion}{2}{chapter.8}%
