@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  24 MAY 2025 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  24 MAY 2025 18:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1205,7 +1205,14 @@ Package amsthm Warning: Unknown theoremstyle `defin' on input line 577.
 \c@defin=\count382
 \c@ntstyle=\count383
 \c@cumulArea=\count384
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `sec.matrix' multiply defined.
+
+
+LaTeX Warning: Label `sec.matrix' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 678.
@@ -1226,8 +1233,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 678.
 LaTeX Font Info:    ... okay on input line 678.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 678.
 LaTeX Font Info:    ... okay on input line 678.
-
-(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count385
 \scratchdimen=\dimen335
@@ -1342,18 +1348,20 @@ been already used, duplicate ignored
                    \relax 
 l.888 \clearpage
                  [1{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super
-/cm-super-ts1.enc}] (./main.toc)
+/cm-super-ts1.enc}] (./main.toc
+
+[2
+
+
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
 
-[2
+[3]
 
-
-]
-
-[3] (./Section0/section0.tex
+[4] (./Section0/section0.tex
 Chapter 0.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--21
@@ -1376,28 +1384,369 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--40
 
 ]
 Chapter 1.
-) (./Section4/section4.tex
+
 
 [2
 
 ]
-Chapter 4.
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
 
 
-[3
-
-]
 
 [4]
 
 [5]
+
+[6]
+<Section1/img/Leftskew.jpg, id=276, 750.805pt x 754.82pt>
+File: Section1/img/Leftskew.jpg Graphic file (type jpg)
+<use Section1/img/Leftskew.jpg>
+Package pdftex.def Info: Section1/img/Leftskew.jpg  used on input line 143.
+(pdftex.def)             Requested size: 337.85913pt x 339.66586pt.
+<Section1/img/Rightskew.jpg, id=277, 750.805pt x 754.82pt>
+File: Section1/img/Rightskew.jpg Graphic file (type jpg)
+<use Section1/img/Rightskew.jpg>
+Package pdftex.def Info: Section1/img/Rightskew.jpg  used on input line 153.
+(pdftex.def)             Requested size: 337.85913pt x 339.66586pt.
+
+
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.156 
+       <./Section1/img/Leftskew.jpg>]
+<Section1/img/Symmetry.jpg, id=286, 289.08pt x 171.64125pt>
+File: Section1/img/Symmetry.jpg Graphic file (type jpg)
+<use Section1/img/Symmetry.jpg>
+Package pdftex.def Info: Section1/img/Symmetry.jpg  used on input line 176.
+(pdftex.def)             Requested size: 216.80946pt x 128.7306pt.
+
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.179 
+       <./Section1/img/Rightskew.jpg>]
+
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.196 \begin{example}
+                      <./Section1/img/Symmetry.jpg>]
+<Section1/img/Histogram.jpg, id=301, 477.785pt x 249.93375pt>
+File: Section1/img/Histogram.jpg Graphic file (type jpg)
+<use Section1/img/Histogram.jpg>
+Package pdftex.def Info: Section1/img/Histogram.jpg  used on input line 215.
+(pdftex.def)             Requested size: 215.00125pt x 112.46915pt.
+
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.222  \item A
+              dvantages of Histograms:\\ <./Section1/img/Histogram.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+<Section1/img/HisL.jpg, id=310, 1424.32124pt x 1019.81pt>
+File: Section1/img/HisL.jpg Graphic file (type jpg)
+<use Section1/img/HisL.jpg>
+Package pdftex.def Info: Section1/img/HisL.jpg  used on input line 238.
+(pdftex.def)             Requested size: 356.07944pt x 254.95187pt.
+<Section1/img/HisR.jpg, id=311, 490.83376pt x 490.83376pt>
+File: Section1/img/HisR.jpg Graphic file (type jpg)
+<use Section1/img/HisR.jpg>
+Package pdftex.def Info: Section1/img/HisR.jpg  used on input line 246.
+(pdftex.def)             Requested size: 122.70813pt x 122.70813pt.
+
+
+[11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.249 
+       <./Section1/img/HisL.jpg>]
+<Section1/img/HisS.jpg, id=317, 1231.60126pt x 816.04875pt>
+File: Section1/img/HisS.jpg Graphic file (type jpg)
+<use Section1/img/HisS.jpg>
+Package pdftex.def Info: Section1/img/HisS.jpg  used on input line 254.
+(pdftex.def)             Requested size: 307.89955pt x 204.01169pt.
+<Section1/img/BoxPlot.jpg, id=318, 1576.89125pt x 888.31876pt>
+File: Section1/img/BoxPlot.jpg Graphic file (type jpg)
+<use Section1/img/BoxPlot.jpg>
+Package pdftex.def Info: Section1/img/BoxPlot.jpg  used on input line 263.
+(pdftex.def)             Requested size: 394.22185pt x 222.07915pt.
+
+
+[12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.266 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.266 
+       <./Section1/img/HisR.jpg> <./Section1/img/HisS.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+<Section1/img/Bskew.jpg, id=325, 2122.93124pt x 958.58125pt>
+File: Section1/img/Bskew.jpg Graphic file (type jpg)
+<use Section1/img/Bskew.jpg>
+Package pdftex.def Info: Section1/img/Bskew.jpg  used on input line 275.
+(pdftex.def)             Requested size: 318.42595pt x 143.78098pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.282 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.282 
+       <./Section1/img/BoxPlot.jpg> <./Section1/img/Bskew.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--294
+
+ []
+
+<Section1/img/R1.jpg, id=334, 791.95876pt x 655.44875pt>
+File: Section1/img/R1.jpg Graphic file (type jpg)
+<use Section1/img/R1.jpg>
+Package pdftex.def Info: Section1/img/R1.jpg  used on input line 297.
+(pdftex.def)             Requested size: 356.37814pt x 294.9492pt.
+<Section1/img/R2.jpg, id=335, 851.18pt x 108.405pt>
+File: Section1/img/R2.jpg Graphic file (type jpg)
+<use Section1/img/R2.jpg>
+Package pdftex.def Info: Section1/img/R2.jpg  used on input line 305.
+(pdftex.def)             Requested size: 383.02745pt x 48.78178pt.
+) (./Section2/section2.tex
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \chapter
+            {Sampling Distributions Related to a Normal Population} [1
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.10})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.3 \chapter
+            {Sampling Distributions Related to a Normal Population} <./Section1
+/img/R1.jpg>]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \chapter
+            {Sampling Distributions Related to a Normal Population} [2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.11})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.3 \chapter
+            {Sampling Distributions Related to a Normal Population} <./Section1
+/img/R2.jpg>]
+Chapter 2.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 \section{Gamma and Chi-square Distribution}
+                                                 [3
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.50 \end{definition}
+                      [4]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83 ...rt{2\pi}} \cdot e^{\frac{-z^2}{2}}\, dz.\]
+                                                   [5]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.103 ... M.G.F of $\chi_{n}^{2}$, as required}.\]
+                                                   [6]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.122 \end{definition}
+                       [7]
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+) (./Section3/section3.tex
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \chapter
+            {The Central Limit Theorem} [1]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+<Section3/Img3/CLT.jpg, id=374, 2536.47626pt x 1737.49126pt>
+File: Section3/Img3/CLT.jpg Graphic file (type jpg)
+<use Section3/Img3/CLT.jpg>
+Package pdftex.def Info: Section3/Img3/CLT.jpg  used on input line 19.
+(pdftex.def)             Requested size: 380.45503pt x 260.61244pt.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 
+      [2
+
+]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.34 ... = 1}^{n}X_i \approx N(n\mu, n\sigma^2).\]
+                                                   [3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.34 ... = 1}^{n}X_i \approx N(n\mu, n\sigma^2).\]
+                                                   <./Section3/Img3/CLT.jpg>])
+(./Section4/section4.tex
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 \chapter
+            {Normal Approximation to the Binomial Distribution} [4]
+Chapter 4.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.82 \end{tcolorbox}
+                     [5
+
+]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.131 \end{tcolorbox}
+                      [6]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.198 \begin{align*}
+                     [7]
 Underfull \hbox (badness 10000) in paragraph at lines 234--260
 
  []
 
 
 
-[6]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.260 \end{tcolorbox}
+                      [8]
 Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
@@ -1412,7 +1761,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 287--289
 
  []
 
-<Section4/images/pmf_plot.pdf, id=200, 433.62pt x 289.08pt>
+<Section4/images/pmf_plot.pdf, id=401, 433.62pt x 289.08pt>
 File: Section4/images/pmf_plot.pdf Graphic file (type pdf)
 <use Section4/images/pmf_plot.pdf>
 Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 300.
@@ -1420,7 +1769,7 @@ Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 300.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n50.pdf, id=201, 433.62pt x 289.08pt>
+<Section4/images/pmf_n50.pdf, id=402, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n50.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n50.pdf>
 Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 306.
@@ -1428,7 +1777,7 @@ Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 306.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n100.pdf, id=202, 433.62pt x 289.08pt>
+<Section4/images/pmf_n100.pdf, id=403, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n100.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n100.pdf>
 Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 312.
@@ -1436,7 +1785,7 @@ Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 312.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n300.pdf, id=203, 433.62pt x 289.08pt>
+<Section4/images/pmf_n300.pdf, id=404, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n300.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n300.pdf>
 Package pdftex.def Info: Section4/images/pmf_n300.pdf  used on input line 318.
@@ -1446,9 +1795,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[7]
 
-[8
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322 \clearpage
+                 [9]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322 \clearpage
+                 [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1463,7 +1824,13 @@ l.322 \clearpage
                  <./Section4/images/pmf_plot.pdf> <./Section4/images/pmf_n50.pd
 f>]
 
-[9
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322 \clearpage
+                 [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1477,7 +1844,7 @@ has been already used, duplicate ignored
 l.322 \clearpage
                  <./Section4/images/pmf_n100.pdf> <./Section4/images/pmf_n300.p
 df>]
-<Section4/images/binomial_normal.pdf, id=248, 578.16pt x 361.35pt>
+<Section4/images/binomial_normal.pdf, id=446, 578.16pt x 361.35pt>
 File: Section4/images/binomial_normal.pdf Graphic file (type pdf)
 <use Section4/images/binomial_normal.pdf>
 Package pdftex.def Info: Section4/images/binomial_normal.pdf  used on input lin
@@ -1485,7 +1852,13 @@ e 345.
 (pdftex.def)             Requested size: 422.77664pt x 264.23543pt.
 
 
-[10
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.359 T
+       hese are called the \textbf{success-failure conditions}. [12
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) 
@@ -1496,11 +1869,17 @@ l.359 T
        hese are called the \textbf{success-failure conditions}. <./Section4/ima
 ges/binomial_normal.pdf>]
 
-[11]
 
-[12]
+pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.449 \]
+         [13]
 
-[13]
+[14]
+
+[15]
 Overfull \hbox (10.09044pt too wide) detected at line 584
 \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Y \OMS/cmsy/m/n/12 ^^T \OT1
 /cmr/m/n/12 8) \OMS/cmsy/m/n/12 ^^Y \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm
@@ -1512,7 +1891,7 @@ Overfull \hbox (10.09044pt too wide) detected at line 584
 
 
 
-[14]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 587--588
 
  []
@@ -1529,18 +1908,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 592--593
 
 
 
-[15]) (./Section5/section5.tex
+[17]) (./Section5/section5.tex
 
-[16]
+[18]
 Chapter 5.
 
 
-[17
+[19
 
 ]
 
-[18]
-<Section5/images/simulation_plot.pdf, id=302, 578.16pt x 361.35pt>
+[20]
+<Section5/images/simulation_plot.pdf, id=499, 578.16pt x 361.35pt>
 File: Section5/images/simulation_plot.pdf Graphic file (type pdf)
 <use Section5/images/simulation_plot.pdf>
 Package pdftex.def Info: Section5/images/simulation_plot.pdf  used on input lin
@@ -1548,8 +1927,8 @@ e 136.
 (pdftex.def)             Requested size: 338.22418pt x 211.38614pt.
 
 
-[19]
-<Section5/images/simulation_multi.pdf, id=308, 578.16pt x 361.35pt>
+[21]
+<Section5/images/simulation_multi.pdf, id=505, 578.16pt x 361.35pt>
 File: Section5/images/simulation_multi.pdf Graphic file (type pdf)
 <use Section5/images/simulation_multi.pdf>
 Package pdftex.def Info: Section5/images/simulation_multi.pdf  used on input li
@@ -1557,7 +1936,7 @@ ne 154.
 (pdftex.def)             Requested size: 338.22418pt x 211.38614pt.
 
 
-[20
+[22
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1578,7 +1957,7 @@ Overfull \hbox (11.89522pt too wide) in paragraph at lines 178--178
 
 ) (./Section6/section6.tex
 
-[21]
+[23]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--22
@@ -1591,7 +1970,7 @@ Underfull \vbox (badness 2057) detected at line 25
 
 
 
-[22
+[24
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
@@ -1600,9 +1979,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
 
 
-[23]
+[25]
 
-[24
+[26
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1623,7 +2002,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[25] (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+[27] (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -1632,7 +2011,7 @@ File: lstlang2.sty 2024/09/23 1.10c listings language file
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/09/23 1.10c listings language file
 )
-<Section6/images/confidence_intervals.pdf, id=353, 722.7pt x 505.89pt>
+<Section6/images/confidence_intervals.pdf, id=548, 722.7pt x 505.89pt>
 File: Section6/images/confidence_intervals.pdf Graphic file (type pdf)
 <use Section6/images/confidence_intervals.pdf>
 Package pdftex.def Info: Section6/images/confidence_intervals.pdf  used on inpu
@@ -1642,7 +2021,7 @@ t line 262.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section6/images/normal_confidence_curve.pdf, id=354, 433.62pt x 325.215pt>
+<Section6/images/normal_confidence_curve.pdf, id=549, 433.62pt x 325.215pt>
 File: Section6/images/normal_confidence_curve.pdf Graphic file (type pdf)
 <use Section6/images/normal_confidence_curve.pdf>
 Package pdftex.def Info: Section6/images/normal_confidence_curve.pdf  used on i
@@ -1653,9 +2032,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[26]
+[28]
 
-[27
+[29
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1670,21 +2049,21 @@ l.301   \item $
                100(1 - \alpha)\%$ is the confidence level <./Section6/images/co
 nfidence_intervals.pdf> <./Section6/images/normal_confidence_curve.pdf>]
 
-[28]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
 
 
-[29]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 484--486
 
  []
 
 
 
-[30]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 502--503
 
  []
@@ -1694,14 +2073,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
-)
+) (./Section7/section7.tex
 
-[31]
+[33]
+Chapter 7.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mu' on input line 2.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+
+[34
+
+]
+
+[35]
+<section7/images/density_curves.pdf, id=628, 505.89pt x 361.35pt>
+File: section7/images/density_curves.pdf Graphic file (type pdf)
+<use section7/images/density_curves.pdf>
+Package pdftex.def Info: section7/images/density_curves.pdf  used on input line
+ 77.
+(pdftex.def)             Requested size: 375.80544pt x 268.4369pt.
+
+
+[36
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.140 \end{example}
+                    <./section7/images/density_curves.pdf>]
+
+[37]
+
+[38]
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 301.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
+05.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 305.
+<Section7/images/tax_histogram.pdf, id=655, 505.89pt x 361.35pt>
+File: Section7/images/tax_histogram.pdf Graphic file (type pdf)
+<use Section7/images/tax_histogram.pdf>
+Package pdftex.def Info: Section7/images/tax_histogram.pdf  used on input line 
+329.
+(pdftex.def)             Requested size: 281.85587pt x 201.32906pt.
+<Section7/images/tax_boxplot.pdf, id=656, 433.62pt x 361.35pt>
+File: Section7/images/tax_boxplot.pdf Graphic file (type pdf)
+<use Section7/images/tax_boxplot.pdf>
+Package pdftex.def Info: Section7/images/tax_boxplot.pdf  used on input line 34
+1.
+(pdftex.def)             Requested size: 234.8775pt x 195.7326pt.
+<Section7/images/tax_qqplot.pdf, id=657, 433.62pt x 361.35pt>
+File: Section7/images/tax_qqplot.pdf Graphic file (type pdf)
+<use Section7/images/tax_qqplot.pdf>
+Package pdftex.def Info: Section7/images/tax_qqplot.pdf  used on input line 352
+.
+(pdftex.def)             Requested size: 258.36668pt x 215.31744pt.
+
+
+[40]
+Underfull \vbox (badness 10000) detected at line 391
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 391
+ []
+
+
+
+[41 <./Section7/images/tax_histogram.pdf>]
+
+[42 <./Section7/images/tax_boxplot.pdf> <./Section7/images/tax_qqplot.pdf>])
+
+[43]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
 
-[32
+[44
 
 
 ] (./main.aux)
@@ -1709,22 +2183,27 @@ runsystem(makeindex main.idx)...executed safely (allowed).
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 23D2C7BEAD4761E5F330416946265FC6;4325.
+(rerunfilecheck)             Checksum: 981D1E802CA7CBB23EFC0CB9094ACCBC;7254.
  ) 
 Here is how much of TeX's memory you used:
- 35632 strings out of 473190
- 728991 string characters out of 5715801
- 1461545 words of memory out of 5000000
- 58101 multiletter control sequences out of 15000+600000
- 572967 words of font info for 93 fonts, out of 8000000 for 9000
+ 35927 strings out of 473190
+ 735069 string characters out of 5715801
+ 1462506 words of memory out of 5000000
+ 58278 multiletter control sequences out of 15000+600000
+ 574190 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,13n,96p,751b,1855s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,13n,96p,912b,1855s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
 /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
 sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 /local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
@@ -1733,14 +2212,15 @@ cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
 texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (37 pages, 375787 bytes).
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (70 pages, 3765831 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 860 PDF objects out of 1000 (max. 8388607)
+ 679 compressed objects within 7 object streams
+ 212 named destinations out of 1000 (max. 500000)
+ 530 words of extra memory for PDF output out of 10000 (max. 10000000)
 
