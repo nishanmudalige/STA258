@@ -1,3 +1,4 @@
+
 \chapter{One Sample Confidence Intervals on a Mean When the Population Variance is Known}
 \section{Introduction}
 Statistical inference is concerned primarily with understanding the quality of parameter estimates. For example, a classic inferential question is, ``How sure are we that the estimated mean, $\bar{x}$, is near the true population mean, $\mu$?'' While the equations and details change depending on the setting, the foundations for inference are the same throughout all of statistics. We introduce these common themes by discussing inference about the population mean, $\mu$, and set the stage for other parameters and scenarios. Some advanced considerations are discussed. Understanding this chapter will make the rest of this book, and indeed the rest of statistics, seem much more familiar.
@@ -158,7 +159,7 @@ When we know the population standard deviation $\sigma$, we can construct a conf
 
 \begin{tcolorbox}[
     colback=yellow!10, 
-    colframe=black!20, 
+    colframe=black!45, 
     sharp corners=south, 
     boxrule=0.5pt,
     breakable,
@@ -258,7 +259,7 @@ abline(v = 0, lty = 2);
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.6\textwidth]{Section6/confidence_intervals.pdf}
+  \includegraphics[width=0.6\textwidth]{Section6/images/confidence_intervals.pdf}
   \caption{Simulated 95\% confidence intervals for the population mean. Red “X” marks indicate intervals that do not contain the true mean (\( \mu = 0 \)).}
 \end{figure}
 
@@ -277,7 +278,7 @@ The critical value $z_{\ast}$ is illustrated in a Figure below and depends on $C
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.6\textwidth]{Section6/normal_confidence_curve.pdf}
+  \includegraphics[width=0.6\textwidth]{Section6/images/normal_confidence_curve.pdf}
   \caption{The central area under the standard normal curve with confidence level \( C \).}
 \end{figure}
 
@@ -448,7 +449,7 @@ simple.z.test = function(x, sigma, conf.level = 0.95) {
 
 \noindent\textbf{R output:}
 
-\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
 \begin{verbatim}
 # Step 1. Entering data;
 cars = c(79, 43, 58, 66, 101, 63, 79,
