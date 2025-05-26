@@ -14,53 +14,62 @@
 
 Intuitively, statistics can be considered the science of uncertainty. Formally,
 
-
 \begin{definition}[Statistics]	\index{Statistics!Definition}
 Statistics is the science of collecting, classifying, summarizing, analyzing and interpreting data.
 \end{definition}
 
+\noindent
 \textbf{Population, Sample, Parameter}
 
+\noindent
 In statistics, researchers need to observe behavior, pattern, trends and other types of data to give a conclusion. To make the conclusion more persuasive, researchers require huge amount of data to support them, that's why study statistics need population. 
 
 \begin{definition}[Population]
 In statistics, a population is a set of similar observations which is of interest for some experimental questions. It can be a set of existing objects such as all people in Canada, or hypothetical group of existing objects such as the set of all possible hands in a game of poker. 
 \end{definition}
 
+\noindent
 However, data collection from population is a lot work. Usually, researchers select a finite number of observations to study.
 
 \begin{definition}[Sample]
 It refers to a selection of a subset from population that researchers use it to estimate population characteristics.
 \end{definition}
 
+\noindent
 Now, we have already chosen a sample, but how do we use it to estimate population characteristics? This is the point where parameter comes to play.
 
 \begin{definition}[Parameter Statistics]
 A parameter is a quantity of statistical population which summerizes characteristics of the population. For example, mean, variance and standard deviation.
 \end{definition}
 
+\noindent
 \textbf{Descriptive and Inferential Statistics}
 
+\noindent
 Now, we have set everything we need. A population, a chosen sample in that population with its parameters. Next step is studying. There are two major types of analysis: descriptive and Inferential statistics. In this section, we are only going to give you a rough idea about what they are, more detailed materials will be introduced in later chapters.
 
 \begin{definition}[Descriptive Statistics]
 It refers to the summation of all quantitive values that describe characteristics of the population. Usually, we use descriptive statistics to summerize characteristics of a data set.
 \end{definition}
 
+\noindent
 Furthermore, we use inferential statistics to do statistical analysis.
 
 \begin{definition}[Inferential Statistics]
 It refers to the process of using data analysis to indicate properties of a population. For example, testing hypothesis and confidence interval (both will be introduced in later chapters).
 \end{definition}
 
+\noindent
 \textbf{Qualitative and Quantitative Data}
 
+\noindent
 At this point, assume that we have finished all procedures such as obtaining parameters and analyzing properties. Now, another important thing is illustrating all the discovery. 
 
 \begin{definition}[Qualitative Data]
 This type of illustration refers to showing categorical data. For example, lecture notes from a course, open-question survey. 
 \end{definition}
 
+\noindent
 To illustrate numerical data, we use quantitative data.
 
 \begin{definition}[Quantitative Data]
@@ -69,30 +78,37 @@ Unless the previous type of illustration, quantitative data is represented numer
 
 \section{Descriptive Statistics}
 
+\noindent
 Previously, we defined descriptive statistics. Now, let's introduce what exact they are.\\
 
+\noindent
 \textbf{Sample Mean, Variance and Standard Deviation}
 
+\noindent
 Sample mean (or sample average) is the average value of a sample which is selected from an interested population of an experiment. Usually, the sample mean is used to estimate population mean. In other words, we say that the sample mean is an estimator of population mean.
 
 \begin{definition}[Sample Mean]
  Let $x_1, x_2, x_3, ..., x_n$ be a sample of data points. We define sample mean of the sample data points ($\bar{x}$) as the following: \[ \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i.\] Also, we define sample variance of the sample data points ($s^2$) as: \[ s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2.\] Moreover, the standard deviation of the sample of data points ($s$) is: \[ s = \sqrt{s^2}, \quad \text{for } s > 0.\]
 \end{definition}
 
+\noindent
 Now, let's move to variance. It refers to the expected value of the squared deviation from the mean of a random variable in a population. Similarly, we do have sample variance as well, which is the expected value of the squared deviation from the mean of a random variable in a selected sample. At this point, we can still use sample variance to estimate population variance with adjustment, because the sample variance may differ significantly based on what data points are chosen from that population.
 
 \begin{definition}[Sample Variance]
 Let $x_1, x_2, x_3, ..., x_n$ be a sample of data points, we define sample variance of the sample data points ($s^2$) as: \[ s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2, \text{ where $\bar{x}$ is the sample mean of the data points.}\]
 \end{definition}
 
+\noindent
 Next is standard deviation. It is a measure of the amount of variation of the values of a variable about its mean. If standard deviation is relatively larger, then data points are widely spread out from the mean. Otherwise, data points stay close from the mean. Also, standard deviation is obtained by taking squared root from variance which is dependent on the choices of data points as well. To use sample standard deviation as an estimator to population standard deviation, we still need to adjust it.
 
 \begin{definition}[Sample Standard Deviation]
 Let $x_1, x_2, x_3, ..., x_n$ be a sample of data points. The standard deviation of the sample of data points ($s$) is: \[ s = \sqrt{s^2}, \quad \text{for } s > 0.\]
 \end{definition}
 
+\noindent
 \textbf{Median and Mode}
 
+\noindent
 The median and mode are two important measures of central tendency used in statistics to summarize and understand data. The median represents the middle value in a sorted dataset, giving a sense of the center that is not affected by extreme values or outliers. In contrast, the mode is the value that appears most frequently in a dataset, making it useful for identifying common or repeated observations.
 
 \begin{definition}[Median]
@@ -103,14 +119,17 @@ Let: $x_1, x_2, x_3, ... , x_n$ be a collection of data points which is arranged
  \end{itemize}
 \end{definition}
 
+\noindent
 Now, let's introduce mode. 
 
 \begin{definition}[Mode]
 It refers to a value that appears the most frequent than the appearance of all other values in a given dataset.
 \end{definition}
 
+\noindent
 \textbf{Percentile and Quartile}
 
+\noindent
 Percentiles and quartiles are statistical measures used to describe the distribution of data. A percentile indicates the value below which a given percentage of observations fall, helping to understand relative standing within a dataset. Quartiles, a specific type of percentile, divide the data into four equal parts (Q1, Q2/median, and Q3), providing insights into the spread and central tendency.
 
 \begin{definition}[Percentile and Quartile]
@@ -124,14 +143,17 @@ Let: $x_1, x_2, ..., x_n$ be a collection of data points in either ascending ord
 Moreover, we use $Q_3 - Q_1$ to calculate interquartile range (I.P.R), which shows the spread of the whole data set.
 \end{definition}
 
+\noindent
 \textbf{Skewness and Symmetry}
 
+\noindent
 The two terms 'skewness' and 'symmetry' are used to describe the shape of probability distribution. There are two types of skewness: left (or negative) skew and right (or positive) skew. In real life, a famous distribution highly used in hypothesis testing which is $\chi_{n}^{2}$ with $n$ degrees of freedom, is right skewed probability distribution function. Another example regarding to symmetry is normal distribution such that its probability under its curve greater than $\mu$ is same as the probability below than $\mu$. Now let's introduce the proper definition of skewness and symmetry.
 
 \begin{definition}[Skewness]
 Skewness refers to such a measure of the asymmetry of the probability distribution of a real-valued random variable about its mean. The skewness value can be positive, zero, negative or undefined.
 \end{definition}
 
+\noindent
 Now, let's break down the main definition of skewness and symmetry:
 
 \begin{definition}[Left (or Negative) Skew]
@@ -154,20 +176,22 @@ By observing given probability distribution curve, if the right tail of the curv
  \caption{Visualization of right skew probability distribution}
 \end{figure}
 
+\noindent
 Symmetry is a special case of skewness when the value of skewness is $0$.
 
 \begin{definition}[Symmetry]
 In statistics, symmetry s a probability distribution is reflected around a vertical line at some value of the random variable represented by the distribution. Probability under the curve below that value is equal to probability under the curve greater than that value. (see figure below)
 \end{definition}
 
+\noindent
 Since symmetry is a special case, so that it has a unique property as the following:
 
 \begin{theorem}[Empirical Rule (or $68-95-99.7$ Rule)]
 For any symmetric (bell-shaped) curve, let $\mu$ be its mean and $\sigma$ be its standard deviation, the following probability set function is true:
    \begin{itemize}
-    \item  $1.$: $Pr(\mu - \sigma < X < \mu + \sigma) = 68.27\%;$
-    \item  $2.$: $Pr(\mu - 2\sigma < X < \mu + 2\sigma) = 95.45\%;$
-    \item  $3.$: $Pr(\mu - 3\sigma < X < \mu + 3\sigma) = 99.73\%.$
+    \item  $1.$ $P(\mu - \sigma < X < \mu + \sigma) = 68.27\%;$
+    \item  $2.$ $P(\mu - 2\sigma < X < \mu + 2\sigma) = 95.45\%;$
+    \item  $3.$ $P(\mu - 3\sigma < X < \mu + 3\sigma) = 99.73\%.$
    \end{itemize}
 \end{theorem}
 
@@ -177,6 +201,7 @@ For any symmetric (bell-shaped) curve, let $\mu$ be its mean and $\sigma$ be its
  \caption{Visualization of symmetric probability distribution}
 \end{figure}
 
+\noindent
 \textbf{Practice Example}
 
 \begin{example}[Calculating Sample Mean, Variance and Standard Deviation]
@@ -208,6 +233,7 @@ In statistics, there are lots of types of graph to illustrate data, for example 
 
 \textbf{Introduction to Histograms}
 
+\noindent
 Histogram is a graphical representation of data that uses bars to display the frequency distribution of a dataset. Unlike bar graphs, which represent categorical data, histograms group numerical data into intervals (bins) and show how many values fall into each range. This makes histograms ideal for visualizing the shape, spread, and central tendency of continuous data, helping identify patterns such as symmetry, skewness, and outliers.
 
 \begin{figure}[H]
@@ -227,10 +253,13 @@ Histogram is a graphical representation of data that uses bars to display the fr
  $2.$ The values from histograms close to breaking points are likely similar, in fact they need to be classified into different bins (i.e. Student A and B scores 79 and 80 respectively in   STA258, we consider a breaking point between 79 and 80. The two students have similar score, but student A is $B+$ and student B is $A-$ in GPA from).
  \end{itemize}
  
+ \noindent
 \textbf{Histograms with Skewness and Symmetry}
 
+\noindent
 A histogram visually represents the distribution of numerical data, making it a useful tool for assessing skewness and symmetry. It is quite straightforward to estimate the skewness of histograms by simply drawing a curve above bins on the histogram.\\
 
+\noindent
 For a histogram to have a left (or negative) skew probability distribution:
 
 \begin{figure}[H]
@@ -239,6 +268,7 @@ For a histogram to have a left (or negative) skew probability distribution:
  \caption{Visualization of a histogram has a left (or negative) skew probability distribution}
 \end{figure} 
 
+\noindent
 For a histogram to have a right (or positive) skew probability distribution:
 
 \begin{figure}[H]
@@ -247,6 +277,7 @@ For a histogram to have a right (or positive) skew probability distribution:
  \caption{Visualization of a histogram has a right (or positive) skew probability distribution}
 \end{figure} 
 
+\noindent
 For a histogram to have a symmetric probability distribution:
 
 \begin{figure}[H]
@@ -264,10 +295,13 @@ A boxplot (or box-and-whisker plot) is a standardized way to display data distri
  \caption{Visualization of a box-plot}
 \end{figure} 
 
+\noindent
 Similar to histograms, we can still obtain information about skewness and symmetry, by observing the cut from the line of Q2.\\
 
+\noindent
 If the median (Q2) cuts the box with upper area smaller than lower area, then we say that box-plot with left skew probability distribution. Or, if the median (Q2) cuts the box with upper area larger than lower area, then we say that box-plot with right skew probability distribution.\\
 
+\noindent
 Otherwise, if the median (Q2) cuts the box with upper area equal to lower area, then we say that box-plot with symmetric probability distribution.
 
 \begin{figure}[H]
@@ -280,14 +314,19 @@ Otherwise, if the median (Q2) cuts the box with upper area equal to lower area, 
 
 R is used for data manipulation, statistics, and graphics. It is made of: operations ($+$,$ -$, $<$) which is for calculations on vectors, arrays and matrices; a huge collection of functions; facilities for making unlimited types quality graphs; user contributed packages (sets of related functions); the ability to interface with procedures written in C, C+, or FORTRAN and to write additional primitives. R is also an open-source computing package which has seen a huge growth in popularity in the last few years (Please use this website: https://cran.r-project.org, to download R).\\
 
+\noindent
 \textbf{What is R-studio?}
 
+\noindent
 RStudio is a relatively new editor specially targeted at R. RStudio is cross-platform, free and open-source software (Please use: https://www.rstudio.com, to download Rstudio).\\
 
+\noindent
 \textbf{Make a Histogram Using R-studio}
 
+\noindent
 This is just a demonstration of how to start and use R-studio. 
 
+\noindent
 1. First of all, we need to know which dataset are we going to make into a histogram. In this case, as an example, we are going to use the waiting time in faithful in R-studio.\\
 2. For any dataset, use the code: names(faithful) to get it. (inside the parentheses, type the names of variables you want in faithful dataset)\\
 3. Then, we proceed with the code: hist(faithful\$waiting) to get a basic plot.\\
@@ -298,6 +337,7 @@ This is just a demonstration of how to start and use R-studio.
  \caption{R-studio first three steps (by following the instructions, you should get this histogram)}
 \end{figure}
 
+\noindent
 4. Furthermore, we can also get more information. For example, by keep proceeding with the code: hist(faithful\$waiting,plot=FALSE)\$breaks, R-studio will show you all the breaking points between histogram cells.
 
 \begin{figure}[H]

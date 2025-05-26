@@ -8,50 +8,9 @@
 \usepackage{titleref}
 %\usepackage{maple2e}
 
-\usepackage{needspace}
-\usepackage{xcolor}
-\usepackage{etoolbox}
-\usepackage{xcolor}
-\usepackage{sectsty}
-\sectionfont{\color{blue!70}}
-
 \usepackage{inputenc}
-\usepackage{tikz}
-\usetikzlibrary{decorations.pathmorphing}  % <-- add this
 \usepackage{imakeidx}
 \usepackage[english]{babel}
-\usepackage[most]{tcolorbox}
-\allowdisplaybreaks
-\setlength{\parskip}{0pt}
-\setlength{\parindent}{0pt}
-
-
-\tcbset{
-  mydefbox/.style={
-    colback=blue!5!white,
-    colframe=blue!40!black,
-    coltitle=black,
-    colbacktitle=blue!10!white, % <- lightens title bar
-    fonttitle=\bfseries,
-    boxrule=0.5pt,
-    arc=2mm,
-    leftrule=0pt,
-    rightrule=0pt,
-    toprule=0pt,
-    bottomrule=0pt,
-    enhanced,
-    width=\textwidth,
-    sharp corners,
-    before skip=10pt,
-    after skip=10pt,
-    breakable
-  }
-}
-
- 
-
-\newtcolorbox[auto counter, number within=section]{definitionbox}[2][]{mydefbox,title=Definition \thetcbcounter\ (#2),#1}
-
 
 \makeindex
 
@@ -99,7 +58,6 @@
 \usepackage{listliketab}
 \usepackage{tabto}
 \usepackage{lipsum}
-
 
 
 % Table Row height
@@ -677,6 +635,7 @@
 %\makeindex
 \begin{document}
 
+
 %\BgThispage
 % Some content
 %\clearpage
@@ -867,7 +826,7 @@ First edition:  & August 2025 \\
 
 Mudalige, M.; Alili, N.; Xu, B.\\
 %\hspace*{1em} Me, myself, and I / Jubobs. -- \\
-\hspace*{1em} University of Guelph Bookstore Press\\
+%\hspace*{1em} University of Guelph Bookstore Press\\
 %\hspace*{2em} p. \hspace*{2em} cm. \\
 %\hspace*{2em} Includes illustrations, bibliographical references and index. \\
 %\hspace*{2em} ISBN \\
@@ -905,19 +864,17 @@ Mississauga, Ontario, Canada \\
 %% BOOK SECTIONS %%
 %%%%%%%%%%%%%%
 
-
-
 \large 
 \setcounter{chapter}{-1}
 \input{Section0/section0.tex}
 \input{Section1/section1.tex}
 \input{Section2/section2.tex}
 \input{Section3/section3.tex}
-\input{Section4/section4.tex}
-\input{Section5/section5.tex}
-\input{Section6/section6.tex}
-\input{Section7/section7.tex}
-%\input{Section8/section8.tex}
+%\input{Section4/section4.tex}
+%\input{Section5/section5.tex}
+%\input{Section6/section6.tex}
+%\input{Section7/section7.tex}
+\input{Section8/section8.tex}
 
 \pagebreak
 
