@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  25 MAY 2025 02:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  26 MAY 2025 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1019,7 +1019,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \c@pmfstyle=\count352
 
 
-Package amsthm Warning: Unknown theoremstyle `pdf' on input line 301.
+Package amsthm Warning: Unknown theoremstyle `pdf' on input line 300.
 
 \c@pdfstyle=\count353
 \c@transstyle=\count354
@@ -1052,7 +1052,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \c@exinn=\count362
 
 
-Package amsthm Warning: Unknown theoremstyle `defin' on input line 536.
+Package amsthm Warning: Unknown theoremstyle `defin' on input line 535.
 
 \c@defin=\count363
 \c@ntstyle=\count364
@@ -1070,24 +1070,24 @@ LaTeX Warning: Label `sec.matrix' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 637.
-LaTeX Font Info:    ... okay on input line 637.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 636.
+LaTeX Font Info:    ... okay on input line 636.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count366
@@ -1144,7 +1144,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 637.
+Package hyperref Info: Link coloring ON on input line 636.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1155,20 +1155,20 @@ Package hyperref Info: Link coloring ON on input line 637.
 
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 776
+LaTeX Font Info:    Trying to load font information for U+msa on input line 775
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 776
+LaTeX Font Info:    Trying to load font information for U+msb on input line 775
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 77
-6.
+5.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1179,16 +1179,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.776 
+l.775 
        [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 828--835
+Underfull \hbox (badness 10000) in paragraph at lines 827--834
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--842
+Underfull \hbox (badness 10000) in paragraph at lines 838--841
 
  []
 
@@ -1199,7 +1199,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.848 \clearpage
+l.847 \clearpage
                  [1{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super
 /cm-super-ts1.enc}] (./main.toc)
 \tf@toc=\write6
@@ -1644,7 +1644,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.881 
+l.880 
        [4]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
@@ -1655,7 +1655,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.945 \end{document}
+l.944 \end{document}
                      [5
 
 
@@ -1674,7 +1674,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  27654 strings out of 473190
  535005 string characters out of 5715801
- 1047390 words of memory out of 5000000
+ 1047389 words of memory out of 5000000
  50268 multiletter control sequences out of 15000+600000
  571634 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1693,7 +1693,7 @@ l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local
 /texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/loc
 al/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (33 pages, 3511288 bytes).
+Output written on main.pdf (33 pages, 3511286 bytes).
 PDF statistics:
  370 PDF objects out of 1000 (max. 8388607)
  290 compressed objects within 3 object streams
