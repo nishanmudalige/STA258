@@ -147,42 +147,27 @@ and the variance of \( X \) is
 \vspace{1,0em}  \\
 Let \( X \) be a Bernoulli random variable with the probability of a success as \( p \). Then
 
-\[
-E[X] = \mu = \sum_{i=1}^{n} x_i \cdot P(X = x_i)
-\]
-\[
-= 0 \cdot P(X = 0) + 1 \cdot P(X = 1)
-\]
-\[
-= 0 \cdot (1 - p) + 1 \cdot p
-\]
-\[
-= p
-\]
-
+\begin{align*}
+E[X] = \mu & = \sum_{i=1}^{n} x_i \cdot P(X = x_i) \\
+&= 0 \cdot P(X = 0) + 1 \cdot P(X = 1) \\
+&= 0 \cdot (1 - p) + 1 \cdot p \\
+&= p
+\end{align*}
 Similarly, the variance of \( X \) can be computed:
 
-\[
-V(X) = \sigma^2 = \sum_{i=1}^{k} (x_i - \mu)^2 \cdot P(X = x_i)
-\]
-\[
-= (0 - p)^2 \cdot P(X = 0) + (1 - p)^2 \cdot P(X = 1)
-\]
-\[
-= p^2 (1 - p) + (1 - p)^2 p
-\]
-\[
-= p(1 - p)
-\]
+\begin{align*}
+V(X) = \sigma^2 & = \sum_{i=1}^{k} (x_i - \mu)^2 \cdot P(X = x_i) \\
+&= (0 - p)^2 \cdot P(X = 0) + (1 - p)^2 \cdot P(X = 1) \\
+&= p^2 (1 - p) + (1 - p)^2 p \\
+&= p(1 - p)
+\end{align*}
 
 The standard deviation is
 
-\[
-\sigma = \sqrt{\sigma^2}
-\]
-\[
-= \sqrt{p(1 - p)}
-\]
+\begin{align*}
+\sigma & = \sqrt{\sigma^2} \\
+            & = \sqrt{p(1 - p)}
+\end{align*}
 
 
 
@@ -484,12 +469,14 @@ We want to determine the probability that the sample proportion is greater than 
 
 We know that the sample proportion $\hat{p}$ is roughly Normally distributed with mean $p = 0.52$ and standard deviation
 \begin{align*}
-\sqrt{p(1 - p)/n} = \sqrt{(0.52)(0.48)/300} = 0.0288.
-Thus, we calculate
-P(\hat{p} > 0.50) = P\left( \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} > \frac{0.50 - 0.52}{0.0288} \right)
-= P(Z > -0.69) = 1 - P(Z < -0.69) \quad \text{(Z is symmetric)}
-= P(Z > -0.69) = 1 - P(Z > 0.69)
-= 1 - 0.2451 = 0.7549.
+\sqrt{p(1 - p)/n} & =  \sqrt{(0.52)(0.48)/300} = 0.0288. \\
+\end{align*}
+\begin{align*}
+Thus, we calculate \\
+P(\hat{p} > 0.50) & = P\left( \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} > \frac{0.50 - 0.52}{0.0288} \right) \\
+&= P(Z > -0.69) = 1 - P(Z < -0.69) \quad \text{(Z is symmetric)} \\
+&= P(Z > -0.69) = 1 - P(Z > 0.69) \\
+&= 1 - 0.2451 = 0.7549.
 \end{align*}
 
 If we assume that the level of support remains at 52\%, the probability that more than half the sample of 300 people would vote for the representative is 0.7549.\par

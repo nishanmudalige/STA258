@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {4}Normal Approximation to the Binomial Distribution}{3}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{3}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Bernoulli Distribution}{4}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Sampling Distribution of the Sum and MGF Derivation}{5}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Sampling Distribution of the Sum and MGF Derivation}{6}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Binomial Distribution}{6}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Visualizing the PMF of Binomial Distributions}{7}{subsection.4.4.1}%
 \contentsline {section}{\numberline {4.5}Sampling Distribution of a Sample Proportion and the Normal Approximation}{10}{section.4.5}%
@@ -18,4 +18,4 @@
 \contentsline {section}{\numberline {6.1}Introduction}{22}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Interpretation}{24}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Confidence Interval for $\mu $ (Known Variance)}{25}{section.6.3}%
-\contentsline {section}{\numberline {6.4}APPENDIX}{31}{section.6.4}%
+\contentsline {section}{\numberline {6.4}APPENDIX}{32}{section.6.4}%
