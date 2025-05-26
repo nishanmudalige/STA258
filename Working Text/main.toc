@@ -30,3 +30,4 @@
 \contentsline {section}{\numberline {6.4}APPENDIX}{33}{section.6.4}%
 \contentsline {chapter}{\numberline {7}One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown}{34}{chapter.7}%
 \contentsline {section}{\numberline {7.1}CIs for \(\mu \)}{34}{section.7.1}%
+\contentsline {chapter}{\numberline {8}One Sample Confidence Intervals On a Proportion}{2}{chapter.8}%
