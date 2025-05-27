@@ -19,7 +19,8 @@
 \contentsline {section}{\numberline {4.4}Binomial Distribution}{28}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Visualizing the PMF of Binomial Distributions}{29}{subsection.4.4.1}%
 \contentsline {section}{\numberline {4.5}Sampling Distribution of a Sample Proportion and the Normal Approximation}{32}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Continuity Correction}{36}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Normal Approximation to Binomial}{36}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Continuity Correction}{36}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Law of Large Numbers}{39}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Convergence in Probability}{39}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Weak Law of Large Numbers (WLLN)}{40}{section.5.2}%
@@ -27,7 +28,7 @@
 \contentsline {section}{\numberline {6.1}Introduction}{44}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Interpretation}{46}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Confidence Interval for $\mu $ (Known Variance)}{47}{section.6.3}%
-\contentsline {section}{\numberline {6.4}APPENDIX}{53}{section.6.4}%
-\contentsline {chapter}{\numberline {7}One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown}{54}{chapter.7}%
-\contentsline {section}{\numberline {7.1}CIs for \(\mu \)}{54}{section.7.1}%
-\contentsline {chapter}{\numberline {8}One Sample Confidence Intervals On a Proportion}{64}{chapter.8}%
+\contentsline {section}{\numberline {6.4}APPENDIX}{54}{section.6.4}%
+\contentsline {chapter}{\numberline {7}One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown}{55}{chapter.7}%
+\contentsline {section}{\numberline {7.1}CIs for \(\mu \)}{55}{section.7.1}%
+\contentsline {chapter}{\numberline {8}One Sample Confidence Intervals On a Proportion}{65}{chapter.8}%
