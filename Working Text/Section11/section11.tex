@@ -104,6 +104,106 @@ Use the test statistic, reference distribution, and refer back to $H_a$.
   \includegraphics[width=0.52\textwidth]{section11/images/hypothesis_two_tail.pdf}
   \caption*{Two-tailed test: p-value is the total area in both tails beyond $\pm$ test statistic.}
 \end{figure}
+\subsection*{Step 5: Compare \textit{p}-value to level of significance $\alpha$ and make a conclusion}
+
+\begin{itemize}
+  \item If \textit{p}-value $< \alpha$: \\
+  \quad Sufficient evidence against $H_0$. The hypothesis test rejects $H_0$ in favor of $H_a$.
+
+  \item If \textit{p}-value $> \alpha$: \\
+  \quad Insufficient evidence against $H_0$. Do not reject $H_0$ (fail to reject $H_0$).
+\end{itemize}
+
+\textbf{Note:} It is not good practice to give conclusions in the context of stating we \textit{accept $H_0$} or \textit{accept $H_a$}.
+\begin{example}[Sweetening Colas]
+Diet colas use artificial sweeteners to avoid sugar. These sweeteners gradually lose their sweetness over time. Manufacturers therefore test new colas for loss of sweetness before marketing them. Trained tasters sip the cola along with drinks of standard sweetness and score the cola on a “sweetness score” of 1 to 10. The cola is then stored for a month at high temperature to imitate the effect of four months’ storage at room temperature. Each taster scores the cola again after storage. This is a matched pairs experiment. Our data are the differences (score before storage minus score after storage) in the tasters’ scores. The bigger these differences, the bigger the loss of sweetness.
+
+Suppose we know that for any cola, the sweetness loss scores vary from taster to taster according to a Normal distribution with standard deviation $\sigma = 1$. The mean $\mu$ for all tasters measures loss of sweetness.
+
+The following are the sweetness losses for a new cola as measured by 10 trained tasters:
+
+\medskip
+\centerline{2.0,\ 0.4,\ 0.7,\ 2.0,\ -0.4,\ 2.2,\ -1.3,\ 1.2,\ 1.1,\ 2.3}
+\medskip
+
+Are these data good evidence that the cola lost sweetness in storage?\\
+\noindent\textbf{Solution}\\
+
+$\mu$ = mean sweetness loss for the population of \textbf{all} tasters.\\
+\textbf{Step 1:} State hypotheses. $H_0: \mu = 0$ vs $H_a: \mu > 0$ \\
+\textbf{Step 2:} Test statistic: $z_\star = \dfrac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \dfrac{1.02 - 0}{1 / \sqrt{10}} = 3.23$ \\
+\textbf{Step 3:} P-value. $P(Z > z_\star) = P(Z > 3.23) = 0.0006$ \\
+\textbf{Step 4:} Conclusion. We would rarely observe a mean as large as 1.02 if $H_0$ were true. The small p-value provides strong evidence against $H_0$, supporting $H_a: \mu > 0$. That is, the mean sweetness loss is likely positive.
+
+\vspace{1em}
+\noindent\textbf{R code (Simulation)}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+# n = sample size;
+n<-10;
+mu.zero<-0;
+sigma<-1;
+sigma.xbar<-sigma/sqrt(n);
+
+# x bar = sample mean with 10 obs;
+x.bar<-rnorm(1,mean=mu.zero,sd=sigma.xbar);
+x.bar;
+
+## [1] 0.3265859
+
+# z.star = test statistic;
+z.star<-(x.bar-mu.zero)/sigma.xbar;
+z.star;
+
+## [1] 1.032755
+\end{verbatim}
+\end{tcolorbox}
+\vspace{1em}
+\noindent\textbf{R code (10,000 Simulations)}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+n <- 10;
+mu.zero <- 0;
+sigma <- 1;
+sigma.xbar <- sigma / sqrt(n);
+# x bar = sample mean with 10 obs;
+# m = number of simulations;
+m <- 10000;
+x.bar <- rnorm(m, mean = mu.zero, sd = sigma.xbar);
+
+# z.star = test statistic;
+z.star <- (x.bar - mu.zero) / sigma.xbar;
+hist(z.star, xlab = "differences", col = "blue");
+\end{verbatim}
+\end{tcolorbox}
+\vspace{1em}
+\noindent\textbf{Histogram from simulation (see Section 7 for R code format)}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Section11/images/sweetening_10000_hist.pdf}
+  \caption*{Histogram of $z_\star$ values from 10,000 simulations under $H_0$.}
+\end{figure}
+\vspace{1em}
+\noindent\textbf{R code (Empirical p-value)}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+## P-value
+
+p_value <- length(z.star[z.star > 3.23]) / m;
+
+p_value
+
+## [1] 8e-04
+\end{verbatim}
+\end{tcolorbox}
+
+
+\end{example}
+
 
 
 
