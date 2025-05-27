@@ -50,4 +50,60 @@ H_0: \Theta = \Theta_0 &                         & H_a: \Theta \neq \Theta_0 \qu
 \textbf{Null ($H_0$):} Represents the current belief (\textcolor{blue}{status quo}) or the safe belief.
 
 \textbf{Alternative ($H_a$):} Represents the research hypothesis (or what you are asked to test)
+\subsection*{Step 3: Calculate an appropriate test statistic}
+
+Depends on the hypothesis test conducted and the information available.
+
+
+\begin{definition}[Test Statistic Skeleton]
+\[
+\text{test statistic} = \frac{\text{(a statistic)} - \text{(hypothesized value of parameters under } H_0 \text{)}}{\text{standard error of statistic}}
+\]
+\end{definition}
+
+The test statistic follows a reference distribution ($Z$, $t$, $F$, $\chi^2$).
+\subsection*{Step 4: Calculate the p-value}
+
+\noindent
+Use the test statistic, reference distribution, and refer back to $H_a$.
+
+% --- BLUE: Right-tailed tests ---
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{section11/images/hypothesis_right_tail.pdf}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{section11/images/hypothesis_right_tail_wide.pdf}
+  \end{minipage}
+  \caption*{Right-tailed test: \textit{p}-value is the area to the right of the test statistic.}
+\end{figure}
+
+
+% --- PINK: Left-tailed tests ---
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{section11/images/hypothesis_left_tail.pdf}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{section11/images/hypothesis_left_tail_wide.pdf}
+  \end{minipage}
+\caption*{Left-tailed test: \textit{p}-value is the area to the left of the test statistic.}
+\end{figure}
+
+% --- GREEN: Two-tailed test ---
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.52\textwidth]{section11/images/hypothesis_two_tail.pdf}
+  \caption*{Two-tailed test: p-value is the total area in both tails beyond $\pm$ test statistic.}
+\end{figure}
+
+
 
