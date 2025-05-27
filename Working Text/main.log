@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  28 MAY 2025 02:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  28 MAY 2025 03:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2082,14 +2082,16 @@ Underfull \vbox (badness 10000) detected at line 205
 
 
 
-[71])
+[71]
 
-[72 <./Section11/images/sweetening_10000_hist.pdf>]
+[72 <./Section11/images/sweetening_10000_hist.pdf>])
+
+[73]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
 
-[73
+[74
 
 
 ] (./main.aux)
@@ -2101,10 +2103,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1A9A7D67F4C8BD4410E9EAD7EB54D6F1;8308.
  ) 
 Here is how much of TeX's memory you used:
- 36306 strings out of 473190
- 753498 string characters out of 5715801
+ 36308 strings out of 473190
+ 753521 string characters out of 5715801
  1290122 words of memory out of 5000000
- 58651 multiletter control sequences out of 15000+600000
+ 58652 multiletter control sequences out of 15000+600000
  573324 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,96p,914b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2126,10 +2128,10 @@ ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/te
 xlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texl
 ive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (79 pages, 3897750 bytes).
+Output written on main.pdf (80 pages, 3898991 bytes).
 PDF statistics:
- 963 PDF objects out of 1000 (max. 8388607)
- 762 compressed objects within 8 object streams
- 219 named destinations out of 1000 (max. 500000)
+ 967 PDF objects out of 1000 (max. 8388607)
+ 765 compressed objects within 8 object streams
+ 220 named destinations out of 1000 (max. 500000)
  592 words of extra memory for PDF output out of 10000 (max. 10000000)
 
