@@ -465,14 +465,12 @@ In the last election, a state representative received 52\% of the votes cast. On
 \vspace{1em}
 \subsubsection*{Solution 1 (using Normal Approximation)}
 
+We want to determine the probability that the sample proportion is greater than $50\%$. In other words, we want to find $P(\hat{p} > 0.50)$.
+
 We want to determine the probability that the sample proportion is greater than 50\%. In other words, we want to find $P(\hat{p} > 0.50)$.
 
-We know that the sample proportion $\hat{p}$ is roughly Normally distributed with mean $p = 0.52$ and standard deviation
+Thus, we calculate 
 \begin{align*}
-\sqrt{p(1 - p)/n} & =  \sqrt{(0.52)(0.48)/300} = 0.0288. \\
-\end{align*}
-\begin{align*}
-Thus, we calculate \\
 P(\hat{p} > 0.50) & = P\left( \frac{\hat{p} - p}{\sqrt{p(1-p)/n}} > \frac{0.50 - 0.52}{0.0288} \right) \\
 &= P(Z > -0.69) = 1 - P(Z < -0.69) \quad \text{(Z is symmetric)} \\
 &= P(Z > -0.69) = 1 - P(Z > 0.69) \\
