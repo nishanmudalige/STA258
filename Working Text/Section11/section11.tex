@@ -1,0 +1,53 @@
+\setcounter{chapter}{10}  % sets the current chapter to 10 so that the next one becomes 11
+
+\chapter{Introduction to Hypothesis Testing}
+\label{ch:intro-hypothesis}
+
+\section{Test of Hypothesis for One Mean}
+
+\begin{definition}[Hypothesis Tests]
+An inferential procedure to determine whether there is sufficient evidence to suggest a condition for a population parameter using statistics from a sample.
+\end{definition}
+
+
+\textcolor{blue}{Attach a probability to the conclusion of a hypothesis test.}
+
+\subsubsection*{Steps}
+\begin{enumerate}
+    \item Decide on a level of significance ($\alpha$)
+    \item State the null hypothesis ($H_0$) and the alternative hypothesis ($H_a$) \textcolor{blue}{($H_1$)}
+    \item Calculate the appropriate test statistic.
+    \item Use the test statistic and a reference distribution to calculate a p-value. \\
+    \textcolor{blue}{(Also refer back to $H_a$)}
+    \item Compare p-value to $\alpha$ to make a conclusion.
+\end{enumerate}
+
+\textcolor{blue}{Note:} \\
+\textcolor{blue}{The definition of a p-value can be confusing. We will define it later.}
+
+\subsection*{Step 1: Decide on a Level of Significance ($\alpha$)}
+-Threshold for decision making.
+
+-Depends on tolerance for consequences of errors, sample size, nature of the study, and variability.
+
+-Common values: $0.10$, $0.01$, $0.05$ \textcolor{blue}{(very common default)}
+
+\subsection*{Step 2: State the Null Hypothesis ($H_0$) and the Alternative Hypothesis ($H_a$)}
+
+\textbf{$\Theta$:} parameter of interest
+
+\textbf{$\Theta_0$:} numerical value of the parameter of interest hypothesized under the null hypothesis.
+
+\[
+\begin{array}{lll}
+H_0: \Theta = \Theta_0 & (\Theta \leq \Theta_0) & H_a: \Theta > \Theta_0 \quad \textcolor{blue}{\text{one-sided (one-tailed)}} \\
+H_0: \Theta = \Theta_0 & (\Theta \geq \Theta_0) & H_a: \Theta < \Theta_0 \quad \textcolor{blue}{\text{one-sided (one-tailed)}} \\
+H_0: \Theta = \Theta_0 &                         & H_a: \Theta \neq \Theta_0 \quad \textcolor{purple}{\text{two-sided (two-tailed)}}
+\end{array}
+\]
+
+
+\textbf{Null ($H_0$):} Represents the current belief (\textcolor{blue}{status quo}) or the safe belief.
+
+\textbf{Alternative ($H_a$):} Represents the research hypothesis (or what you are asked to test)
+
