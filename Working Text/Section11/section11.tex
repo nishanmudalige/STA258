@@ -79,7 +79,7 @@ Use the test statistic, reference distribution, and refer back to $H_a$.
     \centering
     \includegraphics[width=\linewidth]{section11/images/hypothesis_right_tail_wide.pdf}
   \end{minipage}
-  \caption*{Right-tailed test: \textit{p}-value is the area to the right of the test statistic.}
+  \caption{Right-tailed test: \textit{p}-value is the area to the right of the test statistic.}
 \end{figure}
 
 
@@ -95,14 +95,14 @@ Use the test statistic, reference distribution, and refer back to $H_a$.
     \centering
     \includegraphics[width=\textwidth]{section11/images/hypothesis_left_tail_wide.pdf}
   \end{minipage}
-\caption*{Left-tailed test: \textit{p}-value is the area to the left of the test statistic.}
+\caption{Left-tailed test: \textit{p}-value is the area to the left of the test statistic.}
 \end{figure}
 
 % --- GREEN: Two-tailed test ---
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.52\textwidth]{section11/images/hypothesis_two_tail.pdf}
-  \caption*{Two-tailed test: p-value is the total area in both tails beyond $\pm$ test statistic.}
+  \caption{Two-tailed test: p-value is the total area in both tails beyond $\pm$ test statistic.}
 \end{figure}
 \subsection*{Step 5: Compare \textit{p}-value to level of significance $\alpha$ and make a conclusion}
 
@@ -184,7 +184,7 @@ hist(z.star, xlab = "differences", col = "blue");
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{Section11/images/sweetening_10000_hist.pdf}
-  \caption*{Histogram of $z_\star$ values from 10,000 simulations under $H_0$.}
+  \caption{Histogram of $z_\star$ values from 10,000 simulations under $H_0$.}
 \end{figure}
 \vspace{1em}
 \noindent\textbf{R code (Empirical p-value)}
@@ -778,6 +778,304 @@ S = \{1,\, 2,\, 3,\, 4,\, 5,\, 6\}
 \]
 
 “Roll a 6” is an event that contains one of these 6 outcomes.
+\begin{definition}
+A random variable $X$ has a \textbf{discrete uniform distribution} if each of the $n$ values in its range, say, $x_1, x_2, \ldots, x_n$, has equal probability. Then,
+\[
+f(x_i) = \frac{1}{n}
+\]
+\end{definition}
+\vspace{1em}
+\noindent\textbf{R code: }
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+# Define a die with values 1 through 6
+die <- c(1, 2, 3, 4, 5, 6)
+
+# Roll the die once
+sample(die, 1, replace = TRUE)
+## [1] 2
+
+# Roll the die six times
+sample(die, 6, replace = TRUE)
+## [1] 1 3 2 6 3 1
+\end{verbatim}
+\end{tcolorbox}
+\vspace{1em}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{section11/images/simulation_60.pdf} % adjust path if needed
+  \caption{Plot of frequencies from 60 simulations of a fair six-sided die.}
+\end{figure}
+\begin{definition}
+A \textbf{random variable} is a variable whose value is a numerical outcome of a random phenomenon.
+
+The \textbf{probability distribution} of a random variable $X$ tells us what values $X$ can take and how to assign probabilities to those values.
+\end{definition}
+\begin{nt}{The Binomial setting}
+\begin{itemize}
+  \item There are a fixed number $n$ of observations.
+  \item The $n$ observations are all \textbf{independent}. That is, knowing the result of one observation tells you nothing about the other observations.
+  \item Each observation falls into one of just two categories, which for convenience we call “success” and “failure”.
+  \item The probability of a success, call it $p$, is the same for each observation.
+\end{itemize}
+\end{nt}
+\noindent A random variable $Y$ is said to have a \textbf{binomial distribution} based on $n$ trials with success probability $p$ if and only if
+\[
+p(y) = \frac{n!}{y!(n - y)!} \, p^y (1 - p)^{n - y}, \quad y = 0, 1, 2, \ldots, n \quad \text{and} \quad 0 \leq p \leq 1.
+\]
+\begin{example}
+Think of rolling a die $n$ times as an example of the binomial setting. Each roll gives either a six or a number different from six. Knowing the outcome of one roll doesn’t tell us anything about other rolls, so the $n$ rolls are independent. 
+
+If we call six a success, then $p$ is the probability of a six and remains the same as long as we roll the same die. The number of sixes we count is a random variable $X$. The distribution of $X$ is called a \textbf{binomial distribution}.
+\end{example}
+\vspace{1em}
+\noindent\textbf{R code (Binomial Simulations and PMF)}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+## Simulation: Binomial with n = 10 and p = 1/6.
+rbinom(1, size = 10, prob = 1/6);
+## [1] 3
+
+rbinom(1, size = 10, prob = 1/6);
+## [1] 1
+
+rbinom(1, size = 10, prob = 1/6);
+## [1] 0
+
+## Pmf: Binomial with n = 10 and p = 1/6.
+x <- seq(0, 10, by = 1);
+y <- dbinom(x, 10, 1/6);
+plot(x, y, type = "p", col = "blue", pch = 19);
+\end{verbatim}
+\end{tcolorbox}
+\vspace{1em}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{section11/images/binomial_pmf.pdf}
+  \caption{PMF when $n=10$ and $p=1/6$}
+\end{figure}
+
+\vspace{1em}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{section11/images/binomial_pmf_100.pdf}
+  \caption{PMF when $n=100$ and $p=1/6$}
+\end{figure}
+\vspace{1em}
+\noindent\textbf{R code (PMF values for selected $x$ values)}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+dbinom(c(15, 16, 17, 18), size = 100, prob = 1/6);
+## [1] 0.10023663 0.10650142 0.10524847 0.09706247
+\end{verbatim}
+\end{tcolorbox}
+\vspace{1em}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{section11/images/binomial_simulation_histogram.pdf}
+  \caption{Simulation: 2000 YouTuber, $n = 100$, and $p = 1/6$}
+\end{figure}
+\vspace{1em}
+\noindent\textbf{R code (A few values from our simulation)}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+## vec.prop
+##  6  7  8  9 10 11 12 
+##  7  3  8 24 46 72 106 
+## [1] 266
+## [1] 0.133
+\end{verbatim}
+\end{tcolorbox}
+\vspace{1em}
+
+It turns out that our P-value for this simulation is: \\
+0.133
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{section11/images/sim_vs_theoretical_pmf.pdf}
+  \caption{Simulation vs Theoretical pmf}
+\end{figure}
+\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, title={Sampling Distribution of a Sample Proportion}, sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
+
+Draw an SRS of size $n$ from a large population that contains proportion $p$ of “successes”. Let $\hat{p}$ be the \textbf{sample proportion} of successes,
+
+\[
+\hat{p} = \frac{\text{number of successes in the sample}}{n}
+\]
+
+Then:
+
+\begin{itemize}
+  \item The \textbf{mean} of the sampling distribution of $\hat{p}$ is $p$.
+  \item The \textbf{standard deviation} of the sampling distribution is
+  \[
+  \sqrt{\frac{p(1 - p)}{n}}.
+  \]
+\end{itemize}
+
+\vspace{0.75em}
+
+\begin{itemize}
+  \item As the sample size increases, the sampling distribution of $\hat{p}$ becomes \textbf{approximately Normal}. That is, for large $n$, $\hat{p}$ has approximately the
+  \[
+  N\left(p, \sqrt{\frac{p(1 - p)}{n}}\right)
+  \]
+  distribution.
+\end{itemize}
+
+\end{tcolorbox}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{section11/images/binomial_normal_approximation.pdf}
+  \caption{Binomial with Normal Approximation}
+\end{figure}
+\begin{tcolorbox}[title=\textbf{Hypotheses Tests for a Proportion},
+colback=yellow!10,
+colframe=black!45,
+coltitle=black,
+fonttitle=\bfseries,
+breakable]
+
+To \textit{test the hypothesis} $H_0 : p = p_0$, compute the $z_\ast$ statistic:
+\[
+z_\ast = \frac{\hat{p} - p_0}{\sqrt{\dfrac{p_0(1 - p_0)}{n}}}
+\]
+
+In terms of a variable $Z$ having the standard Normal distribution, the approximate P-value for a test of $H_0$ against:
+
+\begin{align*}
+H_a &: p > p_0 \quad \text{is} \quad P(Z > z_\ast) \\
+H_a &: p < p_0 \quad \text{is} \quad P(Z < z_\ast) \\
+H_a &: p \ne p_0 \quad \text{is} \quad 2P(Z > |z_\ast|) \\
+\end{align*}
+
+\end{tcolorbox}
+\section*{Introduction to Hypothesis Testing (Significance Test)}
+
+Consider the following problem: In 1980s, it was generally believed that congenital abnormalities affect 5\% of the nation’s children. Some people believe that the increase in the number of chemicals in the environment in recent years has led to an increase in the incidence of abnormalities. A recent study examined 384 children and found that 46 of them showed signs of abnormality. Is this strong evidence that the risk has increased?
+
+\begin{itemize}
+  \item The above statement serves as a hypothesis, moreover it is a Research Hypothesis.
+\end{itemize}
+
+A hypothesis is:
+
+\begin{itemize}
+  \item a statement about a population.
+  \item a prediction that a parameter describing some characteristics of a variable (e.g., true proportion, $p$) takes a particular numerical value or falls in a certain range of values.
+\end{itemize}
+
+\vspace{1em}
+
+For conducting a Significance Test:
+
+\begin{itemize}
+  \item Researchers (you) use data to summarize the evidence about a hypothesis.
+  \item With data, you can compare the point estimates of parameters to the values predicted by the hypothesis.
+\end{itemize}
+
+\vspace{1em}
+
+\textbf{Important Ideas about Hypothesis Testing}
+
+\begin{itemize}
+  \item All the hypothesis tests boil down to the same question: “Is an observed difference or pattern too large to be attributed to chance?”
+  \item We measure “how large” by putting our sample results in the context of a sampling distribution model (e.g., Normal model, $t$ distribution).
+\end{itemize}
+
+\vspace{1em}
+
+To plan a statistical hypothesis test, specify the model you will use to test the null hypothesis and the parameter of interest.
+
+\begin{itemize}
+  \item All models require assumptions, so you will need to state them and check any corresponding conditions.
+  \item For example, if the conditions are satisfied, we can model the sampling distribution of the proportion with a Normal model. Otherwise, we cannot proceed with the test (we need to stop and reconsider).
+\end{itemize}
+\section*{Steps in conducting Hypothesis Testing}
+
+\begin{enumerate}
+  \item State the null and the alternative hypothesis.
+  \item Check the necessary assumptions.
+  \item Identify the test-statistic. Find the value of the test-statistic.
+  \item Find the p-value of the test-statistic.
+  \item State (if any) a conclusion.
+\end{enumerate}
+
+\begin{example}
+\textbf{Example of Hypothesis Testing for a Proportion}
+
+In 1980s, it was generally believed that congenital abnormalities affect 5\% of the nation’s children. Some people believe that the increase in the number of chemicals in the environment in recent years has led to an increase in the incidence of abnormalities. A recent study examined 384 children and found that 46 of them showed signs of abnormality. Is this strong evidence that the risk has increased?
+
+\vspace{1em}
+\textbf{Step 1. Set up the null and alternative hypothesis:}
+
+\begin{itemize}
+  \item The null hypothesis is the current belief: $H_0 : p = p_0$
+\end{itemize}
+
+In our example it would have a form: $H_0 : p = 0.05$
+
+\begin{itemize}
+  \item The Alternative hypothesis is what the researcher(s) [you] want to prove: $H_a : p > p_0$
+\end{itemize}
+
+In our example it would have a form: $H_a : p > 0.05$
+
+This means a one-sided test.
+
+\begin{itemize}
+  \item The goal here is to provide evidence against $H_0$ (e.g., suggest $H_a$).
+\end{itemize}
+
+You want to conclude $H_a$. \\
+Try a Proof by Contradiction: Assume $H_0$ is true \dots and hope your data contradicts it.
+
+\vspace{1em}
+\textbf{Step 2. Check the Necessary Assumptions:}
+
+\begin{itemize}
+  \item \textbf{Independence Assumption:} There is no reason to think that one child having genetic abnormalities would affect the probability that other children have them.
+
+  \item \textbf{Randomization Condition:} This sample may not be random, but genetic abnormalities are plausibly independent. The sample is probably representative of all children, with regards to genetic abnormalities.
+
+  \item \textbf{10\% Condition:} The sample of 384 children is less than 10\% of all children.
+
+  \item \textbf{Success/Failure Condition:} $np = (384)(0.05) = 19.2$ and \\
+  $n(1 - p) = (384)(0.95) = 364.8$ are both greater than 10, so the sample is large enough.
+\end{itemize}
+\vspace{1em}
+\textbf{Step 3. Identify the test-statistics. Find the value of the test-statistic:}
+
+Since the conditions are met, assume $H_0$ is true: \\
+The sampling distribution of $\hat{p}$ becomes \textbf{approximately Normal}. That is, for large $n$, $\hat{p}$ has approximately the
+\[
+N\left(p_0, \sqrt{\frac{p_0(1 - p_0)}{n}}\right)
+\]
+distribution.
+
+\[
+z_\ast = \frac{\hat{p} - p_0}{\sqrt{\dfrac{p_0(1 - p_0)}{n}}}
+= \frac{0.1198 - 0.05}{\sqrt{\dfrac{(0.05)(0.95)}{384}}}
+\approx 6.28
+\]
+
+Recall that
+\[
+\hat{p} = \frac{46}{384} = 0.1198.
+\]
+
+The value of $z^\ast$ is approximately 6.28, meaning that the observed proportion of children with genetic abnormalities is over 6 standard deviations above the hypothesized proportion ($p_0 = 0.05$).
+\end{example}
+
+
+
 
 
 
