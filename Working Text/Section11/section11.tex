@@ -535,9 +535,9 @@ A level $\alpha$ two-sided significance test rejects a hypothesis $H_0 : \mu = \
   sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
 
 \begin{tabular}{@{}ll@{\hspace{1.2cm}}ll@{}}
-$\bullet$ H$_0\!$: $\mu = \mu_0$ & (or $\mu \geq \mu_0$) & $H_a\!$: $\mu < \mu_0$ \\
-$\bullet$ H$_0\!$: $\mu = \mu_0$ & (or $\mu \leq \mu_0$) & $H_a\!$: $\mu > \mu_0$ \\
-$\bullet$ H$_0\!$: $\mu = \mu_0$ & & $H_a\!$: $\mu \ne \mu_0$
+$\bullet$ H$_0\!$ : $\mu = \mu_0$ & (or $\mu \geq \mu_0$) & $H_a\!$ : $\mu < \mu_0$ \\
+$\bullet$ H$_0\!$ : $\mu = \mu_0$ & (or $\mu \leq \mu_0$) & $H_a\!$ : $\mu > \mu_0$ \\
+$\bullet$ H$_0\!$ : $\mu = \mu_0$ & & $H_a\!$ : $\mu \ne \mu_0$
 \end{tabular}
 
 \vspace{0.75em}
@@ -737,6 +737,47 @@ Since $t^* = 2.12$ falls between these values, the two-sided P-value satisfies:
 Thus, the exact two-sided P-value is approximately \textbf{0.0524}, confirming the bracketing result.
 \end{example}
 
+\section{Test of Hypothesis for One Proportion}
+\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, title={One-Sample Hypothesis Test for Population Proportion ($p$)}, sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
+\textbf{When sample size is large enough (np, n(1-p) $\ge$ 10):}
+
+\begin{tabular}{@{}ll@{\hspace{1.2cm}}ll@{}}
+$\bullet$ $H_0\!$ : $p = p_0$ & (or $p \geq p_0$) & $H_a\!$ : $p < p_0$ \\
+$\bullet$ $H_0\!$ : $p = p_0$ & (or $p \leq p_0$) & $H_a\!$ : $p > p_0$ \\
+$\bullet$ $H_0\!$ : $p = p_0$ & & $H_a\!$ : $p \ne p_0$
+\end{tabular}
+
+
+
+\vspace{0.75em}
+\begin{tabular}{@{}l@{}}
+\textbf{Test statistic:} $z^* = \dfrac{\hat{p} - p_0}{\sqrt{\dfrac{p_0(1 - p_0)}{n}}}$
+\end{tabular}
+
+\vspace{0.75em}
+\textbf{Reference distribution:} Standard normal ($\mathcal{Z}$)
+\end{tcolorbox}
+\begin{example}[100-Cup Challenge]
+A YouTuber goes to her nearest Tim Hortons and buys 100 empty cups. After rolling up the rims, she ends up with 12 winning cups out of the 100 she bought, all of them were food prizes.
+
+If the probability of winning a food prize is supposed to be $\frac{1}{6}$, does she have evidence to claim that the probability of winning a food prize is less than $\frac{1}{6}$?
+\end{example}
+\begin{definition}
+The \textbf{sample space} $\mathbf{S}$ of a random phenomenon is the set of all possible outcomes.
+
+An \textbf{event} is an outcome or a set of outcomes of a random phenomenon. That is, an event is a subset of the sample space.
+
+A \textbf{probability model} is a mathematical description of a random phenomenon consisting of two parts: a sample space $S$ and a way of assigning probabilities to events.
+\end{definition}
+
+Rolling a fair die (random phenomenon). There are 6 possible outcomes when we roll a die.\\
+The sample space for rolling a die and counting the pips is
+
+\[
+S = \{1,\, 2,\, 3,\, 4,\, 5,\, 6\}
+\]
+
+“Roll a 6” is an event that contains one of these 6 outcomes.
 
 
 
