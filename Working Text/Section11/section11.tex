@@ -687,6 +687,55 @@ H_a : \mu \ne \mu_0 &\quad \text{is} \quad 2P(T \ge |t^\ast|)
 These P-values are exact if the population distribution is Normal and are approximately correct for large $n$ in other cases.
 
 \end{tcolorbox}
+\begin{example}
+We are conducting a two-sided one-sample $t$-test for the hypotheses:
+\begin{align*}
+H_0 &: \mu = 64 \\
+H_a &: \mu \ne 64
+\end{align*}
+
+based on a sample of $n = 15$ observations, with test statistic $t^* = 2.12$.
+
+\textbf{a) Degrees of freedom:}
+
+\[
+df = n - 1 = 15 - 1 = 14
+\]
+
+\textbf{b) Critical values and P-value bounds:}
+
+From the $t$-distribution table for $df = 14$:
+
+\begin{itemize}
+  \item $t = 1.761$ corresponds to a two-tailed probability of 0.10
+  \item $t = 2.145$ corresponds to a two-tailed probability of 0.05
+\end{itemize}
+
+Since $t^* = 2.12$ falls between these values, the two-sided P-value satisfies:
+\[
+0.05 < \text{P-value} < 0.10
+\]
+
+\textbf{c) Significance:}
+
+\begin{itemize}
+  \item At the 10\% level: \textbf{Yes}, since P-value $< 0.10$
+  \item At the 5\% level: \textbf{No}, since P-value $> 0.05$
+\end{itemize}
+
+\textbf{d) Exact two-sided P-value using R:}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+# Compute exact two-sided P-value for t* = 2.12 with df = 14
+2 * (1 - pt(2.12, df = 14))
+
+## [1] 0.05235683
+\end{verbatim}
+\end{tcolorbox}
+
+Thus, the exact two-sided P-value is approximately \textbf{0.0524}, confirming the bracketing result.
+\end{example}
 
 
 
