@@ -221,6 +221,117 @@ $\bullet\ H_0\!: \mu = \mu_0$ & & $H_a\!: \mu \neq \mu_0$ \\
 \vspace{0.75em}
 \textbf{Reference distribution:} Standard normal ($Z$)
 \end{tcolorbox}
+\begin{example}[UTM Deer]
+Deer are a common sight on the UTM campus. Suppose an ecologist is interested in the average mass of adult white-tailed does (female deer) around the Mississauga campus to determine whether they are healthy for the upcoming winter. The ecologist captures a sample of 36 adult females around the UTM and measures the average mass of this sample to be 42.53 kg.
+
+From previous studies conducted in the area, the average mass of healthy does was reported to be 45 kg. Conduct a hypothesis test at the 5\% significance level to determine whether the mass of does around UTM has decreased. Assume the standard deviation is known to be 5.25 kg.
+
+
+\vspace{1em}
+
+\textbf{1. Level of significance.} \(\alpha = 0.05\)
+
+\textbf{2. State the null and alternative hypotheses.}
+\[
+H_0: \mu = 45 \qquad H_a: \mu < 45
+\]
+
+\textbf{3. Calculate appropriate test statistic.}
+
+\vspace{0.5em}
+
+Given:
+\[
+n = 36, \quad \bar{x} = 42.53, \quad \sigma = 5.25
+\]
+
+Since \(\sigma\) is known, the test statistic is:
+\[
+z^* = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{42.53 - 45}{5.25/\sqrt{36}} = -2.82
+\]
+
+Reference distribution: standard normal
+
+\textbf{4. Calculate p-value}
+
+\[
+\text{p-value} = P(Z < -2.82) \approx 0.0024
+\]
+
+\captionsetup{skip=0pt} % no vertical gap between figure and caption
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{section11/images/deer_pvalue.pdf}
+\caption{Left-tailed p-value for the test statistic \( z^* = -2.82 \)}
+\end{figure}
+
+\textbf{5. Compare p-value with level of significance \(\alpha\) and make a conclusion:}
+
+\[
+0.0024 < 0.05 \Rightarrow \text{p-value} < \alpha
+\]
+
+There is sufficient evidence at the 5\% level of significance to reject the null that does this winter weigh the same as in the past and to conclude the alternative that does this winter weigh less than 45 kg.
+
+\vspace{1em} % optional, if there's space needed above the label
+\noindent\textbf{R code:}
+\vspace{0.8em}
+\begin{tcolorbox}[
+  colback=gray!10, 
+  colframe=black!45, 
+  arc=2mm, 
+  breakable, 
+  after skip=0pt,  % no space after box
+  before skip=0.3pt, % 🟢 key to tighten gap before box
+  boxsep=1pt, left=4pt, right=4pt, top=2pt, bottom=2pt % 🟢 shrink padding
+]
+\begin{verbatim}
+# Find test stat
+z_test_stat = (42.53 - 45) / (5.25 / sqrt(36))
+z_test_stat
+[1] -2.822857
+
+# Find the p-value
+# Since the alternative is Ha : mu < 45
+p-value = pnorm(z_test_stat)
+[1] 0.00237989
+\end{verbatim}
+\end{tcolorbox}
+\noindent\textit{Note:} The \texttt{pnorm()} function in R, by default, returns the cumulative probability (area) to the left of the given value. \\
+\par\vspace{0.8em}  % <-- This forces the vertical break and then adds space
+\noindent\textbf{R code: Using BSDA package}
+\vspace{0.3em}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm,
+  breakable, boxsep=1pt, left=4pt, right=4pt, top=2pt, bottom=2pt,
+  before skip=0pt, after skip=1em]
+\small
+\begin{verbatim}
+# Using the BSDA library. install BSDA if it is not already installed.
+# install.packages("BSDA")
+> library(BSDA)
+> # Conduct the z-test with the zsum.test function
+> zsum.test(mean.x = 42.53, sigma.x = 5.24, n.x = 36, mu = 45, alternative = "less")
+
+        One-sample z-Test
+
+data:  Summarized x
+z = -2.8282, p-value = 0.00234
+alternative hypothesis: true mean is less than 45
+95 percent confidence interval:
+ NA 43.96651
+sample estimates:
+mean of x 
+    42.53 
+\end{verbatim}
+\end{tcolorbox}
+
+\vspace{1em}
+\noindent\textbf{Interpretation:}
+
+There is sufficient evidence at the 5\% level of significance to reject the null hypothesis. We conclude that the average mass of does this winter is significantly less than 45 kg.
+\end{example}
+
 
 
 
