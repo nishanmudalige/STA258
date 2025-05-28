@@ -332,6 +332,363 @@ mean of x
 There is sufficient evidence at the 5\% level of significance to reject the null hypothesis. We conclude that the average mass of does this winter is significantly less than 45 kg.
 \end{example}
 
+\begin{example}[Executives’ Blood Pressures]
+
+The National Center for Health Statistics reports that the systolic blood pressure for males 35 to 44 years of age has mean 128 and standard deviation 15. 
+
+The medical director of a large company looks at the medical records of 72 executives in this age group and finds that the mean systolic blood pressure in this sample is $\bar{x} = 126.07$. Is this evidence that the company’s executives have a different mean blood pressure from the general population?
+
+Suppose we know that executives’ blood pressures follow a Normal distribution with standard deviation $\sigma = 15$.
+
+\textbf{Solution:} Let $\mu$ be the mean systolic blood pressure of the executive population.
+
+\begin{enumerate}
+    \item \textbf{State hypotheses:} \\
+    $H_0: \mu = 128$ \hspace{1cm} vs \hspace{1cm} $H_a: \mu \ne 128$
+    
+    \item \textbf{Test statistic:} \\
+    \[
+    z_\ast = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{126.07 - 128}{15 / \sqrt{72}} = -1.09
+    \]
+
+    \item \textbf{P-value:} \\
+    \[
+    2P(Z > |z_\ast|) = 2P(Z > 1.09) = 2(1 - 0.8621) = 0.2758
+    \]
+
+    \item \textbf{Conclusion:} \\
+    More than 27\% of the time, a simple random sample of size 72 from the general male population would have a mean blood pressure at least as far from 128 as that of the executive sample. The observed $\bar{x} = 126.07$ is therefore not good evidence that executives differ from other men.
+\end{enumerate}
+
+\end{example}
+\begin{tcolorbox}[title=\textbf{Tests for a Population Mean},
+  colback=yellow!10,
+  colframe=black!45,
+  coltitle=black,
+  fonttitle=\bfseries,
+  breakable]
+
+There are four steps in carrying out a significance test:
+\begin{enumerate}
+  \item State the hypotheses.
+  \item Calculate the test statistic.
+  \item Find the P-value.
+  \item State your conclusion in the context of your specific setting.
+\end{enumerate}
+
+Once you have stated your hypotheses and identified the proper test, you or your computer can do Steps 2 and 3 by following a recipe. 
+
+\end{tcolorbox}
+\begin{tcolorbox}[title=\textbf{Z Test for a Population Mean $\mu$},
+  colback=yellow!10,
+  colframe=black!45,
+  coltitle=black,
+  fonttitle=\bfseries,
+  breakable]
+
+Here is the recipe for the test we have used in our examples.\\
+Draw a simple random sample of size $n$ from a Normal population that has unknown mean $\mu$ and known standard deviation $\sigma$.
+
+To test the null hypothesis that $\mu$ has a specified value, $H_0 : \mu = \mu_0$, calculate the \textbf{one-sample $z$ statistic}:
+\[
+z_\ast = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}
+\]
+
+In terms of a variable $Z$ having the standard Normal distribution, the P-value for a test of $H_0$ against:
+\begin{itemize}
+  \item $H_a: \mu > \mu_0$ is $P(Z > z_\ast)$
+  \item $H_a: \mu < \mu_0$ is $P(Z < z_\ast)$
+  \item $H_a: \mu \ne \mu_0$ is $2P(Z > |z_\ast|)$
+\end{itemize}
+
+\end{tcolorbox}
+\begin{example}
+
+Consider the following hypothesis test:
+
+\begin{align*}
+H_0 &: \mu = 20 \\
+H_a &: \mu < 20
+\end{align*}
+
+
+A sample of 50 provided a sample mean of 19.4. The population standard deviation is 2.
+
+\begin{enumerate}
+    \item[(a)] Compute the value of the test statistic.
+    \item[(b)] What is the p-value?
+    \item[(c)] Using $\alpha = 0.05$, what is your conclusion?
+\end{enumerate}
+
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item[(a)] \textbf{Test statistic:}
+    \[
+    z_\ast = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{19.4 - 20}{2 / \sqrt{50}} = -2.1213
+    \]
+    
+    \item[(b)] \textbf{P-value:}
+    \[
+    P(Z < z_\ast) = P(Z < -2.1213) = 0.0169
+    \]
+
+    \item[(c)] \textbf{Conclusion:} \\
+    Since the P-value $= 0.0169 < \alpha = 0.05$, we reject $H_0 : \mu = 20$. We conclude that $\mu < 20$.
+\end{enumerate}
+
+\end{example}
+\begin{example}
+
+Consider the following hypothesis test:
+
+\begin{align*}
+H_0 &: \mu = 25 \\
+H_a &: \mu > 25
+\end{align*}
+
+
+A sample of 40 provided a sample mean of 26.4. The population standard deviation is 6.
+
+\begin{enumerate}
+    \item[(a)] Compute the value of the test statistic.
+    \item[(b)] What is the p-value?
+    \item[(c)] Using $\alpha = 0.01$, what is your conclusion?
+\end{enumerate}
+
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item[(a)] \textbf{Test statistic:}
+    \[
+    z_\ast = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{26.4 - 25}{6 / \sqrt{40}} = 1.4757
+    \]
+
+    \item[(b)] \textbf{P-value:}
+    \[
+    P(Z > z_\ast) = P(Z > 1.4757) = 0.0700
+    \]
+
+    \item[(c)] \textbf{Conclusion:} \\
+    Since P-value $= 0.0700 > \alpha = 0.01$, we \textbf{cannot reject} $H_0 : \mu = 25$. \\
+    We conclude that we don’t have enough evidence to claim that $\mu > 25$.
+\end{enumerate}
+
+\end{example}
+\begin{example}
+
+Consider the following hypothesis test:
+
+\begin{align*}
+H_0 &: \mu = 15 \\ 
+H_a &: \mu \ne 15
+\end{align*}
+
+A sample of 50 provided a sample mean of 14.15. The population standard deviation is 3.
+
+\begin{enumerate}
+    \item[(a)] Compute the value of the test statistic.
+    \item[(b)] What is the p-value?
+    \item[(c)] Using $\alpha = 0.05$, what is your conclusion?
+\end{enumerate}
+
+\textbf{Solution:}
+
+\begin{enumerate}
+    \item[(a)] \textbf{Test statistic:}
+    \[
+    z_\ast = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{14.15 - 15}{3 / \sqrt{50}} = -2.0034
+    \]
+
+    \item[(b)] \textbf{P-value:}
+    \[
+    2P(Z > |z_\ast|) = 2P(Z > |{-2.0034}|) = 2P(Z > 2.0034) = 0.0451
+    \]
+
+    \item[(c)] \textbf{Conclusion:} \\
+    Since P-value $= 0.0451 < \alpha = 0.05$, we reject $H_0 : \mu = 15$. \\
+    We conclude that $\mu \ne 15$.
+\end{enumerate}
+
+\textbf{Confidence Interval Interpretation:}
+
+The 95\% confidence interval for $\mu$ is:
+\[
+\bar{x} \pm z_\ast \left( \frac{\sigma}{\sqrt{n}} \right)
+\]
+\[
+14.15 \pm 1.96 \left( \frac{3}{\sqrt{50}} \right)
+= (13.3184,\ 14.9815)
+\]
+
+Since the hypothesized value $\mu_0 = 15$ falls \textbf{outside} this interval, we again reject $H_0 : \mu = 15$.
+
+\end{example}
+\begin{nt}[Confidence Intervals and Two-Sided Tests]
+\textit{
+A level $\alpha$ two-sided significance test rejects a hypothesis $H_0 : \mu = \mu_0$ exactly when the value $\mu_0$ falls outside a level $1 - \alpha$ confidence interval for $\mu$.
+}
+
+\end{nt}
+\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, 
+  title={One-Sample Hypothesis Test for Population Mean ($\mu$) \textbf{(When $\sigma$ is not known)}},
+  sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
+
+\begin{tabular}{@{}ll@{\hspace{1.2cm}}ll@{}}
+$\bullet$ H$_0\!$: $\mu = \mu_0$ & (or $\mu \geq \mu_0$) & $H_a\!$: $\mu < \mu_0$ \\
+$\bullet$ H$_0\!$: $\mu = \mu_0$ & (or $\mu \leq \mu_0$) & $H_a\!$: $\mu > \mu_0$ \\
+$\bullet$ H$_0\!$: $\mu = \mu_0$ & & $H_a\!$: $\mu \ne \mu_0$
+\end{tabular}
+
+\vspace{0.75em}
+\begin{tabular}{@{}l @{}}
+\textbf{Test statistic:} $t^\ast = \dfrac{\bar{X} - \mu_0}{s / \sqrt{n}}$
+\end{tabular}
+
+\vspace{0.75em}
+\textbf{Reference distribution:} $t$ distribution with $n - 1$ degrees of freedom
+
+\end{tcolorbox}
+\begin{example}[Hypothesis Test: Laughter and Heart Rate, Unknown $\sigma$]
+
+Researchers studied the physiological effects of laughter. They measured heart rates (in beats per minute) of \textbf{$n = 25$} subjects (ages 18–34) while they laughed. They obtained:
+\[
+\bar{x} = 73.5, \quad s = 6, \quad \alpha = 0.05
+\]
+It is well known that the resting heart rate is 71 bpm. Is there evidence that the mean heart rate during laughter exceeds 71 bpm?
+
+\textbf{Step 1: State the hypotheses.}
+\[
+\begin{aligned}
+H_0 &: \mu = 71 \\
+H_a &: \mu > 71
+\end{aligned}
+\]
+
+\textbf{Step 2: Check assumptions.}
+\begin{itemize}
+  \item The sample is an independent random sample of individuals aged 18–34.
+  \item The population of heart rates during laughter is normally distributed.
+\end{itemize}
+
+\textbf{Step 3: Compute the test statistic.}
+
+Since $\sigma$ is unknown, we use the $t$ statistic:
+\[
+t^\ast = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} = \frac{73.5 - 71}{6 / \sqrt{25}} = 2.083
+\]
+
+Reference distribution: $t$ distribution with $n - 1 = 25 - 1 = 24$ degrees of freedom.
+
+\textbf{Step 4: Determine the p-value.}
+
+Using the $t$ distribution with 24 df:
+\[
+0.01 < \text{p-value} < 0.025
+\]
+
+\textbf{Step 5: Make a conclusion.}
+
+Since $\text{p-value} < \alpha = 0.05$, we reject $H_0$.
+
+\textit{There is sufficient evidence at the 5\% level of significance to reject the null that the mean is 71 bpm in favor of the alternative that the mean is greater than 71 bpm for people who are laughing.}
+
+
+\end{example}
+\begin{example}
+
+A researcher is asked to test the hypothesis that the average price of a 2-star (CAA rating) motel room has decreased since last year. Last year, a study showed that the prices were Normally distributed with a mean of \$89.50.
+
+A random sample of twelve 2-star motels produced the following room prices:
+
+\[
+\text{\$85.00, 92.50, 87.50, 89.90, 90.00, 82.50, 87.50, 90.00, 85.00, 89.00, 91.50, 87.50}
+\]
+
+At the 5\% level of significance, can we conclude that the mean price has decreased?
+
+\textbf{Solution:}
+
+Let $\mu$ be the true average price of a 2-star motel room.
+
+\begin{enumerate}
+  \item \textbf{State hypotheses.}
+  \[
+  H_0 : \mu = 89.5 \quad \text{vs} \quad H_a : \mu < 89.5
+  \]
+
+  \item \textbf{Compute test statistic.}
+  \[
+  t^\ast = \frac{\bar{x} - \mu_0}{s / \sqrt{n}} = \frac{88.1583 - 89.5}{2.9203 / \sqrt{12}} = -1.5915
+  \]
+
+  \item \textbf{Find the P-value.} \\
+  With $df = 11$, the P-value (from the $t$-distribution table) is between 0.05 and 0.10.
+
+  \item \textbf{Conclusion.} \\
+  Since P-value $> 0.05$, we \textbf{fail to reject} $H_0$. \\
+  There is not sufficient evidence to conclude that the average price of 2-star motels has decreased this year.
+\end{enumerate}
+\vspace{1em}
+\noindent\textbf{R code (One Sample t-test)}
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+# Step 1. Entering data;
+prices=c(85.00, 92.50, 87.50, 89.90, 90.00, 82.50,
+         87.50, 90.00, 85.00, 89.00, 91.50, 87.50);
+
+# Step 2. Hypothesis test;
+t.test(prices, alternative="less", mu=89.5);
+\end{verbatim}
+\end{tcolorbox}
+\vspace{1em}
+\noindent\textbf{R output}
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+## 
+##  One Sample t-test
+## 
+## data:  prices
+## t = -1.5915, df = 11, p-value = 0.0699
+## alternative hypothesis: true mean is less than 89.5
+## 95 percent confidence interval:
+##  -Inf 89.67229
+## sample estimates:
+## mean of x 
+##  88.15833 
+\end{verbatim}
+\end{tcolorbox}
+
+
+\end{example}
+
+\begin{tcolorbox}[title=\textbf{The one-sample \textit{t} test},
+  colback=yellow!10,
+  colframe=black!45,
+  coltitle=black,
+  fonttitle=\bfseries,
+  breakable]
+
+Draw an SRS of size $n$ from a large population having unknown mean $\mu$.
+
+To \textit{test the hypothesis} $H_0 : \mu = \mu_0$, compute the \textit{one-sample $t$ statistic}
+\[
+t^\ast = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}
+\]
+
+In terms of a variable $T$ having the $t_{n - 1}$ distribution, the P-value for a test of $H_0$ against
+
+\begin{align*}
+H_a : \mu > \mu_0 &\quad \text{is} \quad P(T \ge t^\ast) \\
+H_a : \mu < \mu_0 &\quad \text{is} \quad P(T \le t^\ast) \\
+H_a : \mu \ne \mu_0 &\quad \text{is} \quad 2P(T \ge |t^\ast|)
+\end{align*}
+
+These P-values are exact if the population distribution is Normal and are approximately correct for large $n$ in other cases.
+
+\end{tcolorbox}
+
+
 
 
 
