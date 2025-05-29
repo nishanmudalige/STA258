@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  27 MAY 2025 04:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  29 MAY 2025 17:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1420,12 +1420,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 [5]
 
 [6]
-<Section1/img/Leftskew.jpg, id=282, 750.805pt x 754.82pt>
+<Section1/img/Leftskew.jpg, id=287, 750.805pt x 754.82pt>
 File: Section1/img/Leftskew.jpg Graphic file (type jpg)
 <use Section1/img/Leftskew.jpg>
 Package pdftex.def Info: Section1/img/Leftskew.jpg  used on input line 165.
 (pdftex.def)             Requested size: 337.85913pt x 339.66586pt.
-<Section1/img/Rightskew.jpg, id=283, 750.805pt x 754.82pt>
+<Section1/img/Rightskew.jpg, id=288, 750.805pt x 754.82pt>
 File: Section1/img/Rightskew.jpg Graphic file (type jpg)
 <use Section1/img/Rightskew.jpg>
 Package pdftex.def Info: Section1/img/Rightskew.jpg  used on input line 175.
@@ -1433,7 +1433,7 @@ Package pdftex.def Info: Section1/img/Rightskew.jpg  used on input line 175.
 
 
 [7 <./Section1/img/Leftskew.jpg>]
-<Section1/img/Symmetry.jpg, id=292, 289.08pt x 171.64125pt>
+<Section1/img/Symmetry.jpg, id=297, 289.08pt x 171.64125pt>
 File: Section1/img/Symmetry.jpg Graphic file (type jpg)
 <use Section1/img/Symmetry.jpg>
 Package pdftex.def Info: Section1/img/Symmetry.jpg  used on input line 200.
@@ -1443,7 +1443,7 @@ Package pdftex.def Info: Section1/img/Symmetry.jpg  used on input line 200.
 [8 <./Section1/img/Rightskew.jpg>]
 
 [9 <./Section1/img/Symmetry.jpg>]
-<Section1/img/Histogram.jpg, id=307, 477.785pt x 249.93375pt>
+<Section1/img/Histogram.jpg, id=312, 477.785pt x 249.93375pt>
 File: Section1/img/Histogram.jpg Graphic file (type jpg)
 <use Section1/img/Histogram.jpg>
 Package pdftex.def Info: Section1/img/Histogram.jpg  used on input line 241.
@@ -1455,12 +1455,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--261
 
  []
 
-<Section1/img/HisL.jpg, id=316, 1424.32124pt x 1019.81pt>
+<Section1/img/HisL.jpg, id=321, 1424.32124pt x 1019.81pt>
 File: Section1/img/HisL.jpg Graphic file (type jpg)
 <use Section1/img/HisL.jpg>
 Package pdftex.def Info: Section1/img/HisL.jpg  used on input line 267.
 (pdftex.def)             Requested size: 356.07944pt x 254.95187pt.
-<Section1/img/HisR.jpg, id=317, 490.83376pt x 490.83376pt>
+<Section1/img/HisR.jpg, id=322, 490.83376pt x 490.83376pt>
 File: Section1/img/HisR.jpg Graphic file (type jpg)
 <use Section1/img/HisR.jpg>
 Package pdftex.def Info: Section1/img/HisR.jpg  used on input line 276.
@@ -1468,12 +1468,12 @@ Package pdftex.def Info: Section1/img/HisR.jpg  used on input line 276.
 
 
 [11 <./Section1/img/HisL.jpg>]
-<Section1/img/HisS.jpg, id=323, 1231.60126pt x 816.04875pt>
+<Section1/img/HisS.jpg, id=328, 1231.60126pt x 816.04875pt>
 File: Section1/img/HisS.jpg Graphic file (type jpg)
 <use Section1/img/HisS.jpg>
 Package pdftex.def Info: Section1/img/HisS.jpg  used on input line 285.
 (pdftex.def)             Requested size: 307.89955pt x 204.01169pt.
-<Section1/img/BoxPlot.jpg, id=324, 1576.89125pt x 888.31876pt>
+<Section1/img/BoxPlot.jpg, id=329, 1576.89125pt x 888.31876pt>
 File: Section1/img/BoxPlot.jpg Graphic file (type jpg)
 <use Section1/img/BoxPlot.jpg>
 Package pdftex.def Info: Section1/img/BoxPlot.jpg  used on input line 294.
@@ -1490,7 +1490,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--303
 
  []
 
-<Section1/img/Bskew.jpg, id=332, 2122.93124pt x 958.58125pt>
+<Section1/img/Bskew.jpg, id=337, 2122.93124pt x 958.58125pt>
 File: Section1/img/Bskew.jpg Graphic file (type jpg)
 <use Section1/img/Bskew.jpg>
 Package pdftex.def Info: Section1/img/Bskew.jpg  used on input line 309.
@@ -1512,12 +1512,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--333
 
  []
 
-<Section1/img/R1.jpg, id=340, 791.95876pt x 655.44875pt>
+<Section1/img/R1.jpg, id=345, 791.95876pt x 655.44875pt>
 File: Section1/img/R1.jpg Graphic file (type jpg)
 <use Section1/img/R1.jpg>
 Package pdftex.def Info: Section1/img/R1.jpg  used on input line 336.
 (pdftex.def)             Requested size: 356.37814pt x 294.9492pt.
-<Section1/img/R2.jpg, id=341, 851.18pt x 108.405pt>
+<Section1/img/R2.jpg, id=346, 851.18pt x 108.405pt>
 File: Section1/img/R2.jpg Graphic file (type jpg)
 <use Section1/img/R2.jpg>
 Package pdftex.def Info: Section1/img/R2.jpg  used on input line 345.
@@ -1574,7 +1574,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-<Section3/Img3/CLT.jpg, id=397, 2536.47626pt x 1737.49126pt>
+<Section3/Img3/CLT.jpg, id=402, 2536.47626pt x 1737.49126pt>
 File: Section3/Img3/CLT.jpg Graphic file (type jpg)
 <use Section3/Img3/CLT.jpg>
 Package pdftex.def Info: Section3/Img3/CLT.jpg  used on input line 21.
@@ -1605,7 +1605,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--245
 
 
 [28]
-<Section4/images/pmf_plot.pdf, id=431, 433.62pt x 289.08pt>
+<Section4/images/pmf_plot.pdf, id=436, 433.62pt x 289.08pt>
 File: Section4/images/pmf_plot.pdf Graphic file (type pdf)
 <use Section4/images/pmf_plot.pdf>
 Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 284.
@@ -1614,7 +1614,7 @@ Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 284.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n50.pdf, id=432, 433.62pt x 289.08pt>
+<Section4/images/pmf_n50.pdf, id=437, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n50.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n50.pdf>
 Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 292.
@@ -1622,7 +1622,7 @@ Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 292.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n100.pdf, id=433, 433.62pt x 289.08pt>
+<Section4/images/pmf_n100.pdf, id=438, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n100.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n100.pdf>
 Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 300.
@@ -1630,7 +1630,7 @@ Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 300.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n300.pdf, id=434, 433.62pt x 289.08pt>
+<Section4/images/pmf_n300.pdf, id=439, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n300.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n300.pdf>
 Package pdftex.def Info: Section4/images/pmf_n300.pdf  used on input line 308.
@@ -1645,7 +1645,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [30 <./Section4/images/pmf_plot.pdf> <./Section4/images/pmf_n50.pdf>]
 
 [31 <./Section4/images/pmf_n100.pdf> <./Section4/images/pmf_n300.pdf>]
-<Section4/images/binomial_normal.pdf, id=480, 578.16pt x 361.35pt>
+<Section4/images/binomial_normal.pdf, id=485, 578.16pt x 361.35pt>
 File: Section4/images/binomial_normal.pdf Graphic file (type pdf)
 <use Section4/images/binomial_normal.pdf>
 Package pdftex.def Info: Section4/images/binomial_normal.pdf  used on input lin
@@ -1715,7 +1715,7 @@ Chapter 5.
 ]
 
 [40]
-<Section5/images/simulation_plot.pdf, id=535, 578.16pt x 361.35pt>
+<Section5/images/simulation_plot.pdf, id=539, 578.16pt x 361.35pt>
 File: Section5/images/simulation_plot.pdf Graphic file (type pdf)
 <use Section5/images/simulation_plot.pdf>
 Package pdftex.def Info: Section5/images/simulation_plot.pdf  used on input lin
@@ -1731,7 +1731,7 @@ Overfull \hbox (2.04045pt too wide) in paragraph at lines 159--159
  col = "blue")[] 
  []
 
-<Section5/images/simulation_multi.pdf, id=536, 578.16pt x 361.35pt>
+<Section5/images/simulation_multi.pdf, id=540, 578.16pt x 361.35pt>
 File: Section5/images/simulation_multi.pdf Graphic file (type pdf)
 <use Section5/images/simulation_multi.pdf>
 Package pdftex.def Info: Section5/images/simulation_multi.pdf  used on input li
@@ -1797,7 +1797,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 [47]
-<Section6/images/confidence_intervals.pdf, id=586, 722.7pt x 505.89pt>
+<Section6/images/confidence_intervals.pdf, id=590, 722.7pt x 505.89pt>
 File: Section6/images/confidence_intervals.pdf Graphic file (type pdf)
 <use Section6/images/confidence_intervals.pdf>
 Package pdftex.def Info: Section6/images/confidence_intervals.pdf  used on inpu
@@ -1806,7 +1806,7 @@ t line 265.
 
 
 [48]
-<Section6/images/normal_confidence_curve.pdf, id=591, 433.62pt x 325.215pt>
+<Section6/images/normal_confidence_curve.pdf, id=595, 433.62pt x 325.215pt>
 File: Section6/images/normal_confidence_curve.pdf Graphic file (type pdf)
 <use Section6/images/normal_confidence_curve.pdf>
 Package pdftex.def Info: Section6/images/normal_confidence_curve.pdf  used on i
@@ -1872,7 +1872,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 ]
 
 [56]
-<section7/images/density_curves.pdf, id=644, 505.89pt x 361.35pt>
+<section7/images/density_curves.pdf, id=648, 505.89pt x 361.35pt>
 File: section7/images/density_curves.pdf Graphic file (type pdf)
 <use section7/images/density_curves.pdf>
 Package pdftex.def Info: section7/images/density_curves.pdf  used on input line
@@ -1919,19 +1919,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 316.
-<Section7/images/tax_histogram.pdf, id=670, 505.89pt x 361.35pt>
+<Section7/images/tax_histogram.pdf, id=674, 505.89pt x 361.35pt>
 File: Section7/images/tax_histogram.pdf Graphic file (type pdf)
 <use Section7/images/tax_histogram.pdf>
 Package pdftex.def Info: Section7/images/tax_histogram.pdf  used on input line 
 348.
 (pdftex.def)             Requested size: 281.85587pt x 201.32906pt.
-<Section7/images/tax_boxplot.pdf, id=671, 433.62pt x 361.35pt>
+<Section7/images/tax_boxplot.pdf, id=675, 433.62pt x 361.35pt>
 File: Section7/images/tax_boxplot.pdf Graphic file (type pdf)
 <use Section7/images/tax_boxplot.pdf>
 Package pdftex.def Info: Section7/images/tax_boxplot.pdf  used on input line 36
 2.
 (pdftex.def)             Requested size: 234.8775pt x 195.7326pt.
-<Section7/images/tax_qqplot.pdf, id=672, 433.62pt x 361.35pt>
+<Section7/images/tax_qqplot.pdf, id=676, 433.62pt x 361.35pt>
 File: Section7/images/tax_qqplot.pdf Graphic file (type pdf)
 <use Section7/images/tax_qqplot.pdf>
 Package pdftex.def Info: Section7/images/tax_qqplot.pdf  used on input line 376
@@ -2011,14 +2011,254 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
-)
+) (./Section11/section11.tex
 
 [67]
+Chapter 11.
+
+
+[68
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+<section11/images/hypothesis_right_tail.pdf, id=741, 505.89pt x 289.08pt>
+File: section11/images/hypothesis_right_tail.pdf Graphic file (type pdf)
+<use section11/images/hypothesis_right_tail.pdf>
+Package pdftex.def Info: section11/images/hypothesis_right_tail.pdf  used on in
+put line 75.
+(pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
+<section11/images/hypothesis_right_tail_wide.pdf, id=742, 505.89pt x 289.08pt>
+File: section11/images/hypothesis_right_tail_wide.pdf Graphic file (type pdf)
+<use section11/images/hypothesis_right_tail_wide.pdf>
+Package pdftex.def Info: section11/images/hypothesis_right_tail_wide.pdf  used 
+on input line 80.
+(pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
+<section11/images/hypothesis_left_tail.pdf, id=743, 505.89pt x 289.08pt>
+File: section11/images/hypothesis_left_tail.pdf Graphic file (type pdf)
+<use section11/images/hypothesis_left_tail.pdf>
+Package pdftex.def Info: section11/images/hypothesis_left_tail.pdf  used on inp
+ut line 91.
+(pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
+<section11/images/hypothesis_left_tail_wide.pdf, id=744, 505.89pt x 289.08pt>
+File: section11/images/hypothesis_left_tail_wide.pdf Graphic file (type pdf)
+<use section11/images/hypothesis_left_tail_wide.pdf>
+Package pdftex.def Info: section11/images/hypothesis_left_tail_wide.pdf  used o
+n input line 96.
+(pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
+
+
+[69 <./section11/images/hypothesis_right_tail.pdf> <./section11/images/hypothes
+is_right_tail_wide.pdf>]
+<section11/images/hypothesis_two_tail.pdf, id=767, 505.89pt x 289.08pt>
+File: section11/images/hypothesis_two_tail.pdf Graphic file (type pdf)
+<use section11/images/hypothesis_two_tail.pdf>
+Package pdftex.def Info: section11/images/hypothesis_two_tail.pdf  used on inpu
+t line 104.
+(pdftex.def)             Requested size: 244.27461pt x 139.58607pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
+
+ []
+
+<Section11/images/sweetening_10000_hist.pdf, id=768, 433.62pt x 252.945pt>
+File: Section11/images/sweetening_10000_hist.pdf Graphic file (type pdf)
+<use Section11/images/sweetening_10000_hist.pdf>
+Package pdftex.def Info: Section11/images/sweetening_10000_hist.pdf  used on in
+put line 190.
+(pdftex.def)             Requested size: 281.85587pt x 164.42387pt.
+
+
+[70 <./section11/images/hypothesis_left_tail.pdf> <./section11/images/hypothesi
+s_left_tail_wide.pdf> <./section11/images/hypothesis_two_tail.pdf>]
+Underfull \vbox (badness 1231) detected at line 211
+ []
+
+
+
+[71]
+
+[72 <./Section11/images/sweetening_10000_hist.pdf>]
+<section11/images/deer_pvalue.pdf, id=816, 447.6725pt x 317.185pt>
+File: section11/images/deer_pvalue.pdf Graphic file (type pdf)
+<use section11/images/deer_pvalue.pdf>
+Package pdftex.def Info: section11/images/deer_pvalue.pdf  used on input line 2
+70.
+(pdftex.def)             Requested size: 281.85587pt x 199.70659pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
+
+ []
+
+
+Underfull \vbox (badness 1009) detected at line 341
+ []
+
+
+
+[73]
+Underfull \vbox (badness 10000) detected at line 341
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 341
+ []
+
+
+
+[74 <./section11/images/deer_pvalue.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+
+ []
+
+
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
+
+ []
+
+
+
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 452--453
+
+ []
+
+
+
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+
+
+[78]
+
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
+
+ []
+
+
+
+[80]
+
+[81]
+
+[82]
+<section11/images/simulation_60.pdf, id=895, 433.62pt x 361.35pt>
+File: section11/images/simulation_60.pdf Graphic file (type pdf)
+<use section11/images/simulation_60.pdf>
+Package pdftex.def Info: section11/images/simulation_60.pdf  used on input line
+ 822.
+(pdftex.def)             Requested size: 281.85587pt x 234.89125pt.
+
+
+[83]
+
+[84 <./section11/images/simulation_60.pdf>]
+<section11/images/binomial_pmf.pdf, id=915, 433.62pt x 361.35pt>
+File: section11/images/binomial_pmf.pdf Graphic file (type pdf)
+<use section11/images/binomial_pmf.pdf>
+Package pdftex.def Info: section11/images/binomial_pmf.pdf  used on input line 
+874.
+(pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
+
+
+[85]
+<section11/images/binomial_pmf_100.pdf, id=922, 433.62pt x 361.35pt>
+File: section11/images/binomial_pmf_100.pdf Graphic file (type pdf)
+<use section11/images/binomial_pmf_100.pdf>
+Package pdftex.def Info: section11/images/binomial_pmf_100.pdf  used on input l
+ine 884.
+(pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
+<section11/images/binomial_simulation_histogram.pdf, id=923, 433.62pt x 361.35p
+t>
+File: section11/images/binomial_simulation_histogram.pdf Graphic file (type pdf
+)
+<use section11/images/binomial_simulation_histogram.pdf>
+Package pdftex.def Info: section11/images/binomial_simulation_histogram.pdf  us
+ed on input line 901.
+(pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
+
+
+[86 <./section11/images/binomial_pmf.pdf> <./section11/images/binomial_pmf_100.
+pdf>]
+<section11/images/sim_vs_theoretical_pmf.pdf, id=942, 433.62pt x 361.35pt>
+File: section11/images/sim_vs_theoretical_pmf.pdf Graphic file (type pdf)
+<use section11/images/sim_vs_theoretical_pmf.pdf>
+Package pdftex.def Info: section11/images/sim_vs_theoretical_pmf.pdf  used on i
+nput line 924.
+(pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
+
+
+[87 <./section11/images/binomial_simulation_histogram.pdf>]
+<section11/images/binomial_normal_approximation.pdf, id=953, 433.62pt x 361.35p
+t>
+File: section11/images/binomial_normal_approximation.pdf Graphic file (type pdf
+)
+<use section11/images/binomial_normal_approximation.pdf>
+Package pdftex.def Info: section11/images/binomial_normal_approximation.pdf  us
+ed on input line 960.
+(pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
+
+
+[88 <./section11/images/sim_vs_theoretical_pmf.pdf>]
+
+[89 <./section11/images/binomial_normal_approximation.pdf>]
+
+[90]
+
+[91]
+
+[92]
+
+[93]
+
+[94]
+
+[95]
+
+[96]
+
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1356
+
+ []
+
+
+
+[98]
+<section11/images/chisq_right_tail.pdf, id=1026, 433.62pt x 289.08pt>
+File: section11/images/chisq_right_tail.pdf Graphic file (type pdf)
+<use section11/images/chisq_right_tail.pdf>
+Package pdftex.def Info: section11/images/chisq_right_tail.pdf  used on input l
+ine 1471.
+(pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
+
+
+[99])
+
+[100 <./section11/images/chisq_right_tail.pdf>]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
 
-[68
+[101
 
 
 ] (./main.aux)
@@ -2036,38 +2276,41 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 79D6E5029E805B348EBB63E17E146288;7564
-(rerunfilecheck)             After:  2FAB5BCF56C50524B8055CE0A3A6F9ED;7811.
+(rerunfilecheck)             Before: 2FAB5BCF56C50524B8055CE0A3A6F9ED;7811
+(rerunfilecheck)             After:  105A7F1B149AE86C4F947A16C4106CEA;8868.
  ) 
 Here is how much of TeX's memory you used:
- 36227 strings out of 473190
- 750692 string characters out of 5715801
- 1290004 words of memory out of 5000000
- 58595 multiletter control sequences out of 15000+600000
- 573324 words of font info for 94 fonts, out of 8000000 for 9000
+ 36471 strings out of 473190
+ 757488 string characters out of 5715801
+ 1290059 words of memory out of 5000000
+ 58734 multiletter control sequences out of 15000+600000
+ 574445 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,13n,96p,914b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,17n,96p,914b,1052s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/tex
-live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/
-texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (74 pages, 3763301 bytes).
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
+l/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/te
+xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
+/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/20
+25/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/
+2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (107 pages, 4047548 bytes).
 PDF statistics:
- 852 PDF objects out of 1000 (max. 8388607)
- 671 compressed objects within 7 object streams
- 200 named destinations out of 1000 (max. 500000)
- 538 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1204 PDF objects out of 1440 (max. 8388607)
+ 953 compressed objects within 10 object streams
+ 297 named destinations out of 1000 (max. 500000)
+ 616 words of extra memory for PDF output out of 10000 (max. 10000000)
 
