@@ -209,7 +209,7 @@ p_value
 
 
 \end{example}
-\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, title={One-Sample Hypothesis Test for Population Mean ($\mu$)}, sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
+\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, title={One-Sample Hypothesis Test for Population Mean ($\mu$) (known  $\sigma$)}, sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
 \textbf{When $\sigma$ is known:}
 
 \begin{tabular}{@{}ll@{\hspace{1.2cm}}ll@{}}
@@ -391,7 +391,7 @@ There are four steps in carrying out a significance test:
 Once you have stated your hypotheses and identified the proper test, you or your computer can do Steps 2 and 3 by following a recipe. 
 
 \end{tcolorbox}
-\begin{tcolorbox}[title=\textbf{Z Test for a Population Mean $\mu$},
+\begin{tcolorbox}[title=\textbf{Z Test for a Population Mean ($\mu$)},
   colback=yellow!10,
   colframe=black!45,
   coltitle=black,
@@ -400,7 +400,6 @@ Once you have stated your hypotheses and identified the proper test, you or your
 
 Here is the recipe for the test we have used in our examples.\\
 Draw a simple random sample of size $n$ from a Normal population that has unknown mean $\mu$ and known standard deviation $\sigma$.
-
 To test the null hypothesis that $\mu$ has a specified value, $H_0 : \mu = \mu_0$, calculate the \textbf{one-sample $z$ statistic}:
 \[
 z_\ast = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}
@@ -543,8 +542,9 @@ A level $\alpha$ two-sided significance test rejects a hypothesis $H_0 : \mu = \
 
 \end{nt}
 \begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, 
-  title={One-Sample Hypothesis Test for Population Mean ($\mu$) \textbf{(When $\sigma$ is not known)}},
+  title={One-Sample Hypothesis Test for Population Mean ($\mu$) (unknown $\sigma$)},
   sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
+\textbf{When $\sigma$ is NOT known:}
 
 \begin{tabular}{@{}ll@{\hspace{1.2cm}}ll@{}}
 $\bullet$ H$_0\!$ : $\mu = \mu_0$ & (or $\mu \geq \mu_0$) & $H_a\!$ : $\mu < \mu_0$ \\
