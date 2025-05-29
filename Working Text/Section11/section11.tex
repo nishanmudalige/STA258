@@ -130,7 +130,11 @@ Are these data good evidence that the cola lost sweetness in storage?\\
 \noindent\textbf{Solution}\\
 
 $\mu$ = mean sweetness loss for the population of \textbf{all} tasters.\\
-\textbf{Step 1:} State hypotheses. $H_0: \mu = 0$ vs $H_a: \mu > 0$ \\
+\textbf{Step 1:} State hypotheses.
+\begin{align*}
+H_0 &: \mu = 0 \\
+H_a &: \mu > 0
+\end{align*}
 \textbf{Step 2:} Test statistic: $z_\star = \dfrac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \dfrac{1.02 - 0}{1 / \sqrt{10}} = 3.23$ \\
 \textbf{Step 3:} P-value. $P(Z > z_\star) = P(Z > 3.23) = 0.0006$ \\
 \textbf{Step 4:} Conclusion. We would rarely observe a mean as large as 1.02 if $H_0$ were true. The small p-value provides strong evidence against $H_0$, supporting $H_a: \mu > 0$. That is, the mean sweetness loss is likely positive.
@@ -184,6 +188,8 @@ hist(z.star, xlab = "differences", col = "blue");
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{Section11/images/sweetening_10000_hist.pdf}
+  \vspace{-1em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
   \caption{Histogram of $z_\star$ values from 10,000 simulations under $H_0$.}
 \end{figure}
 \vspace{1em}
@@ -258,10 +264,12 @@ Reference distribution: standard normal
 \text{p-value} = P(Z < -2.82) \approx 0.0024
 \]
 
-\captionsetup{skip=0pt} % no vertical gap between figure and caption
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{section11/images/deer_pvalue.pdf}
+\vspace{-0.25em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
 \caption{Left-tailed p-value for the test statistic \( z^* = -2.82 \)}
 \end{figure}
 
@@ -344,7 +352,11 @@ Suppose we know that executives’ blood pressures follow a Normal distribution 
 
 \begin{enumerate}
     \item \textbf{State hypotheses:} \\
-    $H_0: \mu = 128$ \hspace{1cm} vs \hspace{1cm} $H_a: \mu \ne 128$
+    \begin{align*}
+H_0 &: \mu = 128 \\
+H_a &: \mu \ne 128
+\end{align*}
+
     
     \item \textbf{Test statistic:} \\
     \[
@@ -613,9 +625,11 @@ Let $\mu$ be the true average price of a 2-star motel room.
 
 \begin{enumerate}
   \item \textbf{State hypotheses.}
-  \[
-  H_0 : \mu = 89.5 \quad \text{vs} \quad H_a : \mu < 89.5
-  \]
+\begin{align*}
+H_0 &: \mu = 89.5 \\
+H_a &: \mu < 89.5
+\end{align*}
+
 
   \item \textbf{Compute test statistic.}
   \[
@@ -805,7 +819,9 @@ sample(die, 6, replace = TRUE)
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{section11/images/simulation_60.pdf} % adjust path if needed
+  \includegraphics[width=0.6\textwidth]{section11/images/simulation_60.pdf} 
+  \vspace{-1em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
   \caption{Plot of frequencies from 60 simulations of a fair six-sided die.}
 \end{figure}
 \begin{definition}
@@ -856,6 +872,8 @@ plot(x, y, type = "p", col = "blue", pch = 19);
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.65\textwidth]{section11/images/binomial_pmf.pdf}
+  \vspace{-1em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
   \caption{PMF when $n=10$ and $p=1/6$}
 \end{figure}
 
@@ -864,6 +882,8 @@ plot(x, y, type = "p", col = "blue", pch = 19);
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.65\textwidth]{section11/images/binomial_pmf_100.pdf}
+  \vspace{-1em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
   \caption{PMF when $n=100$ and $p=1/6$}
 \end{figure}
 \vspace{1em}
@@ -879,6 +899,8 @@ dbinom(c(15, 16, 17, 18), size = 100, prob = 1/6);
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.65\textwidth]{section11/images/binomial_simulation_histogram.pdf}
+  \vspace{-2em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
   \caption{Simulation: 2000 YouTuber, $n = 100$, and $p = 1/6$}
 \end{figure}
 \vspace{1em}
@@ -900,6 +922,8 @@ It turns out that our P-value for this simulation is: \\
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.65\textwidth]{section11/images/sim_vs_theoretical_pmf.pdf}
+  \vspace{-2em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
   \caption{Simulation vs Theoretical pmf}
 \end{figure}
 \begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, title={Sampling Distribution of a Sample Proportion}, sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
@@ -934,6 +958,8 @@ Then:
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.65\textwidth]{section11/images/binomial_normal_approximation.pdf}
+  \vspace{-2em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
   \caption{Binomial with Normal Approximation}
 \end{figure}
 \begin{tcolorbox}[title=\textbf{Hypotheses Tests for a Proportion},
@@ -1071,8 +1097,392 @@ Recall that
 \hat{p} = \frac{46}{384} = 0.1198.
 \]
 
-The value of $z^\ast$ is approximately 6.28, meaning that the observed proportion of children with genetic abnormalities is over 6 standard deviations above the hypothesized proportion ($p_0 = 0.05$).
+The value of $z^\ast$ is approximately 6.28, meaning that the observed proportion of children with genetic abnormalities is over 6 standard deviations above the hypothesized proportion ($p_0 = 0.05$). 
+
+\vspace{1em}
+\textbf{Step 4.} Find the p-value of the test-statistic.\\
+P-value = $P(Z > 6.28) \approx 0.000$ \textnormal{(better to report $p\text{-value} < 0.0001$)}\\
+\textit{Note:} We find the area above $Z = 6.28$ since $H_a : p > 0.05$.\\[0.5em]
+\textbf{Meaning of this p-value:}\\
+If 5\% of children have genetic abnormalities, the chance of observing 46 children with genetic abnormalities in a random sample of 384 children is almost 0.
+
+\vspace{1em}
+\textbf{Step 5.} Give (if any) a conclusion.\\
+p-value is less than 0.0001, which is less than $\alpha = 0.05$; We reject $H_0 : p = 0.05$, and conclude $H_a : p > 0.05$. Our result is statistically significant at $\alpha = 0.05$.\\
+There is very strong evidence that more than 5\% of children have genetic abnormalities. 
+
+\vspace{1em}
+\noindent\textbf{R code (1-sample proportion test)}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+prop.test(x=46, n = 384 ,p=0.05,alternative="greater", correct=FALSE);
+
+##
+## 1-sample proportions test without continuity correction
+##
+## data:  46 out of 384, null probability 0.05
+## X-squared = 39.377, df = 1, p-value = 1.747e-10
+## alternative hypothesis: true p is greater than 0.05
+## 95 percent confidence interval:
+##  0.09516097 1.00000000
+## sample estimates:
+##        p 
+## 0.1197917 
+\end{verbatim}
+\end{tcolorbox}
+
 \end{example}
+\begin{nt}
+\textbf{About the P-value of the Test-statistics}
+
+\begin{itemize}
+  \item P-value is a conditional probability.
+  \item It is not the probability that $H_0$ (null hypothesis: current belief) is true.
+  \item It is: P(observed statistic value [or even more extreme] — $H_0$). Given $H_0$ (the null hypothesis), because $H_0$ gives the parameter values that we need to find required probability.
+  \item P-value serves as a measure of the strength of the evidence against the null hypothesis (but it should not serve as a hard and fast rule for decision).
+  \item If p-value = 0.03 (for example) all we can say is that there is 3\% chance of observing the statistic value we actually observed (or one even more inconsistent with the null value).
+  \item P-value is the chance (the proportion) of getting a, for instance, $\hat{p}$ as far as or further from $H_0$ than the value observed.
+  \item P-value is the probability of getting at least something (e.g., sample proportion $\hat{p}$) more extreme (e.g., unusual, unlikely, or rare) than what we have already found (our observed value of $\hat{p}$) that provide even stronger evidence against $H_0$.
+  \item The more extreme the z-score (large in absolute values) are the ones that denote farther departure of the observed value (e.g., our $\hat{p}$) from the parameter value ($p_0$) in $H_0$.
+  \item In the one-sided test, e.g., $H_a : p > p_0$, p-value is one-tailed probability. This is the probability that sample proportion $\hat{p}$ falls at least as far from $p_0$ in one direction as the observed value of $\hat{p}$.
+  \item In the two-sided test, e.g., $H_a : p \ne p_0$, p-value is two-tailed probability. This is the probability that sample proportion $\hat{p}$ falls at least as far from $p_0$ in either direction as the observed value of $\hat{p}$.
+\end{itemize}
+\end{nt}
+The probability, computed assuming that $H_0$ is true, that the test statistic would take a value as extreme or more extreme than that actually observed is called the \textbf{P-value} of the test. The smaller the P-value, the stronger the evidence against $H_0$ provided by the data.
+
+Small P-values are evidence against $H_0$, because they say that the observed result is unlikely to occur when $H_0$ is true. Large P-values fail to give evidence against $H_0$.
+
+\vspace{1em}
+\textbf{The P-value Scale}
+\begin{itemize}
+  \item If P-value $<$ 0.001, we have very strong evidence against $H_0$.
+  \item If 0.001 $\leq$ P-value $<$ 0.01, we have strong evidence against $H_0$.
+  \item If 0.01 $\leq$ P-value $<$ 0.05, we have evidence against $H_0$.
+  \item If 0.05 $\leq$ P-value $<$ 0.075, we have some evidence against $H_0$.
+  \item If 0.075 $\leq$ P-value $<$ 0.10, we have slight evidence against $H_0$.
+\end{itemize}
+\textbf{Use p-value Method to Make a Decision (Reject or Fail to Reject $H_0$)}
+
+But how small is small p-value?\\
+We would need to choose an $\alpha$-level (significance-level): a number such that if:
+
+\begin{itemize}
+  \item $P\text{–value} \leq \alpha$-level, we reject $H_0$; We can conclude $H_a$ (we have evidence to support our claim). Often we phrase as a statistically significant result at that specified $\alpha$-level.
+  \item $P\text{–value} > \alpha$-level, we fail to reject $H_0$; We cannot conclude $H_a$ (we have not enough evidence to support our claim; thus, $H_0$ is plausible - We do not accept $H_0$). Often we phrase as the result is not statistically significant at that specified $\alpha$-level.
+  \item The default $\alpha$-level (significance-level) is typically $\alpha = 0.05$ (but it can be different based on the context of the study - it is usually not higher than 0.10).
+\end{itemize}
+The p-value in the previous example was extremely small (less than 0.0001). That is a strong evidence to suggest that more than 5\% of children have genetic abnormalities. However, it does not say that the percentage of sampled children with genetic abnormalities was ``a lot more than 5\%''. That is, the p-value by itself says nothing about how much greater the percentage might be. The confidence interval provides that information.\\
+To assess the difference in practical terms, we should also construct a confidence interval:
+
+\[
+0.1198 \pm (1.96 \times 0.0166)
+\]
+\[
+0.1198 \pm 0.0324
+\]
+\[
+(0.0874,\ 0.1522)
+\]
+
+Interpretation: We are 95\% Confident that the true percentage of children with genetic abnormalities is between 8.74\% and 15.22\%. \\
+95\% CI for $p$: (9.1\%, 15.6\%) – We are 95\% confident that the true percentage of all children that have genetic abnormalities is between approximately 9.1\% and 15.6\%. Since both values of this CI are more than the hypothesized value of $p = 0.05$ (5\%), we can further infer that this true percentage is more than 5\%. \\
+\textbf{Do environmental chemicals cause congenital abnormalities?}
+
+We do not know that environmental chemicals cause genetic abnormalities. We merely have evidence that suggests that a greater percentage of children are diagnosed with genetic abnormalities now, compared to the 1980s.
+\begin{nt}
+\textbf{More About P-values}
+
+\begin{itemize}
+  \item Big p-values just mean that what we have observed is not surprising. It means that the results are in line with our assumption that the null hypothesis models the world, so we have no reason to reject it.
+  \item A big p-value does not prove that the null hypothesis is true.
+  \item When we see a big p-value, all we can say is: we cannot reject $H_0$ (we fail to reject $H_0$) – we cannot conclude $H_a$ (We have no evidence to support $H_a$).
+\end{itemize}
+\end{nt}
+\subsection*{Some Additional Examples}
+\begin{example}
+Consider the following hypothesis test:
+
+
+\begin{align*}
+H_0 &: p = 0.75 \\
+H_a &: p < 0.75
+\end{align*}
+
+
+A sample of 300 items was selected. Compute the p-value and state your conclusion for each of the following sample results. Use $\alpha = 0.05$.
+
+\begin{itemize}
+  \item[a.] $\hat{p} = 0.68$
+  \item[b.] $\hat{p} = 0.72$
+  \item[c.] $\hat{p} = 0.70$
+  \item[d.] $\hat{p} = 0.77$
+\end{itemize}
+
+\vspace{1em}
+\textbf{Solution a.}
+
+\[
+z_* = \frac{\hat{p} - p_0}{\sqrt{p_0(1 - p_0)/n}} = \frac{0.68 - 0.75}{\sqrt{0.75(1 - 0.75)/300}} = -2.80
+\]
+
+Using Normal table, P-value $= P(Z < z_*) = P(Z < -2.80) = 0.0026$ \\
+P-value $< \alpha = 0.05$, reject $H_0$.
+
+\vspace{1em}
+\textbf{Solution b.}
+
+\[
+z_* = \frac{\hat{p} - p_0}{\sqrt{p_0(1 - p_0)/n}} = \frac{0.72 - 0.75}{\sqrt{0.75(1 - 0.75)/300}} = -1.20
+\]
+
+Using Normal table, P-value $= P(Z < z_*) = P(Z < -1.20) = 0.1151$ \\
+P-value $> \alpha = 0.05$, do not reject $H_0$.
+
+\vspace{1em}
+\textbf{Solution c.}
+
+\[
+z_* = \frac{\hat{p} - p_0}{\sqrt{p_0(1 - p_0)/n}} = \frac{0.70 - 0.75}{\sqrt{0.75(1 - 0.75)/300}} = -2.00
+\]
+
+Using Normal table, P-value $= P(Z < z_*) = P(Z < -2.00) = 0.0228$ \\
+P-value $< \alpha = 0.05$, reject $H_0$.
+\end{example}
+\begin{example}
+Consider the following hypothesis test:
+
+\begin{align*}
+H_0 &: p = 0.20 \\
+H_a &: p \ne 0.20
+\end{align*}
+
+A sample of 400 provided a sample proportion $\hat{p} = 0.175$.
+
+\begin{itemize}
+  \item[a.] Compute the value of the test statistic.
+  \item[b.] What is the p-value?
+  \item[c.] At the $\alpha = 0.05$, what is your conclusion?
+  \item[d.] What is the rejection rule using the critical value? What is your conclusion?
+\end{itemize}
+
+\vspace{1em}
+\textbf{Solution}
+
+\begin{itemize}
+  \item[a.]
+  \[
+  z_* = \frac{\hat{p} - p_0}{\sqrt{p_0(1 - p_0)/n}} = \frac{0.175 - 0.20}{\sqrt{(0.20)(0.80)/400}} = -1.25
+  \]
+  
+  \item[b.] Using Normal table, P-value =
+  \[
+  2P(Z > |z_*|) = 2P(Z > |-1.25|) = 2P(Z > 1.25) = 2(0.1056) = 0.2112
+  \]
+  
+  \item[c.] P-value $> \alpha = 0.05$, we CAN'T reject $H_0$.
+\end{itemize}
+\end{example}
+\begin{example}
+A study found that, in 2005, 12.5\% of U.S. workers belonged to unions. Suppose a sample of 400 U.S. workers is collected in 2006 to determine whether union efforts to organize have increased union membership.
+
+\begin{itemize}
+  \item[a.] Formulate the hypotheses that can be used to determine whether union membership increased in 2006.
+  \item[b.] If the sample results show that 52 of the workers belonged to unions, what is the p-value for your hypothesis test?
+  \item[c.] At $\alpha = 0.05$, what is your conclusion?
+\end{itemize}
+
+\vspace{1em}
+\textbf{Solution}
+
+\begin{itemize}
+  \item[a.] 
+  \begin{align*}
+H_0 &: p = 0.125 \\
+H_a &: p > 0.125
+\end{align*}
+  
+  \item[b.] 
+  \[
+  \hat{p} = \frac{52}{400} = 0.13
+  \]
+  \[
+  z_* = \frac{\hat{p} - p_0}{\sqrt{p_0(1 - p_0)/n}} = \frac{0.13 - 0.125}{\sqrt{(0.125)(0.875)/400}} = 0.30
+  \]
+  Using Normal table, P-value =
+  \[
+  P(Z > z_*) = P(Z > 0.30) = 1 - 0.6179 = 0.3821
+  \]
+  
+  \item[c.] P-value $> 0.05$, do not reject $H_0$. We cannot conclude that there has been an increase in union membership.
+\end{itemize}
+
+\vspace{1em}
+\noindent\textbf{R code}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+prop.test(52, 400, p=0.125, alternative="greater", correct=FALSE);
+
+##
+## 1-sample proportions test without continuity correction
+##
+## data:  52 out of 400, null probability 0.125
+## X-squared = 0.091429, df = 1, p-value = 0.3812
+## alternative hypothesis: true p is greater than 0.125
+## 95 percent confidence interval:
+##  0.1048085 1.0000000
+## sample estimates:
+##        p 
+##    0.13 
+\end{verbatim}
+\end{tcolorbox}
+\end{example}
+
+\section*{Test of Hypothesis for One Variance}
+
+In many practical situations, we are interested in testing whether the variability in a population (i.e., its variance) has changed. This is especially important in quality control, finance, and experimental science. When we have data from a single normal population and want to test a claim about the population variance, we use the chi-squared ($\chi^2$) test for one variance. This method assumes that the underlying population is normally distributed and the sample observations are independent.
+
+\vspace{1em}
+\textbf{Hypothesis Tests for One Variance}
+
+\begin{itemize}
+  \item Data from a single normal population; independent observations
+  \item Variance unknown
+  \item Large or small sample
+\end{itemize}
+
+\textbf{Hypothesis Test} \\
+\begin{align*}
+H_0 &: \sigma^2 = \sigma_0^2 \\
+H_a &: \sigma^2 \ne \sigma_0^2 \quad \text{(or } \sigma^2 > \sigma_0^2 \text{ or } \sigma^2 < \sigma_0^2\text{)}
+\end{align*}
+Assume $H_0$ is true, then:
+
+\[
+\text{Test statistic:} \quad \chi^2_* = \frac{(n - 1)s^2}{\sigma_0^2} \sim \chi^2_{n - 1}
+\]
+\begin{tcolorbox}[colback=yellow!10, colframe=yellow!10, boxrule=0pt, arc=0mm]
+\textbf{Decision rules:}
+
+$H_a : \sigma^2 \ne \sigma_0^2$.\\
+Reject $H_0$ if $\chi^2_* > \chi^2_{n-1;\alpha/2}$ or if $\chi^2_* < \chi^2_{n-1;1-\alpha/2}$.
+
+\vspace{0.5em}
+$H_a : \sigma^2 > \sigma_0^2$.\\
+Reject $H_0$ if $\chi^2_* > \chi^2_{n-1;\alpha}$ or if $P[\chi^2_{n-1} > \chi^2_*]$ is too small.
+
+\vspace{0.5em}
+$H_a : \sigma^2 < \sigma_0^2$.\\
+Reject $H_0$ if $\chi^2_* < \chi^2_{n-1;1-\alpha}$ or if $P[\chi^2_{n-1} < \chi^2_*]$ is too small.
+
+\vspace{0.5em}
+\textbf{Note.} This is \textbf{NOT} robust to departures from Normality.
+\end{tcolorbox}
+\begin{example}
+A company produces metal pipes of a standard length, and claims that the standard deviation of the length is at most 1.2 cm. One of its clients decides to test this claim by taking a sample of 25 pipes and checking their lengths. They found that the standard deviation of the sample is 1.5 cm. Does this undermine the company’s claim? Use $\alpha = 0.05$.\\
+\textit{Note: Assume length is Normally distributed.}
+
+\vspace{1em}
+\textbf{Solution}
+
+\begin{align*}
+H_0 &: \sigma^2 \leq 1.2^2 \\
+H_a &: \sigma^2 > 1.2^2
+\end{align*}
+
+
+\[
+\chi^2_* = \frac{(n-1)s^2}{\sigma^2} = \frac{(25-1) \cdot 1.5^2}{1.2^2} = 37.5
+\]
+
+\[
+\text{P-value} = P[\chi^2_{24} > 37.5] \approx 0.0389
+\]
+
+\vspace{1em}
+\noindent\textbf{R Code}
+
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+1 - pchisq(37.5, df = 24);
+## [1] 0.0389818
+\end{verbatim}
+\end{tcolorbox}
+
+\vspace{1em}
+\textbf{Conclusion} \\
+We reject $H_0 : \sigma^2 \leq 1.2^2$. We have evidence to indicate that the variance of the length of metal pipes is more than $1.2^2$.
+\end{example}
+\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black, title={One-Sample Hypothesis Test for Population Variance ($\sigma^2$)}, sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
+
+\textbf{Assumptions:} $Y_1, Y_2, \ldots, Y_n$ constitute a random sample from a Normal distribution with $E(Y_i) = \mu$ and $V(Y_i) = \sigma^2$.
+
+\vspace{0.75em}
+
+\noindent \textbf{Hypotheses:}
+\begin{align*}
+H_0 &: \sigma^2 = \sigma_0^2 \\
+H_a &: \left\{
+  \begin{array}{ll}
+    \sigma^2 > \sigma_0^2 & \text{(upper-tailed alternative)} \\
+    \sigma^2 < \sigma_0^2 & \text{(lower-tailed alternative)} \\
+    \sigma^2 \ne \sigma_0^2 & \text{(two-tailed alternative)}
+  \end{array}
+\right.
+\end{align*}
+
+
+
+\vspace{0.75em}
+
+\begin{tabular}{@{}l@{\hspace{1cm}}l@{}}
+\textbf{Test statistic:} & $\chi^2 = \dfrac{(n-1)S^2}{\sigma_0^2}$ \\
+\textbf{Rejection Region:} & 
+$\left\{
+\begin{array}{ll}
+\chi^2 > \chi^2_\alpha & \text{upper-tailed RR} \\
+\chi^2 < \chi^2_{1 - \alpha} & \text{lower-tailed RR} \\
+\chi^2 > \chi^2_{\alpha/2} \ \text{or} \ \chi^2 < \chi^2_{1 - \alpha/2} & \text{two-tailed RR}
+\end{array}
+\right.$
+\end{tabular}
+
+\end{tcolorbox}
+\begin{example}[Car Battery Lifetime Variance Test]
+A manufacturer of car batteries claims that the life of his batteries is approximately Normally distributed with a standard deviation equal to 0.9 year. If a random sample of 10 of these batteries has a standard deviation of 1.2 years, do you think that $\sigma > 0.9$ year? Use a 0.05 level of significance.
+
+\textbf{Step 1. State hypotheses.}
+\begin{align*}
+H_0 &: \sigma^2 = 0.81 \\
+H_a &: \sigma^2 > 0.81
+\end{align*}
+
+\textbf{Step 2. Compute test statistic.} \\
+$S^2 = 1.44$, $n = 10$, and
+\[
+\chi^2 = \frac{(9)(1.44)}{0.81} = 16
+\]
+
+\textbf{Step 3. Find Rejection Region.} \\
+From the chi-squared table, the null hypothesis is rejected when $\chi^2 > 16.919$, where $\nu = 9$ degrees of freedom.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.70\textwidth]{section11/images/chisq_right_tail.pdf} 
+\vspace{-3em} % ← reduce space between figure and caption
+\captionsetup{skip=0pt}
+\caption{Right-tailed chi-squared distribution with critical value at 16.919.}
+\end{figure}
+
+\textbf{Step 4. Conclusion.} \\
+The $\chi^2$ statistic is not significant at the 0.05 level. We conclude that there is insufficient evidence to claim that $\sigma > 0.9$ year.
+\end{example}
+
+
+
+
+
+
 
 
 
