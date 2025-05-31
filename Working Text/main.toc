@@ -31,3 +31,7 @@
 \contentsline {chapter}{\numberline {7}One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown}{54}{chapter.7}%
 \contentsline {section}{\numberline {7.1}CIs for \(\mu \)}{54}{section.7.1}%
 \contentsline {chapter}{\numberline {8}One Sample Confidence Intervals On a Proportion}{64}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Sample Size Selection using Confidence Intervals}{67}{chapter.9}%
+\contentsline {subsection}{\numberline {9.0.1}Empirical Rule}{67}{subsection.9.0.1}%
+\contentsline {section}{\numberline {9.1}Calculating Sample Size for a Confidence Interval on a Mean}{67}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Calculating Sample Size for a Confidence Interval on a Proportion}{69}{section.9.2}%
