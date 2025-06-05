@@ -1,5 +1,5 @@
 \chapter{Statistical Power}
-
+\section{Statistical Power}
 \begin{definition}[Power of a Test]
 The probability that a fixed level $\alpha$ significance test will reject $H_0$ when a particular alternative value of the parameter is true is called the \textbf{power} of the test against that alternative.
 \end{definition}
@@ -34,7 +34,7 @@ Power is affected by:
 
   \item \textbf{Variability in data} \\ (\textcolor{blue}{lower variability, higher power})
 \end{itemize}
-\section*{Type I and II Errors}
+\subsection*{Type I and II Errors}
 
 It is possible to make an incorrect conclusion on a hypothesis test. \\
 
@@ -211,5 +211,123 @@ P\left(Z > \frac{0.520 - 1.1}{1/\sqrt{10}}\right)
 \end{center}
 
 \end{example}
+\section{Type I and Type II Errors}
+
+If we reject $H_0$ when in fact $H_0$ is true, this is a \textbf{Type I error.} \\
+
+If we fail to reject $H_0$ when in fact $H_a$ is true, this is a \textbf{Type II error.} \\
+
+The \textbf{significance level} $\alpha$ of any fixed level test is the probability of a Type I error. \\
+
+The \textbf{power} of a test against any alternative is 1 minus the probability of a Type II error for that alternative. \\
+
+The probability of making a Type II error is denoted by $\beta$. 
+\begin{tcolorbox}[title=\textbf{Decision Errors in Tests},
+  colback=yellow!10,
+  colframe=black!45,
+  coltitle=black,
+  fonttitle=\bfseries,
+  breakable]
+
+\textbf{Type I Error} \\
+$H_0$ is true, but sampling variation in the data leads you to reject $H_0$, you’ve made a Type I error. \\
+When $H_0$ is true, a Type I error occurs if $H_0$ is rejected. \\
+
+\textbf{Type II Error} \\
+$H_0$ is false, but sampling variation in the data does not lead you to reject $H_0$, you’ve made a Type II error. \\
+When $H_0$ is false, a Type II error occurs if $H_0$ is \textbf{NOT} rejected.
+
+\end{tcolorbox}
+
+\begin{example}
+According to Access and Support to Education and Training Survey (2008), of 4,756 adult Canadians, 1,581 indicated that they worked at a job or business at anytime (between July 2007 and June 2008), regardless of the number of hours per week.
+
+Is there evidence to suggest that the true proportion $p$ is greater than 0.50?
+
+\begin{align*}
+H_0\!:&\ p = 0.50 \\
+H_a\!:&\ p > 0.50
+\end{align*}
+
+
+\noindent\textbf{R Output}
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+prop.test(x = 1581, n = 4756, p = 0.50,
+          alternative = "greater", correct = FALSE)
+
+## 
+##  1-sample proportions test without continuity
+##  correction
+## 
+## data:  1581 out of 4756, null probability 0.5
+## X-squared = 534.24, df = 1, p-value = 1
+## alternative hypothesis: true p is greater than 0.5
+## 95 percent confidence interval:
+##  0.3212845 1.0000000
+## sample estimates:
+##         p 
+## 0.3324222 
+\end{verbatim}
+\end{tcolorbox}
+
+
+\textbf{$P\text{-value} > \alpha = 0.05$}; we Fail to Reject $H_0$.
+
+\textbf{This means we could be making a Type II error.}We indicated that there is no evidence to conclude that the true proportion of adult Canadians who worked at a job or business at anytime (between July 2007 and June 2008), regardless of the number of hours per week, was more than 0.50 — this conclusion implies that $H_0: p = 0.50$ is plausible, but we could be wrong.
+\begin{figure}[H]  % Use [H] to prevent floating (requires \usepackage{float})
+\centering
+\includegraphics[width=0.75\textwidth]{section13/images/power_curve.pdf}
+\caption{\textit{Power curve for a one-sided test with points at $\mu = 0.52$ and $\mu = 1.1$}}
+\end{figure}
+
+\end{example}
+\begin{example}[Cola Bottles: Power Analysis]
+
+
+Bottles of a popular cola are supposed to contain 300 milliliters (ml) of cola. There is some variation from bottle to bottle because the filling machinery is not perfectly precise. The distribution of contents is Normal with standard deviation $\sigma = 3$ ml. Will inspecting 6 bottles discover underfilling?
+
+The hypotheses are:
+\begin{align*}
+H_0\!:&\ \mu = 300 \\
+H_a\!:&\ \mu < 300
+\end{align*}
+
+A 5\% significance test rejects $H_0$ if $z_* \leq -1.645$, where the test statistic $z_*$ is:
+\[
+z_* = \frac{\bar{x} - 300}{3 / \sqrt{6}}
+\]
+
+Power calculations help us see how large a shortfall in the bottle contents the test can be expected to detect. Find the power of this test against the alternative $\mu = 299$.
+
+\vspace{1em}
+\textbf{Step 1. Write the rule for rejecting $H_0$ in terms of $\bar{x}$.}
+
+We know that $\sigma = 3$, so the $z$ test rejects $H_0$ at the $\alpha = 0.05$ level when:
+\[
+z = \frac{\bar{x} - 300}{3 / \sqrt{6}} < -1.645
+\]
+
+This is the same as:
+\[
+\bar{x} < 300 - 1.645 \cdot \frac{3}{\sqrt{6}} \quad \Rightarrow \quad \bar{x} < 297.985
+\]
+
+\vspace{1em}
+\textbf{Step 2. The power is the probability of this event under the condition that the alternative $\mu = 299$ is true.}
+
+To calculate this probability, standardize $\bar{x}$ using $\mu = 299$:
+\[
+\begin{aligned}
+\text{power} &= P(\bar{x} < 297.985 \mid \mu = 299) \\
+&= P\left( Z < \frac{297.985 - 299}{3 / \sqrt{6}} \right) \\
+&= P(Z < -0.83) = 0.2033
+\end{aligned}
+\]
+
+\end{example}
+\section{Using Power to Determine Sample Size}
+
+
 
 
