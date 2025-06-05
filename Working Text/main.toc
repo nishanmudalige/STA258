@@ -11,28 +11,33 @@
 \contentsline {section}{\numberline {2.1}Normal Distribution}{16}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Gamma and Chi-square Distribution}{17}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Student's t-Distribution and F-Distribution}{20}{section.2.3}%
-\contentsline {chapter}{\numberline {3}The Central Limit Theorem}{22}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Normal Approximation to the Binomial Distribution}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{25}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Bernoulli Distribution}{26}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Sampling Distribution of the Sum and MGF Derivation}{28}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Binomial Distribution}{28}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Visualizing the PMF of Binomial Distributions}{29}{subsection.4.4.1}%
-\contentsline {section}{\numberline {4.5}Sampling Distribution of a Sample Proportion and the Normal Approximation}{32}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Normal Approximation to Binomial}{36}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Continuity Correction}{36}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Law of Large Numbers}{39}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Convergence in Probability}{39}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Weak Law of Large Numbers (WLLN)}{40}{section.5.2}%
-\contentsline {chapter}{\numberline {6}One Sample Confidence Intervals on a Mean When the Population Variance is Known}{44}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introduction}{44}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Interpretation}{46}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Confidence Interval for $\mu $ (Known Variance)}{47}{section.6.3}%
-\contentsline {section}{\numberline {6.4}APPENDIX}{54}{section.6.4}%
-\contentsline {chapter}{\numberline {7}One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown}{55}{chapter.7}%
-\contentsline {section}{\numberline {7.1}CIs for \(\mu \)}{55}{section.7.1}%
-\contentsline {chapter}{\numberline {8}One Sample Confidence Intervals On a Proportion}{65}{chapter.8}%
-\contentsline {chapter}{\numberline {11}Introduction to Hypothesis Testing}{68}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Test of Hypothesis for One Mean}{68}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Test of Hypothesis for One Proportion}{82}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Test of Hypothesis for One Variance}{97}{section.11.3}%
+\contentsline {chapter}{\numberline {3}The Central Limit Theorem}{23}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Normal Approximation to the Binomial Distribution}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{26}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Bernoulli Distribution}{27}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Sampling Distribution of the Sum and MGF Derivation}{29}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Binomial Distribution}{29}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Visualizing the PMF of Binomial Distributions}{30}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}Sampling Distribution of a Sample Proportion and the Normal Approximation}{33}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Normal Approximation to Binomial}{37}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Continuity Correction}{37}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Law of Large Numbers}{40}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Convergence in Probability}{40}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Weak Law of Large Numbers (WLLN)}{41}{section.5.2}%
+\contentsline {chapter}{\numberline {6}One Sample Confidence Intervals on a Mean When the Population Variance is Known}{45}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{45}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Interpretation}{47}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Confidence Interval for $\mu $ (Known Variance)}{48}{section.6.3}%
+\contentsline {section}{\numberline {6.4}APPENDIX}{55}{section.6.4}%
+\contentsline {chapter}{\numberline {7}One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown}{56}{chapter.7}%
+\contentsline {section}{\numberline {7.1}CIs for \(\mu \)}{56}{section.7.1}%
+\contentsline {chapter}{\numberline {8}One Sample Confidence Intervals On a Proportion}{66}{chapter.8}%
+\contentsline {chapter}{\numberline {10}Two Sample Confidence Interval}{69}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Two Sample Confidence Interval on a Difference of Mean}{69}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Two Sample Confidence Interval on Paired Data}{74}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Two Sample Confidence Interval on Proportions}{76}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{78}{section.10.4}%
+\contentsline {chapter}{\numberline {11}Introduction to Hypothesis Testing}{80}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Test of Hypothesis for One Mean}{80}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Test of Hypothesis for One Proportion}{94}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Test of Hypothesis for One Variance}{109}{section.11.3}%
