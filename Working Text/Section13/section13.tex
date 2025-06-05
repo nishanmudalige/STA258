@@ -78,3 +78,138 @@ It is possible to make an incorrect conclusion on a hypothesis test. \\
 \[
 \text{Power} = 1 - \beta = 1 - P(\text{Type II})
 \]
+\begin{example}[Sweetening Colas: Power]
+The cola maker determines that a sweetness loss is too large to accept if the mean response for all tasters is $\mu = 1.1$. Will a 5\% significance test detect this?
+
+\textbf{Hypotheses:}
+\[
+\begin{aligned}
+H_0\!:&\ \mu = 0 \\
+H_A\!:&\ \mu > 0
+\end{aligned}
+\]
+
+Assume:
+\[
+n = 10, \quad \sigma = 1, \quad \alpha = 0.05
+\]
+
+\textbf{Step 1: Determine the rejection region.}
+
+Since the test is one-sided with $\alpha = 0.05$, we find:
+\[
+z_{\text{crit}} = 1.645 \quad \text{(from Z-table)}
+\]
+
+We reject $H_0$ if:
+\[
+Z^* > 1.645
+\]
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  domain=-3:3,
+  samples=200,
+  xlabel={},
+  ylabel={},
+  ymin=0,
+  xtick={-2,-1,0,1,1.645,2,3},
+  xticklabels={$-2$,$-1$,$0$,$1$,,,$3$},
+  ytick=\empty,
+  width=12cm,
+  height=5cm,
+  clip=false,
+  axis x line=bottom,
+  axis y line=none,
+  axis line style={-}, % ensures it's a regular solid line
+]
+
+% Standard normal curve
+\addplot[blue, thick, no markers, domain=-3:3, samples=200] {exp(-x^2/2)/sqrt(2*pi)};
+
+% Rejection region
+\addplot[domain=1.645:3, fill=green, opacity=0.3] {exp(-x^2/2)/sqrt(2*pi)} \closedcycle;
+
+% Critical line
+\draw[dashed] (axis cs:1.645,0) -- (axis cs:1.645,{exp(-1.645^2/2)/sqrt(2*pi)});
+\node[below right] at (axis cs:1.645,0) {\scriptsize $z_{\text{crit}} = 1.645$};
+
+% Add regions
+\node at (axis cs:0, 0.15) {\footnotesize Do not reject $H_0$};
+\node at (axis cs:2.3, 0.3) {\footnotesize Reject $H_0$};
+
+
+\end{axis}
+\end{tikzpicture}
+\vspace{0.5em}
+\captionof{figure}{Rejection region for $Z$ with $\alpha = 0.05$}
+\end{center}
+
+
+\textbf{Step 2: Find the equivalent critical value of } $\bar{x}$.
+
+Since $\sigma$ is known,
+\[
+Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} \quad \Rightarrow \quad
+1.645 = \frac{\bar{x}_{\text{crit}} - 0}{1/\sqrt{10}} \Rightarrow \bar{x}_{\text{crit}} \approx 0.520
+\]
+
+So we reject $H_0$ if $\bar{x} > 0.520$.
+
+\textbf{Step 3: Calculate the power when $\mu = 1.1$ is true.}
+
+\[
+P\left(Z > \frac{0.520 - 1.1}{1/\sqrt{10}}\right)
+\approx P(Z > -1.83) = 1 - 0.0336 = 0.9664
+\]
+
+
+\textbf{Interpretation:} There is a 96.6\% chance the test correctly detects $\mu = 1.1$.
+
+\vspace{1em}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  domain=-1:3,
+  samples=200,
+  xlabel={},
+  ylabel={},
+  ymin=0,
+  xtick={0,0.52,1.1},
+  xticklabels={$0$, $\bar{x}_{\text{crit}}{=}0.520$, $1.1$},
+  ytick=\empty,
+  width=12cm,
+  height=5cm,
+  clip=false,
+  axis x line=bottom,
+  axis y line=none,
+  axis line style={-}, % ensures it's a regular solid line
+  legend style={at={(0.97,0.97)}, anchor=north east},
+]
+
+% H0 distribution (mean = 0)
+\addplot[blue, thick] {exp(-(x)^2/(2 * (1/sqrt(10))^2)) / (sqrt(2*pi) * (1/sqrt(10)))};
+\addlegendentry{$H_0$: $\mu = 0$}
+
+% HA distribution (mean = 1.1)
+\addplot[red, thick] {exp(-(x - 1.1)^2/(2 * (1/sqrt(10))^2)) / (sqrt(2*pi) * (1/sqrt(10)))};
+\addlegendentry{$H_A$: $\mu = 1.1$}
+
+% Shade rejection region under H_A
+\addplot[domain=0.52:3, fill=green, opacity=0.3] 
+  {exp(-(x - 1.1)^2/(2 * (1/sqrt(10))^2)) / (sqrt(2*pi) * (1/sqrt(10)))} 
+  \closedcycle;
+
+% Dashed line for x_crit
+\draw[dashed] (axis cs:0.52,0) -- (axis cs:0.52, {exp(-(0.52 - 1.1)^2/(2 * (1/sqrt(10))^2)) / (sqrt(2*pi) * (1/sqrt(10)))});
+\end{axis}
+\end{tikzpicture}
+\vspace{0.5em}
+\captionof{figure}{Power curve showing shaded rejection area under $H_A$}
+\end{center}
+
+\end{example}
+
+
