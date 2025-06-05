@@ -1,0 +1,41 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.10)  30 MAY 2025 23:57
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**section9.tex
+(./section9.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+./section9.tex:1: Undefined control sequence.
+l.1 \chapter
+            {Sample Size Selection using Confidence Intervals}
+? 
+
+./section9.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{S
+              ample Size Selection using Confidence Intervals}
+? 
+./section9.tex:1: Emergency stop.
+ ...                                              
+                                                  
+l.1 \chapter{S
+              ample Size Selection using Confidence Intervals}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 17 strings out of 474116
+ 520 string characters out of 5743682
+ 1925187 words of memory out of 5000000
+ 22476 multiletter control sequences out of 15000+600000
+ 558069 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 15i,0n,18p,106b,18s stack positions out of 10000i,1000n,20000p,200000b,200000s
+./section9.tex:1:  ==> Fatal error occurred, no output PDF file produced!
