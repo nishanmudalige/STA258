@@ -1,0 +1,80 @@
+\chapter{Statistical Power}
+
+\begin{definition}[Power of a Test]
+The probability that a fixed level $\alpha$ significance test will reject $H_0$ when a particular alternative value of the parameter is true is called the \textbf{power} of the test against that alternative.
+\end{definition}
+
+The statistical power of a test is its ability to detect an effect if it exists in reality.
+
+It is the probability of correctly rejecting $H_0$ when $H_0$ is false in reality.
+
+\begin{equation*}
+\text{Power} = P(\text{reject } H_0 \mid H_0 \text{ false})
+\end{equation*}
+
+\begin{equation*}
+0 < \text{power} < 1
+\end{equation*}
+
+Power close to 1 (high power):\\
+\quad Test is good at detecting effects.\\
+
+Power close to 0 (low power):\\
+\quad Test is not reliable (i.e., we expect the test will not reject $H_0$ when $H_0$ is false).
+
+\vspace{1em}
+Power is affected by:
+
+\begin{itemize}
+ \item \textbf{The effect} \\ (\textcolor{blue}{larger differences between reality and the null are easier to detect})
+
+  \item \textbf{Sample size} \\ (\textcolor{blue}{larger samples increase power})
+
+  \item \textbf{Significance level} ($\alpha$) \\ (\textcolor{blue}{as $\alpha$ increases, easier to reject $H_0$})
+
+  \item \textbf{Variability in data} \\ (\textcolor{blue}{lower variability, higher power})
+\end{itemize}
+\section*{Type I and II Errors}
+
+It is possible to make an incorrect conclusion on a hypothesis test. \\
+
+\textbf{Type I:} Incorrectly reject $H_0$ when $H_0$ is true in reality. \\
+\textbf{Type II:} Incorrectly fail to reject $H_0$ when $H_0$ is false in reality. \\
+
+
+\noindent \textbf{Reality vs Conclusion Table:}
+\vspace{1em}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{1.5em}
+
+\text{Reality}
+
+\vspace{0.5em}
+
+\begin{tabular}{c c}
+\hspace*{2em}\rotatebox[origin=c]{90}{\textbf{Conclusion}} &
+\begin{tabular}{|l|c|c|}
+\hline
+& $H_0$ True & $H_0$ False \\
+\hline
+\textbf{Reject $H_0$} & \textcolor{red}{Type I ($\alpha$)} & \textcolor{green!50!black}{No error \checkmark} \\
+\hline
+\textbf{Fail to reject $H_0$} & \textcolor{green!50!black}{No error \checkmark} & \textcolor{red}{Type II ($\beta$)} \\
+\hline
+\end{tabular}
+\end{tabular}
+\end{center}
+
+
+
+\vspace{1em}
+\textbf{\textit{Note:}} Type I errors are generally considered worse.
+
+\vspace{0.5em}
+\noindent Let $\beta$ be the probability of a Type II error. Then:
+
+\[
+\text{Power} = 1 - \beta = 1 - P(\text{Type II})
+\]
