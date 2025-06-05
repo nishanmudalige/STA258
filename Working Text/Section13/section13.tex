@@ -1,4 +1,6 @@
+\setcounter{chapter}{12}  
 \chapter{Statistical Power}
+
 \section{Statistical Power}
 \begin{definition}[Power of a Test]
 The probability that a fixed level $\alpha$ significance test will reject $H_0$ when a particular alternative value of the parameter is true is called the \textbf{power} of the test against that alternative.
@@ -327,6 +329,300 @@ To calculate this probability, standardize $\bar{x}$ using $\mu = 299$:
 
 \end{example}
 \section{Using Power to Determine Sample Size}
+When designing a study, one of the most important decisions is how large a sample to collect. If the sample size is too small, even meaningful effects may go undetected due to low statistical power. On the other hand, collecting an unnecessarily large sample can be inefficient and costly. By using power calculations, researchers can determine the minimum sample size needed to detect an effect of a given size with a specified probability (power), while controlling for Type I error. This section introduces how statistical power is used in planning and justifying sample sizes before conducting a hypothesis test.
+\begin{example}
+Suppose an experimenter wishes to test
+\begin{align*}
+H_0\!:&\ \mu = 100 \\
+H_a\!:&\ \mu > 100
+\end{align*}
+at the $\alpha = 0.05$ level of significance and wants $1 - \beta$ to equal 0.60 when $\mu = 103$. What is the smallest (i.e., cheapest) sample size that will achieve that objective? Assume that the variable being measured is Normally distributed with $\sigma = 14$. \\
+\textbf{Step 1. Write the rule for rejecting $H_0$ in terms of $\bar{x}_*$.}
+
+By definition,
+\[
+\alpha = P(\text{we reject } H_0 \mid \mu = 100)
+= P\left( \bar{X} > \bar{x}_* \mid \mu = 100 \right)
+= P\left( Z > \frac{\bar{x}_* - 100}{14 / \sqrt{n}} \right) = 0.05
+\]
+
+From the standard normal table, $P(Z > 1.645) = 0.05$, so:
+\[
+\bar{x}_* = 100 + 1.645 \cdot \frac{14}{\sqrt{n}}
+\]
+
+\vspace{1em}
+\textbf{Step 2. The power is the probability of this event under the condition that the alternative $\mu = 103$ is true.}
+
+To calculate this probability, standardize $\bar{x}$ using $\mu = 103$:
+
+\[
+\begin{aligned}
+\text{power} &= 1 - \beta = P(\bar{X} > \bar{x}_* \mid \mu = 103) \\
+&= P\left( Z > \frac{\bar{x}_* - 103}{14 / \sqrt{n}} \right) = 0.60
+\end{aligned}
+\]
+
+From the standard normal table, $P(Z > -0.25) \approx 0.5987 \approx 0.60$, so:
+\[
+\frac{\bar{x}_* - 103}{14 / \sqrt{n}} = -0.25
+\Rightarrow
+\bar{x}_* = 103 - 0.25 \cdot \frac{14}{\sqrt{n}}
+\]
+
+\vspace{1em}
+\textbf{Step 3. Solving for $n$}
+
+From Steps 1 and 2:
+\[
+100 + 1.645 \cdot \frac{14}{\sqrt{n}} = 103 - 0.25 \cdot \frac{14}{\sqrt{n}}
+\]
+
+Solving for $n$:
+\[
+\left( \frac{(1.645 + 0.25) \cdot 14}{103 - 100} \right)^2 \approx 78.2045
+\]
+
+Therefore, a minimum of 79 observations must be taken to guarantee that the hypothesis test will have the desired power of at least 0.60.
+\end{example}
+\begin{example}
+A vending machine advertises that it dispenses 225 ml cups of coffee ($\sigma = 7$ ml). You believe the mean volume of coffee per cup is something less than 225 ml. You plan to sample 40 cups of coffee from this machine to test your hypothesis.
+
+\begin{enumerate}[label=\textbf{\alph*)}]
+\item If the true mean volume of coffee per cup is 223 ml, what is the power of your test at $\alpha = 0.05$? \textit{(Homework)}
+\item How many coffee cups should you sample if you want to raise the power in part (a) to 0.80?
+\end{enumerate}
+\vspace{1em}
+\textbf{Solution (b):}
+
+\textbf{Step 1. Write the rule for rejecting $H_0$ in terms of $\bar{x}_*$.}
+
+By definition:
+\[
+\begin{aligned}
+\alpha &= P(\text{we reject } H_0 \mid \mu = 225) \\
+&= P(\bar{X} < \bar{x}_* \mid \mu = 225) \\
+&= P\left( Z < \frac{\bar{x}_* - 225}{7 / \sqrt{n}} \right) = 0.05
+\end{aligned}
+\]
+
+From the standard normal table, $P(Z < -1.645) = 0.05$, so:
+\[
+\bar{x}_* = 225 - 1.645 \cdot \frac{7}{\sqrt{n}}
+\]
+
+\vspace{1em}
+\textbf{Step 2. The power is the probability of this event under the condition that the alternative $\mu = 223$ is true.}
+
+To calculate this probability, standardize $\bar{x}$ using $\mu = 223$:
+
+\[
+\begin{aligned}
+\text{power} &= 1 - \beta = P(\bar{X} < \bar{x}_* \mid \mu = 223) \\
+&= P\left( Z < \frac{\bar{x}_* - 223}{7 / \sqrt{n}} \right) = 0.80
+\end{aligned}
+\]
+
+From the table, $P(Z < 0.84) = 0.7995 \approx 0.80$, so:
+\[
+\frac{\bar{x}_* - 223}{7 / \sqrt{n}} = 0.84
+\quad \Rightarrow \quad
+\bar{x}_* = 223 + 0.84 \cdot \frac{7}{\sqrt{n}}
+\]
+
+\vspace{1em}
+\textbf{Step 3. Solving for $n$}
+
+From Steps 1 and 2:
+\[
+225 - 1.645 \cdot \frac{7}{\sqrt{n}} = 223 + 0.84 \cdot \frac{7}{\sqrt{n}}
+\]
+
+Solving for $n$:
+\[
+n = \left( \frac{(1.645 + 0.84) \cdot 7}{225 - 223} \right)^2 \approx 75.6465
+\]
+
+Therefore, a minimum of 76 observations must be taken to guarantee that the hypothesis test will have the desired precision.
+\end{example}
+\begin{example}[Power and Sample Size for Milk Consumption Study]
+
+A newsletter reports that 90\% of adults drink milk. The researchers are interested in investigating if fewer than 90\% of adults drink milk (at $\alpha = 0.05$). They collect a random sample of 200 adults in a certain region.
+
+\begin{enumerate}[label=\textbf{\alph*.}]
+\item Calculate power of the test if the percentage of adults who drink milk is really 85\%.
+
+\begin{align*}
+\text{Under } H_0 &: \hat{p}^* = 0.90 - 1.645 \sqrt{\frac{0.90(1 - 0.90)}{200}} = 0.8651 \\
+\text{Power} &= P(\text{Reject } H_0 \mid p = 0.85) \\
+&= P(\hat{p} < 0.8651 \mid p = 0.85) \\
+&= P\left(Z < \frac{0.8651 - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{200}}} \right) \\
+&= P(Z < 0.5980) \approx 0.7250
+\end{align*}
+
+\noindent\textbf{R Output}
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+pnorm(0.5980, mean = 0, sd = 1)
+# [1] 0.72508
+\end{verbatim}
+\end{tcolorbox}
+
+\item Calculate beta if the percentage of adults who drink milk is really 85\%.
+
+\begin{align*}
+\beta &= 1 - \text{Power} = 1 - 0.725 = 0.275
+\end{align*}
+
+\item How many adults should you sample if you want to raise the power in part (a) to 0.80?
+
+\textbf{Step 1: Determine rejection cutoff under } $H_0 : p = 0.90$
+\begin{align*}
+\hat{p}^* = 0.90 - 1.645 \sqrt{\frac{0.90(1 - 0.90)}{n}}
+\end{align*}
+
+\textbf{Step 2: Set power to 0.80 under } $p = 0.85$
+\begin{align*}
+P\left( \frac{\hat{p} - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{n}}} < \frac{\hat{p}^* - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{n}}} \right) &= 0.80 \\
+\frac{\hat{p}^* - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{n}}} &= 0.8416 \\
+\hat{p}^* &= 0.85 + 0.8416 \sqrt{\frac{0.85(1 - 0.85)}{n}}
+\end{align*}
+
+\noindent\textbf{R Output}
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+qnorm(0.80, mean = 0, sd = 1)
+# [1] 0.8416212
+\end{verbatim}
+\end{tcolorbox}
+
+\textbf{Step 3: Equating expressions for } $\hat{p}^*$
+\begin{align*}
+0.90 - 1.645 \sqrt{\frac{0.90(1 - 0.90)}{n}} &= 0.85 + 0.8416 \sqrt{\frac{0.85(1 - 0.85)}{n}} \\
+0.05 &= \left(1.645 \sqrt{0.90(0.10)} + 0.8416 \sqrt{0.85(0.15)}\right) \cdot \frac{1}{\sqrt{n}} \\
+\sqrt{n} &= \frac{0.4935 + 0.3005}{0.05} = 15.87 \Rightarrow n \approx 253
+\end{align*}
+
+\end{enumerate}
+\end{example}
+\begin{example}
+A newsletter reports that 90\% of adults drink milk. The researchers are interested in investigating if less than 90\% of adults drink milk (at $\alpha = 0.05$). They collect a \textbf{random sample of 100 adults} in a certain region. \\
+
+Calculate power of the test if the percentage of adults who drink milk is really 85\%.
+
+
+We test:
+\begin{align*}
+H_0 &: p = 0.90 \\
+H_a &: p < 0.90
+\end{align*}
+
+
+The rejection region is determined by:
+\begin{align*}
+\alpha &= 0.05 = P(\text{reject } H_0 \mid H_0 \text{ is true}) \\
+P(Z < -1.645) &= 0.05 \quad \text{(Z critical value is -1.645)}
+\end{align*}
+
+Now calculate power under the alternative $p = 0.85$:
+
+\begin{align*}
+\text{Power} &= P(\text{reject } H_0 \mid H_0 \text{ is false}) \\
+&= P\left( \frac{\hat{p} - 0.90}{\sqrt{\frac{0.90(1 - 0.90)}{100}}} < -1.645 \,\middle|\, p = 0.85 \right) \\
+&= P(\hat{p} < 0.85065 \mid p = 0.85) \\
+&= P\left( Z < \frac{0.85065 - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{100}}} \right) \\
+&= P(Z < 0.0182) \approx 0.5072
+\end{align*}
+
+\noindent\textbf{R Output}
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+pnorm(0.0182, mean = 0, sd = 1)
+# [1] 0.5072603
+\end{verbatim}
+\end{tcolorbox}
+
+\end{example}
+\begin{example}
+A newsletter reports that 90\% of adults drink milk. The researchers are interested in investigating if less than 90\% of adults drink milk (at \( \alpha = 0.05 \)). They collect a \textbf{random sample of 50 adults} in a certain region. \\
+
+Calculate power of the test if the percentage of adults who drink milk is really 85\%.
+
+\begin{align*}
+H_0 &: p = 0.90 \\
+H_a &: p < 0.90
+\end{align*}
+
+The rejection region is determined by:
+\begin{align*}
+\alpha &= 0.05 = P(\text{reject } H_0 \mid H_0 \text{ is true}) \\
+P(Z < -1.645) &= 0.05 \quad \text{(Z critical value is -1.645)}
+\end{align*}
+
+\textbf{Power:}
+\begin{align*}
+\text{Power} &= P(\text{reject } H_0 \mid H_0 \text{ is false}) \\
+&= P\left( \frac{\hat{p} - 0.90}{\sqrt{\frac{0.90(1-0.90)}{50}}} < -1.645 \;\middle|\; p = 0.85 \right) \\
+&= P(\hat{p} < 0.85065 \mid p = 0.85) \\
+&= P\left( Z < \frac{0.85065 - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{50}}} \right) \\
+&= P(Z < -0.3921) \\
+&\approx 0.3475
+\end{align*}
+
+\noindent\textbf{R Output}
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{verbatim}
+pnorm(-0.3921, mean = 0, sd = 1)
+# [1] 0.3474922
+\end{verbatim}
+\end{tcolorbox}
+\end{example}
+
+If we keep \( \alpha \) at the same size, larger sample sizes increase the power of the test because sampling variability (sampling distributions) are much narrower.
+\begin{tcolorbox}[colback=yellow!5, colframe=yellow!50!black,
+  title={Power Formulas},
+  sharp corners, boxrule=0.4pt, width=\textwidth, breakable]
+
+\textbf{If $H_a : \mu > \mu_0$, then}
+\[
+\text{Power}(\mu_a) = \pi(\mu_a) = P \left[ Z \geq Z_{\alpha} + \frac{\sqrt{n}(\mu_0 - \mu_a)}{\sigma} \right]
+\]
+
+\textbf{where } $\mu_a > \mu_0$.
+
+\vspace{1em}
+
+\textbf{If $H_a : \mu < \mu_0$, then}
+\[
+\text{Power}(\mu_a) = \pi(\mu_a) = P \left[ Z \leq -Z_{\alpha} + \frac{\sqrt{n}(\mu_0 - \mu_a)}{\sigma} \right]
+\]
+
+\textbf{where } $\mu_a < \mu_0$.
+
+\vspace{1em}
+
+\textbf{If $H_a : \mu \ne \mu_0$, then}
+\[
+\begin{aligned}
+\text{Power}(\mu_a) &= \pi(\mu_a) \\
+&= 1 - P \left[ -Z_{\alpha/2} + \frac{\sqrt{n}(\mu_0 - \mu_a)}{\sigma} \leq Z \leq Z_{\alpha/2} + \frac{\sqrt{n}(\mu_0 - \mu_a)}{\sigma} \right]
+\end{aligned}
+\]
+
+\textbf{where } $\mu_a \ne \mu_0$.
+
+\vspace{0.5em}
+\textbf{You need to know:}
+\begin{itemize}
+  \item Standard deviation, $\sigma$
+  \item Significance level, $\alpha$
+  \item Effect size to detect, $\mu_0 - \mu_a$
+\end{itemize}
+
+\end{tcolorbox}
+Calculations of power (or of error probabilities) are useful for planning studies because we can make these calculations before we have any data. Once we actually have data, it is more common to report a P-value rather than a reject-or-not decision at a fixed significance level $\alpha$. The P-value measures the strength of the evidence provided by the data against $H_0$. It leaves any action or decision based on that evidence up to each individual. Different people may require different strengths of evidence.
+
+
 
 
 

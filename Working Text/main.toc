@@ -45,7 +45,7 @@
 \contentsline {section}{\numberline {11.1}Test of Hypothesis for One Mean}{85}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Test of Hypothesis for One Proportion}{99}{section.11.2}%
 \contentsline {section}{\numberline {11.3}Test of Hypothesis for One Variance}{114}{section.11.3}%
-\contentsline {chapter}{\numberline {12}Statistical Power}{118}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Statistical Power}{118}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Type I and Type II Errors}{120}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Using Power to Determine Sample Size}{123}{section.12.3}%
+\contentsline {chapter}{\numberline {13}Statistical Power}{118}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Statistical Power}{118}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{120}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{123}{section.13.3}%
