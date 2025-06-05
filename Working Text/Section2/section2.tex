@@ -90,18 +90,25 @@ The proof of Theorem $2.1$ isn't that trivial to see. We still need moment gener
 \end{itemize}
 
 \begin{proof}
-Suppose that \( Z \sim N(0, 1) \), then \( f_{Z}(z) = \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}} \).
-\begin{align}
-\text{Next, computing M.G.F for $Z^2$: }M_{Z^2}(t) &= \mathbb{E}(e^{tz^2}) = \int_{-\infty}^{\infty} e^{tz^2} \cdot \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}\, dz \\
-\text{After rearranging: }M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-(\frac{1}{2} - t)z^2} \, dz \\
-\text{Let: }u &= z\sqrt{\tfrac{1}{2} - t}, \text{ and then } dz = \frac{1}{\sqrt{\tfrac{1}{2} - t}} \, du \\
-\text{By substitution: }M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-u^2} \cdot \frac{1}{\sqrt{\tfrac{1}{2} - t}} \, du \\
-\text{Rearranging and using $2.2.1$ from above: }M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\tfrac{1}{2} - t}} \cdot \sqrt{\pi} \\
-\text{Then: }M_{Z^2}(t) &= (1 - 2t)^{-\frac{1}{2}} \text{, which is the M.G.F of $\chi_{n = 1}^{2}$.}
-\end{align}
+Suppose that \( Z \sim N(0, 1) \), then \( f_{Z}(z) = \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}} \).\\
+The moment generating function (MGF) of $Z^2$ is:
+\begin{align*}
+M_{Z^2}(t) &= \mathbb{E}\left(e^{tZ^2}\right) \\
+&= \int_{-\infty}^{\infty} e^{tz^2} f_Z(z) \, dz \\
+&= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{tz^2} e^{-\frac{z^2}{2}} \, dz \\
+&= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-\left(\frac{1}{2}-t\right)z^2} \, dz.
+\end{align*}
+
+Apply substitution with $u = z\sqrt{\frac{1}{2}-t}$, $dz = \frac{du}{\sqrt{\frac{1}{2}-t}}$:
+\begin{align*}
+M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-u^2} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}} \, du \\
+&= \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}} \int_{-\infty}^{\infty} e^{-u^2} \, du \\
+&= \frac{1}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{\frac{1}{2}-t}} \cdot \sqrt{\pi} \\
+&= \frac{1}{\sqrt{1-2t}}.
+\end{align*}
+
+This is the MGF of a chi-squared distribution with 1 degree of freedom, $Z^2 \sim \chi_1^2$.
 \end{proof}
-
-
 
 \noindent
 Now, we can do another proof by using Theorem $2.1$.
@@ -114,10 +121,29 @@ Suppose $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then the sum 
 We need Theorem $2.1$ to prove this, but it going to be easier. 
 
 \begin{proof}
-Assume that $Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)$, then we compute the M.G.F for the entire summation as well, and we let $\delta = \sum_{i = 1}^{n} Z_{i}^{2}$, which as the following shows:\[ M_{\delta}(t) = E[e^{t\delta}] = E[e^{t(Z_1^2 + \cdots + Z_n^2)}] = E[e^{tZ_1^2} \cdots e^{tZ_n^2}].\]
-\hspace*{2.7em} Since $Z_1, Z_2, ..., Z_n$ are independent and identically distributed, so that: \[ M_{\delta}(t) = E[e^{tZ_1^2}] \cdots E[e^{tZ_n^2}].\]
-\hspace*{2.7em} By Theorem $2.1$, we have: $Z^2 \sim \chi_{1}^{2}$, then: \[ M_{\delta}(t) = E[e^{t\delta}] = E[e^{tZ_1^2} \cdots e^{tZ_n^2}] = [(1-2t)^{-\frac{1}{2}}] \cdots [(1-2t)^{-\frac{1}{2}}].\]
-\hspace*{2.7em} Since there are $n$ individuals of $Z^2$, hence: \[ M_{\delta}(t) = (1-2t)^{-\frac{n}{2}}, \text{ which is the M.G.F of $\chi_{n}^{2}$, as required}.\]
+Suppose $Z \sim \mathcal{N}(0,1)$, then its probability density function is:
+\[ f_Z(z) = \frac{1}{\sqrt{2\pi}} e^{-\frac{z^2}{2}}. \]
+
+Let $\delta = \sum_{i=1}^{n} Z_i^2$, where $Z_1, \ldots, Z_n \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0,1)$. The moment generating function (MGF) of $\delta$ is:
+\begin{align*}
+M_{\delta}(t) &= \mathbb{E}\left[e^{t\delta}\right] \\
+&= \mathbb{E}\left[e^{t(Z_1^2 + \cdots + Z_n^2)}\right] \\
+&= \mathbb{E}\left[\prod_{i=1}^n e^{tZ_i^2}\right].
+\end{align*}
+
+Since $Z_1, \ldots, Z_n$ are independent and identically distributed:
+\begin{align*}
+M_{\delta}(t) &= \prod_{i=1}^n \mathbb{E}\left[e^{tZ_i^2}\right] \\
+&= \prod_{i=1}^n M_{Z_i^2}(t).
+\end{align*}
+
+From Theorem 2.1, we know $Z_i^2 \sim \chi_1^2$ with MGF $(1-2t)^{-1/2}$, therefore:
+\begin{align*}
+M_{\delta}(t) &= \prod_{i=1}^n (1-2t)^{-1/2} \\
+&= (1-2t)^{-n/2}.
+\end{align*}
+
+This is exactly the MGF of a chi-squared distribution with $n$ degrees of freedom, proving that $\delta \sim \chi_n^2$ as required.
 \end{proof}
 
 \noindent
@@ -137,7 +163,7 @@ The t-distribution and F-distribution are essential tools in inferential statist
 \begin{definition}[Student's t-Distribution]
 Suppose $X$ is t-distributed with $n$ degrees of freedom, then the probability density function of $X$ is given by: \[ f_{X}(x) = \frac{\Gamma(\frac{n+1}{2})}{\sqrt{\pi n} \Gamma(\frac{n}{2})} (1+\frac{x^2}{n})^{\frac{-n+1}{2}}.\]
 Alternatively, define a new variable $T$ is the following: \[ T = \frac{W}{\sqrt{\frac{V}{r}}}, \text{ for $W \sim N(0, 1)  \text{ and } V \sim \chi_{r}^{2}$.}\]
-Or suppose $X_1, ..., X_n \overset{\text{i.i.d.}}{\sim} N(\mu, \text{ } \sigma^2)$, then $\bar(X) \sim N(\mu, \text{ } \frac{\sigma^2}{n})$. Thus, \[ T = \frac{ \bar{x} - \mu}{(\frac{s}{\sqrt{n}})}.\]
+Or suppose $X_1, ..., X_n \overset{\text{i.i.d.}}{\sim} N(\mu, \text{ } \sigma^2)$, then $\bar{X} \sim N(\mu, \text{ } \frac{\sigma^2}{n})$. Thus, \[ T = \frac{ \bar{x} - \mu}{(\frac{s}{\sqrt{n}})}.\]
 \end{definition}
 
 \noindent
