@@ -4,10 +4,10 @@
 \chapter{One Sample Confidence Intervals On a Proportion}
 %\index{Introduction}
 %\label{sec.matrix}
-%%start relabeling as 2.1 etc
+%start relabeling as 2.1 etc
 %\pagestyle{myheadings}  \markboth{\ref{sec.matrix}.
 %\titleref{sec.matrix}}{}
-%%\setcounter{equation}{0}
+%\setcounter{equation}{0}
 
 Perviously, we have introduced two types of confidence interval based on known and unknown variance. Moreover, confidence intervals are also applied to an unknown population proportion. For example, suppose we are interested the proportion of total number of left-handed students among all students who are currently studying at University of Toronto Mississauga. The question is: how do we know such the parameter which estimates the proportion of left-handed students at UTM? While, it is impossible to proceed it directly by counting both the total number of students and all left-handed students at UTM, due to the complexity and the total workload of that task. Then, we have to work with confidence intervals.\\
 
@@ -48,16 +48,19 @@ A good way to understand confidence interval is visualization. Now, suppose we h
 Remember that your final answer of the range of $p$ must between $0$ and $1$, since we are working with proportion.\\
 
 \noindent
-\textbf{Summery about One Sample Confidence Intervals}
+\textbf{Summary about One Sample Confidence Intervals}
 
 \noindent
 We have introduced one sample confidence interval under three different cases: given population variance, unknown population variance and unknown population proportion. All the material of one sample confidence interval comes from chapter $6, 7, 8$, which seems like you to remember a lot. However, the reason why we give this summery is to help you to remember the basic skeleton of one sample confidence interval. Let's revisit the three distinct types of confidence interval:
 
 \begin{itemize}
-	\item 1. For given population variance, we have: $\bar{x}  \pm z_{ \alpha/2 } \cdot \frac{\sigma}{\sqrt{n}}; $
-	\item 2. For unknown population variance, we have: $\bar{x}  \pm t_{\frac{\alpha}{2}} \cdot \frac{s}{\sqrt{n}};$
-	\item 3. To estimate population proportion, we have: $p = \hat{p}  \pm z_{\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}.$
+    \item Known variance: \(\hat{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\) \hyperref[ch:7]{(Chapter 7)}.
+    
+    \item Unknown variance: $\bar{x} \pm t_{\scriptscriptstyle{\alpha/2}} \cdot \frac{s}{\sqrt{n}}$
+    
+    \item Proportion: $\hat{p} \pm z_{\scriptscriptstyle{\alpha/2}} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$
 \end{itemize}
+
 
 \noindent
 The question is: what is the similarity between the three distinct types of confidence interval? You may have already noticed that the confidence intervals above are all follow such a skeleton that $\bar{x}$ plus or minus its margin of error (different between each type of C.I.).\\ 
