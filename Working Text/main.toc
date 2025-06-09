@@ -34,5 +34,7 @@
 \contentsline {chapter}{\numberline {10}Two Sample Confidence Interval}{68}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Two Sample Confidence Interval on a Difference of Mean}{68}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Two Sample Confidence Interval on Paired Data}{73}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Two Sample Confidence Interval on Proportions}{75}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{77}{section.10.4}%
+\contentsline {section}{\numberline {10.3}Two Sample Confidence Interval on Proportions}{76}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{78}{section.10.4}%
+\contentsline {chapter}{\numberline {12}One Sample Hypothesis Test on a Proportion and Variance}{80}{chapter.12}%
+\contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{80}{section.12.1}%
