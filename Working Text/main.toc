@@ -39,13 +39,11 @@
 \contentsline {chapter}{\numberline {10}Two Sample Confidence Interval}{74}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Two Sample Confidence Interval on a Difference of Mean}{74}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Two Sample Confidence Interval on Paired Data}{79}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Two Sample Confidence Interval on Proportions}{81}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{83}{section.10.4}%
-\contentsline {chapter}{\numberline {11}Introduction to Hypothesis Testing}{85}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Test of Hypothesis for One Mean}{85}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Test of Hypothesis for One Proportion}{99}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Test of Hypothesis for One Variance}{114}{section.11.3}%
-\contentsline {chapter}{\numberline {13}Statistical Power}{118}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Statistical Power}{118}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{120}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{123}{section.13.3}%
+\contentsline {section}{\numberline {10.3}Two Sample Confidence Interval on Proportions}{82}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{84}{section.10.4}%
+\contentsline {chapter}{\numberline {12}One Sample Hypothesis Test on a Proportion and Variance}{86}{chapter.12}%
+\contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{86}{section.12.1}%
+\contentsline {chapter}{\numberline {13}Statistical Power}{88}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Statistical Power}{88}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{90}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{93}{section.13.3}%

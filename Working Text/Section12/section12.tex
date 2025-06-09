@@ -1,0 +1,72 @@
+%\pagenumbering{arabic}
+%\setcounter{page}{1}
+\setcounter{chapter}{11}
+\chapter{One Sample Hypothesis Test on a Proportion and Variance}
+%\index{Introduction}
+%\label{sec.matrix}
+%start relabeling as 2.1 etc
+%\pagestyle{myheadings}  \markboth{\ref{sec.matrix}.
+%\titleref{sec.matrix}}{}
+%\setcounter{equation}{0}
+
+Inferential statistics is a powerful method for statistical analysis, because it allows people to analyze a lot parameters. Similarly to confidence interval, testing hypothesis can be applied to proportion and variance as well. Also, we use the exact same structure for one sample hypothesis test on a proportion and variance.
+
+\section{One Sample Hypothesis Test on a Proportion}
+
+Suppose we have assume the proportion of a criteria from a population $p$ is equal to our parameter $p_0$ (null hypothesis $H_0: p = p_0$). While, the question is: how do we know whether our assumption is correct or not? We need to use testing hypothesis on proportion to verify. \\
+
+\textbf{Step 1. Stating the Structure of Testing Hypothesis}
+
+First of all, let's proceed with a table to see all the cases:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c }
+Cases & Null Hypothesis & Alternative Hypothesis \\
+     1	   & $H_0: p = p_0$ & $H_a: p > p_0$ \\
+     2	   & $H_0: p = p_0$ & $H_a: p < p_0$ \\
+     3    & $H_0: p = p_0$ & $H_a: p \neq p_0$ \\
+\end{tabular}
+\caption{All possible cases of one sample hypothesis test on a proportion ($p$ represents the actual proportion of a population)}
+\end{figure}
+\end{center}
+We are not going to proceed with all three cases in a single question. You need to be able to identify which case of testing hypothesis are going to be applied from question.\\
+
+\textbf{Step 2. Computing Test Statistics}
+
+After that we need to compute our test statistics, as the following definition provides:
+
+\begin{definition}[Test statistics of one sample hypothesis test on a proportion]
+The test statistics of one sample hypothesis test on a proportion is given by: \[ Z^* = \frac{\hat{p} - p_{\text{\scriptsize$0$}}}{\sqrt{\frac{p_{\text{\scriptsize$0$}}(1-p_{\text{\scriptsize$0$}})}{n}}}.\]
+In this case, $n$ means the sample size, $\hat{p}$ is the parameter of the proportion of the population, which is calculated by $\hat{p} = \frac{\text{number of successes in the sample}}{n}$. Also, the reference distribution is standard normal distribution: $N(0,1)$.
+\end{definition}
+
+Note that be careful while you are computing the test statistics, because it directly affects the final answer.\\
+
+\textbf{Step 3. Finding the $p$ - value}
+
+There are three cases of p - value.
+
+i. When is structure of testing hypothesis is $H_0: p = p_0$, $H_a: p > p_0$:
+
+\pgfmathdeclarefunction{gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}}
+\begin{center}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+\centering
+\begin{axis}[no markers, domain=0:10, samples=100,
+axis lines*=left, xlabel=$x$ - axis, ylabel= $y$ - axis,
+height=6cm, width=10cm,
+xtick={0}, xticklabels={$0$}, ytick=\empty,
+enlargelimits=false, clip=false, axis on top,
+grid = major]
+\node[below] at (axis cs:2,0) {p-value(blue area)};
+\addplot [fill=white, draw=black, domain=-3:2] {gauss(0,1)} \closedcycle;
+\addplot [fill = blue!, draw=black, domain=1:3] {gauss(0,1)} \closedcycle;
+\end{axis}
+\end{tikzpicture}
+\caption{std}
+\end{figure}
+\end{center}

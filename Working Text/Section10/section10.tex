@@ -59,6 +59,8 @@ Moreover, $s_1^2$ and $s_2^2$ are sample variance of the two chosen groups; and 
 
 Only with the equation seems hard to understand, the following number line helps you to visualize what we try to indicate:
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \draw[<->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -66,8 +68,8 @@ Only with the equation seems hard to understand, the following number line helps
   \draw[thick] (4,0.5) arc (90:-90:0.5);
   \node[below] at (4,-0.5) {Upper Bound of $\mu_1 - \mu_2$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of two-sample confidence interval (Case 1, 2, 3)
+\caption{Visualization of two-sample confidence interval (Case 1, 2, 3)}
+\end{figure}
 \end{center}
 
 Earlier in this chapter we said that two sample confidence interval aims to compare the mean between two populations. The number line above shows the result of difference of means between the two populations. Now, the question is, how do we know which population has a relatively larger mean? While, we can summarize it from that number line, with different cases:
@@ -75,17 +77,19 @@ Earlier in this chapter we said that two sample confidence interval aims to comp
 \textbf{1. $\mu_1 < \mu_2$:}
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
-  \draw[<->, thick] (-7,0) -- (7,0);
+  \draw[<-|, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
   \node[below] at (-4,-0.5) {Lower Bound of $\mu_1 - \mu_2$};
   \draw[thick] (4,0.5) arc (90:-90:0.5);
   \node[below] at (4,-0.5) {Upper Bound of $\mu_1 - \mu_2$};
-  \node[below] at (-5.5, -0.1) {\large$-\infty$};
+  \node[below] at (-7, -0.1) {\large$-\infty$};
   \node[below] at (7, -0.1) {\large$0$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of the case when $\mu_1 < \mu_2$
+\caption{Visualization of the case when $\mu_1 < \mu_2$}
+\end{figure}
 \end{center}
 
 Now, we know that the difference between $\mu_1 < \mu_2$ lies on the negative side on the number line, such that: $\mu_1 - \mu_2 < 0$. Hence, by solving the inequality above we get: $\mu_1 < \mu_2$ trivially.
@@ -93,8 +97,10 @@ Now, we know that the difference between $\mu_1 < \mu_2$ lies on the negative si
 \textbf{2. $\mu_1 > \mu_2$:}
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
-  \draw[<->, thick] (-7,0) -- (7,0);
+  \draw[|->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
   \node[below] at (-4,-0.5) {Lower Bound of $\mu_1 - \mu_2$};
   \draw[thick] (4,0.5) arc (90:-90:0.5);
@@ -102,8 +108,8 @@ Now, we know that the difference between $\mu_1 < \mu_2$ lies on the negative si
   \node[below] at (-7, -0.1) {\large$0$};
   \node[below] at (7, -0.1) {\large$\infty$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of the case when $\mu_1 > \mu_2$
+\caption{Visualization of the case when $\mu_1 > \mu_2$}
+\end{figure}
 \end{center}
 
 Similarly as the case above, we know that $\mu_1 - \mu_2 > 0$, by observing the number line. Thus, we have: $\mu_1 > \mu_2$.
@@ -111,6 +117,8 @@ Similarly as the case above, we know that $\mu_1 - \mu_2 > 0$, by observing the 
 \textbf{3. $\mu_1 = \mu_2$:}
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \draw[<->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -121,8 +129,8 @@ Similarly as the case above, we know that $\mu_1 - \mu_2 > 0$, by observing the 
   \node[below] at (7, -0.1) {\large$\infty$};
   \node[below] at (-7, -0.1) {\large$-\infty$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of the case when $\mu_1 = \mu_2$
+\caption{Visualization of the case when $\mu_1 = \mu_2$}
+\end{figure}
 \end{center}
 
 However, 0 is an element in the range of the difference between $\mu_1 - \mu_2$, such that there is a chance when the two means could be same. Hence, we conclude that $\mu_1 = \mu_2$ in this case. While, if you prefer to use $\mu_2 - \mu_1$, this strategy is going to work as well. Just simply following the same steps, you will get the same conclusion.\\
@@ -145,14 +153,13 @@ Note that if both $n_1 \ge 30$ and $n_2 \ge 30$, then normality assumption is no
 Behavioural researchers have developed an index designed to measure managerial success. The index (measured on a 100- point scale) is based on the manager’s length of time in the organization and their level within the term; the higher the index, the more successful the manager. Suppose a researcher wants to compare the average index for the two groups of managers at a large manufacturing plant. Managers in group 1 engage in high volume of interactions with people outside the managers’ work unit (such interaction include p hone and face-to-face meetings with customers and suppliers, outside meetings, and public relation work). Managers in group 2 rarely interact with people outside their work unit. Independent random samples of 12 and 15 managers are selected from groups 1 and 2, respectively, and success index of each is recorded.\\
 Comparing Two Population Means Managerial Success Indexes for Two Group (With Equal Variances Assumed) Note: The response variable is “Managerial Success Indexes”.
 
-Managerial success indexes is a continuousquantitative variable,
+Managerial success indexes is a continuous quantitative variable,
 
 measured on100-point scale.
 
 The explanatory variable is “Type of group”.
 
 Type of group (Group 1: Interaction with outsiders, Group 2: Fewer interactions) is a nominal categorical variable.
-\end{example}
 
 Let's use R-code to demonstrate this example. The following lines of code helps you to get started.
 
@@ -225,12 +232,15 @@ Finally, the output is:
 \end{tcolorbox}
 
 Therefore, We are 95\% conﬁdent that the mean success index is between 9.28 and 22.44 points higher for group 1 than group 2.
+\end{example}
 
 \section{Two Sample Confidence Interval on Paired Data}
 
 It seems like two sample confidence interval only works on two independent samples, however what about two dependent samples? Suppose we are interested the growth of height from several distinct elementary students. We measure their height recently, then we will do it another time with five years later. The question is: how are we going to proceed with two confidence interval? While, the answer is yes. We are able to do so by constructing two sample confidence interval, but with a different strategy. Now, let's introduce two sample confidence interval with paired data:
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tabular}{ c c c c }
  Sample Units & Measurement 1 ($M_1$) & Measurement 2 ($M_2$) & Difference ($M_2 - M_1$ or $M_1 - M_2$)\\ 
  1 & $x_{11}$ & $x_{12}$ & $x_{d1} = x_{12} -  x_{11}$\\  
@@ -239,7 +249,8 @@ It seems like two sample confidence interval only works on two independent sampl
  ......\\
  n & $x_{n1}$ & $x_{n2}$ & $x_{dn} = x_{n2} -  x_{n1}$\\
 \end{tabular}
-\small\textbf{A table of paired data}\\
+\caption{A table of paired data}
+\end{figure}
 \end{center}
 
 The table shows how to get a paired data. The first column on the left is the sample size, the second column records the first time of measurement of objects, the third column records the second time of measurement of the same objects, the last column on the right is the difference between the second and the first measurement ($M_2 - M_1$). Then we can use the fourth column to get the mean value, sample variance and sample standard deviation of the difference. Now, let's begin with the proper definition:
@@ -258,6 +269,8 @@ Next, we need to state our final conclusion from the result of two sample confid
 \textbf{1. $\bar{M}_1 < \bar{M}_2$:}
 
 \begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}
   \draw[<-|, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -267,8 +280,8 @@ Next, we need to state our final conclusion from the result of two sample confid
   \node[below] at (-7, -0.1) {\large$-\infty$};
   \node[below] at (7, -0.1) {\large$0$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of the case when $\bar{M}_1 < \bar{M}_2$
+\caption{Visualization of the case when $\bar{M}_1 < \bar{M}_2$}
+\end{figure}
 \end{center}
 
 From the number line above, we know that the result of $\mu_d$ lies only in the negative side of the number line, also we use $M_1 - M_2$ to get the difference data then calculate the average of difference data. Now, we have: $\bar{M}_1 - \bar{M}_2 = \mu_d < 0$. Hence, we conclude that $\bar{M}_1 < \bar{M}_2.$
@@ -276,8 +289,10 @@ From the number line above, we know that the result of $\mu_d$ lies only in the 
 \textbf{2. $\bar{M}_1 > \bar{M}_2$:}
 
 \begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}
-  \draw[|->, thick] (-7,0) -- (7,0);
+  \draw[|->, thick] (-6.8,0) -- (7.2,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
   \node[below] at (-4,-0.5) {Lower Bound of $\mu_d$};
   \draw[thick] (4,0.5) arc (90:-90:0.5);
@@ -285,8 +300,8 @@ From the number line above, we know that the result of $\mu_d$ lies only in the 
   \node[below] at (-7, -0.1) {\large$0$};
   \node[below] at (7, -0.1) {\large$\infty$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of the case when $\bar{M}_1 > \bar{M}_2$
+\caption{Visualization of the case when $\bar{M}_1 > \bar{M}_2$}
+\end{figure}
 \end{center}
 
 From the number line above, we know that the result of $\mu_d$ lies only in the positive side of the number line, also we use $M_1 - M_2$ to get the difference data then calculate the average of difference data. Now, we have: $\bar{M}_1 - \bar{M}_2 = \mu_d > 0$. Hence, we conclude that $\bar{M}_1 > \bar{M}_2.$
@@ -294,6 +309,8 @@ From the number line above, we know that the result of $\mu_d$ lies only in the 
 \textbf{3. $\bar{M}_1 = \bar{M}_2$:}
 
 \begin{center}
+\begin{figure}[H]
+\centering
 \begin{tikzpicture}
   \draw[<->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -304,8 +321,8 @@ From the number line above, we know that the result of $\mu_d$ lies only in the 
   \node[below] at (7, -0.1) {\large$\infty$};
   \node[below] at (-7, -0.1) {\large$-\infty$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of the case when $\bar{M}_1 = \bar{M}_2$
+\caption{Visualization of the case when $\bar{M}_1 = \bar{M}_2$}
+\end{figure}
 \end{center}
 
 While, 0 is included in the range of $\mu_d$, then there is a chance that $\bar{M}_1 - \bar{M_2} = \mu_d = 0.$ Hence, we conclude that $\bar{M}_1 = \bar{M}_2$.\\
@@ -329,17 +346,21 @@ Furthermore, two sample confidence intervals can approximate the proportion as w
 It may still be difficult to understand, now let's begin with figures:
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \draw[fill=blue, line width=2pt] ( -3, 0) circle (2cm);
   \draw[fill=red, line width=2pt] ( 3, 0) circle (2cm);
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of two population of all students from UTSG (left) and UTM (right)
+\caption{Visualization of two population of all students from UTSG (left) and UTM (right)}
+\end{figure}
 \end{center}
 
 This figure represents the population of all students from two campuses. To begin with our task (find the proportion of left-handed students), we can select a group of random sample from each campus:
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   % Blue ellipse on the left
   \draw[fill=blue, line width=2pt] (-4, 0) ellipse [x radius=2cm, y radius=1cm];
@@ -347,8 +368,8 @@ This figure represents the population of all students from two campuses. To begi
   % Red ellipse on the right
   \draw[fill=red, line width=2pt] (4, 0) ellipse [x radius=2cm, y radius=1cm];
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of two selected random sample from UTSG (left) and UTM (right)
+\caption{Visualization of two selected random sample from UTSG (left) and UTM (right)}
+\end{figure}
 \end{center}
 
 As you can see, we have chosen our random sample from each campus with sample size $n_1$ and $n_2$, respectively. Now we need estimators to construct our confidence interval: $\hat{p}_1$ and $\hat{p}_2$. Those are the proportion of left-handed students from each random sample respectively. Since we have all the information we need, now we can apply our confidence interval from the two random sample.
@@ -367,6 +388,8 @@ Similarly as confidence interval on independent and dependent data, we are going
 \textbf{1. $p_1 > p_2$:}
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \draw[|-|, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -376,8 +399,8 @@ Similarly as confidence interval on independent and dependent data, we are going
   \node[below] at (7, -0.1) {\large$1$};
   \node[below] at (-7, -0.1) {\large$0$};
 \end{tikzpicture}
-\vspace{0.25em}
-\small\textbf{}\\Visualization of the case when $p_1 > p_2$
+\caption{Visualization of the case when $p_1 > p_2$}
+\end{figure}
 \end{center}
 
 From the number line, the result of $\hat{p}_1 - \hat{p}_2$ lies only on the positive side, such that $\hat{p}_1 - \hat{p}_2 > 0$. Hence, $\hat{p}_1 > \hat{p}_2$. Note that proportion is a number between $0$ and $1$, such that the difference of two proportions only between $-1$ and $1$.
@@ -385,6 +408,8 @@ From the number line, the result of $\hat{p}_1 - \hat{p}_2$ lies only on the pos
 \textbf{2. $\hat{p}_1 < \hat{p}_2$}
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \draw[|-|, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -394,8 +419,8 @@ From the number line, the result of $\hat{p}_1 - \hat{p}_2$ lies only on the pos
   \node[below] at (7, -0.1) {\large$0$};
   \node[below] at (-7, -0.1) {\large$-1$};
 \end{tikzpicture}
-\vspace{0.25em}
-\small\textbf{}\\Visualization of the case when $p_1 < p_2$
+\caption{Visualization of the case when $p_1 < p_2$}
+\end{figure}
 \end{center}
 
 Now, the result of $\hat{p}_1 - \hat{p}_2$ lies only on the positive side, such that $\hat{p}_1 - \hat{p}_2 < 0$. Hence, $\hat{p}_1 < \hat{p}_2$.
@@ -403,6 +428,8 @@ Now, the result of $\hat{p}_1 - \hat{p}_2$ lies only on the positive side, such 
 \textbf{3. $\hat{p}_1 = \hat{p}_2$}
 
 \begin{center}
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \draw[|-|, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -413,8 +440,8 @@ Now, the result of $\hat{p}_1 - \hat{p}_2$ lies only on the positive side, such 
   \node[below] at (7, -0.1) {\large$1$};
   \node[below] at (-7, -0.1) {\large$-1$};
 \end{tikzpicture}
-\vspace{0.5em}
-\small\textbf{}\\Visualization of the case when $\hat{p}_1 = \hat{p}_2$
+\caption{Visualization of the case when $\hat{p}_1 = \hat{p}_2$}
+\end{figure}
 \end{center}
 
 In this case, $0$ lies in the range of $\hat{p}_1 - \hat{p}_2$, such that there is a chance when $\hat{p}_1 - \hat{p}_2 = 0$. Hence, we conclude that: $\hat{p}_1 = \hat{p}_2$.\\
@@ -432,9 +459,9 @@ In this case, $0$ lies in the range of $\hat{p}_1 - \hat{p}_2$, such that there 
 
 Confidence interval is a strong technique in inferential statistics, we have discussed its application on population mean, proportion and dependent data. Now, let's move on to variance.\\
 
-One simple method involves just looking at two sample variances. Logically, if two population variances are equal, then the two sample variances should be very similar. When the two sample variances are reasonably close, you can be reasonably conﬁdent that the homogeneity assumption is satisﬁed and proceed with, for example, Student t-interval. However, when one sample variance is three or four times larger than the other, then there is reason for a concern. The common statistical procedure for comparing population variances $\sigma_1^2$ and $\sigma_2^2$ makes an inference about the ratio of $\frac{\sigma_1^2}{\sigma_2^2}$.\\
+One simple method involves just looking at two sample variances. Logically, if two population variances are equal, then the two sample variances should be very similar. When the two sample variances are reasonably close, you can be reasonably conﬁdent that the homogeneity assumption is satisﬁed and proceed with, for example, Student t-interval. However, when one sample variance is three or four times larger than the other, then there is reason for a concern. The common statistical procedure for comparing population variances $\sigma_1^2$ and $\sigma_2^2$ makes an inference about the ratio of $(\sigma_1^2)/(\sigma_2^2)$.\\
 
-To make an inference about the ratio of $\frac{\sigma_1^2}{\sigma_2^2}$ we collect sample data and use the ratio of the sample variances $\frac{s_1^2}{s_2^2}$.
+To make an inference about the ratio of $(\sigma_1^2)/(\sigma_2^2)$ we collect sample data and use the ratio of the sample variances $(\sigma_1^2)/(\sigma_2^2)$.
 
 At this point, let's derive the confidence interval. We know that: $\frac{s_1^2/\sigma_1^2}{s_2^2/\sigma_2^2} \sim F_{n_1-1, n_2 -1}$. Then, we can construct our confidence interval as:
 	\[P[F_{n_1-1, n_2 -1; 1-\alpha/2} < \frac{s_1^2/\sigma_1^2}{s_2^2/\sigma_2^2} < F_{n_1-1, n_2 -1; \alpha/2}]  = 1 -\alpha.\]
