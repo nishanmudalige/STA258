@@ -45,5 +45,5 @@
 \contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{86}{section.12.1}%
 \contentsline {chapter}{\numberline {13}Statistical Power}{88}{chapter.13}%
 \contentsline {section}{\numberline {13.1}Statistical Power}{88}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{90}{section.13.2}%
+\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{91}{section.13.2}%
 \contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{93}{section.13.3}%
