@@ -41,9 +41,15 @@
 \contentsline {section}{\numberline {10.2}Two Sample Confidence Interval on Paired Data}{79}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Two Sample Confidence Interval on Proportions}{82}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{84}{section.10.4}%
-\contentsline {chapter}{\numberline {12}One Sample Hypothesis Test on a Proportion and Variance}{86}{chapter.12}%
-\contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{86}{section.12.1}%
-\contentsline {chapter}{\numberline {13}Statistical Power}{88}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Statistical Power}{88}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{91}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{93}{section.13.3}%
+\contentsline {chapter}{\numberline {11}Introduction to Hypothesis Testing}{86}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Test of Hypothesis for One Mean}{86}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Test of Hypothesis for One Proportion}{100}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Test of Hypothesis for One Variance}{115}{section.11.3}%
+\contentsline {chapter}{\numberline {12}One Sample Hypothesis Test on a Proportion and Variance}{119}{chapter.12}%
+\contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{119}{section.12.1}%
+\contentsline {chapter}{\numberline {13}Statistical Power}{121}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Statistical Power}{121}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{124}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{126}{section.13.3}%
+\contentsline {chapter}{\numberline {14}Two Sample Hypothesis Tests}{133}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Comparing Means with Independent Samples}{133}{section.14.1}%
