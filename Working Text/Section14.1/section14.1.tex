@@ -155,7 +155,7 @@ We should check the assumption that the underlying populations of individual res
   \item For $n$’s of 10 or so, a moderately skewed histogram is okay. But, for strongly skewed data or data containing outliers this method should be avoided.
   \item For larger samples $n \geq 20$, data skewness is less of an issue — but, we still need to check if there are any outliers in the data, extreme skewness, and multiple modes.
 \end{itemize}
-\subsection*{Comparing Two Populations Means: Independent Sampling (Equal Variances Assumed)}
+\subsection{Comparing Two Populations Means: Independent Sampling (Equal Variances Assumed)}
 
 Consider two independent populations with unknown means $\mu_1$ and $\mu_2$, and unknown standard deviations $\sigma_1$ and $\sigma_2$ ($\sigma_1 = \sigma_2$), respectively. We can make an inference about their mean difference $\mu_1 - \mu_2$ by using the difference between their point estimates (sample means): $\bar{Y}_1 - \bar{Y}_2$. When the assumptions and conditions are met,
 
@@ -524,7 +524,44 @@ Since the P-value is very small, we have strong evidence to indicate that there 
 \vspace{0.5em}
 \noindent\textbf{Note.} As a follow-up, we could find a 95\% CI for $\mu_1 - \mu_2$ to estimate this difference. Then, we could provide an estimate of how much higher the mean success index for group~1 is.
 
-
 \end{example}
+\subsection{Comparing Two Populations Means: Independent Sampling (Unequal Variances Assumed)}
+\subsection*{Small-Sample Confidence Interval for $\mu_1 - \mu_2$ (Unequal Variances)}
+
+Draw an SRS of size $n_1$ from a Normal population with unknown mean $\mu_1$, and draw an independent SRS of size $n_2$ from another Normal population with unknown mean $\mu_2$. A confidence interval for $\mu_1 - \mu_2$ is given by
+
+\[
+(\bar{x}_1 - \bar{x}_2) \pm t^* \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\]
+
+Here $t^*$ is the critical value for the $t(k)$ density curve with area $C$ between $-t^*$ and $t^*$. The degrees of freedom $k$ are equal to the smaller of $n_1 - 1$ and $n_2 - 1$.
+\subsection*{Degrees of Freedom (Option 1)}
+
+\textit{Option 1.} With software, use the statistic $t$ with accurate critical values from the approximating $t$ distribution.
+
+The distribution of the two-sample $t$ statistic is very close to the $t$ distribution with degrees of freedom $df$ given by
+
+\[
+df = \frac{\left( \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} \right)^2}
+{
+\left( \frac{1}{n_1 - 1} \left( \frac{s_1^2}{n_1} \right)^2 \right)
++
+\left( \frac{1}{n_2 - 1} \left( \frac{s_2^2}{n_2} \right)^2 \right)
+}
+\]
+
+This approximation is accurate when both sample sizes $n_1$ and $n_2$ are 5 or larger.
+\subsection*{Degrees of Freedom (Option 2)}
+
+\textit{Option 2.} Without software, use the statistic $t$ with critical values from the $t$ distribution with degrees of freedom equal to the smaller of $n_1 - 1$ and $n_2 - 1$. These procedures are always conservative for any two Normal populations.
+\subsection*{Two-Sample t-Test (Unequal Variances)}
+
+To test the hypothesis $H_0 : \mu_1 = \mu_2$, calculate the two-sample $t$ statistic:
+
+\[
+t^* = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
+\]
+
+and use $P$-values or critical values for the $t(k)$ distribution.
 
 

@@ -53,3 +53,5 @@
 \contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{126}{section.13.3}%
 \contentsline {chapter}{\numberline {14}Two Sample Hypothesis Tests}{133}{chapter.14}%
 \contentsline {section}{\numberline {14.1}Comparing Means with Independent Samples}{133}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Comparing Two Populations Means: Independent Sampling (Equal Variances Assumed)}{136}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Comparing Two Populations Means: Independent Sampling (Unequal Variances Assumed)}{143}{subsection.14.1.2}%
