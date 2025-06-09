@@ -212,7 +212,7 @@ P\left(Z > \frac{0.520 - 1.1}{1/\sqrt{10}}\right)
 \captionof{figure}{Power curve showing shaded rejection area under $H_A$}
 \end{center}
 This result can also be visualized using a power curve, which shows how the probability of correctly rejecting \( H_0 \) increases with the true mean \( \mu \).
-
+\vspace{-2.50em}
 \begin{figure}[H]  % Use [H] to prevent floating (requires \usepackage{float})
 \centering
 \includegraphics[width=0.75\textwidth]{section13/images/power_curve.pdf}
@@ -483,11 +483,13 @@ pnorm(0.5980, mean = 0, sd = 1)
 \end{align*}
 
 \textbf{Step 2: Set power to 0.80 under } $p = 0.85$
-\begin{align*}
+\[
+\begin{aligned}
 P\left( \frac{\hat{p} - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{n}}} < \frac{\hat{p}^* - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{n}}} \right) &= 0.80 \\
 \frac{\hat{p}^* - 0.85}{\sqrt{\frac{0.85(1 - 0.85)}{n}}} &= 0.8416 \\
 \hat{p}^* &= 0.85 + 0.8416 \sqrt{\frac{0.85(1 - 0.85)}{n}}
-\end{align*}
+\end{aligned}
+\]
 
 \noindent\textbf{R Output}
 \begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
@@ -498,11 +500,13 @@ qnorm(0.80, mean = 0, sd = 1)
 \end{tcolorbox}
 
 \textbf{Step 3: Equating expressions for } $\hat{p}^*$
-\begin{align*}
+\[
+\begin{aligned}
 0.90 - 1.645 \sqrt{\frac{0.90(1 - 0.90)}{n}} &= 0.85 + 0.8416 \sqrt{\frac{0.85(1 - 0.85)}{n}} \\
 0.05 &= \left(1.645 \sqrt{0.90(0.10)} + 0.8416 \sqrt{0.85(0.15)}\right) \cdot \frac{1}{\sqrt{n}} \\
 \sqrt{n} &= \frac{0.4935 + 0.3005}{0.05} = 15.87 \Rightarrow n \approx 253
-\end{align*}
+\end{aligned}
+\]
 
 \end{enumerate}
 \end{example}
