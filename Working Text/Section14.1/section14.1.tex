@@ -792,3 +792,68 @@ Since our P-value is ``small'', we reject the null hypothesis (Note that we woul
 The design of the DRP study is not ideal. Random assignment of students was not possible in a school environment, so existing third-grade classes were used. The effect of the reading programs is therefore confounded with any other differences between the two classes. The classes were chosen to be as similar as possible in variables such as the social and economic status of the students. Pretesting showed that the two classes were on the average quite similar in reading ability at the beginning of the experiment. To avoid the effect of two different teachers, the same teacher taught reading in both classes during the eight-week period of the experiment. We can therefore be somewhat confident that our two-sample procedure is detecting the effect of the treatment and not some other difference between the classes.
 
 \end{example}
+\begin{nt}[Purpose of Hypothesis Testing]
+\textbf{Why do we use hypothesis tests?}
+
+To conduct tests on parameters and to quantify the degree of certainty with probability.
+
+The smaller the p-value, the stronger the evidence against $H_0$ (provided assumptions are met).
+
+\end{nt}
+
+\textbf{Understanding Significance Levels}
+
+Suppose you have the following limited information:
+
+\begin{itemize}
+    \item A test was statistically significant at the 5\% level.
+\end{itemize}
+    
+\noindent{Can we also conclude this test is significant at the 1\% level? (i.e., is the p-value $< 0.01$?)}
+We \textbf{cannot} make this conclusion for certain. That is, 
+    \[
+    p\text{-value} < 0.05 \quad \not\Rightarrow \quad p\text{-value} < 0.01.
+    \]
+\begin{itemize}
+\item A test was statistically significant at the 1\% level.
+\end{itemize}
+    
+\noindent{Can we also conclude this test is significant at the 5\% level? (i.e., is the p-value $< 0.05$?)}
+  Yes! Because
+    \[
+    p\text{-value} < 0.01 < 0.05.
+    \]
+
+
+\section{The Fold Rule}
+
+A rule which can be used to quickly determine whether population variances are equal or unequal using sample variances.
+
+\textit{Note: only a rule}
+
+\medskip
+
+If 
+\[
+\frac{\max(s_1, s_2)}{\min(s_1, s_2)} < \sqrt{2} 
+\quad \text{then we can consider } \sigma_1^2 = \sigma_2^2
+\]
+
+and
+
+\[
+\frac{\max(s_1^2, s_2^2)}{\min(s_1^2, s_2^2)} < 2 
+\quad \text{then we can consider } \sigma_1^2 = \sigma_2^2
+\]
+
+\medskip
+
+\textbf{Note:} rather crude technique.
+
+Hypothesis tests for equality of two variances do exist:
+
+\[
+H_0: \sigma_1^2 = \sigma_2^2 \quad \text{vs} \quad H_a: \sigma_1^2 \neq \sigma_2^2
+\]
+
+These tests involve a \(\chi^2\) test statistic.
