@@ -41,4 +41,4 @@
 \contentsline {chapter}{\numberline {14}Two Sample Hypothesis Test}{83}{chapter.14}%
 \contentsline {section}{\numberline {14.1}Two Sample Hypothesis Test on Paired Data}{83}{section.14.1}%
 \contentsline {section}{\numberline {14.2}Two Sample Hypothesis Test on Proportions}{85}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Two Sample Hypothesis Test on Variances}{87}{section.14.3}%
+\contentsline {section}{\numberline {14.3}Two Sample Hypothesis Test on Variances}{86}{section.14.3}%
