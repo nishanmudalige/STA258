@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  20 JUN 2025 00:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  20 JUN 2025 00:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2894,27 +2894,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 385--387
 [157]
 
 [158]
-Underfull \vbox (badness 10000) detected at line 544
+Underfull \vbox (badness 10000) detected at line 542
  []
 
 
 
 [159]
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
+Underfull \hbox (badness 10000) in paragraph at lines 553--554
 
  []
 
 
 
 [160]
-Underfull \hbox (badness 10000) in paragraph at lines 564--565
+Underfull \hbox (badness 10000) in paragraph at lines 562--563
 
  []
 
 
 
 [161]
-Underfull \hbox (badness 10000) in paragraph at lines 614--616
+Underfull \hbox (badness 10000) in paragraph at lines 612--614
 
  []
 
@@ -2925,10 +2925,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 614--616
 File: section16/images/utm_apartments.pdf Graphic file (type pdf)
 <use section16/images/utm_apartments.pdf>
 Package pdftex.def Info: section16/images/utm_apartments.pdf  used on input lin
-e 701.
+e 699.
 (pdftex.def)             Requested size: 281.85587pt x 234.89125pt.
 
-Underfull \vbox (badness 10000) detected at line 977
+Underfull \vbox (badness 10000) detected at line 975
  []
 
 
@@ -2948,8 +2948,13 @@ Underfull \vbox (badness 10000) detected at line 977
 File: section16/images/residual_plots.pdf Graphic file (type pdf)
 <use section16/images/residual_plots.pdf>
 Package pdftex.def Info: section16/images/residual_plots.pdf  used on input lin
-e 1033.
-(pdftex.def)             Requested size: 469.75502pt x 255.75845pt.
+e 1031.
+(pdftex.def)             Requested size: 516.73338pt x 281.33492pt.
+
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 1031--1032
+ [][] 
+ []
+
 
 
 [169])
@@ -3014,7 +3019,7 @@ nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf
 -dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (177 pages, 4381363 bytes).
+Output written on main.pdf (177 pages, 4381372 bytes).
 PDF statistics:
  1922 PDF objects out of 2073 (max. 8388607)
  1500 compressed objects within 15 object streams
