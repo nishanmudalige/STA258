@@ -920,14 +920,18 @@ Interpretation: There is a strong positive correlation between apartment area an
 
 \noindent\textbf{R code}
 \begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
-model = lm(y~x, data = data\_source) \\
+\begin{verbatim}
+model = lm(y~x, data = data\_source) 
 summary(model)
+\end{verbatim}
 \end{tcolorbox}
 
 \noindent\textbf{R code}
 \begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
-apt\_model = lm(price ~ area, data = apt) \\
+\begin{verbatim}
+apt\_model = lm(price ~ area, data = apt)
 summary(apt\_model)
+\end{verbatim}
 \end{tcolorbox}
 
 \noindent\textbf{R code}

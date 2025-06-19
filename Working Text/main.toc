@@ -47,16 +47,20 @@
 \contentsline {section}{\numberline {11.3}Test of Hypothesis for One Variance}{115}{section.11.3}%
 \contentsline {chapter}{\numberline {12}One Sample Hypothesis Test on a Proportion and Variance}{119}{chapter.12}%
 \contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{119}{section.12.1}%
-\contentsline {chapter}{\numberline {13}Statistical Power}{121}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Statistical Power}{121}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{124}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{126}{section.13.3}%
-\contentsline {chapter}{\numberline {14}Two Sample Hypothesis Tests}{133}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Comparing Means with Independent Samples}{133}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}Comparing Two Populations Means: Independent Sampling (Equal Variances Assumed)}{136}{subsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.1.2}Comparing Two Populations Means: Independent Sampling (Unequal Variances Assumed)}{143}{subsection.14.1.2}%
-\contentsline {section}{\numberline {14.2}The Fold Rule}{150}{section.14.2}%
-\contentsline {chapter}{\numberline {16}Inference for Simple Linear Regression}{151}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Inference on Regression}{151}{section.16.1}%
-\contentsline {section}{\numberline {16.2}ANOVA Table (ANalysis Of VAriance)}{161}{section.16.2}%
-\contentsline {section}{\numberline {16.3}Residual Plots}{169}{section.16.3}%
+\contentsline {chapter}{\numberline {13}Statistical Power}{122}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Statistical Power}{122}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Type I and Type II Errors}{125}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Using Power to Determine Sample Size}{127}{section.13.3}%
+\contentsline {chapter}{\numberline {14}Two Sample Hypothesis Tests}{134}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Comparing Means with Independent Samples}{134}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Comparing Two Populations Means: Independent Sampling (Equal Variances Assumed)}{137}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Comparing Two Populations Means: Independent Sampling (Unequal Variances Assumed)}{144}{subsection.14.1.2}%
+\contentsline {section}{\numberline {14.2}The Fold Rule}{151}{section.14.2}%
+\contentsline {chapter}{\numberline {14}Two Sample Hypothesis Test}{152}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Two Sample Hypothesis Test on Paired Data}{152}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Two Sample Hypothesis Test on Proportions}{154}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Two Sample Hypothesis Test on Variances}{155}{section.14.3}%
+\contentsline {chapter}{\numberline {16}Inference for Simple Linear Regression}{157}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Inference on Regression}{157}{section.16.1}%
+\contentsline {section}{\numberline {16.2}ANOVA Table (ANalysis Of VAriance)}{167}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Residual Plots}{175}{section.16.3}%
