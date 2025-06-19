@@ -1,0 +1,90 @@
+%\pagenumbering{arabic}
+%\setcounter{page}{1}
+\setcounter{chapter}{13}
+\chapter{Two Sample Hypothesis Test}
+%\index{Introduction}
+%\label{sec.matrix}
+%start relabeling as 2.1 etc
+%\pagestyle{myheadings}  \markboth{\ref{sec.matrix}.
+%\titleref{sec.matrix}}{}
+%\setcounter{equation}{0}
+
+\section{Two Sample Hypothesis Test on Paired Data}
+
+When observations in sample 1 matches with an observation in sample 2. Observations in sample 1 are, usually, highly, correlated with observations in sample 2, these data are often called matched pairs. For each pair (the same cases), we form: Difference = observation in sample 2 - observation in sample 1. Thus, we have one single sample of differences scores. For example, in longitudinal studies: Pre- and post-survey of attitudes towards statistics (Same student is measured twice: Time 1 (pre) and Time 2 (post). We measure change in the attitudes: Post - Pre (for each student). Often these types of studies are called, repeated measures.\\
+
+Paired Data Condition: the data must be quantitative and paired.\\
+
+Independence Assumption:
+\begin{itemize}
+	\item 1. If the data are p aired, the groups are not independent. For this methods, it is the differences that must be independent of each other.
+	\item 2. The pairs may be a random sample.
+	\item 3. In experimental design, the order of the two treatments may be randomly assigned, or the treatments ma y be randomly assigned to one member of each pair.
+	\item 4.In a before-and-after study, we may believe that the observed differences are representative sample of a population of interest. If there is any doubt, we need to include a control group to be able to draw conclusions.
+	\item 5. If samples are bigger than 10 \% of the target population, we need to acknowledge this and note in our report. When we sample from a ﬁnite population, we should be careful not to sample more than 10 \% of that population. Sampling too large a fraction of the population calls the independence assumption into question.
+\end{itemize}
+
+Recall chapter 10 when we first introduced paired data, now we are going to use it again:
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c c }
+ Sample Units & Measurement 1 ($M_1$) & Measurement 2 ($M_2$) & Difference ($M_2 - M_1$ or $M_1 - M_2$)\\ 
+ 1 & $x_{11}$ & $x_{12}$ & $x_{d1} = x_{12} -  x_{11}$\\  
+ 2 & $x_{21}$ & $x_{22}$ & $x_{d2} = x_{22} -  x_{21}$\\
+ 3 & $x_{31}$ & $x_{32}$ & $x_{d2} = x_{32} -  x_{31}$\\
+ ......\\
+ n & $x_{n1}$ & $x_{n2}$ & $x_{dn} = x_{n2} -  x_{n1}$\\
+\end{tabular}
+\caption{A table of paired data}
+\end{figure}
+\end{center}
+\vspace{-0.75cm}
+
+From that table, we can get $\bar{X_d}$, which is the mean, variance and standard deviation of the difference. We need these values to continue our analysis.\\
+
+\textbf{Step 1: Stating the Structure of Testing Hypothesis}
+
+The idea of two sample hypothesis test on pair data is transforming it to one sample hypothesis data, so that our analysis based on $\mu_d$.
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c }
+Cases & Null Hypothesis & Alternative Hypothesis \\
+     1	   & $\mu_d = 0$ & $\mu_d > 0$ \\
+     2	   & $\mu_d = 0$ & $\mu_d < 0$ \\
+     3    & $\mu_d = 0$ & $\mu_d \neq 0$ \\
+\end{tabular}
+\caption{All possible cases of two sample hypothesis test on paired data}
+\end{figure}
+\end{center}
+\vspace{-0.75cm}
+
+\textbf{Step 2: Computing Test Statistics}
+
+\begin{definition}[Test statistics of two sample hypothesis test on paired data]
+The test statistics of two sample hypothesis test on paired data is given by: \[ t_* = \frac{\bar{x_d}-0}{s_d / \sqrt{n}} \sim t_{n-1;\alpha/2}.\]
+$\bar{x_d}$ is the mean of sample difference and $s_d$ is the standard deviation of difference data.
+\end{definition}
+
+\textbf{Step 3: Finding the P-value}
+
+Two sample hypothesis test is quite similar to one sample hypothesis test on a mean. Notes that we are working within 2 measurement. You can refer one sample hypothesis test to get the idea about find the p-value in this case.\\
+
+\textbf{Step 4: Comparing P-value with $\alpha$-level}
+
+If p-value is less than $\alpha$-level, then we reject the null hypothesis ($H_0$) and accept the alternative hypothesis ($H_a$). Otherwise, If p-value is greater than $\alpha$-level, then we do not reject the null hypothesis ($H_0$) and reject the alternative hypothesis ($H_a$).\\
+
+\textbf{Step 5: Final Conclusion}
+If we reject the null hypothesis, then we conclude that: there is sufficient evidence to reject the null hypothesis. If we do not reject the null hypothesis, then we conclude that: there is insufficient evidence to reject the null hypothesis.\\
+
+Note that your final conclusion is based on the value of $\mu_d$, but we still need more. We also can know which group has larger means from the result ($\mu_d$).
+
+\begin{itemize}
+	\item 1. If $\mu_d > 0$: from the table above we get $M_2-M_1 >0$, then $M_2 > M_1$.
+	\item 2. If $\mu_d < 0$: from the table above we get $M_2-M_1 <0$, then $M_2 < M_1$.
+	\item 3. If $\mu_d \neq 0$: from the table above we get $M_2-M_1 \neq 0$, then $M_2 \neq M_1$.
+\end{itemize}
+
+\section{Two Sample Hypothesis Test on Proportions}
