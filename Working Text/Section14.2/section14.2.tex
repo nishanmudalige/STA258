@@ -157,6 +157,63 @@ ii. Sample Size Condition Each of the groups must be big enough. As with individ
 
 Note: Two-sided significance tests (later we will discuss this concept) are robust against violations of this condition. In this case, we can conduct significance tests with smaller sample sizes. In practice, the two-sided significance test works well if there are at least five successes and five failures in each sample.
 
+\begin{example}
+Nicotine patches are often used to help smokers quit. Does giving medicine to fight depression help? A randomized double-blind experiment assigned 244 smokers who wanted to stop to receive nicotine patches and another 245 to receive both a patch and the anti-depression drug bupropion. Results: After a y ear, 40 subjects in the nicotine patch group had abstained from smoking, as had 87 in the patch-plus-drug group. How significant is the evidence that the medicine increases the success rate? State hypotheses, calculate a test statistic, use Table 6 to give its P-value, and state y our conclusion. (Use $\alpha = 0.01$)\\
+Solution:
+
+\textbf{Step 1: State Hypothesis}
+
+$H_0: p_1 = p_2$ and $H_a: p_1 < p_2$
+
+\textbf{Step 2: Find test statistics}
+
+$\hat{p_1} = \frac{40}{244} = 0.1639$ and $\hat{p_2} = \frac{87}{245} = 0.3551$. Then $\hat{p} = \frac{40+87}{244+245} = 0.2597$.
+
+Now, $z_* = \frac{\hat{p_1} - \hat{p_2}}{\sqrt{\hat{p}(1-\hat{p})(\frac{1}{n_1} + \frac{1}{n_2})}} = -4.82$
+
+\textbf{Step 3: Compute p-value}
+
+P-value $= P(Z < z_*) = P(Z < -4.82) < 0.0003$
+
+\textbf{Step 4: Conclusion}
+
+Since p-value $ < 0.0003 < \alpha = 0.01$, we reject the null hypothesis that $p_1 = p_2$. The data provide very strong evidence that bupropion increases success rate.
+
+\textbf{R-code:}
+
+Input
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+successes=c(87, 40);
+
+totals=c(245, 244);
+
+prop.test(successes, totals, alternative="greater",correct=FALSE);
+\end{verbatim}
+\end{tcolorbox}
+
+Output
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+
+## 
+## 2-sample test for equality of proportions without 
+## continuity correction 
+## 
+## data: x and n
+## X-squared = 23.237, df = 1, p-value = 7.161e-07
+## alternative hypothesis: greater 
+## 95 percent confidence interval: 
+## 0.1275385 1.0000000 
+## sample estimates:
+##    prop 1    prop 2 
+## 0.3551020 0.1639344
+
+\end{verbatim}
+\end{tcolorbox}
+
+\end{example}
+
 \section{Two Sample Hypothesis Test on Variances}
 
 Let's begin this type of hypothesis test with a case. The question is: how do you know whether the homogeneity of variance assumption is satisﬁed? One simple method involves just looking at two sample variances. Logically, if two population variances are equal, then the two sample variances should be very similar. When the two sample variances are reasonably close, you can be reasonably conﬁdent that the homogeneity assumption is satisﬁed and proceed with, for example, Student t-interval. However, when one sample variance is three or four times larger than the other, then there is reason for a concern. The common statistical procedure for comparing population variances $\sigma_1^2$ and $\sigma_2^2$ makes an inference about the ratio of $\sigma_1^2$/$\sigma_2^2$.\\
