@@ -1,0 +1,49 @@
+%\pagenumbering{arabic}
+%\setcounter{page}{1}
+\setcounter{chapter}{14}
+\chapter{Introduction to Simple Linear Regression}
+%\index{Introduction}
+%\label{sec.matrix}
+%start relabeling as 2.1 etc
+%\pagestyle{myheadings}  \markboth{\ref{sec.matrix}.
+%\titleref{sec.matrix}}{}
+%\setcounter{equation}{0}
+
+In statistics, simple linear regression (SLR) is a linear regression model with a single explanatory variable. In other words, we use linear functions to illustrate the relationship of variables (ie. time and one's height). The goal of simple linear regression is to find the best-fitting straight line, known as the regression line, that predicts the dependent variable based on the independent variable. For example we are interested a people's height within 10 months. Then, we use coordinate system to draw each data point and use simple linear regression to find a function which perfectly describes the relationship between height and time.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[->, thick]
+  % Draw x and y axes
+  \draw[->] (-1,0) -- (7,0) node[right] {Time (month)};
+  \draw[->] (0,-1) -- (0,5) node[above] {Height (m)};
+  
+  \filldraw[blue] (0.5, 0.75) circle (2pt);
+  \filldraw[blue] (1.5, 1.75) circle (2pt);
+  \filldraw[blue] (1, 1.25) circle (2pt);
+  \filldraw[blue] (2, 2.1) circle (2pt);
+  \filldraw[blue] (2.5, 2.4) circle (2pt);
+  \filldraw[blue] (3, 2.8) circle (2pt);
+  \filldraw[blue] (3.5, 3.1) circle (2pt);
+  \filldraw[blue] (4, 3.7) circle (2pt);
+  \filldraw[blue] (4.5, 3.95) circle (2pt);
+  \filldraw[blue] (5, 4.1) circle (2pt);
+  \draw[red, thick, domain=0:6] plot (\x, {0.8*\x + 0.35}) node[right] {$y = mx+ b$};
+\end{tikzpicture}
+\caption{An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case $m$ is the slope which tells you the rate of change, $b$ is the intercept which may have a special meaning depending on the case.}
+\end{figure}
+
+Now, you may wonder the accuracy of this model. In statistics, we do have parameters that approximate the slope and intercept of the function $y = mx + b$. The model we are going to use is: $\hat{y} = \hat{\beta_1}x + \hat{\beta_0} + \epsilon$. From this model, the slope and the intercept are $\hat{\beta_1}$, $\hat{\beta_{0}}$ respectively ($\hat{\beta_1}$ and $\hat{\beta_{0}}$ are unbiased estimators). Moreover, the $\epsilon$-term is called error term, which we will discuss it later.
+
+\section{Measures of Linear Relationship}
+
+Before we formally introduce simple linear regression, there are some measures of SLR that should be discussed.\\
+
+\textbf{Covariance (Sample Covariance)}
+
+In probability theory and statistics, covariance is a measure of the joint variability of two random variables. The covariance sign shows the direction of the linear relationship between two variables. If higher values of one variable tend to occur with higher values of the other (and lower with lower), the covariance is positive, meaning the variables move in the same direction. If higher values of one variable tend to occur with lower values of the other, the covariance is negative, meaning they move in opposite directions. The size (magnitude) of the covariance reflects how much the two variables vary together, based on the variances they share.
+
+\begin{definition}[Covariance (sample covariance)]
+The formula of sample covariance is given by: \[ S_{xy} = \frac{1}{n-1} \cdot \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) = \frac{\sum_{i = 1}^{n}x_i \cdot y_i}{n -1} - \frac{n\bar{x}\bar{y}}{n-1}.\]
+These are two ways to compute covariance. Both will lead you find the same answer of covariance.
+\end{definition}

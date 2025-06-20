@@ -42,3 +42,5 @@
 \contentsline {section}{\numberline {14.1}Two Sample Hypothesis Test on Paired Data}{83}{section.14.1}%
 \contentsline {section}{\numberline {14.2}Two Sample Hypothesis Test on Proportions}{85}{section.14.2}%
 \contentsline {section}{\numberline {14.3}Two Sample Hypothesis Test on Variances}{88}{section.14.3}%
+\contentsline {chapter}{\numberline {15}Introduction to Simple Linear Regression}{89}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Measures of Linear Relationship}{90}{section.15.1}%
