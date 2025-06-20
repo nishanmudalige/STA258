@@ -87,6 +87,46 @@ Note that your final conclusion is based on the value of $\mu_d$, but we still n
 	\item If $\mu_d \neq 0$: from the table above we get $M_2-M_1 \neq 0$, then $M_2 \neq M_1$.
 \end{itemize}
 
+\begin{example}
+In an effort to determine whether a new type of fertilizer is more effective than the type currently in use, researchers took 12 two-acre plots of land scattered throughout the county. Each plot was divided into two equal-size sub plots, one of which was treated with the new fertilizer. Wheat was planted, and the crop yields were measured.
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c c c c c c c c c c c }
+Plot & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$ & $12$\\
+Current & $56$ & $45$ & $68$ & $72$ & $61$ & $69$ & $57$ & $55$ & $60$ & $72$ & $75$ & $66$\\
+New & $60$ & $49$ & $66$ & $73$ & $59$ & $67$ & $61$ & $60$ & $58$ & $75$ & $72$ & $68$\\
+\end{tabular}
+\caption{Data of example 14.1}
+\end{figure}
+\end{center}
+\vspace{-0.75cm}
+
+Can we conclude at the 5\% signiﬁcance level that the new fertilizer is more eﬀective than the current one?
+
+\textbf{Solution:}
+
+You can verify that the mean and standard deviation of the twelve difference measurements are $\bar{d} = new - current = 1$ and $s_d = 3.0151$.
+
+\textbf{Step 1: State Hypothesis}
+
+$H_0: \mu_d = 0$ and $H_a: \mu_d>0$
+
+\textbf{Step 2: Find test statistics}
+
+$t* = \frac{\bar{d} - 0}{s_d/\sqrt{n}} = \frac{1}{3.0151/\sqrt{12}} = 1.1489$
+
+\textbf{Step 3: Compute p-value}
+
+Using t-distribution table with df $=11$, then $0.10 < p-value < 0.15$.
+
+\textbf{Step 4: Conclusion}
+
+Since p-value $> \alpha = 0.05$, we can’t reject $H_0$. There is not enough evidence to infer that the new fertilizer is better.
+
+\end{example}
+
 \section{Two Sample Hypothesis Test on Proportions}
 
 Moreover, we can use hypothesis test to compare proportions from two independent groups as well. We are going to start all these steps again.\\
