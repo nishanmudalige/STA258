@@ -48,9 +48,9 @@ default)]{style="color: blue"}
 hypothesized under the null hypothesis.
 
 $$\begin{array}{lll}
-H_0: \Theta = \Theta_0 & (\Theta \leq \Theta_0) & H_a: \Theta > \Theta_0 \quad \textcolor{blue}{\text{one-sided (one-tailed)}} \\
-H_0: \Theta = \Theta_0 & (\Theta \geq \Theta_0) & H_a: \Theta < \Theta_0 \quad \textcolor{blue}{\text{one-sided (one-tailed)}} \\
-H_0: \Theta = \Theta_0 &                         & H_a: \Theta \neq \Theta_0 \quad \textcolor{purple}{\text{two-sided (two-tailed)}}
+H_0: \Theta = \Theta_0 & (\Theta \leq \Theta_0) & H_a: \Theta > \Theta_0 \quad {\text{one-sided (one-tailed)}} \\
+H_0: \Theta = \Theta_0 & (\Theta \geq \Theta_0) & H_a: \Theta < \Theta_0 \quad {\text{one-sided (one-tailed)}} \\
+H_0: \Theta = \Theta_0 &                         & H_a: \Theta \neq \Theta_0 \quad {\text{two-sided (two-tailed)}}
 \end{array}$$
 
 **Null ($H_0$):** Represents the current belief ([status
@@ -74,30 +74,208 @@ $\chi^2$).
 
 Use the test statistic, reference distribution, and refer back to $H_a$.
 
-<figure>
-<div class="minipage">
-<embed src="section11/images/hypothesis_right_tail.pdf" />
-</div>
-<div class="minipage">
-<embed src="section11/images/hypothesis_right_tail_wide.pdf" />
-</div>
-<figcaption>Right-tailed test: <em>p</em>-value is the area to the right
-of the test statistic.</figcaption>
-</figure>
+```{r fig.cap="Right-tailed test: p-value is the area to the right of the test statistic", fig.align='center', fig.show='hold', out.width='48%', echo=FALSE}
 
-<figure>
-<div class="minipage">
-<embed src="section11/images/hypothesis_left_tail.pdf" />
-</div>
-<div class="minipage">
-<embed src="section11/images/hypothesis_left_tail_wide.pdf" />
-</div>
-<figcaption>Left-tailed test: <em>p</em>-value is the area to the left
-of the test statistic.</figcaption>
-</figure>
+library(ggplot2)
 
-![Two-tailed test: p-value is the total area in both tails beyond $\pm$
-test statistic.](section11/images/hypothesis_two_tail.pdf){width="52%"}
+# --- First Plot: Standard blue bracket lower ---
+x <- seq(-4, 4, length = 1000)
+y <- dnorm(x)
+test_stat <- 1.5
+p_x <- seq(test_stat, 4, length = 500)
+p_y <- dnorm(p_x)
+x_left <- test_stat + 0.1
+x_right <- 3.4
+y_top <- 0.2
+y_mid <- 0.185
+y_bot <- 0.17
+
+p1 <- ggplot() +
+  geom_line(aes(x, y), color = "black", size = 1.2) +
+  geom_area(aes(x = p_x, y = p_y), fill = "skyblue", alpha = 0.6) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 1) +
+  geom_segment(aes(x = test_stat, xend = test_stat, y = 0, yend = dnorm(test_stat)),
+               color = "black", linewidth = 1.3) +
+  geom_segment(aes(x = x_left, xend = x_left, y = y_bot, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_left, xend = x_right, y = y_mid, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_right, xend = x_right, y = y_mid, yend = y_bot), color = "black") +
+  annotate("text", x = (x_left + x_right)/2, y = y_top, label = "p-value", size = 5) +
+  annotate("text", x = -2.7, y = 0.35, label = "H[0]:~theta==theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = -2.7, y = 0.29, label = "H[a]:~theta > theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = test_stat, y = 0.005, label = "test stat", size = 4.5, vjust = 1.5) +
+  theme_minimal() +
+  labs(x = NULL, y = NULL) +
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.grid = element_blank())
+
+print(p1)
+
+# --- Second Plot: Blue with widest shading and highest bracket ---
+y <- dnorm(x)
+test_stat <- -1.75
+p_x <- seq(test_stat, 4, length = 500)
+p_y <- dnorm(p_x)
+x_left <- test_stat + 0.3
+x_right <- 3.4
+y_top <- 0.45
+y_mid <- 0.435
+y_bot <- 0.42
+
+p2 <- ggplot() +
+  geom_line(aes(x, y), color = "black", size = 1.2) +
+  geom_area(aes(x = p_x, y = p_y), fill = "skyblue", alpha = 0.6) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 1) +
+  geom_segment(aes(x = test_stat, xend = test_stat, y = 0, yend = dnorm(test_stat)),
+               color = "black", linewidth = 1.3) +
+  geom_segment(aes(x = x_left, xend = x_left, y = y_bot, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_left, xend = x_right, y = y_mid, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_right, xend = x_right, y = y_mid, yend = y_bot), color = "black") +
+  annotate("text", x = (x_left + x_right)/2, y = y_top, label = "p-value", size = 5) +
+  annotate("text", x = -2.7, y = 0.35, label = "H[0]:~theta==theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = -2.7, y = 0.29, label = "H[a]:~theta > theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = test_stat, y = 0.005, label = "test stat", size = 4.5, vjust = 1.5) +
+  theme_minimal() +
+  labs(x = NULL, y = NULL) +
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        panel.grid = element_blank())
+
+print(p2)
+```
+
+```{r fig.cap="Left-tailed test: p-value is the area to the left of the test statistic", fig.align='center', fig.show='hold', out.width='48%', echo=FALSE}
+
+# First plot (lower pink bracket)
+library(ggplot2)
+x <- seq(-4, 4, length = 1000)
+y <- dnorm(x)
+test_stat <- -1.5
+p_x <- seq(-4, test_stat, length = 500)
+p_y <- dnorm(p_x)
+x_left <- -3.4
+x_right <- test_stat - 0.1
+y_top <- 0.17
+y_mid <- 0.155
+y_bot <- 0.14
+p1 <- ggplot() +
+  geom_line(aes(x, y), color = "black", linewidth = 1.2) +
+  geom_area(aes(x = p_x, y = p_y), fill = "pink", alpha = 0.6) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 1) +
+  geom_segment(aes(x = test_stat, xend = test_stat, y = 0, yend = dnorm(test_stat)), color = "black", linewidth = 1.3) +
+  geom_segment(aes(x = x_left, xend = x_left, y = y_bot, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_left, xend = x_right, y = y_mid, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_right, xend = x_right, y = y_mid, yend = y_bot), color = "black") +
+  annotate("text", x = (x_left + x_right) / 2, y = y_top, label = "p-value", size = 5) +
+  annotate("text", x = 2.5, y = 0.35, label = "H[0]:~theta==theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = 2.5, y = 0.29, label = "H[a]:~theta < theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = test_stat, y = 0.005, label = "test stat", size = 4.5, vjust = 1.5) +
+  theme_minimal() +
+  labs(x = NULL, y = NULL) +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(), panel.grid = element_blank())
+
+print(p1)
+
+# Second plot (curve slightly higher, bracket above)
+y <- dnorm(x) * 0.95
+test_stat <- 1.5
+p_x <- seq(-4, test_stat, length = 500)
+p_y <- dnorm(p_x) * 0.95
+x_left <- -3.4
+x_right <- test_stat - 0.1
+y_top <- 0.43
+y_mid <- 0.3989
+y_bot <- 0.39
+p2 <- ggplot() +
+  geom_line(aes(x, y), color = "black", linewidth = 1.2) +
+  geom_area(aes(x = p_x, y = p_y), fill = "pink", alpha = 0.6) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 1) +
+  geom_segment(aes(x = test_stat, xend = test_stat, y = 0, yend = dnorm(test_stat) * 0.95), color = "black", linewidth = 1.3) +
+  geom_segment(aes(x = x_left, xend = x_left, y = y_bot, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_left, xend = x_right, y = y_mid, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_right, xend = x_right, y = y_mid, yend = y_bot), color = "black") +
+  annotate("text", x = (x_left + x_right) / 2, y = y_top, label = "p-value", size = 5) +
+  annotate("text", x = 2.5, y = 0.34, label = "H[0]:~theta==theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = 2.5, y = 0.28, label = "H[a]:~theta < theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = test_stat, y = 0.005, label = "test stat", size = 4.5, vjust = 1.5) +
+  theme_minimal() +
+  labs(x = NULL, y = NULL) +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(), panel.grid = element_blank())
+
+print(p2)
+```
+
+
+```{r fig.cap="Two-tailed test: p-value is the total area in both tails beyond ±test statistic", echo=FALSE, fig.align='center', out.width='70%'}
+library(ggplot2)
+
+# Generate bell curve
+x <- seq(-4, 4, length = 1000)
+y <- dnorm(x) * 0.95
+
+# Test statistics for two tails
+left_stat <- -1.75
+right_stat <- 1.75
+
+# Shaded green tail areas
+p_x_left <- seq(-4, left_stat, length = 300)
+p_y_left <- dnorm(p_x_left) * 0.95
+p_x_right <- seq(right_stat, 4, length = 300)
+p_y_right <- dnorm(p_x_right) * 0.95
+
+# Bracket height - slightly higher than previous "blue" reference
+y_top <- 0.11
+y_mid <- 0.095
+y_bot <- 0.08
+
+# Bracket horizontal positions
+x_l1 <- -3.4
+x_l2 <- left_stat - 0.1
+x_r1 <- right_stat + 0.1
+x_r2 <- 3.4
+
+# Create plot
+p <- ggplot() +
+  geom_line(aes(x, y), color = "black", linewidth = 1.2) +
+  geom_area(aes(x = p_x_left, y = p_y_left), fill = "lightgreen", alpha = 0.6) +
+  geom_area(aes(x = p_x_right, y = p_y_right), fill = "lightgreen", alpha = 0.6) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 1) +
+  geom_segment(aes(x = left_stat, xend = left_stat, y = 0, yend = dnorm(left_stat) * 0.95),
+               color = "black", linewidth = 1.3) +
+  geom_segment(aes(x = right_stat, xend = right_stat, y = 0, yend = dnorm(right_stat) * 0.95),
+               color = "black", linewidth = 1.3) +
+
+  # Left bracket
+  geom_segment(aes(x = x_l1, xend = x_l1, y = y_bot, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_l1, xend = x_l2, y = y_mid, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_l2, xend = x_l2, y = y_mid, yend = y_bot), color = "black") +
+  annotate("text", x = (x_l1 + x_l2)/2, y = y_top, label = "p-value", size = 5) +
+
+  # Right bracket
+  geom_segment(aes(x = x_r1, xend = x_r1, y = y_bot, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_r1, xend = x_r2, y = y_mid, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_r2, xend = x_r2, y = y_mid, yend = y_bot), color = "black") +
+  annotate("text", x = (x_r1 + x_r2)/2, y = y_top, label = "p-value", size = 5) +
+
+  # Hypotheses on the right
+  annotate("text", x = 2.5, y = 0.25, label = "H[0]:~theta==theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = 2.5, y = 0.195, label = "H[a]:~theta != theta[0]", parse = TRUE, size = 6) +
+  annotate("text", x = left_stat, y = 0.005, label = "test stat", size = 4.5, vjust = 1.5) +
+  annotate("text", x = right_stat, y = 0.005, label = "test stat", size = 4.5, vjust = 1.5) +
+
+  # Style
+  theme_minimal() +
+  labs(x = NULL, y = NULL) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid = element_blank()
+  )
+# PRINT the plot
+p
+```
+
+
 
 ### Step 5: Compare *p*-value to level of significance $\alpha$ and make a conclusion {#step-5-compare-p-value-to-level-of-significance-alpha-and-make-a-conclusion .unnumbered}
 
@@ -187,10 +365,24 @@ likely positive.
     hist(z.star, xlab = "differences", col = "blue");
 :::
 
-**Histogram from simulation (see Section 7 for R code format)**
 
-![Histogram of $z_\star$ values from 10,000 simulations under
-$H_0$.](Section11/images/sweetening_10000_hist.pdf){width="60%"}
+```{r fig.cap="Histogram of \\( z^\\star \\) values from 10,000 simulations under \\( H_0 \\)", fig.align='center', echo=FALSE}
+n <- 10
+mu.zero <- 0
+sigma <- 1
+sigma.xbar <- sigma / sqrt(n)
+
+# m = number of simulations;
+m <- 10000
+x.bar <- rnorm(m, mean = mu.zero, sd = sigma.xbar)
+
+# z.star = test statistic;
+z.star <- (x.bar - mu.zero) / sigma.xbar
+
+# Create the histogram
+hist(z.star, col = "blue", xlab = "differences", main = "Histogram of z.star")
+```
+
 
 **R code (Empirical p-value)**
 
@@ -251,9 +443,61 @@ Reference distribution: standard normal
 **4. Calculate p-value**
 
 $$\text{p-value} = P(Z < -2.82) \approx 0.0024$$
+```{r fig.cap="Left-tailed p-value for the test statistic \\( z^* = -2.82 \\)", fig.align='center', echo=FALSE, out.width='70%'}
+library(ggplot2)
 
-![Left-tailed p-value for the test statistic
-$z^* = -2.82$](section11/images/deer_pvalue.pdf){width="60%"}
+# Normal curve data
+x <- seq(-4, 4, length = 1000)
+y <- dnorm(x)
+
+# Shaded left-tail region
+test_stat <- -2.82
+p_x <- seq(-4, test_stat, length = 500)
+p_y <- dnorm(p_x)
+
+# Bracket near pink area
+x_left <- -3.6
+x_right <- test_stat - 0.1
+y_bot <- 0.005
+y_mid <- 0.028
+y_top <- 0.04
+
+# Build plot
+p <- ggplot() +
+  geom_line(aes(x, y), color = "black", linewidth = 1.4) +
+  geom_area(aes(x = p_x, y = p_y), fill = "orchid", alpha = 0.65) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 1.1) +
+
+  # Test statistic line and label
+  geom_segment(aes(x = test_stat, xend = test_stat, y = 0, yend = dnorm(test_stat)), 
+               color = "black", linewidth = 1.2) +
+  annotate("text", x = test_stat, y = -0.02, label = "z* = -2.82", size = 6, fontface = "italic") +
+
+  # Bracket and p-value label
+  geom_segment(aes(x = x_left, xend = x_left, y = y_bot, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_left, xend = x_right, y = y_mid, yend = y_mid), color = "black") +
+  geom_segment(aes(x = x_right, xend = x_right, y = y_mid, yend = y_bot), color = "black") +
+  annotate("text", x = (x_left + x_right)/2, y = y_top, label = "p-value", size = 5.2) +
+
+  # Hypotheses
+  annotate("text", x = 2.4, y = 0.32, label = "H[0]:~mu==45", parse = TRUE, size = 6.2) +
+  annotate("text", x = 2.4, y = 0.26, label = "H[a]:~mu < 45", parse = TRUE, size = 6.2) +
+
+  # Axes
+  scale_x_continuous(breaks = c(-4, -2, 0, 2, 4), limits = c(-4, 4), expand = c(0, 0)) +
+  scale_y_continuous(limits = c(-0.03, 0.42)) +
+
+  theme_minimal() +
+  labs(x = NULL, y = NULL) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank()
+  )
+
+p
+```
+
 
 **5. Compare p-value with level of significance $\alpha$ and make a
 conclusion:**
@@ -739,8 +983,30 @@ probability. Then, $$f(x_i) = \frac{1}{n}$$
     ## [1] 1 3 2 6 3 1
 :::
 
-![Plot of frequencies from 60 simulations of a fair six-sided
-die.](section11/images/simulation_60.pdf){width="60%"}
+```{r fig.cap="Plot of frequencies from 60 simulations of a fair six-sided die", echo=FALSE, fig.align='center', out.width='70%'}
+# Simulate rolling a fair die 60 times
+set.seed(123)
+rolls <- sample(1:6, size = 60, replace = TRUE)
+
+# Tabulate frequencies
+counts <- table(rolls)
+
+# Base plot: vertical lines (type = "h")
+plot(counts,
+     type = "h",
+     col = "blue",
+     lwd = 3,
+     ylim = c(0, max(counts) + 2),
+     ylab = "Frequency",
+     xlab = "rolls",
+     main = "60 simulations",
+     xaxt = "n")
+axis(1, at = 1:6)
+
+# Add blue bullets on top of bars
+points(1:6, as.numeric(counts), col = "blue", pch = 19, cex = 1.5)
+```
+
 
 ::: definition
 A **random variable** is a variable whose value is a numerical outcome
@@ -801,11 +1067,48 @@ count is a random variable $X$. The distribution of $X$ is called a
     plot(x, y, type = "p", col = "blue", pch = 19);
 :::
 
-![PMF when $n=10$ and
-$p=1/6$](section11/images/binomial_pmf.pdf){width="65%"}
+```{r fig.cap="PMF of the Binomial distribution with \\( n = 10 \\) and \\( p = \\frac{1}{6} \\)", echo=FALSE, fig.align='center', out.width='70%'}
+# Define x values from 0 to 10
+x <- 0:10
 
-![PMF when $n=100$ and
-$p=1/6$](section11/images/binomial_pmf_100.pdf){width="65%"}
+# Binomial PMF: n = 10, p = 1/6
+y <- dbinom(x, size = 10, prob = 1/6)
+
+# Plot PMF
+plot(x, y,
+     type = "p",        # Points
+     pch = 19,          # Solid circle
+     col = "blue",      # Blue color
+     xlab = "x",
+     ylab = "y",
+     main = "Probability Mass Function when n = 10 and p = 1/6")
+
+# Add vertical dashed red line at x = 1
+abline(v = 1, col = "red", lty = 2)
+```
+
+```{r fig.cap="PMF of the Binomial distribution with \\( n = 100 \\) and \\( p = \\frac{1}{6} \\)", echo=FALSE, fig.align='center', out.width='70%'}
+# Define x values from 0 to 100
+x <- 0:100
+
+# Compute PMF values
+y <- dbinom(x, size = 100, prob = 1/6)
+
+# Plot the PMF
+plot(x, y,
+     type = "p",           # Points
+     pch = 19,             # Solid circles
+     col = "blue",         # Blue color
+     xlab = "x",
+     ylab = "y",
+     main = "Pmf when n = 100 and p = 1/6")
+
+# Add vertical dashed line at expected value (mean)
+abline(v = 100 * (1/6), col = "red", lty = 2)
+
+# Close the PDF device
+```
+
 
 **R code (PMF values for selected $x$ values)**
 
@@ -814,8 +1117,22 @@ $p=1/6$](section11/images/binomial_pmf_100.pdf){width="65%"}
     ## [1] 0.10023663 0.10650142 0.10524847 0.09706247
 :::
 
-![Simulation: 2000 YouTuber, $n = 100$, and
-$p = 1/6$](section11/images/binomial_simulation_histogram.pdf){width="65%"}
+```{r fig.cap="Distribution of successes from 2000 simulated YouTubers with \\( n = 100 \\), \\( p = \\frac{1}{6} \\)", echo=FALSE, fig.align='center', out.width='70%'}
+# Simulate 1000 binomial observations with n = 30, p = 1/6
+set.seed(123)  # for reproducibility
+sim_data <- rbinom(1000, size = 30, prob = 1/6)
+
+# Create barplot of frequencies
+counts <- table(sim_data)
+plot(counts,
+     type = "h",
+     col = "blue",
+     lwd = 3,
+     ylab = "",
+     xlab = "",
+     main = "")
+```
+
 
 **R code (A few values from our simulation)**
 
@@ -830,8 +1147,33 @@ $p = 1/6$](section11/images/binomial_simulation_histogram.pdf){width="65%"}
 It turns out that our P-value for this simulation is:\
 0.133
 
-![Simulation vs Theoretical
-pmf](section11/images/sim_vs_theoretical_pmf.pdf){width="65%"}
+```{r fig.cap="Simulation vs Theoretical pmf", echo=FALSE, fig.align='center', out.width='70%'}
+# Simulate 2000 observations from Binomial(n=10, p=0.5)
+set.seed(123)
+sim <- rbinom(2000, size = 10, prob = 0.5)
+
+# Frequency table
+tab <- table(sim)
+x_vals <- as.numeric(names(tab))
+y_vals <- as.numeric(tab)
+
+# Plot vertical blue lines
+plot(x_vals, y_vals,
+     type = "h",
+     col = "blue",
+     lwd = 2,
+     ylim = c(0, max(y_vals) + 20),
+     xlab = "",
+     ylab = "",
+     main = "")
+
+# Add red dots at top of lines (perfectly aligned)
+points(x_vals, y_vals,
+       col = "red",
+       pch = 19,
+       cex = 1.1)
+```
+
 
 ::: tcolorbox
 Draw an SRS of size $n$ from a large population that contains proportion
@@ -855,8 +1197,39 @@ Then:
   distribution.
 :::
 
-![Binomial with Normal
-Approximation](section11/images/binomial_normal_approximation.pdf){width="65%"}
+```{r fig.cap=" Binomial with Normal Approximation", echo=FALSE, fig.align='center', out.width='70%'}
+# Parameters
+n <- 100
+p <- 1/6
+
+# PMF values
+x <- 0:n
+binom_probs <- dbinom(x, size = n, prob = p)
+
+# Normal approximation
+mu <- n * p
+sigma <- sqrt(n * p * (1 - p))
+normal_curve <- dnorm(x, mean = mu, sd = sigma)
+
+# Plot binomial PMF (blue points with outline)
+plot(x, binom_probs,
+     type = "p",
+     pch = 21,
+     bg = "blue",
+     col = "darkblue",
+     cex = 1.2,
+     ylim = c(0, max(binom_probs) + 0.01),
+     xlab = "",
+     ylab = "")
+
+# Overlay normal approximation (red line)
+lines(x, normal_curve, col = "red", lwd = 1)
+
+# Add legend
+legend("topright", legend = "Normal\napproximation",
+       col = "red", lwd = 1, bty = "n")
+```
+
 
 ::: tcolorbox
 To *test the hypothesis* $H_0 : p = p_0$, compute the $z_\ast$
@@ -949,7 +1322,7 @@ strong evidence that the risk has increased?
 
 In our example it would have a form: $H_0 : p = 0.05$
 
-- The Alternative hypothesis is what the researcher(s) \[you\] want to
+- The Alternative hypothesis is what the researcher(s) want to
   prove: $H_a : p > p_0$
 
 In our example it would have a form: $H_a : p > 0.05$
@@ -1042,7 +1415,7 @@ abnormalities.
 - It is not the probability that $H_0$ (null hypothesis: current belief)
   is true.
 
-- It is: P(observed statistic value \[or even more extreme\] --- $H_0$).
+- It is: P(observed statistic value --- $H_0$).
   Given $H_0$ (the null hypothesis), because $H_0$ gives the parameter
   values that we need to find required probability.
 
@@ -1362,27 +1735,36 @@ the variance of the length of metal pipes is more than $1.2^2$.
 **Assumptions:** $Y_1, Y_2, \ldots, Y_n$ constitute a random sample from
 a Normal distribution with $E(Y_i) = \mu$ and $V(Y_i) = \sigma^2$.
 
-**Hypotheses:** $$\begin{aligned}
-H_0 &: \sigma^2 = \sigma_0^2 \\
-H_a &: \left\{
-  \begin{array}{ll}
-    \sigma^2 > \sigma_0^2 & \text{(upper-tailed alternative)} \\
-    \sigma^2 < \sigma_0^2 & \text{(lower-tailed alternative)} \\
-    \sigma^2 \ne \sigma_0^2 & \text{(two-tailed alternative)}
-  \end{array}
-\right.
-\end{aligned}$$
+**Hypotheses:**
 
-  ----------------------- ------------------------------------------------------------------------------------------------
-  **Test statistic:**     $\chi^2 = \dfrac{(n-1)S^2}{\sigma_0^2}$
-  **Rejection Region:**   $\left\{
-                          \begin{array}{ll}
-                          \chi^2 > \chi^2_\alpha & \text{upper-tailed RR} \\
-                          \chi^2 < \chi^2_{1 - \alpha} & \text{lower-tailed RR} \\
-                          \chi^2 > \chi^2_{\alpha/2} \ \text{or} \ \chi^2 < \chi^2_{1 - \alpha/2} & \text{two-tailed RR}
-                          \end{array}
-                          \right.$
-  ----------------------- ------------------------------------------------------------------------------------------------
+\[
+\begin{aligned}
+& H_0 : \sigma^2 = \sigma_0^2 \\
+& H_a :
+\begin{cases}
+\sigma^2 > \sigma_0^2 & \text{(upper-tailed alternative)} \\
+\sigma^2 < \sigma_0^2 & \text{(lower-tailed alternative)} \\
+\sigma^2 \ne \sigma_0^2 & \text{(two-tailed alternative)}
+\end{cases}
+\end{aligned}
+\]
+
+**Test statistic:**
+\[
+\chi^2 = \frac{(n - 1)S^2}{\sigma_0^2}
+\]
+
+**Rejection Region:**
+
+\[
+\begin{aligned}
+& \chi^2 > \chi^2_\alpha && \text{(upper-tailed RR)} \\
+& \chi^2 < \chi^2_{1-\alpha} && \text{(lower-tailed RR)} \\
+& \chi^2 > \chi^2_{\alpha/2} \quad \text{or} \quad \chi^2 < \chi^2_{1-\alpha/2} && \text{(two-tailed RR)}
+\end{aligned}
+\]
+              
+
 :::
 
 ::: example
@@ -1404,8 +1786,42 @@ $S^2 = 1.44$, $n = 10$, and $$\chi^2 = \frac{(9)(1.44)}{0.81} = 16$$
 From the chi-squared table, the null hypothesis is rejected when
 $\chi^2 > 16.919$, where $\nu = 9$ degrees of freedom.
 
-![Right-tailed chi-squared distribution with critical value at
-16.919.](section11/images/chisq_right_tail.pdf){width="70%"}
+```{r fig.cap="Right-tailed chi-squared distribution with critical value at 16.919", echo=FALSE, fig.align='center', out.width='70%'}
+# Parameters
+df <- 9
+alpha <- 0.05
+x_crit <- qchisq(1 - alpha, df = df)
+
+# Data
+x <- seq(0, 30, length.out = 500)
+y <- dchisq(x, df = df)
+
+# Plot empty frame
+plot(x, y, type = "n", xlab = "", ylab = "", axes = FALSE, main = "")
+
+# Draw plain axes (no arrows)
+segments(0, 0, 30, 0, lwd = 1.5)  # X-axis
+segments(0, 0, 0, 0.1, lwd = 1.5) # Y-axis
+
+# Draw density curve
+lines(x, y, col = "black", lwd = 2)
+
+# Shade rejection region
+x_fill <- seq(x_crit, 30, length.out = 200)
+y_fill <- dchisq(x_fill, df = df)
+polygon(c(x_fill, rev(x_fill)), c(y_fill, rep(0, length(y_fill))),
+        col = "blue", border = NA)
+
+# Critical line
+abline(v = x_crit, col = "blue", lwd = 2)
+
+# Adjust label: lower position
+text(x_crit, -0.01, "16.919", cex = 1, col = "black", xpd = TRUE)
+
+# Alpha label, kept shifted right
+text(x_crit + 4, 0.015, expression(alpha == 0.05), col = "blue", cex = 1.2)
+```
+
 
 **Step 4. Conclusion.**\
 The $\chi^2$ statistic is not significant at the 0.05 level. We conclude

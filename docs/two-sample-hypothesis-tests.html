@@ -5,25 +5,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 Two Sample Hypothesis Tests | Demo Book</title>
-  <meta name="description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="description" content="Chapter 14 Two Sample Hypothesis Tests | Demo Book" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 Two Sample Hypothesis Tests | Demo Book" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 14 Two Sample Hypothesis Tests | Demo Book" />
   
-  <meta name="twitter:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
 <meta name="author" content="Nishan Mudalige" />
 
 
-<meta name="date" content="2025-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +73,7 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>STA258: Statistics with Applied Probability</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Nurlana Alili, Bryan Xu</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-masoud-ataei-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
@@ -189,12 +188,9 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#statistical-power-1"><i class="fa fa-check"></i><b>13.1</b> Statistical Power</a>
-<ul>
 <li class="chapter" data-level="" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-ii-errors"><i class="fa fa-check"></i>Type I and II Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Type I and Type II Errors</a></li>
-<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.3</b> Using Power to Determine Sample Size</a></li>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.2</b> Using Power to Determine Sample Size</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html"><i class="fa fa-check"></i><b>14</b> Two Sample Hypothesis Tests</a>
 <ul>
@@ -507,34 +503,36 @@ interactions”.</p>
 <pre><code>qqnorm(Success_Index[Group == 1]);
 qqline(Success_Index[Group == 1]);</code></pre>
 </div>
-<div class="float" id="fig:qqplot-group1">
-<embed src="section14/images/qqplot_group1.pdf" style="width:60.0%" />
-<div class="figcaption">Q-Q Plot for Group 1: Interaction with
-Outsiders</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-29-1.png" alt="Q-Q Plot for Group 1: Interaction with Outsiders" width="60%" />
+<p class="caption">
+Figure 14.1: Q-Q Plot for Group 1: Interaction with Outsiders
+</p>
 </div>
 <p><strong>Nearly Normal Condition (Group 2: “fewer interactions”):</strong></p>
 <div class="tcolorbox">
 <pre><code>qqnorm(Success_Index[Group == 2]);
 qqline(Success_Index[Group == 2]);</code></pre>
 </div>
-<div class="minipage">
-<div class="float">
-<embed src="section14/images/qqplot_group2.pdf" style="width:60.0%" />
-<div class="figcaption">image</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-30"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-30-1.png" alt="Q-Q Plot for Group 2: Fewer Interactions" width="60%" />
+<p class="caption">
+Figure 14.2: Q-Q Plot for Group 2: Fewer Interactions
+</p>
 </div>
-<p><span id="fig:qqplot-group2" label="fig:qqplot-group2"></span></p>
 </div>
 <p><strong>Nearly Normal Condition:</strong></p>
 <div class="tcolorbox">
 <pre><code>boxplot(Success_Index ~ Group, col = c(&quot;red&quot;, &quot;blue&quot;))</code></pre>
 </div>
-<div class="minipage">
-<div class="float">
-<embed src="section14/images/boxplot_success_index.pdf" style="width:55.0%" />
-<div class="figcaption">image</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-31"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-31-1.png" alt="Boxplot of Success Index by Group" width="60%" />
+<p class="caption">
+Figure 14.3: Boxplot of Success Index by Group
+</p>
 </div>
-<p><span id="fig:boxplot-success" label="fig:boxplot-success"></span></p>
-</div>
+<p><span id="fig:boxplot-success" label="fig:boxplot-success"></span>
+:::</p>
 <p><strong>Boxplot with <code>ggplot2</code>:</strong></p>
 <div class="tcolorbox">
 <pre><code># loading library;
@@ -553,10 +551,11 @@ bp +
   geom_boxplot() +
   scale_x_discrete(labels = our.labs);</code></pre>
 </div>
-<div class="float" id="fig:boxplot-ggplot">
-<embed src="section14/images/boxplot_ggplot2.pdf" style="width:60.0%" />
-<div class="figcaption">Boxplot of Success Index by Group using
-ggplot2</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-32-1.png" alt="Boxplot of Success Index by Group using ggplot2" width="60%" />
+<p class="caption">
+Figure 14.4: Boxplot of Success Index by Group using ggplot2
+</p>
 </div>
 <p><strong>Checking the Assumptions and Conditions</strong></p>
 <p><strong>Independent Group Assumption:</strong> The success index in group 1 is
@@ -615,8 +614,8 @@ that there is a difference in mean success index between group 1 and
 group 2.</p>
 <p><strong>Note.</strong> As a follow-up, we could find a 95% CI for <span class="math inline">\(\mu_1 - \mu_2\)</span> to
 estimate this difference. Then, we could provide an estimate of how much
-higher the mean success index for group 1 is.</p>
-</div>
+higher the mean success index for group 1 is.
+::::::::::::::::::::</p>
 </div>
 <div id="comparing-two-populations-means-independent-sampling-unequal-variances-assumed" class="section level3 hasAnchor" number="14.1.2">
 <h3><span class="header-section-number">14.1.2</span> Comparing Two Populations Means: Independent Sampling (Unequal Variances Assumed)<a href="two-sample-hypothesis-tests.html#comparing-two-populations-means-independent-sampling-unequal-variances-assumed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -826,10 +825,11 @@ stem(control);</code></pre>
 qqnorm(treatment, pch=19, col=&quot;red&quot;, main=&quot;Treatment&quot;);
 qqline(treatment, lty=2);</code></pre>
 </div>
-<div class="float" id="fig:qqplot-ggplot">
-<embed src="section14/images/treatment_qqplot.pdf" style="width:60.0%" />
-<div class="figcaption">Q-Q Plot for Treatment
-Group</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-33-1.png" alt="Q-Q Plot for Treatment Group" width="60%" />
+<p class="caption">
+Figure 14.5: Q-Q Plot for Treatment Group
+</p>
 </div>
 <p><strong>Nearly Normal Condition (control):</strong></p>
 <div class="tcolorbox">
@@ -837,12 +837,12 @@ Group</div>
 qqnorm(treatment, pch=19, col=&quot;red&quot;, main=&quot;Control&quot;);
 qqline(control, lty=2);</code></pre>
 </div>
-<div class="minipage">
-<div class="float">
-<embed src="section14/images/control_qqplot.pdf" style="width:60.0%" />
-<div class="figcaption">image</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-34-1.png" alt="Q-Q Plot for Control Group" width="60%" />
+<p class="caption">
+Figure 14.6: Q-Q Plot for Control Group
+</p>
 </div>
-<p><span id="fig:qqplot-ggplot" label="fig:qqplot-ggplot"></span></p>
 </div>
 <p>Stemplots suggest that there is a mild outlier in the control group but
 no deviation from Normality serious enough to prevent us from using t
@@ -927,8 +927,8 @@ the beginning of the experiment. To avoid the effect of two different
 teachers, the same teacher taught reading in both classes during the
 eight-week period of the experiment. We can therefore be somewhat
 confident that our two-sample procedure is detecting the effect of the
-treatment and not some other difference between the classes.</p>
-</div>
+treatment and not some other difference between the classes.
+::::::::::::::::</p>
 <div class="nt">
 <p><strong>Why do we use hypothesis tests?</strong></p>
 <p>To conduct tests on parameters and to quantify the degree of certainty

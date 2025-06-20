@@ -5,25 +5,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 15 Introduction to Simple Linear Regression | Demo Book</title>
-  <meta name="description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="description" content="Chapter 15 Introduction to Simple Linear Regression | Demo Book" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 15 Introduction to Simple Linear Regression | Demo Book" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 15 Introduction to Simple Linear Regression | Demo Book" />
   
-  <meta name="twitter:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
 <meta name="author" content="Nishan Mudalige" />
 
 
-<meta name="date" content="2025-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +73,7 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>STA258: Statistics with Applied Probability</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Nurlana Alili, Bryan Xu</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-masoud-ataei-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
@@ -189,12 +188,9 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#statistical-power-1"><i class="fa fa-check"></i><b>13.1</b> Statistical Power</a>
-<ul>
 <li class="chapter" data-level="" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-ii-errors"><i class="fa fa-check"></i>Type I and II Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Type I and Type II Errors</a></li>
-<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.3</b> Using Power to Determine Sample Size</a></li>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.2</b> Using Power to Determine Sample Size</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html"><i class="fa fa-check"></i><b>14</b> Two Sample Hypothesis Tests</a>
 <ul>
@@ -268,15 +264,12 @@ are interested a people’s height within 10 months. Then, we use
 coordinate system to draw each data point and use simple linear
 regression to find a function which perfectly describes the relationship
 between height and time.</p>
-<figure>
-<figcaption>
-An illustration of simple linear regression. The blue points
-are measures of height monthly, and the red line is our SLR model. In
-this case <span class="math inline"><em>m</em></span> is the slope which
-tells you the rate of change, <span class="math inline"><em>b</em></span> is the intercept which may have a
-special meaning depending on the case.
-</figcaption>
-</figure>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-35-1.png" alt="An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case $m$ is the slope which tells you the rate of change, $b$ is the intercept which may have a special meaning depending on the case." width="90%" />
+<p class="caption">
+Figure 15.1: An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case <span class="math inline">\(m\)</span> is the slope which tells you the rate of change, <span class="math inline">\(b\)</span> is the intercept which may have a special meaning depending on the case.
+</p>
+</div>
 <p>Now, you may wonder the accuracy of this model. In statistics, we do
 have parameters that approximate the slope and intercept of the function
 <span class="math inline">\(y = mx + b\)</span>. The model we are going to use is:

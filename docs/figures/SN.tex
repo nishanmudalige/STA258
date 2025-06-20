@@ -1,0 +1,35 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[->, thick]
+  \draw[->] (-1,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+  \filldraw[blue] (0.5,5) circle (2pt);
+  \filldraw[blue] (1,4.5) circle (2pt);
+  \filldraw[blue] (1.5,4) circle (2pt);
+  \filldraw[blue] (2,3.5) circle (2pt);
+  \filldraw[blue] (2.5,3) circle (2pt);
+  \filldraw[blue] (3,2.5) circle (2pt);
+  \filldraw[blue] (3.5,2) circle (2pt);
+  \filldraw[blue] (4,1.5) circle (2pt);
+  \filldraw[blue] (4.5,1) circle (2pt);
+  \filldraw[blue] (5,0.5) circle (2pt);
+  \filldraw[red] (0.5,4.5) circle (2pt);
+  \filldraw[red] (1,4) circle (2pt);
+  \filldraw[red] (1.5,3.5) circle (2pt);
+  \filldraw[red] (2,3) circle (2pt);
+  \filldraw[red] (2.5,2.5) circle (2pt);
+  \filldraw[red] (3,2) circle (2pt);
+  \filldraw[red] (3.5,1.5) circle (2pt);
+  \filldraw[red] (4,1) circle (2pt);
+  \filldraw[red] (4.5,0.5) circle (2pt);
+  \filldraw[red] (5,0) circle (2pt);
+\end{tikzpicture}
+\caption{An illustration of strong negative correlation ($r_{xy} \approx -1$).}
+\end{figure}
+
+\end{document}

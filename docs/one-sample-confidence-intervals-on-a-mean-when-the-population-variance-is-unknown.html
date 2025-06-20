@@ -5,25 +5,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown | Demo Book</title>
-  <meta name="description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="description" content="Chapter 7 One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown | Demo Book" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown | Demo Book" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 7 One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown | Demo Book" />
   
-  <meta name="twitter:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
 <meta name="author" content="Nishan Mudalige" />
 
 
-<meta name="date" content="2025-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +73,7 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>STA258: Statistics with Applied Probability</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Nurlana Alili, Bryan Xu</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-masoud-ataei-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
@@ -189,12 +188,9 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#statistical-power-1"><i class="fa fa-check"></i><b>13.1</b> Statistical Power</a>
-<ul>
 <li class="chapter" data-level="" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-ii-errors"><i class="fa fa-check"></i>Type I and II Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Type I and Type II Errors</a></li>
-<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.3</b> Using Power to Determine Sample Size</a></li>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.2</b> Using Power to Determine Sample Size</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html"><i class="fa fa-check"></i><b>14</b> Two Sample Hypothesis Tests</a>
 <ul>
@@ -333,11 +329,11 @@ place of <span class="math inline">\(\sigma\)</span> causes little extra variati
 large.</p></li>
 </ul>
 </div>
-<div class="float" id="fig:density-curves">
-<embed src="section7/images/density_curves.pdf" style="width:80.0%" />
-<div class="figcaption">Comparison of the standard normal distribution and t-distributions
-with 2 and 9 degrees of
-freedom.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-10-1.png" alt="Comparison of the standard normal distribution and t-distributions with 2 and 9 degrees of freedom" width="672" />
+<p class="caption">
+Figure 7.1: Comparison of the standard normal distribution and t-distributions with 2 and 9 degrees of freedom
+</p>
 </div>
 <div class="example">
 <p><span id="exm:unlabeled-div-49" class="example"><strong>Example 7.1  </strong></span>The composition of the Earth’s atmosphere may have changed over time. To
@@ -445,7 +441,7 @@ force (in pounds) is required to break them.</p>
 <p>The following dataset consists of force values (in pounds) recorded for
 a random sample of 30 insulators:</p>
 <div class="center">
-<p>, 1728, 1656, 1610, 1634, 1784, 1522, 1696, 1592, 1662, 1866, 1764,
+<p>1870, 1728, 1656, 1610, 1634, 1784, 1522, 1696, 1592, 1662, 1866, 1764,
 1734, 1662, 1734, 1774, 1550, 1756, 1762, 1866, 1820, 1744, 1788, 1688,
 1810, 1752, 1680, 1810, 1652, 1736</p>
 </div>
@@ -525,9 +521,10 @@ taxes &lt;- taxes_data$Taxes</code></pre>
      col = &quot;blue&quot;)</code></pre>
 </div>
 <div class="center">
-<div class="float">
-<embed src="Section7/images/tax_histogram.pdf" style="width:60.0%" />
-<div class="figcaption">image</div>
+<div class="figure" style="text-align: center">
+<img src="STA258-Book_files/figure-html/unnamed-chunk-11-1.png" alt=" " width="672" />
+<p class="caption">
+</p>
 </div>
 </div>
 <p><em>Boxplot:</em></p>
@@ -537,9 +534,10 @@ taxes &lt;- taxes_data$Taxes</code></pre>
         col = &quot;blue&quot;)</code></pre>
 </div>
 <div class="center">
-<div class="float">
-<embed src="Section7/images/tax_boxplot.pdf" style="width:50.0%" />
-<div class="figcaption">image</div>
+<div class="figure" style="text-align: center">
+<img src="STA258-Book_files/figure-html/unnamed-chunk-12-1.png" alt=" " width="672" />
+<p class="caption">
+</p>
 </div>
 </div>
 <p><em>Q-Q Plot:</em></p>
@@ -548,9 +546,10 @@ taxes &lt;- taxes_data$Taxes</code></pre>
 qqline(taxes)</code></pre>
 </div>
 <div class="center">
-<div class="float">
-<embed src="Section7/images/tax_qqplot.pdf" style="width:55.0%" />
-<div class="figcaption">image</div>
+<div class="figure" style="text-align: center">
+<img src="STA258-Book_files/figure-html/unnamed-chunk-13-1.png" alt=" " width="672" />
+<p class="caption">
+</p>
 </div>
 </div>
 <p><strong>Step 3: Construct 95% CI</strong></p>

@@ -5,25 +5,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Normal Approximation to the Binomial Distribution | Demo Book</title>
-  <meta name="description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="description" content="Chapter 4 Normal Approximation to the Binomial Distribution | Demo Book" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Normal Approximation to the Binomial Distribution | Demo Book" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 4 Normal Approximation to the Binomial Distribution | Demo Book" />
   
-  <meta name="twitter:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
 <meta name="author" content="Nishan Mudalige" />
 
 
-<meta name="date" content="2025-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +73,7 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>STA258: Statistics with Applied Probability</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Nurlana Alili, Bryan Xu</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-masoud-ataei-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
@@ -189,12 +188,9 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#statistical-power-1"><i class="fa fa-check"></i><b>13.1</b> Statistical Power</a>
-<ul>
 <li class="chapter" data-level="" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-ii-errors"><i class="fa fa-check"></i>Type I and II Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Type I and Type II Errors</a></li>
-<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.3</b> Using Power to Determine Sample Size</a></li>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.2</b> Using Power to Determine Sample Size</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html"><i class="fa fa-check"></i><b>14</b> Two Sample Hypothesis Tests</a>
 <ul>
@@ -305,7 +301,10 @@ Let: <span class="math display">\[X = \text{number of successes in } n \text{ tr
 (with probability <span class="math inline">\(1 - p\)</span>)</p></li>
 <li><p><span class="math inline">\(X \in \{0, 1, \dots, n\}\)</span></p></li>
 </ul>
-<p>The PMF is: <span class="math display">\[P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}\]</span></p>
+<p>The PMF is:
+<span class="math display">\[
+P(X = x) = \textstyle \binom{n}{x} p^x (1 - p)^{n - x}
+\]</span></p>
 <p><strong>Moment Generating Function (MGF):</strong></p>
 <p>The moment generating function (MGF) of a random variable <span class="math inline">\(X\)</span> is defined
 as: <span class="math display">\[M_X(t) = \mathbb{E}[e^{tX}]\]</span> The MGF uniquely characterizes the
@@ -438,34 +437,36 @@ successes in these <span class="math inline">\(n\)</span> independent trials is 
 <pre><code>## Pmf of Binomial with n=10 and p=1/6.
 
 x &lt;- seq(0, 10, by=1)
-y &lt;- dbinom(x, 10, 1/6)
-
-plot(x, y, type=&quot;p&quot;, col=&quot;blue&quot;, pch=19)</code></pre>
+y &lt;- dbinom(x, 10, 1/6)</code></pre>
 </div>
 <p><strong>Probability Mass Functions (PMFs) for increasing <span class="math inline">\(n\)</span>:</strong></p>
 <p>The following plots display the probability mass functions (PMFs) for a
 binomial distribution with <span class="math inline">\(p = \frac{1}{6}\)</span> and increasing values of
 <span class="math inline">\(n\)</span>. As <span class="math inline">\(n\)</span> increases, the binomial distribution begins to resemble a
 normal distribution.</p>
-<div class="float">
-<embed src="Section4/images/pmf_plot.pdf" style="width:80.0%" />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 10\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-1-1.png" alt="PMF of Binomial distribution with \(n = 10\) and \(p = \frac{1}{6}\)" width="672" />
+<p class="caption">
+Figure 4.1: PMF of Binomial distribution with <span class="math inline">\(n = 10\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
+</p>
 </div>
-<div class="float">
-<embed src="Section4/images/pmf_n50.pdf" style="width:80.0%" />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 50\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-2-1.png" alt="PMF of Binomial distribution with \(n = 50\) and \(p = \frac{1}{6}\)" width="672" />
+<p class="caption">
+Figure 4.2: PMF of Binomial distribution with <span class="math inline">\(n = 50\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
+</p>
 </div>
-<div class="float">
-<embed src="Section4/images/pmf_n100.pdf" style="width:80.0%" />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 100\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-3-1.png" alt="PMF of Binomial distribution with \(n = 100\) and \(p = \frac{1}{6}\)" width="672" />
+<p class="caption">
+Figure 4.3: PMF of Binomial distribution with <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
+</p>
 </div>
-<div class="float">
-<embed src="Section4/images/pmf_n300.pdf" style="width:80.0%" />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 300\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-4-1.png" alt="PMF of Binomial distribution with \(n = 300\) and \(p = \frac{1}{6}\)" width="672" />
+<p class="caption">
+Figure 4.4: PMF of Binomial distribution with <span class="math inline">\(n = 300\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
+</p>
 </div>
 </div>
 </div>
@@ -489,10 +490,11 @@ that contains proportion <span class="math inline">\(p\)</span> of “successes�
 <li><p>The <strong>standard deviation</strong> of the sampling distribution is
 <span class="math inline">\(\sqrt{ \frac{p(1 - p)}{n} }\)</span>.</p></li>
 </ul>
-<div class="float">
-<embed src="Section4/images/binomial_normal.pdf" style="width:90.0%" />
-<div class="figcaption">Binomial distribution with <span class="math inline">\(n = 300\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span> and its Normal
-approximation.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-5-1.png" alt="Binomial distribution with \(n = 300\), \(p = \frac{1}{6}\), and its Normal approximation" width="672" />
+<p class="caption">
+Figure 4.5: Binomial distribution with <span class="math inline">\(n = 300\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span>, and its Normal approximation
+</p>
 </div>
 <p>According to the Central Limit Theorem (CLT), the sampling distribution
 of a sample proportion becomes approximately normal as the sample size
@@ -660,14 +662,37 @@ explore how and why this correction is applied.<br />
 <div id="continuity-correction-table" class="section level3 unnumbered hasAnchor">
 <h3>Continuity Correction Table<a href="normal-approximation-to-the-binomial-distribution.html#continuity-correction-table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="center">
-<p><strong>Binomial Probability</strong> <strong>Continuity Correction</strong> <strong>Normal Approximation</strong><br />
-———————————— ———————————————— —————————————————————————————————– – –</p>
-<p><span class="math inline">\(\displaystyle P(X = x)\)</span> <span class="math inline">\(\displaystyle P(x - 0.5 \leq X \leq x + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(\frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X \leq x)\)</span> <span class="math inline">\(\displaystyle P(X \leq x + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X &lt; x)\)</span> <span class="math inline">\(\displaystyle P(X \leq x - 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \leq \frac{x - 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X \geq x)\)</span> <span class="math inline">\(\displaystyle P(X \geq x - 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \geq \frac{x - 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X &gt; x)\)</span> <span class="math inline">\(\displaystyle P(X \geq x + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \geq \frac{x + 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(a \leq X \leq b)\)</span> <span class="math inline">\(\displaystyle P(a - 0.5 \leq X \leq b + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(\frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma}\right)\)</span></p>
+<p><span class="math display">\[
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Binomial Probability} &amp; \textbf{Continuity Correction} &amp; \textbf{Normal Approximation} \\
+\hline
+\displaystyle P(X = x) &amp;
+\displaystyle P(x - 0.5 \leq X \leq x + 0.5) &amp;
+\displaystyle P\left( \frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \leq x) &amp;
+\displaystyle P(X \leq x + 0.5) &amp;
+\displaystyle P\left( Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X &lt; x) &amp;
+\displaystyle P(X \leq x - 0.5) &amp;
+\displaystyle P\left( Z \leq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \geq x) &amp;
+\displaystyle P(X \geq x - 0.5) &amp;
+\displaystyle P\left( Z \geq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X &gt; x) &amp;
+\displaystyle P(X \geq x + 0.5) &amp;
+\displaystyle P\left( Z \geq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(a \leq X \leq b) &amp;
+\displaystyle P(a - 0.5 \leq X \leq b + 0.5) &amp;
+\displaystyle P\left( \frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\end{array}
+\]</span></p>
 </div>
 <p>Suppose that <span class="math inline">\(Y\)</span> has a Binomial distribution with <span class="math inline">\(n = 20\)</span> and
 <span class="math inline">\(p = 0.4\)</span>. We will find the exact probabilities that <span class="math inline">\(Y \leq y\)</span> and

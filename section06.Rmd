@@ -227,10 +227,40 @@ illustrated by plotting many intervals simultaneously and observing.
             xlab = " ", lab = " ");
     abline(v = 0, lty = 2);
 :::
+```{r fig.cap="Simulated 95% confidence intervals for the population mean", echo=FALSE, fig.align='center'}
+set.seed(123)
 
-![Simulated 95% confidence intervals for the population mean. Red "X"
-marks indicate intervals that do not contain the true mean
-($\mu = 0$).](Section6/images/confidence_intervals.pdf){width="60%"}
+n <- 30          # sample size per group
+num_sims <- 50   # number of simulations
+true_mean <- 0   # true population mean
+colors <- c("red", "blue", "green", "purple", "cyan", "black", "magenta")
+
+for (i in 1:num_sims) {
+  sample <- rnorm(n, mean = true_mean, sd = 1)
+  sample_mean <- mean(sample)
+  se <- sd(sample) / sqrt(n)
+  lower <- sample_mean - qnorm(0.975) * se
+  upper <- sample_mean + qnorm(0.975) * se
+  col <- colors[i %% length(colors) + 1]
+  
+  # Plot the confidence interval
+  if (i == 1) {
+    plot(NA, xlim = c(-3, 5), ylim = c(0, num_sims),
+         xlab = "", ylab = "", yaxt = "n")
+    abline(v = true_mean, lty = 2)  # true mean line
+  }
+  
+  segments(lower, i, upper, i, col = col, lwd = 2)
+  
+  # Mark intervals that miss the true mean
+  if (lower > true_mean || upper < true_mean) {
+    text(upper + 0.3, i, "X", col = "red", cex = 1.5)
+  }
+}
+```
+
+
+
 
 ## Confidence Interval for the Mean of a Normal Population {#confidence-interval-for-the-mean-of-a-normal-population .unnumbered}
 
@@ -243,8 +273,34 @@ $$\bar{x} \pm z_{\ast} \cdot \frac{\sigma}{\sqrt{n}}$$
 The critical value $z_{\ast}$ is illustrated in a Figure below and
 depends on $C$.
 
-![The central area under the standard normal curve with confidence level
-$C$.](Section6/images/normal_confidence_curve.pdf){width="60%"}
+```{r fig.cap="The central area under the standard normal curve with confidence level \\(C\\)", echo=FALSE, fig.align='center'}
+# z range
+z <- seq(-4, 4, length = 1000)
+curve <- dnorm(z)
+
+# Confidence level
+C <- 0.95
+z_star <- qnorm(1 - (1 - C)/2)
+
+# Base plot
+plot(z, curve, type = "l", lwd = 2, xlab = "", ylab = "", axes = FALSE)
+
+# Shaded confidence region
+polygon(c(-z_star, z[z >= -z_star & z <= z_star], z_star),
+        c(0, curve[z >= -z_star & z <= z_star], 0),
+        col = "gray", border = NA)
+
+# Axes
+axis(1, at = c(-z_star, 0, z_star), labels = expression(-z^"*", 0, z^"*"))
+abline(h = 0)
+
+# Label for center
+text(0, 0.12, "Probability = C", cex = 1.4)
+
+# RIGHT TAIL LABEL (force higher up)
+text(z_star + 0.6, 0.20, expression((1 - C)/2), cex = 1.2)
+arrows(z_star + 0.55, 0.18, z_star + 0.1, dnorm(z_star), length = 0.1)
+```
 
 ## Large Sample CI for $\mu$ (Normal data) {#large-sample-ci-for-mu-normal-data .unnumbered}
 

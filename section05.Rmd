@@ -90,8 +90,21 @@ $$P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - 3 \right| \geq \epsilon \r
 **Conclusion:** $$\bar{X}_n \xrightarrow{P} 3$$
 :::
 
-![Simulation of running sample mean of Bernoulli($p = 0.5$) trials over
-time.](Section5/images/simulation_plot.pdf){width="72%"}
+```{r fig.cap="Simulation of running sample mean of Bernoulli \\(p = 0.5\\) trials over time", echo=FALSE, fig.align='center'}
+set.seed(123)  # For reproducibility
+
+n <- 10
+p <- 0.5
+sample <- rbinom(n, 1, p)
+running_mean <- cumsum(sample) / (1:n)
+
+# Plot the simulation
+plot(1:n, running_mean, type = "o", col = "blue", pch = 1,
+     xlab = "trial", ylab = "cumsum(sample)/trial",
+     ylim = c(0, 1))
+abline(h = p, lty = 2)
+points(1:n, running_mean, col = "red", pch = 1, cex = 1.5)
+```
 
 **R Simulation Code (Single Sample Path):**
 
@@ -105,9 +118,29 @@ time.](Section5/images/simulation_plot.pdf){width="72%"}
     abline(h = 0.5, lty = 2, col = "black")
 :::
 
-![Simulation of 10 running sample means of Bernoulli($p = 0.5$) trials
-converging over 100
-trials.](Section5/images/simulation_multi.pdf){width="72%"}
+```{r fig.cap="Simulation of 10 running sample means of Bernoulli \\(p = 0.5\\) trials converging over 100 trials", echo=FALSE, fig.align='center'}
+set.seed(123)  # For reproducibility
+
+n <- 100         # number of trials
+p <- 0.5         # success probability
+k <- 10          # number of simulations
+
+colors <- rainbow(k)  # different colors for each line
+
+# Plot setup
+plot(1, type = "n", xlim = c(1, n), ylim = c(0, 1),
+     xlab = "trial", ylab = "cumsum(sample1)/trial")
+
+# Dashed line for true probability
+abline(h = p, lty = 2)
+
+# Run k simulations
+for (i in 1:k) {
+  sample <- rbinom(n, 1, p)
+  running_mean <- cumsum(sample) / (1:n)
+  lines(1:n, running_mean, col = colors[i])
+}
+```
 
 **R Simulation Code (Multiple Sample Paths):**
 

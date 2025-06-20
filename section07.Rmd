@@ -81,11 +81,28 @@ error of the sample mean $\bar{x}$ is $$\frac{s}{\sqrt{n}}.$$
   place of $\sigma$ causes little extra variation when the sample is
   large.
 :::
+```{r fig.cap="Comparison of the standard normal distribution and t-distributions with 2 and 9 degrees of freedom", echo=FALSE, fig.align='center'}
+# Generate x values
+x <- seq(-4, 4, length = 100)
 
-![Comparison of the standard normal distribution and t-distributions
-with 2 and 9 degrees of
-freedom.](section7/images/density_curves.pdf){#fig:density-curves
-width="80%"}
+# Compute densities
+y_norm <- dnorm(x)
+y_t2 <- dt(x, df = 2)
+y_t9 <- dt(x, df = 9)
+
+# Plot the standard normal curve
+plot(x, y_norm, type = "l", lwd = 1.5, col = "black",
+     ylab = "", xlab = "", main = "", ylim = c(0, 0.4))
+
+# Add t-distributions
+lines(x, y_t2, col = "blue", lty = 2, lwd = 1.5)
+lines(x, y_t9, col = "red", lty = 2, lwd = 1.5)
+
+# Add legend
+legend("topright", legend = c("Std. Normal", "t(2)", "t(9)"),
+       col = c("black", "blue", "red"), lty = c(1, 2, 2), lwd = 1.5)
+```
+
 
 :::::: example
 The composition of the Earth's atmosphere may have changed over time. To
@@ -229,7 +246,7 @@ The following dataset consists of force values (in pounds) recorded for
 a random sample of 30 insulators:
 
 ::: center
-, 1728, 1656, 1610, 1634, 1784, 1522, 1696, 1592, 1662, 1866, 1764,
+1870, 1728, 1656, 1610, 1634, 1784, 1522, 1696, 1592, 1662, 1866, 1764,
 1734, 1662, 1734, 1774, 1550, 1756, 1762, 1866, 1820, 1744, 1788, 1688,
 1810, 1752, 1680, 1810, 1652, 1736
 :::
@@ -330,7 +347,16 @@ additional tax collected.
 :::
 
 ::: center
-![image](Section7/images/tax_histogram.pdf){width="60%"}
+```{r fig.cap=" ", echo=FALSE, fig.align='center'}
+# Step 1: Load the dataset from the URL
+url <- "https://mcs.utm.utoronto.ca/~nosedal/data/taxes.txt"
+taxes_data <- read.table(url, header = TRUE)
+
+# Step 2: Extract the 'Taxes' column
+taxes <- taxes_data$Taxes
+
+hist(taxes, main = "Histogram for our example", xlab = "taxes", ylab = "frequency", col = "blue")
+```
 :::
 
 *Boxplot:*
@@ -342,7 +368,16 @@ additional tax collected.
 :::
 
 ::: center
-![image](Section7/images/tax_boxplot.pdf){width="50%"}
+```{r fig.cap=" ", echo=FALSE, fig.align='center'}
+# Step 1: Load the dataset from the URL
+url <- "https://mcs.utm.utoronto.ca/~nosedal/data/taxes.txt"
+taxes_data <- read.table(url, header = TRUE)
+
+# Step 2: Extract the 'Taxes' column
+taxes <- taxes_data$Taxes
+
+boxplot(taxes, main = "Additional Income Tax", col = "blue")
+```
 :::
 
 *Q-Q Plot:*
@@ -353,7 +388,17 @@ additional tax collected.
 :::
 
 ::: center
-![image](Section7/images/tax_qqplot.pdf){width="55%"}
+```{r fig.cap=" ", echo=FALSE, fig.align='center'}
+# Step 1: Load the dataset from the URL
+url <- "https://mcs.utm.utoronto.ca/~nosedal/data/taxes.txt"
+taxes_data <- read.table(url, header = TRUE)
+
+# Step 2: Extract the 'Taxes' column
+taxes <- taxes_data$Taxes
+
+qqnorm(taxes, col = "blue", pch = 19)
+qqline(taxes)
+```
 :::
 
 **Step 3: Construct 95% CI**

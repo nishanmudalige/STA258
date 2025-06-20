@@ -11,15 +11,28 @@ coordinate system to draw each data point and use simple linear
 regression to find a function which perfectly describes the relationship
 between height and time.
 
-<figure>
 
-<figcaption>An illustration of simple linear regression. The blue points
-are measures of height monthly, and the red line is our SLR model. In
-this case <span class="math inline"><em>m</em></span> is the slope which
-tells you the rate of change, <span
-class="math inline"><em>b</em></span> is the intercept which may have a
-special meaning depending on the case.</figcaption>
-</figure>
+```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case $m$ is the slope which tells you the rate of change, $b$ is the intercept which may have a special meaning depending on the case.'}
+\usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
+\begin{tikzpicture}[->, thick]
+  % Draw x and y axes
+  \draw[->] (-1,0) -- (7,0) node[right] {Time (month)};
+  \draw[->] (0,-1) -- (0,5) node[above] {Height (m)};
+  
+  \filldraw[blue] (0.5, 0.75) circle (2pt);
+  \filldraw[blue] (1.5, 1.75) circle (2pt);
+  \filldraw[blue] (1, 1.25) circle (2pt);
+  \filldraw[blue] (2, 2.1) circle (2pt);
+  \filldraw[blue] (2.5, 2.4) circle (2pt);
+  \filldraw[blue] (3, 2.8) circle (2pt);
+  \filldraw[blue] (3.5, 3.1) circle (2pt);
+  \filldraw[blue] (4, 3.7) circle (2pt);
+  \filldraw[blue] (4.5, 3.95) circle (2pt);
+  \filldraw[blue] (5, 4.1) circle (2pt);
+  \draw[red, thick, domain=0:6] plot (\x, {0.8*\x + 0.35}) node[right] {$y = mx+ b$};
+\end{tikzpicture}
+```
+
 
 Now, you may wonder the accuracy of this model. In statistics, we do
 have parameters that approximate the slope and intercept of the function

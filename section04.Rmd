@@ -43,7 +43,11 @@ where:
 
 - $X \in \{0, 1, \dots, n\}$
 
-The PMF is: $$P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}$$
+The PMF is: 
+$$
+P(X = x) = \textstyle \binom{n}{x} p^x (1 - p)^{n - x}
+$$
+
 
 **Moment Generating Function (MGF):**
 
@@ -206,8 +210,7 @@ Let $X \sim \text{Bin}(n, p)$. The mean of $X$ is $$E(X) = \mu = np$$
 
     x <- seq(0, 10, by=1)
     y <- dbinom(x, 10, 1/6)
-
-    plot(x, y, type="p", col="blue", pch=19)
+    
 :::
 
 **Probability Mass Functions (PMFs) for increasing $n$:**
@@ -217,17 +220,30 @@ binomial distribution with $p = \frac{1}{6}$ and increasing values of
 $n$. As $n$ increases, the binomial distribution begins to resemble a
 normal distribution.
 
-![PMF of Binomial distribution with $n = 10$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_plot.pdf){width="80%"}
-
-![PMF of Binomial distribution with $n = 50$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_n50.pdf){width="80%"}
-
-![PMF of Binomial distribution with $n = 100$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_n100.pdf){width="80%"}
-
-![PMF of Binomial distribution with $n = 300$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_n300.pdf){width="80%"}
+```{r fig.cap="PMF of Binomial distribution with \\(n = 10\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:10
+y <- dbinom(x, 10, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 10 and p = 1/6")
+```
+```{r fig.cap="PMF of Binomial distribution with \\(n = 50\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:50
+y <- dbinom(x, 50, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 50 and p = 1/6")
+```
+```{r fig.cap="PMF of Binomial distribution with \\(n = 100\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:100
+y <- dbinom(x, 100, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 100 and p = 1/6")
+```
+```{r fig.cap="PMF of Binomial distribution with \\(n = 300\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:300
+y <- dbinom(x, 300, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 300 and p = 1/6")
+```
 
 ## Sampling Distribution of a Sample Proportion and the Normal Approximation
 
@@ -252,8 +268,28 @@ Then:
 - The **standard deviation** of the sampling distribution is
   $\sqrt{ \frac{p(1 - p)}{n} }$.
 
-![Binomial distribution with $n = 300$, $p = \frac{1}{6}$ and its Normal
-approximation.](Section4/images/binomial_normal.pdf){width="90%"}
+```{r fig.cap="Binomial distribution with \\(n = 300\\), \\(p = \\frac{1}{6}\\), and its Normal approximation", echo=FALSE, fig.align='center'}
+# Parameters
+n <- 300
+p <- 1/6
+x <- 0:n
+
+# Binomial PMF
+y_binom <- dbinom(x, size = n, prob = p)
+
+# Normal Approximation
+mu <- n * p
+sigma <- sqrt(n * p * (1 - p))
+y_norm <- dnorm(x, mean = mu, sd = sigma)
+
+# Plot
+plot(x, y_binom, type = "p", col = "blue", pch = 19,
+     xlab = "", ylab = "", main = "")
+lines(x, y_norm, col = "red", lwd = 2)
+legend("topright", legend = "Normal\napproximation", col = "red", lty = 1, bty = "n")
+```
+
+
 
 According to the Central Limit Theorem (CLT), the sampling distribution
 of a sample proportion becomes approximately normal as the sample size
@@ -453,20 +489,40 @@ explore how and why this correction is applied.\
 ### Continuity Correction Table {#continuity-correction-table .unnumbered}
 
 ::: center
-  **Binomial Probability**                        **Continuity Correction**                                                   **Normal Approximation**                                           
-  ------------------------------------ ------------------------------------------------ ----------------------------------------------------------------------------------------------------- -- --
-                                                                                                                                                                                                 
-  $\displaystyle P(X = x)$              $\displaystyle P(x - 0.5 \leq X \leq x + 0.5)$   $\displaystyle P\left(\frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)$     
-                                                                                                                                                                                                 
-  $\displaystyle P(X \leq x)$                 $\displaystyle P(X \leq x + 0.5)$                           $\displaystyle P\left(Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(X < x)$                    $\displaystyle P(X \leq x - 0.5)$                           $\displaystyle P\left(Z \leq \frac{x - 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(X \geq x)$                 $\displaystyle P(X \geq x - 0.5)$                           $\displaystyle P\left(Z \geq \frac{x - 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(X > x)$                    $\displaystyle P(X \geq x + 0.5)$                           $\displaystyle P\left(Z \geq \frac{x + 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(a \leq X \leq b)$    $\displaystyle P(a - 0.5 \leq X \leq b + 0.5)$   $\displaystyle P\left(\frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma}\right)$     
+\[
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Binomial Probability} & \textbf{Continuity Correction} & \textbf{Normal Approximation} \\
+\hline
+\displaystyle P(X = x) & 
+\displaystyle P(x - 0.5 \leq X \leq x + 0.5) & 
+\displaystyle P\left( \frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \leq x) & 
+\displaystyle P(X \leq x + 0.5) & 
+\displaystyle P\left( Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X < x) & 
+\displaystyle P(X \leq x - 0.5) & 
+\displaystyle P\left( Z \leq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \geq x) & 
+\displaystyle P(X \geq x - 0.5) & 
+\displaystyle P\left( Z \geq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X > x) & 
+\displaystyle P(X \geq x + 0.5) & 
+\displaystyle P\left( Z \geq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(a \leq X \leq b) & 
+\displaystyle P(a - 0.5 \leq X \leq b + 0.5) & 
+\displaystyle P\left( \frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\end{array}
+\]
+
+
+  
                                                                                                                                                                                                  
 :::
 

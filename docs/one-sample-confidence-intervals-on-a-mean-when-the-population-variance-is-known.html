@@ -5,25 +5,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 One Sample Confidence Intervals on a Mean When the Population Variance is Known | Demo Book</title>
-  <meta name="description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  <meta name="description" content="Chapter 6 One Sample Confidence Intervals on a Mean When the Population Variance is Known | Demo Book" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 One Sample Confidence Intervals on a Mean When the Population Variance is Known | Demo Book" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 6 One Sample Confidence Intervals on a Mean When the Population Variance is Known | Demo Book" />
   
-  <meta name="twitter:description" content="This is an example of using the bookdown package. The output format for this example is bookdown::gitbook." />
+  
   
 
 <meta name="author" content="Nishan Mudalige" />
 
 
-<meta name="date" content="2025-06-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -74,7 +73,7 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>STA258: Statistics with Applied Probability</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Nurlana Alili, Bryan Xu</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-masoud-ataei-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
@@ -189,12 +188,9 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#statistical-power-1"><i class="fa fa-check"></i><b>13.1</b> Statistical Power</a>
-<ul>
 <li class="chapter" data-level="" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-ii-errors"><i class="fa fa-check"></i>Type I and II Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Type I and Type II Errors</a></li>
-<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.3</b> Using Power to Determine Sample Size</a></li>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.2</b> Using Power to Determine Sample Size</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html"><i class="fa fa-check"></i><b>14</b> Two Sample Hypothesis Tests</a>
 <ul>
@@ -451,11 +447,11 @@ matplot(rbind(xbar - z.star * SE, xbar + z.star * SE),
         xlab = &quot; &quot;, lab = &quot; &quot;);
 abline(v = 0, lty = 2);</code></pre>
 </div>
-<div class="float">
-<embed src="Section6/images/confidence_intervals.pdf" style="width:60.0%" />
-<div class="figcaption">Simulated 95% confidence intervals for the population mean. Red “X”
-marks indicate intervals that do not contain the true mean
-(<span class="math inline">\(\mu = 0\)</span>).</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-8-1.png" alt="Simulated 95% confidence intervals for the population mean" width="672" />
+<p class="caption">
+Figure 6.1: Simulated 95% confidence intervals for the population mean
+</p>
 </div>
 </div>
 <div id="confidence-interval-for-the-mean-of-a-normal-population" class="section level2 unnumbered hasAnchor">
@@ -466,10 +462,11 @@ level <span class="math inline">\(C\)</span> confidence interval for <span class
 <p><span class="math display">\[\bar{x} \pm z_{\ast} \cdot \frac{\sigma}{\sqrt{n}}\]</span></p>
 <p>The critical value <span class="math inline">\(z_{\ast}\)</span> is illustrated in a Figure below and
 depends on <span class="math inline">\(C\)</span>.</p>
-<div class="float">
-<embed src="Section6/images/normal_confidence_curve.pdf" style="width:60.0%" />
-<div class="figcaption">The central area under the standard normal curve with confidence level
-<span class="math inline">\(C\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-9-1.png" alt="The central area under the standard normal curve with confidence level \(C\)" width="672" />
+<p class="caption">
+Figure 6.2: The central area under the standard normal curve with confidence level <span class="math inline">\(C\)</span>
+</p>
 </div>
 </div>
 <div id="large-sample-ci-for-mu-normal-data" class="section level2 unnumbered hasAnchor">
