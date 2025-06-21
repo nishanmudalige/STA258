@@ -727,7 +727,7 @@ We consider data on apartments near UTM, with price (in thousands of dollars), a
 \caption{Deviation table for computing $\hat{\beta}_1$ and $\hat{\beta}_0$}
 \end{table}
 
-\vspace{1em}
+
 \noindent The sample means are:
 \[
 \bar{y} = \frac{\sum y}{n} = \frac{5930}{9} = 658.89, \qquad
@@ -779,7 +779,8 @@ This is an example of \textbf{extrapolation}, and such predictions should be tre
 We can create a simple linear regression model in R using the \texttt{lm} command:
 
 \noindent\textbf{R code}
-\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm,
+  before skip=4pt, after skip=4pt]
 \begin{verbatim}
 lm(y ~ x, data = data_source)
 \end{verbatim}
@@ -788,7 +789,8 @@ lm(y ~ x, data = data_source)
 \noindent The data is available in the \texttt{apt\_around\_utm.csv} file.
 
 \noindent\textbf{R code}
-\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm,
+  before skip=4pt, after skip=4pt]
 \begin{verbatim}
 apt = read.csv(file.choose())
 # apt = read.csv("~/PATH_TO_FILE/apt_around_utm.csv")
@@ -798,7 +800,8 @@ apt_model = lm(price ~ area, data = apt)
 \end{tcolorbox}
 
 \noindent\textbf{R output}
-\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm]
+\begin{tcolorbox}[colback=gray!10, colframe=black!45, arc=2mm,
+  before skip=4pt, after skip=4pt]
 \begin{verbatim}
 > apt_model
 
@@ -811,15 +814,10 @@ Coefficients:
 \end{verbatim}
 \end{tcolorbox}
 
-Recall our fitted regression model:
-\[
-\hat{y} = 25.69x + 422.26
-\]
-
 We can compute the residuals and the sum of squared errors (SSE) using the table below:
 
 \begin{center}
-\renewcommand{\arraystretch}{1.2}
+\renewcommand{\arraystretch}{1.0}
 \begin{tabular}{cccccc}
 \toprule
 $y$ & $x$ & $\hat{y}$ & $y - \hat{y}$ & $(y - \hat{y})^2$ \\
@@ -836,6 +834,11 @@ $y$ & $x$ & $\hat{y}$ & $y - \hat{y}$ & $(y - \hat{y})^2$ \\
 \bottomrule
 \end{tabular}
 \end{center}
+
+Recall our fitted regression model:
+\[
+\hat{y} = 25.69x + 422.26
+\]
 
 \[
 \text{SSE} = \sum (y_i - \hat{y}_i)^2 = 25,\!697.83
