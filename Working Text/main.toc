@@ -57,5 +57,9 @@
 \contentsline {subsection}{\numberline {14.1.2}Comparing Two Populations Means: Independent Sampling (Unequal Variances Assumed)}{144}{subsection.14.1.2}%
 \contentsline {section}{\numberline {14.2}The Fold Rule}{151}{section.14.2}%
 \contentsline {section}{\numberline {14.3}Two Sample Hypothesis Test on Paired Data}{151}{section.14.3}%
-\contentsline {section}{\numberline {14.4}Two Sample Hypothesis Test on Proportions}{153}{section.14.4}%
-\contentsline {section}{\numberline {14.5}Two Sample Hypothesis Test on Variances}{155}{section.14.5}%
+\contentsline {section}{\numberline {14.4}Two Sample Hypothesis Test on Proportions}{154}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Two Sample Hypothesis Test on Variances}{157}{section.14.5}%
+\contentsline {chapter}{\numberline {16}Inference for Simple Linear Regression}{158}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Inference on Regression}{158}{section.16.1}%
+\contentsline {section}{\numberline {16.2}ANOVA Table (ANalysis Of VAriance)}{169}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Residual Plots}{176}{section.16.3}%

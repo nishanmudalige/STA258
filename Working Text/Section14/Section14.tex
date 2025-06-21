@@ -363,7 +363,7 @@ qqline(Success_Index[Group == 1]);
 \end{tcolorbox}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{section14.1/images/qqplot_group1.pdf}
+\includegraphics[width=0.6\textwidth]{section14/images/qqplot_group1.pdf}
 \caption{Q-Q Plot for Group 1: Interaction with Outsiders}
 \label{fig:qqplot-group1}
 \end{figure}
@@ -379,7 +379,7 @@ qqline(Success_Index[Group == 2]);
 \noindent
 \begin{minipage}{\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{section14.1/images/qqplot_group2.pdf}
+\includegraphics[width=0.6\textwidth]{section14/images/qqplot_group2.pdf}
 \vspace{-0.5em}
 
 \captionof{figure}{Q-Q Plot for Group 2: Fewer Interactions}
@@ -398,7 +398,7 @@ boxplot(Success_Index ~ Group, col = c("red", "blue"))
 \noindent
 \begin{minipage}{\textwidth}
 \centering
-\includegraphics[width=0.55\textwidth]{section14.1/images/boxplot_success_index.pdf}
+\includegraphics[width=0.55\textwidth]{section14/images/boxplot_success_index.pdf}
 \vspace{-0.5em}
 
 \captionof{figure}{Boxplot of Success Index by Group}
@@ -429,7 +429,7 @@ bp +
 \end{tcolorbox}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{section14.1/images/boxplot_ggplot2.pdf}
+\includegraphics[width=0.6\textwidth]{section14/images/boxplot_ggplot2.pdf}
 \caption{Boxplot of Success Index by Group using ggplot2}
 \label{fig:boxplot-ggplot}
 \end{figure}
@@ -677,7 +677,7 @@ qqline(treatment, lty=2);
 \end{tcolorbox}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{section14.1/images/treatment_qqplot.pdf}
+\includegraphics[width=0.6\textwidth]{section14/images/treatment_qqplot.pdf}
 \caption{Q-Q Plot for Treatment Group}
 \label{fig:qqplot-ggplot}
 \end{figure}
@@ -692,7 +692,7 @@ qqline(control, lty=2);
 \noindent
 \begin{minipage}{\textwidth}
 \centering
-\includegraphics[width=0.6\textwidth]{section14.1/images/control_qqplot.pdf}
+\includegraphics[width=0.6\textwidth]{section14/images/control_qqplot.pdf}
 \vspace{-0.5em}
 
 \captionof{figure}{Q-Q Plot for Control Group}
@@ -949,6 +949,46 @@ Note that your final conclusion is based on the value of $\mu_d$, but we still n
 	\item If $\mu_d \neq 0$: from the table above we get $M_2-M_1 \neq 0$, then $M_2 \neq M_1$.
 \end{itemize}
 
+\begin{example}
+In an effort to determine whether a new type of fertilizer is more effective than the type currently in use, researchers took 12 two-acre plots of land scattered throughout the county. Each plot was divided into two equal-size sub plots, one of which was treated with the new fertilizer. Wheat was planted, and the crop yields were measured.
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c c c c c c c c c c c }
+Plot & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$ & $12$\\
+Current & $56$ & $45$ & $68$ & $72$ & $61$ & $69$ & $57$ & $55$ & $60$ & $72$ & $75$ & $66$\\
+New & $60$ & $49$ & $66$ & $73$ & $59$ & $67$ & $61$ & $60$ & $58$ & $75$ & $72$ & $68$\\
+\end{tabular}
+\caption{Data of example 14.1}
+\end{figure}
+\end{center}
+\vspace{-0.75cm}
+
+Can we conclude at the 5\% signiﬁcance level that the new fertilizer is more eﬀective than the current one?
+
+\textbf{Solution:}
+
+You can verify that the mean and standard deviation of the twelve difference measurements are $\bar{d} = new - current = 1$ and $s_d = 3.0151$.
+
+\textbf{Step 1: State Hypothesis}
+
+$H_0: \mu_d = 0$ and $H_a: \mu_d>0$
+
+\textbf{Step 2: Find test statistics}
+
+$t* = \frac{\bar{d} - 0}{s_d/\sqrt{n}} = \frac{1}{3.0151/\sqrt{12}} = 1.1489$
+
+\textbf{Step 3: Compute p-value}
+
+Using t-distribution table with df $=11$, then $0.10 < p-value < 0.15$.
+
+\textbf{Step 4: Conclusion}
+
+Since p-value $> \alpha = 0.05$, we can’t reject $H_0$. There is not enough evidence to infer that the new fertilizer is better.
+
+\end{example}
+
 \section{Two Sample Hypothesis Test on Proportions}
 
 Moreover, we can use hypothesis test to compare proportions from two independent groups as well. We are going to start all these steps again.\\
@@ -1019,6 +1059,63 @@ ii. Sample Size Condition Each of the groups must be big enough. As with individ
 
 Note: Two-sided significance tests (later we will discuss this concept) are robust against violations of this condition. In this case, we can conduct significance tests with smaller sample sizes. In practice, the two-sided significance test works well if there are at least five successes and five failures in each sample.
 
+\begin{example}
+Nicotine patches are often used to help smokers quit. Does giving medicine to fight depression help? A randomized double-blind experiment assigned 244 smokers who wanted to stop to receive nicotine patches and another 245 to receive both a patch and the anti-depression drug bupropion. Results: After a y ear, 40 subjects in the nicotine patch group had abstained from smoking, as had 87 in the patch-plus-drug group. How significant is the evidence that the medicine increases the success rate? State hypotheses, calculate a test statistic, use Table 6 to give its P-value, and state y our conclusion. (Use $\alpha = 0.01$)\\
+Solution:
+
+\textbf{Step 1: State Hypothesis}
+
+$H_0: p_1 = p_2$ and $H_a: p_1 < p_2$
+
+\textbf{Step 2: Find test statistics}
+
+$\hat{p_1} = \frac{40}{244} = 0.1639$ and $\hat{p_2} = \frac{87}{245} = 0.3551$. Then $\hat{p} = \frac{40+87}{244+245} = 0.2597$.
+
+Now, $z_* = \frac{\hat{p_1} - \hat{p_2}}{\sqrt{\hat{p}(1-\hat{p})(\frac{1}{n_1} + \frac{1}{n_2})}} = -4.82$
+
+\textbf{Step 3: Compute p-value}
+
+P-value $= P(Z < z_*) = P(Z < -4.82) < 0.0003$
+
+\textbf{Step 4: Conclusion}
+
+Since p-value $ < 0.0003 < \alpha = 0.01$, we reject the null hypothesis that $p_1 = p_2$. The data provide very strong evidence that bupropion increases success rate.
+
+\textbf{R-code:}
+
+Input
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+successes=c(87, 40);
+
+totals=c(245, 244);
+
+prop.test(successes, totals, alternative="greater",correct=FALSE);
+\end{verbatim}
+\end{tcolorbox}
+
+Output
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+
+## 
+## 2-sample test for equality of proportions without 
+## continuity correction 
+## 
+## data: x and n
+## X-squared = 23.237, df = 1, p-value = 7.161e-07
+## alternative hypothesis: greater 
+## 95 percent confidence interval: 
+## 0.1275385 1.0000000 
+## sample estimates:
+##    prop 1    prop 2 
+## 0.3551020 0.1639344
+
+\end{verbatim}
+\end{tcolorbox}
+
+\end{example}
+
 \section{Two Sample Hypothesis Test on Variances}
 
 Let's begin this type of hypothesis test with a case. The question is: how do you know whether the homogeneity of variance assumption is satisﬁed? One simple method involves just looking at two sample variances. Logically, if two population variances are equal, then the two sample variances should be very similar. When the two sample variances are reasonably close, you can be reasonably conﬁdent that the homogeneity assumption is satisﬁed and proceed with, for example, Student t-interval. However, when one sample variance is three or four times larger than the other, then there is reason for a concern. The common statistical procedure for comparing population variances $\sigma_1^2$ and $\sigma_2^2$ makes an inference about the ratio of $\sigma_1^2$/$\sigma_2^2$.\\
@@ -1052,4 +1149,5 @@ The test statistics of two sample hypothesis test on variances is given by: \[ F
 	\item $H_0: \sigma_1^2 = \sigma_2^2$ and $H_a: \sigma_1^2 > \sigma_2^2$. If $F^*> F_{n_1-1,n_2-1,\alpha}$ or $P(F_{n_1-1,n_2-1} > F^*)$ is too small, then we reject $H_0$. Otherwise, we do not reject it.
 	\item $H_0: \sigma_1^2 = \sigma_2^2$ and $H_a: \sigma_1^2 < \sigma_2^2$. if $F^* < F_{n_1-1,n_2-1,1-\alpha}$ or $P(F_{n_1-1,n_2-1} < F^*)$ is too small, then we reject $H_0$. Otherwise, we do not reject it.
 \end{itemize}
+
 
