@@ -47,3 +47,212 @@ In probability theory and statistics, covariance is a measure of the joint varia
 The formula of sample covariance is given by: \[ S_{xy} = \frac{1}{n-1} \cdot \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) = \frac{\sum_{i = 1}^{n}x_i \cdot y_i}{n -1} - \frac{n\bar{x}\bar{y}}{n-1}.\]
 These are two ways to compute covariance. Both will lead you find the same answer of covariance.
 \end{definition}
+
+Basically, covariance indicates that how two variables move together.
+
+\begin{itemize}
+	\item If covariance of two random variables is greater than $0$ ($cov(x,y) > 0$), then the two random variables show the same trend. That is: if one random variable is increasing, then the other one is also increasing; while if one random variable is decreasing, then the other one is also decreasing.
+	\item If covariance of two random variables is less than $0$ ($cov(x,y) < 0$), then the two random variables show the opposite trend. That is: if one random variable is increasing, then the other one is decreasing; while if one random variable is decreasing, then the other one is increasing.
+	\item If covariance of two random variables is equal to $0$ ($cov(x,y) = 0$), then we say that there is no relationship (systematically linear) between the two random variables.
+\end{itemize}
+
+Note that covariance is not standardized, so it can be difficult to interpret directly.\\
+
+\textbf{Coefficient of Correlation}
+
+In statistics, correlation or dependence is any statistical relationship, whether causal or not, between two random variables or bivariate data. It helps us understand whether and how changes in one variable are associated with changes in another. A positive correlation means that as one variable increases, the other tends to increase as well, while a negative correlation means that one variable tends to decrease as the other increases. The degree of correlation is usually expressed with a correlation coefficient, which ranges from $-1$ to $+1$
+
+\begin{definition}[Coefficient of correlation]
+The coefficient of correlation is given by: \[ r_{xy} = \frac{S_{xy}}{S_x \cdot S_y}.\]
+Now, $r_{xy} = $ sample correlation coefficient, $S_{xy} = $ sample covariance, $S_{x} = $ sample standard deviation of $x$, $S_{y} = $ sample standard deviation of $y$. Also, remember that the range of coefficient of correlation is between $-1$ and $+1$: $r_{xy} \in [-1, +1]$.
+\end{definition}
+
+In short, coefficient of correlation is a measure of the strength of the linear relationship between two random variables.
+
+\begin{itemize}
+	\item If $r_{xy} \approx +1$, then we say that the two random variables have a strong positive correlation.	(See figure 15.2)
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[->, thick]
+  \draw[->] (-1,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+  \filldraw[blue] (0.5, 0.5) circle (2pt);
+  \filldraw[blue] (1, 1) circle (2pt);
+  \filldraw[blue] (1.5, 1.5) circle (2pt);
+  \filldraw[blue] (2, 2) circle (2pt);
+  \filldraw[blue] (2.5, 2.5) circle (2pt);
+  \filldraw[blue] (3, 3) circle (2pt);
+  \filldraw[blue] (3.5, 3.5) circle (2pt);
+  \filldraw[blue] (4, 4) circle (2pt);
+  \filldraw[blue] (4.5, 4.5) circle (2pt);
+  \filldraw[blue] (5, 5) circle (2pt);
+  \filldraw[red] (0.5,1) circle (2pt);
+  \filldraw[red] (1,1.5) circle (2pt);
+  \filldraw[red] (1.5,2) circle (2pt);
+  \filldraw[red] (2,2.5) circle (2pt);
+  \filldraw[red] (2.5,3) circle (2pt);
+  \filldraw[red] (3,3.5) circle (2pt);
+  \filldraw[red] (3.5,4) circle (2pt);
+  \filldraw[red] (4,4.5) circle (2pt);
+  \filldraw[red] (4.5,5) circle (2pt);
+  \filldraw[red] (5,5.5) circle (2pt);
+\end{tikzpicture}
+\caption{An illustration of strong positive correlation ($r_{xy} \approx +1$).}
+\end{figure}
+
+	\item If $r_{xy} \approx -1$, then we say that the two random variables have a strong negative correlation.	 (See figure 15.3)
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[->, thick]
+  \draw[->] (-1,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+  \filldraw[blue] (0.5,5) circle (2pt);
+  \filldraw[blue] (1,4.5) circle (2pt);
+  \filldraw[blue] (1.5,4) circle (2pt);
+  \filldraw[blue] (2,3.5) circle (2pt);
+  \filldraw[blue] (2.5,3) circle (2pt);
+  \filldraw[blue] (3,2.5) circle (2pt);
+  \filldraw[blue] (3.5,2) circle (2pt);
+  \filldraw[blue] (4,1.5) circle (2pt);
+  \filldraw[blue] (4.5,1) circle (2pt);
+  \filldraw[blue] (5,0.5) circle (2pt);
+  \filldraw[red] (0.5,4.5) circle (2pt);
+  \filldraw[red] (1,4) circle (2pt);
+  \filldraw[red] (1.5,3.5) circle (2pt);
+  \filldraw[red] (2,3) circle (2pt);
+  \filldraw[red] (2.5,2.5) circle (2pt);
+  \filldraw[red] (3,2) circle (2pt);
+  \filldraw[red] (3.5,1.5) circle (2pt);
+  \filldraw[red] (4,1) circle (2pt);
+  \filldraw[red] (4.5,0.5) circle (2pt);
+  \filldraw[red] (5,0) circle (2pt);
+\end{tikzpicture}
+\caption{An illustration of strong negative correlation ($r_{xy} \approx -1$).}
+\end{figure}
+
+	\item If $r_{xy} \approx 0$, then we say that there is essentially no correlation between the two random variables. Note that if $r \approx 0$, then it suggests a linear relationship doesn't exist but other relationship may exist. (See figure 15.4)
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[->, thick]
+  \draw[->] (-1,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+  \draw[black, thick, domain=0:6] plot (\x, {3});
+  \filldraw[blue] (0.5, 2.7) circle (2pt);
+  \filldraw[red]  (1,   1.5) circle (2pt);
+  \filldraw[blue] (1.5, 4.1) circle (2pt);
+  \filldraw[red]  (2.3, 2.0) circle (2pt);
+  \filldraw[blue] (3.1, 0.8) circle (2pt);
+  \filldraw[red]  (4.0, 3.5) circle (2pt);
+  \filldraw[blue] (4.5, 1.2) circle (2pt);
+  \filldraw[red]  (5.2, 4.3) circle (2pt);
+  \filldraw[blue] (6.0, 2.5) circle (2pt);
+\end{tikzpicture}
+\caption{An illustration of no correlation ($r_{xy} \approx 0$).}
+\end{figure}
+\end{itemize}
+
+Note that correlation doesn't imply causation:
+
+\begin{itemize}
+	\item $cor(x,y) \approx +1$ doesn't necessarily imply on increase in x causes increase in y.
+	\item $cor(x,y) \approx -1$ doesn't necessarily imply on increase in x causes decrease in y.
+\end{itemize}
+
+\textbf{Properties of Covariance and Correlation}
+
+These two values are symmetric:
+
+\begin{itemize}
+	\item $cov(x,y) = cov(y,x)$;
+	\item $cor(x,y) = cor(y,x)$.
+\end{itemize}
+
+\begin{example}
+Five observations taken for two variables follow.
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c }
+$x_i$ & $y_i$\\
+$4$ & $50$\\
+$6$ & $50$\\
+$11$ & $40$\\
+$3$ & $60$\\
+$16$ & $30$\\
+\end{tabular}
+\caption{Data of example 15.1}
+\end{figure}
+\end{center}
+\vspace{-0.75cm}
+(a) Compute the sample covariance.
+
+(b) Compute and interpret the sample correlation coefficient.
+
+\textbf{Solution:}
+
+Step 1: Compute $\bar{x}$ and $\bar{y}$; $\bar{x} = 8$ and $\bar{y} = 46$ (check this by yourself).
+
+Step 2: Find $s_x$ and $s_y$.
+\vspace{-0.5cm}
+
+$$s_x^2 = \frac{1}{5-1} \cdot \sum_{i = 1}^{5}(x_i - \bar{x})^2 = 29.5 \text{ and } s_y^2 = \frac{1}{5-1} \cdot \sum_{i=1}^{5}(y_i - \bar{y})^2 = 130$$
+\hspace*{3.5em}Then: $s_x = 5.4313$ and $s_y = 11.4017$.
+
+Step 3: Find $s_{xy}$ and $r$.
+\vspace{-0.75cm}
+
+$$\sum_{i=1}^{5}x_i \cdot y_i = 1600, \text{ then } s_{xy} = \frac{1600}{5-1} - \frac{5\cdot8\cdot46}{5-1} = -60 \text{ and } r_{xy} = \frac{s_{xy}}{s_x \cdot s_y} = 0.9688.$$
+
+\textbf{R code}
+
+Step 1: Entering data;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+X=c(4,6,11,3,16); 
+
+Y=c(50,50,40,60,30);
+\end{verbatim}
+\end{tcolorbox}
+
+Step 2: Finding means;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+mean(X);
+
+mean(Y);
+\end{verbatim}
+\end{tcolorbox}
+
+Step 3: Finding variances;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+var(X);
+
+var(Y);
+\end{verbatim}
+\end{tcolorbox}
+
+Step 4: Finding standard deviations;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+sd(X);
+
+sd(Y):
+\end{verbatim}
+\end{tcolorbox}
+
+Step 5: Finding covariance and correlation;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+cov(X,Y);
+
+cor(X,Y);
+\end{verbatim}
+\end{tcolorbox}
+\end{example}
+
