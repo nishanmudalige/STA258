@@ -51,6 +51,7 @@ i. When is structure of testing hypothesis is $H_0: p = p_0$, $H_a: p > p_0$:
 
 \pgfmathdeclarefunction{gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
 }
+\begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[no markers, domain=0:10, samples=100,
@@ -63,15 +64,20 @@ enlargelimits=false, clip=false, axis on top,]
 \addplot [fill=blue, draw=none, domain=2:3] {gauss(0,1)} \closedcycle;
 \addplot [fill=blue!20, draw=none, domain=-2:-1] {gauss(0,1)} \closedcycle;
 \addplot [fill=blue, draw=none, domain=1:2] {gauss(0,1)} \closedcycle;
+\node at (axis cs:2,0.02) [below, yshift=-3.5pt] {\textbf{p-value}};
 \end{axis}
 \end{tikzpicture}
 \end{center}
+\caption{An illustration of p-value when $H_a: p > p_0$ for one hypothesis test on a proportion.}
+\end{figure}
+
 In case (i), calculating $P[Z > Z_*]$ as your p-value. Then, comparing with significant level: $\alpha$.
 
 ii. When is structure of testing hypothesis is $H_0: p = p_0$, $H_a: p < p_0$:
 
 \pgfmathdeclarefunction{m_gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
 }
+\begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[no markers, domain=0:10, samples=100,
@@ -87,12 +93,16 @@ enlargelimits=false, clip=false, axis on top,]
 \end{axis}
 \end{tikzpicture}
 \end{center}
+\caption{An illustration of p-value when $H_a: p < p_0$ for one hypothesis test on a proportion.}
+\end{figure}
+
 In case (ii), calculating $P[Z < Z_*]$ as your p-value. Then, comparing with significant level: $\alpha$.
 
 iii. When is structure of testing hypothesis is $H_0: p = p_0$, $H_a: p \neq p_0$:
 
 \pgfmathdeclarefunction{k_gauss}{2}{\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
 }
+\begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[no markers, domain=0:10, samples=100,
@@ -108,6 +118,9 @@ enlargelimits=false, clip=false, axis on top,]
 \end{axis}
 \end{tikzpicture}
 \end{center}
+\caption{An illustration of p-value when $H_a: p \neq p_0$ for one hypothesis test on a proportion.}
+\end{figure}
+
 In case (iii), calculating $2\cdot P[Z > |Z_*|]$ as your p-value. Then, comparing with significant level: $\alpha$.\\
 
 \textbf{Step 4: Comparing P-value with $\alpha$-level}

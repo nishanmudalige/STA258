@@ -364,5 +364,138 @@ The $y$-intercept is $9.57$; that is, the line strikes the $y$-axis at $9.57$. H
 
 \end{example}
 
+\section{Simple Linear Regression}
+
 \textbf{Estimating Regression Model Parameters}
+
+The regression line which we are going to use is: $E(Y) = \beta_0 + \beta_1 \cdot x$. This is fitted to the data points $(x_1, y_1), (x_2, y_2), \cdots, (x_n, y_n)$ by finding the line that is closest to the data in some sense. There are many ways in which closeness can be defined, but the method most generally used is to consider the vertical deviations between the line and the data points: $y_i - (\beta_0 + \beta_1 \cdot x_i), 1 \leq i \leq n$.\\
+
+The fitted line is chosen to be the line that minimizes the sum of the squares of these vertical deviations $$Q = \sum_{i=1}^{n} [y_i - (\beta_0 + \beta_1 \cdot x_i)]^2$$ and this is referred to as the least squares fit. (The quantity $Q$ is also called the \textbf{sum of squares for error}, SSE.)\\
+
+The parameter estimates $\hat{\beta_0}$ and $\hat{\beta_1}$ are therefore the values that minimize the quantity $Q$. They are found taking partial derivatives of $Q$ with respect to $\hat{\beta_0}$ and $\hat{\beta_1}$ and setting the resulting expressions equal to $0$.\\
+
+Now, you know the method to get the regression model $E(Y) = \beta_0 + \beta_1 \cdot x$, the following lines are the derivation:
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[thick]
+  \draw[->] (-1,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+  \filldraw[blue] (0.5, 1.0) circle (2pt);
+  \filldraw[blue] (1.5, 1.4) circle (2pt);
+  \filldraw[blue] (1, 1.5) circle (2pt);
+  \filldraw[blue] (2, 2.4) circle (2pt);
+  \filldraw[blue] (2.5, 2.1) circle (2pt);
+  \filldraw[blue] (3, 2.7) circle (2pt);
+  \filldraw[blue] (3.5, 3.3) circle (2pt);
+  \filldraw[blue] (4, 3.4) circle (2pt);
+  \filldraw[blue] (4.5, 4.2) circle (2pt);
+  \filldraw[blue] (5, 3.7) circle (2pt);
+  \draw[red, thick, domain=0:6] plot (\x, {0.8*\x + 0.35}) node[right] {$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$};
+  \foreach \x/\y in {
+    0.5/1.0,
+    1.5/1.4,
+    1/1.5,
+    2/2.4,
+    2.5/2.1,
+    3/2.7,
+    3.5/3.3,
+    4/3.4,
+    4.5/4.2,
+    5/3.7
+  } {
+    \draw[black] (\x,\y) -- (\x,{0.8*\x + 0.35});
+  }
+\end{tikzpicture}
+\caption{An illustration of a simple linear regression model. The red line is the fitted regression line, and the full black vertical lines represent the residuals (SSE). The data points deviate from the line to show errors clearly. Note that the sum of residuals is necessarily $0$.}
+\end{figure}
+
+\begin{proof}
+\begin{align*}
+\intertext{Firstly, we examine sum of residual squared:}\\
+\sum_{i=1}^{n}e_i^2 &= \sum_{i=1}^{n}(y_i - \hat{y_i})^2 = 0\\
+&= \sum_{i=1}^{n}[y_i - (\hat{\beta_0} + \hat{\beta_1} \cdot x_i)]^2 = 0\\
+&= \sum_{i=1}^{n}(y_i - \hat{\beta_0} - \hat{\beta_1} \cdot x_i)^2 = 0\\
+\end{align*}
+To find $\hat{\beta_0}$ and $\hat{\beta_1}$ which minimizes $\sum_{i=1}^{n}e_i^2$, we need partial derivative with respect to $\hat{\beta_0}$ and $\hat{\beta_1}$:
+\begin{align*}
+\frac{\partial}{\partial \hat{\beta_0}}\sum_{i=1}^{n}e_i^2 &= \frac{\partial}{\partial \hat{\beta_0}}\sum_{i=1}^{n}(y_i - \hat{\beta_0} - \hat{\beta_1} \cdot x_i)^2 = 0\\
+&= \sum_{i=1}^{n}2(\hat{\beta_0} + \hat{\beta_1}x_i - y_i) = 0\\
+&= \sum_{i=1}^{n}\hat{\beta_0} + \hat{\beta_1}\sum_{i=1}^{n}x_i - \sum_{i=1}^{n}y_i = 0 \text{; } (\text{consider:} \sum_{i=1}^{n}x_i = n\bar{x})\\
+&= n\cdot\hat{\beta_0} + \hat{\beta_1}\cdot n \bar{x} - n\bar{y} = 0\\
+\text{Hence: } \hat{\beta_0} &= \bar{y} - \hat{\beta_1}\cdot \bar{x}. \text{ (Equ 1)}\\
+\frac{\partial}{\partial \hat{\beta_1}}\sum_{i=1}^{n}e_i^2 &= \frac{\partial}{\partial \hat{\beta_1}}\sum_{i=1}^{n}(y_i - \hat{\beta_0} - \hat{\beta_1} \cdot x_i)^2 = 0\\
+&= \sum_{i=1}^{n}2(y_i - \hat{\beta_0} - \hat{\beta_1}x_i)(-x_i)=0\\
+&= \sum_{i=1}^{n}2(\hat{\beta_0}x_i + \hat{\beta_1}x_i^2 - y_ix_i)=0\\
+&= \hat{\beta_0}\sum_{i=1}^{n}x_i + \hat{\beta_1}\sum_{i=1}^{n}x_i^2 - \sum_{i=1}^{n}x_iy_i = 0\\
+&= \hat{\beta_1}\sum_{i=1}^{n}x_i^2 + \sum_{i=1}^{n}(\bar{y} - \hat{\beta_1}\bar{x})x_i - \sum_{i=1}^{n}x_iy_i = 0 \text{; } (\text{sub Equ 1 into this line})\\
+&= \hat{\beta_1}\sum_{i=1}^{n}x_i^2 + \bar{y}\sum_{i=1}^{n}x_i - \hat{\beta_1}\bar{x}\sum_{i=1}^{n}x_i - \sum_{i=1}^{n}x_iy_i = 0\\
+&= \hat{\beta_1}\sum_{i=1}^{n}x_i^2 + n\bar{x}\bar{y} - n\hat{\beta_1}(\bar{x})^2 - \sum_{i=1}^{n}x_iy_i = 0\\
+&= \hat{\beta_1}[\sum_{i=1}^{n}x_i^2 - n(\bar{x})^2] + n\bar{x}\bar{y} - \sum_{i=1}^{n}x_iy_i = 0\\
+\text{Hence: } \hat{\beta_1} &= \frac{\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}}{\sum_{i=1}^{n}x_i^2 - n(\bar{x})^2} = \frac{S_{xy}}{S_{xx}}.
+\end{align*}
+\end{proof}
+
+\textbf{Introduction to Simple Linear Regression}
+
+At this point, we are going to provide the definition of simple linear regression model as the following:
+
+\begin{definition}[Simple Linear Regression]
+Let $x$ be independent variable and $y$ be dependent variable, then the model of simple linear regression is: $\hat{y} = \hat{\beta_0} + \hat{\beta_1} \cdot x + \epsilon$, where $\hat{\beta_0}$ represents the $y$-intercept, $\hat{\beta_1}$ represents the slope and $\epsilon$ is the error term that $\epsilon \sim N(0, \sigma^2)$. Moreover, $\hat{\beta_0} = \bar{y} - \hat{\beta_1}\cdot \bar{x}$ and $\hat{\beta_1} = \frac{S_{xy}}{S_{xx}}$, which is also equal to: \[ \frac{\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}}{\sum_{i=1}^{n}x_i^2 - n(\bar{x})^2}.\]
+\end{definition}
+
+\section{SST, SSR and SSE}
+
+Early in Section $15.3$, we introduced a value called the sum of squares for error (SSE). There are two more values that are important in simple linear regression, which are total sum of squares (SST) and sum of squares for regression (SSR). We will introduce all these three values with figures, so that you may have a better understanding of what they measure.\\
+
+\textbf{SST (Total Sum of Squares)}
+
+It is defined as the sum over all squared differences between the observations and their overall mean $\bar{y}$.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[thick]
+  \draw[->] (-1,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+  \filldraw[blue] (0.5, 1.3) circle (2pt);
+  \filldraw[blue] (1.5, 2.1) circle (2pt);
+  \filldraw[blue] (1, 1.6) circle (2pt);
+  \filldraw[blue] (2, 2.7) circle (2pt);
+  \filldraw[blue] (2.5, 2.2) circle (2pt);
+  \filldraw[blue] (3, 2.5) circle (2pt);
+  \filldraw[blue] (3.5, 3.7) circle (2pt);
+  \filldraw[blue] (4, 3.9) circle (2pt);
+  \filldraw[blue] (4.5, 3.4) circle (2pt);
+  \filldraw[blue] (5, 4.2) circle (2pt);
+  \draw[red, thick, domain=0:6] plot (\x, {0.8*\x + 0.35}) node[right] {$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$};
+  \draw[dashed] (-0.5,2.86) -- (6.5,2.86);
+  \node at (6.8, 2.86) [right] {$\bar{y}$};
+  \foreach \x/\y in {
+    0.5/1.3,
+    1.5/2.1,
+    1/1.6,
+    2/2.7,
+    2.5/2.2,
+    3/2.5,
+    3.5/3.7,
+    4/3.9,
+    4.5/3.4,
+    5/4.2
+  } {
+    \draw[black] (\x,\y) -- (\x,2.86);
+  }
+\end{tikzpicture}
+\caption{An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height $\bar{y}$, and the solid black vertical lines represent the squared deviations from the mean (SST components).}
+\end{figure}
+
+\begin{definition}[SST (Toal sum of squares)]
+For any simple linear regression model, SST (Toal sum of squares) measures the sum over all squared differences between the observations and their overall mean $\bar{y}$ is given by: \[ SST = \sum_{i=1}^{n}(y_i - \bar{y})^2.\]
+\end{definition}
+
+
+
+
+
+
+
 
