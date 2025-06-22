@@ -60,14 +60,14 @@ Note that covariance is not standardized, so it can be difficult to interpret di
 
 \textbf{Coefficient of Correlation}
 
-In statistics, correlation or dependence is any statistical relationship, whether causal or not, between two random variables or bivariate data. It helps us understand whether and how changes in one variable are associated with changes in another. A positive correlation means that as one variable increases, the other tends to increase as well, while a negative correlation means that one variable tends to decrease as the other increases. The degree of correlation is usually expressed with a correlation coefficient, which ranges from $-1$ to $+1$
+In statistics, correlation or dependence is any statistical relationship, whether causal or not, between two random variables or bivariate data. It helps us understand whether and how changes in one variable are associated with changes in another. A positive correlation means that as one variable increases, the other tends to increase as well, while a negative correlation means that one variable tends to decrease as the other increases. The degree of correlation is usually expressed with a correlation coefficient, which ranges from $-1$ to $+1$.
 
 \begin{definition}[Coefficient of correlation]
 The coefficient of correlation is given by: \[ r_{xy} = \frac{S_{xy}}{S_x \cdot S_y}.\]
 Now, $r_{xy} = $ sample correlation coefficient, $S_{xy} = $ sample covariance, $S_{x} = $ sample standard deviation of $x$, $S_{y} = $ sample standard deviation of $y$. Also, remember that the range of coefficient of correlation is between $-1$ and $+1$: $r_{xy} \in [-1, +1]$.
 \end{definition}
 
-In short, coefficient of correlation is a measure of the strength of the linear relationship between two random variables.
+The correlation r measures the strength and direction of the linear association between two quantitative variables $x$ and $y$. Although you calculate a correlation for any scatter plot, $r$ measures only straight-line relationships. In short, coefficient of correlation is a measure of the strength of the linear relationship between two random variables.
 
 \begin{itemize}
 	\item If $r_{xy} \approx +1$, then we say that the two random variables have a strong positive correlation.	(See figure 15.2)
@@ -255,4 +255,114 @@ cor(X,Y);
 \end{verbatim}
 \end{tcolorbox}
 \end{example}
+
+\section{Least Squares Method}
+
+The method of least squares is a mathematical optimization technique used to find the best-fitting function by minimizing the sum of the squared differences between the observed data points and the values predicted by the model. It interested in a linear model of the form: $y  = \beta_0 + \beta_1 \cdot x_1 + \cdots + \beta_p \cdot x_p + \epsilon$, where $\epsilon \sim N(0, \sigma^2)$, $x_i$'s ($i = 1,..., p$) are independent predictors, $\beta_j$'s ($j = 0,..., p$) are coefficients, $y$ is dependent variable.\\
+
+Using sample data, we get estimates of this model of the form: $\hat{y} = \hat{\beta_0} + \hat{\beta_1} \cdot x_1 + \cdots + \hat{\beta_p} \cdot x_p$. Now, $\hat{y}$ is predicated $y$, $x_i$'s ($i = 1,...,p$) are independent predicators, $\hat{\beta_j}$'s ($j = 0,...,p$) are estimated coefficients. Moreover, $\hat{\beta_0}$ is intercept; $\hat{\beta_1},...,\hat{\beta_p}$ are quantifiers how much $y$ changes with a unit increase in $x_i$'s.\\
+
+In this course, we focus on the following model a bit more: $\hat{y} = b_0 + b_1\cdot x$, where $b_0$ is the y-intercept, and $b_1$ is the slope, and $\hat{y}$ is the value of $y$ determined by the line. The coefficients $b_0$ and $b_1$ are derived using Calculus so that we minimize the sum of squared deviations: $\sum_{i=1}^{n}(y_i - \hat{y_i})^2$. Then the least squares line coefficients are $b_1 = r \cdot \frac{s_y}{s_x}$ and $b_0 = \bar{y} - b_1\cdot \bar{x}$.\\
+
+\textbf{Facts about Least Squares Method}
+
+\begin{itemize}
+	\item The distinction between explanatory and response variables is essential in Least Squares Method.
+	\item The least-squares line (trendline) always passes through the point ($\bar{x}$, $\bar{y}$) on the graph of $y$ against $x$.
+	\item The square of the correlation, $r^2$, is the fraction of the variation in the values of $y$ that is explained by the variation in $x$.
+\end{itemize}
+
+\begin{example}
+A tool die maker operates out of a small shop making specialized tools. He is considering increasing the size of his business and needs to know more about his costs. One such cost is electricity, which he needs to operate his machines and lights. He keeps track of his daily electricity costs and the number of tools that he made that day. These data are listed next. Determine the fixed and variable electricity costs using the Least Squares Method.
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c }
+Day & Number of tools ($X$) & Electricity costs ($Y$)\\
+$1$ & $7$ & $23.80$\\
+$2$ & $3$ & $11.89$\\
+$3$ & $2$ & $15.89$\\
+$4$ & $5$ & $26.11$\\
+$5$ & $8$ & $31.79$\\
+$6$ & $11$ & $39.93$\\
+$7$ & $5$ & $12.27$\\
+$8$ & $15$ & $40.06$\\
+$9$ & $3$ & $21.38$\\
+$10$ & $6$ & $18.65$\\
+\end{tabular}
+\caption{Data of example 15.2}
+\end{figure}
+\end{center}
+\vspace{-0.75cm}
+
+Solution:
+
+Step 1: Entering Data;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+tools=c(7,3,2,5,8,11,5,15,3,6);
+
+cost=c(23.80,11.89,15.98,26.11,31.79, 39.93,12.27,40.06,21.38,18.65);
+\end{verbatim}
+\end{tcolorbox}
+
+Step 2: Finding Slope;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+Sx=sd(tools); 
+
+Sy=sd(cost); 
+
+r=cor(tools,cost); 
+
+b1=r*(Sy/Sx); 
+
+b1;
+ 
+## [1] 2.245882
+\end{verbatim}
+\end{tcolorbox}
+
+Step 3: Finding $y$-intercept;
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+x.bar=mean(tools); 
+
+y.bar=mean(cost);
+
+b0=y.bar - b1*x.bar;
+
+b0; 
+
+## [1] 9.587765
+\end{verbatim}
+\end{tcolorbox}
+
+We can also use R-code to draw a graph:
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+plot(tools,cost,pch=19);
+
+abline(least.squares$coeff,col="red");
+
+# pch=19 tells R to draw solid circles; 
+
+# abline tells R to add trendline;
+\end{verbatim}
+\end{tcolorbox}
+
+Interpretation: 
+
+The slope measures the marginal rate of change in the dependent variable. In this example, the slope is $2.25$, which means that in this sample, for each one-unit increase in the number of tools, the marginal increase in the electricity cost is $\$ 2.25$ per tool.
+
+The $y$-intercept is $9.57$; that is, the line strikes the $y$-axis at $9.57$. However, when $x = 0$, we are producing no tools and hence the estimated ﬁxed cost of electricity is $ \$9.57$ per day .
+
+\end{example}
+
+\textbf{Estimating Regression Model Parameters}
 
