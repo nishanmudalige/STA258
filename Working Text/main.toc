@@ -46,4 +46,4 @@
 \contentsline {section}{\numberline {15.1}Measures of Linear Relationship}{90}{section.15.1}%
 \contentsline {section}{\numberline {15.2}Least Squares Method}{94}{section.15.2}%
 \contentsline {section}{\numberline {15.3}Simple Linear Regression}{96}{section.15.3}%
-\contentsline {section}{\numberline {15.4}SST, SSR and SSE}{99}{section.15.4}%
+\contentsline {section}{\numberline {15.4}SST, SSE and SSR}{99}{section.15.4}%
