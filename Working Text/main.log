@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  24 JUN 2025 10:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  25 JUN 2025 19:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2694,7 +2694,15 @@ l.438 \end{align*}
                   ]
 
 [98]
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+[99
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15.8})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.490 \section{SST, SSE and SSR}
+                                ]
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
 
  []
 
@@ -2703,32 +2711,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[99]
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
-
- []
-
-
-
 [100
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.8})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.546 
-      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.15.9})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.546 
-      ]
-Underfull \hbox (badness 10000) in paragraph at lines 579--580
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
+l.580 \end{definition}
+                      ]
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
@@ -2739,12 +2729,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.10}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.587 T
-       otal sum of squares = Sum of squares for error + Sum of squares for r...
-])
+l.611 
+      ]
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 620--621
+
+ []
+
+
 
 [102
 pdfTeX warning (ext4): destination with the same identifier (name{figure.15.11}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.644 
+      ])
+
+[103
+pdfTeX warning (ext4): destination with the same identifier (name{figure.15.12}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -2754,7 +2761,7 @@ runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
 
-[103
+[104
 
 
 ] (./main.aux)
@@ -2770,11 +2777,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 41DD753C04BAEBFFD55D41042075E2DE;12018.
  ) 
 Here is how much of TeX's memory you used:
- 46780 strings out of 473190
- 1086965 string characters out of 5715801
+ 46785 strings out of 473190
+ 1087023 string characters out of 5715801
  1894163 words of memory out of 5000000
- 68846 multiletter control sequences out of 15000+600000
- 574834 words of font info for 99 fonts, out of 8000000 for 9000
+ 68848 multiletter control sequences out of 15000+600000
+ 575169 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,96p,914b,2026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -2798,11 +2805,12 @@ e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 5/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
 /2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2
 025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (109 pages, 3925337 bytes).
+5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/
+texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (110 pages, 3930514 bytes).
 PDF statistics:
- 1233 PDF objects out of 1440 (max. 8388607)
- 1003 compressed objects within 11 object streams
- 345 named destinations out of 1000 (max. 500000)
+ 1243 PDF objects out of 1440 (max. 8388607)
+ 1010 compressed objects within 11 object streams
+ 347 named destinations out of 1000 (max. 500000)
  666 words of extra memory for PDF output out of 10000 (max. 10000000)
 

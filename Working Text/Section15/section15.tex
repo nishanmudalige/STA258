@@ -448,6 +448,43 @@ Let $x$ be independent variable and $y$ be dependent variable, then the model of
 
 \begin{example}
 Suppose an appliance store conducts a 5-month experiment to determine the effect of advertising on sales revenue. The results are shown in a table below. The relationship between sales revenue, $y$, and advertising expenditure, $x$, is hypothesized to follow a ﬁrst-order linear model, that is, $y = \beta_0 + \beta_1\cdot x + \epsilon$, where $y =$ dependent variable, $x =$ independent variable, $\beta_0$ y-intercept, $\beta_1 =$ slope of the line and $\epsilon =$ error variable.
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\begin{tabular}{ c c c }
+Month & Advertising Expenditure $x$ (\$ hundreds) & Sales Revenue $y$ (\$ thousands)\\
+$1$ & $1$ & $1$\\
+$2$ & $2$ & $1$\\
+$3$ & $3$ & $2$\\
+$4$ & $4$ & $2$\\
+$5$ & $5$ & $4$\\
+\end{tabular}
+\caption{Data of example 15.3}
+\end{figure}
+\end{center}
+\vspace{-0.75cm}
+
+a) Obtain the least squares estimates of $\beta_0$ and $\beta_1$, and state the estimated regression function.
+
+b) Plot the estimated regression function and the data.
+
+\textbf{Solution: }
+
+a) $\bar{x} = 3$, $\bar{y} = 2$, $S_{xx} = 10$, $S_{xy} = 7$
+
+Then, the slope of the least squares line is $\hat{\beta_1} = \frac{S_{xy}}{S_{xx}} = 0.7$ and $\hat{\beta_0} = \bar{y} - \hat{\beta_1}\bar{x} = -0.1$. Thus, the least squares line is $\hat{y} = -0.1 + 0.7x$.
+
+b) R-code
+
+\begin{tcolorbox}[colback=gray!10, colframe=gray!50, arc=2mm]
+\begin{verbatim}
+plot(x, y, main="Scatterplot: Simple Linear Regression",
+xlab="x", ylab="y", pch=19,col="blue");
+
+abline(coef(linear.reg), col="red",lty=2);
+\end{verbatim}
+\end{tcolorbox}
 \end{example}
 
 \section{SST, SSE and SSR}
