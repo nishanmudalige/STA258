@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 The Central Limit Theorem | _main.knit</title>
+  <title>Chapter 6 Law of Large Numbers | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 The Central Limit Theorem | _main.knit" />
+  <meta property="og:title" content="Chapter 6 Law of Large Numbers | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 The Central Limit Theorem | _main.knit" />
+  <meta name="twitter:title" content="Chapter 6 Law of Large Numbers | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sampling-distributions-related-to-a-normal-population.html"/>
-<link rel="next" href="normal-approximation-to-the-binomial-distribution.html"/>
+<link rel="prev" href="normal-approximation-to-the-binomial-distribution.html"/>
+<link rel="next" href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -176,66 +176,149 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-central-limit-theorem" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> The Central Limit Theorem<a href="the-central-limit-theorem.html#the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The Central Limit Theorem (CLT) is one of the most important results in
-probability and statistics. It states that, given a sufficiently large
-sample size, the distribution of the sample mean of independent and
-identically distributed (i.i.d.) random variables approaches a normal
-distribution, regardless of the shape of the original distribution.
-Real-life Application of Central Limit Theorem in Financial Analysis.
-The CLT is often used by financial experts to examine stock market
-results.<br />
-Now, let’s discuss Central Limit Theorem with more details. Suppose we
-have a finite number of populations and each population follows a
-distribution with population mean <span class="math inline">\(\mu\)</span> and population variance
-<span class="math inline">\(\sigma^2.\)</span>. Then we take samples of same size <span class="math inline">\(n\)</span> from each population,
-such that we have <span class="math inline">\(\bar{x}_1, \bar{x}_2, ..., \bar{x}_m\)</span> from population
-group <span class="math inline">\(1 \text{ to } m, \text{ respectively.}\)</span> Next, we make a histogram
-using the large collection of sample taken from each population group.
-Then, what we are doing right row is sampling distribution of <span class="math inline">\(\bar{x}\)</span>.
-As a result, <span class="math inline">\(\bar{x}\)</span> follows a normal distribution with mean
-<span class="math inline">\(\mu_{\bar{x}} = \mu\)</span> and variance
-<span class="math inline">\(\sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}\)</span>, which is denoted as the
-following:
-<span class="math display">\[\bar{x} \sim N(\mu_{\bar{x}} = \mu, \text{ } \sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}).\]</span></p>
-<p>Figure <span class="math inline">\(3.1\)</span> below shows the entire procedure about the Central Limit
-Theorem.</p>
-<div class="float">
-<img src="Section3/Img3/CLT.jpg" alt="Procedure of the Central Limit Theorem" />
-<div class="figcaption">Procedure of the Central Limit Theorem</div>
-</div>
-<p>Now, let’s begin with the proper definition of Central Limit Theorem.</p>
+<div id="law-of-large-numbers" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Law of Large Numbers<a href="law-of-large-numbers.html#law-of-large-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="convergence-in-probability" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Convergence in Probability<a href="law-of-large-numbers.html#convergence-in-probability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-37" class="definition"><strong>Definition 4.1  </strong></span>Let <span class="math inline">\(X_1, X_2, ..., X_n\)</span> be independent and identically distributed
-random variables with <span class="math inline">\(E(X_i) = \mu\)</span> and <span class="math inline">\(Var(X_i) = \sigma^2 &lt; \infty\)</span>.
-Then, we define the following:
-<span class="math display">\[U_{n} = \frac{\bar{X} - \mu}{(\frac{\sigma}{\sqrt{n}})} \sim N(\mu = 0, \sigma^2 = 1), \text{ where $\bar{X} = \frac{1}{n} \sum_{i =1}^{n}X_i$.}\]</span>
-Then the distribution function of <span class="math inline">\(U_{n}\)</span> converges to the standard
-Normal distribution function as <span class="math inline">\(n \longrightarrow \infty\)</span>. That is,
-<span class="math display">\[\lim_{n\to\infty}P(U_n \le u) = \int_{\infty}^{u} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}}\,dt; \text{ for all u.}\]</span></p>
+<p><span id="def:unlabeled-div-43" class="definition"><strong>Definition 6.1  </strong></span>The sequence of random variables <span class="math inline">\(X_1, X_2, X_3, \ldots, X_n, \ldots\)</span> is
+said to <strong>converge in probability</strong> to the constant <span class="math inline">\(c\)</span>, if for every
+<span class="math inline">\(\epsilon &gt; 0\)</span>,
+<span class="math display">\[\lim_{n \to \infty} P\left( |X_n - c| \leq \epsilon \right) = 1\]</span> or
+equivalently,
+<span class="math display">\[\lim_{n \to \infty} P\left( |X_n - c| &gt; \epsilon \right) = 0\]</span></p>
+<p><strong>Notation:</strong> <span class="math inline">\(X_n \xrightarrow{P} c\)</span></p>
 </div>
-<p>For this course in particular, we do not need to pay that much attention
-to the proving part of the definition above. However, we use Central
-Limit Theorem to approximate distributions. Here are the two important
-approximations:</p>
-<ul>
-<li><p><span class="math inline">\(\bar{X_n} \approx N(\mu, \frac{\sigma^2}{n});\)</span></p></li>
-<li><p><span class="math inline">\(T = \sum_{i = 1}^{n}X_i \approx N(n\mu, n\sigma^2).\)</span></p></li>
-</ul>
-<p>A reminder that the distribution of <span class="math inline">\(U_n\)</span> in definition <span class="math inline">\(3.1\)</span> and the
-two approximation of distribution above are extremely important in this
-course, until later chapters you may see some materials that are
-similar.</p>
+<p>This concept plays a key role in the Law of Large Numbers, where the
+sample mean of independent and identically distributed random variables
+converges in probability to the population mean as the sample size
+grows.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-44" class="definition"><strong>Definition 6.2  </strong></span>Let <span class="math inline">\(X\)</span> be a random variable with finite mean <span class="math inline">\(\mu\)</span> and variance
+<span class="math inline">\(\sigma^2\)</span>. Then, for any <span class="math inline">\(k &gt; 0\)</span>,
+<span class="math display">\[P\left( |X - \mu| \geq k \right) \leq \frac{\sigma^2}{k^2}\]</span></p>
+<p><em>Using complements:</em>
+<span class="math display">\[P\left( |X - \mu| &lt; k \right) \geq 1 - \frac{\sigma^2}{k^2}\]</span></p>
+</div>
+</div>
+<div id="weak-law-of-large-numbers-wlln" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Weak Law of Large Numbers (WLLN)<a href="law-of-large-numbers.html#weak-law-of-large-numbers-wlln" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-45" class="definition"><strong>Definition 6.3  </strong></span>Let <span class="math inline">\(X_1, X_2, \ldots\)</span> be a sequence of independent and identically
+distributed random variables, each having finite mean <span class="math inline">\(E(X_i) = \mu\)</span> and
+variance <span class="math inline">\(\mathrm{Var}(X_i) = \sigma^2\)</span>. Then, for any <span class="math inline">\(\epsilon &gt; 0\)</span>,
+<span class="math display">\[P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - \mu \right| \geq \epsilon \right) \to 0 \quad \text{as } n \to \infty\]</span></p>
+<p><strong>Notation:</strong> <span class="math inline">\(\bar{X}_n \xrightarrow{P} \mu\)</span></p>
+</div>
+<div id="proof-of-the-weak-law-of-large-numbers-wlln" class="section level3 unnumbered hasAnchor">
+<h3>Proof of the Weak Law of Large Numbers (WLLN)<a href="law-of-large-numbers.html#proof-of-the-weak-law-of-large-numbers-wlln" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We aim to show that for every <span class="math inline">\(\epsilon &gt; 0\)</span>,
+<span class="math display">\[\lim_{n \to \infty} P\left( \left| \bar{X}_n - \mu \right| &gt; \epsilon \right) = 0\]</span>
+where <span class="math inline">\(\bar{X}_n\)</span> is the sample mean of <span class="math inline">\(n\)</span> independent and identically
+distributed (i.i.d.) random variables with
+<span class="math display">\[E(X_i) = \mu, \quad \text{and} \quad \mathrm{Var}(X_i) = \sigma^2.\]</span></p>
+<p>Let <span class="math display">\[\bar{X}_n = \frac{1}{n} \sum_{i=1}^{n} X_i.\]</span></p>
+<p>By the Central Limit Theorem (CLT), we know that
+<span class="math display">\[\bar{X}_n \sim \mathcal{N} \left( \mu, \frac{\sigma^2}{n} \right).\]</span></p>
+<p>Now, applying <strong>Chebyshev’s Inequality</strong>, which states that for any
+random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>,
+<span class="math display">\[P\left( |X - \mu| &gt; k \right) \leq \frac{\sigma^2}{k^2} \quad \text{for } k &gt; 0,\]</span>
+to <span class="math inline">\(\bar{X}_n\)</span>, we set <span class="math inline">\(k = \epsilon\)</span>, and obtain:
+<span class="math display">\[P\left( \left| \bar{X}_n - \mu \right| &gt; \epsilon \right) \leq \frac{\mathrm{Var}(\bar{X}_n)}{\epsilon^2} = \frac{\sigma^2 / n}{\epsilon^2} = \frac{\sigma^2}{n \epsilon^2}.\]</span></p>
+<p>Taking the limit as <span class="math inline">\(n \to \infty\)</span>, we have:
+<span class="math display">\[\lim_{n \to \infty} P\left( \left| \bar{X}_n - \mu \right| &gt; \epsilon \right) \leq \lim_{n \to \infty} \frac{\sigma^2}{n \epsilon^2} = 0.\]</span></p>
+<p>Since probabilities are always non-negative, we conclude:
+<span class="math display">\[\lim_{n \to \infty} P\left( \left| \bar{X}_n - \mu \right| &gt; \epsilon \right) = 0.\]</span></p>
+<p>By the definition of convergence in probability,
+<span class="math display">\[\bar{X}_n \xrightarrow{P} \mu.\]</span> 0◻</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-46" class="example"><strong>Example 6.1  </strong></span>Let <span class="math inline">\(X_i\)</span>, for <span class="math inline">\(i = 1, 2, 3, \ldots\)</span>, be independent Poisson random
+variables with rate parameter <span class="math inline">\(\lambda = 3\)</span>. Prove that:
+<span class="math display">\[\bar{X}_n \xrightarrow{P} 3\]</span></p>
+<p><strong>Properties of Poisson Distribution:</strong>
+<span class="math display">\[E(X_i) = \lambda, \quad \mathrm{Var}(X_i) = \lambda\]</span> In this case,
+<span class="math inline">\(\lambda = 3\)</span>, so: <span class="math display">\[E(X_i) = \mathrm{Var}(X_i) = 3\]</span></p>
+<p><strong>Proof:</strong></p>
+<p>We know:
+<span class="math display">\[E\left( \frac{X_1 + X_2 + \cdots + X_n}{n} \right) = 3, \quad \text{and} \quad
+\mathrm{Var}\left( \frac{X_1 + X_2 + \cdots + X_n}{n} \right) = \frac{3}{n}\]</span></p>
+<p>Applying Chebyshev’s Inequality:
+<span class="math display">\[P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - 3 \right| \geq \epsilon \right) \leq \frac{3}{n \epsilon^2}\]</span></p>
+<p>Taking the limit as <span class="math inline">\(n \to \infty\)</span>:
+<span class="math display">\[P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - 3 \right| \geq \epsilon \right) \to 0\]</span></p>
+<p><strong>Conclusion:</strong> <span class="math display">\[\bar{X}_n \xrightarrow{P} 3\]</span></p>
+</div>
+<div class="float">
+<embed src="Section5/images/simulation_plot.pdf" style="width:72.0%" />
+<div class="figcaption">Simulation of running sample mean of Bernoulli(<span class="math inline">\(p = 0.5\)</span>) trials over
+time.</div>
+</div>
+<p><strong>R Simulation Code (Single Sample Path):</strong></p>
+<div class="tcolorbox">
+<pre><code>n = 10
+trial = seq(1, n, by = 1)
+sample = rbinom(n, 1, 1/2)
 
+plot(trial, cumsum(sample)/trial, type = &quot;l&quot;, ylim = c(0,1), col = &quot;blue&quot;)
+points(trial, cumsum(sample)/trial, col = &quot;red&quot;)
+abline(h = 0.5, lty = 2, col = &quot;black&quot;)</code></pre>
+</div>
+<div class="float">
+<embed src="Section5/images/simulation_multi.pdf" style="width:72.0%" />
+<div class="figcaption">Simulation of 10 running sample means of Bernoulli(<span class="math inline">\(p = 0.5\)</span>) trials
+converging over 100
+trials.</div>
+</div>
+<p><strong>R Simulation Code (Multiple Sample Paths):</strong></p>
+<div class="tcolorbox">
+<pre><code>n = 100
+trial = seq(1, 100, by = 1)
+
+sample1 = rbinom(n, 1, 1/2)
+sample2 = rbinom(n, 1, 1/2)
+sample3 = rbinom(n, 1, 1/2)
+sample4 = rbinom(n, 1, 1/2)
+sample5 = rbinom(n, 1, 1/2)
+sample6 = rbinom(n, 1, 1/2)
+sample7 = rbinom(n, 1, 1/2)
+sample8 = rbinom(n, 1, 1/2)
+
+colors = rainbow(8)
+
+
+plot(trial, cumsum(sample1)/trial, type = &quot;l&quot;, col = colors[1], ylim = c(0,1))
+lines(trial, cumsum(sample2)/trial, col = colors[2])
+lines(trial, cumsum(sample3)/trial, col = colors[3])
+lines(trial, cumsum(sample4)/trial, col = colors[4])
+lines(trial, cumsum(sample5)/trial, col = colors[5])
+lines(trial, cumsum(sample6)/trial, col = colors[6])
+lines(trial, cumsum(sample7)/trial, col = colors[7])
+lines(trial, cumsum(sample8)/trial, col = colors[8])
+abline(h = 0.5, lty = 2, col = &quot;black&quot;)</code></pre>
+</div>
+</div>
+<div id="empirical-probability-insight" class="section level3 unnumbered hasAnchor">
+<h3>Empirical Probability Insight<a href="law-of-large-numbers.html#empirical-probability-insight" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Law of Large Numbers gives us empirical probabilities. Consider
+tossing a fair coin. Define the random variable <span class="math inline">\(X\)</span> as:</p>
+<p><span class="math display">\[X = \begin{cases}
+1 &amp; \text{heads up} \\
+0 &amp; \text{tails up}
+\end{cases}\]</span></p>
+<p>Then as we sample more and more values of <span class="math inline">\(X\)</span>, the sample mean
+<span class="math inline">\(\bar{X}_n\)</span> converges in probability to <span class="math inline">\(P(\text{heads up})\)</span>, that is:</p>
+<p><span class="math display">\[\bar{X}_n \xrightarrow{P} P(\text{heads up})\]</span></p>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="sampling-distributions-related-to-a-normal-population.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normal-approximation-to-the-binomial-distribution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="normal-approximation-to-the-binomial-distribution.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

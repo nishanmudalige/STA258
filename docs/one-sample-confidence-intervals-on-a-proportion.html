@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 The Central Limit Theorem | _main.knit</title>
+  <title>Chapter 9 One Sample Confidence Intervals On a Proportion | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 The Central Limit Theorem | _main.knit" />
+  <meta property="og:title" content="Chapter 9 One Sample Confidence Intervals On a Proportion | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 The Central Limit Theorem | _main.knit" />
+  <meta name="twitter:title" content="Chapter 9 One Sample Confidence Intervals On a Proportion | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sampling-distributions-related-to-a-normal-population.html"/>
-<link rel="next" href="normal-approximation-to-the-binomial-distribution.html"/>
+<link rel="prev" href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"/>
+<link rel="next" href="sample-size-selection-using-confidence-intervals.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -176,57 +176,127 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-central-limit-theorem" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> The Central Limit Theorem<a href="the-central-limit-theorem.html#the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The Central Limit Theorem (CLT) is one of the most important results in
-probability and statistics. It states that, given a sufficiently large
-sample size, the distribution of the sample mean of independent and
-identically distributed (i.i.d.) random variables approaches a normal
-distribution, regardless of the shape of the original distribution.
-Real-life Application of Central Limit Theorem in Financial Analysis.
-The CLT is often used by financial experts to examine stock market
-results.<br />
-Now, let’s discuss Central Limit Theorem with more details. Suppose we
-have a finite number of populations and each population follows a
-distribution with population mean <span class="math inline">\(\mu\)</span> and population variance
-<span class="math inline">\(\sigma^2.\)</span>. Then we take samples of same size <span class="math inline">\(n\)</span> from each population,
-such that we have <span class="math inline">\(\bar{x}_1, \bar{x}_2, ..., \bar{x}_m\)</span> from population
-group <span class="math inline">\(1 \text{ to } m, \text{ respectively.}\)</span> Next, we make a histogram
-using the large collection of sample taken from each population group.
-Then, what we are doing right row is sampling distribution of <span class="math inline">\(\bar{x}\)</span>.
-As a result, <span class="math inline">\(\bar{x}\)</span> follows a normal distribution with mean
-<span class="math inline">\(\mu_{\bar{x}} = \mu\)</span> and variance
-<span class="math inline">\(\sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}\)</span>, which is denoted as the
-following:
-<span class="math display">\[\bar{x} \sim N(\mu_{\bar{x}} = \mu, \text{ } \sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}).\]</span></p>
-<p>Figure <span class="math inline">\(3.1\)</span> below shows the entire procedure about the Central Limit
-Theorem.</p>
-<div class="float">
-<img src="Section3/Img3/CLT.jpg" alt="Procedure of the Central Limit Theorem" />
-<div class="figcaption">Procedure of the Central Limit Theorem</div>
-</div>
-<p>Now, let’s begin with the proper definition of Central Limit Theorem.</p>
+<div id="one-sample-confidence-intervals-on-a-proportion" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> One Sample Confidence Intervals On a Proportion<a href="one-sample-confidence-intervals-on-a-proportion.html#one-sample-confidence-intervals-on-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Perviously, we have introduced two types of confidence interval based on
+known and unknown variance. Moreover, confidence intervals are also
+applied to an unknown population proportion. For example, suppose we are
+interested the proportion of total number of left-handed students among
+all students who are currently studying at University of Toronto
+Mississauga. The question is: how do we know such the parameter which
+estimates the proportion of left-handed students at UTM? While, it is
+impossible to proceed it directly by counting both the total number of
+students and all left-handed students at UTM, due to the complexity and
+the total workload of that task. Then, we have to work with confidence
+intervals.<br />
+Firstly, we take a random sample of students at UTM, then we calculate
+how many students are left-handed by dividing total number of
+left-handed students in that sample with total number of students in it,
+and denote the proportion as <span class="math inline">\(\hat{p}\)</span>. Next we begin our confidence
+interval calculation to get a range of number with a certain level of
+confidence.<br />
+Now let’s begin with the proper definition of confidence interval on
+proportion.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-37" class="definition"><strong>Definition 4.1  </strong></span>Let <span class="math inline">\(X_1, X_2, ..., X_n\)</span> be independent and identically distributed
-random variables with <span class="math inline">\(E(X_i) = \mu\)</span> and <span class="math inline">\(Var(X_i) = \sigma^2 &lt; \infty\)</span>.
-Then, we define the following:
-<span class="math display">\[U_{n} = \frac{\bar{X} - \mu}{(\frac{\sigma}{\sqrt{n}})} \sim N(\mu = 0, \sigma^2 = 1), \text{ where $\bar{X} = \frac{1}{n} \sum_{i =1}^{n}X_i$.}\]</span>
-Then the distribution function of <span class="math inline">\(U_{n}\)</span> converges to the standard
-Normal distribution function as <span class="math inline">\(n \longrightarrow \infty\)</span>. That is,
-<span class="math display">\[\lim_{n\to\infty}P(U_n \le u) = \int_{\infty}^{u} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}}\,dt; \text{ for all u.}\]</span></p>
-</div>
-<p>For this course in particular, we do not need to pay that much attention
-to the proving part of the definition above. However, we use Central
-Limit Theorem to approximate distributions. Here are the two important
-approximations:</p>
+<p><span id="def:unlabeled-div-60" class="definition"><strong>Definition 9.1  </strong></span>We select a random sample of size <span class="math inline">\(n\)</span> from a population with <strong>unknown</strong>
+proportion <span class="math inline">\(p\)</span> of success. An approximate confidence interval for <strong>p</strong>
+is:
+<span class="math display">\[p = \hat{p}  \pm z_{\frac{\alpha}{2}} \cdot \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}, \text{ where $\hat{p} = \frac{\text{number of observations satisfying the criteria}}{n}$.}\]</span>
+In addition, <span class="math inline">\(n\)</span> is the sample size.<br />
+To apply this confidence interval, there are <span class="math inline">\(3\)</span> conditions that we need
+to guarantee:</p>
 <ul>
-<li><p><span class="math inline">\(\bar{X_n} \approx N(\mu, \frac{\sigma^2}{n});\)</span></p></li>
-<li><p><span class="math inline">\(T = \sum_{i = 1}^{n}X_i \approx N(n\mu, n\sigma^2).\)</span></p></li>
+<li><p><span class="math inline">\(1\)</span>. Random sample;</p></li>
+<li><p><span class="math inline">\(2\)</span>. Independent and identically distributed Bernoulli trails;</p></li>
+<li><p><span class="math inline">\(3\)</span>. We have a large chosen sample size (<span class="math inline">\(n\hat{p} \ge 10\)</span> and
+<span class="math inline">\(n(1-\hat{p}) \ge 10\)</span>).</p></li>
 </ul>
-<p>A reminder that the distribution of <span class="math inline">\(U_n\)</span> in definition <span class="math inline">\(3.1\)</span> and the
-two approximation of distribution above are extremely important in this
-course, until later chapters you may see some materials that are
-similar.</p>
+</div>
+<p>A good way to understand confidence interval is visualization. Now,
+suppose we have a valid estimation <span class="math inline">\(\hat{p}\)</span>. After the entire procedure
+of confidence interval, our population proportion (<span class="math inline">\(p\)</span>) should be as the
+following number line shows:<br />
+</p>
+<div class="center">
+
+</div>
+<p>Remember that your final answer of the range of <span class="math inline">\(p\)</span> must between <span class="math inline">\(0\)</span> and
+<span class="math inline">\(1\)</span>, since we are working with proportion.<br />
+<strong>Summary about One Sample Confidence Intervals</strong></p>
+<p>We have introduced one sample confidence interval under three different
+cases: given population variance, unknown population variance and
+unknown population proportion. All the material of one sample confidence
+interval comes from chapter <span class="math inline">\(6, 7, 8\)</span>, which seems like you to remember
+a lot. However, the reason why we give this summery is to help you to
+remember the basic skeleton of one sample confidence interval. Let’s
+revisit the three distinct types of confidence interval:</p>
+<ul>
+<li><p>Known variance:
+<span class="math inline">\(\hat{x} \pm z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}\)</span> <a href="#ch:7">(Chapter
+7)</a>.</p></li>
+<li><p>Unknown variance:
+<span class="math inline">\(\bar{x} \pm t_{\scriptscriptstyle{\alpha/2}} \cdot \frac{s}{\sqrt{n}}\)</span></p></li>
+<li><p>Proportion:
+<span class="math inline">\(\hat{p} \pm z_{\scriptscriptstyle{\alpha/2}} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span></p></li>
+</ul>
+<p>The question is: what is the similarity between the three distinct types
+of confidence interval? You may have already noticed that the confidence
+intervals above are all follow such a skeleton that <span class="math inline">\(\bar{x}\)</span> plus or
+minus its margin of error (different between each type of C.I.).<br />
+If we keep questioning ourselves that how the margin of error comes
+from, you will catch the pattern. The margin of error contains reference
+distribution and the standard deviation of <span class="math inline">\(\bar{x}\)</span> under its reference
+distribution. Let’s analyze each type of confidence interval to prove my
+statement is true:<br />
+The first type (given population variance) confidence interval is quite
+easy to recognize. Recall chapter <span class="math inline">\(3\)</span>: The Central Limit Theorem, we
+state that <span class="math inline">\(\bar{x} \sim N(\mu, \frac{\sigma^2}{n})\)</span>, which is how
+reference distribution comes from with given population variance. To get
+the standard deviation of <span class="math inline">\(\bar{x}\)</span>, we simply take the square root of
+the variance, then <span class="math inline">\(s_{\bar{x}} = \frac{\sigma}{\sqrt{n}}\)</span>. Finally, we
+multiply reference distribution at the point <span class="math inline">\(\frac{\alpha}{2}\)</span> with the
+standard deviation of <span class="math inline">\(\bar{x}\)</span> under normal distribution to get the
+margin of error.<br />
+The second type (unknown population variance) confidence interval is
+similar to the first type, but the reference distribution is
+t-distribution instead of normal distribution. In chapter <span class="math inline">\(7\)</span>, we
+introduced the calculation of sample variance (<span class="math inline">\(s^2\)</span>) to estimate
+population variance (<span class="math inline">\(\sigma^2\)</span>), and <span class="math inline">\(s^2\)</span> is an unbiased estimator of
+<span class="math inline">\(\sigma^2\)</span> (the proof of this statement is in STA260, in this course we
+can assume it freely). In chapter <span class="math inline">\(2\)</span>, we defined that
+<span class="math inline">\(T = \frac{\bar{x} - \mu}{(\frac{s}{\sqrt{n}})} \sim t_{n-1},\)</span> then the
+term <span class="math inline">\(\frac{s}{\sqrt{n}}\)</span> (verify this by yourself as an extra exercise)
+is the standard deviation of <span class="math inline">\(\bar{x}\)</span> under t-distribution with <span class="math inline">\(n-1\)</span>
+degrees of freedom. Finally, we multiply multiply reference distribution
+at the point <span class="math inline">\(\frac{\alpha}{2}\)</span> with the standard deviation of <span class="math inline">\(\bar{x}\)</span>
+under t-distribution to get the margin of error.<br />
+The third type (estimate population proportion) confidence interval is
+slightly harder to identify. Recall chapter <span class="math inline">\(4\)</span> that we can approximate
+binomial distribution by normal distribution. Suppose that a random
+variable <span class="math inline">\(X \sim Binomial(n,p)\)</span>, then the random variable
+<span class="math inline">\(X \sim N(np, np(1-p)).\)</span> From chapter <span class="math inline">\(4\)</span>, we know that
+<span class="math inline">\(\hat{p} \sim N(\mu_{\hat{p}} = p, \sigma_{\hat{p}}^{2} = \frac{p(1-p)}{n})\)</span>.
+Trivially, the standard deviation of <span class="math inline">\(\hat{p}\)</span> is
+<span class="math inline">\(\sqrt{\frac{p(1-p)}{n}}\)</span>, since we don’t know the value <span class="math inline">\(p\)</span> and use
+<span class="math inline">\(\hat{p}\)</span> to estimate that. Then, standard deviation of <span class="math inline">\(\hat{p}\)</span> is
+<span class="math inline">\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span>. Finally, by multiplying the
+reference distribution and standard deviation, we get the margin of
+error of the confidence interval.<br />
+<strong>Conclusion About One Sample Confidence Intervals</strong></p>
+<p>If you follow the skeleton below, one sample confidence interval will
+become easier:</p>
+<ul>
+<li><p>1. Identify what type of one sample confidence interval to use from
+given information;</p></li>
+<li><p>2. Construct your confidence interval that fits the circumstance
+which you are facing, it either going to be
+<span class="math inline">\(\bar{x}  \pm M.E.(\bar{x})\text{ or } \hat{p}  \pm M.E.(\hat{p});\)</span></p></li>
+<li><p>3. Check the validity of your final answer. For example, the range of
+<span class="math inline">\(p\)</span> must between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>.</p></li>
+<li><p>4. Clearly state your final conclusion: we have a certain percentage
+of confidence to guarantee that the value of the chosen sample is
+between its lower bound and upper bound.</p></li>
+</ul>
 
 </div>
             </section>
@@ -234,8 +304,8 @@ similar.</p>
           </div>
         </div>
       </div>
-<a href="sampling-distributions-related-to-a-normal-population.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normal-approximation-to-the-binomial-distribution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sample-size-selection-using-confidence-intervals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

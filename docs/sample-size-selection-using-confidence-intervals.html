@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 The Central Limit Theorem | _main.knit</title>
+  <title>Chapter 10 Sample Size Selection using Confidence Intervals | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 The Central Limit Theorem | _main.knit" />
+  <meta property="og:title" content="Chapter 10 Sample Size Selection using Confidence Intervals | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 The Central Limit Theorem | _main.knit" />
+  <meta name="twitter:title" content="Chapter 10 Sample Size Selection using Confidence Intervals | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="sampling-distributions-related-to-a-normal-population.html"/>
-<link rel="next" href="normal-approximation-to-the-binomial-distribution.html"/>
+<link rel="prev" href="one-sample-confidence-intervals-on-a-proportion.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -176,66 +176,183 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-central-limit-theorem" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> The Central Limit Theorem<a href="the-central-limit-theorem.html#the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The Central Limit Theorem (CLT) is one of the most important results in
-probability and statistics. It states that, given a sufficiently large
-sample size, the distribution of the sample mean of independent and
-identically distributed (i.i.d.) random variables approaches a normal
-distribution, regardless of the shape of the original distribution.
-Real-life Application of Central Limit Theorem in Financial Analysis.
-The CLT is often used by financial experts to examine stock market
-results.<br />
-Now, let’s discuss Central Limit Theorem with more details. Suppose we
-have a finite number of populations and each population follows a
-distribution with population mean <span class="math inline">\(\mu\)</span> and population variance
-<span class="math inline">\(\sigma^2.\)</span>. Then we take samples of same size <span class="math inline">\(n\)</span> from each population,
-such that we have <span class="math inline">\(\bar{x}_1, \bar{x}_2, ..., \bar{x}_m\)</span> from population
-group <span class="math inline">\(1 \text{ to } m, \text{ respectively.}\)</span> Next, we make a histogram
-using the large collection of sample taken from each population group.
-Then, what we are doing right row is sampling distribution of <span class="math inline">\(\bar{x}\)</span>.
-As a result, <span class="math inline">\(\bar{x}\)</span> follows a normal distribution with mean
-<span class="math inline">\(\mu_{\bar{x}} = \mu\)</span> and variance
-<span class="math inline">\(\sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}\)</span>, which is denoted as the
-following:
-<span class="math display">\[\bar{x} \sim N(\mu_{\bar{x}} = \mu, \text{ } \sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}).\]</span></p>
-<p>Figure <span class="math inline">\(3.1\)</span> below shows the entire procedure about the Central Limit
-Theorem.</p>
-<div class="float">
-<img src="Section3/Img3/CLT.jpg" alt="Procedure of the Central Limit Theorem" />
-<div class="figcaption">Procedure of the Central Limit Theorem</div>
-</div>
-<p>Now, let’s begin with the proper definition of Central Limit Theorem.</p>
-<div class="definition">
-<p><span id="def:unlabeled-div-37" class="definition"><strong>Definition 4.1  </strong></span>Let <span class="math inline">\(X_1, X_2, ..., X_n\)</span> be independent and identically distributed
-random variables with <span class="math inline">\(E(X_i) = \mu\)</span> and <span class="math inline">\(Var(X_i) = \sigma^2 &lt; \infty\)</span>.
-Then, we define the following:
-<span class="math display">\[U_{n} = \frac{\bar{X} - \mu}{(\frac{\sigma}{\sqrt{n}})} \sim N(\mu = 0, \sigma^2 = 1), \text{ where $\bar{X} = \frac{1}{n} \sum_{i =1}^{n}X_i$.}\]</span>
-Then the distribution function of <span class="math inline">\(U_{n}\)</span> converges to the standard
-Normal distribution function as <span class="math inline">\(n \longrightarrow \infty\)</span>. That is,
-<span class="math display">\[\lim_{n\to\infty}P(U_n \le u) = \int_{\infty}^{u} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}}\,dt; \text{ for all u.}\]</span></p>
-</div>
-<p>For this course in particular, we do not need to pay that much attention
-to the proving part of the definition above. However, we use Central
-Limit Theorem to approximate distributions. Here are the two important
-approximations:</p>
+<div id="sample-size-selection-using-confidence-intervals" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Sample Size Selection using Confidence Intervals<a href="sample-size-selection-using-confidence-intervals.html#sample-size-selection-using-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this section we will examine techniques to calculate the minimum
+sample size required to obtain a confidence interval to be within a
+specified margin of error. Recall the one-sample confidence intervals we
+have constructed for a population mean <span class="math inline">\(\mu\)</span> are</p>
+<p><span class="math display">\[\begin{aligned}
+{3}
+    &amp; \bar{x} \, \pm \, z_{\alpha/2} \frac{\sigma}{\sqrt{n}}    &amp;&amp; \quad \text{(When } \sigma \text{ is known)} \\[1.0em]
+    &amp; \bar{x} \, \pm \, t_{\alpha/2, n-1} \frac{s}{\sqrt{n}}        &amp;&amp; \quad    \text{(When } \sigma \text{ is not known)}
+\end{aligned}\]</span></p>
+<p>and the one-sample confidence interval for a proportion is</p>
+<p><span class="math display">\[\hat p \pm z_{\alpha/2} \sqrt{\frac{\hat p(1-\hat p)}{n}}\]</span></p>
+<div id="empirical-rule" class="section level3 hasAnchor" number="10.0.1">
+<h3><span class="header-section-number">10.0.1</span> Empirical Rule<a href="sample-size-selection-using-confidence-intervals.html#empirical-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For any sample from a population that is close to Normally distributed:</p>
 <ul>
-<li><p><span class="math inline">\(\bar{X_n} \approx N(\mu, \frac{\sigma^2}{n});\)</span></p></li>
-<li><p><span class="math inline">\(T = \sum_{i = 1}^{n}X_i \approx N(n\mu, n\sigma^2).\)</span></p></li>
+<li><p>about 68% of all observations will lie in the interval
+<span class="math inline">\(\mu \pm \sigma\)</span></p></li>
+<li><p>about 95% of all observations will lie in the interval
+<span class="math inline">\(\mu \pm 2\sigma\)</span></p></li>
+<li><p>about 99.7% of all observations will lie in the interval
+<span class="math inline">\(\mu \pm 3\sigma\)</span></p></li>
 </ul>
-<p>A reminder that the distribution of <span class="math inline">\(U_n\)</span> in definition <span class="math inline">\(3.1\)</span> and the
-two approximation of distribution above are extremely important in this
-course, until later chapters you may see some materials that are
-similar.</p>
+<p>This suggests that for a sample drawn from a population that is
+approximately to Normally distributed, we can approximate the standard
+deviation using</p>
+<p><span class="math display">\[\hat{\sigma} \approx \frac{\text{Sample Range}}{4}.\]</span></p>
+</div>
+<div id="secSampleSizeCIMean" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Calculating Sample Size for a Confidence Interval on a Mean<a href="sample-size-selection-using-confidence-intervals.html#secSampleSizeCIMean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will examine how to calculate the minimum sample size <span class="math inline">\(n\)</span> for a
+confidence interval on a mean for a margin of error <span class="math inline">\(E\)</span> at confidence
+level <span class="math inline">\(1-\alpha\)</span>.</p>
+<div id="when-sigma-is-known" class="section level3 unnumbered hasAnchor">
+<h3>When <span class="math inline">\(\sigma\)</span> is Known<a href="sample-size-selection-using-confidence-intervals.html#when-sigma-is-known" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a desired margin of error <span class="math inline">\(E\)</span> and confidence level <span class="math inline">\(1-\alpha\)</span>:
+<span class="math display">\[E = z_{\alpha/2}\,\frac{\sigma}{\sqrt{n}}\]</span></p>
+<p>We can rearrange <span class="math inline">\(E\)</span> to calculate the sample size using
+<span class="math display">\[n = \left( \frac{z_{\alpha/2}\,\sigma}{E} \right)^2\]</span> where <span class="math inline">\(n\)</span> is
+always <em>rounded up</em> to the next integer.<br />
+</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-61" class="example"><strong>Example 10.1  </strong></span><span id="exSampleSizePharmaceutical" label="exSampleSizePharmaceutical"></span></p>
+<p>A manufacturer of pharmaceutical products analyzes a specimen from each
+batch of a product to verify the concentration of the active ingredient.
+The chemical analysis is not perfectly precise. Repeated measurements on
+the same specimen give slightly different results. Suppose we know that
+the results of repeated measurements follow a Normal distribution with
+mean <span class="math inline">\(\mu\)</span> equal to the true concentration and standard deviation
+<span class="math inline">\(\sigma = 0.0068\)</span> grams per liter. (That the mean of the population of
+all measurements is the true concentration says that the measurements
+process has no bias. The standard deviation describes the precision of
+the measurement.) The laboratory analyzes each specimen <span class="math inline">\(n\)</span> times and
+reports the mean result.<br />
+Management asks the laboratory to produce results accurate to within
+<span class="math inline">\(\pm 0.005\)</span> with 95% confidence. How many measurements must be averaged
+to comply with this request?</p>
+<p><span class="math display">\[n = \left( \displaystyle \frac{z_{0.025}\,\sigma}{E} \right)^2
+    = \Bigl(\frac{1.96 \times 0.0068}{0.005}\Bigr)^2
+    \approx 7.1\]</span> Since the sample size should be a whole number, we
+round our result up to <span class="math inline">\(n=8\)</span> measurements.</p>
+</div>
+<p>In Example
+<a href="sample-size-selection-using-confidence-intervals.html#exSampleSizePharmaceutical" reference-type="ref" reference="exSampleSizePharmaceutical"><span class="math display">\[exSampleSizePharmaceutical\]</span></a>, we note that 7 measurements
+will give a slightly larger margin of error than desired, and 8
+measurements a slightly smaller margin of error, the lab must take 8
+measurements on each specimen to meet management’s demand. Always round
+up to the next higher whole number when finding <span class="math inline">\(n\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-62" class="example"><strong>Example 10.2  </strong></span>Planning value <span class="math inline">\(\sigma=22.50\)</span>, desired margin <span class="math inline">\(E=2\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><p>90% confidence, <span class="math inline">\(z_{0.05}=1.65\)</span>:
+<span class="math display">\[n = \Bigl(\frac{1.65 \times 22.50}{2}\Bigr)^2
+      \approx 344.6
+    \quad\Longrightarrow\quad n = 345.\]</span></p></li>
+<li><p>95% confidence, <span class="math inline">\(z_{0.025}=1.96\)</span>:
+<span class="math display">\[n = \Bigl(\frac{1.96 \times 22.50}{2}\Bigr)^2
+      \approx 486.2
+    \quad\Longrightarrow\quad n = 487.\]</span></p></li>
+<li><p>99% confidence, <span class="math inline">\(z_{0.005}=2.58\)</span>:
+<span class="math display">\[n = \Bigl(\frac{2.58 \times 22.50}{2}\Bigr)^2
+      \approx 842.5
+    \quad\Longrightarrow\quad n = 843.\]</span></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="calculating-sample-size-for-a-confidence-interval-on-a-proportion" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Calculating Sample Size for a Confidence Interval on a Proportion<a href="sample-size-selection-using-confidence-intervals.html#calculating-sample-size-for-a-confidence-interval-on-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will examine how to calculate the minimum sample size <span class="math inline">\(n\)</span> for a
+confidence interval on a proportion for a margin of error <span class="math inline">\(E\)</span> at
+confidence level <span class="math inline">\(1-\alpha\)</span>. For sample of size <span class="math inline">\(n\)</span> with unknown
+population proportion <span class="math inline">\(p\)</span>:
+<span class="math display">\[\hat p \pm z^* \sqrt{ \displaystyle \frac{\hat p(1-\hat p)}{n}}.\]</span>
+where the margin of error is
+<span class="math display">\[E=z^*\sqrt{ \displaystyle \frac{p^*(1-p^*)}{n}}\]</span> we can rearrange <span class="math inline">\(E\)</span>
+to calculate the sample size using
+<span class="math display">\[n = \left( \displaystyle \frac{z^*}{E} \right)^2\,p^*(1-p^*),\]</span> where
+<span class="math inline">\(p^*\)</span> can be a <em>planning value</em>, which is value obtained from prior
+information such as a pilot study. If we do not have any prior
+information on <span class="math inline">\(p^*\)</span>, we can use <span class="math inline">\(p^* = 0.5\)</span> which is the conservative
+value that maximizes the product <span class="math inline">\(p^*(1-p^*)\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-63" class="example"><strong>Example 10.3  </strong></span>Aisha Shariff and Yvette Ye are the candidates for mayor in a large
+city. You are planning a sample survey to determine what percent of the
+voters plan to vote for Shariff. This is a population proportion <span class="math inline">\(p\)</span>.
+You will contact an SRS of registered voters in the city. You want to
+estimate <span class="math inline">\(p\)</span> with 95% confidence and a margin of error no greater than
+3%, or 0.03. How large a sample do you need?<br />
+For a 95% CI on <span class="math inline">\(p\)</span>: <span class="math inline">\(z_{0.025} = 1.96\)</span>. Margin of error = 0.03. Since
+no information on a good estimate of <span class="math inline">\(p\)</span>, use <span class="math inline">\(p^{*} = 0.5\)</span>.</p>
+<p><span class="math display">\[1.96 \sqrt{\frac{(0.5)(1 - 0.5)}{n}} \le 0.03
+\quad\Longrightarrow\quad
+n = \left(\frac{1.96}{0.03}\right)^{2} (0.5)(0.5) \approx 1067.1.\]</span>
+Round up: <span class="math display">\[n = 1068.\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-64" class="example"><strong>Example 10.4  </strong></span>The percentage of people not covered by health care insurance in 2007 in
+the USA was 15.6%. A congressional committee has been charged with
+conducting a sample survey to obtain more current information.</p>
+<ol style="list-style-type: decimal">
+<li><p>What sample size would you recommend if the committee’s goal is to
+estimate the current proportion of individuals without health care
+insurance with a margin of error of 0.03? Use a 95% confidence
+level.</p></li>
+<li><p>Repeat part (a) using a 99% confidence level.</p></li>
+</ol>
+<p><span class="math display">\[\text{(a) } n
+=
+\left(\frac{z^{*}}{E}\right)^{2}
+p^{*}(1-p^{*}),
+\quad z^{*} = 1.96, \; E = 0.03,\; p^{*} = 0.156.\]</span> <span class="math display">\[n
+=
+\left(\frac{1.96}{0.03}\right)^{2}
+(0.156)(1 - 0.156)
+\approx 563.\]</span></p>
+<p><span class="math display">\[\text{(b) } n
+=
+\left(\frac{2.58}{0.03}\right)^{2}
+(0.156)(1 - 0.156)
+\approx 974.\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-65" class="example"><strong>Example 10.5  </strong></span>A consumer advocacy group would like to find the proportion of consumers
+who bought the newest generation of iPhone and were happy with their
+purchase. How large a sample should they take to estimate <span class="math inline">\(p\)</span> with 2%
+margin of error and 90% confidence?</p>
+<p><strong>Parameters:</strong> <span class="math display">\[\begin{aligned}
+E &amp;= 0.02, \quad\text{(margin of error)}\\
+\text{Confidence level} &amp;= 0.90 \;\Longrightarrow\; \alpha = 0.10,\;\alpha/2 = 0.05,\\
+z^{*} &amp;= z_{0.05} = 1.645,\\
+p^{*} &amp;= 0.5,\quad p^{*}(1 - p^{*}) = 0.5 \times 0.5 = 0.25.
+\end{aligned}\]</span></p>
+<p><strong>Sample‐Size Formula:</strong>
+<span class="math display">\[n \;=\; \left(\frac{z^{*}}{E}\right)^{2}\;p^{*}(1 - p^{*}).\]</span></p>
+<p>Substituting <span class="math inline">\(z^{*} = 1.645\)</span>, <span class="math inline">\(E = 0.02\)</span>, and <span class="math inline">\(p^{*}(1 - p^{*}) = 0.25\)</span>:
+<span class="math display">\[\begin{aligned}
+n
+&amp;= \left(\frac{1.645}{0.02}\right)^{2} \times 0.25
+= \bigl(82.25\bigr)^{2} \times 0.25
+= 6{,}764.0625 \times 0.25 \\[0.5em]
+&amp;= 1{,}691.015625.
+\end{aligned}\]</span></p>
+<p>Since <span class="math inline">\(n\)</span> must be a whole number and we always round up to ensure the
+margin of error is at most <span class="math inline">\(2\%\)</span>, we take <span class="math display">\[n = 1{,}692.\]</span></p>
+</div>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="sampling-distributions-related-to-a-normal-population.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normal-approximation-to-the-binomial-distribution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="one-sample-confidence-intervals-on-a-proportion.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
