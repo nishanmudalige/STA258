@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 12 One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown | _main.knit</title>
+  <title>Chapter 4 One Sample Hypothesis Test on a Proportion and Variance | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 12 One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown | _main.knit" />
+  <meta property="og:title" content="Chapter 4 One Sample Hypothesis Test on a Proportion and Variance | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 12 One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown | _main.knit" />
+  <meta name="twitter:title" content="Chapter 4 One Sample Hypothesis Test on a Proportion and Variance | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"/>
-<link rel="next" href="one-sample-confidence-intervals-on-a-proportion.html"/>
+<link rel="prev" href="ch:intro-hypothesis.html"/>
+<link rel="next" href="statistical-power.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -229,348 +229,134 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">Chapter 12</span> One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="cis-for-mu" class="section level2 hasAnchor" number="12.1">
-<h2><span class="header-section-number">12.1</span> CIs for <span class="math inline">\(\mu\)</span><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#cis-for-mu" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="one-sample-hypothesis-test-on-a-proportion-and-variance" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> One Sample Hypothesis Test on a Proportion and Variance<a href="one-sample-hypothesis-test-on-a-proportion-and-variance.html#one-sample-hypothesis-test-on-a-proportion-and-variance" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Inferential statistics is a powerful method for statistical analysis,
+because it allows people to analyze a lot parameters. Similarly to
+confidence interval, testing hypothesis can be applied to proportion and
+variance as well. Also, we use the exact same structure for one sample
+hypothesis test on a proportion and variance.</p>
+<div id="one-sample-hypothesis-test-on-a-proportion" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> One Sample Hypothesis Test on a Proportion<a href="one-sample-hypothesis-test-on-a-proportion-and-variance.html#one-sample-hypothesis-test-on-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Suppose we have assume the proportion of a criteria from a population
+<span class="math inline">\(p\)</span> is equal to our parameter <span class="math inline">\(p_0\)</span> (null hypothesis <span class="math inline">\(H_0: p = p_0\)</span>).
+While, the question is: how do we know whether our assumption is correct
+or not? We need to use testing hypothesis on proportion to verify.<br />
+<strong>Step 1. Stating the Structure of Testing Hypothesis</strong></p>
+<p>First of all, let’s proceed with a table to see all the cases:</p>
+<div class="center">
+<figure>
+<table>
+<tbody>
+<tr>
+<td style="text-align: center;">
+Cases
+</td>
+<td style="text-align: center;">
+Null Hypothesis
+</td>
+<td style="text-align: center;">
+Alternative Hypothesis
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+1
+</td>
+<td style="text-align: center;">
+<span class="math inline"><em>H</em><sub>0</sub> : <em>p</em> = <em>p</em><sub>0</sub></span>
+</td>
+<td style="text-align: center;">
+<span class="math inline"><em>H</em><sub><em>a</em></sub> : <em>p</em> &gt; <em>p</em><sub>0</sub></span>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+2
+</td>
+<td style="text-align: center;">
+<span class="math inline"><em>H</em><sub>0</sub> : <em>p</em> = <em>p</em><sub>0</sub></span>
+</td>
+<td style="text-align: center;">
+<span class="math inline"><em>H</em><sub><em>a</em></sub> : <em>p</em> &lt; <em>p</em><sub>0</sub></span>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+3
+</td>
+<td style="text-align: center;">
+<span class="math inline"><em>H</em><sub>0</sub> : <em>p</em> = <em>p</em><sub>0</sub></span>
+</td>
+<td style="text-align: center;">
+<span class="math inline"><em>H</em><sub><em>a</em></sub> : <em>p</em> ≠ <em>p</em><sub>0</sub></span>
+</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+All possible cases of one sample hypothesis test on a
+proportion (<span class="math inline"><em>p</em></span> represents the
+actual proportion of a population)
+</figcaption>
+</figure>
+</div>
+<p>We are not going to proceed with all three cases in a single question.
+You need to be able to identify which case of testing hypothesis are
+going to be applied from question.<br />
+<strong>Step 2. Computing Test Statistics</strong></p>
+<p>After that we need to compute our test statistics, as the following
+definition provides:</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-93" class="definition"><strong>Definition 12.1  </strong></span>Let <span class="math inline">\(\mu\)</span> be the population mean. When the population standard deviation
-<span class="math inline">\(\sigma\)</span> is known and the sample size is large, a confidence interval
-for <span class="math inline">\(\mu\)</span> is given by:
-<span class="math display">\[\bar{Y} \pm z_{\alpha/2} \left( \frac{\sigma}{\sqrt{n}} \right)\]</span> This
-interval is valid under the following conditions:</p>
-<ul>
-<li><p>The sample is random.</p></li>
-<li><p>The observations are independent and identically distributed (i.i.d).</p></li>
-<li><p>The sample size <span class="math inline">\(n\)</span> is large enough for the Central Limit Theorem
-(CLT) to apply.</p></li>
-</ul>
+<p><span id="def:unlabeled-div-51" class="definition"><strong>Definition 4.1  </strong></span>The test statistics of one sample hypothesis test on a proportion is
+given by:
+<span class="math display">\[Z^* = \frac{\hat{p} - p_{\text{\scriptsize$0$}}}{\sqrt{\frac{p_{\text{\scriptsize$0$}}(1-p_{\text{\scriptsize$0$}})}{n}}}.\]</span>
+In this case, <span class="math inline">\(n\)</span> means the sample size, <span class="math inline">\(\hat{p}\)</span> is the parameter of
+the proportion of the population, which is calculated by
+<span class="math inline">\(\hat{p} = \frac{\text{number of successes in the sample}}{n}\)</span>. Also,
+the reference distribution is standard normal distribution: <span class="math inline">\(N(0,1)\)</span>.</p>
 </div>
-<div class="definition">
-<p><span id="def:unlabeled-div-94" class="definition"><strong>Definition 12.2  </strong></span>Let <span class="math inline">\(\mu\)</span> be the population mean. When the population standard deviation
-is unknown and the sample size is small, a confidence interval for <span class="math inline">\(\mu\)</span>
-is given by:
-<span class="math display">\[\bar{Y} \pm t_{\alpha/2} \left( \frac{S}{\sqrt{n}} \right), \quad \nu = n - 1\]</span>
-This interval is valid under the following conditions:</p>
-<ul>
-<li><p>The observations are independent and identically distributed (i.i.d).</p></li>
-<li><p>The sample is random.</p></li>
-<li><p>The population <strong>must</strong> follow a Normal distribution (CLT does not
-apply).</p></li>
-</ul>
-</div>
-<div id="independence-assumption" class="section level3 unnumbered hasAnchor">
-<h3>Independence Assumption<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#independence-assumption" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The data values should be independent. There’s really no way to check
-independence of the data by looking at the sample, but we should think
-about whether the assumption is reasonable.</p>
-</div>
-<div id="randomization-condition" class="section level3 unnumbered hasAnchor">
-<h3>Randomization Condition<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#randomization-condition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The data arise from a random sample or suitably randomized experiment.
-Randomly sampled data — especially data from a Simple Random Sample
-— are ideal.</p>
-<div class="tcolorbox">
-<ul>
-<li><p>For very small samples (<span class="math inline">\(n &lt; 15\)</span> or so), the data should follow a
-Normal model pretty closely. If you do find outliers or strong
-skewness, don’t use this method.</p></li>
-<li><p>For moderate samples (<span class="math inline">\(n\)</span> between 15 and 40 or so), the t-method will
-work well as long as the data is unimodal and reasonably symmetric.
-Make a histogram, boxplot, or Q–Q plot to check.</p></li>
-<li><p>When the sample size is larger than 40 or 50, the t-method is safe to
-use unless the data are extremely skewed. Make a histogram, boxplot,
-or Q–Q plot to check.</p></li>
-</ul>
-</div>
-</div>
-<div id="standard-error" class="section level3 unnumbered hasAnchor">
-<h3>Standard Error<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#standard-error" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When the standard deviation of a statistic is estimated from data, the
-result is called the <em>standard error</em> of the statistic. The standard
-error of the sample mean <span class="math inline">\(\bar{x}\)</span> is <span class="math display">\[\frac{s}{\sqrt{n}}.\]</span></p>
-<div class="tcolorbox">
-<ul>
-<li><p>The density curves of the <em>t</em> distributions are similar in shape to
-the Standard Normal curve. They are symmetric about 0, single-peaked,
-and bell-shaped.</p></li>
-<li><p>The spread of the <em>t</em> distributions is a bit greater than that of the
-Standard Normal distribution. The <em>t</em> distributions have more
-probability in the tails and less in the center than the Standard
-Normal. This is because substituting the estimate <span class="math inline">\(s\)</span> for the fixed
-parameter <span class="math inline">\(\sigma\)</span> introduces more variation into the statistic.</p></li>
-<li><p>As the degrees of freedom increase, the <em>t</em> density curve approaches
-the <span class="math inline">\(N(0, 1)\)</span> curve more closely. This happens because <span class="math inline">\(s\)</span> estimates
-<span class="math inline">\(\sigma\)</span> more accurately as the sample size increases. So using <span class="math inline">\(s\)</span> in
-place of <span class="math inline">\(\sigma\)</span> causes little extra variation when the sample is
-large.</p></li>
-</ul>
-</div>
-<div class="float" id="fig:density-curves">
-<embed src="section7/images/density_curves.pdf" style="width:80.0%" />
-<div class="figcaption">Comparison of the standard normal distribution and t-distributions
-with 2 and 9 degrees of
-freedom.</div>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-95" class="example"><strong>Example 12.1  </strong></span>The composition of the Earth’s atmosphere may have changed over time. To
-study the nature of the atmosphere long ago, scientists examined the gas
-in air bubbles trapped in ancient amber. Amber is fossilized tree resin
-that preserved the atmospheric gases at the time it was formed.</p>
-<p>Measurements on amber specimens from the late Cretaceous era (75 to 95
-million years ago) give the following percent values of nitrogen:</p>
+<p>Note that be careful while you are computing the test statistics,
+because it directly affects the final answer.<br />
+<strong>Step 3. Finding the <span class="math inline">\(p\)</span> - value</strong></p>
+<p>i. When is structure of testing hypothesis is <span class="math inline">\(H_0: p = p_0\)</span>,
+<span class="math inline">\(H_a: p &gt; p_0\)</span>:</p>
 <div class="center">
-<p>63.4, 65.0, 64.4, 63.3, 54.8, 64.5, 60.8, 49.1, 51.0</p>
-</div>
-<p>Assume these observations are a simple random sample (SRS) from the
-population of all ancient air bubbles. Construct a <strong>90% confidence
-interval</strong> to estimate the mean percent of nitrogen in ancient air.
-(Today’s atmosphere contains about 78.1% nitrogen.)</p>
-<p><strong>Solution:</strong></p>
-<p>Let <span class="math inline">\(\mu\)</span> represent the true mean percent of nitrogen in ancient air. We
-compute a 90% confidence interval for <span class="math inline">\(\mu\)</span> using the sample data.</p>
-<p>Given:
-<span class="math display">\[\bar{x} = 59.5888, \quad s = 6.2552, \quad n = 9, \quad t^* = 1.860 \quad (\text{df} = 8)\]</span></p>
-<p><span class="math display">\[59.5888 \pm 1.860 \left( \frac{6.2552}{\sqrt{9}} \right) = 59.5888 \pm 3.8782\]</span></p>
-<p><span class="math display">\[\boxed{55.7106 \text{ to } 63.4670}\]</span></p>
-<p><strong>R code:</strong></p>
-<div class="tcolorbox">
-<pre><code># Step 1: Entering the data
-nitrogen &lt;- c(63.4, 65.0, 64.4, 63.3, 54.8, 64.5, 60.8, 49.1, 51.0)
 
-# Step 2: Constructing the 90% confidence interval
-t.test(nitrogen, conf.level = 0.90)</code></pre>
 </div>
-<p><strong>R output:</strong></p>
-<div class="tcolorbox">
-<pre><code>One Sample t-test
-
-data:  nitrogen
-t = 28.578, df = 8, p-value = 2.43e-09
-alternative hypothesis: true mean is not equal to 0
-90 percent confidence interval:
- 55.71155 63.46622
-sample estimates:
-mean of x 
-  59.58889 </code></pre>
-</div>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-96" class="example"><strong>Example 12.2  </strong></span>Most owners of digital cameras store their pictures on the camera. Some
-will eventually download these to a computer or print them using their
-own printers or a commercial printer. A film-processing company wanted
-to know how many pictures were stored on cameras.</p>
-<p>A random sample of 10 digital camera owners produced the following data:</p>
+<p>In case (i), calculating <span class="math inline">\(P[Z &gt; Z_*]\)</span> as your p-value. Then, comparing
+with significant level: <span class="math inline">\(\alpha\)</span>.</p>
+<p>ii. When is structure of testing hypothesis is <span class="math inline">\(H_0: p = p_0\)</span>,
+<span class="math inline">\(H_a: p &lt; p_0\)</span>:</p>
 <div class="center">
-<p>25, 6, 22, 26, 31, 18, 13, 20, 14, 2</p>
+
 </div>
-<p>Estimate with <strong>95% confidence</strong> the mean number of pictures stored on
-digital cameras.</p>
-<hr />
-<p><strong>Solution:</strong></p>
-<p>We are given raw data with <span class="math inline">\(n = 10\)</span> and no information about the
-population standard deviation, so we construct a confidence interval for
-the population mean using the t-distribution.</p>
-<p><strong>Step 1: Compute sample statistics</strong></p>
+<p>In case (ii), calculating <span class="math inline">\(P[Z &lt; Z_*]\)</span> as your p-value. Then, comparing
+with significant level: <span class="math inline">\(\alpha\)</span>.</p>
+<p>iii. When is structure of testing hypothesis is <span class="math inline">\(H_0: p = p_0\)</span>,
+<span class="math inline">\(H_a: p \neq p_0\)</span>:</p>
+<div class="center">
+
+</div>
+<p>In case (iii), calculating <span class="math inline">\(2\cdot P[Z &gt; |Z_*|]\)</span> as your p-value. Then,
+comparing with significant level: <span class="math inline">\(\alpha\)</span>.<br />
+<strong>Step 4: Comparing P-value with <span class="math inline">\(\alpha\)</span>-level</strong></p>
+<p>If p-value is less than <span class="math inline">\(\alpha\)</span>-level, then we reject the null
+hypothesis (<span class="math inline">\(H_0\)</span>) and accept the alternative hypothesis (<span class="math inline">\(H_a\)</span>).
+Otherwise, If p-value is greater than <span class="math inline">\(\alpha\)</span>-level, then we do not
+reject the null hypothesis (<span class="math inline">\(H_0\)</span>) and reject the alternative hypothesis
+(<span class="math inline">\(H_a\)</span>).<br />
+<strong>Step 5: Final Conclusion</strong> If we reject the null hypothesis, then we
+conclude that: there is sufficient evidence to reject the null
+hypothesis. If we do not reject the null hypothesis, then we conclude
+that: there is insufficient evidence to reject the null hypothesis.<br />
+<strong>Conditions on One Sample Test Hypothesis on a Proportion</strong></p>
 <ul>
-<li><p>Sample mean: <span class="math inline">\(\bar{x} = \dfrac{177}{10} = 17.7\)</span></p></li>
-<li><p>Sample variance (method 1 – direct):
-<span class="math display">\[s^2 = \dfrac{\sum (x_i - \bar{x})^2}{n - 1} = \dfrac{742}{9} = 82.4556\]</span></p></li>
-<li><p>Sample standard deviation: <span class="math display">\[s = \sqrt{82.4556} = 9.081\]</span></p></li>
+<li><p>1. Random sample;</p></li>
+<li><p>2. Independent sample: each observations are independent to others;</p></li>
+<li><p>3. Sufficient sample.</p></li>
 </ul>
-<p><strong>Step 2: Find the critical value</strong></p>
-<p>For a 95% confidence interval with <span class="math inline">\(n = 10\)</span>, degrees of freedom = 9.
-From the t-distribution table: <span class="math display">\[t_{(9, 0.025)} = 2.262\]</span></p>
-<p><strong>Step 3: Construct the confidence interval</strong></p>
-<p><span class="math display">\[\bar{x} \pm t^* \cdot \dfrac{s}{\sqrt{n}} = 17.7 \pm 2.262 \cdot \dfrac{9.081}{\sqrt{10}} = 17.7 \pm 6.495\]</span></p>
-<p><span class="math display">\[\boxed{11.205 \text{ to } 24.195}\]</span></p>
-<p><strong>Interpretation:</strong></p>
-<p>We are 95% confident that the mean number of images stored on digital
-cameras is between 11.205 and 24.195.</p>
-<hr />
-<p><strong>R code:</strong></p>
-<div class="tcolorbox">
-<pre><code># Step 1: Entering data
-dataset &lt;- c(25, 6, 22, 26, 31, 18, 13, 20, 14, 2)
 
-# Step 2: Finding 95% confidence interval
-t.test(dataset, conf.level = 0.95)</code></pre>
-</div>
-<p><strong>R output:</strong></p>
-<div class="tcolorbox">
-<pre><code>One Sample t-test
-
-data:  dataset
-t = 6.164, df = 9, p-value = 0.0001659
-alternative hypothesis: true mean is not equal to 0
-95 percent confidence interval:
- 11.2042 24.1958
-sample estimates:
-mean of x 
-     17.7 </code></pre>
-</div>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-97" class="example"><strong>Example 12.3  </strong></span>A manufacturing company produces electric insulators. If the insulators
-break when in use, a short circuit is likely. To test the strength of
-the insulators, destructive testing is performed to determine how much
-force (in pounds) is required to break them.</p>
-<p>The following dataset consists of force values (in pounds) recorded for
-a random sample of 30 insulators:</p>
-<div class="center">
-<p>, 1728, 1656, 1610, 1634, 1784, 1522, 1696, 1592, 1662, 1866, 1764,
-1734, 1662, 1734, 1774, 1550, 1756, 1762, 1866, 1820, 1744, 1788, 1688,
-1810, 1752, 1680, 1810, 1652, 1736</p>
-</div>
-<p>Construct a <strong>95% confidence interval</strong> for the population mean force
-required to break the insulators.</p>
-<p><strong>Solution:</strong></p>
-<p>We want a confidence interval for the population mean <span class="math inline">\(\mu\)</span>, where
-<span class="math inline">\(\mu =\)</span> mean force required to break electric insulators. The population
-standard deviation is unknown, so we use a <em>one-sample</em> t-interval.</p>
-<p><strong>R code:</strong></p>
-<div class="tcolorbox">
-<pre><code># Step 1. Entering data;
-dataset &lt;- c(1870, 1728, 1656, 1610, 1634, 1784, 1522, 1696, 1592, 1662,
-             1866, 1764, 1734, 1662, 1734, 1774, 1550, 1756, 1762, 1866,
-             1820, 1744, 1788, 1688, 1810, 1752, 1680, 1810, 1652, 1736)
-
-# Step 2. Finding CI;
-t.test(dataset, conf.level = 0.95)</code></pre>
-</div>
-<p><strong>R output:</strong></p>
-<div class="tcolorbox">
-<pre><code>One Sample t-test
-
-data:  dataset
-t = 105.41, df = 29, p-value &lt; 2.2e-16
-alternative hypothesis: true mean is not equal to 0
-95 percent confidence interval:
- 1689.961 1756.839
-sample estimates:
-mean of x 
-   1723.4 </code></pre>
-</div>
-<p><strong>Interpretation:</strong></p>
-<p>We are 95% confident that the average force required to break an
-electric insulator is between <strong>1689.961 pounds</strong> and <strong>1756.839
-pounds</strong>.</p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-98" class="example"><strong>Example 12.4  </strong></span>The operations manager of a production plant would like to estimate the
-mean amount of time a worker takes to assemble a new electronic
-component. After observing 120 workers assembling similar devices, she
-noticed that their average time was 16.2 minutes (with a standard
-deviation of 3.6 minutes).</p>
-<p>Construct a <strong>92% confidence interval</strong> for the mean assembly time.
-State all necessary assumptions.</p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-99" class="example"><strong>Example 12.5  </strong></span>In 2010, 142,823,000 tax returns were filed in the United States. The
-Internal Revenue Service (IRS) examined 1.107%, or 1,581,000, of them to
-determine if they were correctly done. To evaluate auditor performance,
-a random sample of these returns was drawn and the additional tax was
-recorded.</p>
-<p>Estimate with 95% confidence the mean additional income tax collected
-from the 1,581,000 files audited.<br />
-<strong>Solution:</strong></p>
-<p>We use a one-sample confidence interval for the population mean
-additional tax collected.</p>
-<p><strong>Step 1: Import the data from <code>taxes.txt</code></strong></p>
-<div class="tcolorbox">
-<pre><code># url of taxes;
-url &lt;- &quot;https://mcs.utm.utoronto.ca/~nosedal/data/taxes.txt&quot;
-taxes_data &lt;- read.table(url, header = TRUE)
-
-# inspect structure
-names(taxes_data)
-head(taxes_data)
-
-# isolate the tax values
-taxes &lt;- taxes_data$Taxes</code></pre>
-</div>
-<p><strong>Step 2: Plot the data</strong></p>
-<p><em>Histogram:</em></p>
-<div class="tcolorbox">
-<pre><code>hist(taxes,
-     main = &quot;Histogram for our example&quot;,
-     xlab = &quot;taxes&quot;, ylab = &quot;frequency&quot;,
-     col = &quot;blue&quot;)</code></pre>
-</div>
-<div class="center">
-<div class="float">
-<embed src="Section7/images/tax_histogram.pdf" style="width:60.0%" />
-<div class="figcaption">image</div>
-</div>
-</div>
-<p><em>Boxplot:</em></p>
-<div class="tcolorbox">
-<pre><code>boxplot(taxes,
-        main = &quot;Additional Income Tax&quot;,
-        col = &quot;blue&quot;)</code></pre>
-</div>
-<div class="center">
-<div class="float">
-<embed src="Section7/images/tax_boxplot.pdf" style="width:50.0%" />
-<div class="figcaption">image</div>
-</div>
-</div>
-<p><em>Q-Q Plot:</em></p>
-<div class="tcolorbox">
-<pre><code>qqnorm(taxes, col = &quot;blue&quot;, pch = 19)
-qqline(taxes)</code></pre>
-</div>
-<div class="center">
-<div class="float">
-<embed src="Section7/images/tax_qqplot.pdf" style="width:55.0%" />
-<div class="figcaption">image</div>
-</div>
-</div>
-<p><strong>Step 3: Construct 95% CI</strong></p>
-<div class="tcolorbox">
-<pre><code>t.test(taxes, conf.level = 0.95)</code></pre>
-</div>
-<p><strong>Interpretation:</strong> Based on the t-test, we are 95% confident that the
-average additional tax collected lies within the interval calculated
-from the sample.</p>
-<p><strong>Assumptions:</strong></p>
-<ul>
-<li><p>The sample is a random sample from the population of interest.</p></li>
-<li><p>Observations are independent.</p></li>
-<li><p>The population is approximately Normal, or the sample size is large
-enough (justified by the histogram, boxplot, and Q-Q plot).</p></li>
-</ul>
-<div class="tcolorbox">
-<pre><code>## 
-##  One Sample t-test
-## 
-##  data:  taxes
-##  t = 29.345, df = 191, p-value &lt; 2.2e-16
-##  alternative hypothesis: true mean is not equal to 0
-##  95 percent confidence interval:
-##   8886.932 10167.721
-##  sample estimates:
-##  mean of x 
-##    9527.326 </code></pre>
-</div>
-<p><strong>Interpretation:</strong></p>
-<p>We estimate that the mean additional tax collected lies between $8,887
-and $10,168 (with 95% confidence).</p>
-</div>
-</div>
-<div id="a-few-final-comments" class="section level3 unnumbered hasAnchor">
-<h3>A few final comments<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#a-few-final-comments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When we introduced the Student <em>t</em>-distribution, we pointed out that the
-<em>t</em>-statistic is Student <em>t</em>-distributed if the population from which
-we’ve sampled is Normal. However, statisticians have shown that the
-mathematical process that derived the Student <em>t</em>-distribution is
-<strong>robust</strong>, which means that if the population is non-Normal, the
-results of the confidence interval estimate are still valid provided
-that the population is <strong>not extremely non-Normal</strong>. Our histogram,
-boxplot, and Q–Q plot suggest that our variable of interest is not
-extremely non-Normal, and in fact, may be Normal.</p>
-
-</div>
 </div>
 </div>
             </section>
@@ -578,8 +364,8 @@ extremely non-Normal, and in fact, may be Normal.</p>
           </div>
         </div>
       </div>
-<a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="one-sample-confidence-intervals-on-a-proportion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ch:intro-hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="statistical-power.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
