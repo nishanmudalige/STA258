@@ -1,0 +1,16 @@
+api-calls-functions-and-iterations
+apis
+nps-visitation-data
+exercise-1
+exercise-2
+functions
+functionize-api-pulls
+exercise-3
+exercise-4
+function-defaults
+exercise-5
+iterations
+for-loops
+exercise-6
+mapping
+exercise-7

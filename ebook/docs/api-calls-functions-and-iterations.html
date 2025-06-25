@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 API Calls, Functions, and Iterations | _main.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 API Calls, Functions, and Iterations | _main.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 API Calls, Functions, and Iterations | _main.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html"><i class="fa fa-check"></i><b>1</b> API Calls, Functions, and Iterations</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#apis"><i class="fa fa-check"></i><b>1.1</b> APIs</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#nps-visitation-data"><i class="fa fa-check"></i><b>1.1.1</b> NPS Visitation Data</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#functions"><i class="fa fa-check"></i><b>1.2</b> Functions</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#functionize-api-pulls"><i class="fa fa-check"></i><b>1.2.1</b> Functionize API Pulls</a></li>
+<li class="chapter" data-level="1.2.2" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#function-defaults"><i class="fa fa-check"></i><b>1.2.2</b> Function Defaults</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#iterations"><i class="fa fa-check"></i><b>1.3</b> Iterations</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#for-loops"><i class="fa fa-check"></i><b>1.3.1</b> <code>for</code> loops</a></li>
+<li class="chapter" data-level="1.3.2" data-path="api-calls-functions-and-iterations.html"><a href="api-calls-functions-and-iterations.html#mapping"><i class="fa fa-check"></i><b>1.3.2</b> Mapping</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="api-calls-functions-and-iterations" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> API Calls, Functions, and Iterations<a href="api-calls-functions-and-iterations.html#api-calls-functions-and-iterations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this lesson we will download data using an application programming interface (API), create our own functions, and iterate using <code>for</code> loops and <code>map()</code>. To fulfill these objectives we will be utilizing two park visitation data sets from the National Park Service (NPS): NPS-wide visitation data, and park unit-specific visitation data.</p>
+<p>There are <strong>seven exercises</strong> in this lesson that must be completed.</p>
+<div id="apis" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> APIs<a href="api-calls-functions-and-iterations.html#apis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An API is software that acts as an intermediary between an online data warehouse (or server) and its users (or clients). As data scientists, APIs provide us a way to request clean and nicely-formatted data that the server will then send to our local computers, all within our RStudio console! To work with APIs, we will need to use two new packages: <code>httr</code>, which allows us to communicate with the API’s server, and <code>jsonlite</code>, which allows us to work with one of the most common API data formats, JSON. Let’s go ahead and load in our packages for this lesson:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="api-calls-functions-and-iterations.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────────────────────────── tidyverse 2.0.0 ──
+## ✔ forcats   1.0.0     ✔ readr     2.1.5
+## ✔ ggplot2   3.5.2     ✔ stringr   1.5.1
+## ✔ lubridate 1.9.4     ✔ tibble    3.2.1
+## ✔ purrr     1.0.4     ✔ tidyr     1.3.1
+## ── Conflicts ────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="api-calls-functions-and-iterations.html#cb3-1" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb3-2"><a href="api-calls-functions-and-iterations.html#cb3-2" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;jsonlite&#39;
+## 
+## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     flatten</code></pre>
+<div id="nps-visitation-data" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> NPS Visitation Data<a href="api-calls-functions-and-iterations.html#nps-visitation-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This week, we will be exploring NPS visitor use data across the NPS system as a whole, and and across specific park units. Like many institutions, NPS has a server that stores all of this information (as well as many other things), and an API for users to be able to access it.</p>
+<p>To utilize the NPS API in R, we first need to explore its <a href="https://irmaservices.nps.gov/">API’s data structure</a>. In almost every case, we use URLs to access specific data from APIs. To find the access URL for NPS visitation data, go to <a href="https://irmaservices.nps.gov/v3/rest/Stats/help">Stats Rest API - Documentation</a> (though not very intuitive, the NPS API calls its visitation data set “Stats”). Listed there you will see that all data associated with the “Stats” data set can be accessed using the base URL <a href="https://irmaservices.nps.gov/v3/rest/stats"><strong>https://irmaservices.nps.gov/v3/rest/stats</strong></a>. From there, you can tack on additional html text to access two different data sets: <strong>total/{year}</strong> and <strong>visitation</strong>.</p>
+<p>For starters, let’s try accessing the <strong>total/{year}</strong>. This data set gives us total monthly visitation across all NPS park units, for a user-selected year:</p>
+<p><a href="https://irmaservices.nps.gov/v3/rest/stats/total/%7BYEAR%7D" class="uri"><strong>https://irmaservices.nps.gov/v3/rest/stats/total/{YEAR}</strong></a></p>
+<p>If you tried accessing that URL, you’ll have noticed it doesn’t take you anywhere. This is because the curly brackets {} signify locations in the URL that need to be updated by the user based on their specific needs. I’m curious about visitor use in my birth year, so let’s tweak the URL to access visitation data from 1992. In R, we can access this data using <code>httr</code>’s <code>GET()</code> function, replacing {YEAR} with 1992.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="api-calls-functions-and-iterations.html#cb5-1" tabindex="-1"></a>raw_data <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(<span class="at">url =</span> <span class="st">&quot;https://irmaservices.nps.gov/v3/rest/stats/total/1992&quot;</span>)</span>
+<span id="cb5-2"><a href="api-calls-functions-and-iterations.html#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="api-calls-functions-and-iterations.html#cb5-3" tabindex="-1"></a><span class="co"># view raw_data</span></span>
+<span id="cb5-4"><a href="api-calls-functions-and-iterations.html#cb5-4" tabindex="-1"></a><span class="co"># View(raw_data)</span></span></code></pre></div>
+<p>Viewing the data set as-is, you can see it is not super human-readable. This is because data sent from APIs is typically packaged using JavaScript Object Notation (JSON).</p>
+<p>To unpack the data, we will first need to use <code>httr</code>’s <code>content()</code> function. In this example, we want the data to be extracted as <em>text,</em> since this is a data table. Moreover, its encoding is listed as <em>UTF-8</em>. The encoding parameter can be found by opening our raw data set in our R console:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="api-calls-functions-and-iterations.html#cb6-1" tabindex="-1"></a>raw_data <span class="co"># lists &#39;UTF-8&#39;</span></span></code></pre></div>
+<pre><code>## Response [https://irmaservices.nps.gov/v3/rest/stats/total/1992]
+##   Date: 2025-06-25 17:32
+##   Status: 200
+##   Content-Type: application/json; charset=utf-8
+##   Size: 1.42 kB</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="api-calls-functions-and-iterations.html#cb8-1" tabindex="-1"></a><span class="co"># convert content to text</span></span>
+<span id="cb8-2"><a href="api-calls-functions-and-iterations.html#cb8-2" tabindex="-1"></a>unpacked_data <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(raw_data, <span class="at">as =</span> <span class="st">&quot;text&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>) </span></code></pre></div>
+<p>Second, we need to transform this string of text, which is still in JSON formatting, into a data frame using <code>jsonlite</code>’s <code>fromJSON()</code>:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="api-calls-functions-and-iterations.html#cb9-1" tabindex="-1"></a><span class="co"># parse text from JSON to data frame</span></span>
+<span id="cb9-2"><a href="api-calls-functions-and-iterations.html#cb9-2" tabindex="-1"></a>final_data <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(unpacked_data)</span>
+<span id="cb9-3"><a href="api-calls-functions-and-iterations.html#cb9-3" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="api-calls-functions-and-iterations.html#cb9-4" tabindex="-1"></a>final_data</span></code></pre></div>
+<pre><code>##    Month NonRecreationVisitors RecreationVisitors UnitCode UnitName Year
+## 1      1               6209285           10940618       NA       NA 1992
+## 2      2               6010027           11931340       NA       NA 1992
+## 3      3               6756902           15369139       NA       NA 1992
+## 4      4               7255782           21458739       NA       NA 1992
+## 5      5               7690763           26648530       NA       NA 1992
+## 6      6               7593227           33284625       NA       NA 1992
+## 7      7               8438755           41099305       NA       NA 1992
+## 8      8               8056823           38625804       NA       NA 1992
+## 9      9               7329755           26438266       NA       NA 1992
+## 10    10               7105574           23616057       NA       NA 1992
+## 11    11               6507805           14338165       NA       NA 1992
+## 12    12               6702698           10943961       NA       NA 1992</code></pre>
+<p>Hooray, you have now successfully pulled in an online data set using an API! 😁</p>
+<div id="exercise-1" class="section level4 hasAnchor" number="1.1.1.1" style="color: maroon">
+<h4><span class="header-section-number">1.1.1.1</span> Exercise #1<a href="api-calls-functions-and-iterations.html#exercise-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Using the code above as a starting point, pull in monthly NPS-wide visitation data for the years 1980, 1999, and 2018.</strong></p>
+</div>
+<div id="exercise-2" class="section level4 hasAnchor" number="1.1.1.2" style="color: maroon">
+<h4><span class="header-section-number">1.1.1.2</span> Exercise #2<a href="api-calls-functions-and-iterations.html#exercise-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Now, let’s explore the second NPS visitation data set, <a href="https://irmaservices.nps.gov/v3/rest/Stats/help">visitation</a>. This call pulls in monthly data for a specific park, across a specific time frame. Use your new API skills to pull in visitation data for Rocky Mountain National Park from 2010 through 2021, based on the API’s URL template. The unit code for Rocky Mountain National Park is ROMO. (Hint: an API URL can have multiple sections that need to be updated by the user.)</strong></p>
+</div>
+</div>
+</div>
+<div id="functions" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Functions<a href="api-calls-functions-and-iterations.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You may find yourself thinking, <em>“Wow, exercise 1 was overkill!”</em> Indeed, you had to run several lines of code that were nearly identical to what was shown upstream; the only thing you needed to change from one year to the next was the year itself. This sort of redundant coding is not good coding practice. Instead of copying and pasting many coding steps over and over again and tweaking just a tiny portion of it, we can write <em>functions</em> that combine many coding steps into just one command. The benefits of reducing redundant code in this way are threefold. As Grolemund &amp; Wickham describe in their book, <a href="https://r4ds.had.co.nz/"><em>R for Data Science</em></a>:</p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>It’s easier to see the intent of your code, because your eyes are drawn to what’s different, not what stays the same.</li>
+<li>It’s easier to respond to changes in requirements. As your needs change, you only need to make changes in one place, rather than remembering to change every place that you copied-and-pasted the code.</li>
+<li>You’re likely to have fewer bugs because each line of code is used in more places.</li>
+</ol>
+</blockquote>
+<p><em>Functions</em> provide the option of changing just a minor part of the code base from one run to the next. Think of the <code>GET()</code> function in <code>httr</code>: it is a function that has code under-the-hood so that it isn’t necessary to write out the raw code each time we use it. Instead, we call out the function’s name (<code>GET()</code>), and the necessary argument within that function that tweaks the code to fit it to our needs (<code>url = "&lt;SOME_URL_WE_CHOOSE&gt;"</code>).</p>
+<div id="functionize-api-pulls" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Functionize API Pulls<a href="api-calls-functions-and-iterations.html#functionize-api-pulls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s try making a function called <code>parkwide_visitation()</code> that pulls in NPS-wide visitation data for a year of choice. To develop a function requires specific formatting:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="api-calls-functions-and-iterations.html#cb11-1" tabindex="-1"></a><span class="sc">&lt;</span>NAME<span class="sc">&gt;</span> <span class="er">&lt;</span><span class="sc">-</span> <span class="cf">function</span>(<span class="sc">&lt;</span>ARGUMENTS<span class="sc">&gt;</span>){</span>
+<span id="cb11-2"><a href="api-calls-functions-and-iterations.html#cb11-2" tabindex="-1"></a>  </span>
+<span id="cb11-3"><a href="api-calls-functions-and-iterations.html#cb11-3" tabindex="-1"></a>  <span class="sc">&lt;</span>ACTIONS<span class="sc">&gt;</span></span>
+<span id="cb11-4"><a href="api-calls-functions-and-iterations.html#cb11-4" tabindex="-1"></a>  </span>
+<span id="cb11-5"><a href="api-calls-functions-and-iterations.html#cb11-5" tabindex="-1"></a>  <span class="fu">return</span>(<span class="sc">&lt;</span>OUTPUT<span class="sc">&gt;</span>)</span>
+<span id="cb11-6"><a href="api-calls-functions-and-iterations.html#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="api-calls-functions-and-iterations.html#cb11-7" tabindex="-1"></a>  }</span></code></pre></div>
+<p>… where NAME is what we want to name the function; ARGUMENTS are the variables in the code that get “tweaked”; ACTIONS are the lines of code we want the function to perform (which includes our ARGUMENTS); and the OUTPUT is the object we want as the final outcome of running the function.</p>
+<p>For <code>parkwide_visitation()</code>, we will use our upstream code as the basis for our function, but with a few minor yet extremely important tweaks:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="api-calls-functions-and-iterations.html#cb12-1" tabindex="-1"></a>parkwide_visitation <span class="ot">&lt;-</span> <span class="cf">function</span>(year){</span>
+<span id="cb12-2"><a href="api-calls-functions-and-iterations.html#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="api-calls-functions-and-iterations.html#cb12-3" tabindex="-1"></a><span class="co"># pull in the data</span></span>
+<span id="cb12-4"><a href="api-calls-functions-and-iterations.html#cb12-4" tabindex="-1"></a>raw_data <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(<span class="at">url =</span> </span>
+<span id="cb12-5"><a href="api-calls-functions-and-iterations.html#cb12-5" tabindex="-1"></a>                        <span class="co"># parse out year so that it can be chosen with the &quot;year&quot; argument, using paste0()</span></span>
+<span id="cb12-6"><a href="api-calls-functions-and-iterations.html#cb12-6" tabindex="-1"></a>                        <span class="fu">paste0</span>(<span class="st">&quot;https://irmaservices.nps.gov/v3/rest/stats/total/&quot;</span>, year))</span>
+<span id="cb12-7"><a href="api-calls-functions-and-iterations.html#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="api-calls-functions-and-iterations.html#cb12-8" tabindex="-1"></a><span class="co"># convert content to text</span></span>
+<span id="cb12-9"><a href="api-calls-functions-and-iterations.html#cb12-9" tabindex="-1"></a>extracted_data <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(raw_data, <span class="at">as =</span> <span class="st">&quot;text&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>) </span>
+<span id="cb12-10"><a href="api-calls-functions-and-iterations.html#cb12-10" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="api-calls-functions-and-iterations.html#cb12-11" tabindex="-1"></a><span class="co"># parse text from JSON to data frame</span></span>
+<span id="cb12-12"><a href="api-calls-functions-and-iterations.html#cb12-12" tabindex="-1"></a>final_data <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(extracted_data)</span>
+<span id="cb12-13"><a href="api-calls-functions-and-iterations.html#cb12-13" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="api-calls-functions-and-iterations.html#cb12-14" tabindex="-1"></a><span class="fu">return</span>(final_data)</span>
+<span id="cb12-15"><a href="api-calls-functions-and-iterations.html#cb12-15" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="api-calls-functions-and-iterations.html#cb12-16" tabindex="-1"></a>}</span></code></pre></div>
+<p>In the above function, our first object, <code>raw_data</code>, now changes based on how we define our year argument. We accomplish this through <code>paste0()</code>, which takes listed objects, transforms them into characters (if they aren’t already), and concatenates them into a single character string. For example:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="api-calls-functions-and-iterations.html#cb13-1" tabindex="-1"></a>my_sentence <span class="ot">&lt;-</span> <span class="st">&quot;I need at least&quot;</span></span>
+<span id="cb13-2"><a href="api-calls-functions-and-iterations.html#cb13-2" tabindex="-1"></a>my_other_sentence <span class="ot">&lt;-</span> <span class="st">&quot;pints of ice cream a day&quot;</span></span>
+<span id="cb13-3"><a href="api-calls-functions-and-iterations.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="api-calls-functions-and-iterations.html#cb13-4" tabindex="-1"></a><span class="fu">paste0</span>(my_sentence, <span class="st">&quot; &quot;</span>, <span class="dv">08</span>, <span class="st">&quot; &quot;</span>, my_other_sentence, <span class="st">&quot;!&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;I need at least 8 pints of ice cream a day!&quot;</code></pre>
+<p>So, if we make <code>year = 2021</code> in our <code>parkwide_visitation()</code> function, the year object becomes the number 2021, which makes the <code>paste0()</code> output “<a href="https://irmaservices.nps.gov/v3/rest/stats/total/2021" class="uri">https://irmaservices.nps.gov/v3/rest/stats/total/2021</a>”, which subsequently pulls data for 2021. In other words, we can now pull visitation data for any year with just one line of code!</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="api-calls-functions-and-iterations.html#cb15-1" tabindex="-1"></a>pull_2018 <span class="ot">&lt;-</span> <span class="fu">parkwide_visitation</span>(<span class="at">year =</span> <span class="dv">2018</span>)</span>
+<span id="cb15-2"><a href="api-calls-functions-and-iterations.html#cb15-2" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="api-calls-functions-and-iterations.html#cb15-3" tabindex="-1"></a>pull_1980 <span class="ot">&lt;-</span> <span class="fu">parkwide_visitation</span>(<span class="at">year =</span> <span class="dv">1980</span>)</span>
+<span id="cb15-4"><a href="api-calls-functions-and-iterations.html#cb15-4" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="api-calls-functions-and-iterations.html#cb15-5" tabindex="-1"></a>pull_1992 <span class="ot">&lt;-</span> <span class="fu">parkwide_visitation</span>(<span class="at">year =</span> <span class="dv">1992</span>)</span>
+<span id="cb15-6"><a href="api-calls-functions-and-iterations.html#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="api-calls-functions-and-iterations.html#cb15-7" tabindex="-1"></a><span class="co"># ... and so on!</span></span></code></pre></div>
+<div id="exercise-3" class="section level4 hasAnchor" number="1.2.1.1" style="color: maroon">
+<h4><span class="header-section-number">1.2.1.1</span> Exercise #3<a href="api-calls-functions-and-iterations.html#exercise-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Create a function called <code>unit_visitation()</code> that pulls park-specific visitation data for any park, across any time frame. For a list of all park codes, download <a href="https://www.nps.gov/aboutus/foia/upload/NPS-Unit-List.xlsx">this spreadsheet</a>. (Hint 1: functions can have multiple arguments. Hint 2: what’s the difference between <code>05</code> and <code>"05"</code>?)</strong></p>
+</div>
+<div id="exercise-4" class="section level4 hasAnchor" number="1.2.1.2" style="color: maroon">
+<h4><span class="header-section-number">1.2.1.2</span> Exercise #4<a href="api-calls-functions-and-iterations.html#exercise-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Using <code>unit_visitation()</code>, pull in visitation data for Rocky Mountain National Park (ROMO), Everglades National Park (EVER), and Theodore Roosevelt National Park (THRO) from 1990 through 2021.</strong></p>
+</div>
+</div>
+<div id="function-defaults" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Function Defaults<a href="api-calls-functions-and-iterations.html#function-defaults" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Look at the code that you just wrote; writing out all of those unchanging date arguments still feels repetitive, right? When developing functions, there is an option for setting default values for arguments so that you don’t necessarily have to write all of them out every time you run it in the future. But, the option still exists within the function to make changes when necessary. For example, let’s tweak our <code>parkwide_visitaion()</code> function to have the default year be 2021:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="api-calls-functions-and-iterations.html#cb16-1" tabindex="-1"></a>parkwide_visitation <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">year =</span> <span class="st">&quot;2021&quot;</span>) {</span>
+<span id="cb16-2"><a href="api-calls-functions-and-iterations.html#cb16-2" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="api-calls-functions-and-iterations.html#cb16-3" tabindex="-1"></a>raw_data <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(<span class="at">url =</span> <span class="fu">paste0</span>(<span class="st">&quot;https://irmaservices.nps.gov/v3/rest/stats/total/&quot;</span>, year))</span>
+<span id="cb16-4"><a href="api-calls-functions-and-iterations.html#cb16-4" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="api-calls-functions-and-iterations.html#cb16-5" tabindex="-1"></a><span class="co"># convert content to text</span></span>
+<span id="cb16-6"><a href="api-calls-functions-and-iterations.html#cb16-6" tabindex="-1"></a>extracted_data <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(raw_data, <span class="at">as =</span> <span class="st">&quot;text&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>) </span>
+<span id="cb16-7"><a href="api-calls-functions-and-iterations.html#cb16-7" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="api-calls-functions-and-iterations.html#cb16-8" tabindex="-1"></a><span class="co"># parse text from JSON to data frame</span></span>
+<span id="cb16-9"><a href="api-calls-functions-and-iterations.html#cb16-9" tabindex="-1"></a>final_data <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(extracted_data)</span>
+<span id="cb16-10"><a href="api-calls-functions-and-iterations.html#cb16-10" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="api-calls-functions-and-iterations.html#cb16-11" tabindex="-1"></a><span class="fu">return</span>(final_data)</span>
+<span id="cb16-12"><a href="api-calls-functions-and-iterations.html#cb16-12" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="api-calls-functions-and-iterations.html#cb16-13" tabindex="-1"></a>}</span>
+<span id="cb16-14"><a href="api-calls-functions-and-iterations.html#cb16-14" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="api-calls-functions-and-iterations.html#cb16-15" tabindex="-1"></a><span class="fu">parkwide_visitation</span>()</span></code></pre></div>
+<pre><code>##    Month NonRecreationVisitors RecreationVisitors UnitCode UnitName Year
+## 1      1              11632614           11978413       NA       NA 2021
+## 2      2              11082899           11692967       NA       NA 2021
+## 3      3              12981524           18370611       NA       NA 2021
+## 4      4              12857567           22155245       NA       NA 2021
+## 5      5              13250575           27963739       NA       NA 2021
+## 6      6              13789961           36122392       NA       NA 2021
+## 7      7              14734920           41329530       NA       NA 2021
+## 8      8              14280304           35380986       NA       NA 2021
+## 9      9              13382939           30204635       NA       NA 2021
+## 10    10              13882165           26961779       NA       NA 2021
+## 11    11              13192146           18903397       NA       NA 2021
+## 12    12              13007065           16051712       NA       NA 2021</code></pre>
+<p>Because the default year is 2021, you don’t have to write it out explicitly in the function (so long as that’s the year you’re interested in). But, you still have the option of changing the year to something else:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="api-calls-functions-and-iterations.html#cb18-1" tabindex="-1"></a><span class="fu">parkwide_visitation</span>(<span class="at">year =</span> <span class="st">&quot;1992&quot;</span>)</span></code></pre></div>
+<pre><code>##    Month NonRecreationVisitors RecreationVisitors UnitCode UnitName Year
+## 1      1               6209285           10940618       NA       NA 1992
+## 2      2               6010027           11931340       NA       NA 1992
+## 3      3               6756902           15369139       NA       NA 1992
+## 4      4               7255782           21458739       NA       NA 1992
+## 5      5               7690763           26648530       NA       NA 1992
+## 6      6               7593227           33284625       NA       NA 1992
+## 7      7               8438755           41099305       NA       NA 1992
+## 8      8               8056823           38625804       NA       NA 1992
+## 9      9               7329755           26438266       NA       NA 1992
+## 10    10               7105574           23616057       NA       NA 1992
+## 11    11               6507805           14338165       NA       NA 1992
+## 12    12               6702698           10943961       NA       NA 1992</code></pre>
+<div id="exercise-5" class="section level4 hasAnchor" number="1.2.2.1" style="color: maroon">
+<h4><span class="header-section-number">1.2.2.1</span> Exercise #5<a href="api-calls-functions-and-iterations.html#exercise-5" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Default our <code>unit_visitation()</code> function’s arguments related to the starting and ending months to January and December, respectively. This way, we are automatically pulling in data for entire years. Rerun the function for ROMO, EVER, and THRO for the 1980-2021 time period to make sure it works properly.</strong></p>
+</div>
+</div>
+</div>
+<div id="iterations" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Iterations<a href="api-calls-functions-and-iterations.html#iterations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At this point, we now know how to develop functions so that we do not have to keep writing out redundant steps in a workflow. However, in that last exercise, you can see that we are <em>still</em> writing out redundant code; we are performing the exact same function on each of our three park units.</p>
+<p>Another tool for reducing redundancy is <strong>iteration</strong>, which allows you to do the same thing on multiple inputs. Iteration can happen across different objects, different rows, different data frames, the list goes on and on!</p>
+<div id="for-loops" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> <code>for</code> loops<a href="api-calls-functions-and-iterations.html#for-loops" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <code>for</code> loop is base R’s iteration tool that executes code across a vector, an array, a list, etc. To save the outcome of each iteration, you must first create a vector to store the outputs in that is sized based on how many objects you want to iterate over. For example, I want to run our <code>parkwide_visitation()</code> function over the last five years: 2017, 2018, 2019, 2020, and 2021. To do that, I will first need to develop a vector listing each year:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="api-calls-functions-and-iterations.html#cb20-1" tabindex="-1"></a>years <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;2017&#39;</span>, <span class="st">&#39;2018&#39;</span>, <span class="st">&#39;2019&#39;</span>, <span class="st">&#39;2020&#39;</span>, <span class="st">&#39;2021&#39;</span>)</span></code></pre></div>
+<p>… and then develop an empty list to store each year’s <code>parkwide_visitation()</code> results (i.e., output) into:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="api-calls-functions-and-iterations.html#cb21-1" tabindex="-1"></a>output_floop <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">&quot;list&quot;</span>, <span class="at">length =</span> <span class="fu">length</span>(years))</span></code></pre></div>
+<p>Now that we have a place to store each year’s function results, we can move forward with the for loop itself:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="api-calls-functions-and-iterations.html#cb22-1" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(years)){</span>
+<span id="cb22-2"><a href="api-calls-functions-and-iterations.html#cb22-2" tabindex="-1"></a>  </span>
+<span id="cb22-3"><a href="api-calls-functions-and-iterations.html#cb22-3" tabindex="-1"></a>  output_floop[[i]] <span class="ot">&lt;-</span></span>
+<span id="cb22-4"><a href="api-calls-functions-and-iterations.html#cb22-4" tabindex="-1"></a>    <span class="fu">parkwide_visitation</span>(<span class="at">year =</span> years[i])</span>
+<span id="cb22-5"><a href="api-calls-functions-and-iterations.html#cb22-5" tabindex="-1"></a>  </span>
+<span id="cb22-6"><a href="api-calls-functions-and-iterations.html#cb22-6" tabindex="-1"></a>}</span></code></pre></div>
+<p>… where <code>years[i]</code> tells the <code>for</code> loop to perform <code>parkwide_visitation()</code> on the <em>i<sup>th</sup></em> year (think of <em>i</em> as a moving across each year), and <code>output_floop[[i]]</code> directs the <code>for</code> loop to store the results of the <em>i<sup>th</sup></em> year’s run into <code>output</code>’s <em>i<sup>th</sup></em> list (think of <code>output_floop[[i]]</code> as the location in <code>output_floop</code> that the <em>i<sup>th</sup></em>’s results go).</p>
+<p>We now have a list containing five data frames: one for each year of visitation data:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="api-calls-functions-and-iterations.html#cb23-1" tabindex="-1"></a><span class="fu">summary</span>(output_floop)</span></code></pre></div>
+<pre><code>##      Length Class      Mode
+## [1,] 6      data.frame list
+## [2,] 6      data.frame list
+## [3,] 6      data.frame list
+## [4,] 6      data.frame list
+## [5,] 6      data.frame list</code></pre>
+<p>Because each year’s output is structured identically, we can confidently combine each year’s data frame into a single data frame using <code>dplyr::bind_rows()</code>:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="api-calls-functions-and-iterations.html#cb25-1" tabindex="-1"></a>multi_years <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(output_floop)</span></code></pre></div>
+<div id="exercise-6" class="section level4 hasAnchor" number="1.3.1.1" style="color: maroon">
+<h4><span class="header-section-number">1.3.1.1</span> Exercise #6<a href="api-calls-functions-and-iterations.html#exercise-6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Use a for loop to run <code>unit_visitation()</code> with arguments <code>start_year = 1980</code> and <code>end_year = 2021</code> across ROMO, EVER, and THRO. Then, create a single data frame containing each park units’ output. (Hint: Your first step will be to create a vector listing each park unit.)</strong></p>
+</div>
+</div>
+<div id="mapping" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Mapping<a href="api-calls-functions-and-iterations.html#mapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <code>tidyverse</code>’s <code>purrr</code> package has its own iteration function, <code>map()</code>, that is a variation of the <code>for</code> loop. <code>map()</code> takes a vector and applies a single function across it, then automatically stores all of the results into a list. In other words, <code>map()</code> creates an appropriately sized list to store our results in for us. This eliminates the need to create an empty list ahead of time.</p>
+<p>To create the same output as our previous <code>for</code> loop on <code>parkwide_visitation()</code>, but using <code>map()</code> instead, we would run the following code:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="api-calls-functions-and-iterations.html#cb26-1" tabindex="-1"></a>output_map <span class="ot">&lt;-</span> years <span class="sc">%&gt;%</span> </span>
+<span id="cb26-2"><a href="api-calls-functions-and-iterations.html#cb26-2" tabindex="-1"></a>  <span class="fu">map</span>(<span class="sc">~</span> <span class="fu">parkwide_visitation</span>(<span class="at">year =</span> .))</span></code></pre></div>
+<p>… where <code>~</code> indicates that we want to perform <code>parkwide_visitation()</code> across all years, and <code>.</code> indicates that we want to use our piped vector, <code>years</code>, as the input to the <code>year</code> argument. As you can see, <code>output_map</code> is identical to <code>output_floop</code>:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="api-calls-functions-and-iterations.html#cb27-1" tabindex="-1"></a><span class="fu">identical</span>(output_floop, output_map)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>… which means we should also <code>bind_rows()</code> to get the mapped output into a single data frame:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="api-calls-functions-and-iterations.html#cb29-1" tabindex="-1"></a>multi_years <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(output_map)</span></code></pre></div>
+<div id="exercise-7" class="section level4 hasAnchor" number="1.3.2.1" style="color: maroon">
+<h4><span class="header-section-number">1.3.2.1</span> Exercise #7<a href="api-calls-functions-and-iterations.html#exercise-7" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Use <code>map()</code> to run <code>unit_visitation()</code> with arguments <code>start_year = 1980</code> and <code>end_year = 2021</code> across ROMO, EVER, and THRO. Then, create a single data frame containing each park units’ output.</strong></p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
