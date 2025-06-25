@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Sample Size Selection using Confidence Intervals | _main.knit</title>
+  <title>Introduction | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Sample Size Selection using Confidence Intervals | _main.knit" />
+  <meta property="og:title" content="Introduction | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Sample Size Selection using Confidence Intervals | _main.knit" />
+  <meta name="twitter:title" content="Introduction | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="one-sample-confidence-intervals-on-a-proportion.html"/>
-
+<link rel="prev" href="index.html"/>
+<link rel="next" href="descriptive-statistics-and-an-introduction-to-r.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -233,183 +233,51 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sample-size-selection-using-confidence-intervals" class="section level1 hasAnchor" number="14">
-<h1><span class="header-section-number">Chapter 14</span> Sample Size Selection using Confidence Intervals<a href="sample-size-selection-using-confidence-intervals.html#sample-size-selection-using-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this section we will examine techniques to calculate the minimum
-sample size required to obtain a confidence interval to be within a
-specified margin of error. Recall the one-sample confidence intervals we
-have constructed for a population mean <span class="math inline">\(\mu\)</span> are</p>
-<p><span class="math display">\[\begin{aligned}
-{3}
-    &amp; \bar{x} \, \pm \, z_{\alpha/2} \frac{\sigma}{\sqrt{n}}    &amp;&amp; \quad \text{(When } \sigma \text{ is known)} \\[1.0em]
-    &amp; \bar{x} \, \pm \, t_{\alpha/2, n-1} \frac{s}{\sqrt{n}}        &amp;&amp; \quad    \text{(When } \sigma \text{ is not known)}
-\end{aligned}\]</span></p>
-<p>and the one-sample confidence interval for a proportion is</p>
-<p><span class="math display">\[\hat p \pm z_{\alpha/2} \sqrt{\frac{\hat p(1-\hat p)}{n}}\]</span></p>
-<div id="empirical-rule" class="section level3 hasAnchor" number="14.0.1">
-<h3><span class="header-section-number">14.0.1</span> Empirical Rule<a href="sample-size-selection-using-confidence-intervals.html#empirical-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For any sample from a population that is close to Normally distributed:</p>
-<ul>
-<li><p>about 68% of all observations will lie in the interval
-<span class="math inline">\(\mu \pm \sigma\)</span></p></li>
-<li><p>about 95% of all observations will lie in the interval
-<span class="math inline">\(\mu \pm 2\sigma\)</span></p></li>
-<li><p>about 99.7% of all observations will lie in the interval
-<span class="math inline">\(\mu \pm 3\sigma\)</span></p></li>
-</ul>
-<p>This suggests that for a sample drawn from a population that is
-approximately to Normally distributed, we can approximate the standard
-deviation using</p>
-<p><span class="math display">\[\hat{\sigma} \approx \frac{\text{Sample Range}}{4}.\]</span></p>
-</div>
-<div id="secSampleSizeCIMean" class="section level2 hasAnchor" number="14.1">
-<h2><span class="header-section-number">14.1</span> Calculating Sample Size for a Confidence Interval on a Mean<a href="sample-size-selection-using-confidence-intervals.html#secSampleSizeCIMean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We will examine how to calculate the minimum sample size <span class="math inline">\(n\)</span> for a
-confidence interval on a mean for a margin of error <span class="math inline">\(E\)</span> at confidence
-level <span class="math inline">\(1-\alpha\)</span>.</p>
-<div id="when-sigma-is-known" class="section level3 unnumbered hasAnchor">
-<h3>When <span class="math inline">\(\sigma\)</span> is Known<a href="sample-size-selection-using-confidence-intervals.html#when-sigma-is-known" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For a desired margin of error <span class="math inline">\(E\)</span> and confidence level <span class="math inline">\(1-\alpha\)</span>:
-<span class="math display">\[E = z_{\alpha/2}\,\frac{\sigma}{\sqrt{n}}\]</span></p>
-<p>We can rearrange <span class="math inline">\(E\)</span> to calculate the sample size using
-<span class="math display">\[n = \left( \frac{z_{\alpha/2}\,\sigma}{E} \right)^2\]</span> where <span class="math inline">\(n\)</span> is
-always <em>rounded up</em> to the next integer.<br />
-</p>
-<div class="example">
-<p><span id="exm:unlabeled-div-101" class="example"><strong>Example 14.1  </strong></span><span id="exSampleSizePharmaceutical" label="exSampleSizePharmaceutical"></span></p>
-<p>A manufacturer of pharmaceutical products analyzes a specimen from each
-batch of a product to verify the concentration of the active ingredient.
-The chemical analysis is not perfectly precise. Repeated measurements on
-the same specimen give slightly different results. Suppose we know that
-the results of repeated measurements follow a Normal distribution with
-mean <span class="math inline">\(\mu\)</span> equal to the true concentration and standard deviation
-<span class="math inline">\(\sigma = 0.0068\)</span> grams per liter. (That the mean of the population of
-all measurements is the true concentration says that the measurements
-process has no bias. The standard deviation describes the precision of
-the measurement.) The laboratory analyzes each specimen <span class="math inline">\(n\)</span> times and
-reports the mean result.<br />
-Management asks the laboratory to produce results accurate to within
-<span class="math inline">\(\pm 0.005\)</span> with 95% confidence. How many measurements must be averaged
-to comply with this request?</p>
-<p><span class="math display">\[n = \left( \displaystyle \frac{z_{0.025}\,\sigma}{E} \right)^2
-    = \Bigl(\frac{1.96 \times 0.0068}{0.005}\Bigr)^2
-    \approx 7.1\]</span> Since the sample size should be a whole number, we
-round our result up to <span class="math inline">\(n=8\)</span> measurements.</p>
-</div>
-<p>In Example
-<a href="sample-size-selection-using-confidence-intervals.html#exSampleSizePharmaceutical" reference-type="ref" reference="exSampleSizePharmaceutical"><span class="math display">\[exSampleSizePharmaceutical\]</span></a>, we note that 7 measurements
-will give a slightly larger margin of error than desired, and 8
-measurements a slightly smaller margin of error, the lab must take 8
-measurements on each specimen to meet management’s demand. Always round
-up to the next higher whole number when finding <span class="math inline">\(n\)</span>.</p>
-<div class="example">
-<p><span id="exm:unlabeled-div-102" class="example"><strong>Example 14.2  </strong></span>Planning value <span class="math inline">\(\sigma=22.50\)</span>, desired margin <span class="math inline">\(E=2\)</span>.</p>
-<ol style="list-style-type: decimal">
-<li><p>90% confidence, <span class="math inline">\(z_{0.05}=1.65\)</span>:
-<span class="math display">\[n = \Bigl(\frac{1.65 \times 22.50}{2}\Bigr)^2
-      \approx 344.6
-    \quad\Longrightarrow\quad n = 345.\]</span></p></li>
-<li><p>95% confidence, <span class="math inline">\(z_{0.025}=1.96\)</span>:
-<span class="math display">\[n = \Bigl(\frac{1.96 \times 22.50}{2}\Bigr)^2
-      \approx 486.2
-    \quad\Longrightarrow\quad n = 487.\]</span></p></li>
-<li><p>99% confidence, <span class="math inline">\(z_{0.005}=2.58\)</span>:
-<span class="math display">\[n = \Bigl(\frac{2.58 \times 22.50}{2}\Bigr)^2
-      \approx 842.5
-    \quad\Longrightarrow\quad n = 843.\]</span></p></li>
-</ol>
-</div>
-</div>
-</div>
-<div id="calculating-sample-size-for-a-confidence-interval-on-a-proportion" class="section level2 hasAnchor" number="14.2">
-<h2><span class="header-section-number">14.2</span> Calculating Sample Size for a Confidence Interval on a Proportion<a href="sample-size-selection-using-confidence-intervals.html#calculating-sample-size-for-a-confidence-interval-on-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We will examine how to calculate the minimum sample size <span class="math inline">\(n\)</span> for a
-confidence interval on a proportion for a margin of error <span class="math inline">\(E\)</span> at
-confidence level <span class="math inline">\(1-\alpha\)</span>. For sample of size <span class="math inline">\(n\)</span> with unknown
-population proportion <span class="math inline">\(p\)</span>:
-<span class="math display">\[\hat p \pm z^* \sqrt{ \displaystyle \frac{\hat p(1-\hat p)}{n}}.\]</span>
-where the margin of error is
-<span class="math display">\[E=z^*\sqrt{ \displaystyle \frac{p^*(1-p^*)}{n}}\]</span> we can rearrange <span class="math inline">\(E\)</span>
-to calculate the sample size using
-<span class="math display">\[n = \left( \displaystyle \frac{z^*}{E} \right)^2\,p^*(1-p^*),\]</span> where
-<span class="math inline">\(p^*\)</span> can be a <em>planning value</em>, which is value obtained from prior
-information such as a pilot study. If we do not have any prior
-information on <span class="math inline">\(p^*\)</span>, we can use <span class="math inline">\(p^* = 0.5\)</span> which is the conservative
-value that maximizes the product <span class="math inline">\(p^*(1-p^*)\)</span>.</p>
-<div class="example">
-<p><span id="exm:unlabeled-div-103" class="example"><strong>Example 14.3  </strong></span>Aisha Shariff and Yvette Ye are the candidates for mayor in a large
-city. You are planning a sample survey to determine what percent of the
-voters plan to vote for Shariff. This is a population proportion <span class="math inline">\(p\)</span>.
-You will contact an SRS of registered voters in the city. You want to
-estimate <span class="math inline">\(p\)</span> with 95% confidence and a margin of error no greater than
-3%, or 0.03. How large a sample do you need?<br />
-For a 95% CI on <span class="math inline">\(p\)</span>: <span class="math inline">\(z_{0.025} = 1.96\)</span>. Margin of error = 0.03. Since
-no information on a good estimate of <span class="math inline">\(p\)</span>, use <span class="math inline">\(p^{*} = 0.5\)</span>.</p>
-<p><span class="math display">\[1.96 \sqrt{\frac{(0.5)(1 - 0.5)}{n}} \le 0.03
-\quad\Longrightarrow\quad
-n = \left(\frac{1.96}{0.03}\right)^{2} (0.5)(0.5) \approx 1067.1.\]</span>
-Round up: <span class="math display">\[n = 1068.\]</span></p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-104" class="example"><strong>Example 14.4  </strong></span>The percentage of people not covered by health care insurance in 2007 in
-the USA was 15.6%. A congressional committee has been charged with
-conducting a sample survey to obtain more current information.</p>
-<ol style="list-style-type: decimal">
-<li><p>What sample size would you recommend if the committee’s goal is to
-estimate the current proportion of individuals without health care
-insurance with a margin of error of 0.03? Use a 95% confidence
-level.</p></li>
-<li><p>Repeat part (a) using a 99% confidence level.</p></li>
-</ol>
-<p><span class="math display">\[\text{(a) } n
-=
-\left(\frac{z^{*}}{E}\right)^{2}
-p^{*}(1-p^{*}),
-\quad z^{*} = 1.96, \; E = 0.03,\; p^{*} = 0.156.\]</span> <span class="math display">\[n
-=
-\left(\frac{1.96}{0.03}\right)^{2}
-(0.156)(1 - 0.156)
-\approx 563.\]</span></p>
-<p><span class="math display">\[\text{(b) } n
-=
-\left(\frac{2.58}{0.03}\right)^{2}
-(0.156)(1 - 0.156)
-\approx 974.\]</span></p>
-</div>
-<div class="example">
-<p><span id="exm:unlabeled-div-105" class="example"><strong>Example 14.5  </strong></span>A consumer advocacy group would like to find the proportion of consumers
-who bought the newest generation of iPhone and were happy with their
-purchase. How large a sample should they take to estimate <span class="math inline">\(p\)</span> with 2%
-margin of error and 90% confidence?</p>
-<p><strong>Parameters:</strong> <span class="math display">\[\begin{aligned}
-E &amp;= 0.02, \quad\text{(margin of error)}\\
-\text{Confidence level} &amp;= 0.90 \;\Longrightarrow\; \alpha = 0.10,\;\alpha/2 = 0.05,\\
-z^{*} &amp;= z_{0.05} = 1.645,\\
-p^{*} &amp;= 0.5,\quad p^{*}(1 - p^{*}) = 0.5 \times 0.5 = 0.25.
-\end{aligned}\]</span></p>
-<p><strong>Sample‐Size Formula:</strong>
-<span class="math display">\[n \;=\; \left(\frac{z^{*}}{E}\right)^{2}\;p^{*}(1 - p^{*}).\]</span></p>
-<p>Substituting <span class="math inline">\(z^{*} = 1.645\)</span>, <span class="math inline">\(E = 0.02\)</span>, and <span class="math inline">\(p^{*}(1 - p^{*}) = 0.25\)</span>:
-<span class="math display">\[\begin{aligned}
-n
-&amp;= \left(\frac{1.645}{0.02}\right)^{2} \times 0.25
-= \bigl(82.25\bigr)^{2} \times 0.25
-= 6{,}764.0625 \times 0.25 \\[0.5em]
-&amp;= 1{,}691.015625.
-\end{aligned}\]</span></p>
-<p>Since <span class="math inline">\(n\)</span> must be a whole number and we always round up to ensure the
-margin of error is at most <span class="math inline">\(2\%\)</span>, we take <span class="math display">\[n = 1{,}692.\]</span></p>
-</div>
+<div id="introduction" class="section level1 unnumbered hasAnchor">
+<h1>Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Uncertainty is an inherent part of everyday life.
+We all face questions regarding uncertainty such as whether
+classes will go ahead as planned on any given day;
+will a flight leave on time;
+will a student pass a certain course?
+Uncertainties might also change depending on other factors,
+such as whether classes will still go ahead as planned when there is a snow warning in effect;
+if a flight is delayed can a person still manage to make their connection;
+will a student pass their course considering that the instructor is known to be a tough grader?</p>
+<p>The ability to quantify uncertainty using rigorous mathematics is a powerful and useful tool.
+Calculating uncertainty on an intuitive level is something that is hard-wired in our DNA,
+such as the decision to fight or flight depending on a given set of circumstances.
+However we cannot always make such intuitive decisions
+based purely on hunches and gut feelings.
+Fortunes have been lost based on someone having a good feeling about something.
+If we have information available, we should make the best prediction possible using this information.
+For instance if we wanted to invest a lot of money in a company, we should use all available data such as
+past sales, market and industry trends, leadership ability of the CEO, forward looking statements etc.
+and with all this information we can then predict whether our investment will be profitable.</p>
+<p>In order for companies to survive and remain competitive in todays
+environment it is essential to monitor industry trends and read markets properly.
+Companies that don’t adapt and stick to an outdated business model
+tend to pay the price.
+At the other end of the spectrum, companies that understand the needs of the consumer,
+build their product around the consumer and keep evolving their product offerings based on
+consumer trends tend to perform well and remain competitive.</p>
+<p>Statistics is the science of uncertainty and it is clearly a very useful subject for business.
+In this book you will be given an introduction to statistics and you will learn the
+framework as well as the language required at the introductory level.
+The material may be daunting at times, but the more you get familiar with the
+subject the more comfortable you will become with it.
+As business students, doing well in a statistics course will give you a competitive
+edge since the ability to interpret and perform quantitative analytics are skills that are highly
+desired by many employers.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="one-sample-confidence-intervals-on-a-proportion.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="descriptive-statistics-and-an-introduction-to-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

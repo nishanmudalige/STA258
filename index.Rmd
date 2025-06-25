@@ -8,6 +8,14 @@ documentclass: book
 description: "This is an example of using the bookdown package. The output format for this example is bookdown::gitbook."
 ---
 
+# STA258: Statistics with Applied Probability {-}
+
+### Nishan Mudalige, Nurlana Alili, Bryan Xu {-}
+
+This is a customized e-book for the course STA258: Statistics with Applied Probability at the University of Toronto at Mississauga.
+
+Please select a chapter on the left in the table of contents
+
 # Introduction {-}
 
 Uncertainty is an inherent part of everyday life. 
