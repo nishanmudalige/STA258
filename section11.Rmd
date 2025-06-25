@@ -1,4 +1,4 @@
-# Introduction to Hypothesis Testing {#ch:intro-hypothesis}
+# Introduction to Hypothesis Testing
 
 ## Test of Hypothesis for One Mean
 
