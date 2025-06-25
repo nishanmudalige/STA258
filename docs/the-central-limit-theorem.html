@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction | _main.knit</title>
+  <title>Chapter 3 The Central Limit Theorem | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction | _main.knit" />
+  <meta property="og:title" content="Chapter 3 The Central Limit Theorem | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction | _main.knit" />
+  <meta name="twitter:title" content="Chapter 3 The Central Limit Theorem | _main.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="sampling-distributions-related-to-a-normal-population.html"/>
 
-<link rel="next" href="descriptive-statistics-and-an-introduction-to-r.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -106,11 +106,57 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="introduction" class="section level1 unnumbered hasAnchor">
-<h1>Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Text goes here.</p>
+<div id="the-central-limit-theorem" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> The Central Limit Theorem<a href="the-central-limit-theorem.html#the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The Central Limit Theorem (CLT) is one of the most important results in
+probability and statistics. It states that, given a sufficiently large
+sample size, the distribution of the sample mean of independent and
+identically distributed (i.i.d.) random variables approaches a normal
+distribution, regardless of the shape of the original distribution.
+Real-life Application of Central Limit Theorem in Financial Analysis.
+The CLT is often used by financial experts to examine stock market
+results.<br />
+Now, let’s discuss Central Limit Theorem with more details. Suppose we
+have a finite number of populations and each population follows a
+distribution with population mean <span class="math inline">\(\mu\)</span> and population variance
+<span class="math inline">\(\sigma^2.\)</span>. Then we take samples of same size <span class="math inline">\(n\)</span> from each population,
+such that we have <span class="math inline">\(\bar{x}_1, \bar{x}_2, ..., \bar{x}_m\)</span> from population
+group <span class="math inline">\(1 \text{ to } m, \text{ respectively.}\)</span> Next, we make a histogram
+using the large collection of sample taken from each population group.
+Then, what we are doing right row is sampling distribution of <span class="math inline">\(\bar{x}\)</span>.
+As a result, <span class="math inline">\(\bar{x}\)</span> follows a normal distribution with mean
+<span class="math inline">\(\mu_{\bar{x}} = \mu\)</span> and variance
+<span class="math inline">\(\sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}\)</span>, which is denoted as the
+following:
+<span class="math display">\[\bar{x} \sim N(\mu_{\bar{x}} = \mu, \text{ } \sigma_{\bar{x}}^{2} = \frac{\sigma^2}{n}).\]</span></p>
+<p>Figure <span class="math inline">\(3.1\)</span> below shows the entire procedure about the Central Limit
+Theorem.</p>
+<div class="float">
+<img src="Section3/Img3/CLT.jpg" alt="Procedure of the Central Limit Theorem" />
+<div class="figcaption">Procedure of the Central Limit Theorem</div>
+</div>
+<p>Now, let’s begin with the proper definition of Central Limit Theorem.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-31" class="definition"><strong>Definition 3.1  </strong></span>Let <span class="math inline">\(X_1, X_2, ..., X_n\)</span> be independent and identically distributed
+random variables with <span class="math inline">\(E(X_i) = \mu\)</span> and <span class="math inline">\(Var(X_i) = \sigma^2 &lt; \infty\)</span>.
+Then, we define the following:
+<span class="math display">\[U_{n} = \frac{\bar{X} - \mu}{(\frac{\sigma}{\sqrt{n}})} \sim N(\mu = 0, \sigma^2 = 1), \text{ where $\bar{X} = \frac{1}{n} \sum_{i =1}^{n}X_i$.}\]</span>
+Then the distribution function of <span class="math inline">\(U_{n}\)</span> converges to the standard
+Normal distribution function as <span class="math inline">\(n \longrightarrow \infty\)</span>. That is,
+<span class="math display">\[\lim_{n\to\infty}P(U_n \le u) = \int_{\infty}^{u} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}}\,dt; \text{ for all u.}\]</span></p>
+</div>
+<p>For this course in particular, we do not need to pay that much attention
+to the proving part of the definition above. However, we use Central
+Limit Theorem to approximate distributions. Here are the two important
+approximations:</p>
+<ul>
+<li><p><span class="math inline">\(\bar{X_n} \approx N(\mu, \frac{\sigma^2}{n});\)</span></p></li>
+<li><p><span class="math inline">\(T = \sum_{i = 1}^{n}X_i \approx N(n\mu, n\sigma^2).\)</span></p></li>
+</ul>
+<p>A reminder that the distribution of <span class="math inline">\(U_n\)</span> in definition <span class="math inline">\(3.1\)</span> and the
+two approximation of distribution above are extremely important in this
+course, until later chapters you may see some materials that are
+similar.</p>
 
 </div>
             </section>
@@ -118,8 +164,8 @@
           </div>
         </div>
       </div>
+<a href="sampling-distributions-related-to-a-normal-population.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="descriptive-statistics-and-an-introduction-to-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
