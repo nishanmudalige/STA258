@@ -5,3 +5,7 @@ graphical-techniques
 histograms
 box-plots
 introduction-to-r
+sampling-distributions-related-to-a-normal-population
+normal-distribution
+gamma-and-chi-square-distribution
+students-t-distribution-and-f-distribution
