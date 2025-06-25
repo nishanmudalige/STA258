@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Descriptive Statistics and an Introduction to R | _main.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Descriptive Statistics and an Introduction to R | _main.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Descriptive Statistics and an Introduction to R | _main.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#descriptive-statistics"><i class="fa fa-check"></i><b>1.2</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="1.3" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#graphical-techniques"><i class="fa fa-check"></i><b>1.3</b> Graphical Techniques</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#histograms"><i class="fa fa-check"></i><b>1.3.1</b> Histograms</a></li>
+<li class="chapter" data-level="1.3.2" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#box-plots"><i class="fa fa-check"></i><b>1.3.2</b> Box-Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#introduction-to-r"><i class="fa fa-check"></i><b>1.4</b> Introduction to R</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="descriptive-statistics-and-an-introduction-to-r" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Descriptive Statistics and an Introduction to R<a href="descriptive-statistics-and-an-introduction-to-r.html#descriptive-statistics-and-an-introduction-to-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Introduction<a href="descriptive-statistics-and-an-introduction-to-r.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Intuitively, statistics can be considered the science of uncertainty. Formally,</p>
+<p><strong>Definition (Statistics).</strong>
+Statistics is the science of collecting, classifying, summarizing, analyzing and interpreting data.</p>
+<p></p>
+<p>In statistics, researchers need to observe behavior, pattern, trends and other types of data to give a conclusion. To make the conclusion more persuasive, researchers require huge amount of data to support them, that’s why study statistics need population.</p>
+<p><strong>Definition (Population).</strong> In statistics, a population is a set of similar observations which is of interest for some experimental questions. It can be a set of existing objects such as all people in Canada, or hypothetical group of existing objects such as the set of all possible hands in a game of poker.</p>
+<p>However, data collection from population is a lot work. Usually, researchers select a finite number of observations to study.</p>
+<p><strong>Definition (Sample).</strong> It refers to a selection of a subset from population that researchers use it to estimate population characteristics.</p>
+<p>Now, we have already chosen a sample, but how do we use it to estimate population characteristics? This is the point where parameter comes to play.</p>
+<p><strong>Definition (Parameter Statistics).</strong> A parameter is a quantity of statistical population which summerizes characteristics of the population. For example, mean, variance and standard deviation.</p>
+<p></p>
+<p>Now, we have set everything we need. A population, a chosen sample in that population with its parameters. Next step is studying. There are two major types of analysis: descriptive and Inferential statistics. In this section, we are only going to give you a rough idea about what they are, more detailed materials will be introduced in later chapters.</p>
+<p><strong>Definition (Descriptive Statistics).</strong> It refers to the summation of all quantitive values that describe characteristics of the population. Usually, we use descriptive statistics to summerize characteristics of a data set.</p>
+<p>Furthermore, we use inferential statistics to do statistical analysis.</p>
+<p><strong>Definition (Inferential Statistics).</strong> It refers to the process of using data analysis to indicate properties of a population. For example, testing hypothesis and confidence interval (both will be introduced in later chapters).</p>
+<p></p>
+<p>At this point, assume that we have finished all procedures such as obtaining parameters and analyzing properties. Now, another important thing is illustrating all the discovery.</p>
+<p><strong>Definition (Qualitative Data).</strong> This type of illustration refers to showing categorical data. For example, lecture notes from a course, open-question survey.</p>
+<p>To illustrate numerical data, we use quantitative data.</p>
+<p><strong>Definition (Quantitative Data).</strong> Unless the previous type of illustration, quantitative data is represented numerically, including anything that can be counted, measured, or given a numerical value. For example, STA258 final mark score range from 100 different students who have taken this course.</p>
+</div>
+<div id="descriptive-statistics" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Descriptive Statistics<a href="descriptive-statistics-and-an-introduction-to-r.html#descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Previously, we defined descriptive statistics. Now, let’s introduce what exact they are.\</p>
+<p></p>
+<p>Sample mean (or sample average) is the average value of a sample which is selected from an interested population of an experiment. Usually, the sample mean is used to estimate population mean. In other words, we say that the sample mean is an estimator of population mean.</p>
+<p><strong>Definition (Sample Mean).</strong> Let <span class="math inline">\(x_1, x_2, x_3, ..., x_n\)</span> be a sample of data points. We define sample mean of the sample data points (<span class="math inline">\(\bar{x}\)</span>) as the following: <span class="math display">\[ \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i.\]</span> Also, we define sample variance of the sample data points (<span class="math inline">\(s^2\)</span>) as: <span class="math display">\[ s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2.\]</span> Moreover, the standard deviation of the sample of data points (<span class="math inline">\(s\)</span>) is: <span class="math display">\[ s = \sqrt{s^2}, \quad \text{for } s &gt; 0.\]</span></p>
+<p>Now, let’s move to variance. It refers to the expected value of the squared deviation from the mean of a random variable in a population. Similarly, we do have sample variance as well, which is the expected value of the squared deviation from the mean of a random variable in a selected sample. At this point, we can still use sample variance to estimate population variance with adjustment, because the sample variance may differ significantly based on what data points are chosen from that population.</p>
+<p><strong>Definition (Sample Variance).</strong> Let <span class="math inline">\(x_1, x_2, x_3, ..., x_n\)</span> be a sample of data points, we define sample variance of the sample data points (<span class="math inline">\(s^2\)</span>) as: <span class="math display">\[ s^2 = \frac{1}{n-1} \sum_{i=1}^{n}(x_i - \bar{x})^2, \text{ where $\bar{x}$ is the sample mean of the data points.}\]</span></p>
+<p>Next is standard deviation. It is a measure of the amount of variation of the values of a variable about its mean. If standard deviation is relatively larger, then data points are widely spread out from the mean. Otherwise, data points stay close from the mean. Also, standard deviation is obtained by taking squared root from variance which is dependent on the choices of data points as well. To use sample standard deviation as an estimator to population standard deviation, we still need to adjust it.</p>
+<p><strong>Definition (Sample Standard Deviation).</strong> Let <span class="math inline">\(x_1, x_2, x_3, ..., x_n\)</span> be a sample of data points. The standard deviation of the sample of data points (<span class="math inline">\(s\)</span>) is: <span class="math display">\[ s = \sqrt{s^2}, \quad \text{for } s &gt; 0.\]</span></p>
+<p></p>
+<p>The median and mode are two important measures of central tendency used in statistics to summarize and understand data. The median represents the middle value in a sorted dataset, giving a sense of the center that is not affected by extreme values or outliers. In contrast, the mode is the value that appears most frequently in a dataset, making it useful for identifying common or repeated observations.</p>
+<strong>Definition (Median).</strong> Let: <span class="math inline">\(x_1, x_2, x_3, ... , x_n\)</span> be a collection of data points which is arranged in ascending order from the smallest value to the largest value (or descending order from the largest value to the smallest value in that collection). The median of the given collection of data points is the middle value in that collection, which equally spreads the collection into two parts. Half of all the collection values are above the median value and the rest of the values in the collection is below the median value.
+<p>Now, let’s introduce mode.</p>
+<p><strong>Definition (Mode).</strong> It refers to a value that appears the most frequent than the appearance of all other values in a given dataset.</p>
+<p></p>
+<p>Percentiles and quartiles are statistical measures used to describe the distribution of data. A percentile indicates the value below which a given percentage of observations fall, helping to understand relative standing within a dataset. Quartiles, a specific type of percentile, divide the data into four equal parts (Q1, Q2/median, and Q3), providing insights into the spread and central tendency.</p>
+<strong>Definition (Percentile and Quartile).</strong> Let: <span class="math inline">\(x_1, x_2, ..., x_n\)</span> be a collection of data points in either ascending order. Percentile is denoted as: <span class="math inline">\(p^{th}\)</span>, which indicates <span class="math inline">\(p \%\)</span> of observations are below to a such value. Quartiles, are special cases of percentile which equally spread the collection of data into four parts. Each part contains <span class="math inline">\(25\%\)</span> of the entire collection. More specifically, we define quartiles as the following:
+<p>Moreover, we use <span class="math inline">\(Q_3 - Q_1\)</span> to calculate interquartile range (I.P.R), which shows the spread of the whole data set.</p>
+<p></p>
+<p>The two terms ‘skewness’ and ‘symmetry’ are used to describe the shape of probability distribution. There are two types of skewness: left (or negative) skew and right (or positive) skew. In real life, a famous distribution highly used in hypothesis testing which is <span class="math inline">\(\chi_{n}^{2}\)</span> with <span class="math inline">\(n\)</span> degrees of freedom, is right skewed probability distribution function. Another example regarding to symmetry is normal distribution such that its probability under its curve greater than <span class="math inline">\(\mu\)</span> is same as the probability below than <span class="math inline">\(\mu\)</span>. Now let’s introduce the proper definition of skewness and symmetry.</p>
+<p><strong>Definition (Skewness).</strong> Skewness refers to such a measure of the asymmetry of the probability distribution of a real-valued random variable about its mean. The skewness value can be positive, zero, negative or undefined.</p>
+<p>Now, let’s break down the main definition of skewness and symmetry:</p>
+<p><strong>Definition (Left (or Negative) Skew).</strong> By observing given probability distribution curve, if the left tail of the curve is longer than the right tail the mass of the distribution is concentrated on the right of the figure, then we say that probability distribution is left skew or negative skew. (See figure below)</p>
+<div class="float">
+<img src="Section1/img/Leftskew.jpg" alt="Visualization of left skew probability distribution" />
+<div class="figcaption">Visualization of left skew probability distribution</div>
+</div>
+<p><strong>Definition (Right (or Positive) Skew).</strong> By observing given probability distribution curve, if the right tail of the curve is longer than the left tail the mass of the distribution is concentrated on the left of the figure, then we say that probability distribution is right skew or positive skew. (See figure below)</p>
+<div class="float">
+<img src="Section1/img/Rightskew.jpg" alt="Visualization of right skew probability distribution" />
+<div class="figcaption">Visualization of right skew probability distribution</div>
+</div>
+<p>Symmetry is a special case of skewness when the value of skewness is <span class="math inline">\(0\)</span>.</p>
+<p><strong>Definition (Symmetry).</strong> In statistics, symmetry s a probability distribution is reflected around a vertical line at some value of the random variable represented by the distribution. Probability under the curve below that value is equal to probability under the curve greater than that value. (see figure below)</p>
+<p>Since symmetry is a special case, so that it has a unique property as the following:</p>
+<div class="float">
+<img src="Section1/img/Symmetry.jpg" alt="Visualization of symmetric probability distribution" />
+<div class="figcaption">Visualization of symmetric probability distribution</div>
+</div>
+<p></p>
+</div>
+<div id="graphical-techniques" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Graphical Techniques<a href="descriptive-statistics-and-an-introduction-to-r.html#graphical-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In statistics, there are lots of types of graph to illustrate data, for example histograms and box-plots. This technique is used in the field of statistics for data visualization. Our objective is to both be able to identify some classical types of graph and interpret key statistical values (descriptive statistical values) from it.</p>
+<div id="histograms" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Histograms<a href="descriptive-statistics-and-an-introduction-to-r.html#histograms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p></p>
+<p>Histogram is a graphical representation of data that uses bars to display the frequency distribution of a dataset. Unlike bar graphs, which represent categorical data, histograms group numerical data into intervals (bins) and show how many values fall into each range. This makes histograms ideal for visualizing the shape, spread, and central tendency of continuous data, helping identify patterns such as symmetry, skewness, and outliers.</p>
+<div class="float">
+<img src="Section1/img/Histogram.jpg" alt="Visualization of histograms" />
+<div class="figcaption">Visualization of histograms</div>
+</div>
+<p></p>
+<p></p>
+<p>A histogram visually represents the distribution of numerical data, making it a useful tool for assessing skewness and symmetry. It is quite straightforward to estimate the skewness of histograms by simply drawing a curve above bins on the histogram.\</p>
+<p>For a histogram to have a left (or negative) skew probability distribution:</p>
+<div class="float">
+<img src="Section1/img/HisL.jpg" alt="Visualization of a histogram has a left (or negative) skew probability distribution" />
+<div class="figcaption">Visualization of a histogram has a left (or negative) skew probability distribution</div>
+</div>
+<p>For a histogram to have a right (or positive) skew probability distribution:</p>
+<div class="float">
+<img src="Section1/img/HisR.jpg" alt="Visualization of a histogram has a right (or positive) skew probability distribution" />
+<div class="figcaption">Visualization of a histogram has a right (or positive) skew probability distribution</div>
+</div>
+<p>For a histogram to have a symmetric probability distribution:</p>
+<div class="float">
+<img src="Section1/img/HisS.jpg" alt="Visualization of a histogram has a symmetric probability distribution" />
+<div class="figcaption">Visualization of a histogram has a symmetric probability distribution</div>
+</div>
+</div>
+<div id="box-plots" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Box-Plots<a href="descriptive-statistics-and-an-introduction-to-r.html#box-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A boxplot (or box-and-whisker plot) is a standardized way to display data distribution based on a five-number summary: minimum, first quartile (Q1), median (Q2), third quartile (Q3), and maximum. The box represents the interquartile range (IQR), while the whiskers show variability outside Q1 and Q3. Outliers are plotted as individual points. Boxplots efficiently compare distributions and highlight skewness, spread, and outliers. (See figure below)</p>
+<div class="float">
+<img src="Section1/img/BoxPlot.jpg" alt="Visualization of a box-plot" />
+<div class="figcaption">Visualization of a box-plot</div>
+</div>
+<p>Similar to histograms, we can still obtain information about skewness and symmetry, by observing the cut from the line of Q2.\</p>
+<p>If the median (Q2) cuts the box with upper area smaller than lower area, then we say that box-plot with left skew probability distribution. Or, if the median (Q2) cuts the box with upper area larger than lower area, then we say that box-plot with right skew probability distribution.\</p>
+<p>Otherwise, if the median (Q2) cuts the box with upper area equal to lower area, then we say that box-plot with symmetric probability distribution.</p>
+<div class="float">
+<img src="Section1/img/Bskew.jpg" alt="Visualization of a box-plot with skew and symmetric probability distribution" />
+<div class="figcaption">Visualization of a box-plot with skew and symmetric probability distribution</div>
+</div>
+</div>
+</div>
+<div id="introduction-to-r" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Introduction to R<a href="descriptive-statistics-and-an-introduction-to-r.html#introduction-to-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>R is used for data manipulation, statistics, and graphics. It is made of: operations (<span class="math inline">\(+\)</span>,$ -$, <span class="math inline">\(&lt;\)</span>) which is for calculations on vectors, arrays and matrices; a huge collection of functions; facilities for making unlimited types quality graphs; user contributed packages (sets of related functions); the ability to interface with procedures written in C, C+, or FORTRAN and to write additional primitives. R is also an open-source computing package which has seen a huge growth in popularity in the last few years (Please use this website: <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a>, to download R).\</p>
+<p></p>
+<p>RStudio is a relatively new editor specially targeted at R. RStudio is cross-platform, free and open-source software (Please use: <a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a>, to download Rstudio).\</p>
+<p></p>
+<p>This is just a demonstration of how to start and use R-studio.</p>
+<ol style="list-style-type: decimal">
+<li>First of all, we need to know which dataset are we going to make into a histogram. In this case, as an example, we are going to use the waiting time in faithful in R-studio.\</li>
+<li>For any dataset, use the code: names(faithful) to get it. (inside the parentheses, type the names of variables you want in faithful dataset)\</li>
+<li>Then, we proceed with the code: hist(faithful$waiting) to get a basic plot.\</li>
+</ol>
+<div class="float">
+<img src="Section1/img/R1.jpg" alt="R-studio first three steps (by following the instructions, you should get this histogram)" />
+<div class="figcaption">R-studio first three steps (by following the instructions, you should get this histogram)</div>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Furthermore, we can also get more information. For example, by keep proceeding with the code: hist(faithful$waiting,plot=FALSE)$breaks, R-studio will show you all the breaking points between histogram cells.</li>
+</ol>
+<div class="float">
+<img src="Section1/img/R2.jpg" alt="R-studio the forth step(by following the instructions, you should get this histogram)" />
+<div class="figcaption">R-studio the forth step(by following the instructions, you should get this histogram)</div>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
