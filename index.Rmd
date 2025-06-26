@@ -1,6 +1,6 @@
----
-title: "My title"
-author: "Me "
+ ---
+title: "Demo Book"
+author: "Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output:
@@ -34,7 +34,7 @@ header-includes:
 ---
 
 
-# A sample Tikz Graphic {-}
+# STA258: Statistics with Applied Probability {-}
 
 ```{r, echo=FALSE, engine='tikz', echo=FALSE, out.width='90%', fig.ext='png'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
@@ -42,7 +42,7 @@ header-includes:
 \begin{tikzpicture}
   \filldraw[fill=red] (0,0.5) circle (0.5);
   \filldraw[fill=blue] (1,0) rectangle (2,1);
-  \filldraw[fill=green] (2.5,0) -- (3.125,1) -- (3.75,0) -- cycle;
+  \filldraw[fill=green] (2.5,0) -- (3,1) -- (3.75,0) -- cycle;
 \end{tikzpicture}
 ```
 
@@ -86,6 +86,11 @@ header-includes:
 ```
 -->
 
+### Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu {-}
+
+This is a customized e-book for the course STA258: Statistics with Applied Probability at the University of Toronto at Mississauga.
+
+Please select a chapter on the left in the table of contents
 
 # Introduction {-}
 
