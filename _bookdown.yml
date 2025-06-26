@@ -9,6 +9,15 @@ on:
   push:
     branches: [ main ]
 
+# bookdown::gitbook:
+#   css: style.css
+#   config:
+#     new_session: yes      # if you need fresh LaTeX sessions
+#   fig_path: "figures/"    # no leading underscore
+#   dev: "png"              # or "svg"
+#   fig_ext: "png"
+
+
 jobs:
   render:
     runs-on: ubuntu-latest

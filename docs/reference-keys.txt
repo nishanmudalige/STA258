@@ -187,4 +187,3 @@ inference-for-simple-linear-regression
 inference-on-regression
 anova-table-analysis-of-variance
 residual-plots
-introduction
