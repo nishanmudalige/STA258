@@ -36,7 +36,7 @@ header-includes:
 
 # STA258: Statistics with Applied Probability {-}
 
-```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext='png'}
+```{r, echo=FALSE, engine='tikz', echo=FALSE, out.width='90%', fig.ext='png'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 
 \definecolor{mygrey}{HTML}{dadde8}
