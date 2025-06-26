@@ -206,8 +206,7 @@ Let $X \sim \text{Bin}(n, p)$. The mean of $X$ is $$E(X) = \mu = np$$
 
     x <- seq(0, 10, by=1)
     y <- dbinom(x, 10, 1/6)
-
-    plot(x, y, type="p", col="blue", pch=19)
+    
 :::
 
 **Probability Mass Functions (PMFs) for increasing $n$:**
@@ -218,16 +217,16 @@ $n$. As $n$ increases, the binomial distribution begins to resemble a
 normal distribution.
 
 ![PMF of Binomial distribution with $n = 10$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_plot.pdf){width="80%"}
+$p = \frac{1}{6}$.](_main_files/figure-html/pmf_plot.png){width="80%"}
 
 ![PMF of Binomial distribution with $n = 50$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_n50.pdf){width="80%"}
+$p = \frac{1}{6}$.](_main_files/figure-html/pmf_n50.png){width="80%"}
 
 ![PMF of Binomial distribution with $n = 100$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_n100.pdf){width="80%"}
+$p = \frac{1}{6}$.](_main_files/figure-html/pmf_n100.png){width="80%"}
 
 ![PMF of Binomial distribution with $n = 300$ and
-$p = \frac{1}{6}$.](Section4/images/pmf_n300.pdf){width="80%"}
+$p = \frac{1}{6}$.](_main_files/figure-html/pmf_n300.png){width="80%"}
 
 ## Sampling Distribution of a Sample Proportion and the Normal Approximation
 
@@ -253,7 +252,7 @@ Then:
   $\sqrt{ \frac{p(1 - p)}{n} }$.
 
 ![Binomial distribution with $n = 300$, $p = \frac{1}{6}$ and its Normal
-approximation.](Section4/images/binomial_normal.pdf){width="90%"}
+approximation.](_main_files/figure-html/binomial_normal.png){width="90%"}
 
 According to the Central Limit Theorem (CLT), the sampling distribution
 of a sample proportion becomes approximately normal as the sample size
