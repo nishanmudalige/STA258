@@ -7,7 +7,7 @@ output:
   bookdown::gitbook
 knit: bookdown::render_book
 documentclass: book
-description: "This is an example of using the bookdown package. The output format for this example is bookdown::gitbook."
+description: "Bookdown hosted on github using bookdown::gitbook."
 header-includes: 
   - \usepackage{tikz}
   - \usepackage{pgfplots}
