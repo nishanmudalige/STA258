@@ -38,3 +38,4 @@
 \contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{78}{section.10.4}%
 \contentsline {chapter}{\numberline {12}One Sample Hypothesis Test on a Proportion and Variance}{80}{chapter.12}%
 \contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{80}{section.12.1}%
+\contentsline {section}{\numberline {12.2}One Sample Hypothesis Tests for a Variance}{83}{section.12.2}%
