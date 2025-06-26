@@ -1,10 +1,10 @@
  ---
 title: "Demo Book"
-author: "Nishan Mudalige"
+author: "Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output:
-  bookdown::gitbook: default
+  bookdown::gitbook
 knit: bookdown::render_book
 documentclass: book
 description: "This is an example of using the bookdown package. The output format for this example is bookdown::gitbook."
@@ -36,7 +36,7 @@ header-includes:
 
 # STA258: Statistics with Applied Probability {-}
 
-```{r,echo=FALSE,engine='tikz'}
+```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 
 \definecolor{mygrey}{HTML}{dadde8}
@@ -75,7 +75,7 @@ header-includes:
 ```
 
 
-### Nishan Mudalige, Nurlana Alili, Bryan Xu {-}
+### Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu {-}
 
 This is a customized e-book for the course STA258: Statistics with Applied Probability at the University of Toronto at Mississauga.
 
