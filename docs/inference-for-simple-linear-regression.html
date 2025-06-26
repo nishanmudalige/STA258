@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 15 Inference for Simple Linear Regression | _main.knit</title>
+  <title>Chapter 16 Inference for Simple Linear Regression | _main.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 15 Inference for Simple Linear Regression | _main.knit" />
+  <meta property="og:title" content="Chapter 16 Inference for Simple Linear Regression | _main.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 15 Inference for Simple Linear Regression | _main.knit" />
+  <meta name="twitter:title" content="Chapter 16 Inference for Simple Linear Regression | _main.knit" />
   
   
   
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="two-sample-hypothesis-tests.html"/>
+<link rel="prev" href="introduction-to-simple-linear-regression.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -72,7 +72,7 @@
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>STA258: Statistics with Applied Probability</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Nurlana Alili, Bryan Xu</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-masoud-ataei-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
 <li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
@@ -216,16 +216,23 @@
 <li class="chapter" data-level="14.4" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#two-sample-hypothesis-test-on-proportions"><i class="fa fa-check"></i><b>14.4</b> Two Sample Hypothesis Test on Proportions</a></li>
 <li class="chapter" data-level="14.5" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#two-sample-hypothesis-test-on-variances"><i class="fa fa-check"></i><b>14.5</b> Two Sample Hypothesis Test on Variances</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html"><i class="fa fa-check"></i><b>15</b> Inference for Simple Linear Regression</a>
+<li class="chapter" data-level="15" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html"><i class="fa fa-check"></i><b>15</b> Introduction to Simple Linear Regression</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#inference-on-regression"><i class="fa fa-check"></i><b>15.1</b> Inference on Regression</a>
+<li class="chapter" data-level="15.1" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#measures-of-linear-relationship"><i class="fa fa-check"></i><b>15.1</b> Measures of Linear Relationship</a></li>
+<li class="chapter" data-level="15.2" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#least-squares-method"><i class="fa fa-check"></i><b>15.2</b> Least Squares Method</a></li>
+<li class="chapter" data-level="15.3" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#simple-linear-regression"><i class="fa fa-check"></i><b>15.3</b> Simple Linear Regression</a></li>
+<li class="chapter" data-level="15.4" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#sst-sse-and-ssr"><i class="fa fa-check"></i><b>15.4</b> SST, SSE and SSR</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html"><i class="fa fa-check"></i><b>16</b> Inference for Simple Linear Regression</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#inference-on-regression"><i class="fa fa-check"></i><b>16.1</b> Inference on Regression</a>
 <ul>
 <li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#estimating-variance-in-linear-regression"><i class="fa fa-check"></i>Estimating Variance in Linear Regression</a></li>
 <li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#the-regression-model"><i class="fa fa-check"></i>The Regression Model</a></li>
 <li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#interpreting-confidence-intervals-for-beta_1"><i class="fa fa-check"></i>Interpreting Confidence Intervals for <span class="math inline">\(\beta_1\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="15.2" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#anova-table-analysis-of-variance"><i class="fa fa-check"></i><b>15.2</b> ANOVA Table (ANalysis Of VAriance)</a></li>
-<li class="chapter" data-level="15.3" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#residual-plots"><i class="fa fa-check"></i><b>15.3</b> Residual Plots</a>
+<li class="chapter" data-level="16.2" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#anova-table-analysis-of-variance"><i class="fa fa-check"></i><b>16.2</b> ANOVA Table (ANalysis Of VAriance)</a></li>
+<li class="chapter" data-level="16.3" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#residual-plots"><i class="fa fa-check"></i><b>16.3</b> Residual Plots</a>
 <ul>
 <li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#what-to-look-for-in-a-good-residual-plot"><i class="fa fa-check"></i>What to Look for in a Good Residual Plot</a></li>
 </ul></li>
@@ -247,10 +254,10 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="inference-for-simple-linear-regression" class="section level1 hasAnchor" number="15">
-<h1><span class="header-section-number">Chapter 15</span> Inference for Simple Linear Regression<a href="inference-for-simple-linear-regression.html#inference-for-simple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="inference-on-regression" class="section level2 hasAnchor" number="15.1">
-<h2><span class="header-section-number">15.1</span> Inference on Regression<a href="inference-for-simple-linear-regression.html#inference-on-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="inference-for-simple-linear-regression" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">Chapter 16</span> Inference for Simple Linear Regression<a href="inference-for-simple-linear-regression.html#inference-for-simple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="inference-on-regression" class="section level2 hasAnchor" number="16.1">
+<h2><span class="header-section-number">16.1</span> Inference on Regression<a href="inference-for-simple-linear-regression.html#inference-on-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In previous chapters, we focused on estimating regression parameters and
 interpreting the fitted line. In this chapter, we take a step further by
 conducting formal inference on the slope and intercept of a simple
@@ -304,12 +311,12 @@ is the line:</p>
 <p><span class="math display">\[b_0 = \bar{y} - b_1 \bar{x}\]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-106" class="definition"><strong>Definition 15.1  </strong></span>The <strong>least-squares regression line</strong> of <span class="math inline">\(y\)</span> on <span class="math inline">\(x\)</span> is the line that
+<p><span id="def:unlabeled-div-117" class="definition"><strong>Definition 16.1  </strong></span>The <strong>least-squares regression line</strong> of <span class="math inline">\(y\)</span> on <span class="math inline">\(x\)</span> is the line that
 makes the sum of the squares of the vertical distances of the data
 points from the line as small as possible.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-107" class="example"><strong>Example 15.1  </strong></span>Suppose an appliance store conducts a 5-month experiment to determine
+<p><span id="exm:unlabeled-div-118" class="example"><strong>Example 16.1  </strong></span>Suppose an appliance store conducts a 5-month experiment to determine
 the effect of advertising on sales revenue. The results are shown in a
 table below. The relationship between sales revenue, <span class="math inline">\(y\)</span>, and
 advertising expenditure, <span class="math inline">\(x\)</span>, is hypothesized to follow a first-order
@@ -431,7 +438,7 @@ sampling distribution of <span class="math inline">\(\hat{\beta}_1\)</span> (est
 \quad = \quad
 \hat{\beta}_1 \pm t_{(n-2, \, \alpha/2)} \cdot \frac{s}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2}}\]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-108" class="example"><strong>Example 15.2  </strong></span>Revisit the example on advertising and sales and construct a 95%
+<p><span id="exm:unlabeled-div-119" class="example"><strong>Example 16.2  </strong></span>Revisit the example on advertising and sales and construct a 95%
 confidence interval on the slope. Provide an interpretation of the CI.</p>
 <p>From earlier: <span class="math display">\[\hat{y} = -0.1 + 0.7x\]</span></p>
 <div class="center">
@@ -567,7 +574,7 @@ freedom.</p>
 <span class="math display">\[\text{test stat} = \frac{\text{statistic} - \text{hypothesized value}}{\text{SE(statistic)}}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-109" class="example"><strong>Example 15.3  </strong></span>For the advertising example, perform a two-sided hypothesis test on the
+<p><span id="exm:unlabeled-div-120" class="example"><strong>Example 16.3  </strong></span>For the advertising example, perform a two-sided hypothesis test on the
 slope.</p>
 <p><strong>Hypotheses:</strong> <span class="math display">\[H_0\!: \beta_1 = 0
 \qquad
@@ -609,7 +616,7 @@ H_a : \beta_1 &lt; 0 &amp; \quad \text{is } P(T &lt; t).
 \end{aligned}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-110" class="example"><strong>Example 15.4  </strong></span><span class="math display">\[\alpha = 0.05\]</span></p>
+<p><span id="exm:unlabeled-div-121" class="example"><strong>Example 16.4  </strong></span><span class="math display">\[\alpha = 0.05\]</span></p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(H_0: \beta_1 = 0 \quad \text{vs} \quad H_a: \beta_1 &gt; 0\)</span></p></li>
 <li><p><span class="math inline">\(t^* = \frac{b_1}{SE_{b_1}} = \frac{0.7}{0.1914} = 3.6572\)</span></p></li>
@@ -723,8 +730,8 @@ F-statistic: 180.6 on 1 and 98 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </div>
-<div id="anova-table-analysis-of-variance" class="section level2 hasAnchor" number="15.2">
-<h2><span class="header-section-number">15.2</span> ANOVA Table (ANalysis Of VAriance)<a href="inference-for-simple-linear-regression.html#anova-table-analysis-of-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="anova-table-analysis-of-variance" class="section level2 hasAnchor" number="16.2">
+<h2><span class="header-section-number">16.2</span> ANOVA Table (ANalysis Of VAriance)<a href="inference-for-simple-linear-regression.html#anova-table-analysis-of-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Analysis of Variance (ANOVA) is a statistical method used to assess
 whether variation in a response variable can be explained by predictor
 variables in a regression model. It summarizes sources of variation
@@ -778,7 +785,7 @@ ANOVA can be used for testing: <span class="math display">\[\begin{aligned}
 <p><strong>Reference distribution:</strong> <span class="math inline">\(F\)</span> with numerator df = <span class="math inline">\(p\)</span>, denominator df
 = <span class="math inline">\(n - p - 1\)</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-111" class="example"><strong>Example 15.5  </strong></span>We fitted a simple linear regression model using:</p>
+<p><span id="exm:unlabeled-div-122" class="example"><strong>Example 16.5  </strong></span>We fitted a simple linear regression model using:</p>
 <div class="tcolorbox">
 <pre><code>x = c(1,2,3,4,5);
 y = c(1,1,2,2,4);
@@ -815,7 +822,7 @@ conclude that <span class="math inline">\(x\)</span> has a statistically signifi
 with <span class="math inline">\(y\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-112" class="example"><strong>Example 15.6  </strong></span>We consider data on apartments near UTM, with price (in thousands of
+<p><span id="exm:unlabeled-div-123" class="example"><strong>Example 16.6  </strong></span>We consider data on apartments near UTM, with price (in thousands of
 dollars), area (in 100 square feet), and number of beds and baths.</p>
 <div class="center">
 <table>
@@ -1305,7 +1312,7 @@ F-statistic: 10.78 on 1 and 7 DF,  p-value: 0.01341</code></pre>
 </div>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-113" class="definition"><strong>Definition 15.2  </strong></span></p>
+<p><span id="def:unlabeled-div-124" class="definition"><strong>Definition 16.2  </strong></span></p>
 <ul>
 <li><p><strong>Interpolation</strong> is calculating predicted values of <span class="math inline">\(y\)</span> using our
 linear model while working within the range of <span class="math inline">\(x\)</span> in which data was
@@ -1318,8 +1325,8 @@ are done without any foresight can be very inaccurate.</p></li>
 </ul>
 </div>
 </div>
-<div id="residual-plots" class="section level2 hasAnchor" number="15.3">
-<h2><span class="header-section-number">15.3</span> Residual Plots<a href="inference-for-simple-linear-regression.html#residual-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="residual-plots" class="section level2 hasAnchor" number="16.3">
+<h2><span class="header-section-number">16.3</span> Residual Plots<a href="inference-for-simple-linear-regression.html#residual-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Residual plots are used to verify assumptions related to the error terms
 in a regression model.</p>
 <p><span class="math display">\[Y = \beta_0 + \beta_1 X + \varepsilon, \quad \varepsilon \sim \mathcal{N}(0, \sigma^2)\]</span></p>
@@ -1379,7 +1386,7 @@ Examples</div>
           </div>
         </div>
       </div>
-<a href="two-sample-hypothesis-tests.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction-to-simple-linear-regression.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
