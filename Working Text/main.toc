@@ -38,12 +38,13 @@
 \contentsline {section}{\numberline {10.4}Two Sample Confidence Interval on Variances}{78}{section.10.4}%
 \contentsline {chapter}{\numberline {12}One Sample Hypothesis Test on a Proportion and Variance}{80}{chapter.12}%
 \contentsline {section}{\numberline {12.1}One Sample Hypothesis Test on a Proportion}{80}{section.12.1}%
-\contentsline {chapter}{\numberline {14}Two Sample Hypothesis Test}{83}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Two Sample Hypothesis Test on Paired Data}{83}{section.14.1}%
-\contentsline {section}{\numberline {14.2}Two Sample Hypothesis Test on Proportions}{85}{section.14.2}%
-\contentsline {section}{\numberline {14.3}Two Sample Hypothesis Test on Variances}{88}{section.14.3}%
-\contentsline {chapter}{\numberline {15}Introduction to Simple Linear Regression}{89}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Measures of Linear Relationship}{90}{section.15.1}%
-\contentsline {section}{\numberline {15.2}Least Squares Method}{94}{section.15.2}%
-\contentsline {section}{\numberline {15.3}Simple Linear Regression}{96}{section.15.3}%
-\contentsline {section}{\numberline {15.4}SST, SSE and SSR}{100}{section.15.4}%
+\contentsline {section}{\numberline {12.2}One Sample Hypothesis Tests for a Variance}{83}{section.12.2}%
+\contentsline {chapter}{\numberline {14}Two Sample Hypothesis Test}{85}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Two Sample Hypothesis Test on Paired Data}{85}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Two Sample Hypothesis Test on Proportions}{87}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Two Sample Hypothesis Test on Variances}{90}{section.14.3}%
+\contentsline {chapter}{\numberline {15}Introduction to Simple Linear Regression}{91}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Measures of Linear Relationship}{92}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Least Squares Method}{96}{section.15.2}%
+\contentsline {section}{\numberline {15.3}Simple Linear Regression}{98}{section.15.3}%
+\contentsline {section}{\numberline {15.4}SST, SSE and SSR}{102}{section.15.4}%
