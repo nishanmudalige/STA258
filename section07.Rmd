@@ -81,9 +81,10 @@ error of the sample mean $\bar{x}$ is $$\frac{s}{\sqrt{n}}.$$
   place of $\sigma$ causes little extra variation when the sample is
   large.
 :::
-```{r fig:density-curves, echo=FALSE, fig.cap="Comparison of the standard normal distribution and t-distributions with 2 and 9 degrees of freedom.", out.width='80%', fig.align='center'}
+```{r echo=FALSE, fig.cap="Comparison of the standard normal distribution and t-distributions with 2 and 9 degrees of freedom.", out.width='80%', fig.align='center'}
 knitr::include_graphics("Working Text/Section7/images/density_curves.png")
 ```
+
 
 :::::: example
 The composition of the Earth's atmosphere may have changed over time. To
