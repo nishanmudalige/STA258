@@ -295,9 +295,9 @@ default)</span></p>
 <p><strong><span class="math inline">\(\Theta_0\)</span>:</strong> numerical value of the parameter of interest
 hypothesized under the null hypothesis.</p>
 <p><span class="math display">\[\begin{array}{lll}
-H_0: \Theta = \Theta_0 &amp; (\Theta \leq \Theta_0) &amp; H_a: \Theta &gt; \Theta_0 \quad \textcolor{blue}{\text{one-sided (one-tailed)}} \\
-H_0: \Theta = \Theta_0 &amp; (\Theta \geq \Theta_0) &amp; H_a: \Theta &lt; \Theta_0 \quad \textcolor{blue}{\text{one-sided (one-tailed)}} \\
-H_0: \Theta = \Theta_0 &amp;                         &amp; H_a: \Theta \neq \Theta_0 \quad \textcolor{purple}{\text{two-sided (two-tailed)}}
+H_0: \Theta = \Theta_0 &amp; (\Theta \leq \Theta_0) &amp; H_a: \Theta &gt; \Theta_0 \quad {\text{one-sided (one-tailed)}} \\
+H_0: \Theta = \Theta_0 &amp; (\Theta \geq \Theta_0) &amp; H_a: \Theta &lt; \Theta_0 \quad {\text{one-sided (one-tailed)}} \\
+H_0: \Theta = \Theta_0 &amp;                         &amp; H_a: \Theta \neq \Theta_0 \quad {\text{two-sided (two-tailed)}}
 \end{array}\]</span></p>
 <p><strong>Null (<span class="math inline">\(H_0\)</span>):</strong> Represents the current belief (<span style="color: blue">status
 quo</span>) or the safe belief.</p>
@@ -316,34 +316,28 @@ are asked to test)</p>
 <div id="step-4-calculate-the-p-value" class="section level3 unnumbered hasAnchor">
 <h3>Step 4: Calculate the p-value<a href="introduction-to-hypothesis-testing.html#step-4-calculate-the-p-value" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use the test statistic, reference distribution, and refer back to <span class="math inline">\(H_a\)</span>.</p>
-<figure>
-<div class="minipage">
-<embed src="section11/images/hypothesis_right_tail.pdf" />
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="_main_files/figure-html/unnamed-chunk-16-1.png" alt="Right-tailed test: p-value is the area to the right of the test statistic" width="48%" /><img src="_main_files/figure-html/unnamed-chunk-16-2.png" alt="Right-tailed test: p-value is the area to the right of the test statistic" width="48%" />
+<p class="caption">
+Figure 11.1: Right-tailed test: p-value is the area to the right of the test statistic
+</p>
 </div>
-<div class="minipage">
-<embed src="section11/images/hypothesis_right_tail_wide.pdf" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="_main_files/figure-html/unnamed-chunk-17-1.png" alt="Left-tailed test: p-value is the area to the left of the test statistic" width="48%" /><img src="_main_files/figure-html/unnamed-chunk-17-2.png" alt="Left-tailed test: p-value is the area to the left of the test statistic" width="48%" />
+<p class="caption">
+Figure 11.2: Left-tailed test: p-value is the area to the left of the test statistic
+</p>
 </div>
-<figcaption>
-Right-tailed test: <em>p</em>-value is the area to the right
-of the test statistic.
-</figcaption>
-</figure>
-<figure>
-<div class="minipage">
-<embed src="section11/images/hypothesis_left_tail.pdf" />
-</div>
-<div class="minipage">
-<embed src="section11/images/hypothesis_left_tail_wide.pdf" />
-</div>
-<figcaption>
-Left-tailed test: <em>p</em>-value is the area to the left
-of the test statistic.
-</figcaption>
-</figure>
-<div class="float">
-<embed src="section11/images/hypothesis_two_tail.pdf" style="width:52.0%" />
-<div class="figcaption">Two-tailed test: p-value is the total area in both tails beyond <span class="math inline">\(\pm\)</span>
-test statistic.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="_main_files/figure-html/unnamed-chunk-18-1.png" alt="Two-tailed test: p-value is the total area in both tails beyond ±test statistic" width="70%" />
+<p class="caption">
+Figure 11.3: Two-tailed test: p-value is the total area in both tails beyond ±test statistic
+</p>
 </div>
 </div>
 <div id="step-5-compare-p-value-to-level-of-significance-alpha-and-make-a-conclusion" class="section level3 unnumbered hasAnchor">
@@ -424,11 +418,11 @@ x.bar &lt;- rnorm(m, mean = mu.zero, sd = sigma.xbar);
 z.star &lt;- (x.bar - mu.zero) / sigma.xbar;
 hist(z.star, xlab = &quot;differences&quot;, col = &quot;blue&quot;);</code></pre>
 </div>
-<p><strong>Histogram from simulation (see Section 7 for R code format)</strong></p>
-<div class="float">
-<embed src="Section11/images/sweetening_10000_hist.pdf" style="width:60.0%" />
-<div class="figcaption">Histogram of <span class="math inline">\(z_\star\)</span> values from 10,000 simulations under
-<span class="math inline">\(H_0\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<img src="_main_files/figure-html/unnamed-chunk-19-1.png" alt="Histogram of \( z^\star \) values from 10,000 simulations under \( H_0 \)" width="672" />
+<p class="caption">
+Figure 11.4: Histogram of <span class="math inline">\(z^\star\)</span> values from 10,000 simulations under <span class="math inline">\(H_0\)</span>
+</p>
 </div>
 <p><strong>R code (Empirical p-value)</strong></p>
 <div class="tcolorbox">
@@ -495,11 +489,12 @@ decreased. Assume the standard deviation is known to be 5.25 kg.</p>
 <span class="math display">\[z^* = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{42.53 - 45}{5.25/\sqrt{36}} = -2.82\]</span></p>
 <p>Reference distribution: standard normal</p>
 <p><strong>4. Calculate p-value</strong></p>
-<p><span class="math display">\[\text{p-value} = P(Z &lt; -2.82) \approx 0.0024\]</span></p>
-<div class="float">
-<embed src="section11/images/deer_pvalue.pdf" style="width:60.0%" />
-<div class="figcaption">Left-tailed p-value for the test statistic
-<span class="math inline">\(z^* = -2.82\)</span></div>
+<span class="math display">\[\text{p-value} = P(Z &lt; -2.82) \approx 0.0024\]</span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
+<img src="_main_files/figure-html/unnamed-chunk-20-1.png" alt="Left-tailed p-value for the test statistic \( z^* = -2.82 \)" width="70%" />
+<p class="caption">
+Figure 11.5: Left-tailed p-value for the test statistic <span class="math inline">\(z^* = -2.82\)</span>
+</p>
 </div>
 <p><strong>5. Compare p-value with level of significance <span class="math inline">\(\alpha\)</span> and make a
 conclusion:</strong></p>
@@ -927,10 +922,11 @@ sample(die, 1, replace = TRUE)
 sample(die, 6, replace = TRUE)
 ## [1] 1 3 2 6 3 1</code></pre>
 </div>
-<div class="float">
-<embed src="section11/images/simulation_60.pdf" style="width:60.0%" />
-<div class="figcaption">Plot of frequencies from 60 simulations of a fair six-sided
-die.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-21"></span>
+<img src="_main_files/figure-html/unnamed-chunk-21-1.png" alt="Plot of frequencies from 60 simulations of a fair six-sided die" width="70%" />
+<p class="caption">
+Figure 11.6: Plot of frequencies from 60 simulations of a fair six-sided die
+</p>
 </div>
 <div class="definition">
 <p><span id="def:unlabeled-div-80" class="definition"><strong>Definition 11.5  </strong></span>A <strong>random variable</strong> is a variable whose value is a numerical outcome
@@ -981,25 +977,28 @@ x &lt;- seq(0, 10, by = 1);
 y &lt;- dbinom(x, 10, 1/6);
 plot(x, y, type = &quot;p&quot;, col = &quot;blue&quot;, pch = 19);</code></pre>
 </div>
-<div class="float">
-<embed src="section11/images/binomial_pmf.pdf" style="width:65.0%" />
-<div class="figcaption">PMF when <span class="math inline">\(n=10\)</span> and
-<span class="math inline">\(p=1/6\)</span></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
+<img src="_main_files/figure-html/unnamed-chunk-22-1.png" alt="PMF of the Binomial distribution with \( n = 10 \) and \( p = \frac{1}{6} \)" width="70%" />
+<p class="caption">
+Figure 11.7: PMF of the Binomial distribution with <span class="math inline">\(n = 10\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
+</p>
 </div>
-<div class="float">
-<embed src="section11/images/binomial_pmf_100.pdf" style="width:65.0%" />
-<div class="figcaption">PMF when <span class="math inline">\(n=100\)</span> and
-<span class="math inline">\(p=1/6\)</span></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-23"></span>
+<img src="_main_files/figure-html/unnamed-chunk-23-1.png" alt="PMF of the Binomial distribution with \( n = 100 \) and \( p = \frac{1}{6} \)" width="70%" />
+<p class="caption">
+Figure 11.8: PMF of the Binomial distribution with <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
+</p>
 </div>
 <p><strong>R code (PMF values for selected <span class="math inline">\(x\)</span> values)</strong></p>
 <div class="tcolorbox">
 <pre><code>dbinom(c(15, 16, 17, 18), size = 100, prob = 1/6);
 ## [1] 0.10023663 0.10650142 0.10524847 0.09706247</code></pre>
 </div>
-<div class="float">
-<embed src="section11/images/binomial_simulation_histogram.pdf" style="width:65.0%" />
-<div class="figcaption">Simulation: 2000 YouTuber, <span class="math inline">\(n = 100\)</span>, and
-<span class="math inline">\(p = 1/6\)</span></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-24"></span>
+<img src="_main_files/figure-html/unnamed-chunk-24-1.png" alt="Distribution of successes from 2000 simulated YouTubers with \( n = 100 \), \( p = \frac{1}{6} \)" width="70%" />
+<p class="caption">
+Figure 11.9: Distribution of successes from 2000 simulated YouTubers with <span class="math inline">\(n = 100\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span>
+</p>
 </div>
 <p><strong>R code (A few values from our simulation)</strong></p>
 <div class="tcolorbox">
@@ -1011,10 +1010,11 @@ plot(x, y, type = &quot;p&quot;, col = &quot;blue&quot;, pch = 19);</code></pre>
 </div>
 <p>It turns out that our P-value for this simulation is:<br />
 0.133</p>
-<div class="float">
-<embed src="section11/images/sim_vs_theoretical_pmf.pdf" style="width:65.0%" />
-<div class="figcaption">Simulation vs Theoretical
-pmf</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
+<img src="_main_files/figure-html/unnamed-chunk-25-1.png" alt="Simulation vs Theoretical pmf" width="70%" />
+<p class="caption">
+Figure 11.10: Simulation vs Theoretical pmf
+</p>
 </div>
 <div class="tcolorbox">
 <p>Draw an SRS of size <span class="math inline">\(n\)</span> from a large population that contains proportion
@@ -1035,10 +1035,11 @@ has approximately the <span class="math display">\[N\left(p, \sqrt{\frac{p(1 - p
 distribution.</li>
 </ul>
 </div>
-<div class="float">
-<embed src="section11/images/binomial_normal_approximation.pdf" style="width:65.0%" />
-<div class="figcaption">Binomial with Normal
-Approximation</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-26"></span>
+<img src="_main_files/figure-html/unnamed-chunk-26-1.png" alt=" Binomial with Normal Approximation" width="70%" />
+<p class="caption">
+Figure 11.11:  Binomial with Normal Approximation
+</p>
 </div>
 <div class="tcolorbox">
 <p>To <em>test the hypothesis</em> <span class="math inline">\(H_0 : p = p_0\)</span>, compute the <span class="math inline">\(z_\ast\)</span>
@@ -1121,7 +1122,7 @@ strong evidence that the risk has increased?</p>
 </ul>
 <p>In our example it would have a form: <span class="math inline">\(H_0 : p = 0.05\)</span></p>
 <ul>
-<li>The Alternative hypothesis is what the researcher(s) <span class="math display">\[you\]</span> want to
+<li>The Alternative hypothesis is what the researcher(s) want to
 prove: <span class="math inline">\(H_a : p &gt; p_0\)</span></li>
 </ul>
 <p>In our example it would have a form: <span class="math inline">\(H_a : p &gt; 0.05\)</span></p>
@@ -1198,7 +1199,7 @@ abnormalities.</p>
 <li><p>P-value is a conditional probability.</p></li>
 <li><p>It is not the probability that <span class="math inline">\(H_0\)</span> (null hypothesis: current belief)
 is true.</p></li>
-<li><p>It is: P(observed statistic value <span class="math display">\[or even more extreme\]</span> — <span class="math inline">\(H_0\)</span>).
+<li><p>It is: P(observed statistic value — <span class="math inline">\(H_0\)</span>).
 Given <span class="math inline">\(H_0\)</span> (the null hypothesis), because <span class="math inline">\(H_0\)</span> gives the parameter
 values that we need to find required probability.</p></li>
 <li><p>P-value serves as a measure of the strength of the evidence against
@@ -1452,52 +1453,30 @@ the variance of the length of metal pipes is more than <span class="math inline"
 <div class="tcolorbox">
 <p><strong>Assumptions:</strong> <span class="math inline">\(Y_1, Y_2, \ldots, Y_n\)</span> constitute a random sample from
 a Normal distribution with <span class="math inline">\(E(Y_i) = \mu\)</span> and <span class="math inline">\(V(Y_i) = \sigma^2\)</span>.</p>
-<p><strong>Hypotheses:</strong> <span class="math display">\[\begin{aligned}
-H_0 &amp;: \sigma^2 = \sigma_0^2 \\
-H_a &amp;: \left\{
-  \begin{array}{ll}
-    \sigma^2 &gt; \sigma_0^2 &amp; \text{(upper-tailed alternative)} \\
-    \sigma^2 &lt; \sigma_0^2 &amp; \text{(lower-tailed alternative)} \\
-    \sigma^2 \ne \sigma_0^2 &amp; \text{(two-tailed alternative)}
-  \end{array}
-\right.
-\end{aligned}\]</span></p>
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><strong>Test statistic:</strong></td>
-<td align="left"><span class="math inline">\(\chi^2 = \dfrac{(n-1)S^2}{\sigma_0^2}\)</span></td>
-</tr>
-<tr class="even">
-<td align="left"><strong>Rejection Region:</strong></td>
-<td align="left">${</td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left">\begin{array}{ll}</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left">^2 &gt; ^2_&amp; \</td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left">^2 &lt; ^2_{1 - } &amp; \</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left">^2 &gt; ^2_{/2}    ^2 &lt; ^2_{1 - /2} &amp; </td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="left">\end{array}</td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-<td align="left">.$</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Hypotheses:</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; H_0 : \sigma^2 = \sigma_0^2 \\
+&amp; H_a :
+\begin{cases}
+\sigma^2 &gt; \sigma_0^2 &amp; \text{(upper-tailed alternative)} \\
+\sigma^2 &lt; \sigma_0^2 &amp; \text{(lower-tailed alternative)} \\
+\sigma^2 \ne \sigma_0^2 &amp; \text{(two-tailed alternative)}
+\end{cases}
+\end{aligned}
+\]</span></p>
+<p><strong>Test statistic:</strong>
+<span class="math display">\[
+\chi^2 = \frac{(n - 1)S^2}{\sigma_0^2}
+\]</span></p>
+<p><strong>Rejection Region:</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \chi^2 &gt; \chi^2_\alpha &amp;&amp; \text{(upper-tailed RR)} \\
+&amp; \chi^2 &lt; \chi^2_{1-\alpha} &amp;&amp; \text{(lower-tailed RR)} \\
+&amp; \chi^2 &gt; \chi^2_{\alpha/2} \quad \text{or} \quad \chi^2 &lt; \chi^2_{1-\alpha/2} &amp;&amp; \text{(two-tailed RR)}
+\end{aligned}
+\]</span></p>
 </div>
 <div class="example">
 <p><span id="exm:unlabeled-div-87" class="example"><strong>Example 11.17  </strong></span>A manufacturer of car batteries claims that the life of his batteries is
@@ -1514,10 +1493,11 @@ H_a &amp;: \sigma^2 &gt; 0.81
 <p><strong>Step 3. Find Rejection Region.</strong><br />
 From the chi-squared table, the null hypothesis is rejected when
 <span class="math inline">\(\chi^2 &gt; 16.919\)</span>, where <span class="math inline">\(\nu = 9\)</span> degrees of freedom.</p>
-<div class="float">
-<embed src="section11/images/chisq_right_tail.pdf" style="width:70.0%" />
-<div class="figcaption">Right-tailed chi-squared distribution with critical value at
-16.919.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-27"></span>
+<img src="_main_files/figure-html/unnamed-chunk-27-1.png" alt="Right-tailed chi-squared distribution with critical value at 16.919" width="70%" />
+<p class="caption">
+Figure 11.12: Right-tailed chi-squared distribution with critical value at 16.919
+</p>
 </div>
 <p><strong>Step 4. Conclusion.</strong><br />
 The <span class="math inline">\(\chi^2\)</span> statistic is not significant at the 0.05 level. We conclude
