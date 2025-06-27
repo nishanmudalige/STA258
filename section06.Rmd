@@ -228,9 +228,12 @@ illustrated by plotting many intervals simultaneously and observing.
     abline(v = 0, lty = 2);
 :::
 
-![Simulated 95% confidence intervals for the population mean. Red "X"
-marks indicate intervals that do not contain the true mean
-($\mu = 0$).](Section6/images/confidence_intervals.pdf){width="60%"}
+```{r echo=FALSE, out.width='80%', fig.align='center',fig.cap="Simulated 95% confidence intervals for the population mean."}
+knitr::include_graphics("Working Text/Section6/images/confidence_intervals.png")
+```
+
+
+
 
 ## Confidence Interval for the Mean of a Normal Population {#confidence-interval-for-the-mean-of-a-normal-population .unnumbered}
 
@@ -243,8 +246,9 @@ $$\bar{x} \pm z_{\ast} \cdot \frac{\sigma}{\sqrt{n}}$$
 The critical value $z_{\ast}$ is illustrated in a Figure below and
 depends on $C$.
 
-![The central area under the standard normal curve with confidence level
-$C$.](Section6/images/normal_confidence_curve.pdf){width="60%"}
+```{r echo=FALSE, out.width='80%', fig.align='center',fig.cap="The central area under the standard normal curve with confidence level \\(C\\)."}
+knitr::include_graphics("Working Text/Section6/images/normal_confidence_curve.png")
+```
 
 ## Large Sample CI for $\mu$ (Normal data) {#large-sample-ci-for-mu-normal-data .unnumbered}
 

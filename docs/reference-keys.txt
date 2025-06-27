@@ -45,6 +45,8 @@ fig:unnamed-chunk-9
 def:unlabeled-div-41
 exm:unlabeled-div-42
 def:unlabeled-div-43
+fig:unnamed-chunk-10
+fig:unnamed-chunk-11
 exm:unlabeled-div-44
 exm:unlabeled-div-45
 exm:unlabeled-div-46
@@ -107,7 +109,7 @@ exm:unlabeled-div-102
 def:unlabeled-div-103
 exm:unlabeled-div-104
 def:unlabeled-div-105
-fig:unnamed-chunk-10
+fig:unnamed-chunk-15
 def:unlabeled-div-106
 def:unlabeled-div-107
 exm:unlabeled-div-108
