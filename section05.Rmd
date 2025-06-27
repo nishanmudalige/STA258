@@ -90,8 +90,9 @@ $$P\left( \left| \frac{X_1 + X_2 + \cdots + X_n}{n} - 3 \right| \geq \epsilon \r
 **Conclusion:** $$\bar{X}_n \xrightarrow{P} 3$$
 :::
 
-![Simulation of running sample mean of Bernoulli($p = 0.5$) trials over
-time.](Section5/images/simulation_plot.pdf){width="72%"}
+```{r echo=FALSE, fig.cap="Simulation of running sample mean of Bernoulli \\(p = 0.5\\) trials over time.", out.width='80%', fig.align='center'}
+knitr::include_graphics("Working Text/Section5/images/simulation_plot.png")
+```
 
 **R Simulation Code (Single Sample Path):**
 
@@ -105,9 +106,9 @@ time.](Section5/images/simulation_plot.pdf){width="72%"}
     abline(h = 0.5, lty = 2, col = "black")
 :::
 
-![Simulation of 10 running sample means of Bernoulli($p = 0.5$) trials
-converging over 100
-trials.](Section5/images/simulation_multi.pdf){width="72%"}
+```{r echo=FALSE, fig.cap="Simulation of 10 running sample means of Bernoulli \\(p = 0.5\\) trials converging over 100 trials.", out.width='80%', fig.align='center'}
+knitr::include_graphics("Working Text/Section5/images/simulation_multi.png")
+```
 
 **R Simulation Code (Multiple Sample Paths):**
 
