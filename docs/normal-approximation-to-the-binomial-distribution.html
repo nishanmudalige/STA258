@@ -436,9 +436,7 @@ successes in these <span class="math inline">\(n\)</span> independent trials is 
 <pre><code>## Pmf of Binomial with n=10 and p=1/6.
 
 x &lt;- seq(0, 10, by=1)
-y &lt;- dbinom(x, 10, 1/6)
-
-plot(x, y, type=&quot;p&quot;, col=&quot;blue&quot;, pch=19)</code></pre>
+y &lt;- dbinom(x, 10, 1/6)</code></pre>
 </div>
 <p><strong>Probability Mass Functions (PMFs) for increasing <span class="math inline">\(n\)</span>:</strong></p>
 <p>The following plots display the probability mass functions (PMFs) for a
@@ -446,22 +444,22 @@ binomial distribution with <span class="math inline">\(p = \frac{1}{6}\)</span> 
 <span class="math inline">\(n\)</span>. As <span class="math inline">\(n\)</span> increases, the binomial distribution begins to resemble a
 normal distribution.</p>
 <div class="float">
-<embed src="Section4/images/pmf_plot.pdf" style="width:80.0%" />
+<img src="_main_files/figure-html/pmf_plot.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 10 and p = \frac{1}{6}." />
 <div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 10\)</span> and
 <span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
 </div>
 <div class="float">
-<embed src="Section4/images/pmf_n50.pdf" style="width:80.0%" />
+<img src="_main_files/figure-html/pmf_n50.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 50 and p = \frac{1}{6}." />
 <div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 50\)</span> and
 <span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
 </div>
 <div class="float">
-<embed src="Section4/images/pmf_n100.pdf" style="width:80.0%" />
+<img src="_main_files/figure-html/pmf_n100.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 100 and p = \frac{1}{6}." />
 <div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 100\)</span> and
 <span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
 </div>
 <div class="float">
-<embed src="Section4/images/pmf_n300.pdf" style="width:80.0%" />
+<img src="_main_files/figure-html/pmf_n300.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 300 and p = \frac{1}{6}." />
 <div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 300\)</span> and
 <span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
 </div>
@@ -487,10 +485,11 @@ that contains proportion <span class="math inline">\(p\)</span> of â€œsuccessesâ
 <li><p>The <strong>standard deviation</strong> of the sampling distribution is
 <span class="math inline">\(\sqrt{ \frac{p(1 - p)}{n} }\)</span>.</p></li>
 </ul>
-<div class="float">
-<embed src="Section4/images/binomial_normal.pdf" style="width:90.0%" />
-<div class="figcaption">Binomial distribution with <span class="math inline">\(n = 300\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span> and its Normal
-approximation.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="Working%20Text/Section4/images/binomial_normal.png" alt="Binomial distribution with \(n = 300\), \(p = \frac{1}{6}\), and its Normal approximation." width="80%" />
+<p class="caption">
+Figure 4.1: Binomial distribution with <span class="math inline">\(n = 300\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span>, and its Normal approximation.
+</p>
 </div>
 <p>According to the Central Limit Theorem (CLT), the sampling distribution
 of a sample proportion becomes approximately normal as the sample size

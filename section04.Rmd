@@ -251,8 +251,11 @@ Then:
 - The **standard deviation** of the sampling distribution is
   $\sqrt{ \frac{p(1 - p)}{n} }$.
 
-![Binomial distribution with $n = 300$, $p = \frac{1}{6}$ and its Normal
-approximation.](_main_files/figure-html/binomial_normal.png){width="90%"}
+```{r echo=FALSE, fig.cap="Binomial distribution with \\(n = 300\\), \\(p = \\frac{1}{6}\\), and its Normal approximation.", out.width='80%', fig.align='center'}
+knitr::include_graphics("Working Text/Section4/images/binomial_normal.png")
+```
+
+
 
 According to the Central Limit Theorem (CLT), the sampling distribution
 of a sample proportion becomes approximately normal as the sample size
