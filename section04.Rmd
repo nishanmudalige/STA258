@@ -220,17 +220,29 @@ binomial distribution with $p = \frac{1}{6}$ and increasing values of
 $n$. As $n$ increases, the binomial distribution begins to resemble a
 normal distribution.
 
-```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 10\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section4/images/pmf_plot.png")
+```{r fig.cap="PMF of Binomial distribution with \\(n = 10\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:10
+y <- dbinom(x, 10, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 10 and p = 1/6")
 ```
-```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 50\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section4/images/pmf_n50.png")
+```{r fig.cap="PMF of Binomial distribution with \\(n = 50\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:50
+y <- dbinom(x, 50, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 50 and p = 1/6")
 ```
-```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 100\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section4/images/pmf_n100.png")
+```{r fig.cap="PMF of Binomial distribution with \\(n = 100\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:100
+y <- dbinom(x, 100, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 100 and p = 1/6")
 ```
-```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 300\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section4/images/pmf_n300.png")
+```{r fig.cap="PMF of Binomial distribution with \\(n = 300\\) and \\(p = \\frac{1}{6}\\)",echo=FALSE, fig.align='center'}
+x <- 0:300
+y <- dbinom(x, 300, 1/6)
+plot(x, y, type = "p", col = "blue", pch = 19,
+     xlab = "x", ylab = "P(X = x)", main = "PMF when n = 300 and p = 1/6")
 ```
 
 ## Sampling Distribution of a Sample Proportion and the Normal Approximation
@@ -256,8 +268,25 @@ Then:
 - The **standard deviation** of the sampling distribution is
   $\sqrt{ \frac{p(1 - p)}{n} }$.
 
-```{r echo=FALSE, fig.cap="Binomial distribution with \\(n = 300\\), \\(p = \\frac{1}{6}\\), and its Normal approximation.", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section4/images/binomial_normal.png")
+```{r fig.cap="Binomial distribution with \\(n = 300\\), \\(p = \\frac{1}{6}\\), and its Normal approximation", echo=FALSE, fig.align='center'}
+# Parameters
+n <- 300
+p <- 1/6
+x <- 0:n
+
+# Binomial PMF
+y_binom <- dbinom(x, size = n, prob = p)
+
+# Normal Approximation
+mu <- n * p
+sigma <- sqrt(n * p * (1 - p))
+y_norm <- dnorm(x, mean = mu, sd = sigma)
+
+# Plot
+plot(x, y_binom, type = "p", col = "blue", pch = 19,
+     xlab = "", ylab = "", main = "")
+lines(x, y_norm, col = "red", lwd = 2)
+legend("topright", legend = "Normal\napproximation", col = "red", lty = 1, bty = "n")
 ```
 
 

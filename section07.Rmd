@@ -81,8 +81,26 @@ error of the sample mean $\bar{x}$ is $$\frac{s}{\sqrt{n}}.$$
   place of $\sigma$ causes little extra variation when the sample is
   large.
 :::
-```{r echo=FALSE, fig.cap="Comparison of the standard normal distribution and t-distributions with 2 and 9 degrees of freedom.", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section7/images/density_curves.png")
+```{r fig.cap="Comparison of the standard normal distribution and t-distributions with 2 and 9 degrees of freedom", echo=FALSE, fig.align='center'}
+# Generate x values
+x <- seq(-4, 4, length = 100)
+
+# Compute densities
+y_norm <- dnorm(x)
+y_t2 <- dt(x, df = 2)
+y_t9 <- dt(x, df = 9)
+
+# Plot the standard normal curve
+plot(x, y_norm, type = "l", lwd = 1.5, col = "black",
+     ylab = "", xlab = "", main = "", ylim = c(0, 0.4))
+
+# Add t-distributions
+lines(x, y_t2, col = "blue", lty = 2, lwd = 1.5)
+lines(x, y_t9, col = "red", lty = 2, lwd = 1.5)
+
+# Add legend
+legend("topright", legend = c("Std. Normal", "t(2)", "t(9)"),
+       col = c("black", "blue", "red"), lty = c(1, 2, 2), lwd = 1.5)
 ```
 
 
@@ -329,8 +347,15 @@ additional tax collected.
 :::
 
 ::: center
-```{r echo=FALSE, fig.cap=" ", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section7/images/tax_histogram.png")
+```{r fig.cap=" ", echo=FALSE, fig.align='center'}
+# Step 1: Load the dataset from the URL
+url <- "https://mcs.utm.utoronto.ca/~nosedal/data/taxes.txt"
+taxes_data <- read.table(url, header = TRUE)
+
+# Step 2: Extract the 'Taxes' column
+taxes <- taxes_data$Taxes
+
+hist(taxes, main = "Histogram for our example", xlab = "taxes", ylab = "frequency", col = "blue")
 ```
 :::
 
@@ -343,8 +368,15 @@ knitr::include_graphics("Working Text/Section7/images/tax_histogram.png")
 :::
 
 ::: center
-```{r echo=FALSE, fig.cap=" ", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section7/images/tax_boxplot.png")
+```{r fig.cap=" ", echo=FALSE, fig.align='center'}
+# Step 1: Load the dataset from the URL
+url <- "https://mcs.utm.utoronto.ca/~nosedal/data/taxes.txt"
+taxes_data <- read.table(url, header = TRUE)
+
+# Step 2: Extract the 'Taxes' column
+taxes <- taxes_data$Taxes
+
+boxplot(taxes, main = "Additional Income Tax", col = "blue")
 ```
 :::
 
@@ -356,8 +388,16 @@ knitr::include_graphics("Working Text/Section7/images/tax_boxplot.png")
 :::
 
 ::: center
-```{r echo=FALSE, fig.cap=" ", out.width='80%', fig.align='center'}
-knitr::include_graphics("Working Text/Section7/images/tax_qqplot.png")
+```{r fig.cap=" ", echo=FALSE, fig.align='center'}
+# Step 1: Load the dataset from the URL
+url <- "https://mcs.utm.utoronto.ca/~nosedal/data/taxes.txt"
+taxes_data <- read.table(url, header = TRUE)
+
+# Step 2: Extract the 'Taxes' column
+taxes <- taxes_data$Taxes
+
+qqnorm(taxes, col = "blue", pch = 19)
+qqline(taxes)
 ```
 :::
 
