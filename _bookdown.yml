@@ -4,6 +4,7 @@ language:
 output_dir: "docs" #for github pages to find it
 
 name: build and deploy bookdown
+delete_merged_file: true
 
 on:
   push:

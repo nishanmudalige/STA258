@@ -43,7 +43,11 @@ where:
 
 - $X \in \{0, 1, \dots, n\}$
 
-The PMF is: $$P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}$$
+The PMF is: 
+$$
+P(X = x) = \textstyle \binom{n}{x} p^x (1 - p)^{n - x}
+$$
+
 
 **Moment Generating Function (MGF):**
 
@@ -216,17 +220,18 @@ binomial distribution with $p = \frac{1}{6}$ and increasing values of
 $n$. As $n$ increases, the binomial distribution begins to resemble a
 normal distribution.
 
-![PMF of Binomial distribution with $n = 10$ and
-$p = \frac{1}{6}$.](_main_files/figure-html/pmf_plot.png){width="80%"}
-
-![PMF of Binomial distribution with $n = 50$ and
-$p = \frac{1}{6}$.](_main_files/figure-html/pmf_n50.png){width="80%"}
-
-![PMF of Binomial distribution with $n = 100$ and
-$p = \frac{1}{6}$.](_main_files/figure-html/pmf_n100.png){width="80%"}
-
-![PMF of Binomial distribution with $n = 300$ and
-$p = \frac{1}{6}$.](_main_files/figure-html/pmf_n300.png){width="80%"}
+```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 10\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
+knitr::include_graphics("Working Text/Section4/images/pmf_plot.png")
+```
+```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 50\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
+knitr::include_graphics("Working Text/Section4/images/pmf_n50.png")
+```
+```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 100\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
+knitr::include_graphics("Working Text/Section4/images/pmf_n100.png")
+```
+```{r echo=FALSE, fig.cap="PMF of Binomial distribution with \\(n = 300\\) and \\(p = \\frac{1}{6}\\).", out.width='80%', fig.align='center'}
+knitr::include_graphics("Working Text/Section4/images/pmf_n300.png")
+```
 
 ## Sampling Distribution of a Sample Proportion and the Normal Approximation
 

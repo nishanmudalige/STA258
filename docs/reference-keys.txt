@@ -30,6 +30,10 @@ def:unlabeled-div-32
 def:unlabeled-div-33
 def:unlabeled-div-34
 fig:unnamed-chunk-3
+fig:unnamed-chunk-4
+fig:unnamed-chunk-5
+fig:unnamed-chunk-6
+fig:unnamed-chunk-7
 exm:unlabeled-div-35
 exm:unlabeled-div-36
 def:unlabeled-div-37
@@ -101,7 +105,7 @@ exm:unlabeled-div-102
 def:unlabeled-div-103
 exm:unlabeled-div-104
 def:unlabeled-div-105
-fig:unnamed-chunk-4
+fig:unnamed-chunk-8
 def:unlabeled-div-106
 def:unlabeled-div-107
 exm:unlabeled-div-108

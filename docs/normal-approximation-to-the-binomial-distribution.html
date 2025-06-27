@@ -303,7 +303,10 @@ Let: <span class="math display">\[X = \text{number of successes in } n \text{ tr
 (with probability <span class="math inline">\(1 - p\)</span>)</p></li>
 <li><p><span class="math inline">\(X \in \{0, 1, \dots, n\}\)</span></p></li>
 </ul>
-<p>The PMF is: <span class="math display">\[P(X = x) = \binom{n}{x} p^x (1 - p)^{n - x}\]</span></p>
+<p>The PMF is:
+<span class="math display">\[
+P(X = x) = \textstyle \binom{n}{x} p^x (1 - p)^{n - x}
+\]</span></p>
 <p><strong>Moment Generating Function (MGF):</strong></p>
 <p>The moment generating function (MGF) of a random variable <span class="math inline">\(X\)</span> is defined
 as: <span class="math display">\[M_X(t) = \mathbb{E}[e^{tX}]\]</span> The MGF uniquely characterizes the
@@ -443,25 +446,29 @@ y &lt;- dbinom(x, 10, 1/6)</code></pre>
 binomial distribution with <span class="math inline">\(p = \frac{1}{6}\)</span> and increasing values of
 <span class="math inline">\(n\)</span>. As <span class="math inline">\(n\)</span> increases, the binomial distribution begins to resemble a
 normal distribution.</p>
-<div class="float">
-<img src="_main_files/figure-html/pmf_plot.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 10 and p = \frac{1}{6}." />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 10\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="Working%20Text/Section4/images/pmf_plot.png" alt="PMF of Binomial distribution with \(n = 10\) and \(p = \frac{1}{6}\)." width="80%" />
+<p class="caption">
+Figure 4.1: PMF of Binomial distribution with <span class="math inline">\(n = 10\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>.
+</p>
 </div>
-<div class="float">
-<img src="_main_files/figure-html/pmf_n50.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 50 and p = \frac{1}{6}." />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 50\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
+<img src="Working%20Text/Section4/images/pmf_n50.png" alt="PMF of Binomial distribution with \(n = 50\) and \(p = \frac{1}{6}\)." width="80%" />
+<p class="caption">
+Figure 4.2: PMF of Binomial distribution with <span class="math inline">\(n = 50\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>.
+</p>
 </div>
-<div class="float">
-<img src="_main_files/figure-html/pmf_n100.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 100 and p = \frac{1}{6}." />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 100\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
+<img src="Working%20Text/Section4/images/pmf_n100.png" alt="PMF of Binomial distribution with \(n = 100\) and \(p = \frac{1}{6}\)." width="80%" />
+<p class="caption">
+Figure 4.3: PMF of Binomial distribution with <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>.
+</p>
 </div>
-<div class="float">
-<img src="_main_files/figure-html/pmf_n300.png" style="width:80.0%" alt="PMF of Binomial distribution with n = 300 and p = \frac{1}{6}." />
-<div class="figcaption">PMF of Binomial distribution with <span class="math inline">\(n = 300\)</span> and
-<span class="math inline">\(p = \frac{1}{6}\)</span>.</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="Working%20Text/Section4/images/pmf_n300.png" alt="PMF of Binomial distribution with \(n = 300\) and \(p = \frac{1}{6}\)." width="80%" />
+<p class="caption">
+Figure 4.4: PMF of Binomial distribution with <span class="math inline">\(n = 300\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>.
+</p>
 </div>
 </div>
 </div>
@@ -485,10 +492,10 @@ that contains proportion <span class="math inline">\(p\)</span> of â€œsuccessesâ
 <li><p>The <strong>standard deviation</strong> of the sampling distribution is
 <span class="math inline">\(\sqrt{ \frac{p(1 - p)}{n} }\)</span>.</p></li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
 <img src="Working%20Text/Section4/images/binomial_normal.png" alt="Binomial distribution with \(n = 300\), \(p = \frac{1}{6}\), and its Normal approximation." width="80%" />
 <p class="caption">
-Figure 4.1: Binomial distribution with <span class="math inline">\(n = 300\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span>, and its Normal approximation.
+Figure 4.5: Binomial distribution with <span class="math inline">\(n = 300\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span>, and its Normal approximation.
 </p>
 </div>
 <p>According to the Central Limit Theorem (CLT), the sampling distribution
