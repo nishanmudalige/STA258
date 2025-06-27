@@ -664,14 +664,37 @@ explore how and why this correction is applied.<br />
 <div id="continuity-correction-table" class="section level3 unnumbered hasAnchor">
 <h3>Continuity Correction Table<a href="normal-approximation-to-the-binomial-distribution.html#continuity-correction-table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="center">
-<p><strong>Binomial Probability</strong> <strong>Continuity Correction</strong> <strong>Normal Approximation</strong><br />
-———————————— ———————————————— —————————————————————————————————– – –</p>
-<p><span class="math inline">\(\displaystyle P(X = x)\)</span> <span class="math inline">\(\displaystyle P(x - 0.5 \leq X \leq x + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(\frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X \leq x)\)</span> <span class="math inline">\(\displaystyle P(X \leq x + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X &lt; x)\)</span> <span class="math inline">\(\displaystyle P(X \leq x - 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \leq \frac{x - 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X \geq x)\)</span> <span class="math inline">\(\displaystyle P(X \geq x - 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \geq \frac{x - 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(X &gt; x)\)</span> <span class="math inline">\(\displaystyle P(X \geq x + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(Z \geq \frac{x + 0.5 - \mu}{\sigma}\right)\)</span></p>
-<p><span class="math inline">\(\displaystyle P(a \leq X \leq b)\)</span> <span class="math inline">\(\displaystyle P(a - 0.5 \leq X \leq b + 0.5)\)</span> <span class="math inline">\(\displaystyle P\left(\frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma}\right)\)</span></p>
+<p><span class="math display">\[
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Binomial Probability} &amp; \textbf{Continuity Correction} &amp; \textbf{Normal Approximation} \\
+\hline
+\displaystyle P(X = x) &amp;
+\displaystyle P(x - 0.5 \leq X \leq x + 0.5) &amp;
+\displaystyle P\left( \frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \leq x) &amp;
+\displaystyle P(X \leq x + 0.5) &amp;
+\displaystyle P\left( Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X &lt; x) &amp;
+\displaystyle P(X \leq x - 0.5) &amp;
+\displaystyle P\left( Z \leq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \geq x) &amp;
+\displaystyle P(X \geq x - 0.5) &amp;
+\displaystyle P\left( Z \geq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X &gt; x) &amp;
+\displaystyle P(X \geq x + 0.5) &amp;
+\displaystyle P\left( Z \geq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(a \leq X \leq b) &amp;
+\displaystyle P(a - 0.5 \leq X \leq b + 0.5) &amp;
+\displaystyle P\left( \frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\end{array}
+\]</span></p>
 </div>
 <p>Suppose that <span class="math inline">\(Y\)</span> has a Binomial distribution with <span class="math inline">\(n = 20\)</span> and
 <span class="math inline">\(p = 0.4\)</span>. We will find the exact probabilities that <span class="math inline">\(Y \leq y\)</span> and
