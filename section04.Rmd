@@ -460,20 +460,40 @@ explore how and why this correction is applied.\
 ### Continuity Correction Table {#continuity-correction-table .unnumbered}
 
 ::: center
-  **Binomial Probability**                        **Continuity Correction**                                                   **Normal Approximation**                                           
-  ------------------------------------ ------------------------------------------------ ----------------------------------------------------------------------------------------------------- -- --
-                                                                                                                                                                                                 
-  $\displaystyle P(X = x)$              $\displaystyle P(x - 0.5 \leq X \leq x + 0.5)$   $\displaystyle P\left(\frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)$     
-                                                                                                                                                                                                 
-  $\displaystyle P(X \leq x)$                 $\displaystyle P(X \leq x + 0.5)$                           $\displaystyle P\left(Z \leq \frac{x + 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(X < x)$                    $\displaystyle P(X \leq x - 0.5)$                           $\displaystyle P\left(Z \leq \frac{x - 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(X \geq x)$                 $\displaystyle P(X \geq x - 0.5)$                           $\displaystyle P\left(Z \geq \frac{x - 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(X > x)$                    $\displaystyle P(X \geq x + 0.5)$                           $\displaystyle P\left(Z \geq \frac{x + 0.5 - \mu}{\sigma}\right)$                      
-                                                                                                                                                                                                 
-  $\displaystyle P(a \leq X \leq b)$    $\displaystyle P(a - 0.5 \leq X \leq b + 0.5)$   $\displaystyle P\left(\frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma}\right)$     
+\[
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Binomial Probability} & \textbf{Continuity Correction} & \textbf{Normal Approximation} \\
+\hline
+\displaystyle P(X = x) & 
+\displaystyle P(x - 0.5 \leq X \leq x + 0.5) & 
+\displaystyle P\left( \frac{x - 0.5 - \mu}{\sigma} \leq Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \leq x) & 
+\displaystyle P(X \leq x + 0.5) & 
+\displaystyle P\left( Z \leq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X < x) & 
+\displaystyle P(X \leq x - 0.5) & 
+\displaystyle P\left( Z \leq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X \geq x) & 
+\displaystyle P(X \geq x - 0.5) & 
+\displaystyle P\left( Z \geq \frac{x - 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(X > x) & 
+\displaystyle P(X \geq x + 0.5) & 
+\displaystyle P\left( Z \geq \frac{x + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\displaystyle P(a \leq X \leq b) & 
+\displaystyle P(a - 0.5 \leq X \leq b + 0.5) & 
+\displaystyle P\left( \frac{a - 0.5 - \mu}{\sigma} \leq Z \leq \frac{b + 0.5 - \mu}{\sigma} \right) \\
+\hline
+\end{array}
+\]
+
+
+  
                                                                                                                                                                                                  
 :::
 
