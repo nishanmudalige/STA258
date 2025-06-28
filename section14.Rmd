@@ -303,10 +303,14 @@ interactions".
     qqnorm(Success_Index[Group == 1]);
     qqline(Success_Index[Group == 1]);
 :::
+```{r fig.cap="Q-Q Plot for Group 1: Interaction with Outsiders", echo=FALSE, fig.align='center', out.width='60%'}
+# Recreate Group 1 data manually
+success_group1 <- c(65, 66, 58, 70, 78, 53, 62, 64, 68, 69, 60, 67)  # 12 values
 
-![Q-Q Plot for Group 1: Interaction with
-Outsiders](section14/images/qqplot_group1.pdf){#fig:qqplot-group1
-width="60%"}
+
+qqnorm(success_group1)
+qqline(success_group1)
+```
 
 **Nearly Normal Condition (Group 2: "fewer interactions"):**
 
@@ -315,10 +319,15 @@ width="60%"}
     qqline(Success_Index[Group == 2]);
 :::
 
-::: minipage
-![image](section14/images/qqplot_group2.pdf){width="60%"}
+```{r fig.cap="Q-Q Plot for Group 2: Fewer Interactions", echo=FALSE, fig.align='center', out.width='60%'}
+# Step 1: Recreate Group 2 data manually
+success_group2 <- c(34, 40, 45, 46, 50, 42, 44, 48, 54, 49, 52, 53, 55, 60, 68)  # 15 values
 
-[]{#fig:qqplot-group2 label="fig:qqplot-group2"}
+
+qqnorm(success_group2)
+qqline(success_group2)
+```
+
 :::
 
 **Nearly Normal Condition:**
@@ -326,9 +335,19 @@ width="60%"}
 ::: tcolorbox
     boxplot(Success_Index ~ Group, col = c("red", "blue"))
 :::
+```{r fig.cap="Boxplot of Success Index by Group", echo=FALSE, fig.align='center', out.width='60%'}
+# Create Group 1 and Group 2 manually
+group1 <- c(65, 66, 58, 70, 78, 53, 62, 64, 68, 69, 60, 67)
+group2 <- c(34, 40, 45, 46, 50, 42, 44, 48, 54, 49, 52, 53, 55, 60, 68)
 
-::: minipage
-![image](section14/images/boxplot_success_index.pdf){width="55%"}
+# Combine into full dataset
+Success_Index <- c(group1, group2)
+Group <- c(rep(1, length(group1)), rep(2, length(group2)))
+
+
+boxplot(Success_Index ~ Group, col = c("red", "blue"))
+```
+
 
 []{#fig:boxplot-success label="fig:boxplot-success"}
 :::
@@ -352,10 +371,28 @@ width="60%"}
       geom_boxplot() +
       scale_x_discrete(labels = our.labs);
 :::
+```{r fig.cap="Boxplot of Success Index by Group using ggplot2", echo=FALSE, fig.align='center', out.width='60%'}
+# Load required library
+library(ggplot2)
 
-![Boxplot of Success Index by Group using
-ggplot2](section14/images/boxplot_ggplot2.pdf){#fig:boxplot-ggplot
-width="60%"}
+# Step 1: Manually define data
+group1 <- c(65, 66, 58, 70, 78, 53, 62, 64, 68, 69, 60, 67)
+group2 <- c(34, 40, 45, 46, 50, 42, 44, 48, 54, 49, 52, 53, 55, 60, 68)
+Success_Index <- c(group1, group2)
+Group <- c(rep(1, length(group1)), rep(2, length(group2)))
+
+# Step 2: Convert to data frame and factor
+success <- data.frame(Success_Index, Group)
+success$Group <- factor(success$Group)
+
+# Step 3: Create and print plot
+ggplot(success, aes(x = Group, y = Success_Index, fill = Group)) +
+  geom_boxplot() +
+  scale_x_discrete(labels = c("Interaction with Outsiders", "Fewer Interactions")) +
+  labs(x = "Group", y = "Success Index") +
+  theme_minimal()
+```
+
 
 **Checking the Assumptions and Conditions**
 
@@ -607,10 +644,16 @@ $$H_0 : \mu_1 = \mu_2$$ $$H_a : \mu_1 > \mu_2$$
     qqnorm(treatment, pch=19, col="red", main="Treatment");
     qqline(treatment, lty=2);
 :::
+```{r fig.cap="Q-Q Plot for Treatment Group", echo=FALSE, fig.align='center', out.width='60%'}
+# Step 1: Enter data
+treatment <- c(24, 61, 59, 46, 43, 44, 52, 43, 58, 67, 62, 57,
+               71, 49, 54, 43, 53, 57, 49, 56, 33)
 
-![Q-Q Plot for Treatment
-Group](section14/images/treatment_qqplot.pdf){#fig:qqplot-ggplot
-width="60%"}
+# Step 2: Generate Q-Q plot
+qqnorm(treatment, pch = 19, col = "red", main = "")
+qqline(treatment, lty = 2, col = "blue")
+```
+
 
 **Nearly Normal Condition (control):**
 
@@ -620,10 +663,15 @@ width="60%"}
     qqline(control, lty=2);
 :::
 
-::: minipage
-![image](section14/images/control_qqplot.pdf){width="60%"}
+```{r fig.cap="Q-Q Plot for Control Group", echo=FALSE, fig.align='center', out.width='60%'}
+# Step 1: Enter data
+control <- c(42, 33, 46, 37, 43, 41, 10, 42, 55, 19, 17, 55,
+             26, 54, 60, 28, 62, 20, 53, 48, 37, 85, 42)
+# Step 2: Generate Q-Q plot
+qqnorm(control, pch = 19, col = "red", main = "")
+qqline(control, lty = 2, col = "blue")
+```
 
-[]{#fig:qqplot-ggplot label="fig:qqplot-ggplot"}
 :::
 
 Stemplots suggest that there is a mild outlier in the control group but

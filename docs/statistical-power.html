@@ -187,12 +187,9 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#statistical-power-1"><i class="fa fa-check"></i><b>13.1</b> Statistical Power</a>
-<ul>
 <li class="chapter" data-level="" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-ii-errors"><i class="fa fa-check"></i>Type I and II Errors</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.2</b> Type I and Type II Errors</a></li>
-<li class="chapter" data-level="13.3" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.3</b> Using Power to Determine Sample Size</a></li>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.2</b> Using Power to Determine Sample Size</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html"><i class="fa fa-check"></i><b>14</b> Two Sample Hypothesis Tests</a>
 <ul>
@@ -256,8 +253,11 @@
             <section class="normal" id="section-">
 <div id="statistical-power" class="section level1 hasAnchor" number="13">
 <h1><span class="header-section-number">Chapter 13</span> Statistical Power<a href="statistical-power.html#statistical-power" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="statistical-power-1" class="section level2 hasAnchor" number="13.1">
-<h2><span class="header-section-number">13.1</span> Statistical Power<a href="statistical-power.html#statistical-power-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+header-includes:
+-
+<ul>
+<li><h2 id="statistical-power-1" class="hasAnchor">Statistical Power<a href="statistical-power.html#statistical-power-1" class="anchor-section" aria-label="Anchor link to header"></a></h2></li>
+</ul>
 <div class="definition">
 <p><span id="def:unlabeled-div-89" class="definition"><strong>Definition 13.1  </strong></span>The probability that a fixed level <span class="math inline">\(\alpha\)</span> significance test will
 reject <span class="math inline">\(H_0\)</span> when a particular alternative value of the parameter is
@@ -344,7 +344,18 @@ H_A\!:&amp;\ \mu &gt; 0
 <span class="math display">\[z_{\text{crit}} = 1.645 \quad \text{(from Z-table)}\]</span></p>
 <p>We reject <span class="math inline">\(H_0\)</span> if: <span class="math display">\[Z^* &gt; 1.645\]</span></p>
 <div class="center">
-
+<pre><code>## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-28"></span>
+<img src="_main_files/figure-html/unnamed-chunk-28-1.png" alt="Rejection region for $Z$ with $\alpha = 0.05$" width="60%" />
+<p class="caption">
+Figure 13.1: Rejection region for <span class="math inline">\(Z\)</span> with <span class="math inline">\(\alpha = 0.05\)</span>
+</p>
+</div>
 </div>
 <p><strong>Step 2: Find the equivalent critical value of</strong> <span class="math inline">\(\bar{x}\)</span>.</p>
 <p>Since <span class="math inline">\(\sigma\)</span> is known,
@@ -357,21 +368,32 @@ H_A\!:&amp;\ \mu &gt; 0
 <p><strong>Interpretation:</strong> There is a 96.6% chance the test correctly detects
 <span class="math inline">\(\mu = 1.1\)</span>.</p>
 <div class="center">
-
+<pre><code>## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;
+## Warning in is.na(x): is.na() applied to non-(list or vector) of type
+## &#39;expression&#39;</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
+<img src="_main_files/figure-html/unnamed-chunk-29-1.png" alt="Power curve showing shaded rejection area under \( H_A \)" width="60%" />
+<p class="caption">
+Figure 13.2: Power curve showing shaded rejection area under <span class="math inline">\(H_A\)</span>
+</p>
+</div>
 </div>
 <p>This result can also be visualized using a power curve, which shows how
 the probability of correctly rejecting <span class="math inline">\(H_0\)</span> increases with the true
 mean <span class="math inline">\(\mu\)</span>.</p>
-<div class="float">
-<embed src="section13/images/power_curve.pdf" style="width:75.0%" />
-<div class="figcaption"><em>Power curve for a one-sided test with points at <span class="math inline">\(\mu = 0.52\)</span> and
-<span class="math inline">\(\mu = 1.1\)</span></em></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-30"></span>
+<img src="_main_files/figure-html/unnamed-chunk-30-1.png" alt="Power curve for a one-sided test with points at \( \mu = 0.52 \) and \( \mu = 1.1 \)" width="672" />
+<p class="caption">
+Figure 13.3: Power curve for a one-sided test with points at <span class="math inline">\(\mu = 0.52\)</span> and <span class="math inline">\(\mu = 1.1\)</span>
+</p>
 </div>
 </div>
 </div>
-</div>
-<div id="type-i-and-type-ii-errors" class="section level2 hasAnchor" number="13.2">
-<h2><span class="header-section-number">13.2</span> Type I and Type II Errors<a href="statistical-power.html#type-i-and-type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="type-i-and-type-ii-errors" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> Type I and Type II Errors<a href="statistical-power.html#type-i-and-type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If we reject <span class="math inline">\(H_0\)</span> when in fact <span class="math inline">\(H_0\)</span> is true, this is a <strong>Type I
 error.</strong><br />
 If we fail to reject <span class="math inline">\(H_0\)</span> when in fact <span class="math inline">\(H_a\)</span> is true, this is a <strong>Type
@@ -460,8 +482,8 @@ that the alternative <span class="math inline">\(\mu = 299\)</span> is true.</st
 \end{aligned}\]</span></p>
 </div>
 </div>
-<div id="using-power-to-determine-sample-size" class="section level2 hasAnchor" number="13.3">
-<h2><span class="header-section-number">13.3</span> Using Power to Determine Sample Size<a href="statistical-power.html#using-power-to-determine-sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="using-power-to-determine-sample-size" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Using Power to Determine Sample Size<a href="statistical-power.html#using-power-to-determine-sample-size" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When designing a study, one of the most important decisions is how large
 a sample to collect. If the sample size is too small, even meaningful
 effects may go undetected due to low statistical power. On the other

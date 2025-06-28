@@ -1,5 +1,7 @@
 # Statistical Power
-
+header-includes:
+  - \usepackage{tikz     }
+  - \usepackage{pgfplots}
 ## Statistical Power
 
 ::: definition
@@ -82,6 +84,32 @@ $$z_{\text{crit}} = 1.645 \quad \text{(from Z-table)}$$
 We reject $H_0$ if: $$Z^* > 1.645$$
 
 ::: center
+
+```{r fig.cap="Rejection region for $Z$ with $\\alpha = 0.05$", echo=FALSE, fig.align='center', out.width='60%'}
+library(ggplot2)
+
+# Data
+x <- seq(-3, 3, length = 1000)
+y <- dnorm(x)
+x_reject <- seq(1.645, 3, length = 500)
+y_reject <- dnorm(x_reject)
+
+# Plot
+ggplot(data.frame(x, y), aes(x, y)) +
+  geom_line(color = "blue", linewidth = 1.2) +
+  geom_area(data = data.frame(x = x_reject, y = y_reject), 
+            aes(x = x, y = y), fill = "green", alpha = 0.4) +
+  geom_vline(xintercept = 1.645, linetype = "dashed") +
+  annotate("text", x = 1.645, y = 0.02, 
+           label = expression(z[crit] == 1.645), hjust = -0.1, size = 3.5) +
+  annotate("text", x = 0, y = 0.12, 
+           label = expression("Do not reject " * H[0]), size = 4) +
+  annotate("text", x = 2.3, y = 0.25, 
+           label = expression("Reject " * H[0]), size = 4) +
+  labs(x = "", y = "") +
+  theme_minimal(base_size = 13)
+```
+
 :::
 
 **Step 2: Find the equivalent critical value of** $\bar{x}$.
@@ -101,14 +129,70 @@ $$P\left(Z > \frac{0.520 - 1.1}{1/\sqrt{10}}\right)
 $\mu = 1.1$.
 
 ::: center
+```{r fig.cap="Power curve showing shaded rejection area under \\( H_A \\)", echo=FALSE, fig.align='center', out.width='60%'}
+library(ggplot2)
+
+# Parameters
+mu_0 <- 0
+mu_a <- 1.1
+sigma <- 1 / sqrt(10)
+x_vals <- seq(-1, 3, length.out = 1000)
+
+# Distributions
+df <- data.frame(
+  x = x_vals,
+  y0 = dnorm(x_vals, mean = mu_0, sd = sigma),
+  yA = dnorm(x_vals, mean = mu_a, sd = sigma)
+)
+
+# Rejection region under H_A
+x_reject <- seq(0.52, 3, length.out = 500)
+y_reject <- dnorm(x_reject, mean = mu_a, sd = sigma)
+
+# Critical value height (for vertical dashed line)
+y_crit <- dnorm(0.52, mean = mu_a, sd = sigma)
+
+ggplot(df, aes(x)) +
+  geom_line(aes(y = y0), color = "blue", linewidth = 1.2) +
+  geom_line(aes(y = yA), color = "red", linewidth = 1.2) +
+  geom_area(data = data.frame(x = x_reject, y = y_reject),
+            aes(x = x, y = y), fill = "green", alpha = 0.4) +
+  geom_vline(xintercept = 0.52, linetype = "dashed") +
+  annotate("text", x = 0.52, y = -0.01, label = expression(bar(x)[crit] == 0.520), vjust = 1.2, size = 3.5) +
+  labs(x = "", y = "") +
+  theme_minimal(base_size = 17) +
+  annotate("text", x = 0.6, y = 0.8 * max(df$y0), label = expression(H[0] * ":  " * mu == 0), color = "blue", size = 4) +
+  annotate("text", x = 1.6, y = 0.8 * max(df$yA), label = expression(H[A] * ":  " * mu == 1.1), color = "red", size = 4)
+```
+
 :::
 
 This result can also be visualized using a power curve, which shows how
 the probability of correctly rejecting $H_0$ increases with the true
 mean $\mu$.
 
-![*Power curve for a one-sided test with points at $\mu = 0.52$ and
-$\mu = 1.1$*](section13/images/power_curve.pdf){width="75%"}
+```{r fig.cap="Power curve for a one-sided test with points at \\( \\mu = 0.52 \\) and \\( \\mu = 1.1 \\)", echo=FALSE, fig.align='center'}
+# Step 1: Define parameters
+n <- 10
+alpha <- 0.05
+mu0 <- 0
+sigma <- 1
+z_crit <- qnorm(1 - alpha)  # = 1.645
+xbar_crit <- mu0 + z_crit * sigma / sqrt(n)  # ≈ 0.520
+
+# Step 2: Create a sequence of true means
+mu_vals <- seq(0, 3, length.out = 100)
+
+# Step 3: Calculate power for each mu
+power <- 1 - pnorm((xbar_crit - mu_vals) / (sigma / sqrt(n)))
+
+plot(mu_vals, power, type = "l", lty = 2, col = "blue", lwd = 2,
+     ylab = "power", xlab = expression(mu), ylim = c(0, 1))
+
+# Add red points at mu = 0.52 and mu = 1.1
+points(c(0.52, 1.1), 1 - pnorm((xbar_crit - c(0.52, 1.1)) / (sigma / sqrt(n))),
+       pch = 19, col = "red")
+```
 :::::
 
 ## Type I and Type II Errors
