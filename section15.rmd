@@ -106,7 +106,7 @@ variables.
   a strong positive correlation. (See figure 15.2)
 
   <figure>
-
+  ![](figures/SP.png)
   <figcaption>An illustration of strong positive correlation (<span
   class="math inline"><em>r</em><sub><em>x</em><em>y</em></sub> ≈ +1</span>).</figcaption>
   </figure>
@@ -115,6 +115,7 @@ variables.
   a strong negative correlation. (See figure 15.3)
 
   <figure>
+  ![](figures/SN-1.png)
 
   <figcaption>An illustration of strong negative correlation (<span
   class="math inline"><em>r</em><sub><em>x</em><em>y</em></sub> ≈ −1</span>).</figcaption>
@@ -126,7 +127,8 @@ variables.
   but other relationship may exist. (See figure 15.4)
 
   <figure>
-
+  
+  ![](figures/nocorrelation-1.png)
   <figcaption>An illustration of no correlation (<span
   class="math inline"><em>r</em><sub><em>x</em><em>y</em></sub> ≈ 0</span>).</figcaption>
   </figure>
@@ -465,6 +467,8 @@ derivation:
 
 <figure>
 
+![](figures/SLRmodel-1.png)
+
 <figcaption>An illustration of a simple linear regression model. The red
 line is the fitted regression line, and the full black vertical lines
 represent the residuals (SSE). The data points deviate from the line to
@@ -477,8 +481,8 @@ for simple linear regression model:
 $\hat{y} = \hat{\beta_0} + \hat{\beta_1} \cdot x + \epsilon$.
 
 ::: proof
-*Proof.* $$\begin{aligned}
-\intertext{Firstly, we examine sum of residual squared:}\\
+$$\begin{aligned}
+\text{Firstly, we examine sum of residual squared:}\\
 \sum_{i=1}^{n}e_i^2 &= \sum_{i=1}^{n}(y_i - \hat{y_i})^2 = 0\\
 &= \sum_{i=1}^{n}[y_i - (\hat{\beta_0} + \hat{\beta_1} \cdot x_i)]^2 = 0\\
 &= \sum_{i=1}^{n}(y_i - \hat{\beta_0} - \hat{\beta_1} \cdot x_i)^2 = 0\\
@@ -610,6 +614,8 @@ observations and their overall mean $\bar{y}$.
 
 <figure>
 
+![](figures/SST-1.png)
+
 <figcaption>An illustration of Total Sum of Squares (SST). The blue
 points represent height measurements over time, the dashed line is the
 mean height <span class="math inline"><em>ȳ</em></span>, and the solid
@@ -633,6 +639,8 @@ small SSE indicates a tight fit of the model to the data.
 
 <figure>
 
+![](figures/SSE-1.png)
+
 <figcaption>A simple linear regression illustration with residuals
 shown. Blue points are observed data, red line is the model, dashed line
 is the average of <span class="math inline"><em>y</em></span>, and black
@@ -653,6 +661,8 @@ It measures the distance between estimated value (estimated dependent
 data) and the mean of dependent data ($\bar{y}$).
 
 <figure>
+
+![](figures/SSR-1.png)
 
 <figcaption>An illustration of simple linear regression. The blue points
 represent monthly height measurements with added variability. The red
@@ -687,6 +697,8 @@ Total sum of squares = Sum of squares for error + Sum of squares for
 regression.
 
 <figure>
+
+![](figures/SUM-1.png)
 
 <figcaption> Visual representation of regression variability.
 <strong>SST</strong> (green) is total variability from the mean,

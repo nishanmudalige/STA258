@@ -1,4 +1,4 @@
- ---
+---
 title: "Demo Book"
 author: "Nishan Mudalige"
 date: "`r Sys.Date()`"
@@ -7,6 +7,9 @@ output: bookdown::gitbook
 documentclass: book
 description: "This is an example of using the bookdown package. The output format for this example is bookdown::gitbook."
 ---
+
+- \usepackage{tikz}
+- \usepackage{pgfplots}
 
 # STA258: Statistics with Applied Probability {-}
 
@@ -55,3 +58,4 @@ subject the more comfortable you will become with it.
 As business students, doing well in a statistics course will give you a competitive
 edge since the ability to interpret and perform quantitative analytics are skills that are highly
 desired by many employers.
+

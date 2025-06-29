@@ -1,0 +1,25 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[->, thick]
+  \draw[->] (-1,0) -- (7,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,5) node[above] {$y$};
+  \draw[black, thick, domain=0:6] plot (\x, {3});
+  \filldraw[blue] (0.5, 2.7) circle (2pt);
+  \filldraw[red]  (1,   1.5) circle (2pt);
+  \filldraw[blue] (1.5, 4.1) circle (2pt);
+  \filldraw[red]  (2.3, 2.0) circle (2pt);
+  \filldraw[blue] (3.1, 0.8) circle (2pt);
+  \filldraw[red]  (4.0, 3.5) circle (2pt);
+  \filldraw[blue] (4.5, 1.2) circle (2pt);
+  \filldraw[red]  (5.2, 4.3) circle (2pt);
+  \filldraw[blue] (6.0, 2.5) circle (2pt);
+\end{tikzpicture}
+\caption{An illustration of no correlation ($r_{xy} \approx 0$).}
+\end{figure}
+
+\end{document}

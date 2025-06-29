@@ -65,7 +65,7 @@ definition provides:
 ::: definition
 The test statistics of one sample hypothesis test on a proportion is
 given by:
-$$Z^* = \frac{\hat{p} - p_{\text{\scriptsize$0$}}}{\sqrt{\frac{p_{\text{\scriptsize$0$}}(1-p_{\text{\scriptsize$0$}})}{n}}}.$$
+$$Z^* = Z^* = \frac{\hat{p} - p_0}{ \sqrt{ \frac{p_0(1-p_0)}{n} } }.$$
 In this case, $n$ means the sample size, $\hat{p}$ is the parameter of
 the proportion of the population, which is calculated by
 $\hat{p} = \frac{\text{number of successes in the sample}}{n}$. Also,
@@ -79,8 +79,7 @@ because it directly affects the final answer.\
 i\. When is structure of testing hypothesis is $H_0: p = p_0$,
 $H_a: p > p_0$:
 
-::: center
-:::
+![](figures/i.png)
 
 In case (i), calculating $P[Z > Z_*]$ as your p-value. Then, comparing
 with significant level: $\alpha$.
@@ -88,8 +87,7 @@ with significant level: $\alpha$.
 ii\. When is structure of testing hypothesis is $H_0: p = p_0$,
 $H_a: p < p_0$:
 
-::: center
-:::
+![](figures/ii-1.png)
 
 In case (ii), calculating $P[Z < Z_*]$ as your p-value. Then, comparing
 with significant level: $\alpha$.
@@ -97,8 +95,7 @@ with significant level: $\alpha$.
 iii\. When is structure of testing hypothesis is $H_0: p = p_0$,
 $H_a: p \neq p_0$:
 
-::: center
-:::
+![](figures/iii-1.png)
 
 In case (iii), calculating $2\cdot P[Z > |Z_*|]$ as your p-value. Then,
 comparing with significant level: $\alpha$.\

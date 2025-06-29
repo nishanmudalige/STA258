@@ -1,0 +1,30 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+  no markers, domain=-4:4, samples=100,
+  axis lines=middle,
+  xlabel={$x$}, ylabel={},
+  height=6cm, width=12cm,
+  xtick=\empty,
+  ytick=\empty,
+  enlargelimits=false, clip=false,
+  axis on top,
+  grid = major,
+]
+\addplot[very thick, blue] {1/sqrt(2*pi) * exp(-x^2/2)};
+\addplot[
+  domain=1:4,
+  samples=100,
+  fill=blue,
+  fill opacity=0.3,
+] {1/sqrt(2*pi) * exp(-x^2/2)} \closedcycle;
+\node at (axis cs:2, 0.15) {P-value};
+\node at (axis cs:1, -0.03) {$z^*$};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
