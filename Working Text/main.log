@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  30 JUN 2025 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  30 JUN 2025 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2666,13 +2666,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.3})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.170 \begin{example}
+l.171 \begin{example}
                      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.15.4})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.170 \begin{example}
+l.171 \begin{example}
                      ]
 
 [95
@@ -2680,19 +2680,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.5})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.257 \end{example}
+l.258 \end{example}
                    ]
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
@@ -2705,21 +2705,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.6})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.365 \end{example}
+l.366 \end{example}
                    ]
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
 
  []
 
 
 
 [98]
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
 
  []
 
@@ -2730,7 +2730,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.7})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.438 \end{align*}
+l.439 \end{align*}
                   ]
 
 [100]
@@ -2740,9 +2740,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.8})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.490 \section{SST, SSE and SSR}
+l.491 \section{SST, SSE and SSR}
                                 ]
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
 
  []
 
@@ -2756,9 +2756,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.9})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.580 \end{definition}
+l.581 \end{definition}
                       ]
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
 
  []
 
@@ -2769,14 +2769,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.10}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.611 
+l.612 
       ]
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
+Underfull \hbox (badness 10000) in paragraph at lines 617--618
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--621
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
 
@@ -2787,7 +2787,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.11}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.644 
+l.645 
       ])
 
 [105
@@ -2847,7 +2847,7 @@ e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (112 pages, 3930934 bytes).
+Output written on main.pdf (112 pages, 3931016 bytes).
 PDF statistics:
  1259 PDF objects out of 1440 (max. 8388607)
  1024 compressed objects within 11 object streams

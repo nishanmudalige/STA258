@@ -132,7 +132,7 @@ The correlation r measures the strength and direction of the linear association 
 
 	\item If $r_{xy} \approx 0$, then we say that there is essentially no correlation between the two random variables. Note that if $r \approx 0$, then it suggests a linear relationship doesn't exist but other relationship may exist. (See figure 15.4)
 \begin{figure}[h!]
-\centering
+\begin{center}
 \begin{tikzpicture}[->, thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
   \draw[->] (0,-1) -- (0,5) node[above] {$y$};
@@ -147,6 +147,7 @@ The correlation r measures the strength and direction of the linear association 
   \filldraw[red]  (5.2, 4.3) circle (2pt);
   \filldraw[blue] (6.0, 2.5) circle (2pt);
 \end{tikzpicture}
+\end{center}
 \caption{An illustration of no correlation ($r_{xy} \approx 0$).}
 \end{figure}
 \end{itemize}
@@ -496,7 +497,7 @@ Early in Section $15.3$, we introduced a value called the sum of residual square
 It is defined as the sum over all squared differences between the observations and their overall mean $\bar{y}$.
 
 \begin{figure}[h]
-\centering
+\begin{center}
 \begin{tikzpicture}[thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
   \draw[->] (0,-1) -- (0,5) node[above] {$y$};
@@ -528,6 +529,7 @@ It is defined as the sum over all squared differences between the observations a
     \draw[black] (\x,\y) -- (\x,2.86);
   }
 \end{tikzpicture}
+\end{center}
 \caption{An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height $\bar{y}$, and the solid black vertical lines represent the squared deviations from the mean (SST components).}
 \end{figure}
 
@@ -540,7 +542,7 @@ For any simple linear regression model, SST (Toal sum of squares) measures the s
 It is the sum of the squares of residuals (deviations predicted from actual empirical values of data). It is a measure of the discrepancy between the data and an estimation model, such as a linear regression. A small SSE indicates a tight fit of the model to the data.
 
 \begin{figure}[h]
-\centering
+\begin{center}
 \begin{tikzpicture}[->, thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
   \draw[->] (0,-1) -- (0,5) node[above] {$y$};
@@ -572,6 +574,7 @@ It is the sum of the squares of residuals (deviations predicted from actual empi
   \draw[dashed] (-0.5,2.7) -- (6.5,2.7);
   \node at (6.7,2.7) {$\bar{y}$};
 \end{tikzpicture}
+\end{center}
 \caption{A simple linear regression illustration with residuals shown. Blue points are observed data, red line is the model, dashed line is the average of $y$, and black lines represent residuals $y_i - \hat{y_i}$.}
 \end{figure}
 
@@ -586,7 +589,7 @@ Note that SSE (sum of residual squared) is an explained variation.\\
 It measures the distance between estimated value (estimated dependent data) and the mean of dependent data ($\bar{y}$).
 
 \begin{figure}[H]
-\centering
+\begin{center}
 \begin{tikzpicture}[->, thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
   \draw[->] (0,-1) -- (0,5) node[above] {$y$};
@@ -606,6 +609,7 @@ It measures the distance between estimated value (estimated dependent data) and 
     \draw[black] (\x, {0.8*\x + 0.35}) -- (\x, 3);
   }
 \end{tikzpicture}
+\end{center}
 \caption{An illustration of simple linear regression. The blue points represent monthly height measurements with added variability. The red line is the fitted simple linear regression model. The dashed line shows the mean of the dependent variable, $\bar{y}$, and the solid black lines illustrate the deviation of the model's predictions from this mean.}
 \end{figure}
 
@@ -624,7 +628,7 @@ We square all three deviations for each one of our data points, and sum over all
 Total sum of squares = Sum of squares for error + Sum of squares for regression.
 
 \begin{figure}[H]
-\centering
+\begin{center}
 \begin{tikzpicture}[->, thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
   \draw[->] (0,-1) -- (0,5) node[above] {$y$};
@@ -636,10 +640,9 @@ Total sum of squares = Sum of squares for error + Sum of squares for regression.
   \draw[pink, thick] (xhat) -- (2, 3) node[midway, right] {\footnotesize SSR};
   \draw[green, thick] (2, 4) -- (2, 3) node[midway, right] {\footnotesize SST};
   \draw[thick, orange, |-|] (1.9, 1.95) -- (1.9, 4) node[midway, left=4pt, yshift=6pt] {\footnotesize SSE};
-
 \end{tikzpicture}
-\caption{
-Visual representation of regression variability. \textbf{SST} (green) is total variability from the mean, \textbf{SSR} (pink) is explained variability, and \textbf{SSE} (orange curly brace) is the residual (unexplained) variability between the observed value $y_i$ and the prediction $\hat{y}_i$.}
+\end{center}
+\caption{Visual representation of regression variability. \textbf{SST} (green) is total variability from the mean, \textbf{SSR} (pink) is explained variability, and \textbf{SSE} (orange curly brace) is the residual (unexplained) variability between the observed value $y_i$ and the prediction $\hat{y}_i$.}
 \end{figure}
 
 \textbf{Coefficient of Determination ($r^2$)}
