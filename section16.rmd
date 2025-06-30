@@ -23,8 +23,7 @@ mean?\
 **At each** value of $X$, the errors are distributed normally with a
 mean of zero and a constant variance.
 
-![Regression line with normal errors at each
-$X$](section16/images/regression_model.pdf){width="60%"}
+
 
 Can verify with residual plots (assumptions).
 
@@ -44,10 +43,10 @@ $$S^2 = \frac{\sum_{i=1}^n e_i^2}{n - 2}
 [*notice similarity*]{style="color: red"}
 
 $$S_x^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n - 1}
-\quad \textcolor{blue}{\text{(sample variance, }\bar{x} \text{ estimated)}}$$
+\quad {\text{(sample variance, }\bar{x} \text{ estimated)}}$$
 
 $$S = +\sqrt{S^2}
-\quad \textcolor{blue}{\text{(estimate of standard deviation)}} \\$$
+\quad {\text{(estimate of standard deviation)}} \\$$
 
 **In calculating $S^2$, why do we divide by $n-2$?**
 
@@ -97,18 +96,15 @@ x & = \text{independent variable} \\
 \varepsilon & = \text{error variable}
 \end{aligned}$$
 
-  -------------------- --- ---
-  **Month**                
-  **Expenditure**          
-  $x$ (\$ hundreds)        
-  **Revenue**              
-  $y$ (\$ thousands)       
-  1                    1   1
-  2                    2   1
-  3                    3   2
-  4                    4   2
-  5                    5   4
-  -------------------- --- ---
+| Month | Expenditure $x$ (hundreds) | Revenue $y$ (thousands) |
+|-------|-----------------------------|--------------------------|
+| 1     | 1                           | 1                        |
+| 2     | 2                           | 1                        |
+| 3     | 3                           | 2                        |
+| 4     | 4                           | 2                        |
+| 5     | 5                           | 4                        |
+
+
 
 The question is this: How can we best use the information in the sample
 of five observations in our table to estimate the unknown $y$-intercept
@@ -569,9 +565,19 @@ dollars), area (in 100 square feet), and number of beds and baths.
          660                 7.3               2           1
   ----------------- ---------------------- ---------- -----------
 :::
+```{r fig.cap="Plot of Price vs Area for Apartments near UTM",echo=FALSE, fig.align='center', out.width='60%'}
+# Data
+area <- c(5.5, 6.5, 7.5, 8.0, 8.3, 9.8, 11.0, 12.5, 13.8, 10.2)
+price <- c(490, 590, 660, 700, 710, 630, 630, 760, 810, 680)
 
-![Plot of Price vs Area for Apartments near
-UTM](section16/images/utm_apartments.pdf){width="60%"}
+# Plot
+plot(area, price,
+     pch = 19,                     # solid circle
+     xlab = "Area (sq ft)",
+     ylab = "Price (x$1000)",
+     bty = "l")                    # axis box only on left and bottom
+```
+
 
    **Price**   **Area**   $(x - \bar{x})$   $(y - \bar{y})$          $(x - \bar{x})(y - \bar{y})$                 $(x - \bar{x})^2$
   ----------- ---------- ----------------- ----------------- --------------------------------------------- --------------------------------
@@ -841,8 +847,70 @@ satisfied, the residual plot should have the following features:
 3.  **No influential points or clustering:** The plot should not show
     isolated influential observations or clustering.
 
-![Residual Plots - Good and Bad
-Examples](section16/images/residual_plots.pdf){width="100%"}
+```{r fig.cap="Residual Plots - Good and Bad Examples", echo=FALSE, fig.align='center', out.width='70%'}
+# Required libraries
+library(ggplot2)
+library(patchwork)
+
+# Common theme
+theme_clean <- theme_minimal(base_size = 12)
+
+# 1. Satisfies Assumptions
+set.seed(1)
+x1 <- 1:30
+y1 <- 3 + 0.5 * x1 + rnorm(30, 0, 1)
+model1 <- lm(y1 ~ x1)
+df1 <- data.frame(Fitted = fitted(model1), Residuals = resid(model1))
+
+p1 <- ggplot(df1, aes(Fitted, Residuals)) +
+  geom_point(color = "orange", size = 2) +
+  geom_hline(yintercept = 0, color = "black") +
+  labs(title = "Satisfies Assumptions", x = "Fitted Values", y = "Residuals") +
+  theme_clean
+
+# 2. Non-linear Pattern
+x2 <- seq(-2, 2, length.out = 30)
+y2 <- x2^2 + rnorm(30, 0, 0.3)
+model2 <- lm(y2 ~ x2)
+df2 <- data.frame(Fitted = fitted(model2), Residuals = resid(model2))
+
+p2 <- ggplot(df2, aes(Fitted, Residuals)) +
+  geom_point(color = "orange", size = 2) +
+  geom_hline(yintercept = 0, color = "black") +
+  labs(title = "Non-linear Pattern", x = NULL, y = NULL) +
+  theme_clean
+
+# 3. Non-constant Variance
+x3 <- 1:30
+y3 <- 2 + 0.2 * x3 + rnorm(30, 0, sd = x3 / 10)
+model3 <- lm(y3 ~ x3)
+df3 <- data.frame(Fitted = fitted(model3), Residuals = resid(model3))
+
+p3 <- ggplot(df3, aes(Fitted, Residuals)) +
+  geom_point(color = "orange", size = 2) +
+  geom_hline(yintercept = 0, color = "black") +
+  labs(title = "Non-constant Variance", x = NULL, y = NULL) +
+  theme_clean
+
+# 4. Clustering
+x4 <- c(rnorm(15, 3, 0.2), rnorm(15, 5, 0.2))
+y4 <- 2 + 0.5 * x4 + rnorm(30, 0, 1)
+model4 <- lm(y4 ~ x4)
+df4 <- data.frame(Fitted = fitted(model4), Residuals = resid(model4))
+
+p4 <- ggplot(df4, aes(Fitted, Residuals)) +
+  geom_point(color = "orange", size = 2) +
+  geom_hline(yintercept = 0, color = "black") +
+  labs(title = "Clustering", x = NULL, y = NULL) +
+  theme_clean
+
+# Patchwork layout: spacer - p1 - spacer, then 3 plots
+final_plot <- (plot_spacer() + p1 + plot_spacer()) / (p2 + p3 + p4)
+
+# Print the plot
+final_plot
+```
+
 
 ::: tcolorbox
 The model is: $Y = \beta_0 + \beta_1 X + \varepsilon$, where
