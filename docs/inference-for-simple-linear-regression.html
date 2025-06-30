@@ -273,11 +273,6 @@ What does the error term <span class="math inline">\(\varepsilon \sim \mathcal{N
 mean?<br />
 <strong>At each</strong> value of <span class="math inline">\(X\)</span>, the errors are distributed normally with a
 mean of zero and a constant variance.</p>
-<div class="float">
-<embed src="section16/images/regression_model.pdf" style="width:60.0%" />
-<div class="figcaption">Regression line with normal errors at each
-<span class="math inline">\(X\)</span></div>
-</div>
 <p>Can verify with residual plots (assumptions).</p>
 <p>We estimate <span class="math inline">\(\sigma^2\)</span> with a value we call <span class="math inline">\(S^2\)</span> and use <span class="math inline">\(S^2\)</span> for
 inference.</p>
@@ -290,9 +285,9 @@ inference.</p>
 = \frac{SSE}{n - 2}\]</span></p>
 <p><span style="color: red"><em>notice similarity</em></span></p>
 <p><span class="math display">\[S_x^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n - 1}
-\quad \textcolor{blue}{\text{(sample variance, }\bar{x} \text{ estimated)}}\]</span></p>
+\quad {\text{(sample variance, }\bar{x} \text{ estimated)}}\]</span></p>
 <p><span class="math display">\[S = +\sqrt{S^2}
-\quad \textcolor{blue}{\text{(estimate of standard deviation)}} \\\]</span></p>
+\quad {\text{(estimate of standard deviation)}} \\\]</span></p>
 <p><strong>In calculating <span class="math inline">\(S^2\)</span>, why do we divide by <span class="math inline">\(n-2\)</span>?</strong></p>
 <p>Since we estimate 2 unknown parameters in the model (both <span class="math inline">\(\beta_0\)</span> and
 <span class="math inline">\(\beta_1\)</span>), which are used in the calculation of <span class="math inline">\(S^2\)</span>.</p>
@@ -329,54 +324,36 @@ x &amp; = \text{independent variable} \\
 \varepsilon &amp; = \text{error variable}
 \end{aligned}\]</span></p>
 <table>
+<thead>
+<tr class="header">
+<th>Month</th>
+<th>Expenditure <span class="math inline">\(x\)</span> (hundreds)</th>
+<th>Revenue <span class="math inline">\(y\)</span> (thousands)</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><strong>Month</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left"><strong>Expenditure</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(x\)</span> ($ hundreds)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left"><strong>Revenue</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(y\)</span> ($ thousands)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td align="left">1</td>
+<td>1</td>
 <td>1</td>
 <td>1</td>
 </tr>
-<tr class="odd">
-<td align="left">2</td>
+<tr class="even">
+<td>2</td>
 <td>2</td>
 <td>1</td>
 </tr>
-<tr class="even">
-<td align="left">3</td>
+<tr class="odd">
+<td>3</td>
 <td>3</td>
 <td>2</td>
 </tr>
-<tr class="odd">
-<td align="left">4</td>
+<tr class="even">
+<td>4</td>
 <td>4</td>
 <td>2</td>
 </tr>
-<tr class="even">
-<td align="left">5</td>
+<tr class="odd">
+<td>5</td>
 <td>5</td>
 <td>4</td>
 </tr>
@@ -894,10 +871,11 @@ dollars), area (in 100 square feet), and number of beds and baths.</p>
 </tbody>
 </table>
 </div>
-<div class="float">
-<embed src="section16/images/utm_apartments.pdf" style="width:60.0%" />
-<div class="figcaption">Plot of Price vs Area for Apartments near
-UTM</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-36-1.png" alt="Plot of Price vs Area for Apartments near UTM" width="60%" />
+<p class="caption">
+Figure 16.1: Plot of Price vs Area for Apartments near UTM
+</p>
 </div>
 <table>
 <caption>Deviation table for computing <span class="math inline">\(\hat{\beta}_1\)</span> and <span class="math inline">\(\hat{\beta}_0\)</span></caption>
@@ -1353,10 +1331,11 @@ band, roughly half above and half below zero.</p>
 <li><p><strong>No influential points or clustering:</strong> The plot should not show
 isolated influential observations or clustering.</p></li>
 </ol>
-<div class="float">
-<embed src="section16/images/residual_plots.pdf" style="width:100.0%" />
-<div class="figcaption">Residual Plots - Good and Bad
-Examples</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
+<img src="STA258-Book_files/figure-html/unnamed-chunk-37-1.png" alt="Residual Plots - Good and Bad Examples" width="70%" />
+<p class="caption">
+Figure 16.2: Residual Plots - Good and Bad Examples
+</p>
 </div>
 <div class="tcolorbox">
 <p>The model is: <span class="math inline">\(Y = \beta_0 + \beta_1 X + \varepsilon\)</span>, where

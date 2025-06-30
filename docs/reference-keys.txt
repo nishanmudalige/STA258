@@ -149,7 +149,9 @@ exm:unlabeled-div-120
 exm:unlabeled-div-121
 exm:unlabeled-div-122
 exm:unlabeled-div-123
+fig:unnamed-chunk-36
 def:unlabeled-div-124
+fig:unnamed-chunk-37
 descriptive-statistics-and-an-introduction-to-r
 introduction-1
 descriptive-statistics
