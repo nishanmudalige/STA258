@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  1 JUL 2025 03:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  1 JUL 2025 03:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2353,12 +2353,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10.6})
                                                   \__shipout_drop_firstpage_...
 l.302 
       ]
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
 
@@ -2372,15 +2372,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10.7})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.356 
+l.355 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10.8})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.356 
+l.355 
       ]
-Overfull \hbox (25.63031pt too wide) in paragraph at lines 378--379
+Overfull \hbox (25.63031pt too wide) in paragraph at lines 377--378
 []\OT1/cmr/m/n/12 Note that, $[] = []$ and $[] = []$. 
  []
 
@@ -2391,15 +2391,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10.9})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.383 
-      
+l.385 \begin{center}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10.10}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.383 
-      ]
-Underfull \hbox (badness 10000) in paragraph at lines 443--444
+l.385 \begin{center}
+                    ]
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
@@ -2410,29 +2410,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.10.11}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 	\item 4
+l.450 	\item 4
               . Sample size requirement: both selected sample size must grea...
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10.12}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 	\item 4
+l.450 	\item 4
               . Sample size requirement: both selected sample size must grea...
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10.13}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 	\item 4
+l.450 	\item 4
               . Sample size requirement: both selected sample size must grea...
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
 
  []
 
@@ -2849,7 +2849,7 @@ e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (111 pages, 3930983 bytes).
+Output written on main.pdf (111 pages, 3931024 bytes).
 PDF statistics:
  1255 PDF objects out of 1440 (max. 8388607)
  1021 compressed objects within 11 object streams
