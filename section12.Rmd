@@ -79,7 +79,7 @@ because it directly affects the final answer.\
 i\. When is structure of testing hypothesis is $H_0: p = p_0$,
 $H_a: p > p_0$:
 
-![](figures/i.png)
+![](figures/C1-1.png)
 
 In case (i), calculating $P[Z > Z_*]$ as your p-value. Then, comparing
 with significant level: $\alpha$.
@@ -87,7 +87,7 @@ with significant level: $\alpha$.
 ii\. When is structure of testing hypothesis is $H_0: p = p_0$,
 $H_a: p < p_0$:
 
-![](figures/ii-1.png)
+![](figures/C2-1.png)
 
 In case (ii), calculating $P[Z < Z_*]$ as your p-value. Then, comparing
 with significant level: $\alpha$.
@@ -95,7 +95,7 @@ with significant level: $\alpha$.
 iii\. When is structure of testing hypothesis is $H_0: p = p_0$,
 $H_a: p \neq p_0$:
 
-![](figures/iii-1.png)
+![](figures/C3-1.png)
 
 In case (iii), calculating $2\cdot P[Z > |Z_*|]$ as your p-value. Then,
 comparing with significant level: $\alpha$.\

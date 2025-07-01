@@ -918,8 +918,6 @@ regression.
   \draw[thick, orange, |-|] (1.9, 1.95) -- (1.9, 4) node[midway, left=4pt, yshift=6pt] {\footnotesize SSE};
 \end{tikzpicture}
 ```
-
-
 <figcaption> Visual representation of regression variability.
 <strong>SST</strong> (green) is total variability from the mean,
 <strong>SSR</strong> (pink) is explained variability, and

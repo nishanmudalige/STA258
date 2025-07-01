@@ -105,13 +105,12 @@ respectively.
 Only with the equation seems hard to understand, the following number
 line helps you to visualize what we try to indicate:
 
-::: center
 <figure>
-
-<figcaption>Visualization of two-sample confidence interval (Case 1, 2,
-3)</figcaption>
+```{r fig-mu1-lt-mu2, fig.cap = "Visualization of two-sample confidence interval (Case 1, 2, 3)", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/Ca1-1.png")
+```
+<figcaption>Visualization of two-sample confidence interval (Case 1, 2,3) </figcaption>
 </figure>
-:::
 
 Earlier in this chapter we said that two sample confidence interval aims
 to compare the mean between two populations. The number line above shows
@@ -124,7 +123,9 @@ cases:
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-2, fig.cap = "Visualization of the case when μ₁ < μ₂", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/Ca1-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>μ</em><sub>1</sub> &lt; <em>μ</em><sub>2</sub></span></figcaption>
 </figure>
@@ -138,7 +139,9 @@ by solving the inequality above we get: $\mu_1 < \mu_2$ trivially.
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-3, fig.cap = "Visualization of the case when μ₁ > μ₂", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/Ca2-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>μ</em><sub>1</sub> &gt; <em>μ</em><sub>2</sub></span></figcaption>
 </figure>
@@ -151,7 +154,9 @@ observing the number line. Thus, we have: $\mu_1 > \mu_2$.
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-4, fig.cap = "Visualization of the case when μ₁ = μ₂", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/Ca3-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>μ</em><sub>1</sub> = <em>μ</em><sub>2</sub></span></figcaption>
 </figure>
@@ -383,7 +388,9 @@ number line for each case.
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-5, fig.cap = "Visualization of the case when $\bar{M}_1 < \bar{M}_2$", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/pa1-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>M̄</em><sub>1</sub> &lt; <em>M̄</em><sub>2</sub></span></figcaption>
 </figure>
@@ -399,7 +406,9 @@ $\bar{M}_1 < \bar{M}_2.$
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-6, fig.cap = "Visualization of the case when $\bar{M}_1 > \bar{M}_2$", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/pa2-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>M̄</em><sub>1</sub> &gt; <em>M̄</em><sub>2</sub></span></figcaption>
 </figure>
@@ -415,7 +424,9 @@ $\bar{M}_1 > \bar{M}_2.$
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-7, fig.cap = "The mean $\bar{M}_1$ is equal to $\bar{M}_2$.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/pa3-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>M̄</em><sub>1</sub> = <em>M̄</em><sub>2</sub></span></figcaption>
 </figure>
@@ -455,7 +466,9 @@ It may still be difficult to understand, now let's begin with figures:
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-8, fig.cap = "Visualization of two population of all students from UTSG (left) and UTM (right).", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/f1-1.png")
+```
 <figcaption>Visualization of two population of all students from UTSG
 (left) and UTM (right)</figcaption>
 </figure>
@@ -467,7 +480,9 @@ can select a group of random sample from each campus:
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-9, fig.cap = "Visualization of two selected random sample from UTSG (left) and UTM (right).", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/f2-1.png")
+```
 <figcaption>Visualization of two selected random sample from UTSG (left)
 and UTM (right)</figcaption>
 </figure>
@@ -507,7 +522,9 @@ result easily.
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-10, fig.cap = "Visualization of the case when $p_1 > p_2$.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/po1-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>p</em><sub>1</sub> &gt; <em>p</em><sub>2</sub></span></figcaption>
 </figure>
@@ -523,7 +540,9 @@ and $1$.
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-11, fig.cap = "Visualization of the case when $p_1 < p_2$.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/po2-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>p</em><sub>1</sub> &lt; <em>p</em><sub>2</sub></span></figcaption>
 </figure>
@@ -537,7 +556,9 @@ $\hat{p}_1 < \hat{p}_2$.
 
 ::: center
 <figure>
-
+```{r fig-mu1-lt-mu2-12, fig.cap = "Visualization of the case when $p_1 = p_2$.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("figures/po3-1.png")
+```
 <figcaption>Visualization of the case when <span
 class="math inline"><em>p̂</em><sub>1</sub> = <em>p̂</em><sub>2</sub></span></figcaption>
 </figure>
