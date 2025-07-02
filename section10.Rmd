@@ -388,7 +388,7 @@ number line for each case.
 
 ::: center
 <figure>
-```{r fig-mu1-lt-mu2-5, fig.cap = "Visualization of the case when $\bar{M}_1 < \bar{M}_2$", out.width = "80%", echo = FALSE}
+```{r fig-mu1-lt-mu2-5, fig.cap = "Visualization of the case when $\\bar{M}_1 < \\bar{M}_2$", out.width = "80%", echo = FALSE}
 knitr::include_graphics("figures/pa1-1.png")
 ```
 <figcaption>Visualization of the case when <span
@@ -406,7 +406,7 @@ $\bar{M}_1 < \bar{M}_2.$
 
 ::: center
 <figure>
-```{r fig-mu1-lt-mu2-6, fig.cap = "Visualization of the case when $\bar{M}_1 > \bar{M}_2$", out.width = "80%", echo = FALSE}
+```{r fig-mu1-lt-mu2-6, fig.cap = "Visualization of the case when $\\bar{M}_1 > \\bar{M}_2$", out.width = "80%", echo = FALSE}
 knitr::include_graphics("figures/pa2-1.png")
 ```
 <figcaption>Visualization of the case when <span
@@ -424,7 +424,7 @@ $\bar{M}_1 > \bar{M}_2.$
 
 ::: center
 <figure>
-```{r fig-mu1-lt-mu2-7, fig.cap = "The mean $\bar{M}_1$ is equal to $\bar{M}_2$.", out.width = "80%", echo = FALSE}
+```{r fig-mu1-lt-mu2-7, fig.cap = "The mean $\\bar{M}_1$ is equal to $\\bar{M}_2$.", out.width = "80%", echo = FALSE}
 knitr::include_graphics("figures/pa3-1.png")
 ```
 <figcaption>Visualization of the case when <span
