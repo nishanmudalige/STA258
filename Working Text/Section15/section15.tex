@@ -17,7 +17,6 @@ In statistics, simple linear regression (SLR) is a linear regression model with 
   % Draw x and y axes
   \draw[->] (-1,0) -- (7,0) node[right] {Time (month)};
   \draw[->] (0,-1) -- (0,5) node[above] {Height (m)};
-  
   \filldraw[blue] (0.5, 0.75) circle (2pt);
   \filldraw[blue] (1.5, 1.75) circle (2pt);
   \filldraw[blue] (1, 1.25) circle (2pt);
@@ -606,7 +605,7 @@ It measures the distance between estimated value (estimated dependent data) and 
   \draw[red, thick, domain=0:6] plot (\x, {0.8*\x + 0.35}) node[right] {$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 \cdot x$};
   \draw[dashed] (0,3) -- (6,3) node[right] {$\bar{y}$};
   \foreach \x in {0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5} {
-    \draw[black] (\x, {0.8*\x + 0.35}) --r (\x, 3);
+    \draw[black] ($ (0,0) + (0.8*\x + 0.35, 0) $) -- (\x, 3);
   }
 \end{tikzpicture}
 \end{center}
@@ -655,9 +654,4 @@ Moreover, we can use SST, SSE and SSR to calculate another value which is import
 \begin{definition}[Coefficient of determination]
 We define the coefficient of determination as the sum of squares due to the regression divided by the total sum of squares. $$r^2 = \frac{SSR}{SST} = 1 - \frac{SSE}{SST}.$$
 The coefficient of determination can be interpreted as the proportion of the variation in $Y$ that is explained by the regression relationship of $Y$ with $X$ (or the proportion of the total corrected sum of squares explained by the regression). Note that: $0 \leq r^2 \leq 1.$
-
 \end{definition}
-
-
-
-

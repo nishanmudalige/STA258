@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  28 JUN 2025 21:14
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.9)  27 JUN 2025 16:31
->>>>>>> origin
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  1 JUL 2025 03:40
->>>>>>> BryanImages
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  2 JUL 2025 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1354,7 +1346,11 @@ Package amsthm Warning: Unknown theoremstyle `defin' on input line 591.
 \c@defin=\count391
 \c@ntstyle=\count392
 \c@cumulArea=\count393
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `fig:qqplot-ggplot' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 692.
@@ -1375,8 +1371,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 692.
 LaTeX Font Info:    ... okay on input line 692.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 692.
 LaTeX Font Info:    ... okay on input line 692.
-
-(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count394
 \scratchdimen=\dimen358
@@ -1452,20 +1447,20 @@ Package hyperref Info: Link coloring ON on input line 692.
 
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 830
+LaTeX Font Info:    Trying to load font information for U+msa on input line 829
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 830
+LaTeX Font Info:    Trying to load font information for U+msb on input line 829
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 83
-0.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 82
+9.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1476,16 +1471,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.830 
+l.829 
        [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 882--889
+Underfull \hbox (badness 10000) in paragraph at lines 881--888
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 893--896
+Underfull \hbox (badness 10000) in paragraph at lines 892--895
 
  []
 
@@ -1496,7 +1491,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.902 \clearpage
+l.901 \clearpage
                  [1{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super
 /cm-super-ts1.enc}] (./main.toc
 
@@ -1554,20 +1549,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 [5]
 
 [6]
-<<<<<<< HEAD
-<Section1/img/Leftskew.jpg, id=413, 750.805pt x 754.82pt>
-=======
 <Section1/img/Leftskew.jpg, id=480, 750.805pt x 754.82pt>
->>>>>>> origin
 File: Section1/img/Leftskew.jpg Graphic file (type jpg)
 <use Section1/img/Leftskew.jpg>
 Package pdftex.def Info: Section1/img/Leftskew.jpg  used on input line 165.
 (pdftex.def)             Requested size: 337.85913pt x 339.66586pt.
-<<<<<<< HEAD
-<Section1/img/Rightskew.jpg, id=414, 750.805pt x 754.82pt>
-=======
 <Section1/img/Rightskew.jpg, id=481, 750.805pt x 754.82pt>
->>>>>>> origin
 File: Section1/img/Rightskew.jpg Graphic file (type jpg)
 <use Section1/img/Rightskew.jpg>
 Package pdftex.def Info: Section1/img/Rightskew.jpg  used on input line 175.
@@ -1575,11 +1562,7 @@ Package pdftex.def Info: Section1/img/Rightskew.jpg  used on input line 175.
 
 
 [7 <./Section1/img/Leftskew.jpg>]
-<<<<<<< HEAD
-<Section1/img/Symmetry.jpg, id=423, 289.08pt x 171.64125pt>
-=======
 <Section1/img/Symmetry.jpg, id=489, 289.08pt x 171.64125pt>
->>>>>>> origin
 File: Section1/img/Symmetry.jpg Graphic file (type jpg)
 <use Section1/img/Symmetry.jpg>
 Package pdftex.def Info: Section1/img/Symmetry.jpg  used on input line 200.
@@ -1589,11 +1572,7 @@ Package pdftex.def Info: Section1/img/Symmetry.jpg  used on input line 200.
 [8 <./Section1/img/Rightskew.jpg>]
 
 [9 <./Section1/img/Symmetry.jpg>]
-<<<<<<< HEAD
-<Section1/img/Histogram.jpg, id=438, 477.785pt x 249.93375pt>
-=======
 <Section1/img/Histogram.jpg, id=505, 477.785pt x 249.93375pt>
->>>>>>> origin
 File: Section1/img/Histogram.jpg Graphic file (type jpg)
 <use Section1/img/Histogram.jpg>
 Package pdftex.def Info: Section1/img/Histogram.jpg  used on input line 241.
@@ -1605,20 +1584,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--261
 
  []
 
-<<<<<<< HEAD
-<Section1/img/HisL.jpg, id=447, 1424.32124pt x 1019.81pt>
-=======
 <Section1/img/HisL.jpg, id=514, 1424.32124pt x 1019.81pt>
->>>>>>> origin
 File: Section1/img/HisL.jpg Graphic file (type jpg)
 <use Section1/img/HisL.jpg>
 Package pdftex.def Info: Section1/img/HisL.jpg  used on input line 267.
 (pdftex.def)             Requested size: 356.07944pt x 254.95187pt.
-<<<<<<< HEAD
-<Section1/img/HisR.jpg, id=448, 490.83376pt x 490.83376pt>
-=======
 <Section1/img/HisR.jpg, id=515, 490.83376pt x 490.83376pt>
->>>>>>> origin
 File: Section1/img/HisR.jpg Graphic file (type jpg)
 <use Section1/img/HisR.jpg>
 Package pdftex.def Info: Section1/img/HisR.jpg  used on input line 276.
@@ -1626,20 +1597,12 @@ Package pdftex.def Info: Section1/img/HisR.jpg  used on input line 276.
 
 
 [11 <./Section1/img/HisL.jpg>]
-<<<<<<< HEAD
-<Section1/img/HisS.jpg, id=454, 1231.60126pt x 816.04875pt>
-=======
 <Section1/img/HisS.jpg, id=521, 1231.60126pt x 816.04875pt>
->>>>>>> origin
 File: Section1/img/HisS.jpg Graphic file (type jpg)
 <use Section1/img/HisS.jpg>
 Package pdftex.def Info: Section1/img/HisS.jpg  used on input line 285.
 (pdftex.def)             Requested size: 307.89955pt x 204.01169pt.
-<<<<<<< HEAD
-<Section1/img/BoxPlot.jpg, id=455, 1576.89125pt x 888.31876pt>
-=======
 <Section1/img/BoxPlot.jpg, id=522, 1576.89125pt x 888.31876pt>
->>>>>>> origin
 File: Section1/img/BoxPlot.jpg Graphic file (type jpg)
 <use Section1/img/BoxPlot.jpg>
 Package pdftex.def Info: Section1/img/BoxPlot.jpg  used on input line 294.
@@ -1656,11 +1619,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--303
 
  []
 
-<<<<<<< HEAD
-<Section1/img/Bskew.jpg, id=462, 2122.93124pt x 958.58125pt>
-=======
 <Section1/img/Bskew.jpg, id=530, 2122.93124pt x 958.58125pt>
->>>>>>> origin
 File: Section1/img/Bskew.jpg Graphic file (type jpg)
 <use Section1/img/Bskew.jpg>
 Package pdftex.def Info: Section1/img/Bskew.jpg  used on input line 309.
@@ -1682,20 +1641,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--333
 
  []
 
-<<<<<<< HEAD
-<Section1/img/R1.jpg, id=470, 791.95876pt x 655.44875pt>
-=======
 <Section1/img/R1.jpg, id=537, 791.95876pt x 655.44875pt>
->>>>>>> origin
 File: Section1/img/R1.jpg Graphic file (type jpg)
 <use Section1/img/R1.jpg>
 Package pdftex.def Info: Section1/img/R1.jpg  used on input line 336.
 (pdftex.def)             Requested size: 356.37814pt x 294.9492pt.
-<<<<<<< HEAD
-<Section1/img/R2.jpg, id=471, 851.18pt x 108.405pt>
-=======
 <Section1/img/R2.jpg, id=538, 851.18pt x 108.405pt>
->>>>>>> origin
 File: Section1/img/R2.jpg Graphic file (type jpg)
 <use Section1/img/R2.jpg>
 Package pdftex.def Info: Section1/img/R2.jpg  used on input line 345.
@@ -1749,11 +1700,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-<<<<<<< HEAD
-<Section3/Img3/CLT.jpg, id=526, 2536.47626pt x 1737.49126pt>
-=======
 <Section3/Img3/CLT.jpg, id=592, 2536.47626pt x 1737.49126pt>
->>>>>>> origin
 File: Section3/Img3/CLT.jpg Graphic file (type jpg)
 <use Section3/Img3/CLT.jpg>
 Package pdftex.def Info: Section3/Img3/CLT.jpg  used on input line 21.
@@ -1784,11 +1731,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--245
 
 
 [29]
-<<<<<<< HEAD
-<Section4/images/pmf_plot.pdf, id=560, 433.62pt x 289.08pt>
-=======
 <Section4/images/pmf_plot.pdf, id=627, 433.62pt x 289.08pt>
->>>>>>> origin
 File: Section4/images/pmf_plot.pdf Graphic file (type pdf)
 <use Section4/images/pmf_plot.pdf>
 Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 284.
@@ -1797,11 +1740,7 @@ Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 284.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<<<<<<< HEAD
-<Section4/images/pmf_n50.pdf, id=561, 433.62pt x 289.08pt>
-=======
 <Section4/images/pmf_n50.pdf, id=628, 433.62pt x 289.08pt>
->>>>>>> origin
 File: Section4/images/pmf_n50.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n50.pdf>
 Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 292.
@@ -1809,11 +1748,7 @@ Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 292.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<<<<<<< HEAD
-<Section4/images/pmf_n100.pdf, id=562, 433.62pt x 289.08pt>
-=======
 <Section4/images/pmf_n100.pdf, id=629, 433.62pt x 289.08pt>
->>>>>>> origin
 File: Section4/images/pmf_n100.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n100.pdf>
 Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 300.
@@ -1821,11 +1756,7 @@ Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 300.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<<<<<<< HEAD
-<Section4/images/pmf_n300.pdf, id=563, 433.62pt x 289.08pt>
-=======
 <Section4/images/pmf_n300.pdf, id=630, 433.62pt x 289.08pt>
->>>>>>> origin
 File: Section4/images/pmf_n300.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n300.pdf>
 Package pdftex.def Info: Section4/images/pmf_n300.pdf  used on input line 308.
@@ -1840,11 +1771,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [31 <./Section4/images/pmf_plot.pdf> <./Section4/images/pmf_n50.pdf>]
 
 [32 <./Section4/images/pmf_n100.pdf> <./Section4/images/pmf_n300.pdf>]
-<<<<<<< HEAD
-<Section4/images/binomial_normal.pdf, id=608, 578.16pt x 361.35pt>
-=======
 <Section4/images/binomial_normal.pdf, id=675, 578.16pt x 361.35pt>
->>>>>>> origin
 File: Section4/images/binomial_normal.pdf Graphic file (type pdf)
 <use Section4/images/binomial_normal.pdf>
 Package pdftex.def Info: Section4/images/binomial_normal.pdf  used on input lin
@@ -1914,11 +1841,7 @@ Chapter 5.
 ]
 
 [41]
-<<<<<<< HEAD
-<Section5/images/simulation_plot.pdf, id=663, 578.16pt x 361.35pt>
-=======
 <Section5/images/simulation_plot.pdf, id=729, 578.16pt x 361.35pt>
->>>>>>> origin
 File: Section5/images/simulation_plot.pdf Graphic file (type pdf)
 <use Section5/images/simulation_plot.pdf>
 Package pdftex.def Info: Section5/images/simulation_plot.pdf  used on input lin
@@ -1934,11 +1857,7 @@ Overfull \hbox (2.04045pt too wide) in paragraph at lines 159--159
  col = "blue")[] 
  []
 
-<<<<<<< HEAD
-<Section5/images/simulation_multi.pdf, id=664, 578.16pt x 361.35pt>
-=======
 <Section5/images/simulation_multi.pdf, id=730, 578.16pt x 361.35pt>
->>>>>>> origin
 File: Section5/images/simulation_multi.pdf Graphic file (type pdf)
 <use Section5/images/simulation_multi.pdf>
 Package pdftex.def Info: Section5/images/simulation_multi.pdf  used on input li
@@ -2004,11 +1923,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 [48]
-<<<<<<< HEAD
-<Section6/images/confidence_intervals.pdf, id=713, 722.7pt x 505.89pt>
-=======
 <Section6/images/confidence_intervals.pdf, id=781, 722.7pt x 505.89pt>
->>>>>>> origin
 File: Section6/images/confidence_intervals.pdf Graphic file (type pdf)
 <use Section6/images/confidence_intervals.pdf>
 Package pdftex.def Info: Section6/images/confidence_intervals.pdf  used on inpu
@@ -2017,11 +1932,7 @@ t line 265.
 
 
 [49]
-<<<<<<< HEAD
-<Section6/images/normal_confidence_curve.pdf, id=719, 433.62pt x 325.215pt>
-=======
 <Section6/images/normal_confidence_curve.pdf, id=786, 433.62pt x 325.215pt>
->>>>>>> origin
 File: Section6/images/normal_confidence_curve.pdf Graphic file (type pdf)
 <use Section6/images/normal_confidence_curve.pdf>
 Package pdftex.def Info: Section6/images/normal_confidence_curve.pdf  used on i
@@ -2087,11 +1998,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 ]
 
 [57]
-<<<<<<< HEAD
-<section7/images/density_curves.pdf, id=772, 505.89pt x 361.35pt>
-=======
 <section7/images/density_curves.pdf, id=838, 505.89pt x 361.35pt>
->>>>>>> origin
 File: section7/images/density_curves.pdf Graphic file (type pdf)
 <use section7/images/density_curves.pdf>
 Package pdftex.def Info: section7/images/density_curves.pdf  used on input line
@@ -2138,31 +2045,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 316.
-<<<<<<< HEAD
-<Section7/images/tax_histogram.pdf, id=799, 505.89pt x 361.35pt>
-=======
 <Section7/images/tax_histogram.pdf, id=865, 505.89pt x 361.35pt>
->>>>>>> origin
 File: Section7/images/tax_histogram.pdf Graphic file (type pdf)
 <use Section7/images/tax_histogram.pdf>
 Package pdftex.def Info: Section7/images/tax_histogram.pdf  used on input line 
 348.
 (pdftex.def)             Requested size: 281.85587pt x 201.32906pt.
-<<<<<<< HEAD
-<Section7/images/tax_boxplot.pdf, id=800, 433.62pt x 361.35pt>
-=======
 <Section7/images/tax_boxplot.pdf, id=866, 433.62pt x 361.35pt>
->>>>>>> origin
 File: Section7/images/tax_boxplot.pdf Graphic file (type pdf)
 <use Section7/images/tax_boxplot.pdf>
 Package pdftex.def Info: Section7/images/tax_boxplot.pdf  used on input line 36
 2.
 (pdftex.def)             Requested size: 234.8775pt x 195.7326pt.
-<<<<<<< HEAD
-<Section7/images/tax_qqplot.pdf, id=801, 433.62pt x 361.35pt>
-=======
 <Section7/images/tax_qqplot.pdf, id=867, 433.62pt x 361.35pt>
->>>>>>> origin
 File: Section7/images/tax_qqplot.pdf Graphic file (type pdf)
 <use Section7/images/tax_qqplot.pdf>
 Package pdftex.def Info: Section7/images/tax_qqplot.pdf  used on input line 376
@@ -2341,26 +2236,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
  []
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<<<<<<< HEAD
+
+
 [76]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-=======
-[70
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.112 \end{figure}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.2})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.112 \end{figure}
-                  ]
 Underfull \hbox (badness 10000) in paragraph at lines 134--135
->>>>>>> BryanImages
 
  []
 
@@ -2371,25 +2252,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
 
 
-<<<<<<< HEAD
 [77]
-Underfull \vbox (badness 10000) detected at line 235
-=======
-[71
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.3})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.233 \end{example}
-                   
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.4})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.233 \end{example}
-                   ]
 Underfull \vbox (badness 10000) detected at line 233
->>>>>>> BryanImages
  []
 
 
@@ -2400,168 +2264,89 @@ Underfull \vbox (badness 10000) detected at line 233
 
 [78]
 
-<<<<<<< HEAD
-[79]
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
-=======
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[73]
+[79]
 Underfull \hbox (badness 10000) in paragraph at lines 261--262
->>>>>>> BryanImages
 
  []
 
 
 
-<<<<<<< HEAD
 [80]
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-=======
-[74
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.5})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.302 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.6})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.302 
-      ]
 Underfull \hbox (badness 10000) in paragraph at lines 323--324
->>>>>>> BryanImages
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
 [81]
-
-[82]
-Overfull \hbox (25.63031pt too wide) in paragraph at lines 382--383
-[]\OT1/cmr/m/n/12 Note that, $[] = []$ and $[] = []$. 
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
-
->>>>>>> BryanImages
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-[75
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.7})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.355 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.8})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.355 
-      ]
 Overfull \hbox (25.63031pt too wide) in paragraph at lines 377--378
 []\OT1/cmr/m/n/12 Note that, $[] = []$ and $[] = []$. 
  []
 
 
 
-[76
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.9})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.385 \begin{center}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.10}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.385 \begin{center}
-                    ]
+[82]
 Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
 
 
-<<<<<<< HEAD
 [83]
-Underfull \hbox (badness 10000) in paragraph at lines 460--461
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
 
  []
 
+) (./Section11/section11.tex
 
-
-[84]) (./Section11/section11.tex
-
-[85]
+[84]
 Chapter 11.
 
 
-[86
+[85
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-<<<<<<< HEAD
-<section11/images/hypothesis_right_tail.pdf, id=965, 505.89pt x 289.08pt>
-=======
-<section11/images/hypothesis_right_tail.pdf, id=1032, 505.89pt x 289.08pt>
->>>>>>> origin
+<section11/images/hypothesis_right_tail.pdf, id=1028, 505.89pt x 289.08pt>
 File: section11/images/hypothesis_right_tail.pdf Graphic file (type pdf)
 <use section11/images/hypothesis_right_tail.pdf>
 Package pdftex.def Info: section11/images/hypothesis_right_tail.pdf  used on in
 put line 75.
 (pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
-<<<<<<< HEAD
-<section11/images/hypothesis_right_tail_wide.pdf, id=966, 505.89pt x 289.08pt>
-=======
-<section11/images/hypothesis_right_tail_wide.pdf, id=1033, 505.89pt x 289.08pt>
+<section11/images/hypothesis_right_tail_wide.pdf, id=1029, 505.89pt x 289.08pt>
 
->>>>>>> origin
 File: section11/images/hypothesis_right_tail_wide.pdf Graphic file (type pdf)
 <use section11/images/hypothesis_right_tail_wide.pdf>
 Package pdftex.def Info: section11/images/hypothesis_right_tail_wide.pdf  used 
 on input line 80.
 (pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
-<<<<<<< HEAD
-<section11/images/hypothesis_left_tail.pdf, id=967, 505.89pt x 289.08pt>
-=======
-<section11/images/hypothesis_left_tail.pdf, id=1034, 505.89pt x 289.08pt>
->>>>>>> origin
+<section11/images/hypothesis_left_tail.pdf, id=1030, 505.89pt x 289.08pt>
 File: section11/images/hypothesis_left_tail.pdf Graphic file (type pdf)
 <use section11/images/hypothesis_left_tail.pdf>
 Package pdftex.def Info: section11/images/hypothesis_left_tail.pdf  used on inp
 ut line 91.
 (pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
-<<<<<<< HEAD
-<section11/images/hypothesis_left_tail_wide.pdf, id=968, 505.89pt x 289.08pt>
-=======
-<section11/images/hypothesis_left_tail_wide.pdf, id=1035, 505.89pt x 289.08pt>
->>>>>>> origin
+<section11/images/hypothesis_left_tail_wide.pdf, id=1031, 505.89pt x 289.08pt>
 File: section11/images/hypothesis_left_tail_wide.pdf Graphic file (type pdf)
 <use section11/images/hypothesis_left_tail_wide.pdf>
 Package pdftex.def Info: section11/images/hypothesis_left_tail_wide.pdf  used o
@@ -2569,13 +2354,9 @@ n input line 96.
 (pdftex.def)             Requested size: 225.4804pt x 128.84529pt.
 
 
-[87 <./section11/images/hypothesis_right_tail.pdf> <./section11/images/hypothes
+[86 <./section11/images/hypothesis_right_tail.pdf> <./section11/images/hypothes
 is_right_tail_wide.pdf>]
-<<<<<<< HEAD
-<section11/images/hypothesis_two_tail.pdf, id=992, 505.89pt x 289.08pt>
-=======
-<section11/images/hypothesis_two_tail.pdf, id=1058, 505.89pt x 289.08pt>
->>>>>>> origin
+<section11/images/hypothesis_two_tail.pdf, id=1054, 505.89pt x 289.08pt>
 File: section11/images/hypothesis_two_tail.pdf Graphic file (type pdf)
 <use section11/images/hypothesis_two_tail.pdf>
 Package pdftex.def Info: section11/images/hypothesis_two_tail.pdf  used on inpu
@@ -2586,11 +2367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
-<<<<<<< HEAD
-<Section11/images/sweetening_10000_hist.pdf, id=993, 433.62pt x 252.945pt>
-=======
-<Section11/images/sweetening_10000_hist.pdf, id=1059, 433.62pt x 252.945pt>
->>>>>>> origin
+<Section11/images/sweetening_10000_hist.pdf, id=1055, 433.62pt x 252.945pt>
 File: Section11/images/sweetening_10000_hist.pdf Graphic file (type pdf)
 <use Section11/images/sweetening_10000_hist.pdf>
 Package pdftex.def Info: Section11/images/sweetening_10000_hist.pdf  used on in
@@ -2598,21 +2375,17 @@ put line 190.
 (pdftex.def)             Requested size: 281.85587pt x 164.42387pt.
 
 
-[88 <./section11/images/hypothesis_left_tail.pdf> <./section11/images/hypothesi
+[87 <./section11/images/hypothesis_left_tail.pdf> <./section11/images/hypothesi
 s_left_tail_wide.pdf> <./section11/images/hypothesis_two_tail.pdf>]
 Underfull \vbox (badness 1231) detected at line 211
  []
 
 
 
-[89]
+[88]
 
-[90 <./Section11/images/sweetening_10000_hist.pdf>]
-<<<<<<< HEAD
-<section11/images/deer_pvalue.pdf, id=1040, 447.6725pt x 317.185pt>
-=======
-<section11/images/deer_pvalue.pdf, id=1107, 447.6725pt x 317.185pt>
->>>>>>> origin
+[89 <./Section11/images/sweetening_10000_hist.pdf>]
+<section11/images/deer_pvalue.pdf, id=1102, 447.6725pt x 317.185pt>
 File: section11/images/deer_pvalue.pdf Graphic file (type pdf)
 <use section11/images/deer_pvalue.pdf>
 Package pdftex.def Info: section11/images/deer_pvalue.pdf  used on input line 2
@@ -2629,7 +2402,7 @@ Underfull \vbox (badness 1009) detected at line 341
 
 
 
-[91]
+[90]
 Underfull \vbox (badness 10000) detected at line 341
  []
 
@@ -2639,7 +2412,7 @@ Underfull \vbox (badness 10000) detected at line 341
 
 
 
-[92 <./section11/images/deer_pvalue.pdf>]
+[91 <./section11/images/deer_pvalue.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
@@ -2656,46 +2429,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
 
 
-[93]
+[92]
 Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
 
 
-[94]
+[93]
 Underfull \hbox (badness 10000) in paragraph at lines 452--453
 
  []
 
 
 
-[95]
+[94]
 Underfull \hbox (badness 10000) in paragraph at lines 489--490
 
  []
 
 
 
-[96]
+[95]
 
-[97]
+[96]
 Underfull \hbox (badness 10000) in paragraph at lines 610--611
 
  []
 
 
 
+[97]
+
 [98]
 
 [99]
-
-[100]
-<<<<<<< HEAD
-<section11/images/simulation_60.pdf, id=1118, 433.62pt x 361.35pt>
-=======
-<section11/images/simulation_60.pdf, id=1184, 433.62pt x 361.35pt>
->>>>>>> origin
+<section11/images/simulation_60.pdf, id=1180, 433.62pt x 361.35pt>
 File: section11/images/simulation_60.pdf Graphic file (type pdf)
 <use section11/images/simulation_60.pdf>
 Package pdftex.def Info: section11/images/simulation_60.pdf  used on input line
@@ -2703,14 +2472,10 @@ Package pdftex.def Info: section11/images/simulation_60.pdf  used on input line
 (pdftex.def)             Requested size: 281.85587pt x 234.89125pt.
 
 
-[101]
+[100]
 
-[102 <./section11/images/simulation_60.pdf>]
-<<<<<<< HEAD
-<section11/images/binomial_pmf.pdf, id=1138, 433.62pt x 361.35pt>
-=======
-<section11/images/binomial_pmf.pdf, id=1205, 433.62pt x 361.35pt>
->>>>>>> origin
+[101 <./section11/images/simulation_60.pdf>]
+<section11/images/binomial_pmf.pdf, id=1200, 433.62pt x 361.35pt>
 File: section11/images/binomial_pmf.pdf Graphic file (type pdf)
 <use section11/images/binomial_pmf.pdf>
 Package pdftex.def Info: section11/images/binomial_pmf.pdf  used on input line 
@@ -2718,22 +2483,14 @@ Package pdftex.def Info: section11/images/binomial_pmf.pdf  used on input line
 (pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
 
 
-[103]
-<<<<<<< HEAD
-<section11/images/binomial_pmf_100.pdf, id=1145, 433.62pt x 361.35pt>
-=======
-<section11/images/binomial_pmf_100.pdf, id=1211, 433.62pt x 361.35pt>
->>>>>>> origin
+[102]
+<section11/images/binomial_pmf_100.pdf, id=1207, 433.62pt x 361.35pt>
 File: section11/images/binomial_pmf_100.pdf Graphic file (type pdf)
 <use section11/images/binomial_pmf_100.pdf>
 Package pdftex.def Info: section11/images/binomial_pmf_100.pdf  used on input l
 ine 884.
 (pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
-<<<<<<< HEAD
-<section11/images/binomial_simulation_histogram.pdf, id=1146, 433.62pt x 361.35
-=======
-<section11/images/binomial_simulation_histogram.pdf, id=1212, 433.62pt x 361.35
->>>>>>> origin
+<section11/images/binomial_simulation_histogram.pdf, id=1208, 433.62pt x 361.35
 pt>
 File: section11/images/binomial_simulation_histogram.pdf Graphic file (type pdf
 )
@@ -2743,13 +2500,9 @@ ed on input line 901.
 (pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
 
 
-[104 <./section11/images/binomial_pmf.pdf> <./section11/images/binomial_pmf_100
+[103 <./section11/images/binomial_pmf.pdf> <./section11/images/binomial_pmf_100
 .pdf>]
-<<<<<<< HEAD
-<section11/images/sim_vs_theoretical_pmf.pdf, id=1165, 433.62pt x 361.35pt>
-=======
-<section11/images/sim_vs_theoretical_pmf.pdf, id=1231, 433.62pt x 361.35pt>
->>>>>>> origin
+<section11/images/sim_vs_theoretical_pmf.pdf, id=1227, 433.62pt x 361.35pt>
 File: section11/images/sim_vs_theoretical_pmf.pdf Graphic file (type pdf)
 <use section11/images/sim_vs_theoretical_pmf.pdf>
 Package pdftex.def Info: section11/images/sim_vs_theoretical_pmf.pdf  used on i
@@ -2757,12 +2510,8 @@ nput line 924.
 (pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
 
 
-[105 <./section11/images/binomial_simulation_histogram.pdf>]
-<<<<<<< HEAD
-<section11/images/binomial_normal_approximation.pdf, id=1176, 433.62pt x 361.35
-=======
-<section11/images/binomial_normal_approximation.pdf, id=1242, 433.62pt x 361.35
->>>>>>> origin
+[104 <./section11/images/binomial_simulation_histogram.pdf>]
+<section11/images/binomial_normal_approximation.pdf, id=1238, 433.62pt x 361.35
 pt>
 File: section11/images/binomial_normal_approximation.pdf Graphic file (type pdf
 )
@@ -2772,9 +2521,11 @@ ed on input line 960.
 (pdftex.def)             Requested size: 305.33789pt x 254.45955pt.
 
 
-[106 <./section11/images/sim_vs_theoretical_pmf.pdf>]
+[105 <./section11/images/sim_vs_theoretical_pmf.pdf>]
 
-[107 <./section11/images/binomial_normal_approximation.pdf>]
+[106 <./section11/images/binomial_normal_approximation.pdf>]
+
+[107]
 
 [108]
 
@@ -2789,20 +2540,14 @@ ed on input line 960.
 [113]
 
 [114]
-
-[115]
 Underfull \hbox (badness 10000) in paragraph at lines 1355--1356
 
  []
 
 
 
-[116]
-<<<<<<< HEAD
-<section11/images/chisq_right_tail.pdf, id=1248, 433.62pt x 289.08pt>
-=======
-<section11/images/chisq_right_tail.pdf, id=1314, 433.62pt x 289.08pt>
->>>>>>> origin
+[115]
+<section11/images/chisq_right_tail.pdf, id=1310, 433.62pt x 289.08pt>
 File: section11/images/chisq_right_tail.pdf Graphic file (type pdf)
 <use section11/images/chisq_right_tail.pdf>
 Package pdftex.def Info: section11/images/chisq_right_tail.pdf  used on input l
@@ -2810,45 +2555,9 @@ ine 1471.
 (pdftex.def)             Requested size: 328.82707pt x 219.22668pt.
 
 
-[117]) (./Section12/section12.tex
+[116]) (./Section12/section12.tex
 
-[118 <./section11/images/chisq_right_tail.pdf>]
-=======
-[77
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.11}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.450 	\item 4
-              . Sample size requirement: both selected sample size must grea...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.12}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.450 	\item 4
-              . Sample size requirement: both selected sample size must grea...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10.13}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.450 	\item 4
-              . Sample size requirement: both selected sample size must grea...
-]
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
-
- []
-
-) (./Section12/section12.tex
-
-[78]
->>>>>>> BryanImages
+[117 <./section11/images/chisq_right_tail.pdf>]
 Chapter 12.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -2860,65 +2569,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-./Section12/section12.tex:42: Missing } inserted.
-<inserted text> 
-                }
-l.42 ...- p_{0}}{\sqrt{\frac{p_{0}}(1-p_{0$})}{n}}
-                                                  }.\]
-? 
-./Section12/section12.tex:42: Emergency stop.
-<inserted text> 
-                }
-l.42 ...- p_{0}}{\sqrt{\frac{p_{0}}(1-p_{0$})}{n}}
-                                                  }.\]
-End of file on the terminal!
-
-<<<<<<< HEAD
- 
-Here is how much of TeX's memory you used:
- 46671 strings out of 473190
- 1093479 string characters out of 5715801
- 1723092 words of memory out of 5000000
- 68733 multiletter control sequences out of 15000+600000
- 574790 words of font info for 99 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 86i,17n,96p,914b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
-./Section12/section12.tex:42:  ==> Fatal error occurred, no output PDF file pro
-duced!
- 16--17
-=======
-
-[79
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.44 \end{definition}
-                     ]
+[118
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 84--85
->>>>>>> BryanImages
 
  []
 
 
 
-<<<<<<< HEAD
-[124
-=======
-[80
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12.2})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.117 
-      ]
+[119]
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
@@ -2940,117 +2607,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
 
 
-[81
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12.3})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.173 ...e Sample Test Hypothesis on a Proportion}
-                                                  
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12.4})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.173 ...e Sample Test Hypothesis on a Proportion}
-                                                  ]
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-
-
-[82
-pdfTeX warning (ext4): destination with the same identifier (name{figure.12.5})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.225 
-      ]
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
-
- []
-
-) (./Section14.2/section14.2.tex
-
-[83]
-Chapter 14.
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-
- []
-
-
-
-[84
->>>>>>> BryanImages
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
-
- []
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-[125]
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-=======
 [120]
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
->>>>>>> origin
-
- []
-
-
-
-[126]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
-
- []
-
-
-
-<<<<<<< HEAD
-=======
-[121]
 Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
 
 
-[122]
+[121]
 Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
@@ -3067,7 +2631,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
 ) (./Section13/section13.tex
 
-[123]
+[122]
 Chapter 13.
 
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
@@ -3081,16 +2645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
 
 
-[124
-=======
-[85
-pdfTeX warning (ext4): destination with the same identifier (name{figure.14.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.82 N
-      ote that your final conclusion is based on the value of $\mu_d$, but w...
->>>>>>> BryanImages
+[123
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 43--45
@@ -3107,7 +2662,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 212.
 See the caption package documentation for explanation.
 
-<section13/images/power_curve.pdf, id=1364, 433.62pt x 289.08pt>
+<section13/images/power_curve.pdf, id=1360, 433.62pt x 289.08pt>
 File: section13/images/power_curve.pdf Graphic file (type pdf)
 <use section13/images/power_curve.pdf>
 Package pdftex.def Info: section13/images/power_curve.pdf  used on input line 2
@@ -3115,9 +2670,9 @@ Package pdftex.def Info: section13/images/power_curve.pdf  used on input line 2
 (pdftex.def)             Requested size: 352.31625pt x 234.89014pt.
 
 
-[125]
+[124]
 
-[126 <./section13/images/power_curve.pdf>]
+[125 <./section13/images/power_curve.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
@@ -3148,84 +2703,41 @@ Underfull \vbox (badness 10000) detected at line 287
 
 
 
->>>>>>> origin
+[126]
+
 [127]
 
 [128]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
- []
-
-
-
-<<<<<<< HEAD
-[129]) (./Section15/section15.tex
+[129]
 
 [130]
-<<<<<<< HEAD
-Chapter 15.
-
-
-[131
-=======
 
 [131]
-
-[132]
 Underfull \hbox (badness 10000) in paragraph at lines 513--515
 
  []
-=======
-[86
-pdfTeX warning (ext4): destination with the same identifier (name{figure.14.3})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.132 
-      ]
-
-[87]
-
-[88]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
-
- []
-
-) (./Section15/section15.tex
-
-[89
-pdfTeX warning (ext4): destination with the same identifier (name{figure.14.4})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.4 \chapter
-            {Introduction to Simple Linear Regression}]
-Chapter 15.
-
-
-[90
->>>>>>> BryanImages
 
 
 
-[133]
+[132]
 Underfull \hbox (badness 10000) in paragraph at lines 551--553
 
  []
 
 
 
-[134]) (./Section14/section14.tex
+[133]) (./Section14/section14.tex
 
-[135]
+[134]
 Chapter 14.
 
 
-[136
+[135
 
 ]
 
-[137]
+[136]
 Overfull \hbox (0.68668pt too wide) in paragraph at lines 162--162
 |[]\OT1/cmr/bx/n/12 Comparing Two Pop-u-la-tions Means: In-de-pen-dent Sam-plin
 g (Equal Vari-
@@ -3233,14 +2745,14 @@ g (Equal Vari-
 
 
 
-[138]
-<section14/images/qqplot_group1.pdf, id=1456, 505.89pt x 505.89pt>
+[137]
+<section14/images/qqplot_group1.pdf, id=1451, 505.89pt x 505.89pt>
 File: section14/images/qqplot_group1.pdf Graphic file (type pdf)
 <use section14/images/qqplot_group1.pdf>
 Package pdftex.def Info: section14/images/qqplot_group1.pdf  used on input line
  366.
 (pdftex.def)             Requested size: 281.85587pt x 281.86067pt.
-<section14/images/qqplot_group2.pdf, id=1457, 505.89pt x 505.89pt>
+<section14/images/qqplot_group2.pdf, id=1452, 505.89pt x 505.89pt>
 File: section14/images/qqplot_group2.pdf Graphic file (type pdf)
 <use section14/images/qqplot_group2.pdf>
 Package pdftex.def Info: section14/images/qqplot_group2.pdf  used on input line
@@ -3252,7 +2764,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 385.
 See the caption package documentation for explanation.
 
-<section14/images/boxplot_success_index.pdf, id=1458, 505.89pt x 505.89pt>
+<section14/images/boxplot_success_index.pdf, id=1453, 505.89pt x 505.89pt>
 File: section14/images/boxplot_success_index.pdf Graphic file (type pdf)
 <use section14/images/boxplot_success_index.pdf>
 Package pdftex.def Info: section14/images/boxplot_success_index.pdf  used on in
@@ -3263,7 +2775,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 404.
 See the caption package documentation for explanation.
 
-<section14/images/boxplot_ggplot2.pdf, id=1459, 433.62pt x 289.08pt>
+<section14/images/boxplot_ggplot2.pdf, id=1454, 433.62pt x 289.08pt>
 File: section14/images/boxplot_ggplot2.pdf Graphic file (type pdf)
 <use section14/images/boxplot_ggplot2.pdf>
 Package pdftex.def Info: section14/images/boxplot_ggplot2.pdf  used on input li
@@ -3272,6 +2784,16 @@ ne 432.
 
 Underfull \hbox (badness 10000) in paragraph at lines 450--452
 
+ []
+
+
+
+[138]
+Underfull \vbox (badness 10000) detected at line 531
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 531
  []
 
 
@@ -3296,17 +2818,7 @@ Underfull \vbox (badness 10000) detected at line 531
 
 
 
-[141]
-Underfull \vbox (badness 10000) detected at line 531
- []
-
-
-Underfull \vbox (badness 10000) detected at line 531
- []
-
-
-
-[142 <./section14/images/qqplot_group1.pdf>]
+[141 <./section14/images/qqplot_group1.pdf>]
 Underfull \vbox (badness 10000) detected at line 531
  []
 
@@ -3316,21 +2828,21 @@ Overfull \vbox (6.3851pt too high) detected at line 531
 
 
 
-[143 <./section14/images/qqplot_group2.pdf> <./section14/images/boxplot_success
+[142 <./section14/images/qqplot_group2.pdf> <./section14/images/boxplot_success
 _index.pdf>]
 
-[144 <./section14/images/boxplot_ggplot2.pdf>]
+[143 <./section14/images/boxplot_ggplot2.pdf>]
+
+[144]
 
 [145]
-
-[146]
-<section14/images/treatment_qqplot.pdf, id=1524, 361.35pt x 361.35pt>
+<section14/images/treatment_qqplot.pdf, id=1520, 361.35pt x 361.35pt>
 File: section14/images/treatment_qqplot.pdf Graphic file (type pdf)
 <use section14/images/treatment_qqplot.pdf>
 Package pdftex.def Info: section14/images/treatment_qqplot.pdf  used on input l
 ine 680.
 (pdftex.def)             Requested size: 281.85587pt x 281.85738pt.
-<section14/images/control_qqplot.pdf, id=1525, 361.35pt x 361.35pt>
+<section14/images/control_qqplot.pdf, id=1521, 361.35pt x 361.35pt>
 File: section14/images/control_qqplot.pdf Graphic file (type pdf)
 <use section14/images/control_qqplot.pdf>
 Package pdftex.def Info: section14/images/control_qqplot.pdf  used on input lin
@@ -3353,9 +2865,9 @@ Underfull \vbox (badness 10000) detected at line 798
 
 
 
+[146]
+
 [147]
-
-[148]
 Underfull \vbox (badness 3826) detected at line 798
  []
 
@@ -3365,7 +2877,7 @@ Underfull \vbox (badness 3826) detected at line 798
 
 
 
-[149 <./section14/images/treatment_qqplot.pdf>]
+[148 <./section14/images/treatment_qqplot.pdf>]
 Underfull \vbox (badness 10000) detected at line 798
  []
 
@@ -3375,7 +2887,7 @@ Underfull \vbox (badness 10000) detected at line 798
 
 
 
-[150 <./section14/images/control_qqplot.pdf>]
+[149 <./section14/images/control_qqplot.pdf>]
 Underfull \vbox (badness 10000) detected at line 798
  []
 
@@ -3384,10 +2896,10 @@ Underfull \vbox (badness 10000) detected at line 798
  []
 
 
+
+[150]
 
 [151]
-
-[152]
 Underfull \hbox (badness 10000) in paragraph at lines 876--877
 
  []
@@ -3399,7 +2911,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 878--879
 
 
 
-[153]
+[152]
 Underfull \hbox (badness 10000) in paragraph at lines 906--907
 
  []
@@ -3411,7 +2923,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 935--936
 
 
 
-[154]
+[153]
 Underfull \hbox (badness 10000) in paragraph at lines 939--940
 
  []
@@ -3423,7 +2935,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 941--943
 
 
 
-[155]
+[154]
 Underfull \hbox (badness 10000) in paragraph at lines 994--995
 
  []
@@ -3435,188 +2947,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
 
 
 
-[156]
+[155]
 
-[157]
+[156]
 Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
 
  []
 
 
 
-[158]) (./Section15/section15.tex
+[157]) (./Section15/section15.tex
 
-[159]
+[158]
 Chapter 15.
 
 
-[160
->>>>>>> origin
+[159
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[132]
+[160]
 
-[133]
-
-[134]
-
-[135]
-=======
 [161]
 
 [162]
 
 [163]
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+
 
 [164]
->>>>>>> origin
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-=======
-[91]
 
-[92
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.2})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.132 
-      ]
-
-[93
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.3})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.171 \begin{example}
-                     
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.4})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.171 \begin{example}
-                     ]
-
-[94
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.5})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.258 \end{example}
-                   ]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
->>>>>>> BryanImages
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
-
- []
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-[136]
-
-[137]
-=======
 [165]
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
+
+
 
 [166]
->>>>>>> origin
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
-=======
-[95]
-
-[96
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.6})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.366 \end{example}
-                   ]
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
->>>>>>> BryanImages
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
-
- []
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-[138]
-=======
-[167]
->>>>>>> origin
 Underfull \hbox (badness 10000) in paragraph at lines 375--376
-=======
-[97]
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
->>>>>>> BryanImages
 
  []
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[139]
+[167]
 
-[140]
-
-[141]
-=======
 [168]
 
 [169]
-
-[170]
->>>>>>> origin
 Underfull \hbox (badness 10000) in paragraph at lines 492--493
-=======
-[98
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.7})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.439 \end{align*}
-                  ]
-
-[99]
-
-[100
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.8})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.491 \section{SST, SSE and SSR}
-                                ]
-Underfull \hbox (badness 10000) in paragraph at lines 493--494
->>>>>>> BryanImages
 
  []
 
@@ -3625,78 +3034,35 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[142]
-=======
+[170]
+Underfull \hbox (badness 10000) in paragraph at lines 584--585
+
+ []
+
+
+
 [171]
->>>>>>> origin
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
-=======
-[101
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.9})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.581 ...efinition}[SSE (Sum of residual squared)]
-                                                  ]
-Underfull \hbox (badness 10000) in paragraph at lines 585--586
+Underfull \hbox (badness 10000) in paragraph at lines 619--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
 
  []
 
 
 
-[102
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.10}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.615 
-      ]
-Underfull \hbox (badness 10000) in paragraph at lines 620--621
+[172]) (./Section16/section16.tex
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 624--625
->>>>>>> BryanImages
-
- []
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-[143]
-=======
-[172]
->>>>>>> origin
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 620--621
-
- []
-
-
-
-<<<<<<< HEAD
-[144])
-
-[145]
-=======
-[173]) (./Section16/section16.tex
-
-[174]
+[173]
 Chapter 16.
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-<section16/images/regression_model.pdf, id=1692, 433.62pt x 433.62pt>
+<section16/images/regression_model.pdf, id=1687, 433.62pt x 433.62pt>
 File: section16/images/regression_model.pdf Graphic file (type pdf)
 <use section16/images/regression_model.pdf>
 Package pdftex.def Info: section16/images/regression_model.pdf  used on input l
@@ -3704,33 +3070,33 @@ ine 22.
 (pdftex.def)             Requested size: 281.85587pt x 281.8695pt.
 
 
-[175
+[174
 
 ]
 
-[176 <./section16/images/regression_model.pdf>]
+[175 <./section16/images/regression_model.pdf>]
 Underfull \vbox (badness 2961) detected at line 156
  []
 
 
 
-[177]
+[176]
 
-[178]
+[177]
 Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
 
 
-[179]
+[178]
 Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
 
-[180]
+[179]
 Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
@@ -3746,13 +3112,13 @@ Overfull \vbox (0.27571pt too high) detected at line 402
 
 
 
+[180]
+
 [181]
 
 [182]
 
 [183]
-
-[184]
 Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
  []
@@ -3764,17 +3130,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 567--568
 
 
 
-[185]
+[184]
 Underfull \hbox (badness 10000) in paragraph at lines 617--619
 
  []
 
 
 
-[186]
+[185]
 
-[187]
-<section16/images/utm_apartments.pdf, id=1786, 433.62pt x 361.35pt>
+[186]
+<section16/images/utm_apartments.pdf, id=1782, 433.62pt x 361.35pt>
 File: section16/images/utm_apartments.pdf Graphic file (type pdf)
 <use section16/images/utm_apartments.pdf>
 Package pdftex.def Info: section16/images/utm_apartments.pdf  used on input lin
@@ -3790,9 +3156,9 @@ Underfull \vbox (badness 10000) detected at line 987
 
 
 
-[188 <./section16/images/utm_apartments.pdf>]
+[187 <./section16/images/utm_apartments.pdf>]
 
-[189]
+[188]
 Underfull \vbox (badness 4739) detected at line 987
  []
 
@@ -3802,14 +3168,14 @@ Overfull \vbox (4.65277pt too high) detected at line 987
 
 
 
+[189]
+
 [190]
 
 [191]
 
 [192]
-
-[193]
-<section16/images/residual_plots.pdf, id=1821, 722.7pt x 393.47pt>
+<section16/images/residual_plots.pdf, id=1817, 722.7pt x 393.47pt>
 File: section16/images/residual_plots.pdf Graphic file (type pdf)
 <use section16/images/residual_plots.pdf>
 Package pdftex.def Info: section16/images/residual_plots.pdf  used on input lin
@@ -3817,40 +3183,14 @@ e 1043.
 (pdftex.def)             Requested size: 469.75502pt x 255.75845pt.
 
 
-[194 <./section16/images/residual_plots.pdf>])
+[193 <./section16/images/residual_plots.pdf>])
 
-[195]
->>>>>>> origin
-=======
-[103
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.11}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.647 
-      ])
-
-[104
-pdfTeX warning (ext4): destination with the same identifier (name{figure.15.12}
-) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.932 
-      ]
->>>>>>> BryanImages
+[194]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
  (./main.ind)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[146
-=======
-[196
->>>>>>> origin
-=======
-[105
->>>>>>> BryanImages
+[195
 
 
 ] (./main.aux)
@@ -3862,64 +3202,17 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-<<<<<<< HEAD
-(rerunfilecheck)             Checksum: 52DBBA528EEF7788DC18E59B49786A66;14943.
- ) 
-Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 47304 strings out of 473190
- 1109170 string characters out of 5715801
- 1776666 words of memory out of 5000000
- 69284 multiletter control sequences out of 15000+600000
- 575089 words of font info for 100 fonts, out of 8000000 for 9000
-=======
- 46786 strings out of 473190
- 1087059 string characters out of 5715801
- 1894162 words of memory out of 5000000
- 68845 multiletter control sequences out of 15000+600000
- 575169 words of font info for 100 fonts, out of 8000000 for 9000
->>>>>>> BryanImages
- 1141 hyphenation exceptions out of 8191
- 86i,17n,96p,914b,2087s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-<<<<<<< HEAD
-ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2025/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
-25/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (152 pages, 4206391 bytes).
-PDF statistics:
- 1621 PDF objects out of 1728 (max. 8388607)
- 1315 compressed objects within 14 object streams
- 425 named destinations out of 1000 (max. 500000)
- 816 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
 (rerunfilecheck)             Checksum: 94932D1D4D94C935A75B05D7D56A830A;18196.
  ) 
 Here is how much of TeX's memory you used:
- 47706 strings out of 473190
- 1117247 string characters out of 5715801
+ 47715 strings out of 473190
+ 1117448 string characters out of 5715801
  1838602 words of memory out of 5000000
- 69556 multiletter control sequences out of 15000+600000
+ 69566 multiletter control sequences out of 15000+600000
  578806 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,18n,96p,934b,2354s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3953,29 +3246,10 @@ t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf
 -dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (203 pages, 4464896 bytes).
+Output written on main.pdf (202 pages, 4465499 bytes).
 PDF statistics:
- 2133 PDF objects out of 2487 (max. 8388607)
- 1681 compressed objects within 17 object streams
- 537 named destinations out of 1000 (max. 500000)
+ 2129 PDF objects out of 2487 (max. 8388607)
+ 1678 compressed objects within 17 object streams
+ 536 named destinations out of 1000 (max. 500000)
  962 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> origin
-=======
-ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
-2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
-/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2
-025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/202
-5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (111 pages, 3931024 bytes).
-PDF statistics:
- 1255 PDF objects out of 1440 (max. 8388607)
- 1021 compressed objects within 11 object streams
- 351 named destinations out of 1000 (max. 500000)
- 674 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> BryanImages
 

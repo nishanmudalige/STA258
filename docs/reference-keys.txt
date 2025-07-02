@@ -67,7 +67,7 @@ exm:unlabeled-div-59
 def:unlabeled-div-60
 def:unlabeled-div-61
 def:unlabeled-div-62
-fig:fig-mu1-lt-mu2
+fig:fig-mu1-lt-mu1
 fig:fig-mu1-lt-mu2-2
 fig:fig-mu1-lt-mu2-3
 fig:fig-mu1-lt-mu2-4
@@ -210,7 +210,6 @@ secSampleSizeCIMean
 calculating-sample-size-for-a-confidence-interval-on-a-proportion
 two-sample-confidence-interval
 two-sample-confidence-interval-on-a-difference-of-mean
-section
 two-sample-confidence-interval-on-paired-data
 two-sample-confidence-interval-on-proportions
 two-sample-confidence-interval-on-variances
