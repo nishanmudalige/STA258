@@ -58,9 +58,9 @@ Moreover, $s_1^2$ and $s_2^2$ are sample variance of the two chosen groups; and 
 \textbf{Visualization of Two Sample Confidence Interval}
 
 Only with the equation seems hard to understand, the following number line helps you to visualize what we try to indicate:
-\begin{center}
+
 \begin{figure}[h!]
-\centering
+\begin{center}
 \begin{tikzpicture}
   \draw[<->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -68,17 +68,17 @@ Only with the equation seems hard to understand, the following number line helps
   \draw[thick] (4,0.5) arc (90:-90:0.5);
   \node[below] at (4,-0.5) {Upper Bound of $\mu_1 - \mu_2$};
 \end{tikzpicture}
+\end{center}
 \caption{Visualization of two-sample confidence interval (Case 1, 2, 3)}
 \end{figure}
-\end{center}
+
 
 Earlier in this chapter we said that two sample confidence interval aims to compare the mean between two populations. The number line above shows the result of difference of means between the two populations. Now, the question is, how do we know which population has a relatively larger mean? While, we can summarize it from that number line, with different cases:
 
 \textbf{1. $\mu_1 < \mu_2$:}
 
-\begin{center}
 \begin{figure}[h!]
-\centering
+\begin{center}
 \begin{tikzpicture}
   \draw[<-|, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -88,17 +88,16 @@ Earlier in this chapter we said that two sample confidence interval aims to comp
   \node[below] at (-7, -0.1) {\large$-\infty$};
   \node[below] at (7, -0.1) {\large$0$};
 \end{tikzpicture}
+\end{center}
 \caption{Visualization of the case when $\mu_1 < \mu_2$}
 \end{figure}
-\end{center}
 
 Now, we know that the difference between $\mu_1 < \mu_2$ lies on the negative side on the number line, such that: $\mu_1 - \mu_2 < 0$. Hence, by solving the inequality above we get: $\mu_1 < \mu_2$ trivially.
 
 \textbf{2. $\mu_1 > \mu_2$:}
 
-\begin{center}
 \begin{figure}[h!]
-\centering
+\begin{center}
 \begin{tikzpicture}
   \draw[|->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -108,17 +107,16 @@ Now, we know that the difference between $\mu_1 < \mu_2$ lies on the negative si
   \node[below] at (-7, -0.1) {\large$0$};
   \node[below] at (7, -0.1) {\large$\infty$};
 \end{tikzpicture}
+\end{center}
 \caption{Visualization of the case when $\mu_1 > \mu_2$}
 \end{figure}
-\end{center}
 
 Similarly as the case above, we know that $\mu_1 - \mu_2 > 0$, by observing the number line. Thus, we have: $\mu_1 > \mu_2$.
 
 \textbf{3. $\mu_1 = \mu_2$:}
 
-\begin{center}
 \begin{figure}[h!]
-\centering
+\begin{center}
 \begin{tikzpicture}
   \draw[<->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -129,9 +127,9 @@ Similarly as the case above, we know that $\mu_1 - \mu_2 > 0$, by observing the 
   \node[below] at (7, -0.1) {\large$\infty$};
   \node[below] at (-7, -0.1) {\large$-\infty$};
 \end{tikzpicture}
+\end{center}
 \caption{Visualization of the case when $\mu_1 = \mu_2$}
 \end{figure}
-\end{center}
 
 However, 0 is an element in the range of the difference between $\mu_1 - \mu_2$, such that there is a chance when the two means could be same. Hence, we conclude that $\mu_1 = \mu_2$ in this case. While, if you prefer to use $\mu_2 - \mu_1$, this strategy is going to work as well. Just simply following the same steps, you will get the same conclusion.\\
 
@@ -268,9 +266,8 @@ Next, we need to state our final conclusion from the result of two sample confid
 
 \textbf{1. $\bar{M}_1 < \bar{M}_2$:}
 
-\begin{center}
 \begin{figure}[H]
-\centering
+\begin{center}
 \begin{tikzpicture}
   \draw[<-|, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -280,17 +277,16 @@ Next, we need to state our final conclusion from the result of two sample confid
   \node[below] at (-7, -0.1) {\large$-\infty$};
   \node[below] at (7, -0.1) {\large$0$};
 \end{tikzpicture}
+\end{center}
 \caption{Visualization of the case when $\bar{M}_1 < \bar{M}_2$}
 \end{figure}
-\end{center}
 
 From the number line above, we know that the result of $\mu_d$ lies only in the negative side of the number line, also we use $M_1 - M_2$ to get the difference data then calculate the average of difference data. Now, we have: $\bar{M}_1 - \bar{M}_2 = \mu_d < 0$. Hence, we conclude that $\bar{M}_1 < \bar{M}_2.$
 
 \textbf{2. $\bar{M}_1 > \bar{M}_2$:}
 
-\begin{center}
 \begin{figure}[H]
-\centering
+\begin{center}
 \begin{tikzpicture}
   \draw[|->, thick] (-6.8,0) -- (7.2,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -300,17 +296,16 @@ From the number line above, we know that the result of $\mu_d$ lies only in the 
   \node[below] at (-7, -0.1) {\large$0$};
   \node[below] at (7, -0.1) {\large$\infty$};
 \end{tikzpicture}
+\end{center}
 \caption{Visualization of the case when $\bar{M}_1 > \bar{M}_2$}
 \end{figure}
-\end{center}
 
 From the number line above, we know that the result of $\mu_d$ lies only in the positive side of the number line, also we use $M_1 - M_2$ to get the difference data then calculate the average of difference data. Now, we have: $\bar{M}_1 - \bar{M}_2 = \mu_d > 0$. Hence, we conclude that $\bar{M}_1 > \bar{M}_2.$
 
 \textbf{3. $\bar{M}_1 = \bar{M}_2$:}
 
-\begin{center}
 \begin{figure}[H]
-\centering
+\begin{center}
 \begin{tikzpicture}
   \draw[<->, thick] (-7,0) -- (7,0);
   \draw[thick] (-4,-0.5) arc (270:90:0.5);
@@ -321,9 +316,9 @@ From the number line above, we know that the result of $\mu_d$ lies only in the 
   \node[below] at (7, -0.1) {\large$\infty$};
   \node[below] at (-7, -0.1) {\large$-\infty$};
 \end{tikzpicture}
+\end{center}
 \caption{Visualization of the case when $\bar{M}_1 = \bar{M}_2$}
 \end{figure}
-\end{center}
 
 While, 0 is included in the range of $\mu_d$, then there is a chance that $\bar{M}_1 - \bar{M_2} = \mu_d = 0.$ Hence, we conclude that $\bar{M}_1 = \bar{M}_2$.\\
 

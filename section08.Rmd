@@ -43,6 +43,7 @@ of confidence interval, our population proportion ($p$) should be as the
 following number line shows:\
 
 ::: center
+![](figures/ch8.png)
 :::
 
 Remember that your final answer of the range of $p$ must between $0$ and

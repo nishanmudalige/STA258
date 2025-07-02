@@ -229,8 +229,7 @@ concentrated on the right of the figure, then we say that probability
 distribution is left skew or negative skew. (See figure below)
 :::
 
-![Visualization of left skew probability
-distribution](Section1/img/Leftskew.jpg)
+knitr::include_graphics(knitr::image_uri("figures/Leftskew.jpg"))
 
 ::: definition
 By observing given probability distribution curve, if the right tail of

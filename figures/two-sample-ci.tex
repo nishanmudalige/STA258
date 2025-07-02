@@ -1,0 +1,20 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\begin{document}
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}
+  \draw[<->, thick] (-7,0) -- (7,0);
+  \draw[thick] (-4,-0.5) arc (270:90:0.5);
+  \node[below] at (-4,-0.5) {Lower Bound of $\mu_1 - \mu_2$};
+  \draw[thick] (4,0.5) arc (90:-90:0.5);
+  \node[below] at (4,-0.5) {Upper Bound of $\mu_1 - \mu_2$};
+\end{tikzpicture}
+\end{center}
+\caption{Visualization of two-sample confidence interval (Case 1, 2, 3)}
+\end{figure}
+
+\end{document}

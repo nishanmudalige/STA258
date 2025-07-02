@@ -8,6 +8,9 @@ author: "Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu"
 
 - \usepackage{tikz}
 - \usepackage{pgfplots}
+- \usepackage{amsmath}
+- \usepackage{amssymb}
+- \pgfplotsset{compat=1.18}
 
 # STA258: Statistics with Applied Probability {-}
 ### Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu {-}
