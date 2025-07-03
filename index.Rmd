@@ -47,7 +47,8 @@ header-includes:
 <!-- ``` -->
 
 
-```{r, echo=FALSE, engine='tikz', echo=FALSE, out.width='90%', fig.ext='png'}
+
+```{r, fig.align='center', echo=FALSE, engine='tikz', echo=FALSE, out.width='90%', fig.ext='png'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 
 \definecolor{mygrey}{HTML}{dadde8}
