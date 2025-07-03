@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  1 JUL 2025 03:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.8)  2 JUL 2025 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1287,7 +1287,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \c@pmfstyle=\count378
 
 
-Package amsthm Warning: Unknown theoremstyle `pdf' on input line 348.
+Package amsthm Warning: Unknown theoremstyle `pdf' on input line 347.
 
 \c@pdfstyle=\count379
 \c@transstyle=\count380
@@ -1320,7 +1320,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \c@exinn=\count388
 
 
-Package amsthm Warning: Unknown theoremstyle `defin' on input line 583.
+Package amsthm Warning: Unknown theoremstyle `defin' on input line 582.
 
 \c@defin=\count389
 \c@ntstyle=\count390
@@ -1328,24 +1328,24 @@ Package amsthm Warning: Unknown theoremstyle `defin' on input line 583.
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 684.
-LaTeX Font Info:    ... okay on input line 684.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 683.
+LaTeX Font Info:    ... okay on input line 683.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1408,7 +1408,7 @@ enefit from \pgfplotsset{compat=1.18} (current compat level: 1.7).
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 684.
+Package hyperref Info: Link coloring ON on input line 683.
 (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1419,20 +1419,20 @@ Package hyperref Info: Link coloring ON on input line 684.
 
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 822
+LaTeX Font Info:    Trying to load font information for U+msa on input line 821
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 822
+LaTeX Font Info:    Trying to load font information for U+msb on input line 821
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 82
-2.
+1.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -1443,16 +1443,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.822 
+l.821 
        [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 874--881
+Underfull \hbox (badness 10000) in paragraph at lines 873--880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--888
+Underfull \hbox (badness 10000) in paragraph at lines 884--887
 
  []
 
@@ -1463,7 +1463,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.894 \clearpage
+l.893 \clearpage
                  [1{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super
 /cm-super-ts1.enc}] (./main.toc
 
@@ -1519,94 +1519,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--83
 [5]
 
 [6]
-<Section1/img/Leftskew.jpg, id=367, 750.805pt x 754.82pt>
-File: Section1/img/Leftskew.jpg Graphic file (type jpg)
-<use Section1/img/Leftskew.jpg>
-Package pdftex.def Info: Section1/img/Leftskew.jpg  used on input line 165.
-(pdftex.def)             Requested size: 337.85913pt x 339.66586pt.
-<Section1/img/Rightskew.jpg, id=368, 750.805pt x 754.82pt>
-File: Section1/img/Rightskew.jpg Graphic file (type jpg)
-<use Section1/img/Rightskew.jpg>
-Package pdftex.def Info: Section1/img/Rightskew.jpg  used on input line 175.
-(pdftex.def)             Requested size: 337.85913pt x 339.66586pt.
-
 
 [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.178 
-       <./Section1/img/Leftskew.jpg>]
-<Section1/img/Symmetry.jpg, id=377, 289.08pt x 171.64125pt>
-File: Section1/img/Symmetry.jpg Graphic file (type jpg)
-<use Section1/img/Symmetry.jpg>
-Package pdftex.def Info: Section1/img/Symmetry.jpg  used on input line 200.
-(pdftex.def)             Requested size: 216.80946pt x 128.7306pt.
-
+l.208 
+      ]
 
 [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
-       <./Section1/img/Rightskew.jpg>]
-
-[9
+l.242 \end{thm}
+               
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.221 \begin{example}
-                      <./Section1/img/Symmetry.jpg>]
-<Section1/img/Histogram.jpg, id=392, 477.785pt x 249.93375pt>
-File: Section1/img/Histogram.jpg Graphic file (type jpg)
-<use Section1/img/Histogram.jpg>
-Package pdftex.def Info: Section1/img/Histogram.jpg  used on input line 241.
-(pdftex.def)             Requested size: 215.00125pt x 112.46915pt.
+l.242 \end{thm}
+               ]
 
-
-[10
+[9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.248  \item A
-              dvantages of Histograms:\\ <./Section1/img/Histogram.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 259--261
+l.299 \end{example}
+                   ]
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
 
  []
 
-<Section1/img/HisL.jpg, id=401, 1424.32124pt x 1019.81pt>
-File: Section1/img/HisL.jpg Graphic file (type jpg)
-<use Section1/img/HisL.jpg>
-Package pdftex.def Info: Section1/img/HisL.jpg  used on input line 267.
-(pdftex.def)             Requested size: 356.07944pt x 254.95187pt.
-<Section1/img/HisR.jpg, id=402, 490.83376pt x 490.83376pt>
-File: Section1/img/HisR.jpg Graphic file (type jpg)
-<use Section1/img/HisR.jpg>
-Package pdftex.def Info: Section1/img/HisR.jpg  used on input line 276.
-(pdftex.def)             Requested size: 122.70813pt x 122.70813pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[10]
 
 [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.279 
-       <./Section1/img/HisL.jpg>]
-<Section1/img/HisS.jpg, id=408, 1231.60126pt x 816.04875pt>
-File: Section1/img/HisS.jpg Graphic file (type jpg)
-<use Section1/img/HisS.jpg>
-Package pdftex.def Info: Section1/img/HisS.jpg  used on input line 285.
-(pdftex.def)             Requested size: 307.89955pt x 204.01169pt.
-<Section1/img/BoxPlot.jpg, id=409, 1576.89125pt x 888.31876pt>
-File: Section1/img/BoxPlot.jpg Graphic file (type jpg)
-<use Section1/img/BoxPlot.jpg>
-Package pdftex.def Info: Section1/img/BoxPlot.jpg  used on input line 294.
-(pdftex.def)             Requested size: 394.22185pt x 222.07915pt.
+l.389 
+      ]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 [12
@@ -1614,30 +1577,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.297 
+l.454 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.297 
-       <./Section1/img/HisR.jpg> <./Section1/img/HisS.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 298--300
+l.454 
+      ]
+<Section1/img/BoxPlot.jpg, id=407, 1576.89125pt x 888.31876pt>
+File: Section1/img/BoxPlot.jpg Graphic file (type jpg)
+<use Section1/img/BoxPlot.jpg>
+Package pdftex.def Info: Section1/img/BoxPlot.jpg  used on input line 457.
+(pdftex.def)             Requested size: 394.22185pt x 222.07915pt.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--303
-
- []
-
-<Section1/img/Bskew.jpg, id=416, 2122.93124pt x 958.58125pt>
-File: Section1/img/Bskew.jpg Graphic file (type jpg)
-<use Section1/img/Bskew.jpg>
-Package pdftex.def Info: Section1/img/Bskew.jpg  used on input line 309.
-(pdftex.def)             Requested size: 318.42595pt x 143.78098pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 461--463
 
  []
 
@@ -1648,43 +1602,58 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.316 
+l.463 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.316 
-       <./Section1/img/BoxPlot.jpg> <./Section1/img/Bskew.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 320--322
+l.463 
+       <./Section1/img/BoxPlot.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 464--466
+
+ []
+
+<Section1/img/Bskew.jpg, id=415, 2122.93124pt x 958.58125pt>
+File: Section1/img/Bskew.jpg Graphic file (type jpg)
+<use Section1/img/Bskew.jpg>
+Package pdftex.def Info: Section1/img/Bskew.jpg  used on input line 472.
+(pdftex.def)             Requested size: 318.42595pt x 143.78098pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--333
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
 
  []
 
-<Section1/img/R1.jpg, id=424, 791.95876pt x 655.44875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--496
+
+ []
+
+<Section1/img/R1.jpg, id=416, 791.95876pt x 655.44875pt>
 File: Section1/img/R1.jpg Graphic file (type jpg)
 <use Section1/img/R1.jpg>
-Package pdftex.def Info: Section1/img/R1.jpg  used on input line 336.
+Package pdftex.def Info: Section1/img/R1.jpg  used on input line 499.
 (pdftex.def)             Requested size: 356.37814pt x 294.9492pt.
-<Section1/img/R2.jpg, id=425, 851.18pt x 108.405pt>
-File: Section1/img/R2.jpg Graphic file (type jpg)
-<use Section1/img/R2.jpg>
-Package pdftex.def Info: Section1/img/R2.jpg  used on input line 345.
-(pdftex.def)             Requested size: 383.02745pt x 48.78178pt.
-) (./Section2/section2.tex
+
 
 [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3 \chapter
-            {Sampling Distributions Related to a Normal Population} <./Section1
-/img/R1.jpg>]
+l.502 
+       <./Section1/img/Bskew.jpg>]
+<Section1/img/R2.jpg, id=423, 851.18pt x 108.405pt>
+File: Section1/img/R2.jpg Graphic file (type jpg)
+<use Section1/img/R2.jpg>
+Package pdftex.def Info: Section1/img/R2.jpg  used on input line 508.
+(pdftex.def)             Requested size: 383.02745pt x 48.78178pt.
+) (./Section2/section2.tex
 
 [15
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.11})
@@ -1692,8 +1661,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.11})
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.3 \chapter
+            {Sampling Distributions Related to a Normal Population}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.12})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.3 \chapter
             {Sampling Distributions Related to a Normal Population} <./Section1
-/img/R2.jpg>]
+/img/R1.jpg> <./Section1/img/R2.jpg>]
 Chapter 2.
 
 
@@ -1738,7 +1713,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-<Section3/Img3/CLT.jpg, id=480, 2536.47626pt x 1737.49126pt>
+<Section3/Img3/CLT.jpg, id=474, 2536.47626pt x 1737.49126pt>
 File: Section3/Img3/CLT.jpg Graphic file (type jpg)
 <use Section3/Img3/CLT.jpg>
 Package pdftex.def Info: Section3/Img3/CLT.jpg  used on input line 21.
@@ -1790,7 +1765,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 287--289
 
  []
 
-<Section4/images/pmf_plot.pdf, id=514, 433.62pt x 289.08pt>
+<Section4/images/pmf_plot.pdf, id=508, 433.62pt x 289.08pt>
 File: Section4/images/pmf_plot.pdf Graphic file (type pdf)
 <use Section4/images/pmf_plot.pdf>
 Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 300.
@@ -1798,7 +1773,7 @@ Package pdftex.def Info: Section4/images/pmf_plot.pdf  used on input line 300.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n50.pdf, id=515, 433.62pt x 289.08pt>
+<Section4/images/pmf_n50.pdf, id=509, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n50.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n50.pdf>
 Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 306.
@@ -1806,7 +1781,7 @@ Package pdftex.def Info: Section4/images/pmf_n50.pdf  used on input line 306.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n100.pdf, id=516, 433.62pt x 289.08pt>
+<Section4/images/pmf_n100.pdf, id=510, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n100.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n100.pdf>
 Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 312.
@@ -1814,7 +1789,7 @@ Package pdftex.def Info: Section4/images/pmf_n100.pdf  used on input line 312.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section4/images/pmf_n300.pdf, id=517, 433.62pt x 289.08pt>
+<Section4/images/pmf_n300.pdf, id=511, 433.62pt x 289.08pt>
 File: Section4/images/pmf_n300.pdf Graphic file (type pdf)
 <use Section4/images/pmf_n300.pdf>
 Package pdftex.def Info: Section4/images/pmf_n300.pdf  used on input line 318.
@@ -1855,7 +1830,7 @@ has been already used, duplicate ignored
 l.322 \clearpage
                  <./Section4/images/pmf_n100.pdf> <./Section4/images/pmf_n300.p
 df>]
-<Section4/images/binomial_normal.pdf, id=562, 578.16pt x 361.35pt>
+<Section4/images/binomial_normal.pdf, id=556, 578.16pt x 361.35pt>
 File: Section4/images/binomial_normal.pdf Graphic file (type pdf)
 <use Section4/images/binomial_normal.pdf>
 Package pdftex.def Info: Section4/images/binomial_normal.pdf  used on input lin
@@ -1923,7 +1898,7 @@ Chapter 5.
 ]
 
 [41]
-<Section5/images/simulation_plot.pdf, id=617, 578.16pt x 361.35pt>
+<Section5/images/simulation_plot.pdf, id=611, 578.16pt x 361.35pt>
 File: Section5/images/simulation_plot.pdf Graphic file (type pdf)
 <use Section5/images/simulation_plot.pdf>
 Package pdftex.def Info: Section5/images/simulation_plot.pdf  used on input lin
@@ -1932,7 +1907,7 @@ e 136.
 
 
 [42]
-<Section5/images/simulation_multi.pdf, id=623, 578.16pt x 361.35pt>
+<Section5/images/simulation_multi.pdf, id=617, 578.16pt x 361.35pt>
 File: Section5/images/simulation_multi.pdf Graphic file (type pdf)
 <use Section5/images/simulation_multi.pdf>
 Package pdftex.def Info: Section5/images/simulation_multi.pdf  used on input li
@@ -2015,7 +1990,7 @@ File: lstlang2.sty 2024/09/23 1.10c listings language file
 (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2024/09/23 1.10c listings language file
 )
-<Section6/images/confidence_intervals.pdf, id=666, 722.7pt x 505.89pt>
+<Section6/images/confidence_intervals.pdf, id=660, 722.7pt x 505.89pt>
 File: Section6/images/confidence_intervals.pdf Graphic file (type pdf)
 <use Section6/images/confidence_intervals.pdf>
 Package pdftex.def Info: Section6/images/confidence_intervals.pdf  used on inpu
@@ -2025,7 +2000,7 @@ t line 262.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Section6/images/normal_confidence_curve.pdf, id=667, 433.62pt x 325.215pt>
+<Section6/images/normal_confidence_curve.pdf, id=661, 433.62pt x 325.215pt>
 File: Section6/images/normal_confidence_curve.pdf Graphic file (type pdf)
 <use Section6/images/normal_confidence_curve.pdf>
 Package pdftex.def Info: Section6/images/normal_confidence_curve.pdf  used on i
@@ -2106,7 +2081,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 ]
 
 [56]
-<section7/images/density_curves.pdf, id=746, 505.89pt x 361.35pt>
+<section7/images/density_curves.pdf, id=740, 505.89pt x 361.35pt>
 File: section7/images/density_curves.pdf Graphic file (type pdf)
 <use section7/images/density_curves.pdf>
 Package pdftex.def Info: section7/images/density_curves.pdf  used on input line
@@ -2140,19 +2115,19 @@ File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
 (Font)              Font shape `OML/cmm/b/it' tried instead on input line 305.
-<Section7/images/tax_histogram.pdf, id=773, 505.89pt x 361.35pt>
+<Section7/images/tax_histogram.pdf, id=767, 505.89pt x 361.35pt>
 File: Section7/images/tax_histogram.pdf Graphic file (type pdf)
 <use Section7/images/tax_histogram.pdf>
 Package pdftex.def Info: Section7/images/tax_histogram.pdf  used on input line 
 329.
 (pdftex.def)             Requested size: 281.85587pt x 201.32906pt.
-<Section7/images/tax_boxplot.pdf, id=774, 433.62pt x 361.35pt>
+<Section7/images/tax_boxplot.pdf, id=768, 433.62pt x 361.35pt>
 File: Section7/images/tax_boxplot.pdf Graphic file (type pdf)
 <use Section7/images/tax_boxplot.pdf>
 Package pdftex.def Info: Section7/images/tax_boxplot.pdf  used on input line 34
 1.
 (pdftex.def)             Requested size: 234.8775pt x 195.7326pt.
-<Section7/images/tax_qqplot.pdf, id=775, 433.62pt x 361.35pt>
+<Section7/images/tax_qqplot.pdf, id=769, 433.62pt x 361.35pt>
 File: Section7/images/tax_qqplot.pdf Graphic file (type pdf)
 <use Section7/images/tax_qqplot.pdf>
 Package pdftex.def Info: Section7/images/tax_qqplot.pdf  used on input line 352
@@ -2797,7 +2772,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.15.12}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.932 
+l.931 
       ]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
@@ -2819,10 +2794,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8812B11358C9D273D911526C40188B35;12331.
  ) 
 Here is how much of TeX's memory you used:
- 46786 strings out of 473190
- 1087059 string characters out of 5715801
- 1894162 words of memory out of 5000000
- 68845 multiletter control sequences out of 15000+600000
+ 47754 strings out of 473190
+ 1106499 string characters out of 5715801
+ 1894201 words of memory out of 5000000
+ 69812 multiletter control sequences out of 15000+600000
  575169 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,96p,914b,2062s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2849,10 +2824,10 @@ e/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
 025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025/
 texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (111 pages, 3931024 bytes).
+Output written on main.pdf (111 pages, 2914097 bytes).
 PDF statistics:
- 1255 PDF objects out of 1440 (max. 8388607)
- 1021 compressed objects within 11 object streams
- 351 named destinations out of 1000 (max. 500000)
- 674 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1248 PDF objects out of 1440 (max. 8388607)
+ 1022 compressed objects within 11 object streams
+ 352 named destinations out of 1000 (max. 500000)
+ 639 words of extra memory for PDF output out of 10000 (max. 10000000)
 

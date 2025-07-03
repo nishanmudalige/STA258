@@ -229,8 +229,9 @@ concentrated on the right of the figure, then we say that probability
 distribution is left skew or negative skew. (See figure below)
 :::
 
-![Visualization of left skew probability
-distribution](Section1/img/Leftskew.jpg)
+```{r fig-mu1-lt-mu2-1, fig.cap = "An illustration of a left (negative) skewed distribution.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/leftskew-1.png")
+```
 
 ::: definition
 By observing given probability distribution curve, if the right tail of
@@ -239,8 +240,9 @@ concentrated on the left of the figure, then we say that probability
 distribution is right skew or positive skew. (See figure below)
 :::
 
-![Visualization of right skew probability
-distribution](Section1/img/Rightskew.jpg)
+```{r fig-rightskew, fig.cap = "An illustration of a right (positive) skewed distribution.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/rightskew-1.png")
+```
 
 Symmetry is a special case of skewness when the value of skewness is
 $0$.
@@ -251,6 +253,10 @@ a vertical line at some value of the random variable represented by the
 distribution. Probability under the curve below that value is equal to
 probability under the curve greater than that value. (see figure below)
 :::
+
+```{r fig-symmetry, fig.cap = "An illustration of symmetric distribution. Area under this curve on the left hand side of $\\mu = 0$ is same as the area on the right hand side under the curve.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/symmetry-1.png")
+```
 
 Since symmetry is a special case, so that it has a unique property as
 the following:
@@ -267,8 +273,9 @@ function is true:
 - $3.$ $P(\mu - 3\sigma < X < \mu + 3\sigma) = 99.73\%.$
 :::
 
-![Visualization of symmetric probability
-distribution](Section1/img/Symmetry.jpg)
+```{r fig-erule, fig.cap = "An illustration of the empirical rule.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/erule-1.png")
+```
 
 **Practice Example**
 
@@ -335,7 +342,9 @@ makes histograms ideal for visualizing the shape, spread, and central
 tendency of continuous data, helping identify patterns such as symmetry,
 skewness, and outliers.
 
-![Visualization of histograms](Section1/img/Histogram.jpg)
+```{r fig-hist, fig.cap = "An illustration histogram.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/hist-1.png")
+```
 
 **Advantages and Disadvantages of Histograms**
 
@@ -362,19 +371,22 @@ a curve above bins on the histogram.\
 For a histogram to have a left (or negative) skew probability
 distribution:
 
-![Visualization of a histogram has a left (or negative) skew probability
-distribution](Section1/img/HisL.jpg)
+```{r fig-histl, fig.cap = "An illustration histogram to have a left (or negative) skew probability distribution.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/histl-1.png")
+```
 
 For a histogram to have a right (or positive) skew probability
 distribution:
 
-![Visualization of a histogram has a right (or positive) skew
-probability distribution](Section1/img/HisR.jpg)
+```{r fig-histr, fig.cap = "An illustration histogram to have a right (or positive) skew probability distribution.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/histr-1.png")
+```
 
 For a histogram to have a symmetric probability distribution:
 
-![Visualization of a histogram has a symmetric probability
-distribution](Section1/img/HisS.jpg)
+```{r fig-sym, fig.cap = "An illustration of a histogram which has a symmetric probability distribution.", out.width = "80%", echo = FALSE}
+knitr::include_graphics("ch123/sym-1.png")
+```
 
 ### Box-Plots
 
