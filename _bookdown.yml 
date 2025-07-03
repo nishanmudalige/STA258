@@ -1,7 +1,0 @@
-book_filename: "STA258-Book"
-output_dir: "_book"
-delete_merged_file: true
-
-bookdown::html_document2:
-  includes:
-    after_body: copy_figures.html
