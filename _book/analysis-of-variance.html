@@ -1,0 +1,2383 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>17 Analysis of Variance | Demo Book</title>
+  <meta name="description" content="17 Analysis of Variance | Demo Book" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="17 Analysis of Variance | Demo Book" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="17 Analysis of Variance | Demo Book" />
+  
+  
+  
+
+<meta name="author" content="Nishan Mudalige" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="inference-for-simple-linear-regression.html"/>
+<link rel="next" href="analysis-of-categorical-data.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>STA258: Statistics with Applied Probability</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#nishan-mudalige-masoud-ataei-nurlana-alili-bryan-xu"><i class="fa fa-check"></i>Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics and an Introduction to R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#introduction-1"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#descriptive-statistics"><i class="fa fa-check"></i><b>1.2</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="1.3" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#graphical-techniques"><i class="fa fa-check"></i><b>1.3</b> Graphical Techniques</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#histograms"><i class="fa fa-check"></i><b>1.3.1</b> Histograms</a></li>
+<li class="chapter" data-level="1.3.2" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#box-plots"><i class="fa fa-check"></i><b>1.3.2</b> Box-Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="descriptive-statistics-and-an-introduction-to-r.html"><a href="descriptive-statistics-and-an-introduction-to-r.html#introduction-to-r"><i class="fa fa-check"></i><b>1.4</b> Introduction to R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sampling-distributions-related-to-a-normal-population.html"><a href="sampling-distributions-related-to-a-normal-population.html"><i class="fa fa-check"></i><b>2</b> Sampling Distributions Related to a Normal Population</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sampling-distributions-related-to-a-normal-population.html"><a href="sampling-distributions-related-to-a-normal-population.html#normal-distribution"><i class="fa fa-check"></i><b>2.1</b> Normal Distribution</a></li>
+<li class="chapter" data-level="2.2" data-path="sampling-distributions-related-to-a-normal-population.html"><a href="sampling-distributions-related-to-a-normal-population.html#gamma-and-chi-square-distribution"><i class="fa fa-check"></i><b>2.2</b> Gamma and Chi-square Distribution</a></li>
+<li class="chapter" data-level="2.3" data-path="sampling-distributions-related-to-a-normal-population.html"><a href="sampling-distributions-related-to-a-normal-population.html#students-t-distribution-and-f-distribution"><i class="fa fa-check"></i><b>2.3</b> Student’s t-Distribution and F-Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="the-central-limit-theorem.html"><a href="the-central-limit-theorem.html"><i class="fa fa-check"></i><b>3</b> The Central Limit Theorem</a></li>
+<li class="chapter" data-level="4" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html"><i class="fa fa-check"></i><b>4</b> Normal Approximation to the Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#introduction-2"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#bernoulli-distribution"><i class="fa fa-check"></i><b>4.2</b> Bernoulli Distribution</a></li>
+<li class="chapter" data-level="4.3" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#sampling-distribution-of-the-sum-and-mgf-derivation"><i class="fa fa-check"></i><b>4.3</b> Sampling Distribution of the Sum and MGF Derivation</a></li>
+<li class="chapter" data-level="4.4" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#binomial-distribution"><i class="fa fa-check"></i><b>4.4</b> Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#visualizing-the-pmf-of-binomial-distributions"><i class="fa fa-check"></i><b>4.4.1</b> Visualizing the PMF of Binomial Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#sampling-distribution-of-a-sample-proportion-and-the-normal-approximation"><i class="fa fa-check"></i><b>4.5</b> Sampling Distribution of a Sample Proportion and the Normal Approximation</a>
+<ul>
+<li class="chapter" data-level="" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#conditions-for-using-the-normal-approximation"><i class="fa fa-check"></i>Conditions for Using the Normal Approximation</a></li>
+<li class="chapter" data-level="" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#bernoulli-distribution-binomial-with-n-1"><i class="fa fa-check"></i>Bernoulli Distribution (Binomial with <span class="math inline">\(n = 1\)</span>)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#normal-approximation-to-binomial"><i class="fa fa-check"></i><b>4.6</b> Normal Approximation to Binomial</a></li>
+<li class="chapter" data-level="4.7" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#continuity-correction"><i class="fa fa-check"></i><b>4.7</b> Continuity Correction</a>
+<ul>
+<li class="chapter" data-level="" data-path="normal-approximation-to-the-binomial-distribution.html"><a href="normal-approximation-to-the-binomial-distribution.html#continuity-correction-table"><i class="fa fa-check"></i>Continuity Correction Table</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="law-of-large-numbers.html"><a href="law-of-large-numbers.html"><i class="fa fa-check"></i><b>5</b> Law of Large Numbers</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="law-of-large-numbers.html"><a href="law-of-large-numbers.html#convergence-in-probability"><i class="fa fa-check"></i><b>5.1</b> Convergence in Probability</a></li>
+<li class="chapter" data-level="5.2" data-path="law-of-large-numbers.html"><a href="law-of-large-numbers.html#weak-law-of-large-numbers-wlln"><i class="fa fa-check"></i><b>5.2</b> Weak Law of Large Numbers (WLLN)</a>
+<ul>
+<li class="chapter" data-level="" data-path="law-of-large-numbers.html"><a href="law-of-large-numbers.html#proof-of-the-weak-law-of-large-numbers-wlln"><i class="fa fa-check"></i>Proof of the Weak Law of Large Numbers (WLLN)</a></li>
+<li class="chapter" data-level="" data-path="law-of-large-numbers.html"><a href="law-of-large-numbers.html#empirical-probability-insight"><i class="fa fa-check"></i>Empirical Probability Insight</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><i class="fa fa-check"></i><b>6</b> One Sample Confidence Intervals on a Mean When the Population Variance is Known</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#interpretation"><i class="fa fa-check"></i><b>6.2</b> Interpretation</a></li>
+<li class="chapter" data-level="6.3" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#confidence-interval-for-mu-known-variance"><i class="fa fa-check"></i><b>6.3</b> Confidence Interval for <span class="math inline">\(\mu\)</span> (Known Variance)</a></li>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#confidence-interval-for-the-mean-of-a-normal-population"><i class="fa fa-check"></i>Confidence Interval for the Mean of a Normal Population</a></li>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#large-sample-ci-for-mu-normal-data"><i class="fa fa-check"></i>Large Sample CI for <span class="math inline">\(\mu\)</span> (Normal data)</a></li>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#one-sample-ci-on-the-population-mean-mu"><i class="fa fa-check"></i>One Sample CI on the Population Mean <span class="math inline">\(\mu\)</span></a></li>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#table-of-common-z-values"><i class="fa fa-check"></i>Table of Common <span class="math inline">\(z\)</span>-values</a></li>
+<li class="chapter" data-level="6.4" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#appendix"><i class="fa fa-check"></i><b>6.4</b> APPENDIX</a>
+<ul>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-known.html#pivotal-quantities"><i class="fa fa-check"></i>Pivotal quantities</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"><i class="fa fa-check"></i><b>7</b> One-Sample Confidence Intervals on a Mean When the Population Variance is Unknown</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#cis-for-mu"><i class="fa fa-check"></i><b>7.1</b> CIs for <span class="math inline">\(\mu\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#independence-assumption"><i class="fa fa-check"></i>Independence Assumption</a></li>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#randomization-condition"><i class="fa fa-check"></i>Randomization Condition</a></li>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#standard-error"><i class="fa fa-check"></i>Standard Error</a></li>
+<li class="chapter" data-level="" data-path="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html"><a href="one-sample-confidence-intervals-on-a-mean-when-the-population-variance-is-unknown.html#a-few-final-comments"><i class="fa fa-check"></i>A few final comments</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="one-sample-confidence-intervals-on-a-proportion.html"><a href="one-sample-confidence-intervals-on-a-proportion.html"><i class="fa fa-check"></i><b>8</b> One Sample Confidence Intervals On a Proportion</a></li>
+<li class="chapter" data-level="9" data-path="sample-size-selection-using-confidence-intervals.html"><a href="sample-size-selection-using-confidence-intervals.html"><i class="fa fa-check"></i><b>9</b> Sample Size Selection using Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="sample-size-selection-using-confidence-intervals.html"><a href="sample-size-selection-using-confidence-intervals.html#empirical-rule"><i class="fa fa-check"></i><b>9.0.1</b> Empirical Rule</a></li>
+<li class="chapter" data-level="9.1" data-path="sample-size-selection-using-confidence-intervals.html"><a href="sample-size-selection-using-confidence-intervals.html#secSampleSizeCIMean"><i class="fa fa-check"></i><b>9.1</b> Calculating Sample Size for a Confidence Interval on a Mean</a>
+<ul>
+<li class="chapter" data-level="" data-path="sample-size-selection-using-confidence-intervals.html"><a href="sample-size-selection-using-confidence-intervals.html#when-sigma-is-known"><i class="fa fa-check"></i>When <span class="math inline">\(\sigma\)</span> is Known</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="sample-size-selection-using-confidence-intervals.html"><a href="sample-size-selection-using-confidence-intervals.html#calculating-sample-size-for-a-confidence-interval-on-a-proportion"><i class="fa fa-check"></i><b>9.2</b> Calculating Sample Size for a Confidence Interval on a Proportion</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="two-sample-confidence-interval.html"><a href="two-sample-confidence-interval.html"><i class="fa fa-check"></i><b>10</b> Two Sample Confidence Interval</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="two-sample-confidence-interval.html"><a href="two-sample-confidence-interval.html#two-sample-confidence-interval-on-a-difference-of-mean"><i class="fa fa-check"></i><b>10.1</b> Two Sample Confidence Interval on a Difference of Mean</a></li>
+<li class="chapter" data-level="10.2" data-path="two-sample-confidence-interval.html"><a href="two-sample-confidence-interval.html#two-sample-confidence-interval-on-paired-data"><i class="fa fa-check"></i><b>10.2</b> Two Sample Confidence Interval on Paired Data</a></li>
+<li class="chapter" data-level="10.3" data-path="two-sample-confidence-interval.html"><a href="two-sample-confidence-interval.html#two-sample-confidence-interval-on-proportions"><i class="fa fa-check"></i><b>10.3</b> Two Sample Confidence Interval on Proportions</a></li>
+<li class="chapter" data-level="10.4" data-path="two-sample-confidence-interval.html"><a href="two-sample-confidence-interval.html#two-sample-confidence-interval-on-variances"><i class="fa fa-check"></i><b>10.4</b> Two Sample Confidence Interval on Variances</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html"><i class="fa fa-check"></i><b>11</b> Introduction to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#test-of-hypothesis-for-one-mean"><i class="fa fa-check"></i><b>11.1</b> Test of Hypothesis for One Mean</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#step-1-decide-on-a-level-of-significance-alpha"><i class="fa fa-check"></i>Step 1: Decide on a Level of Significance (<span class="math inline">\(\alpha\)</span>)</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#step-2-state-the-null-hypothesis-h_0-and-the-alternative-hypothesis-h_a"><i class="fa fa-check"></i>Step 2: State the Null Hypothesis (<span class="math inline">\(H_0\)</span>) and the Alternative Hypothesis (<span class="math inline">\(H_a\)</span>)</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#step-3-calculate-an-appropriate-test-statistic"><i class="fa fa-check"></i>Step 3: Calculate an appropriate test statistic</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#step-4-calculate-the-p-value"><i class="fa fa-check"></i>Step 4: Calculate the p-value</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#step-5-compare-p-value-to-level-of-significance-alpha-and-make-a-conclusion"><i class="fa fa-check"></i>Step 5: Compare <em>p</em>-value to level of significance <span class="math inline">\(\alpha\)</span> and make a conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#test-of-hypothesis-for-one-proportion"><i class="fa fa-check"></i><b>11.2</b> Test of Hypothesis for One Proportion</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#introduction-to-hypothesis-testing-significance-test"><i class="fa fa-check"></i>Introduction to Hypothesis Testing (Significance Test)</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#steps-in-conducting-hypothesis-testing"><i class="fa fa-check"></i>Steps in conducting Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#some-additional-examples"><i class="fa fa-check"></i>Some Additional Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#test-of-hypothesis-for-one-variance"><i class="fa fa-check"></i><b>11.3</b> Test of Hypothesis for One Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="one-sample-hypothesis-test-on-a-proportion-and-variance.html"><a href="one-sample-hypothesis-test-on-a-proportion-and-variance.html"><i class="fa fa-check"></i><b>12</b> One Sample Hypothesis Test on a Proportion and Variance</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="one-sample-hypothesis-test-on-a-proportion-and-variance.html"><a href="one-sample-hypothesis-test-on-a-proportion-and-variance.html#one-sample-hypothesis-test-on-a-proportion"><i class="fa fa-check"></i><b>12.1</b> One Sample Hypothesis Test on a Proportion</a></li>
+<li class="chapter" data-level="12.2" data-path="one-sample-hypothesis-test-on-a-proportion-and-variance.html"><a href="one-sample-hypothesis-test-on-a-proportion-and-variance.html#one-sample-hypothesis-tests-for-a-variance"><i class="fa fa-check"></i><b>12.2</b> One Sample Hypothesis Tests for a Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="statistical-power.html"><a href="statistical-power.html"><i class="fa fa-check"></i><b>13</b> Statistical Power</a>
+<ul>
+<li class="chapter" data-level="" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-ii-errors"><i class="fa fa-check"></i>Type I and II Errors</a></li>
+<li class="chapter" data-level="13.1" data-path="statistical-power.html"><a href="statistical-power.html#type-i-and-type-ii-errors"><i class="fa fa-check"></i><b>13.1</b> Type I and Type II Errors</a></li>
+<li class="chapter" data-level="13.2" data-path="statistical-power.html"><a href="statistical-power.html#using-power-to-determine-sample-size"><i class="fa fa-check"></i><b>13.2</b> Using Power to Determine Sample Size</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html"><i class="fa fa-check"></i><b>14</b> Two Sample Hypothesis Tests</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#comparing-means-with-independent-samples"><i class="fa fa-check"></i><b>14.1</b> Comparing Means with Independent Samples</a>
+<ul>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#setting-up-hypotheses"><i class="fa fa-check"></i>Setting Up Hypotheses</a></li>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#structure-of-a-test-statistic"><i class="fa fa-check"></i>Structure of a Test Statistic</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#hypothesis-test-on-a-difference-of-means-mu_1---mu_2"><i class="fa fa-check"></i>Hypothesis Test on a Difference of Means (<span class="math inline">\(\mu_1 - \mu_2\)</span>)</a></li>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#comparing-means-of-independent-samples-normal-population-assumptions"><i class="fa fa-check"></i>Comparing Means of Independent Samples (Normal Population Assumptions)</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#comparing-two-populations-means-independent-sampling-equal-variances-assumed"><i class="fa fa-check"></i><b>14.1.1</b> Comparing Two Populations Means: Independent Sampling (Equal Variances Assumed)</a></li>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#small-sample-confidence-interval-for-mu_1---mu_2-with-equal-variances"><i class="fa fa-check"></i>Small-Sample Confidence Interval for <span class="math inline">\(\mu_1 - \mu_2\)</span> (with equal variances)</a></li>
+<li class="chapter" data-level="14.1.2" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#comparing-two-populations-means-independent-sampling-unequal-variances-assumed"><i class="fa fa-check"></i><b>14.1.2</b> Comparing Two Populations Means: Independent Sampling (Unequal Variances Assumed)</a></li>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#small-sample-confidence-interval-for-mu_1---mu_2-unequal-variances"><i class="fa fa-check"></i>Small-Sample Confidence Interval for <span class="math inline">\(\mu_1 - \mu_2\)</span> (Unequal Variances)</a></li>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#degrees-of-freedom"><i class="fa fa-check"></i>Degrees of Freedom</a></li>
+<li class="chapter" data-level="" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#two-sample-t-test-unequal-variances"><i class="fa fa-check"></i>Two-Sample t-Test (Unequal Variances)</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#the-fold-rule"><i class="fa fa-check"></i><b>14.2</b> The Fold Rule</a></li>
+<li class="chapter" data-level="14.3" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#two-sample-hypothesis-test-on-paired-data"><i class="fa fa-check"></i><b>14.3</b> Two Sample Hypothesis Test on Paired Data</a></li>
+<li class="chapter" data-level="14.4" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#two-sample-hypothesis-test-on-proportions"><i class="fa fa-check"></i><b>14.4</b> Two Sample Hypothesis Test on Proportions</a></li>
+<li class="chapter" data-level="14.5" data-path="two-sample-hypothesis-tests.html"><a href="two-sample-hypothesis-tests.html#two-sample-hypothesis-test-on-variances"><i class="fa fa-check"></i><b>14.5</b> Two Sample Hypothesis Test on Variances</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html"><i class="fa fa-check"></i><b>15</b> Introduction to Simple Linear Regression</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#measures-of-linear-relationship"><i class="fa fa-check"></i><b>15.1</b> Measures of Linear Relationship</a></li>
+<li class="chapter" data-level="15.2" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#least-squares-method"><i class="fa fa-check"></i><b>15.2</b> Least Squares Method</a></li>
+<li class="chapter" data-level="15.3" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#simple-linear-regression"><i class="fa fa-check"></i><b>15.3</b> Simple Linear Regression</a></li>
+<li class="chapter" data-level="15.4" data-path="introduction-to-simple-linear-regression.html"><a href="introduction-to-simple-linear-regression.html#sst-sse-and-ssr"><i class="fa fa-check"></i><b>15.4</b> SST, SSE and SSR</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html"><i class="fa fa-check"></i><b>16</b> Inference for Simple Linear Regression</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#inference-on-regression"><i class="fa fa-check"></i><b>16.1</b> Inference on Regression</a>
+<ul>
+<li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#estimating-variance-in-linear-regression"><i class="fa fa-check"></i>Estimating Variance in Linear Regression</a></li>
+<li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#the-regression-model"><i class="fa fa-check"></i>The Regression Model</a></li>
+<li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#interpreting-confidence-intervals-for-beta_1"><i class="fa fa-check"></i>Interpreting Confidence Intervals for <span class="math inline">\(\beta_1\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#anova-table-analysis-of-variance"><i class="fa fa-check"></i><b>16.2</b> ANOVA Table (ANalysis Of VAriance)</a></li>
+<li class="chapter" data-level="16.3" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#residual-plots"><i class="fa fa-check"></i><b>16.3</b> Residual Plots</a>
+<ul>
+<li class="chapter" data-level="" data-path="inference-for-simple-linear-regression.html"><a href="inference-for-simple-linear-regression.html#what-to-look-for-in-a-good-residual-plot"><i class="fa fa-check"></i>What to Look for in a Good Residual Plot</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html"><i class="fa fa-check"></i><b>17</b> Analysis of Variance</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#the-data-matrix"><i class="fa fa-check"></i><b>17.1</b> The Data Matrix</a></li>
+<li class="chapter" data-level="17.2" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#the-data-matrix-1"><i class="fa fa-check"></i><b>17.2</b> The Data Matrix</a></li>
+<li class="chapter" data-level="17.3" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#situation-1."><i class="fa fa-check"></i><b>17.3</b> Situation 1.</a></li>
+<li class="chapter" data-level="17.4" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#the-null-hypothesis-for-one-factor-anova"><i class="fa fa-check"></i><b>17.4</b> The Null Hypothesis for One-Factor ANOVA</a></li>
+<li class="chapter" data-level="17.5" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#the-null-hypothesis-for-one-factor-anova-1"><i class="fa fa-check"></i><b>17.5</b> The Null Hypothesis for One-Factor ANOVA</a></li>
+<li class="chapter" data-level="17.6" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#the-null-hypothesis-for-one-factor-anova-2"><i class="fa fa-check"></i><b>17.6</b> The Null Hypothesis for One-Factor ANOVA</a></li>
+<li class="chapter" data-level="17.7" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#the-one-factor-anova-f-test"><i class="fa fa-check"></i><b>17.7</b> The One-Factor ANOVA F Test</a></li>
+<li class="chapter" data-level="17.8" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#anova-table"><i class="fa fa-check"></i><b>17.8</b> ANOVA Table</a></li>
+<li class="chapter" data-level="17.9" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#calculation-of-sstotal"><i class="fa fa-check"></i><b>17.9</b> Calculation of SStotal</a></li>
+<li class="chapter" data-level="17.10" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#calculation-of-sse"><i class="fa fa-check"></i><b>17.10</b> Calculation of SSE</a></li>
+<li class="chapter" data-level="17.11" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#calculation-of-sse-1"><i class="fa fa-check"></i><b>17.11</b> Calculation of SSE</a></li>
+<li class="chapter" data-level="17.12" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#calculation-of-sst"><i class="fa fa-check"></i><b>17.12</b> Calculation of SST</a></li>
+<li class="chapter" data-level="17.13" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#anova-table-1"><i class="fa fa-check"></i><b>17.13</b> ANOVA Table</a></li>
+<li class="chapter" data-level="17.14" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#conclusion"><i class="fa fa-check"></i><b>17.14</b> Conclusion</a></li>
+<li class="chapter" data-level="17.15" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#formulas"><i class="fa fa-check"></i><b>17.15</b> Formulas</a></li>
+<li class="chapter" data-level="17.16" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#formulas-1"><i class="fa fa-check"></i><b>17.16</b> Formulas</a></li>
+<li class="chapter" data-level="17.17" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#mean-square-for-treatments"><i class="fa fa-check"></i><b>17.17</b> Mean Square for Treatments</a></li>
+<li class="chapter" data-level="17.18" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#formulas-2"><i class="fa fa-check"></i><b>17.18</b> Formulas</a></li>
+<li class="chapter" data-level="17.19" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#test-statistic"><i class="fa fa-check"></i><b>17.19</b> Test Statistic</a></li>
+<li class="chapter" data-level="17.20" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#exercise"><i class="fa fa-check"></i><b>17.20</b> Exercise</a></li>
+<li class="chapter" data-level="17.21" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution"><i class="fa fa-check"></i><b>17.21</b> Solution</a></li>
+<li class="chapter" data-level="17.22" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#anova-table-2"><i class="fa fa-check"></i><b>17.22</b> ANOVA Table</a></li>
+<li class="chapter" data-level="17.23" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#exercise-1"><i class="fa fa-check"></i><b>17.23</b> Exercise</a></li>
+<li class="chapter" data-level="17.24" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution-1"><i class="fa fa-check"></i><b>17.24</b> Solution</a></li>
+<li class="chapter" data-level="17.25" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#anova-table-3"><i class="fa fa-check"></i><b>17.25</b> ANOVA Table</a></li>
+<li class="chapter" data-level="17.26" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#exercise-2"><i class="fa fa-check"></i><b>17.26</b> Exercise</a></li>
+<li class="chapter" data-level="17.27" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution-2"><i class="fa fa-check"></i><b>17.27</b> Solution</a></li>
+<li class="chapter" data-level="17.28" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution-3"><i class="fa fa-check"></i><b>17.28</b> Solution</a></li>
+<li class="chapter" data-level="17.29" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#anova-table-4"><i class="fa fa-check"></i><b>17.29</b> ANOVA Table</a></li>
+<li class="chapter" data-level="17.30" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#step-4.-conclusion."><i class="fa fa-check"></i><b>17.30</b> Step 4. Conclusion.</a></li>
+<li class="chapter" data-level="17.31" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#exercise-3"><i class="fa fa-check"></i><b>17.31</b> Exercise</a></li>
+<li class="chapter" data-level="17.32" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#r-code"><i class="fa fa-check"></i><b>17.32</b> R Code</a></li>
+<li class="chapter" data-level="17.33" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#r-code-1"><i class="fa fa-check"></i><b>17.33</b> R Code</a></li>
+<li class="chapter" data-level="17.34" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#r-code-2"><i class="fa fa-check"></i><b>17.34</b> R Code</a></li>
+<li class="chapter" data-level="17.35" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#r-code-3"><i class="fa fa-check"></i><b>17.35</b> R Code</a></li>
+<li class="chapter" data-level="17.36" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#assumptions-of-anova"><i class="fa fa-check"></i><b>17.36</b> Assumptions of ANOVA</a></li>
+<li class="chapter" data-level="17.37" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#assumptions"><i class="fa fa-check"></i><b>17.37</b> Assumptions</a></li>
+<li class="chapter" data-level="17.38" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#multiple-comparisons"><i class="fa fa-check"></i><b>17.38</b> Multiple Comparisons</a></li>
+<li class="chapter" data-level="17.39" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#example"><i class="fa fa-check"></i><b>17.39</b> Example</a></li>
+<li class="chapter" data-level="17.40" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#data"><i class="fa fa-check"></i><b>17.40</b> Data</a></li>
+<li class="chapter" data-level="17.41" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#pairwise-confidence-intervals"><i class="fa fa-check"></i><b>17.41</b> Pairwise confidence Intervals</a></li>
+<li class="chapter" data-level="17.42" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution-a"><i class="fa fa-check"></i><b>17.42</b> Solution a)</a></li>
+<li class="chapter" data-level="17.43" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#fishers-least-significant-difference-method"><i class="fa fa-check"></i><b>17.43</b> Fisher’s Least Significant Difference Method</a></li>
+<li class="chapter" data-level="17.44" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#fishers-least-significant-difference-method-1"><i class="fa fa-check"></i><b>17.44</b> Fisher’s Least Significant Difference Method</a></li>
+<li class="chapter" data-level="17.45" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#least-significant-difference-definition"><i class="fa fa-check"></i><b>17.45</b> Least Significant Difference (definition)</a></li>
+<li class="chapter" data-level="17.46" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution-b"><i class="fa fa-check"></i><b>17.46</b> Solution b)</a></li>
+<li class="chapter" data-level="17.47" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution-b-1"><i class="fa fa-check"></i><b>17.47</b> Solution b)</a></li>
+<li class="chapter" data-level="17.48" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#solution-b-2"><i class="fa fa-check"></i><b>17.48</b> Solution b)</a></li>
+<li class="chapter" data-level="17.49" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#bumper-example"><i class="fa fa-check"></i><b>17.49</b> Bumper example</a></li>
+<li class="chapter" data-level="17.50" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#bonferroni"><i class="fa fa-check"></i><b>17.50</b> Bonferroni</a></li>
+<li class="chapter" data-level="17.51" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#example-1"><i class="fa fa-check"></i><b>17.51</b> Example</a></li>
+<li class="chapter" data-level="17.52" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#example-2"><i class="fa fa-check"></i><b>17.52</b> Example</a></li>
+<li class="chapter" data-level="17.53" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#example-3"><i class="fa fa-check"></i><b>17.53</b> Example</a></li>
+<li class="chapter" data-level="17.54" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#example-4"><i class="fa fa-check"></i><b>17.54</b> Example</a></li>
+<li class="chapter" data-level="17.55" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#example-5"><i class="fa fa-check"></i><b>17.55</b> Example</a></li>
+<li class="chapter" data-level="17.56" data-path="analysis-of-variance.html"><a href="analysis-of-variance.html#example-6"><i class="fa fa-check"></i><b>17.56</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html"><i class="fa fa-check"></i><b>18</b> Analysis of Categorical Data</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#multinomial-response-model"><i class="fa fa-check"></i><b>18.1</b> Multinomial Response Model</a></li>
+<li class="chapter" data-level="18.2" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#properties-of-the-multinomial-model"><i class="fa fa-check"></i><b>18.2</b> Properties of the Multinomial Model</a></li>
+<li class="chapter" data-level="18.3" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#example-7"><i class="fa fa-check"></i><b>18.3</b> Example</a></li>
+<li class="chapter" data-level="18.4" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-1.-state-hypotheses."><i class="fa fa-check"></i><b>18.4</b> Step 1. State Hypotheses.</a></li>
+<li class="chapter" data-level="18.5" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#table-of-expected-counts"><i class="fa fa-check"></i><b>18.5</b> Table of Expected Counts</a></li>
+<li class="chapter" data-level="18.6" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-2.-computing-test-statistic"><i class="fa fa-check"></i><b>18.6</b> Step 2. Computing test statistic</a></li>
+<li class="chapter" data-level="18.7" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-3.-finding-p-value"><i class="fa fa-check"></i><b>18.7</b> Step 3. Finding P-value</a></li>
+<li class="chapter" data-level="18.8" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-4.-conclusion"><i class="fa fa-check"></i><b>18.8</b> Step 4. Conclusion</a></li>
+<li class="chapter" data-level="18.9" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#chi-square-distributions"><i class="fa fa-check"></i><b>18.9</b> Chi-Square Distributions</a></li>
+<li class="chapter" data-level="18.10" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#example-8"><i class="fa fa-check"></i><b>18.10</b> Example</a></li>
+<li class="chapter" data-level="18.11" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-1.-state-hypotheses.-1"><i class="fa fa-check"></i><b>18.11</b> Step 1. State Hypotheses.</a></li>
+<li class="chapter" data-level="18.12" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#table-of-expected-counts-1"><i class="fa fa-check"></i><b>18.12</b> Table of Expected Counts</a></li>
+<li class="chapter" data-level="18.13" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-2.-computing-test-statistic-1"><i class="fa fa-check"></i><b>18.13</b> Step 2. Computing test statistic</a></li>
+<li class="chapter" data-level="18.14" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-3.-finding-p-value-1"><i class="fa fa-check"></i><b>18.14</b> Step 3. Finding P-value</a></li>
+<li class="chapter" data-level="18.15" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-4.-conclusion-1"><i class="fa fa-check"></i><b>18.15</b> Step 4. Conclusion</a></li>
+<li class="chapter" data-level="18.16" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#exercise-4"><i class="fa fa-check"></i><b>18.16</b> Exercise</a></li>
+<li class="chapter" data-level="18.17" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#table-of-expected-counts-2"><i class="fa fa-check"></i><b>18.17</b> Table of Expected Counts</a></li>
+<li class="chapter" data-level="18.18" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-2.-computing-test-statistic-2"><i class="fa fa-check"></i><b>18.18</b> Step 2. Computing test statistic</a></li>
+<li class="chapter" data-level="18.19" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-3.-finding-p-value-2"><i class="fa fa-check"></i><b>18.19</b> Step 3. Finding P-value</a></li>
+<li class="chapter" data-level="18.20" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#step-4.-conclusion-2"><i class="fa fa-check"></i><b>18.20</b> Step 4. Conclusion</a></li>
+<li class="chapter" data-level="18.21" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#the-chi-square-test-for-goodness-of-fit"><i class="fa fa-check"></i><b>18.21</b> The Chi-square Test for Goodness of fit</a></li>
+<li class="chapter" data-level="18.22" data-path="analysis-of-categorical-data.html"><a href="analysis-of-categorical-data.html#sample-size-assumption"><i class="fa fa-check"></i><b>18.22</b> Sample Size Assumption</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Demo Book</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analysis-of-variance" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">17</span> Analysis of Variance<a href="analysis-of-variance.html#analysis-of-variance" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>ANOVA (Analysis of Variance)
+used to compare multiple nears
+Suppose we have <span class="math inline">\(k\)</span> groups <span class="math inline">\((k \geqslant 3)\)</span> and each group is given a treatment.</p>
+<p>The A NOVA model is
+<img src="https://cdn.mathpix.com/cropped/2025_07_03_0e611eebd5aab7c4aee1g-02.jpg?height=679&amp;width=1752&amp;top_left_y=609&amp;top_left_x=21" />
+equimient form of ANOLA is</p>
+<p><span class="math display">\[
+Y_{i j}=\mu_{i}+\varepsilon_{i j}, \quad \varepsilon_{i j} \sim N\left(0, \sigma^{2}\right)
+\]</span></p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">group 1</th>
+<th align="center">group 2</th>
+<th align="center"><span class="math inline">\(\cdots\)</span></th>
+<th align="center">group <span class="math inline">\(k\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(x_{11}\)</span></td>
+<td align="center"><span class="math inline">\(x_{21}\)</span></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(x_{k 1}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(x_{12}\)</span></td>
+<td align="center"><span class="math inline">\(x_{22}\)</span></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(x_{k 2}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">sample <br> mean <br> sample <br> size <br> size</td>
+<td align="center"><span class="math inline">\(x_{1 n}\)</span></td>
+<td align="center"><span class="math inline">\(x_{2 n}\)</span></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(x_{k n k}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(x_{1}\)</span></td>
+<td align="center"><span class="math inline">\(x_{1}\)</span></td>
+<td align="center"><span class="math inline">\(\bar{x}_{2}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(\bar{x}_{k}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(n_{2}\)</span></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(S_{k}^{2}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(n_{k}\)</span></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>total sample size <span class="math inline">\(n=n_{1}+n_{2}+\ldots+n_{k}\)</span> over all sample mean <span class="math inline">\(\bar{x}=\frac{1}{n} \sum_{i=1}^{k} \sum_{j=1}^{n_{i}} x_{i j}=\frac{1}{n} \sum_{i=1}^{k} n_{i} \bar{x}_{i}\)</span>
+Sources of variation
+Variation within goods (SSW /SSE)
+SSE <span class="math inline">\(=\sum_{i=1}^{k}\left(n_{i}-1\right) \cdot s_{i}^{2}\)</span>
+treatment affect
+variation between groups (SSB/SSTr)
+SSTro <span class="math inline">\(=\sum_{i=1}^{k} n_{i}\left(\bar{x}_{i}-\bar{x}\right)^{2}\)</span>
+Total variation</p>
+<p><span class="math display">\[
+\text { SS Total }=\sum_{i=1}^{k} \sum_{j=1}^{n_{i}}\left(x_{i j}-\bar{x}\right)^{2}
+\]</span></p>
+<p>SStutal <span class="math inline">\(=\)</span> SSTrt + SSE</p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">ANOVA Table</th>
+<th align="center">MS <span class="math inline">\(=\frac{\delta S}{d f}\)</span></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Source</td>
+<td align="center"><span class="math inline">\(d f\)</span> <br> degrees of <br> Freedom</td>
+<td align="center"><span class="math inline">\(S S\)</span> of <br> Squares</td>
+<td align="center">Mean <br> Squere</td>
+<td align="center"><span class="math inline">\(F\)</span>-Stat</td>
+</tr>
+<tr class="even">
+<td align="left">Treatment</td>
+<td align="center"><span class="math inline">\(K-1\)</span></td>
+<td align="center"><span class="math inline">\(S S T r t\)</span></td>
+<td align="center"><span class="math inline">\(M S T r=\frac{\delta S T r t}{K-1}\)</span></td>
+<td align="center"><span class="math inline">\(F^{*}=\frac{M S T r}{M S E}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Error</td>
+<td align="center"><span class="math inline">\(\cap-K\)</span></td>
+<td align="center"><span class="math inline">\(S S G\)</span></td>
+<td align="center"><span class="math inline">\(M S E=\frac{\delta S E}{n-K}\)</span></td>
+<td align="center"><span class="math inline">\(X\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="center"><span class="math inline">\(\cap-1\)</span></td>
+<td align="center"><span class="math inline">\(S S T o t a l\)</span></td>
+<td align="center"><span class="math inline">\(X\)</span></td>
+<td align="center"><span class="math inline">\(X\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Hypothesis Test
+<span class="math inline">\(H_{0}: \mu_{1}=\mu_{2} \ldots .=\mu_{k} \quad \xrightarrow{\text { all }}\)</span> means are equal)
+tai. Al least one <span class="math inline">\(\mu_{j}, j=1, \ldots, k\)</span> fat least one mean different) is different Lat least one treatment has a different effect</p>
+<p>Test Stat</p>
+<p><span class="math display">\[
+F^{*}=\frac{M S T r}{M S E}=\frac{S S T r+/ k-1}{S S E \mathscr{L} n-k} \sim F_{(k-1, n-k)}
+\]</span></p>
+<p>Reference distribution
+<span class="math inline">\(F\)</span> distrib with amerater <span class="math inline">\(=k=1\)</span> and denominator <span class="math inline">\(=n=k \quad d f\)</span>
+p-value</p>
+<p>Conclusions
+<img src="https://cdn.mathpix.com/cropped/2025_07_03_0e611eebd5aab7c4aee1g-05.jpg?height=737&amp;width=1476&amp;top_left_y=1091&amp;top_left_x=700" />
+usual way</p>
+<div id="the-data-matrix" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> The Data Matrix<a href="analysis-of-variance.html#the-data-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The following table shows last year’s sales data for a small business. The sample is put into a matrix format in which each of the three columns corresponds to one of the three countries in which the company does business. The numbers in the cell represent the sales (in units of <span class="math inline">\(\$ 1000\)</span> ) made in that country last year. These data will be used to develop the theory underlying Analysis of Variance or, for short, ANOVA.</p>
+</div>
+<div id="the-data-matrix-1" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> The Data Matrix<a href="analysis-of-variance.html#the-data-matrix-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">Country A</th>
+<th align="center">Country B</th>
+<th align="center">Country C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">14</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">10</td>
+<td align="center">8</td>
+<td align="center">13</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">7</td>
+<td align="center">12</td>
+<td align="center">11</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">9</td>
+<td align="center">10</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">Average</td>
+<td align="center">8</td>
+<td align="center">10</td>
+<td align="center">12</td>
+</tr>
+</tbody>
+</table>
+<p>Altogether, there were 12 sales last year that totaled <span class="math inline">\(\$ 120\)</span> - so the average sale was <span class="math inline">\(\$ 10\)</span>.
+The column (country) averages are:
+Column 1 (Country A) $8.
+Column 2 (Country B) $10.
+Column 3 (Country C) $12.</p>
+<p>Now we will begin our study of how to make a statistically valid prediction of the next sales figure. In that regard, there are two possible situations that can occur.</p>
+<ol style="list-style-type: decimal">
+<li>The country of the next sale (observation) is not known.</li>
+<li>The country of the next sale is known.</li>
+</ol>
+</div>
+<div id="situation-1." class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> Situation 1.<a href="analysis-of-variance.html#situation-1." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Without any additional information, the best prediction is the sample mean <span class="math inline">\(\$ 10\)</span>. This prediction is best in the least squares sense - that is, if <span class="math inline">\(\$ 10\)</span> had been used to predict each of the 12 observations in the sample, then the total of the squared errors <span class="math inline">\(S S_{\text {total }}\)</span> would be as small as possible. In our data set, <span class="math inline">\(S S_{\text {total }}\)</span> equals 60 . That figure can be verified by calculating <span class="math inline">\(\sum\left(x_{i}-10\right)^{2}\)</span> for each observation <span class="math inline">\(x_{i}\)</span> of the sample.</p>
+<p>Situation 2. One-factor ANOVA Model.
+If the country of the next sale is known, then two different predictions are possible for the next sales figure:</p>
+<ul>
+<li>The sample mean <span class="math inline">\(\$ 10\)</span>.</li>
+<li>The mean of the sales of the country in which the next sale will occur. (In this case, <span class="math inline">\(\$ 8\)</span> if the next sale will occur in Country A, <span class="math inline">\(\$ 10\)</span> in Country B, or <span class="math inline">\(\$ 12\)</span> in Country C.) This prediction ignores the information present in the sales figures from the other two countries.</li>
+</ul>
+</div>
+<div id="the-null-hypothesis-for-one-factor-anova" class="section level2 hasAnchor" number="17.4">
+<h2><span class="header-section-number">17.4</span> The Null Hypothesis for One-Factor ANOVA<a href="analysis-of-variance.html#the-null-hypothesis-for-one-factor-anova" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have discussed the prediction possibilities for one-factor ANOVA models. Now, we will learn how to test the statistical significance of a one-factor ANOVA model.
+Let’s suppose that we want to predict the next sales figure, and that we know the country in which this sale will occur. Without any statistical testing, we can always by default use the sample mean <span class="math inline">\(\$ 10\)</span> to predict the next sale. The default prediction, the sample mean, doesn’t use any information about the country (column) in which the sale will occur.</p>
+</div>
+<div id="the-null-hypothesis-for-one-factor-anova-1" class="section level2 hasAnchor" number="17.5">
+<h2><span class="header-section-number">17.5</span> The Null Hypothesis for One-Factor ANOVA<a href="analysis-of-variance.html#the-null-hypothesis-for-one-factor-anova-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>However, if instead we use the mean of the observations in only one column (the column that corresponds to the particular country in which we know the next sale will occur), then we have to test the null hypothesis</p>
+<p><span class="math display">\[
+H_{0}: \mu_{C O L 1}, \mu_{C O L 2}, \mu_{C O L 3}, \text { are equal }
+\]</span></p>
+<p>and reject it in favor of the alternative hypothesis
+<span class="math inline">\(H_{a}: \mu_{C O L 1}, \mu_{C O L 2}, \mu_{C O L 3}\)</span>, are NOT all equal</p>
+</div>
+<div id="the-null-hypothesis-for-one-factor-anova-2" class="section level2 hasAnchor" number="17.6">
+<h2><span class="header-section-number">17.6</span> The Null Hypothesis for One-Factor ANOVA<a href="analysis-of-variance.html#the-null-hypothesis-for-one-factor-anova-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If the null hypothesis is rejected, then we can be statistically confident that the column means are not all equal, and therefore that the individual column means (i. e., <span class="math inline">\(\$ 8, \$ 10, \$ 12\)</span> ) can be used to predict the amount of the next sale. If the next sale was going to occur in Country A , then the prediction would be <span class="math inline">\(\$ 8\)</span>. If the next sale was going to occur in Country B, then the prediction would be <span class="math inline">\(\$ 10\)</span>. If the next sale was going to occur in Country C , then the prediction would be <span class="math inline">\(\$ 12\)</span>.</p>
+</div>
+<div id="the-one-factor-anova-f-test" class="section level2 hasAnchor" number="17.7">
+<h2><span class="header-section-number">17.7</span> The One-Factor ANOVA F Test<a href="analysis-of-variance.html#the-one-factor-anova-f-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To test the null hypothesis stated above, we have to calculate an F-statistic. If <span class="math inline">\(F_{*}&gt;F_{(c-1, n-c), \alpha}\)</span>, then reject <span class="math inline">\(H_{0}\)</span>, and use the sample column means to predict future observations. Otherwise, do not reject <span class="math inline">\(H_{0}\)</span> and use the overall sample mean to predict future observations.</p>
+</div>
+<div id="anova-table" class="section level2 hasAnchor" number="17.8">
+<h2><span class="header-section-number">17.8</span> ANOVA Table<a href="analysis-of-variance.html#anova-table" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To see how this <span class="math inline">\(F_{*}\)</span> is calculated, see the ANOVA Table below.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Source of <br> Variation</th>
+<th align="center">Degrees of <br> Freedom <br> <span class="math inline">\((\mathrm{df})\)</span></th>
+<th align="center">Sum of <br> Square <br> <span class="math inline">\((\mathrm{SS})\)</span></th>
+<th align="center">Mean Sum of <br> Squares <br> <span class="math inline">\((\)</span> MSS <span class="math inline">\()\)</span></th>
+<th align="center">F Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Treatments</td>
+<td align="center"><span class="math inline">\(\mathrm{c}-1\)</span></td>
+<td align="center">SST</td>
+<td align="center"><span class="math inline">\(\frac{\text { SST }}{c-1}\)</span></td>
+<td align="center"><span class="math inline">\(F=\frac{\text { MST }}{\text { MSE }}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Error</td>
+<td align="center"><span class="math inline">\(\mathrm{n}-\mathrm{c}\)</span></td>
+<td align="center">SSE</td>
+<td align="center"><span class="math inline">\(\frac{\text { SSE }}{n-c}\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Total</td>
+<td align="center"><span class="math inline">\(\mathrm{n}-1\)</span></td>
+<td align="center">SSTOTAL</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="calculation-of-sstotal" class="section level2 hasAnchor" number="17.9">
+<h2><span class="header-section-number">17.9</span> Calculation of SStotal<a href="analysis-of-variance.html#calculation-of-sstotal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If no model is used, then the predictions for each of the 12 observations will be 10 . If these predictions are used, the squared error of these 12 predictions is given in the table below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Country A</th>
+<th align="center">Country B</th>
+<th align="center">Country C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">16</td>
+<td align="center">0</td>
+<td align="center">16</td>
+</tr>
+<tr class="even">
+<td align="center">0</td>
+<td align="center">4</td>
+<td align="center">9</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">4</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Prediction Errors Squared when NO Factor is used <span class="math inline">\((\)</span> Total <span class="math inline">\()=60\)</span>.</p>
+</div>
+<div id="calculation-of-sse" class="section level2 hasAnchor" number="17.10">
+<h2><span class="header-section-number">17.10</span> Calculation of SSE<a href="analysis-of-variance.html#calculation-of-sse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If the column model is used, then the 12 observations would have the following 12 predictions, where <span class="math inline">\(\$ 8\)</span> is the average for the first column, <span class="math inline">\(\$ 10\)</span> is the average for the second column, and <span class="math inline">\(\$ 12\)</span> is the average for the third column.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Country A</th>
+<th align="center">Country B</th>
+<th align="center">Country C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">10</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">10</td>
+<td align="center">12</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">10</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">10</td>
+<td align="center">12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="calculation-of-sse-1" class="section level2 hasAnchor" number="17.11">
+<h2><span class="header-section-number">17.11</span> Calculation of SSE<a href="analysis-of-variance.html#calculation-of-sse-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Using the above 12 predictions, the errors squared are shown in the table below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Country A</th>
+<th align="center">Country B</th>
+<th align="center">Country C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">4</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>Errors Squared when the Column Factor is used <span class="math inline">\((\)</span> Total <span class="math inline">\()=28\)</span>.</p>
+</div>
+<div id="calculation-of-sst" class="section level2 hasAnchor" number="17.12">
+<h2><span class="header-section-number">17.12</span> Calculation of SST<a href="analysis-of-variance.html#calculation-of-sst" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The units explained by the column model are calculated by finding the square of each prediction change when moving from NO model to the column model. The following table presents the square of each prediction change:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Country A</th>
+<th align="center">Country B</th>
+<th align="center">Country C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>Table of the Square of the Prediction Change when Moving from NO Model to the Column Model <span class="math inline">\((\)</span> Total <span class="math inline">\()=32\)</span>.</p>
+</div>
+<div id="anova-table-1" class="section level2 hasAnchor" number="17.13">
+<h2><span class="header-section-number">17.13</span> ANOVA Table<a href="analysis-of-variance.html#anova-table-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The ANOVA Table for the column factor can now be filled in as shown below:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Source of <br> Variation</th>
+<th align="center">Degrees of <br> Freedom <br> <span class="math inline">\((\mathrm{df})\)</span></th>
+<th align="center">Sum of <br> Square <br> <span class="math inline">\((\mathrm{SS})\)</span></th>
+<th align="center">Mean Sum of <br> Squares <br> <span class="math inline">\((\)</span> MSS <span class="math inline">\()\)</span></th>
+<th align="center">F Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Treatments</td>
+<td align="center">2</td>
+<td align="center">32</td>
+<td align="center"><span class="math inline">\(\frac{32}{2}=16\)</span></td>
+<td align="center"><span class="math inline">\(\frac{16}{3.1111}=5.1428\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Error</td>
+<td align="center">9</td>
+<td align="center">28</td>
+<td align="center"><span class="math inline">\(\frac{28}{9}=3.1111\)</span></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">Total</td>
+<td align="center">11</td>
+<td align="center">60</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>So for this one-factor ANOVA model, <span class="math inline">\(F_{*}=5.1428\)</span>.</p>
+</div>
+<div id="conclusion" class="section level2 hasAnchor" number="17.14">
+<h2><span class="header-section-number">17.14</span> Conclusion<a href="analysis-of-variance.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If the null hypothesis is true, then the F-statistic should be a value from the <span class="math inline">\(F_{2,9}\)</span> distribution. Referring to the table that contains the upper 0.05 cut-off points of F distributions, we see that <span class="math inline">\(F_{(2,9), 0.05}=4.256\)</span>. Since 5.1428 is greater than 4.256 , this tells us that the F -statistic is in the upper 0.05 of the <span class="math inline">\(F_{2,9}\)</span> distribution. Therefore we reject the null hypothesis at the 0.05 significance level, and we conclude that the country means are not all the same. Thus, the prediction for the next sale in a known country is the mean of all the previous sales in that country.</p>
+<pre><code># R Code;
+salesA=c(6,10,7,9);
+salesB=c (10, 8,12,10);
+salesC=c(14,13,11,10);
+sales=c(salesA,salesB,salesC);
+country=c(rep(1,4),rep(2,4),rep(3,4));
+oneway.test(sales~country,var.equal=TRUE);</code></pre>
+<pre><code>##
+## One-way analysis of means
+##
+## data: sales and country
+## F = 5.1429, num df = 2, denom df = 9, p-value =
+## 0.0324</code></pre>
+<pre><code># R Code;
+# Another way: using lm;
+salesA=c(6,10,7,9);
+salesB=c (10, 8,12,10);
+salesC=c(14,13,11,10);
+sales=c(salesA,salesB,salesC);
+country=c(rep(1,4),rep(2,4),rep(3,4));
+anova(lm(sales~factor(country)));</code></pre>
+<pre><code>## Analysis of Variance Table
+##
+## Response: sales
+## Df Sum Sq Mean Sq F value Pr(&gt;F)
+## factor(country) 2 32 16.0000 5.1429 0.0324 *
+## Residuals 9 28 3.1111
+## ---
+## Signif. codes:
+## 0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Officially, to use the predictions from an ANOVA model, three assumptions about the populations from which the sample was taken must be satisfied:</p>
+<ol style="list-style-type: decimal">
+<li>Each population has a Normal distribution.</li>
+<li>Each population has the same standard deviation <span class="math inline">\(\sigma\)</span>.</li>
+<li>The observations are mutually independent of one another.</li>
+</ol>
+</div>
+<div id="formulas" class="section level2 hasAnchor" number="17.15">
+<h2><span class="header-section-number">17.15</span> Formulas<a href="analysis-of-variance.html#formulas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sum of Squares for Treatments (a.k.a. between-treatments variation or Explained)</p>
+<p><span class="math display">\[
+S S T=\sum_{j=1}^{k} n_{j}\left(\bar{x}_{j}-\overline{\bar{x}}\right)^{2}
+\]</span></p>
+<p>Sum of Squares for Error (a.k.a. within-treatments variation or Unexplained)</p>
+<p><span class="math display">\[
+S S E=\sum_{j=1}^{k} \sum_{i=1}^{n_{j}}\left(x_{i j}-\bar{x}_{j}\right)^{2}=\left(n_{1}-1\right) s_{1}^{2}+\ldots+\left(n_{k}-1\right) s_{k}^{2}
+\]</span></p>
+</div>
+<div id="formulas-1" class="section level2 hasAnchor" number="17.16">
+<h2><span class="header-section-number">17.16</span> Formulas<a href="analysis-of-variance.html#formulas-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="mean-square-for-treatments" class="section level2 hasAnchor" number="17.17">
+<h2><span class="header-section-number">17.17</span> Mean Square for Treatments<a href="analysis-of-variance.html#mean-square-for-treatments" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+M S T=\frac{S S T}{k-1}
+\]</span></p>
+<p>Mean Square for Error</p>
+<p><span class="math display">\[
+M S E=\frac{S S E}{n-k}
+\]</span></p>
+</div>
+<div id="formulas-2" class="section level2 hasAnchor" number="17.18">
+<h2><span class="header-section-number">17.18</span> Formulas<a href="analysis-of-variance.html#formulas-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="test-statistic" class="section level2 hasAnchor" number="17.19">
+<h2><span class="header-section-number">17.19</span> Test Statistic<a href="analysis-of-variance.html#test-statistic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+F=\frac{M S T}{M S E}
+\]</span></p>
+</div>
+<div id="exercise" class="section level2 hasAnchor" number="17.20">
+<h2><span class="header-section-number">17.20</span> Exercise<a href="analysis-of-variance.html#exercise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A statistics practitioner calculated the following statistics:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Statistic</th>
+<th align="center">1</th>
+<th align="center">Treatment</th>
+<th align="center">2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">n</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\bar{x}\)</span></td>
+<td align="center">10</td>
+<td align="center">15</td>
+<td align="center">20</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(s^{2}\)</span></td>
+<td align="center">50</td>
+<td align="center">50</td>
+<td align="center">50</td>
+</tr>
+</tbody>
+</table>
+<p>Complete the ANOVA table.</p>
+</div>
+<div id="solution" class="section level2 hasAnchor" number="17.21">
+<h2><span class="header-section-number">17.21</span> Solution<a href="analysis-of-variance.html#solution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \overline{\bar{x}}=\frac{5(10)+5(15)+5(20)}{5+5+5}=15 \\
+&amp; S S T=5(10-15)^{2}+5(15-15)^{2}+5(20-15)^{2}=250 \\
+&amp; S S E=(5-1)(50)+(5-1)(50)+(5-1)(50)=600
+\end{aligned}
+\]</span></p>
+</div>
+<div id="anova-table-2" class="section level2 hasAnchor" number="17.22">
+<h2><span class="header-section-number">17.22</span> ANOVA Table<a href="analysis-of-variance.html#anova-table-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source of Variation</th>
+<th align="left">Degrees of Freedom (df)</th>
+<th align="left">Sum of Square (SS)</th>
+<th align="left">Mean Sum of Squares (MSS)</th>
+<th align="left">F Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Treatments</td>
+<td align="left">2</td>
+<td align="left">250</td>
+<td align="left"><span class="math inline">\(\frac{250}{2}=125\)</span></td>
+<td align="left"><span class="math inline">\(\frac{125}{50}=2.50\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Error</td>
+<td align="left">12</td>
+<td align="left">600</td>
+<td align="left"><span class="math inline">\(\frac{600}{12}=50\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">14</td>
+<td align="left">850</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="exercise-1" class="section level2 hasAnchor" number="17.23">
+<h2><span class="header-section-number">17.23</span> Exercise<a href="analysis-of-variance.html#exercise-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A statistics practitioner calculated the following statistics:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Statistic</th>
+<th align="center">1</th>
+<th align="center">Treatment</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">n</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\bar{x}\)</span></td>
+<td align="center">20</td>
+<td align="center">22</td>
+<td align="center">25</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(s^{2}\)</span></td>
+<td align="center">10</td>
+<td align="center">10</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
+<p>Complete the ANOVA table.</p>
+</div>
+<div id="solution-1" class="section level2 hasAnchor" number="17.24">
+<h2><span class="header-section-number">17.24</span> Solution<a href="analysis-of-variance.html#solution-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \overline{\bar{x}}=\frac{4(20)+4(22)+4(25)}{4+4+4}=22.33 \\
+&amp; S S T=4(20-22.33)^{2}+4(22-22.33)^{2}+4(25-22.33)^{2}=50.67 \\
+&amp; S S E=(4-1)(10)+(4-1)(10)+(4-1)(10)=90
+\end{aligned}
+\]</span></p>
+</div>
+<div id="anova-table-3" class="section level2 hasAnchor" number="17.25">
+<h2><span class="header-section-number">17.25</span> ANOVA Table<a href="analysis-of-variance.html#anova-table-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source of Variation</th>
+<th align="left">Degrees of Freedom (df)</th>
+<th align="left">Sum of Square (SS)</th>
+<th align="left">Mean Sum of Squares (MSS)</th>
+<th align="left">F Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Treatments</td>
+<td align="left">2</td>
+<td align="left">50.67</td>
+<td align="left"><span class="math inline">\(\frac{50.67}{2}=25.33\)</span></td>
+<td align="left"><span class="math inline">\(\frac{25.33}{10}=2.53\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Error</td>
+<td align="left">9</td>
+<td align="left">90</td>
+<td align="left"><span class="math inline">\(\frac{90}{9}=10\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">11</td>
+<td align="left">140.67</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="exercise-2" class="section level2 hasAnchor" number="17.26">
+<h2><span class="header-section-number">17.26</span> Exercise<a href="analysis-of-variance.html#exercise-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A consumer organization was concerned about the differences between the advertised sizes of containers and the actual amount of product. In a preliminary study, six packages of three different brands of margarine that are supposed to contain 500 ml were measured. The differences from 500 ml are listed here. Do these data provide sufficient evidence to conclude that differences exist between the three brands? Use <span class="math inline">\(\alpha=0.05\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Brand 1</th>
+<th align="center">Brand 2</th>
+<th align="center">Brand 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">0</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">0</td>
+<td align="center">4</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>Exercise on 3 bounds</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">consider <br> <span class="math inline">\(\alpha=0.05\)</span></th>
+<th align="left">Brand 1</th>
+<th align="left">Brand 2</th>
+<th align="left">Brand 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(x_{1 / 2}=1\)</span></td>
+<td align="left"><span class="math inline">\(x_{21}=2\)</span></td>
+<td align="left"><span class="math inline">\(x_{3 /}=1\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(x_{12}=3\)</span></td>
+<td align="left"><span class="math inline">\(x_{22}=2\)</span></td>
+<td align="left"><span class="math inline">\(x_{32}=2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">4</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">0</td>
+<td align="left">3</td>
+<td align="left">2</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(x_{16} 0\)</span></td>
+<td align="left"><span class="math inline">\(x_{26}\)</span></td>
+<td align="left"><span class="math inline">\(x_{36}=4\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(n_{1}=6\)</span></td>
+<td align="left"><span class="math inline">\(n_{2}=6\)</span></td>
+<td align="left"><span class="math inline">\(n_{3}=6\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Overall Sample size: <span class="math inline">\(n=n_{1}+n_{2}+n_{3}=18\)</span>
+Sample means
+Group 1 : <span class="math inline">\(\bar{x}_{1}=\frac{1}{n_{1}} \sum_{j=1}^{n_{1}} x_{1 j}=\frac{1}{6}(1+3 \ldots+0)=1,33\)</span>
+Group 2 : <span class="math inline">\(\bar{x}_{2}=\frac{1}{n_{2}} \sum_{j=1}^{n} x_{2 j}=\frac{1}{6}(2+2 \ldots+4)=2,50\)</span>
+Group 3: <span class="math inline">\(\bar{x}_{3}=\frac{1}{n_{3}} \sum_{j=1}^{n_{1}} x_{3 j}=\frac{1}{6}(1+2 \ldots+4)=2.67\)</span>
+Overall mean
+(1)
+(3)</p>
+<p><span class="math display">\[
+\begin{aligned}
+\bar{x} &amp; =\frac{\sum_{i=1}^{k} \sum_{j=1}^{n i} x_{i j}=\frac{1+3+\ldots+0+2+2+\ldots+4+\sqrt{1+2+\ldots+4}}{18}}{n} \\
+&amp; =\frac{1}{n} \sum_{i=1}^{k} n_{i} \bar{x}_{i}=\frac{1}{18}[(86) 01,33)+(6)(2.5)+(6)(2.67) \\
+&amp; =2.17
+\end{aligned}
+\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Brand 1</th>
+<th align="center">Brand 2</th>
+<th align="center">Brand 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(x_{11}=1\)</span></td>
+<td align="center"><span class="math inline">\(x_{21}=2\)</span></td>
+<td align="center"><span class="math inline">\(x_{31}=1\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(x_{12}=3\)</span></td>
+<td align="center"><span class="math inline">\(x_{22}=2\)</span></td>
+<td align="center"><span class="math inline">\(x_{32}=2\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="center">4</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="left">0</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="center">0</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(x_{16}\)</span></td>
+<td align="center">0</td>
+<td align="center"><span class="math inline">\(x_{26}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Sample Variances
+Group 1: SI <span class="math inline">\({ }_{1}^{2}=\frac{1}{n_{1}-1} \sum_{j=1}^{n_{1}}\left(x_{i j}-\bar{x}_{1}\right)^{2}\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; =\frac{1}{6-1}\left[(1-1,33)^{2}+\ldots+(0-1,33)^{2}\right] \\
+&amp; =1,87
+\end{aligned}
+\]</span></p>
+<p>Grap 2! <span class="math inline">\(S_{2}{ }^{2}=\)</span> 1</p>
+<p><span class="math display">\[
+=2,30
+\]</span></p>
+<p>Group <span class="math inline">\(3: S_{3}^{2}=\)</span></p>
+<p><span class="math display">\[
+=1,47
+\]</span></p>
+<p><span class="math display">\[
+\begin{array}{lll}
+\hline \text { Brand } 1 &amp; \text { Brand } 2 &amp; \text { Brand } 3 \\
+\hline x_{11}=1 &amp; x_{21}=2 &amp; x_{31}=1 \\
+x_{12}=3 &amp; x_{22}=2 &amp; x_{32}=2 \\
+3 &amp; 4 &amp; 4 \\
+0 &amp; 3 &amp; 2 \\
+1 &amp; 0 &amp; 3 \\
+x_{16} &amp; 0 &amp; x_{26} \\
+\hline n_{1}=6 &amp; 4 &amp; x_{36}=4 \\
+\bar{x}_{1}=1,33 &amp; \bar{x}_{2}=6 &amp; n_{3}=6 \\
+S_{1}^{2}=1,80 &amp; S_{2}^{2}=2,30 &amp; \bar{x}_{3}=2,67 \\
+S_{3}^{2}=1,47
+\end{array}
+\]</span></p>
+<p>overall near <span class="math inline">\(\bar{x}=2.17, \quad n=18\)</span>
+within</p>
+<p><span class="math display">\[
+\begin{aligned}
+S S E &amp; =\sum_{i=1}^{n_{i}}\left(n_{i}-1\right) s_{i}^{2}=(6-1) \cdot(1.87)+(6-1) \cdot(2.30)+(6-1)(1.47) \\
+&amp; =28.20
+\end{aligned}
+\]</span></p>
+<p>Between it rt affect)</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \delta \delta \operatorname{tot}=\sum_{r=1}^{n} n_{i}\left(\bar{x}_{i}-\bar{x}\right)^{2}=6(1,33-2,17)^{2}+6(2,50-2,17)^{2} \\
+&amp;+6(2,67-2,17)^{2}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+=6,39
+\]</span></p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">ANOVA Table</th>
+<th align="center">MS <span class="math inline">\(=\frac{\delta S}{d f}\)</span></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Source</td>
+<td align="center"><span class="math inline">\(d f\)</span> <br> degrees of <br> Freedom</td>
+<td align="center"><span class="math inline">\(S S\)</span> of <br> Squares</td>
+<td align="center">Mean <br> Squere</td>
+<td align="center"><span class="math inline">\(F\)</span>-Stat</td>
+</tr>
+<tr class="even">
+<td align="left">Treatment</td>
+<td align="center"><span class="math inline">\(K-1\)</span></td>
+<td align="center"><span class="math inline">\(S S T r t\)</span></td>
+<td align="center"><span class="math inline">\(M S T r=\frac{\delta S T r t}{K-1}\)</span></td>
+<td align="center"><span class="math inline">\(F^{*}=\frac{M S T r}{M S E}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Error</td>
+<td align="center"><span class="math inline">\(\cap-K\)</span></td>
+<td align="center"><span class="math inline">\(S S G\)</span></td>
+<td align="center"><span class="math inline">\(M S E=\frac{\delta S E}{n-K}\)</span></td>
+<td align="center"><span class="math inline">\(X\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="center"><span class="math inline">\(\cap-1\)</span></td>
+<td align="center"><span class="math inline">\(S S T o t a l\)</span></td>
+<td align="center"><span class="math inline">\(X\)</span></td>
+<td align="center"><span class="math inline">\(X\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Hypothesis Test
+<span class="math inline">\(H_{0}: \mu_{1}=\mu_{2} \ldots .=\mu_{k} \quad \xrightarrow{\text { all }}\)</span> means are equal)
+tHai. At least one <span class="math inline">\(\mu_{j}, j=1, \ldots, k\)</span> fat least one mean different) is different Lat least one treatment has a different effect
+<img src="https://cdn.mathpix.com/cropped/2025_07_03_0e611eebd5aab7c4aee1g-42.jpg?height=1405&amp;width=2748&amp;top_left_y=0&amp;top_left_x=1" /></p>
+<p>Hypothesis Test
+<span class="math inline">\(H_{0}: \mu_{1}=\mu_{2}=\mu_{3} \quad \rightarrow\)</span> all treatments equally affective
+tHai: At least one <span class="math inline">\(\mu_{j}, j=1, \ldots, 3\)</span> fat least one mean different) is different Lat least one treatment has a different effect</p>
+<p>Test stat</p>
+<p><span class="math display">\[
+F^{\hbar}=\frac{M S T_{r} t}{M S E}=\frac{S S T_{r} t / k-1}{S S E / n-k}=1.70 \sim F_{(2,15)}
+\]</span></p>
+<p>Fat num <span class="math inline">\(=2\)</span> and denom <span class="math inline">\(=15 \mathrm{df}\)</span>
+<img src="https://cdn.mathpix.com/cropped/2025_07_03_0e611eebd5aab7c4aee1g-43.jpg?height=944&amp;width=1892&amp;top_left_y=938&amp;top_left_x=587" />
+2.70 (table)</p>
+<p><span class="math display">\[
+\begin{array}{r}
+\text { p-ralue }&gt;0,100&gt;0,05 \\
+(\alpha)
+\end{array}
+\]</span></p>
+<p>Insufficient evidence to reject <span class="math inline">\(H_{0}: \mu_{1}=\mu_{2}=\mu_{3}\)</span> The analysis from AMOUA Suggests all 3 groups have same mean.</p>
+<p>Suppose he rejected Ho. Which mean (or means) are different?</p>
+<p><span class="math display">\[
+\mu_{1}, \mu_{2}, \mu_{3}
+\]</span></p>
+<p>pairmise comparisons
+<span class="math inline">\(M_{1}, M_{2}\)</span>
+<span class="math inline">\(\mu_{1}, \mu_{3}\)</span>
+<span class="math inline">\(\binom{k}{2}\)</span>
+<span class="math inline">\(\mu_{2}, \mu_{3}\)</span></p>
+<p>Step 1. State Hypotheses.
+<span class="math inline">\(\mu_{i}=\)</span> population mean for differences from 500 ml (brand <span class="math inline">\(i\)</span>, where
+<span class="math inline">\(i=1,2,3\)</span> ).
+<span class="math inline">\(H_{0}: \mu_{1}=\mu_{2}=\mu_{3}\)</span>
+<span class="math inline">\(H_{a}\)</span> : At least two means differ.</p>
+</div>
+<div id="solution-2" class="section level2 hasAnchor" number="17.27">
+<h2><span class="header-section-number">17.27</span> Solution<a href="analysis-of-variance.html#solution-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Step 2. Compute test statistic.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">Brand 1</th>
+<th align="center">Brand 2</th>
+<th align="center">Brand 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Mean</td>
+<td align="center">1.33</td>
+<td align="center">2.50</td>
+<td align="center">2.67</td>
+</tr>
+<tr class="even">
+<td align="center">Variance</td>
+<td align="center">1.87</td>
+<td align="center">2.30</td>
+<td align="center">1.47</td>
+</tr>
+</tbody>
+</table>
+<p>Grand mean <span class="math inline">\(=\overline{\bar{x}}=2.17\)</span>.
+<span class="math inline">\(S S T=6(1.33-2.17)^{2}+6(2.50-2.17)^{2}+6(2.67-2.17)^{2}=\)</span> <span class="math inline">\(6.387 \approx 6.39\)</span>
+SSE <span class="math inline">\(=(6-1)(1.87)+(6-1)(2.30)+(6-1)(1.47)=28.20\)</span></p>
+</div>
+<div id="solution-3" class="section level2 hasAnchor" number="17.28">
+<h2><span class="header-section-number">17.28</span> Solution<a href="analysis-of-variance.html#solution-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Grand mean <span class="math inline">\(=\overline{\bar{x}}=2.17\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; S S T=6(1.33-2.17)^{2}+6(2.50-2.17)^{2}+6(2.67-2.17)^{2}= \\
+&amp; 6.387 \approx 6.39 \\
+&amp; S S E=(6-1)(1.87)+(6-1)(2.30)+(6-1)(1.47)=28.20
+\end{aligned}
+\]</span></p>
+</div>
+<div id="anova-table-4" class="section level2 hasAnchor" number="17.29">
+<h2><span class="header-section-number">17.29</span> ANOVA Table<a href="analysis-of-variance.html#anova-table-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source of Variation</th>
+<th align="left">Degrees of Freedom (df)</th>
+<th align="left">Sum of Square (SS)</th>
+<th align="left">Mean Sum of Squares (MSS)</th>
+<th align="left">F Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Treatments</td>
+<td align="left">2</td>
+<td align="left">6.39</td>
+<td align="left"><span class="math inline">\(\frac{6.39}{2}=3.195\)</span></td>
+<td align="left"><span class="math inline">\(\frac{3.195}{1.88}=1.70\)</span></td>
+</tr>
+<tr class="even">
+<td align="left">Error</td>
+<td align="left">15</td>
+<td align="left">28.20</td>
+<td align="left"><span class="math inline">\(\frac{28.20}{15}=1.88\)</span></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">17</td>
+<td align="left">34.59</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>Step 3. Find Rejection Region.
+We reject the null hypothesis only if</p>
+<p><span class="math display">\[
+F&gt;F_{\alpha, k-1, n-k}
+\]</span></p>
+<p>If we let <span class="math inline">\(\alpha=0.05\)</span>, the rejection region for this exercise is</p>
+<p><span class="math display">\[
+F&gt;F_{0.05,2,15}=3.682
+\]</span></p>
+</div>
+<div id="step-4.-conclusion." class="section level2 hasAnchor" number="17.30">
+<h2><span class="header-section-number">17.30</span> Step 4. Conclusion.<a href="analysis-of-variance.html#step-4.-conclusion." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We found the value of the test statistic to be <span class="math inline">\(F=1.70\)</span>. Since <span class="math inline">\(F=1.70&lt;F_{0.05,2,15}=3.682\)</span>, we can’t reject <span class="math inline">\(H_{0}\)</span>. Thus, there is not evidence to infer that the average differences differ between the three brands.</p>
+<pre><code># R Code;
+brand1=c(1,3,3,0,1,0);
+brand2=c (2,2,4,3,0,4);
+brand3=c(1,2,4,2,3,4);
+differences=c(brand1,brand2,brand3);
+brand=c(rep(1,6),rep(2,6),rep(3,6));
+oneway.test(differences~brand,var.equal=TRUE);</code></pre>
+<pre><code>##
+## One-way analysis of means
+##
+## data: differences and brand
+## F = 1.6864, num df = 2, denom df = 15, p-value
+## = 0.2185</code></pre>
+<p>Margarine example
+&gt; brand = as.factor(brand)
+&gt; anova_model = aov(differences~brand)
+&gt; anova(anova_model)
+Analysis of Variance Table
+Response: differences</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Df</th>
+<th align="right">Sum Sq</th>
+<th align="right">Mean Sq</th>
+<th align="center"><span class="math inline">\(F\)</span> value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">brand</td>
+<td align="right">2</td>
+<td align="right">6.3333</td>
+<td align="right">3.1667</td>
+<td align="center">1.6864</td>
+</tr>
+<tr class="even">
+<td align="left">Residuals</td>
+<td align="right">15</td>
+<td align="right">28.1667</td>
+<td align="right">1.8778</td>
+<td align="center">0.2185</td>
+</tr>
+<tr class="odd">
+<td align="left">Resrur</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Totals
+a nut given by <span class="math inline">\(R\)</span></p>
+</div>
+<div id="exercise-3" class="section level2 hasAnchor" number="17.31">
+<h2><span class="header-section-number">17.31</span> Exercise<a href="analysis-of-variance.html#exercise-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The friendly folks a the Internal Revenue Service (IRS) in the United States and Canada Revenue Agency (CRA) are always looking for ways to improve the wording and format of its tax return forms. Three new forms have been developed recently. To determine which, if any, are superior to the current form, 120 individuals were asked to participate in an experiment. Each of the three new forms and the currently used form were filled out by 30 different people. The amount of time (in minutes) taken by each person to complete the task was recorded.
+What conclusions can be drawn from these data?</p>
+</div>
+<div id="r-code" class="section level2 hasAnchor" number="17.32">
+<h2><span class="header-section-number">17.32</span> R Code<a href="analysis-of-variance.html#r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>#Step 1. Entering data;
+# importing data;
+# url of tax return forms;
+forms_url =
+&quot;https://mcs.utm.utoronto.ca/&quot;nosedal/data/tax-forms.txt&quot;
+forms_data= read.table(forms_url,header=TRUE);
+names(forms_data);
+forms_data[1:4, ];</code></pre>
+</div>
+<div id="r-code-1" class="section level2 hasAnchor" number="17.33">
+<h2><span class="header-section-number">17.33</span> R Code<a href="analysis-of-variance.html#r-code-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">##</td>
+<td align="left">Form1</td>
+<td align="left">Form2</td>
+<td align="left">Form3</td>
+<td align="left">Form4</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">## 1</td>
+<td align="left">23</td>
+<td align="left">88</td>
+<td align="left">116</td>
+<td align="left">103</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">## 2</td>
+<td align="left">59</td>
+<td align="left">114</td>
+<td align="left">123</td>
+<td align="left">122</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">## 3</td>
+<td align="left">68</td>
+<td align="left">81</td>
+<td align="left">64</td>
+<td align="left">105</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">## 4</td>
+<td align="left">122</td>
+<td align="left">41</td>
+<td align="left">136</td>
+<td align="left">73</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="r-code-2" class="section level2 hasAnchor" number="17.34">
+<h2><span class="header-section-number">17.34</span> R Code<a href="analysis-of-variance.html#r-code-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>#Step 2. ANOVA;
+time1=forms_data$Form1;
+time2=forms_data$Form2;
+time3=forms_data$Form3;
+time4=forms_data$Form4;
+length(forms_data$Form1);
+times=c(time1,time2,time3,time4);
+forms=c(rep(1,30),rep(2,30),rep(3,30),rep(4,30));
+oneway.test(times~forms,var.equal=TRUE)</code></pre>
+</div>
+<div id="r-code-3" class="section level2 hasAnchor" number="17.35">
+<h2><span class="header-section-number">17.35</span> R Code<a href="analysis-of-variance.html#r-code-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>## [1] 30
+##
+## One-way analysis of means
+##
+## data: times and forms
+## F = 2.9358, num df = 3, denom df = 116, p-value
+## = 0.03632</code></pre>
+</div>
+<div id="assumptions-of-anova" class="section level2 hasAnchor" number="17.36">
+<h2><span class="header-section-number">17.36</span> Assumptions of ANOVA<a href="analysis-of-variance.html#assumptions-of-anova" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Model</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">observalurs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">of a surv</td>
+</tr>
+<tr class="even">
+<td align="left">are assigned</td>
+</tr>
+<tr class="odd">
+<td align="left">the same</td>
+</tr>
+</tbody>
+</table>
+<p>Y_{i j}=<em>{i}+</em>{i j},\end{array} _{i j} N(0, ^{2}).$ your mean</p>
+</div>
+<div id="assumptions" class="section level2 hasAnchor" number="17.37">
+<h2><span class="header-section-number">17.37</span> Assumptions<a href="analysis-of-variance.html#assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I’Obser vutions are independent
+<img src="https://cdn.mathpix.com/cropped/2025_07_03_0e611eebd5aab7c4aee1g-59.jpg?height=367&amp;width=730&amp;top_left_y=570&amp;top_left_x=1391" /></p>
+<p>3
+Error terms (residuals) are Normal
+3
+All groups have the same population variance</p>
+<p><span class="math display">\[
+\sigma_{1}^{2}=\sigma_{2}^{2}=\ldots=\sigma_{k}^{2}=\sigma^{2}
+\]</span></p>
+<p>Estimated with the MSE</p>
+<p><span class="math display">\[
+\begin{aligned}
+\sigma_{2} &amp; =\text { MdSE } \\
+&amp; \text { from ArovA }
+\end{aligned}
+\]</span></p>
+</div>
+<div id="multiple-comparisons" class="section level2 hasAnchor" number="17.38">
+<h2><span class="header-section-number">17.38</span> Multiple Comparisons<a href="analysis-of-variance.html#multiple-comparisons" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="example" class="section level2 hasAnchor" number="17.39">
+<h2><span class="header-section-number">17.39</span> Example<a href="analysis-of-variance.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Because of foreign competition, North American automobile manufacturers have become more concerned with quality. One aspect of quality is the cost of repairing damage caused by accidents. A manufacturer is considering several new types of bumpers. To test how well they react to low-speed collisions, 10 bumpers of each of four different types were installed on mid-size cars, which were then driven into a wall at 5 miles per hour. The cost of repairing the damage in each case was assessed. The data are shown below.
+a. Is there sufficient evidence at the <span class="math inline">\(5 \%\)</span> significance level to infer that the bumpers differ in their reactions to low-speed collisions? b. If differences exist, which bumpers differ? Apply Fisher’s LSD method with the Bonferroni adjustment.</p>
+</div>
+<div id="data" class="section level2 hasAnchor" number="17.40">
+<h2><span class="header-section-number">17.40</span> Data<a href="analysis-of-variance.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Bumper 1</th>
+<th align="left">Bumper 2</th>
+<th align="left">Bumper 3</th>
+<th align="left">Bumper 4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">610</td>
+<td align="left">404</td>
+<td align="left">599</td>
+<td align="left">272</td>
+</tr>
+<tr class="even">
+<td align="left">354</td>
+<td align="left">663</td>
+<td align="left">426</td>
+<td align="left">405</td>
+</tr>
+<tr class="odd">
+<td align="left">234</td>
+<td align="left">521</td>
+<td align="left">429</td>
+<td align="left">197</td>
+</tr>
+<tr class="even">
+<td align="left">399</td>
+<td align="left">518</td>
+<td align="left">621</td>
+<td align="left">363</td>
+</tr>
+<tr class="odd">
+<td align="left">278</td>
+<td align="left">499</td>
+<td align="left">426</td>
+<td align="left">297</td>
+</tr>
+<tr class="even">
+<td align="left">358</td>
+<td align="left">374</td>
+<td align="left">414</td>
+<td align="left">538</td>
+</tr>
+<tr class="odd">
+<td align="left">379</td>
+<td align="left">562</td>
+<td align="left">332</td>
+<td align="left">181</td>
+</tr>
+<tr class="even">
+<td align="left">548</td>
+<td align="left">505</td>
+<td align="left">460</td>
+<td align="left">318</td>
+</tr>
+<tr class="odd">
+<td align="left">196</td>
+<td align="left">375</td>
+<td align="left">494</td>
+<td align="left">412</td>
+</tr>
+<tr class="even">
+<td align="left">444</td>
+<td align="left">438</td>
+<td align="left">637</td>
+<td align="left">499</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\bar{x}=380\)</span></td>
+<td align="left">-</td>
+<td align="left">ᄀ</td>
+<td align="left">ר</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(S_{1}^{2}=16924.22\)</span></td>
+<td align="left">こ</td>
+<td align="left">-</td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(n_{1}=10\)</span></td>
+<td align="left">-</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<pre><code>cost_bumper1 = c(610, 354, 234, 399, 278, 358, 379, 548, 196, 444)
+cost_bumper2 = c(404, 663, 521, 518, 499, 374, 562, 505, 375, 438)
+cost_bumper3 = c(599, 426, 429, 621, 426, 414, 332, 460, 494, 637)
+cost_bumper4 = c(272, 405, 197, 363, 297, 538, 181, 318, 412, 499)
+bumper_data = rbind(
+    data.frame(cost = cost_bumper1, type = &quot;Bumper 1&quot;),
+    data.frame(cost = cost_bumper2, type = &quot;Bumper 2&quot;),
+    data.frame(cost = cost_bumper3, type = &quot;Bumper 3&quot;),
+    data.frame(cost = cost_bumper4, type = &quot;Bumper 4&quot;)
+)
+# data in long form at
+bumper_data</code></pre>
+<pre><code>library(mosaic)
+result = do.call(rbind, lapply(list(cost_bumper1, cost_bumper2,
+    cost_bumper3, cost_bumper4), fav_stats))
+rownames(result) = paste(&quot;Bumper&quot;, 1:4)
+result</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">min</th>
+<th align="left">Q1</th>
+<th align="left">median</th>
+<th align="left">Q3</th>
+<th align="left">max</th>
+<th align="left">mean</th>
+<th align="left">sd</th>
+<th align="left">n</th>
+<th align="left">missing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bumper</td>
+<td align="left">196</td>
+<td align="left">297.00</td>
+<td align="left">368.5</td>
+<td align="left">432.75</td>
+<td align="left">610</td>
+<td align="left">380.0</td>
+<td align="left">130.09313</td>
+<td align="left">10</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">Bumper</td>
+<td align="left">374</td>
+<td align="left">412.50</td>
+<td align="left">502.0</td>
+<td align="left">520.25</td>
+<td align="left">663</td>
+<td align="left">485.9</td>
+<td align="left">90.53968</td>
+<td align="left">10</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Bumper</td>
+<td align="left">332</td>
+<td align="left">426.00</td>
+<td align="left">444.5</td>
+<td align="left">572.75</td>
+<td align="left">637</td>
+<td align="left">483.8</td>
+<td align="left">102.10866</td>
+<td align="left">10</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">Bumper</td>
+<td align="left">181</td>
+<td align="left">278.25</td>
+<td align="left">340.5</td>
+<td align="left">410.25</td>
+<td align="left">538</td>
+<td align="left">348.2</td>
+<td align="left">118.52688</td>
+<td align="left">10</td>
+<td align="left">0</td>
+</tr>
+</tbody>
+</table>
+<pre><code>    # Create anova model
+    bumper_model = aov(cost ~ type, data = bumper_data)
+    # Get ANOVA table
+    anova(bumper_model)
+    Analysis of Variance Table</code></pre>
+<p><img src="https://cdn.mathpix.com/cropped/2025_07_03_0e611eebd5aab7c4aee1g-65.jpg?height=208&amp;width=829&amp;top_left_y=470&amp;top_left_x=0" /></p>
+<pre><code>Signif. codes: 0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Bumper Example
+<span class="math inline">\(H_{0}: \mu_{1}=\mu_{2}=\mu_{3}=\mu_{4}\)</span>
+Hal At least one <span class="math inline">\(\mu_{i}, i=1, \ldots 4\)</span> is different
+Test stat</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; F=4.0563 \sim F_{(3036)} \\
+&amp; p \text {-value }=0.01395&lt;0.05 \\
+&amp; (\alpha)
+\end{aligned}
+\]</span></p>
+<p>Sufficient Evidence to reject <span class="math inline">\(H_{0}\)</span> and conclude at least one soup of bumpers has a different meas repair cost.
+<span class="math inline">\(\rightarrow\)</span> which group / groups cure different?
+perform pairwise comparisons
+le. Create pairwise confidence intervals)
+For this example</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; 1 \mu_{1}-\mu_{2} \\
+&amp; 2 \mu_{1}-\mu_{3} \\
+&amp; 3 \mu_{1}-\mu_{4} \\
+&amp; 4 \mu_{2}-\mu_{3} \\
+&amp; 5 \mu_{2}-\mu_{4} \\
+&amp; 6 \mu_{3}-\mu_{4}
+\end{aligned}
+\]</span></p>
+</div>
+<div id="pairwise-confidence-intervals" class="section level2 hasAnchor" number="17.41">
+<h2><span class="header-section-number">17.41</span> Pairwise confidence Intervals<a href="analysis-of-variance.html#pairwise-confidence-intervals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For each pair of groups <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, <span class="math inline">\(i=1, \ldots, k ; \quad j=1, \ldots, k ; \quad i \neq j\)</span></p>
+<p>Fisher’s LSD</p>
+<p><span class="math display">\[
+\left.\left(\bar{x}_{i}-\bar{x}_{j}\right) \pm t_{(n}=k, \phi / 2\right) \cdot \sqrt{\text { MSE }\left(\frac{1}{n_{1}}+\frac{1}{n_{2}}\right)}
+\]</span></p>
+<p>Bonferroni</p>
+<p><span class="math display">\[
+\left.\overline{\left(\bar{x}_{i}-\bar{x}_{j}\right)} \pm t_{(n-k,} \phi / 2 m\right) \cdot \sqrt{\text { MSE }\left(\frac{1}{n_{1}}+\frac{1}{n_{2}}\right)}
+\]</span></p>
+<p><span class="math inline">\(m=\binom{k}{2}\)</span> # pairwise comparisons
+[Note: not conducting pairwise hypothesis tests]
+Fisher’s is easier to calculate, has mere statistical power, homer Bunferroni maintains experiment wit error rate</p>
+<p>Fisher: <span class="math inline">\(\alpha_{e}=1-(1-\alpha)^{m}\)</span>
+Bonferroni: <span class="math inline">\(\alpha_{e}=1-\left(1-\frac{\alpha}{m}\right)^{m}\)</span></p>
+<p>Fisher</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span class="math inline">\(m=1\)</span>,</th>
+<th align="left"><span class="math inline">\(の=0,05\)</span></th>
+<th align="left"><span class="math inline">\(1-(1-\infty)^{1}=0,05\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(m=2\)</span>,</td>
+<td align="left"><span class="math inline">\(の=0,05\)</span></td>
+<td align="left"><span class="math inline">\(1-(1-\infty)^{2}&gt;0,05\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(m=3\)</span></td>
+<td align="left"><span class="math inline">\(\alpha=0,05\)</span></td>
+<td align="left"><span class="math inline">\(1-(1-\infty)^{3}&gt;1-(1-\infty)^{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(n \uparrow\)</span> error rate <span class="math inline">\(\uparrow\)</span></p>
+<p>Bonles roni
+as <span class="math inline">\(m p \quad d e=\left(1-\frac{\alpha}{m}\right)^{m}\)</span> remains almust constart</p>
+</div>
+<div id="solution-a" class="section level2 hasAnchor" number="17.42">
+<h2><span class="header-section-number">17.42</span> Solution a)<a href="analysis-of-variance.html#solution-a" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The test statistic is <span class="math inline">\(F_{*}=4.06\)</span> and the <span class="math inline">\(P-\)</span> value <span class="math inline">\(=0.0139\)</span>. There is enough statistical evidence to infer that there are differences between some of the bumpers. The question is now, Which bumpers differ?</p>
+</div>
+<div id="fishers-least-significant-difference-method" class="section level2 hasAnchor" number="17.43">
+<h2><span class="header-section-number">17.43</span> Fisher’s Least Significant Difference Method<a href="analysis-of-variance.html#fishers-least-significant-difference-method" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="https://cdn.mathpix.com/cropped/2025_07_03_0e611eebd5aab7c4aee1g-70.jpg?height=661&amp;width=1185&amp;top_left_y=94&amp;top_left_x=51" /></p>
+</div>
+<div id="fishers-least-significant-difference-method-1" class="section level2 hasAnchor" number="17.44">
+<h2><span class="header-section-number">17.44</span> Fisher’s Least Significant Difference Method<a href="analysis-of-variance.html#fishers-least-significant-difference-method-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The confidence interval estimator is</p>
+<p><span class="math display">\[
+\left(\bar{x}_{i}-\bar{x}_{j}\right) \pm t_{\alpha / 2} \sqrt{M S E\left(\frac{1}{n_{i}}+\frac{1}{n_{j}}\right)}
+\]</span></p>
+</div>
+<div id="least-significant-difference-definition" class="section level2 hasAnchor" number="17.45">
+<h2><span class="header-section-number">17.45</span> Least Significant Difference (definition)<a href="analysis-of-variance.html#least-significant-difference-definition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We define the least significant difference LSD as</p>
+<p><span class="math display">\[
+L S D=t_{\alpha / 2} \sqrt{M S E\left(\frac{1}{n_{i}}+\frac{1}{n_{j}}\right)}
+\]</span></p>
+<p>A simple way of determining whether differences exist between each pair of population means is to compare the absolute value of the difference between their two sample means and LSD. In other words, we will conclude that <span class="math inline">\(\mu_{i}\)</span> and <span class="math inline">\(\mu_{j}\)</span> differ if</p>
+<p><span class="math display">\[
+\left|\bar{x}_{i}-\bar{x}_{j}\right|&gt;L S D
+\]</span></p>
+<p>LSD will be the same for all pairs of means if all <span class="math inline">\(k\)</span> sample sizes are equal. If some sample sizes differ, LSD must be calculated for each combination.
+It can be argued that this method is flawed because it will increase the probability of committing a Type I error. That is, it is more likely that the analysis of variance to conclude that a difference exists in some of the population means when in fact none differ.</p>
+<p>The true probability of making at least one Type I error is called the experimentwise Type I error rate, denoted <span class="math inline">\(\alpha_{E}\)</span>. The experimentwise Type I error rate can be calculated as</p>
+<p><span class="math display">\[
+\alpha_{E}=1-(1-\alpha)^{C}
+\]</span></p>
+<p>Here <span class="math inline">\(C\)</span> is the number of pairwise comparisons, which can be calculated by <span class="math inline">\(C=\frac{k(k-1)}{2}\)</span>. It can be shown that</p>
+<p><span class="math display">\[
+\alpha_{E} \leq C \alpha
+\]</span></p>
+<p>which means that if we want the probability of making at least one Type I error to be no more than <span class="math inline">\(\alpha_{E}\)</span>, we simply specify <span class="math inline">\(\alpha=\frac{\alpha_{E}}{C}\)</span>. The resulting procedure is called the Bonferroni adjustment.</p>
+</div>
+<div id="solution-b" class="section level2 hasAnchor" number="17.46">
+<h2><span class="header-section-number">17.46</span> Solution b)<a href="analysis-of-variance.html#solution-b" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s use our example to illustrate Fisher’s LSD method and the Bonferroni adjustment. The four sample means and standard deviations are
+<span class="math inline">\(\bar{y}_{1}=380\)</span> and <span class="math inline">\(s_{1}=130.0931\)</span>
+<span class="math inline">\(\bar{y}_{2}=485.9\)</span> and <span class="math inline">\(s_{2}=90.5396\)</span>
+<span class="math inline">\(\bar{y}_{3}=483.8\)</span> and <span class="math inline">\(s_{3}=102.1086\)</span>
+<span class="math inline">\(\bar{y}_{4}=348.2\)</span> and <span class="math inline">\(s_{4}=118.5268\)</span></p>
+</div>
+<div id="solution-b-1" class="section level2 hasAnchor" number="17.47">
+<h2><span class="header-section-number">17.47</span> Solution b)<a href="analysis-of-variance.html#solution-b-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The pairwise absolute differences are</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \left|\bar{y}_{1}-\bar{y}_{2}\right|=|380-485.9|=105.9 \\
+&amp; \left|\bar{y}_{1}-\bar{y}_{3}\right|=|380-483.8|=103.8 \\
+&amp; \left|\bar{y}_{1}-\bar{y}_{4}\right|=|380-348.2|=31.8 \\
+&amp; \left|\bar{y}_{2}-\bar{y}_{3}\right|=|485.9-483.8|=2.1 \\
+&amp; \left|\bar{y}_{2}-\bar{y}_{4}\right|=|485.9-348.2|=137.7 \\
+&amp; \left|\bar{y}_{3}-\bar{y}_{4}\right|=|483.8-348.2|=135.6
+\end{aligned}
+\]</span></p>
+</div>
+<div id="solution-b-2" class="section level2 hasAnchor" number="17.48">
+<h2><span class="header-section-number">17.48</span> Solution b)<a href="analysis-of-variance.html#solution-b-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have that <span class="math inline">\(M S E=12,399\)</span> and <span class="math inline">\(\nu=n-k=40-4=36\)</span>.
+If we perform the LSD procedure with the Bonferroni adjustment, the number of pairwise comparisons is 6 . We set <span class="math inline">\(\alpha=0.05 / 6=0.0083\)</span>. Thus <span class="math inline">\(t_{\alpha / 2, n-k}=t_{0.00415,36}=2.7935\)</span> (using R ) and
+qt (0.00415,36)
+## [1] -2.793555
+<span class="math inline">\(\operatorname{LSD}=t_{\alpha / 2} \sqrt{\operatorname{MSE}\left(\frac{1}{n_{i}}+\frac{1}{n_{j}}\right)} \approx 2.7935 \sqrt{12399\left(\frac{1}{10}+\frac{1}{10}\right)}=139.109\)</span></p>
+<p>Now no pair of means differ because all the absolute values of the differences between sample means are less than 139.1095.
+The drawback to the LSD procedure is that we increase the probability of at least one Type I error. The Bonferroni adjustment corrects this problem.</p>
+</div>
+<div id="bumper-example" class="section level2 hasAnchor" number="17.49">
+<h2><span class="header-section-number">17.49</span> Bumper example<a href="analysis-of-variance.html#bumper-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>library(mosaic)
+result = do.call(rbind, lapply(list(cost_bumper1, cost_bumper2,
+    cost_bumper3, cost_bumper4), fav_stats))
+rownames(result) = paste(&quot;Bumper&quot;, 1:4)
+result</code></pre>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"></th>
+<th align="left">min</th>
+<th align="right">Q1</th>
+<th align="right">median</th>
+<th align="right">Q3</th>
+<th align="right">max</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right"></th>
+<th align="right">n missing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\rightarrow\)</span></td>
+<td align="left">Bumper 1</td>
+<td align="left">196</td>
+<td align="right">297.00</td>
+<td align="right">368.5</td>
+<td align="right">432.75</td>
+<td align="right">610</td>
+<td align="right">380.0</td>
+<td align="right">130.09313</td>
+<td align="right">10</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\rightarrow\)</span></td>
+<td align="left">Bumper 2</td>
+<td align="left">374</td>
+<td align="right">412.50</td>
+<td align="right">502.0</td>
+<td align="right">520.25</td>
+<td align="right">663</td>
+<td align="right">485.9</td>
+<td align="right">90.53968</td>
+<td align="right">10</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Bumper 3</td>
+<td align="left">332</td>
+<td align="right">426.00</td>
+<td align="right">444.5</td>
+<td align="right">572.75</td>
+<td align="right">637</td>
+<td align="right">483.8</td>
+<td align="right">102.10866</td>
+<td align="right">10</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Bumper 4</td>
+<td align="left">181</td>
+<td align="right">278.25</td>
+<td align="right">340.5</td>
+<td align="right">410.25</td>
+<td align="right">538</td>
+<td align="right">348.2</td>
+<td align="right">118.52688</td>
+<td align="right">10</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<p>For the bumper example, calculate a <span class="math inline">\(95 \%\)</span> pairwise CI for the difference between Bumper (1) and Bumper (2) using LSD and Bonferroni Fisher’s LSD <span class="math inline">\(\quad\left(\mu_{1}-\mu_{2}\right)\)</span>
+l-の <span class="math inline">\(=0.98 \quad k=4 \quad\)</span> つ <span class="math inline">\(=40\)</span> <span class="math inline">\(\alpha=0.05\)</span>
+<span class="math inline">\(\left(\bar{x}_{1}-\bar{x}_{2}\right) \pm t_{r n-k, \alpha / 2} \cdot \sqrt{\text { MSE }\left(\frac{1}{n_{1}}+\frac{1}{n_{2}}\right)}\)</span> from ANOUA <span class="math inline">\(==\underbrace{(380-485.9) \pm t_{(36,0.025)}}_{1} \cdot \sqrt{123999\left(\frac{1}{10}+\frac{1}{10}\right)}\)</span></p>
+<p><span class="math display">\[
+=2,028 \quad \frac{B}{q q t(1-0,025,36)}
+\]</span></p>
+<p><span class="math inline">\(=-105.9 \pm 100.9942\)</span>
+<span class="math inline">\(=\underset{\text { (-ie) }}{21-206.894},-4,9058) \quad \mu_{1}-\mu_{2} \neq 0\)</span></p>
+<p>Fishers LSD suggests <span class="math inline">\(\mu_{2}&gt;\mu_{1}\)</span></p>
+<p>Bonferroni <span class="math inline">\(\left(\mu_{1}-\mu_{2}\right)\)</span> 曲pairmise compurisons</p>
+<p><span class="math display">\[
+\begin{array}{cc}
+\begin{array}{cc}
+1-\alpha=0.95 &amp; n=40 \\
+\alpha=0.05 &amp; k=4
+\end{array} &amp; n=\binom{k}{2}=\binom{4}{2}=6 \\
+\left(\bar{x}_{i}-\bar{x}_{i}\right) \pm t_{(n-k, 9 / 2 m)} &amp; \sqrt{\text { MSE }\left(\frac{1}{n_{1}}+\frac{1}{n_{2}}\right)} \\
+=(380-485.9) &amp; 0.004167 \\
+&amp; \pm t_{(36,} \overbrace{0.05 /(2 \times 6)}) \sqrt{12399\left(\frac{1}{10}+\frac{1}{10}\right)}
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+2,79197
+\]</span></p>
+<p><span class="math display">\[
+\frac{B}{2 q+(1-0,004162,36)}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; =-105,9 \pm 139,0338, \quad \mu_{1}-\mu_{2} \\
+&amp; =\left(\begin{array}{ccc}
+-244,9335, &amp; 33,13347
+\end{array}\right) \quad \frac{0}{-244}
+\end{aligned}
+\]</span></p>
+<p>Borferroni informs us it is plansible fer <span class="math inline">\(\mu_{1}=\mu_{2}\)</span>
+library(DescTools)
+PostHocTest(bumper_model, method = “lsd”)</p>
+<p>Posthoc multiple comparisons of means : Fisher LSD <span class="math inline">\(95 \%\)</span> family-wise confidence level
+$type</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"></th>
+<th align="left">diff</th>
+<th align="left">lwr.ci</th>
+<th align="left">upr.ci</th>
+<th align="left">pval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bumper</td>
+<td align="left">1</td>
+<td align="left">105.9</td>
+<td align="left">4.905342</td>
+<td align="left">206.89466</td>
+<td align="left">0.0404</td>
+</tr>
+<tr class="even">
+<td align="left">-</td>
+<td align="left">1</td>
+<td align="left">103.8</td>
+<td align="left">2.805342</td>
+<td align="left">204.79466</td>
+<td align="left">0.0443</td>
+</tr>
+<tr class="odd">
+<td align="left">Bumper</td>
+<td align="left">1</td>
+<td align="left">-31.8</td>
+<td align="left">-132.794658</td>
+<td align="left">69.19466</td>
+<td align="left">0.5271</td>
+</tr>
+<tr class="even">
+<td align="left">Bumper</td>
+<td align="left">2</td>
+<td align="left">-2.1</td>
+<td align="left">-103.094658</td>
+<td align="left">98.89466</td>
+<td align="left">0.9666</td>
+</tr>
+<tr class="odd">
+<td align="left">- Bumper</td>
+<td align="left">2</td>
+<td align="left">-137.7</td>
+<td align="left">-238.694658</td>
+<td align="left">-36.70534</td>
+<td align="left">0.0089</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\({ }^{\text {- }}\)</span> Bumper</td>
+<td align="left">3</td>
+<td align="left">-135.6</td>
+<td align="left">-236.594658</td>
+<td align="left">-34.60534</td>
+<td align="left">0.0099</td>
+</tr>
+</tbody>
+</table>
+<p>Signif. codes: 0 ‘<em><strong>’ 0.001 ’</strong>’ 0.01 ’</em>’ 0.05 ‘.’ 0.1 ’ ’ 1
+library(DescTools)
+PostHocTest(bumper_model, method = “bonferroni”)</p>
+<p>Posthoc multiple comparisons of means : Bonferroni <span class="math inline">\(95 \%\)</span> family-wise confidence level
+$type</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">diff</th>
+<th align="left">lwr.ci</th>
+<th align="left">upr.ci</th>
+<th align="left">pval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Bumper 2-Bumper 1</td>
+<td align="left">105.9</td>
+<td align="left">-33.13411</td>
+<td align="left">244.934113</td>
+<td align="left">0.2423</td>
+</tr>
+<tr class="even">
+<td align="left">Bumper 3-Bumper 1</td>
+<td align="left">103.8</td>
+<td align="left">-35.23411</td>
+<td align="left">242.834113</td>
+<td align="left">0.2657</td>
+</tr>
+<tr class="odd">
+<td align="left">Bumper 4-Bumper 1</td>
+<td align="left">-31.8</td>
+<td align="left">-170.83411</td>
+<td align="left">107.234113</td>
+<td align="left">1.0000</td>
+</tr>
+<tr class="even">
+<td align="left">Bumper 3-Bumper 2</td>
+<td align="left">-2.1</td>
+<td align="left">-141.13411</td>
+<td align="left">136.934113</td>
+<td align="left">1.0000</td>
+</tr>
+<tr class="odd">
+<td align="left">Bumper 4-Bumper 2</td>
+<td align="left">-137.7</td>
+<td align="left">-276.73411</td>
+<td align="left">1.334113</td>
+<td align="left">0.0535</td>
+</tr>
+<tr class="even">
+<td align="left">Bumper 4-Bumper</td>
+<td align="left">-135.6</td>
+<td align="left">-274.63411</td>
+<td align="left">3.434113</td>
+<td align="left">0.0595</td>
+</tr>
+</tbody>
+</table>
+<p>Signif. codes: 0 ‘<em><strong>’ 0.001 ’</strong>’ 0.01 ’</em>’ 0.05 ‘.’ 0.1 ’ ’ 1</p>
+</div>
+<div id="bonferroni" class="section level2 hasAnchor" number="17.50">
+<h2><span class="header-section-number">17.50</span> Bonferroni<a href="analysis-of-variance.html#bonferroni" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Control fer
+exper iment wise error
+<span class="math inline">\(\alpha_{e}=1-\left(1-\frac{\alpha}{m}\right)^{m}\)</span></p>
+<p>Suitable when control of Type I
+error is required
+higher rijk of Type II error
+lover power
+<span class="math inline">\(\alpha_{e}=1-(1-\alpha)^{m}\)</span></p>
+<p>Suitable when control of Type I error is not a strict concern</p>
+<p>Lower risk of Type II error higher power</p>
+</div>
+<div id="example-1" class="section level2 hasAnchor" number="17.51">
+<h2><span class="header-section-number">17.51</span> Example<a href="analysis-of-variance.html#example-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An apple juice manufacturer has developed a new product - a liquid concentrate that, when mixed with water, produces 1 liter of apple juice. The product has several attractive features. First, it is more convenient that canned apple juice. Second, because the apple juice that is sold in cans is actually made from concentrate, the quality of the new product is at least as high as canned apple juice. Third, the cost of the new product is slightly lower than canned apple juice. The marketing manager has to decide how to market the new product. She can create advertising that emphasizes convenience, quality, or price.</p>
+</div>
+<div id="example-2" class="section level2 hasAnchor" number="17.52">
+<h2><span class="header-section-number">17.52</span> Example<a href="analysis-of-variance.html#example-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To facilitate a decision, she conducts an experiment. In three different cities that are similar in size and demographic makeup, she launches the product with advertising stressing the convenience of the liquid concentrate in one city. In the second city, the advertisements emphasize the quality of the product. Advertising that highlights the relatively low cost of the liquid concentrate is used in the third city. The number of packages sold weekly is recorded for the 20 weeks following the beginning of the campaign.</p>
+</div>
+<div id="example-3" class="section level2 hasAnchor" number="17.53">
+<h2><span class="header-section-number">17.53</span> Example<a href="analysis-of-variance.html#example-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>These data are available at:</p>
+<pre><code>ad_url =
+&quot;https://mcs.utm.utoronto.ca/ ~nosedal/data/ad-strategies.t</code></pre>
+<p>The marketing manager wants to know if differences in sales exist between the three advertising strategies.</p>
+</div>
+<div id="example-4" class="section level2 hasAnchor" number="17.54">
+<h2><span class="header-section-number">17.54</span> Example<a href="analysis-of-variance.html#example-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To illustrate Fisher’s LSD method and the Bonferroni adjustment, consider the dataset described above and assume we tested to determine whether population means differ using a <span class="math inline">\(5 \%\)</span> significance level. The three sample means are: <span class="math inline">\(577.55,653.0\)</span>, and 608.65 .
+The pair-wise absolute differences are</p>
+<p><span class="math display">\[
+\begin{aligned}
+&amp; \left|\bar{x}_{1}-\bar{x}_{2}\right|=|577.55-653.0|=|-75.45|=75.45 \\
+&amp; \left|\bar{x}_{1}-\bar{x}_{3}\right|=|577.55-608.65|=|-31.10|=31.10 \\
+&amp; \left|\bar{x}_{2}-\bar{x}_{3}\right|=|653.0-608.65|=|44.35|=44.35
+\end{aligned}
+\]</span></p>
+</div>
+<div id="example-5" class="section level2 hasAnchor" number="17.55">
+<h2><span class="header-section-number">17.55</span> Example<a href="analysis-of-variance.html#example-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If we conduct the LSD procedure with <span class="math inline">\(\alpha=0.05\)</span> we find <span class="math inline">\(\left|t_{\alpha / 2, n-k}\right|=\left|t_{0.025,57}\right|=|-2.0024655|=2.0024655\)</span>
+qt (0.025,57)
+## [1] -2. 002465
+<span class="math inline">\(L S D=t_{\alpha / 2} \sqrt{M S E\left(\frac{1}{n_{i}}+\frac{1}{n_{j}}\right)} \approx 2.002 \sqrt{8894\left(\frac{1}{20}+\frac{1}{20}\right)}=59.71\)</span></p>
+</div>
+<div id="example-6" class="section level2 hasAnchor" number="17.56">
+<h2><span class="header-section-number">17.56</span> Example<a href="analysis-of-variance.html#example-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can see that only one pair of sample means differ by more than 59.71. That is, <span class="math inline">\(\left|\bar{x}_{1}-\bar{x}_{2}\right|=75.45\)</span>, and the other two differences are less than LSD. We conclude that only <span class="math inline">\(\mu_{1}\)</span> and <span class="math inline">\(\mu_{2}\)</span> differ.
+If we perform the LSD procedure with the Bonferroni adjustment, the number of pairwise comparisons is 3 (calculated as <span class="math inline">\(C=k(k-1) / 2=3(2) / 2\)</span>. We set <span class="math inline">\(\alpha=0.05 / 3=0.0167\)</span>. Thus, <span class="math inline">\(t_{\alpha / 2, n-k}=t_{0.0083,57}=-2.4682794\)</span> and</p>
+<p><span class="math display">\[
+t_{\alpha / 2} \sqrt{M S E\left(\frac{1}{n_{i}}+\frac{1}{n_{j}}\right)} \approx 2.467 \sqrt{8894\left(\frac{1}{20}+\frac{1}{20}\right)}=73.54
+\]</span></p>
+<p>Again we conclude that only <span class="math inline">\(\mu_{1}\)</span> and <span class="math inline">\(\mu_{2}\)</span> differ. Notice, however, in the second calculation LSD is larger.
+The drawback to LSD is that we increase the probability of at least one Type I error. The Bonferroni adjustment corrects this problem.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="inference-for-simple-linear-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="analysis-of-categorical-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

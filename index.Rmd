@@ -8,15 +8,11 @@ author: "Nishan Mudalige, Masoud Ataei, Nurlana Alili, Bryan Xu"
 
 - \usepackage{tikz}
 - \usepackage{pgfplots}
-- \usepackage{amsmath}
-- \usepackage{amssymb}
-- \pgfplotsset{compat=1.18}
 
 # STA258: Statistics with Applied Probability {-}
 
 ```{r, fig.align='center', echo=FALSE, engine='tikz', echo=FALSE, out.width='90%', fig.ext='png'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
-
 \definecolor{mygrey}{HTML}{dadde8}
 \definecolor{utmblue}{HTML}{1e3f6c}
 
