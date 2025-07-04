@@ -626,17 +626,12 @@ ANOVA Table
 MS = \frac{SS}{df}
 \]
 
-\[
-\begin{array}{|l|c|c|c|c|}
-\hline
-\textbf{Source} & \textbf{Degrees of Freedom} & \textbf{Sum of Squares (SS)} & \textbf{Mean Square (MS)} & \textbf{F-Stat} \\
-\hline
-\text{Treatment} & 3 - 1 = 2 & 6.39 & \frac{6.39}{2} = 3.195 & F^* = \frac{3.195}{1.875} = 1.70 \\
-\text{Error}     & 18 - 3 = 15 & 28.20 & \frac{28.20}{15} = 1.88 & \times \\
-\text{Total}     & 18 - 1 = 17 & 34.59 & \times & \\
-\hline
-\end{array}
-\]
+| Source    | Degrees of Freedom | Sum of Squares (SS) | Mean Square (MS)              | F-Stat                             |
+|-----------|--------------------|----------------------|-------------------------------|------------------------------------|
+| Treatment | 3 - 1 = 2          | 6.39                 | 6.39 / 2 = 3.195              | F* = 3.195 / 1.88 = 1.70            |
+| Error     | 18 - 3 = 15        | 28.20                | 28.20 / 15 = 1.88             | ×                                  |
+| Total     | 18 - 1 = 17        | 34.59                | ×                             | ×                                  |
+
 
 
 Hypothesis Test
