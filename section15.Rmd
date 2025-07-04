@@ -11,7 +11,7 @@ coordinate system to draw each data point and use simple linear
 regression to find a function which perfectly describes the relationship
 between height and time.
 
-
+<center>
 ```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case $m$ is the slope which tells you the rate of change, $b$ is the intercept which may have a special meaning depending on the case.'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[->, thick]
@@ -32,7 +32,7 @@ between height and time.
   \draw[red, thick, domain=0:6] plot (\x, {0.8*\x + 0.35}) node[right] {$y = mx+ b$};
 \end{tikzpicture}
 ```
-
+</center>
 
 Now, you may wonder the accuracy of this model. In statistics, we do
 have parameters that approximate the slope and intercept of the function
@@ -118,8 +118,8 @@ variables.
 - If $r_{xy} \approx +1$, then we say that the two random variables have
   a strong positive correlation. (See figure 15.2)
   
-
-```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of strong positive correlation ($r_{xy} \approx +1$).'}
+<center>
+```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of strong positive correlation ($r_{xy} \\approx +1$).'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[->, thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
@@ -146,12 +146,13 @@ variables.
   \filldraw[red] (5,5.5) circle (2pt);
 \end{tikzpicture}
 ```
+</center>
 
 - If $r_{xy} \approx -1$, then we say that the two random variables have
   a strong negative correlation. (See figure 15.3)
 
-
-```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of strong negative correlation ($r_{xy} \approx -1$).'}
+<center>
+```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of strong negative correlation ($r_{xy} \\approx -1$).'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[->, thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
@@ -178,7 +179,7 @@ variables.
   \filldraw[red] (5,0) circle (2pt);
 \end{tikzpicture}
 ```
-
+</center>
   <figcaption>An illustration of strong negative correlation (<span
   class="math inline"><em>r</em><sub><em>x</em><em>y</em></sub> ≈ −1</span>).</figcaption>
   </figure>
@@ -188,8 +189,8 @@ variables.
   $r \approx 0$, then it suggests a linear relationship doesn't exist
   but other relationship may exist. (See figure 15.4)
   
-  
-```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of no correlation ($r_{xy} \approx 0$).'}
+<center>
+```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of no correlation ($r_{xy} \\approx 0$).'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[->, thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
@@ -206,7 +207,7 @@ variables.
   \filldraw[blue] (6.0, 2.5) circle (2pt);
 \end{tikzpicture}
 ```
-
+</center>
   <figcaption>An illustration of no correlation (<span
   class="math inline"><em>r</em><sub><em>x</em><em>y</em></sub> ≈ 0</span>).</figcaption>
   </figure>
@@ -544,6 +545,7 @@ $E(Y) = \beta_0 + \beta_1 \cdot x$, the following lines are the
 derivation:
 
 <figure>
+<center>
 ```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of a simple linear regression model. The red line is the fitted regression line, and the full black vertical lines represent the residuals (SSE). The data points deviate from the line to show errors clearly. Note that the sum of residuals is necessarily $0$.'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[thick]
@@ -576,6 +578,7 @@ derivation:
   }
 \end{tikzpicture}
 ```
+</center>
 <figcaption>An illustration of a simple linear regression model. The red
 line is the fitted regression line, and the full black vertical lines
 represent the residuals (SSE). The data points deviate from the line to
@@ -720,9 +723,8 @@ It is defined as the sum over all squared differences between the
 observations and their overall mean $\bar{y}$.
 
 <figure>
-
-
-```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height $\bar{y}$, and the solid black vertical lines represent the squared deviations from the mean (SST components).'}
+<center>
+```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height $\\bar{y}$, and the solid black vertical lines represent the squared deviations from the mean (SST components).'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[thick]
   \draw[->] (-1,0) -- (7,0) node[right] {$x$};
@@ -756,6 +758,7 @@ observations and their overall mean $\bar{y}$.
   }
 \end{tikzpicture}
 ```
+</center>
 <figcaption>An illustration of Total Sum of Squares (SST). The blue
 points represent height measurements over time, the dashed line is the
 mean height <span class="math inline"><em>ȳ</em></span>, and the solid
@@ -778,7 +781,7 @@ between the data and an estimation model, such as a linear regression. A
 small SSE indicates a tight fit of the model to the data.
 
 <figure>
-
+<center>
 ```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='A simple linear regression illustration with residuals shown. Blue points are observed data, red line is the model, dashed line is the average of $y$, and black lines represent residuals $y_i - \\hat{y}_i$.'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[->, thick]
@@ -813,7 +816,7 @@ small SSE indicates a tight fit of the model to the data.
   \node at (6.7,2.7) {$\bar{y}$};
 \end{tikzpicture}
 ```
-
+</center>
 
 <figcaption>A simple linear regression illustration with residuals
 shown. Blue points are observed data, red line is the model, dashed line
@@ -835,6 +838,7 @@ It measures the distance between estimated value (estimated dependent
 data) and the mean of dependent data ($\bar{y}$).
 
 <figure>
+<center>
 ```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr::is_latex_output()) 'pdf' else 'png', fig.cap="An illustration of simple linear regression. The blue points represent monthly height measurements with added variability. The red line is the fitted simple linear regression model. The dashed line shows the mean of the dependent variable, $\\bar{y}$, and the solid black lines illustrate the deviation of the model\'s predictions from this mean."}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[->, thick]
@@ -862,6 +866,7 @@ data) and the mean of dependent data ($\bar{y}$).
   }
 \end{tikzpicture}
 ```
+</center>
 <figcaption>An illustration of simple linear regression. The blue points
 represent monthly height measurements with added variability. The red
 line is the fitted simple linear regression model. The dashed line shows
@@ -895,8 +900,7 @@ Total sum of squares = Sum of squares for error + Sum of squares for
 regression.
 
 <figure>
-
-
+<center>
 ```{r, echo=FALSE, engine='tikz', out.width='90%', fig.ext=if (knitr:::is_latex_output()) 'pdf' else 'png', fig.cap='Visual representation of regression variability. \\textbf{SST} (green) is total variability from the mean, \\textbf{SSR} (pink) is explained variability, and \\textbf{SSE} (orange curly brace) is the residual (unexplained) variability between the observed value $y_i$ and the prediction $\\hat{y}_i$.'}
 \usetikzlibrary{decorations.pathmorphing, arrows, shapes, trees, positioning, matrix, calc, backgrounds}
 \begin{tikzpicture}[->, thick]
@@ -912,6 +916,7 @@ regression.
   \draw[thick, orange, |-|] (1.9, 1.95) -- (1.9, 4) node[midway, left=4pt, yshift=6pt] {\footnotesize SSE};
 \end{tikzpicture}
 ```
+</center>
 <figcaption> Visual representation of regression variability.
 <strong>SST</strong> (green) is total variability from the mean,
 <strong>SSR</strong> (pink) is explained variability, and

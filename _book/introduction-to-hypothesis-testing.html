@@ -314,20 +314,24 @@ are asked to test)</p>
 <div id="step-4-calculate-the-p-value" class="section level3 unnumbered hasAnchor">
 <h3>Step 4: Calculate the p-value<a href="introduction-to-hypothesis-testing.html#step-4-calculate-the-p-value" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use the test statistic, reference distribution, and refer back to <span class="math inline">\(H_a\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
-<img src="_main_files/figure-html/unnamed-chunk-14-1.png" alt="Right-tailed test: p-value is the area to the right of the test statistic" width="48%" /><img src="_main_files/figure-html/unnamed-chunk-14-2.png" alt="Right-tailed test: p-value is the area to the right of the test statistic" width="48%" />
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="_main_files/figure-html/unnamed-chunk-15-1.png" alt="Right-tailed test: p-value is the area to the right of the test statistic" width="48%" /><img src="_main_files/figure-html/unnamed-chunk-15-2.png" alt="Right-tailed test: p-value is the area to the right of the test statistic" width="48%" />
 <p class="caption">
 Figure 11.1: Right-tailed test: p-value is the area to the right of the test statistic
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
-<img src="_main_files/figure-html/unnamed-chunk-15-1.png" alt="Left-tailed test: p-value is the area to the left of the test statistic" width="48%" /><img src="_main_files/figure-html/unnamed-chunk-15-2.png" alt="Left-tailed test: p-value is the area to the left of the test statistic" width="48%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="_main_files/figure-html/unnamed-chunk-16-1.png" alt="Left-tailed test: p-value is the area to the left of the test statistic" width="48%" /><img src="_main_files/figure-html/unnamed-chunk-16-2.png" alt="Left-tailed test: p-value is the area to the left of the test statistic" width="48%" />
 <p class="caption">
 Figure 11.2: Left-tailed test: p-value is the area to the left of the test statistic
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
-<img src="_main_files/figure-html/unnamed-chunk-16-1.png" alt="Two-tailed test: p-value is the total area in both tails beyond ±test statistic" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="_main_files/figure-html/unnamed-chunk-17-1.png" alt="Two-tailed test: p-value is the total area in both tails beyond ±test statistic" width="70%" />
 <p class="caption">
 Figure 11.3: Two-tailed test: p-value is the total area in both tails beyond ±test statistic
 </p>
@@ -411,8 +415,8 @@ x.bar &lt;- rnorm(m, mean = mu.zero, sd = sigma.xbar);
 z.star &lt;- (x.bar - mu.zero) / sigma.xbar;
 hist(z.star, xlab = &quot;differences&quot;, col = &quot;blue&quot;);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
-<img src="_main_files/figure-html/unnamed-chunk-17-1.png" alt="Histogram of \( z^\star \) values from 10,000 simulations under \( H_0 \)" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="_main_files/figure-html/unnamed-chunk-18-1.png" alt="Histogram of \( z^\star \) values from 10,000 simulations under \( H_0 \)" width="672" />
 <p class="caption">
 Figure 11.4: Histogram of <span class="math inline">\(z^\star\)</span> values from 10,000 simulations under <span class="math inline">\(H_0\)</span>
 </p>
@@ -483,8 +487,8 @@ decreased. Assume the standard deviation is known to be 5.25 kg.</p>
 <p>Reference distribution: standard normal</p>
 <p><strong>4. Calculate p-value</strong></p>
 <span class="math display">\[\text{p-value} = P(Z &lt; -2.82) \approx 0.0024\]</span>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
-<img src="_main_files/figure-html/unnamed-chunk-18-1.png" alt="Left-tailed p-value for the test statistic \( z^* = -2.82 \)" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<img src="_main_files/figure-html/unnamed-chunk-19-1.png" alt="Left-tailed p-value for the test statistic \( z^* = -2.82 \)" width="70%" />
 <p class="caption">
 Figure 11.5: Left-tailed p-value for the test statistic <span class="math inline">\(z^* = -2.82\)</span>
 </p>
@@ -915,8 +919,8 @@ sample(die, 1, replace = TRUE)
 sample(die, 6, replace = TRUE)
 ## [1] 1 3 2 6 3 1</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
-<img src="_main_files/figure-html/unnamed-chunk-19-1.png" alt="Plot of frequencies from 60 simulations of a fair six-sided die" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
+<img src="_main_files/figure-html/unnamed-chunk-20-1.png" alt="Plot of frequencies from 60 simulations of a fair six-sided die" width="70%" />
 <p class="caption">
 Figure 11.6: Plot of frequencies from 60 simulations of a fair six-sided die
 </p>
@@ -970,14 +974,14 @@ x &lt;- seq(0, 10, by = 1);
 y &lt;- dbinom(x, 10, 1/6);
 plot(x, y, type = &quot;p&quot;, col = &quot;blue&quot;, pch = 19);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
-<img src="_main_files/figure-html/unnamed-chunk-20-1.png" alt="PMF of the Binomial distribution with \( n = 10 \) and \( p = \frac{1}{6} \)" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-21"></span>
+<img src="_main_files/figure-html/unnamed-chunk-21-1.png" alt="PMF of the Binomial distribution with \( n = 10 \) and \( p = \frac{1}{6} \)" width="70%" />
 <p class="caption">
 Figure 11.7: PMF of the Binomial distribution with <span class="math inline">\(n = 10\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-21"></span>
-<img src="_main_files/figure-html/unnamed-chunk-21-1.png" alt="PMF of the Binomial distribution with \( n = 100 \) and \( p = \frac{1}{6} \)" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
+<img src="_main_files/figure-html/unnamed-chunk-22-1.png" alt="PMF of the Binomial distribution with \( n = 100 \) and \( p = \frac{1}{6} \)" width="70%" />
 <p class="caption">
 Figure 11.8: PMF of the Binomial distribution with <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
 </p>
@@ -987,8 +991,8 @@ Figure 11.8: PMF of the Binomial distribution with <span class="math inline">\(n
 <pre><code>dbinom(c(15, 16, 17, 18), size = 100, prob = 1/6);
 ## [1] 0.10023663 0.10650142 0.10524847 0.09706247</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-22"></span>
-<img src="_main_files/figure-html/unnamed-chunk-22-1.png" alt="Distribution of successes from 2000 simulated YouTubers with \( n = 100 \), \( p = \frac{1}{6} \)" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-23"></span>
+<img src="_main_files/figure-html/unnamed-chunk-23-1.png" alt="Distribution of successes from 2000 simulated YouTubers with \( n = 100 \), \( p = \frac{1}{6} \)" width="70%" />
 <p class="caption">
 Figure 11.9: Distribution of successes from 2000 simulated YouTubers with <span class="math inline">\(n = 100\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span>
 </p>
@@ -1003,8 +1007,8 @@ Figure 11.9: Distribution of successes from 2000 simulated YouTubers with <span 
 </div>
 <p>It turns out that our P-value for this simulation is:<br />
 0.133</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-23"></span>
-<img src="_main_files/figure-html/unnamed-chunk-23-1.png" alt="Simulation vs Theoretical pmf" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-24"></span>
+<img src="_main_files/figure-html/unnamed-chunk-24-1.png" alt="Simulation vs Theoretical pmf" width="70%" />
 <p class="caption">
 Figure 11.10: Simulation vs Theoretical pmf
 </p>
@@ -1028,8 +1032,8 @@ has approximately the <span class="math display">\[N\left(p, \sqrt{\frac{p(1 - p
 distribution.</li>
 </ul>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-24"></span>
-<img src="_main_files/figure-html/unnamed-chunk-24-1.png" alt=" Binomial with Normal Approximation" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
+<img src="_main_files/figure-html/unnamed-chunk-25-1.png" alt=" Binomial with Normal Approximation" width="70%" />
 <p class="caption">
 Figure 11.11:  Binomial with Normal Approximation
 </p>
@@ -1486,8 +1490,8 @@ H_a &amp;: \sigma^2 &gt; 0.81
 <p><strong>Step 3. Find Rejection Region.</strong><br />
 From the chi-squared table, the null hypothesis is rejected when
 <span class="math inline">\(\chi^2 &gt; 16.919\)</span>, where <span class="math inline">\(\nu = 9\)</span> degrees of freedom.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-25"></span>
-<img src="_main_files/figure-html/unnamed-chunk-25-1.png" alt="Right-tailed chi-squared distribution with critical value at 16.919" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-26"></span>
+<img src="_main_files/figure-html/unnamed-chunk-26-1.png" alt="Right-tailed chi-squared distribution with critical value at 16.919" width="70%" />
 <p class="caption">
 Figure 11.12: Right-tailed chi-squared distribution with critical value at 16.919
 </p>

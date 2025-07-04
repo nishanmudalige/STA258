@@ -264,12 +264,14 @@ are interested a people’s height within 10 months. Then, we use
 coordinate system to draw each data point and use simple linear
 regression to find a function which perfectly describes the relationship
 between height and time.</p>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
-<img src="_main_files/figure-html/unnamed-chunk-35-1.png" alt="An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case $m$ is the slope which tells you the rate of change, $b$ is the intercept which may have a special meaning depending on the case." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
+<img src="_main_files/figure-html/unnamed-chunk-36-1.png" alt="An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case $m$ is the slope which tells you the rate of change, $b$ is the intercept which may have a special meaning depending on the case." width="90%" />
 <p class="caption">
 Figure 15.1: An illustration of simple linear regression. The blue points are measures of height monthly, and the red line is our SLR model. In this case <span class="math inline">\(m\)</span> is the slope which tells you the rate of change, <span class="math inline">\(b\)</span> is the intercept which may have a special meaning depending on the case.
 </p>
 </div>
+</center>
 <p>Now, you may wonder the accuracy of this model. In statistics, we do
 have parameters that approximate the slope and intercept of the function
 <span class="math inline">\(y = mx + b\)</span>. The model we are going to use is:
@@ -345,22 +347,26 @@ variables.</p>
 <li>If <span class="math inline">\(r_{xy} \approx +1\)</span>, then we say that the two random variables have
 a strong positive correlation. (See figure 15.2)</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
-<img src="_main_files/figure-html/unnamed-chunk-36-1.png" alt="An illustration of strong positive correlation ($r_{xy} pprox +1$)." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
+<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="An illustration of strong positive correlation ($r_{xy} \approx +1$)." width="90%" />
 <p class="caption">
-Figure 15.2: An illustration of strong positive correlation (<span class="math inline">\(r_{xy} pprox +1\)</span>).
+Figure 15.2: An illustration of strong positive correlation (<span class="math inline">\(r_{xy} \approx +1\)</span>).
 </p>
 </div>
+</center>
 <ul>
 <li>If <span class="math inline">\(r_{xy} \approx -1\)</span>, then we say that the two random variables have
 a strong negative correlation. (See figure 15.3)</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
-<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="An illustration of strong negative correlation ($r_{xy} pprox -1$)." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-38"></span>
+<img src="_main_files/figure-html/unnamed-chunk-38-1.png" alt="An illustration of strong negative correlation ($r_{xy} \approx -1$)." width="90%" />
 <p class="caption">
-Figure 15.3: An illustration of strong negative correlation (<span class="math inline">\(r_{xy} pprox -1\)</span>).
+Figure 15.3: An illustration of strong negative correlation (<span class="math inline">\(r_{xy} \approx -1\)</span>).
 </p>
 </div>
+</center>
 <figcaption>
 An illustration of strong negative correlation (<span class="math inline"><em>r</em><sub><em>x</em><em>y</em></sub> ≈ −1</span>).
 </figcaption>
@@ -371,12 +377,14 @@ correlation between the two random variables. Note that if
 <span class="math inline">\(r \approx 0\)</span>, then it suggests a linear relationship doesn’t exist
 but other relationship may exist. (See figure 15.4)</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-38"></span>
-<img src="_main_files/figure-html/unnamed-chunk-38-1.png" alt="An illustration of no correlation ($r_{xy} pprox 0$)." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-39"></span>
+<img src="_main_files/figure-html/unnamed-chunk-39-1.png" alt="An illustration of no correlation ($r_{xy} \approx 0$)." width="90%" />
 <p class="caption">
-Figure 15.4: An illustration of no correlation (<span class="math inline">\(r_{xy} pprox 0\)</span>).
+Figure 15.4: An illustration of no correlation (<span class="math inline">\(r_{xy} \approx 0\)</span>).
 </p>
 </div>
+</center>
 <figcaption>
 An illustration of no correlation (<span class="math inline"><em>r</em><sub><em>x</em><em>y</em></sub> ≈ 0</span>).
 </figcaption>
@@ -760,12 +768,14 @@ Now, you know the method to get the regression model
 <span class="math inline">\(E(Y) = \beta_0 + \beta_1 \cdot x\)</span>, the following lines are the
 derivation:</p>
 <figure>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-39"></span>
-<img src="_main_files/figure-html/unnamed-chunk-39-1.png" alt="An illustration of a simple linear regression model. The red line is the fitted regression line, and the full black vertical lines represent the residuals (SSE). The data points deviate from the line to show errors clearly. Note that the sum of residuals is necessarily $0$." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-40"></span>
+<img src="_main_files/figure-html/unnamed-chunk-40-1.png" alt="An illustration of a simple linear regression model. The red line is the fitted regression line, and the full black vertical lines represent the residuals (SSE). The data points deviate from the line to show errors clearly. Note that the sum of residuals is necessarily $0$." width="90%" />
 <p class="caption">
 Figure 15.5: An illustration of a simple linear regression model. The red line is the fitted regression line, and the full black vertical lines represent the residuals (SSE). The data points deviate from the line to show errors clearly. Note that the sum of residuals is necessarily <span class="math inline">\(0\)</span>.
 </p>
 </div>
+</center>
 <figcaption>
 An illustration of a simple linear regression model. The red
 line is the fitted regression line, and the full black vertical lines
@@ -931,12 +941,14 @@ they measure.<br />
 <p>It is defined as the sum over all squared differences between the
 observations and their overall mean <span class="math inline">\(\bar{y}\)</span>.</p>
 <figure>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-40"></span>
-<img src="_main_files/figure-html/unnamed-chunk-40-1.png" alt="An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height $ar{y}$, and the solid black vertical lines represent the squared deviations from the mean (SST components)." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-41"></span>
+<img src="_main_files/figure-html/unnamed-chunk-41-1.png" alt="An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height $\bar{y}$, and the solid black vertical lines represent the squared deviations from the mean (SST components)." width="90%" />
 <p class="caption">
-Figure 15.6: An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height <span class="math inline">\(ar{y}\)</span>, and the solid black vertical lines represent the squared deviations from the mean (SST components).
+Figure 15.6: An illustration of Total Sum of Squares (SST). The blue points represent height measurements over time, the dashed line is the mean height <span class="math inline">\(\bar{y}\)</span>, and the solid black vertical lines represent the squared deviations from the mean (SST components).
 </p>
 </div>
+</center>
 <figcaption>
 An illustration of Total Sum of Squares (SST). The blue
 points represent height measurements over time, the dashed line is the
@@ -957,12 +969,14 @@ actual empirical values of data). It is a measure of the discrepancy
 between the data and an estimation model, such as a linear regression. A
 small SSE indicates a tight fit of the model to the data.</p>
 <figure>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-41"></span>
-<img src="_main_files/figure-html/unnamed-chunk-41-1.png" alt="A simple linear regression illustration with residuals shown. Blue points are observed data, red line is the model, dashed line is the average of $y$, and black lines represent residuals $y_i - \hat{y}_i$." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-42"></span>
+<img src="_main_files/figure-html/unnamed-chunk-42-1.png" alt="A simple linear regression illustration with residuals shown. Blue points are observed data, red line is the model, dashed line is the average of $y$, and black lines represent residuals $y_i - \hat{y}_i$." width="90%" />
 <p class="caption">
 Figure 15.7: A simple linear regression illustration with residuals shown. Blue points are observed data, red line is the model, dashed line is the average of <span class="math inline">\(y\)</span>, and black lines represent residuals <span class="math inline">\(y_i - \hat{y}_i\)</span>.
 </p>
 </div>
+</center>
 <figcaption>
 A simple linear regression illustration with residuals
 shown. Blue points are observed data, red line is the model, dashed line
@@ -981,12 +995,14 @@ given by: <span class="math display">\[SSE = \sum_{i=1}^{n} (y_i - \hat{y_i})^2.
 <p>It measures the distance between estimated value (estimated dependent
 data) and the mean of dependent data (<span class="math inline">\(\bar{y}\)</span>).</p>
 <figure>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-42"></span>
-<img src="_main_files/figure-html/unnamed-chunk-42-1.png" alt="An illustration of simple linear regression. The blue points represent monthly height measurements with added variability. The red line is the fitted simple linear regression model. The dashed line shows the mean of the dependent variable, $\bar{y}$, and the solid black lines illustrate the deviation of the model's predictions from this mean." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-43"></span>
+<img src="_main_files/figure-html/unnamed-chunk-43-1.png" alt="An illustration of simple linear regression. The blue points represent monthly height measurements with added variability. The red line is the fitted simple linear regression model. The dashed line shows the mean of the dependent variable, $\bar{y}$, and the solid black lines illustrate the deviation of the model's predictions from this mean." width="90%" />
 <p class="caption">
 Figure 15.8: An illustration of simple linear regression. The blue points represent monthly height measurements with added variability. The red line is the fitted simple linear regression model. The dashed line shows the mean of the dependent variable, <span class="math inline">\(\bar{y}\)</span>, and the solid black lines illustrate the deviation of the model’s predictions from this mean.
 </p>
 </div>
+</center>
 <figcaption>
 An illustration of simple linear regression. The blue points
 represent monthly height measurements with added variability. The red
@@ -1016,12 +1032,14 @@ SST = SSE + SSR.</p>
 <p>Total sum of squares = Sum of squares for error + Sum of squares for
 regression.</p>
 <figure>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-43"></span>
-<img src="_main_files/figure-html/unnamed-chunk-43-1.png" alt="Visual representation of regression variability. \textbf{SST} (green) is total variability from the mean, \textbf{SSR} (pink) is explained variability, and \textbf{SSE} (orange curly brace) is the residual (unexplained) variability between the observed value $y_i$ and the prediction $\hat{y}_i$." width="90%" />
+<center>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-44"></span>
+<img src="_main_files/figure-html/unnamed-chunk-44-1.png" alt="Visual representation of regression variability. \textbf{SST} (green) is total variability from the mean, \textbf{SSR} (pink) is explained variability, and \textbf{SSE} (orange curly brace) is the residual (unexplained) variability between the observed value $y_i$ and the prediction $\hat{y}_i$." width="90%" />
 <p class="caption">
 Figure 15.9: Visual representation of regression variability. (green) is total variability from the mean, (pink) is explained variability, and (orange curly brace) is the residual (unexplained) variability between the observed value <span class="math inline">\(y_i\)</span> and the prediction <span class="math inline">\(\hat{y}_i\)</span>.
 </p>
 </div>
+</center>
 <figcaption>
 Visual representation of regression variability.
 <strong>SST</strong> (green) is total variability from the mean,
