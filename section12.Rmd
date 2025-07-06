@@ -270,8 +270,6 @@ Note that $n$ represents the sample size, and $s^2$ is the sample variance of th
 
 Note: This test is **not robust** to departures from normality.
 
----
-
 In case (i), where $H_0: p = p_0$ and $H_a: p > p_0$, calculate the p-value as $P[Z > Z_*]$, then compare with significance level $\alpha$.
 
 In case (ii), where $H_0: p = p_0$ and $H_a: p < p_0$, calculate the p-value as $P[Z < Z_*]$, then compare with significance level $\alpha$.

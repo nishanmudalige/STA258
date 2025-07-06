@@ -416,7 +416,7 @@ going to be applied from question.<br />
 <p>After that we need to compute our test statistics, as the following
 definition provides:</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-88" class="definition"><strong>Definition 12.1  </strong></span>The test statistics of one sample hypothesis test on a proportion is
+<p><span id="def:unlabeled-div-86" class="definition"><strong>Definition 12.1  </strong></span>The test statistics of one sample hypothesis test on a proportion is
 given by:
 <span class="math display">\[Z^* = Z^* = \frac{\hat{p} - p_0}{ \sqrt{ \frac{p_0(1-p_0)}{n} } }.\]</span>
 In this case, <span class="math inline">\(n\)</span> means the sample size, <span class="math inline">\(\hat{p}\)</span> is the parameter of
@@ -429,8 +429,8 @@ because it directly affects the final answer.<br />
 <strong>Step 3. Finding the <span class="math inline">\(p\)</span> - value</strong></p>
 <p>i. When is structure of testing hypothesis is <span class="math inline">\(H_0: p = p_0\)</span>,
 <span class="math inline">\(H_a: p &gt; p_0\)</span>:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-27"></span>
-<img src="_main_files/figure-html/unnamed-chunk-27-1.png" alt="An illustration of hypothesis test on a proportion that $H_0: p = p_0$, $H_a: p &gt; p_0$." width="90%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-50"></span>
+<img src="_main_files/figure-html/unnamed-chunk-50-1.png" alt="An illustration of hypothesis test on a proportion that $H_0: p = p_0$, $H_a: p &gt; p_0$." width="90%" />
 <p class="caption">
 Figure 12.1: An illustration of hypothesis test on a proportion that <span class="math inline">\(H_0: p = p_0\)</span>, <span class="math inline">\(H_a: p &gt; p_0\)</span>.
 </p>
@@ -439,8 +439,8 @@ Figure 12.1: An illustration of hypothesis test on a proportion that <span class
 with significant level: <span class="math inline">\(\alpha\)</span>.</p>
 <p>ii. When is structure of testing hypothesis is <span class="math inline">\(H_0: p = p_0\)</span>,
 <span class="math inline">\(H_a: p &lt; p_0\)</span>:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-28"></span>
-<img src="_main_files/figure-html/unnamed-chunk-28-1.png" alt="An illustration of hypothesis test on a proportion that $H_0: p = p_0$, $H_a: p &lt; p_0$." width="90%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-51"></span>
+<img src="_main_files/figure-html/unnamed-chunk-51-1.png" alt="An illustration of hypothesis test on a proportion that $H_0: p = p_0$, $H_a: p &lt; p_0$." width="90%" />
 <p class="caption">
 Figure 12.2: An illustration of hypothesis test on a proportion that <span class="math inline">\(H_0: p = p_0\)</span>, <span class="math inline">\(H_a: p &lt; p_0\)</span>.
 </p>
@@ -449,8 +449,8 @@ Figure 12.2: An illustration of hypothesis test on a proportion that <span class
 with significant level: <span class="math inline">\(\alpha\)</span>.</p>
 <p>iii. When is structure of testing hypothesis is <span class="math inline">\(H_0: p = p_0\)</span>,
 <span class="math inline">\(H_a: p \neq p_0\)</span>:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
-<img src="_main_files/figure-html/unnamed-chunk-29-1.png" alt="An illustration of hypothesis test on a proportion that $H_0: p = p_0$, $H_a: p \neq p_0$." width="90%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-52"></span>
+<img src="_main_files/figure-html/unnamed-chunk-52-1.png" alt="An illustration of hypothesis test on a proportion that $H_0: p = p_0$, $H_a: p \neq p_0$." width="90%" />
 <p class="caption">
 Figure 12.3: An illustration of hypothesis test on a proportion that <span class="math inline">\(H_0: p = p_0\)</span>, <span class="math inline">\(H_a: p \neq p_0\)</span>.
 </p>
@@ -479,7 +479,7 @@ that: there is insufficient evidence to reject the null hypothesis.<br />
 <p>Now, let’s move to hypothesis tests for one variance, which follows the exact same idea from testing hypotheses on proportions. We are going to introduce that using steps as well.</p>
 <p><strong>Step 1: Stating the Structure of Testing Hypothesis</strong></p>
 <table>
-<caption><span id="tab:unnamed-chunk-30">Table 12.1: </span>All possible cases of one sample hypothesis test on a variance</caption>
+<caption><span id="tab:unnamed-chunk-53">Table 12.1: </span>All possible cases of one sample hypothesis test on a variance</caption>
 <thead>
 <tr class="header">
 <th align="right">Cases</th>
@@ -507,7 +507,7 @@ that: there is insufficient evidence to reject the null hypothesis.<br />
 </table>
 <p><strong>Step 2: Computing Test Statistics</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-89" class="definition"><strong>Definition 12.2  </strong></span><strong>Test Statistic of One Sample Hypothesis Test on a Variance</strong><br />
+<p><span id="def:unlabeled-div-87" class="definition"><strong>Definition 12.2  </strong></span><strong>Test Statistic of One Sample Hypothesis Test on a Variance</strong><br />
 The test statistic of one sample hypothesis test on a variance is given by:<br />
 <span class="math display">\[
 \chi_*^2 = \frac{(n - 1)s^2}{\sigma_0^2} \sim \chi^2_{n - 1}
@@ -524,7 +524,6 @@ Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(\
 Reject <span class="math inline">\(H_0\)</span> if <span class="math inline">\(\chi_*^2 &lt; \chi^2_{n-1;1-\alpha}\)</span> or if <span class="math inline">\(P[\chi^2_{n-1} &lt; \chi_*^2]\)</span> is too small.</p></li>
 </ul>
 <p>Note: This test is <strong>not robust</strong> to departures from normality.</p>
-<hr />
 <p>In case (i), where <span class="math inline">\(H_0: p = p_0\)</span> and <span class="math inline">\(H_a: p &gt; p_0\)</span>, calculate the p-value as <span class="math inline">\(P[Z &gt; Z_*]\)</span>, then compare with significance level <span class="math inline">\(\alpha\)</span>.</p>
 <p>In case (ii), where <span class="math inline">\(H_0: p = p_0\)</span> and <span class="math inline">\(H_a: p &lt; p_0\)</span>, calculate the p-value as <span class="math inline">\(P[Z &lt; Z_*]\)</span>, then compare with significance level <span class="math inline">\(\alpha\)</span>.</p>
 <p>In case (iii), where <span class="math inline">\(H_0: p = p_0\)</span> and <span class="math inline">\(H_a: p \neq p_0\)</span>, calculate the p-value as <span class="math inline">\(2 \cdot P[Z &gt; |Z_*|]\)</span>, then compare with <span class="math inline">\(\alpha\)</span>.</p>

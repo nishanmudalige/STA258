@@ -414,15 +414,13 @@ Moreover,
 distribution with <span class="math inline">\(\alpha = \frac{n}{2} \text{ and } \beta = 2\)</span>. Now,
 let’s prove it by using moment generating function.<br />
 The proof is quite straightforward as the following shows:</p>
-<div class="proof">
-<p><span id="unlabeled-div-26" class="proof"><em>Proof</em>. </span><em>Proof.</em> Suppose
+<p><em>Proof.</em> Suppose
 <span class="math inline">\(X \sim Gamma( \alpha = \frac{n}{2} \text{, } \beta = 2).\)</span><br />
 Then the following moment generating function holds for <span class="math inline">\(X\)</span>:
 <span class="math display">\[M_{X}(t) = (1- 2t)^{\frac{-n}{2}}, \text{ for $t &lt; \frac{1}{2}$}.\]</span>
 Compare the moment generating function of <span class="math inline">\(X\)</span> under Gamma distribution
 with Chi-square distribution, we can conclude that
 <span class="math inline">\(X \sim \chi_{n}^{2}\)</span>. ◻</p>
-</div>
 <p><strong>Obtaining Chi-square Distribution by Normal Distribution</strong></p>
 <p>Previously, we showed how to use Gamma distribution to get Chi-square
 distribution by moment generating function method. Now, let’s do
@@ -440,17 +438,16 @@ the proper proof, let’s grab everything we need:</p>
 <li><p>1. Recall STA256 about how to get moment generating function for a
 given continuous random variable that:
 <span class="math display">\[M_{Z}(t) = \int_{-\infty}^{\infty} e^{tx}f_{X}(x)\,dx.\]</span></p></li>
-<li><p>2. We also need Gaussian integral: $$</p>
-<span class="math display">\[\begin{aligned}
-                \int_{-\infty}^{\infty} e^{-x^2}\,dx &amp;= \sqrt{\pi}; \label{eq:gaussian1} \\
-                \int_{-\infty}^{\infty} e^{-kx^2}\,dx &amp;= \sqrt{\frac{\pi}{k}}, \text{ for $k &gt; 0$}; \label{eq:gaussian2} \\
-                \int_{-\infty}^{\infty} e^{kx^2}\,dx &amp;= \sqrt{\frac{\pi}{-k}}, \text{ for $k &lt; 0$}. \label{eq:gaussian3}
-
-\end{aligned}\]</span>
-<p>$$</p></li>
+<li><p>2. We also need Gaussian integral:
+<span class="math display">\[
+\begin{aligned}
+\int_{-\infty}^{\infty} e^{-x^2} \, dx &amp;= \sqrt{\pi} \\
+\int_{-\infty}^{\infty} e^{-kx^2} \, dx &amp;= \sqrt{\frac{\pi}{k}}, \quad \text{for } k &gt; 0 \\
+\int_{-\infty}^{\infty} e^{kx^2} \, dx &amp;= \sqrt{\frac{\pi}{-k}}, \quad \text{for } k &lt; 0
+\end{aligned}
+\]</span></p></li>
 </ul>
-<div class="proof">
-<p><span id="unlabeled-div-27" class="proof"><em>Proof</em>. </span><em>Proof.</em> Suppose that <span class="math inline">\(Z \sim N(0, 1)\)</span>, then
+<p><em>Proof.</em> Suppose that <span class="math inline">\(Z \sim N(0, 1)\)</span>, then
 <span class="math inline">\(f_{Z}(z) = \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}\)</span>.<br />
 The moment generating function (MGF) of <span class="math inline">\(Z^2\)</span> is: <span class="math display">\[\begin{aligned}
 M_{Z^2}(t) &amp;= \mathbb{E}\left(e^{tZ^2}\right) \\
@@ -467,7 +464,6 @@ M_{Z^2}(t) &amp;= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-u^2} \cdot \
 \end{aligned}\]</span></p>
 <p>This is the MGF of a chi-squared distribution with 1 degree of freedom,
 <span class="math inline">\(Z^2 \sim \chi_1^2\)</span>. ◻</p>
-</div>
 <p>Now, we can do another proof by using Theorem <span class="math inline">\(2.1\)</span>.</p>
 <div class="thm">
 <p>Suppose <span class="math inline">\(Z_1, Z_2, ..., Z_n \overset{\text{i.i.d.}}{\sim} N(0,1)\)</span>, then
@@ -477,7 +473,7 @@ with <span class="math inline">\(n\)</span> degrees of freedom, as the following
 </div>
 <p>We need Theorem <span class="math inline">\(2.1\)</span> to prove this, but it going to be easier.</p>
 <div class="proof">
-<p><span id="unlabeled-div-28" class="proof"><em>Proof</em>. </span><em>Proof.</em> Suppose <span class="math inline">\(Z \sim \mathcal{N}(0,1)\)</span>, then its probability density
+<p><span id="unlabeled-div-26" class="proof"><em>Proof</em>. </span><em>Proof.</em> Suppose <span class="math inline">\(Z \sim \mathcal{N}(0,1)\)</span>, then its probability density
 function is: <span class="math display">\[f_Z(z) = \frac{1}{\sqrt{2\pi}} e^{-\frac{z^2}{2}}.\]</span></p>
 <p>Let <span class="math inline">\(\delta = \sum_{i=1}^{n} Z_i^2\)</span>, where
 <span class="math inline">\(Z_1, \ldots, Z_n \stackrel{\text{i.i.d.}}{\sim} \mathcal{N}(0,1)\)</span>. The
@@ -523,7 +519,7 @@ plays a central role in analysis of variance (ANOVA) and regression
 analysis.<br />
 <strong>Student’s t-Distribution</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-29" class="definition"><strong>Definition 2.4  </strong></span>Suppose <span class="math inline">\(X\)</span> is t-distributed with <span class="math inline">\(n\)</span> degrees of freedom, then the
+<p><span id="def:unlabeled-div-27" class="definition"><strong>Definition 2.4  </strong></span>Suppose <span class="math inline">\(X\)</span> is t-distributed with <span class="math inline">\(n\)</span> degrees of freedom, then the
 probability density function of <span class="math inline">\(X\)</span> is given by:
 <span class="math display">\[f_{X}(x) = \frac{\Gamma(\frac{n+1}{2})}{\sqrt{\pi n} \Gamma(\frac{n}{2})} (1+\frac{x^2}{n})^{\frac{-n+1}{2}}.\]</span>
 Alternatively, define a new variable <span class="math inline">\(T\)</span> is the following:
@@ -539,7 +535,7 @@ curve of student’s t-distribution getting closer to standard normal
 distribution.<br />
 <strong>F-Distribution</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-30" class="definition"><strong>Definition 2.5  </strong></span>We define a new variable <span class="math inline">\(F\)</span> as the following shows:
+<p><span id="def:unlabeled-div-28" class="definition"><strong>Definition 2.5  </strong></span>We define a new variable <span class="math inline">\(F\)</span> as the following shows:
 <span class="math display">\[F = \frac{ (\frac{W_1}{v_1}) }{ (\frac{W_2}{v_2})} \sim F_{v_1, \text{ } v_2}; \text{ for $W_1 \sim \chi_{v_1}^{2}$ and $W_2 \sim \chi_{v_2}^{2}$; also both $W_1$ and $W_2$ are independent.}\]</span>
 Alternatively, we select two samples (with same population variance)
 with size <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span>, and also sample variance <span class="math inline">\(s_x\)</span> and <span class="math inline">\(s_y\)</span>

@@ -475,7 +475,7 @@ Normal.</p></li>
 depends on the particular confidence level and the number of degrees of
 freedom.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-99" class="example"><strong>Example 14.1  </strong></span>Comparing Two Population Means Managerial Success Indexes for Two Groups
+<p><span id="exm:unlabeled-div-97" class="example"><strong>Example 14.1  </strong></span>Comparing Two Population Means Managerial Success Indexes for Two Groups
 (With Equal Variances Assumed)</p>
 <p>Behavioural researchers have developed an index designed to measure
 managerial success. The index (measured on a 100-point scale) is based
@@ -588,8 +588,8 @@ interactions”.</p>
 <pre><code>qqnorm(Success_Index[Group == 1]);
 qqline(Success_Index[Group == 1]);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
-<img src="_main_files/figure-html/unnamed-chunk-34-1.png" alt="Q-Q Plot for Group 1: Interaction with Outsiders" width="60%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-57"></span>
+<img src="_main_files/figure-html/unnamed-chunk-57-1.png" alt="Q-Q Plot for Group 1: Interaction with Outsiders" width="60%" />
 <p class="caption">
 Figure 14.1: Q-Q Plot for Group 1: Interaction with Outsiders
 </p>
@@ -599,8 +599,8 @@ Figure 14.1: Q-Q Plot for Group 1: Interaction with Outsiders
 <pre><code>qqnorm(Success_Index[Group == 2]);
 qqline(Success_Index[Group == 2]);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
-<img src="_main_files/figure-html/unnamed-chunk-35-1.png" alt="Q-Q Plot for Group 2: Fewer Interactions" width="60%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-58"></span>
+<img src="_main_files/figure-html/unnamed-chunk-58-1.png" alt="Q-Q Plot for Group 2: Fewer Interactions" width="60%" />
 <p class="caption">
 Figure 14.2: Q-Q Plot for Group 2: Fewer Interactions
 </p>
@@ -610,8 +610,8 @@ Figure 14.2: Q-Q Plot for Group 2: Fewer Interactions
 <div class="tcolorbox">
 <pre><code>boxplot(Success_Index ~ Group, col = c(&quot;red&quot;, &quot;blue&quot;))</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
-<img src="_main_files/figure-html/unnamed-chunk-36-1.png" alt="Boxplot of Success Index by Group" width="60%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-59"></span>
+<img src="_main_files/figure-html/unnamed-chunk-59-1.png" alt="Boxplot of Success Index by Group" width="60%" />
 <p class="caption">
 Figure 14.3: Boxplot of Success Index by Group
 </p>
@@ -636,8 +636,8 @@ bp +
   geom_boxplot() +
   scale_x_discrete(labels = our.labs);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
-<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="Boxplot of Success Index by Group using ggplot2" width="60%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-60"></span>
+<img src="_main_files/figure-html/unnamed-chunk-60-1.png" alt="Boxplot of Success Index by Group using ggplot2" width="60%" />
 <p class="caption">
 Figure 14.4: Boxplot of Success Index by Group using ggplot2
 </p>
@@ -742,7 +742,7 @@ any two Normal populations.</p>
 <p><span class="math display">\[t^* = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</span></p>
 <p>and use <span class="math inline">\(P\)</span>-values or critical values for the <span class="math inline">\(t(k)\)</span> distribution.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-100" class="example"><strong>Example 14.2  </strong></span>“Conservationists have despaired over destruction of tropical rain
+<p><span id="exm:unlabeled-div-98" class="example"><strong>Example 14.2  </strong></span>“Conservationists have despaired over destruction of tropical rain
 forest by logging, clearing, and burning”. These words begin a report on
 a statistical study of the effects of logging in Borneo. Here are data
 on the number of tree species in 12 unlogged forest plots and 9 similar
@@ -767,7 +767,7 @@ evidence that the mean number of species in unlogged plots is greater
 than that for logged plots 8 years after logging.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-101" class="example"><strong>Example 14.3  </strong></span>A company that sells educational materials reports statistical studies
+<p><span id="exm:unlabeled-div-99" class="example"><strong>Example 14.3  </strong></span>A company that sells educational materials reports statistical studies
 to convince customers that its materials improve learning. One new
 product supplies “directed reading activities” for classroom use. These
 activities should improve the reading ability of elementary school
@@ -910,8 +910,8 @@ stem(control);</code></pre>
 qqnorm(treatment, pch=19, col=&quot;red&quot;, main=&quot;Treatment&quot;);
 qqline(treatment, lty=2);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-38"></span>
-<img src="_main_files/figure-html/unnamed-chunk-38-1.png" alt="Q-Q Plot for Treatment Group" width="60%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-61"></span>
+<img src="_main_files/figure-html/unnamed-chunk-61-1.png" alt="Q-Q Plot for Treatment Group" width="60%" />
 <p class="caption">
 Figure 14.5: Q-Q Plot for Treatment Group
 </p>
@@ -922,8 +922,8 @@ Figure 14.5: Q-Q Plot for Treatment Group
 qqnorm(treatment, pch=19, col=&quot;red&quot;, main=&quot;Control&quot;);
 qqline(control, lty=2);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-39"></span>
-<img src="_main_files/figure-html/unnamed-chunk-39-1.png" alt="Q-Q Plot for Control Group" width="60%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-62"></span>
+<img src="_main_files/figure-html/unnamed-chunk-62-1.png" alt="Q-Q Plot for Control Group" width="60%" />
 <p class="caption">
 Figure 14.6: Q-Q Plot for Control Group
 </p>
@@ -1239,7 +1239,7 @@ data
 </div>
 <p><strong>Step 2: Computing Test Statistics</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-102" class="definition"><strong>Definition 14.1  </strong></span>The test statistics of two sample hypothesis test on paired data is
+<p><span id="def:unlabeled-div-100" class="definition"><strong>Definition 14.1  </strong></span>The test statistics of two sample hypothesis test on paired data is
 given by:
 <span class="math display">\[t_* = \frac{\bar{x_d}-0}{s_d / \sqrt{n}} \sim t_{n-1;\alpha/2}.\]</span>
 <span class="math inline">\(\bar{x_d}\)</span> is the mean of sample difference and <span class="math inline">\(s_d\)</span> is the standard
@@ -1272,7 +1272,7 @@ result (<span class="math inline">\(\mu_d\)</span>).</p>
 <span class="math inline">\(M_2 \neq M_1\)</span>.</p></li>
 </ul>
 <div class="example">
-<p><span id="exm:unlabeled-div-103" class="example"><strong>Example 14.4  </strong></span>In an effort to determine whether a new type of fertilizer is more
+<p><span id="exm:unlabeled-div-101" class="example"><strong>Example 14.4  </strong></span>In an effort to determine whether a new type of fertilizer is more
 effective than the type currently in use, researchers took 12 two-acre
 plots of land scattered throughout the county. Each plot was divided
 into two equal-size sub plots, one of which was treated with the new
@@ -1493,7 +1493,7 @@ proportions
 <p>In this case, we are interested in the difference of proportions.</p>
 <p><strong>Step 2: Computing Test Statistics</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-104" class="definition"><strong>Definition 14.2  </strong></span>To test the hypothesis <span class="math inline">\(H_0 : p_1 = p_2\)</span> first find the pooled
+<p><span id="def:unlabeled-div-102" class="definition"><strong>Definition 14.2  </strong></span>To test the hypothesis <span class="math inline">\(H_0 : p_1 = p_2\)</span> first find the pooled
 proportion <span class="math inline">\(\hat{p}\)</span> of successes in both samples combined. Then compute
 the <span class="math inline">\(Z*\)</span> statistic:
 <span class="math display">\[z_* = \frac{\hat{p_1}-\hat{p_2}}{\sqrt{\hat{p}(1-\hat{p})(\frac{1}{n_1}+ \frac{1}{n_2})}} \sim N(0,1).\]</span>
@@ -1559,7 +1559,7 @@ conduct significance tests with smaller sample sizes. In practice, the
 two-sided significance test works well if there are at least five
 successes and five failures in each sample.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-105" class="example"><strong>Example 14.5  </strong></span>Nicotine patches are often used to help smokers quit. Does giving
+<p><span id="exm:unlabeled-div-103" class="example"><strong>Example 14.5  </strong></span>Nicotine patches are often used to help smokers quit. Does giving
 medicine to fight depression help? A randomized double-blind experiment
 assigned 244 smokers who wanted to stop to receive nicotine patches and
 another 245 to receive both a patch and the anti-depression drug
@@ -1682,7 +1682,7 @@ variances
 </div>
 <p><strong>Step 2: Computing Test Statistics</strong></p>
 <div class="definition">
-<p><span id="def:unlabeled-div-106" class="definition"><strong>Definition 14.3  </strong></span>The test statistics of two sample hypothesis test on variances is given
+<p><span id="def:unlabeled-div-104" class="definition"><strong>Definition 14.3  </strong></span>The test statistics of two sample hypothesis test on variances is given
 by: <span class="math display">\[F_* = \frac{s_1^2}{s_2^2} \sim F_{n_1-1,n_2-1}.\]</span></p>
 </div>
 <p><strong>Decision Rules</strong></p>

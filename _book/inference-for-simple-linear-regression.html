@@ -389,12 +389,12 @@ is the line:</p>
 <p><span class="math display">\[b_0 = \bar{y} - b_1 \bar{x}\]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-118" class="definition"><strong>Definition 16.1  </strong></span>The <strong>least-squares regression line</strong> of <span class="math inline">\(y\)</span> on <span class="math inline">\(x\)</span> is the line that
+<p><span id="def:unlabeled-div-116" class="definition"><strong>Definition 16.1  </strong></span>The <strong>least-squares regression line</strong> of <span class="math inline">\(y\)</span> on <span class="math inline">\(x\)</span> is the line that
 makes the sum of the squares of the vertical distances of the data
 points from the line as small as possible.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-119" class="example"><strong>Example 16.1  </strong></span>Suppose an appliance store conducts a 5-month experiment to determine
+<p><span id="exm:unlabeled-div-117" class="example"><strong>Example 16.1  </strong></span>Suppose an appliance store conducts a 5-month experiment to determine
 the effect of advertising on sales revenue. The results are shown in a
 table below. The relationship between sales revenue, <span class="math inline">\(y\)</span>, and
 advertising expenditure, <span class="math inline">\(x\)</span>, is hypothesized to follow a first-order
@@ -498,7 +498,7 @@ sampling distribution of <span class="math inline">\(\hat{\beta}_1\)</span> (est
 \quad = \quad
 \hat{\beta}_1 \pm t_{(n-2, \, \alpha/2)} \cdot \frac{s}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2}}\]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-120" class="example"><strong>Example 16.2  </strong></span>Revisit the example on advertising and sales and construct a 95%
+<p><span id="exm:unlabeled-div-118" class="example"><strong>Example 16.2  </strong></span>Revisit the example on advertising and sales and construct a 95%
 confidence interval on the slope. Provide an interpretation of the CI.</p>
 <p>From earlier: <span class="math display">\[\hat{y} = -0.1 + 0.7x\]</span></p>
 <div class="center">
@@ -634,7 +634,7 @@ freedom.</p>
 <span class="math display">\[\text{test stat} = \frac{\text{statistic} - \text{hypothesized value}}{\text{SE(statistic)}}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-121" class="example"><strong>Example 16.3  </strong></span>For the advertising example, perform a two-sided hypothesis test on the
+<p><span id="exm:unlabeled-div-119" class="example"><strong>Example 16.3  </strong></span>For the advertising example, perform a two-sided hypothesis test on the
 slope.</p>
 <p><strong>Hypotheses:</strong> <span class="math display">\[H_0\!: \beta_1 = 0
 \qquad
@@ -676,7 +676,7 @@ H_a : \beta_1 &lt; 0 &amp; \quad \text{is } P(T &lt; t).
 \end{aligned}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-122" class="example"><strong>Example 16.4  </strong></span><span class="math display">\[\alpha = 0.05\]</span></p>
+<p><span id="exm:unlabeled-div-120" class="example"><strong>Example 16.4  </strong></span><span class="math display">\[\alpha = 0.05\]</span></p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(H_0: \beta_1 = 0 \quad \text{vs} \quad H_a: \beta_1 &gt; 0\)</span></p></li>
 <li><p><span class="math inline">\(t^* = \frac{b_1}{SE_{b_1}} = \frac{0.7}{0.1914} = 3.6572\)</span></p></li>
@@ -845,7 +845,7 @@ ANOVA can be used for testing: <span class="math display">\[\begin{aligned}
 <p><strong>Reference distribution:</strong> <span class="math inline">\(F\)</span> with numerator df = <span class="math inline">\(p\)</span>, denominator df
 = <span class="math inline">\(n - p - 1\)</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-123" class="example"><strong>Example 16.5  </strong></span>We fitted a simple linear regression model using:</p>
+<p><span id="exm:unlabeled-div-121" class="example"><strong>Example 16.5  </strong></span>We fitted a simple linear regression model using:</p>
 <div class="tcolorbox">
 <pre><code>x = c(1,2,3,4,5);
 y = c(1,1,2,2,4);
@@ -882,7 +882,7 @@ conclude that <span class="math inline">\(x\)</span> has a statistically signifi
 with <span class="math inline">\(y\)</span>.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-124" class="example"><strong>Example 16.6  </strong></span>We consider data on apartments near UTM, with price (in thousands of
+<p><span id="exm:unlabeled-div-122" class="example"><strong>Example 16.6  </strong></span>We consider data on apartments near UTM, with price (in thousands of
 dollars), area (in 100 square feet), and number of beds and baths.</p>
 <div class="center">
 <table>
@@ -956,8 +956,8 @@ dollars), area (in 100 square feet), and number of beds and baths.</p>
 </tbody>
 </table>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-49"></span>
-<img src="_main_files/figure-html/unnamed-chunk-49-1.png" alt="Plot of Price vs Area for Apartments near UTM" width="60%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-72"></span>
+<img src="_main_files/figure-html/unnamed-chunk-72-1.png" alt="Plot of Price vs Area for Apartments near UTM" width="60%" />
 <p class="caption">
 Figure 16.1: Plot of Price vs Area for Apartments near UTM
 </p>
@@ -1373,7 +1373,7 @@ F-statistic: 10.78 on 1 and 7 DF,  p-value: 0.01341</code></pre>
 </div>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-125" class="definition"><strong>Definition 16.2  </strong></span></p>
+<p><span id="def:unlabeled-div-123" class="definition"><strong>Definition 16.2  </strong></span></p>
 <ul>
 <li><p><strong>Interpolation</strong> is calculating predicted values of <span class="math inline">\(y\)</span> using our
 linear model while working within the range of <span class="math inline">\(x\)</span> in which data was
@@ -1416,8 +1416,8 @@ band, roughly half above and half below zero.</p>
 <li><p><strong>No influential points or clustering:</strong> The plot should not show
 isolated influential observations or clustering.</p></li>
 </ol>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-50"></span>
-<img src="_main_files/figure-html/unnamed-chunk-50-1.png" alt="Residual Plots - Good and Bad Examples" width="70%" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-73"></span>
+<img src="_main_files/figure-html/unnamed-chunk-73-1.png" alt="Residual Plots - Good and Bad Examples" width="70%" />
 <p class="caption">
 Figure 16.2: Residual Plots - Good and Bad Examples
 </p>

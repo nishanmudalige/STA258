@@ -342,7 +342,7 @@
 <div id="introduction-2" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Introduction<a href="normal-approximation-to-the-binomial-distribution.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-32" class="definition"><strong>Definition 4.1  </strong></span>A <em>statistic</em> is a function of the observable random variables in a
+<p><span id="def:unlabeled-div-30" class="definition"><strong>Definition 4.1  </strong></span>A <em>statistic</em> is a function of the observable random variables in a
 sample and known constants.</p>
 <p>Since statistics are functions of the random variables observed in a
 sample, they themselves are random variables. As such, all statistics
@@ -428,7 +428,7 @@ variable:</p>
 <p><em>where <span class="math inline">\(p\)</span> represents the probability of success.</em></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-33" class="definition"><strong>Definition 4.2  </strong></span>Let <span class="math inline">\(X \sim \text{Bernoulli}(p)\)</span>. The mean of <span class="math inline">\(X\)</span> is <span class="math display">\[E(X) = \mu = p\]</span>
+<p><span id="def:unlabeled-div-31" class="definition"><strong>Definition 4.2  </strong></span>Let <span class="math inline">\(X \sim \text{Bernoulli}(p)\)</span>. The mean of <span class="math inline">\(X\)</span> is <span class="math display">\[E(X) = \mu = p\]</span>
 and the variance of <span class="math inline">\(X\)</span> is <span class="math display">\[\text{Var}(X) = \sigma^2 = p(1 - p)\]</span></p>
 </div>
 <p><em>To support the earlier result, we now provide a derivation of the mean,
@@ -512,7 +512,7 @@ successes in these <span class="math inline">\(n\)</span> independent trials is 
 <p><span class="math display">\[\binom{n}{x} = \frac{n!}{x!(n - x)!} \quad \text{is the binomial coefficient.}\]</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-34" class="definition"><strong>Definition 4.3  </strong></span>Let <span class="math inline">\(X \sim \text{Bin}(n, p)\)</span>. The mean of <span class="math inline">\(X\)</span> is <span class="math display">\[E(X) = \mu = np\]</span>
+<p><span id="def:unlabeled-div-32" class="definition"><strong>Definition 4.3  </strong></span>Let <span class="math inline">\(X \sim \text{Bin}(n, p)\)</span>. The mean of <span class="math inline">\(X\)</span> is <span class="math display">\[E(X) = \mu = np\]</span>
 <em>and the variance of <span class="math inline">\(X\)</span> is</em> <span class="math display">\[\text{Var}(X) = \sigma^2 = np(1 - p)\]</span></p>
 </div>
 <div id="visualizing-the-pmf-of-binomial-distributions" class="section level3 hasAnchor" number="4.4.1">
@@ -529,26 +529,26 @@ y &lt;- dbinom(x, 10, 1/6)</code></pre>
 binomial distribution with <span class="math inline">\(p = \frac{1}{6}\)</span> and increasing values of
 <span class="math inline">\(n\)</span>. As <span class="math inline">\(n\)</span> increases, the binomial distribution begins to resemble a
 normal distribution.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
-<img src="_main_files/figure-html/unnamed-chunk-2-1.png" alt="PMF of Binomial distribution with \(n = 10\) and \(p = \frac{1}{6}\)" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="_main_files/figure-html/unnamed-chunk-12-1.png" alt="PMF of Binomial distribution with \(n = 10\) and \(p = \frac{1}{6}\)" width="672" />
 <p class="caption">
 Figure 4.1: PMF of Binomial distribution with <span class="math inline">\(n = 10\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
-<img src="_main_files/figure-html/unnamed-chunk-3-1.png" alt="PMF of Binomial distribution with \(n = 50\) and \(p = \frac{1}{6}\)" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-13"></span>
+<img src="_main_files/figure-html/unnamed-chunk-13-1.png" alt="PMF of Binomial distribution with \(n = 50\) and \(p = \frac{1}{6}\)" width="672" />
 <p class="caption">
 Figure 4.2: PMF of Binomial distribution with <span class="math inline">\(n = 50\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="_main_files/figure-html/unnamed-chunk-4-1.png" alt="PMF of Binomial distribution with \(n = 100\) and \(p = \frac{1}{6}\)" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
+<img src="_main_files/figure-html/unnamed-chunk-14-1.png" alt="PMF of Binomial distribution with \(n = 100\) and \(p = \frac{1}{6}\)" width="672" />
 <p class="caption">
 Figure 4.3: PMF of Binomial distribution with <span class="math inline">\(n = 100\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
 </p>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="_main_files/figure-html/unnamed-chunk-5-1.png" alt="PMF of Binomial distribution with \(n = 300\) and \(p = \frac{1}{6}\)" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-15"></span>
+<img src="_main_files/figure-html/unnamed-chunk-15-1.png" alt="PMF of Binomial distribution with \(n = 300\) and \(p = \frac{1}{6}\)" width="672" />
 <p class="caption">
 Figure 4.4: PMF of Binomial distribution with <span class="math inline">\(n = 300\)</span> and <span class="math inline">\(p = \frac{1}{6}\)</span>
 </p>
@@ -575,8 +575,8 @@ that contains proportion <span class="math inline">\(p\)</span> of “successes�
 <li><p>The <strong>standard deviation</strong> of the sampling distribution is
 <span class="math inline">\(\sqrt{ \frac{p(1 - p)}{n} }\)</span>.</p></li>
 </ul>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="_main_files/figure-html/unnamed-chunk-6-1.png" alt="Binomial distribution with \(n = 300\), \(p = \frac{1}{6}\), and its Normal approximation" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="_main_files/figure-html/unnamed-chunk-16-1.png" alt="Binomial distribution with \(n = 300\), \(p = \frac{1}{6}\), and its Normal approximation" width="672" />
 <p class="caption">
 Figure 4.5: Binomial distribution with <span class="math inline">\(n = 300\)</span>, <span class="math inline">\(p = \frac{1}{6}\)</span>, and its Normal approximation
 </p>
@@ -645,7 +645,7 @@ Bernoulli distribution.</p>
 \quad \Rightarrow \quad
 \hat{p} \sim \mathcal{N} \left( p, \sqrt{\frac{p(1 - p)}{n}} \right)\]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-35" class="example"><strong>Example 4.1  </strong></span>In the last election, a state representative received 52% of the votes
+<p><span id="exm:unlabeled-div-33" class="example"><strong>Example 4.1  </strong></span>In the last election, a state representative received 52% of the votes
 cast. One year after the election, the representative organized a survey
 that asked a random sample of 300 people whether they would vote for him
 in the next election. If we assume that his popularity has not changed,
@@ -794,7 +794,7 @@ same distribution as <span class="math inline">\(X\)</span>. <span class="math d
 = P\left[ \frac{W - np}{\sqrt{np(1 - p)}} \leq \frac{8.5 - 8}{\sqrt{20(0.4)(0.6)}} \right]
 = P(Z \leq 0.2282) = 0.5902615\]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-36" class="example"><strong>Example 4.2  </strong></span>Fifty-one percent of adults in the U. S. whose New Year’s resolution was
+<p><span id="exm:unlabeled-div-34" class="example"><strong>Example 4.2  </strong></span>Fifty-one percent of adults in the U. S. whose New Year’s resolution was
 to exercise more achieved their resolution. You randomly select 65
 adults in the U. S. whose resolution was to exercise more and ask each
 if he or she achieved that resolution. What is the probability that

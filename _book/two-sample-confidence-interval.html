@@ -371,7 +371,7 @@ confidence interval are still usable.<br />
 variance for both groups.<br />
 </p>
 <div class="definition">
-<p><span id="def:unlabeled-div-60" class="definition"><strong>Definition 10.1  </strong></span>Suppose we are given the population variance for both two independent
+<p><span id="def:unlabeled-div-58" class="definition"><strong>Definition 10.1  </strong></span>Suppose we are given the population variance for both two independent
 groups of population. The confidence interval of <span class="math inline">\(\mu_1 - \mu_2\)</span>
 (difference of mean between population group 1 and 2) is given by the
 following:
@@ -389,7 +389,7 @@ Ideally, we have all the information about population variance from two
 chosen samples. However, that case does not usually happen. We may face
 the case with unknown variance.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-61" class="definition"><strong>Definition 10.2  </strong></span>Suppose that the chosen two independent samples have same unknown
+<p><span id="def:unlabeled-div-59" class="definition"><strong>Definition 10.2  </strong></span>Suppose that the chosen two independent samples have same unknown
 population variance. Then the two sample confidence interval for
 <span class="math inline">\(\mu_1 - \mu_2\)</span> is given by the following:
 <span class="math display">\[(\bar{x}_1 - \bar{x}_2)  \pm  t_{n_1+n_2-2; \alpha/2} \cdot s_p \cdot \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}.\]</span>
@@ -422,7 +422,7 @@ both unequal and unknown? Does two sample confidence interval still
 doable in this case? The answer is: Yes. We can still proceed with two
 sample confidence interval.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-62" class="definition"><strong>Definition 10.3  </strong></span>Suppose that our chosen two independent samples with unequal and unknown
+<p><span id="def:unlabeled-div-60" class="definition"><strong>Definition 10.3  </strong></span>Suppose that our chosen two independent samples with unequal and unknown
 population variance, then the confidence interval for <span class="math inline">\(\mu_1 - \mu_2\)</span> is
 given by:
 <span class="math display">\[(\bar{x}_1 - \bar{x}_2)  \pm t_{df; \alpha/2} \cdot \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}, \text{ where: $df = min(n_1-1, n_2-1)$.}\]</span>
@@ -433,10 +433,12 @@ respectively.</p>
 <p><strong>Visualization of Two Sample Confidence Interval</strong></p>
 <p>Only with the equation seems hard to understand, the following number
 line helps you to visualize what we try to indicate:</p>
-<figcaption>
-Visualization of two-sample confidence interval (Case 1, 2,3)
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-26"></span>
+<img src="_main_files/figure-html/unnamed-chunk-26-1.png" alt="Visualization of two-sample confidence interval (Case 1, 2, 3)." width="90%" />
+<p class="caption">
+Figure 10.1: Visualization of two-sample confidence interval (Case 1, 2, 3).
+</p>
+</div>
 <p>Earlier in this chapter we said that two sample confidence interval aims
 to compare the mean between two populations. The number line above shows
 the result of difference of means between the two populations. Now, the
@@ -444,33 +446,30 @@ question is, how do we know which population has a relatively larger
 mean? While, we can summarize it from that number line, with different
 cases:</p>
 <p><strong>1. <span class="math inline">\(\mu_1 &lt; \mu_2\)</span>:</strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>μ</em><sub>1</sub> &lt; <em>μ</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-27"></span>
+<img src="_main_files/figure-html/unnamed-chunk-27-1.png" alt="Visualization of the case when $\mu_1 &lt; \mu_2$." width="90%" />
+<p class="caption">
+Figure 10.2: Visualization of the case when <span class="math inline">\(\mu_1 &lt; \mu_2\)</span>.
+</p>
 </div>
 <p>Now, we know that the difference between <span class="math inline">\(\mu_1 &lt; \mu_2\)</span> lies on the
 negative side on the number line, such that: <span class="math inline">\(\mu_1 - \mu_2 &lt; 0\)</span>. Hence,
 by solving the inequality above we get: <span class="math inline">\(\mu_1 &lt; \mu_2\)</span> trivially.</p>
 <p><strong>2. <span class="math inline">\(\mu_1 &gt; \mu_2\)</span>:</strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>μ</em><sub>1</sub> &gt; <em>μ</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-28"></span>
+<img src="_main_files/figure-html/unnamed-chunk-28-1.png" alt="Visualization of the case when $\mu_1 &gt; \mu_2$." width="90%" />
+<p class="caption">
+Figure 10.3: Visualization of the case when <span class="math inline">\(\mu_1 &gt; \mu_2\)</span>.
+</p>
 </div>
 <p>Similarly as the case above, we know that <span class="math inline">\(\mu_1 - \mu_2 &gt; 0\)</span>, by
 observing the number line. Thus, we have: <span class="math inline">\(\mu_1 &gt; \mu_2\)</span>.</p>
 <p><strong>3. <span class="math inline">\(\mu_1 = \mu_2\)</span>:</strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>μ</em><sub>1</sub> = <em>μ</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-29"></span>
+<img src="_main_files/figure-html/unnamed-chunk-29-1.png" alt="Visualization of the case when $\mu_1 = \mu_2$." width="90%" />
+<p class="caption">
+Figure 10.4: Visualization of the case when <span class="math inline">\(\mu_1 = \mu_2\)</span>.
+</p>
 </div>
 <p>However, 0 is an element in the range of the difference between
 <span class="math inline">\(\mu_1 - \mu_2\)</span>, such that there is a chance when the two means could be
@@ -493,7 +492,7 @@ assumption is not required by the Central Limit Theorem.<br />
 <strong>Example (Comparing Two Population Means Managerial Success Indexes for
 Two Groups)</strong></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-63" class="example"><strong>Example 10.1  </strong></span>Behavioural researchers have developed an index designed to measure
+<p><span id="exm:unlabeled-div-61" class="example"><strong>Example 10.1  </strong></span>Behavioural researchers have developed an index designed to measure
 managerial success. The index (measured on a 100- point scale) is based
 on the manager’s length of time in the organization and their level
 within the term; the higher the index, the more successful the manager.
@@ -684,7 +683,7 @@ Then we can use the fourth column to get the mean value, sample variance
 and sample standard deviation of the difference. Now, let’s begin with
 the proper definition:</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-64" class="definition"><strong>Definition 10.4  </strong></span>Suppose we have two samples that are dependent with each other, the
+<p><span id="def:unlabeled-div-62" class="definition"><strong>Definition 10.4  </strong></span>Suppose we have two samples that are dependent with each other, the
 confidence interval on paired data’s mean (<span class="math inline">\(\mu_d\)</span>) is given by:
 <span class="math display">\[\bar{x}_d  \pm t_{n-1, \alpha/2} \cdot \frac{s_d}{\sqrt{n}}.\]</span> In this
 case, the reference distribution is t-distribution with <span class="math inline">\(n-1\)</span> degrees of
@@ -701,12 +700,11 @@ measurement</strong>. Then, we can continue our analysis about the data.<br />
 sample confidence interval on paired data. Again, let’s construct a
 number line for each case.</p>
 <p><strong>1. <span class="math inline">\(\bar{M}_1 &lt; \bar{M}_2\)</span>:</strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>M̄</em><sub>1</sub> &lt; <em>M̄</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-30"></span>
+<img src="_main_files/figure-html/unnamed-chunk-30-1.png" alt="Visualization of the case when $\bar{M}_1 &lt; \bar{M}_2$" width="90%" />
+<p class="caption">
+Figure 10.5: Visualization of the case when <span class="math inline">\(\bar{M}_1 &lt; \bar{M}_2\)</span>
+</p>
 </div>
 <p>From the number line above, we know that the result of <span class="math inline">\(\mu_d\)</span> lies only
 in the negative side of the number line, also we use <span class="math inline">\(M_1 - M_2\)</span> to get
@@ -714,12 +712,11 @@ the difference data then calculate the average of difference data. Now,
 we have: <span class="math inline">\(\bar{M}_1 - \bar{M}_2 = \mu_d &lt; 0\)</span>. Hence, we conclude that
 <span class="math inline">\(\bar{M}_1 &lt; \bar{M}_2.\)</span></p>
 <p><strong>2. <span class="math inline">\(\bar{M}_1 &gt; \bar{M}_2\)</span>:</strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>M̄</em><sub>1</sub> &gt; <em>M̄</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-31"></span>
+<img src="_main_files/figure-html/unnamed-chunk-31-1.png" alt="Visualization of the case when $\bar{M}_1 &gt; \bar{M}_2$" width="90%" />
+<p class="caption">
+Figure 10.6: Visualization of the case when <span class="math inline">\(\bar{M}_1 &gt; \bar{M}_2\)</span>
+</p>
 </div>
 <p>From the number line above, we know that the result of <span class="math inline">\(\mu_d\)</span> lies only
 in the positive side of the number line, also we use <span class="math inline">\(M_1 - M_2\)</span> to get
@@ -727,12 +724,11 @@ the difference data then calculate the average of difference data. Now,
 we have: <span class="math inline">\(\bar{M}_1 - \bar{M}_2 = \mu_d &gt; 0\)</span>. Hence, we conclude that
 <span class="math inline">\(\bar{M}_1 &gt; \bar{M}_2.\)</span></p>
 <p><strong>3. <span class="math inline">\(\bar{M}_1 = \bar{M}_2\)</span>:</strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>M̄</em><sub>1</sub> = <em>M̄</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-32"></span>
+<img src="_main_files/figure-html/unnamed-chunk-32-1.png" alt="Visualization of the case when $\bar{M}_1 = \bar{M}_2$" width="90%" />
+<p class="caption">
+Figure 10.7: Visualization of the case when <span class="math inline">\(\bar{M}_1 = \bar{M}_2\)</span>
+</p>
 </div>
 <p>While, 0 is included in the range of <span class="math inline">\(\mu_d\)</span>, then there is a chance
 that <span class="math inline">\(\bar{M}_1 - \bar{M_2} = \mu_d = 0.\)</span> Hence, we conclude that
@@ -762,24 +758,20 @@ two independent groups (one group from each campus), then apply two
 sample confidence interval to approximate which campus has a larger
 proportion.<br />
 It may still be difficult to understand, now let’s begin with figures:</p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of two population of all students from UTSG
-(left) and UTM (right)
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-33"></span>
+<img src="_main_files/figure-html/unnamed-chunk-33-1.png" alt="Visualization of two population of all students from UTSG (left) and UTM (right)." width="90%" />
+<p class="caption">
+Figure 10.8: Visualization of two population of all students from UTSG (left) and UTM (right).
+</p>
 </div>
 <p>This figure represents the population of all students from two campuses.
 To begin with our task (find the proportion of left-handed students), we
 can select a group of random sample from each campus:</p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of two selected random sample from UTSG (left)
-and UTM (right)
-</figcaption>
-</figure>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-34"></span>
+<img src="_main_files/figure-html/unnamed-chunk-34-1.png" alt="Visualization of two selected random sample from UTSG (left) and UTM (right)." width="90%" />
+<p class="caption">
+Figure 10.9: Visualization of two selected random sample from UTSG (left) and UTM (right).
+</p>
 </div>
 <p>As you can see, we have chosen our random sample from each campus with
 sample size <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span>, respectively. Now we need estimators to
@@ -788,7 +780,7 @@ are the proportion of left-handed students from each random sample
 respectively. Since we have all the information we need, now we can
 apply our confidence interval from the two random sample.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-65" class="definition"><strong>Definition 10.5  </strong></span>Draw an SRS of size <span class="math inline">\(n_1\)</span> from a population having proportion <span class="math inline">\(p_1\)</span> of
+<p><span id="def:unlabeled-div-63" class="definition"><strong>Definition 10.5  </strong></span>Draw an SRS of size <span class="math inline">\(n_1\)</span> from a population having proportion <span class="math inline">\(p_1\)</span> of
 successes and draw an independent SRS of size <span class="math inline">\(n_2\)</span> from another
 population having proportion <span class="math inline">\(p_2\)</span> of successes. When <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span>
 are large, an approximate level C confidence interval for <span class="math inline">\(p_1 - p_2\)</span> is
@@ -806,37 +798,34 @@ and
 <p>Similarly as confidence interval on independent and dependent data, we
 are going to provide number lines, in order to help you to visualize the
 result easily.</p>
-<p><strong>1. <span class="math inline">\(p_1 &gt; p_2\)</span>:</strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>p</em><sub>1</sub> &gt; <em>p</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<p><strong>1. <span class="math inline">\(\hat{p_1} &gt; \hat{p_2}\)</span>:</strong></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-35"></span>
+<img src="_main_files/figure-html/unnamed-chunk-35-1.png" alt="Visualization of the case when $\hat{p}_1 &gt; \hat{p}_2$." width="90%" />
+<p class="caption">
+Figure 10.10: Visualization of the case when <span class="math inline">\(\hat{p}_1 &gt; \hat{p}_2\)</span>.
+</p>
 </div>
 <p>From the number line, the result of <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span> lies only on
 the positive side, such that <span class="math inline">\(\hat{p}_1 - \hat{p}_2 &gt; 0\)</span>. Hence,
 <span class="math inline">\(\hat{p}_1 &gt; \hat{p}_2\)</span>. Note that proportion is a number between <span class="math inline">\(0\)</span>
 and <span class="math inline">\(1\)</span>, such that the difference of two proportions only between <span class="math inline">\(-1\)</span>
 and <span class="math inline">\(1\)</span>.</p>
-<p><strong>2. <span class="math inline">\(\hat{p}_1 &lt; \hat{p}_2\)</span></strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>p</em><sub>1</sub> &lt; <em>p</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<p><strong>2. <span class="math inline">\(\hat{p}_1 &lt; \hat{p}_2\)</span>:</strong></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-36"></span>
+<img src="_main_files/figure-html/unnamed-chunk-36-1.png" alt="Visualization of the case when $\hat{p}_1 &lt; \hat{p}_2$." width="90%" />
+<p class="caption">
+Figure 10.11: Visualization of the case when <span class="math inline">\(\hat{p}_1 &lt; \hat{p}_2\)</span>.
+</p>
 </div>
 <p>Now, the result of <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span> lies only on the positive
 side, such that <span class="math inline">\(\hat{p}_1 - \hat{p}_2 &lt; 0\)</span>. Hence,
 <span class="math inline">\(\hat{p}_1 &lt; \hat{p}_2\)</span>.</p>
-<p><strong>3. <span class="math inline">\(\hat{p}_1 = \hat{p}_2\)</span></strong></p>
-<div class="center">
-<figure>
-<figcaption>
-Visualization of the case when <span class="math inline"><em>p̂</em><sub>1</sub> = <em>p̂</em><sub>2</sub></span>
-</figcaption>
-</figure>
+<p><strong>3. <span class="math inline">\(\hat{p}_1 = \hat{p}_2\)</span>:</strong></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-37"></span>
+<img src="_main_files/figure-html/unnamed-chunk-37-1.png" alt="Visualization of the case when $\hat{p}_1 = \hat{p}_2$." width="90%" />
+<p class="caption">
+Figure 10.12: Visualization of the case when <span class="math inline">\(\hat{p}_1 = \hat{p}_2\)</span>.
+</p>
 </div>
 <p>In this case, <span class="math inline">\(0\)</span> lies in the range of <span class="math inline">\(\hat{p}_1 - \hat{p}_2\)</span>, such
 that there is a chance when <span class="math inline">\(\hat{p}_1 - \hat{p}_2 = 0\)</span>. Hence, we

@@ -85,7 +85,6 @@ distribution with $\alpha = \frac{n}{2} \text{ and } \beta = 2$. Now,
 let's prove it by using moment generating function.\
 The proof is quite straightforward as the following shows:
 
-::: proof
 *Proof.* Suppose
 $X \sim Gamma( \alpha = \frac{n}{2} \text{, } \beta = 2).$\
 Then the following moment generating function holds for $X$:
@@ -93,7 +92,6 @@ $$M_{X}(t) = (1- 2t)^{\frac{-n}{2}}, \text{ for $t < \frac{1}{2}$}.$$
 Compare the moment generating function of $X$ under Gamma distribution
 with Chi-square distribution, we can conclude that
 $X \sim \chi_{n}^{2}$. ◻
-:::
 
 **Obtaining Chi-square Distribution by Normal Distribution**
 
@@ -116,14 +114,15 @@ the proper proof, let's grab everything we need:
   given continuous random variable that:
   $$M_{Z}(t) = \int_{-\infty}^{\infty} e^{tx}f_{X}(x)\,dx.$$
 
-- 2\. We also need Gaussian integral: $$\begin{aligned}
-                  \int_{-\infty}^{\infty} e^{-x^2}\,dx &= \sqrt{\pi}; \label{eq:gaussian1} \\
-                  \int_{-\infty}^{\infty} e^{-kx^2}\,dx &= \sqrt{\frac{\pi}{k}}, \text{ for $k > 0$}; \label{eq:gaussian2} \\
-                  \int_{-\infty}^{\infty} e^{kx^2}\,dx &= \sqrt{\frac{\pi}{-k}}, \text{ for $k < 0$}. \label{eq:gaussian3}
-          
-  \end{aligned}$$
+- 2\. We also need Gaussian integral: 
+\[
+\begin{aligned}
+\int_{-\infty}^{\infty} e^{-x^2} \, dx &= \sqrt{\pi} \\
+\int_{-\infty}^{\infty} e^{-kx^2} \, dx &= \sqrt{\frac{\pi}{k}}, \quad \text{for } k > 0 \\
+\int_{-\infty}^{\infty} e^{kx^2} \, dx &= \sqrt{\frac{\pi}{-k}}, \quad \text{for } k < 0
+\end{aligned}
+\]
 
-::: proof
 *Proof.* Suppose that $Z \sim N(0, 1)$, then
 $f_{Z}(z) = \frac{1}{\sqrt{2\pi}} \cdot e^{\frac{-z^2}{2}}$.\
 The moment generating function (MGF) of $Z^2$ is: $$\begin{aligned}
@@ -143,7 +142,6 @@ M_{Z^2}(t) &= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-u^2} \cdot \frac
 
 This is the MGF of a chi-squared distribution with 1 degree of freedom,
 $Z^2 \sim \chi_1^2$. ◻
-:::
 
 Now, we can do another proof by using Theorem $2.1$.
 

@@ -352,7 +352,7 @@ for other parameters and scenarios. Some advanced considerations are
 discussed. Understanding this chapter will make the rest of this book,
 and indeed the rest of statistics, seem much more familiar.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-41" class="definition"><strong>Definition 6.1  </strong></span><strong>Population:</strong> A group of interest (typically large).</p>
+<p><span id="def:unlabeled-div-39" class="definition"><strong>Definition 6.1  </strong></span><strong>Population:</strong> A group of interest (typically large).</p>
 <p><strong>Sample:</strong> A subset of a population.</p>
 <p><strong>Parameter (of population):</strong> A numerical characteristic of a
 population. These are usually <span style="color: blue">unknown</span> in
@@ -378,7 +378,7 @@ estimate</strong>.</p>
 population mean using an <strong>interval estimate</strong> that gives a <em>range of
 real numbers</em> that we hope contains the population mean, <span class="math inline">\(\mu\)</span>.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-42" class="example"><strong>Example 6.1  </strong></span></p>
+<p><span id="exm:unlabeled-div-40" class="example"><strong>Example 6.1  </strong></span></p>
 <ul>
 <li><p><span class="math inline">\(\bar{x}\)</span> is a point estimate of <span class="math inline">\(\mu\)</span></p></li>
 <li><p><span class="math inline">\(s^2\)</span> is a point estimate of <span class="math inline">\(\sigma^2\)</span></p></li>
@@ -391,7 +391,7 @@ statistics are not guaranteed to be exactly equal to parameters.</p>
 <p>Therefore, we create <u>intervals</u> around statistics which we
 believe capture the parameter.</p>
 <div class="definition">
-<p><span id="def:unlabeled-div-43" class="definition"><strong>Definition 6.2  </strong></span>A confidence interval is a plausible range of values that captures a
+<p><span id="def:unlabeled-div-41" class="definition"><strong>Definition 6.2  </strong></span>A confidence interval is a plausible range of values that captures a
 parameter with a quantified degree of confidence.</p>
 </div>
 <figure>
@@ -532,8 +532,8 @@ matplot(rbind(xbar - z.star * SE, xbar + z.star * SE),
         xlab = &quot; &quot;, lab = &quot; &quot;);
 abline(v = 0, lty = 2);</code></pre>
 </div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-9"></span>
-<img src="_main_files/figure-html/unnamed-chunk-9-1.png" alt="Simulated 95% confidence intervals for the population mean" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-19"></span>
+<img src="_main_files/figure-html/unnamed-chunk-19-1.png" alt="Simulated 95% confidence intervals for the population mean" width="672" />
 <p class="caption">
 Figure 6.1: Simulated 95% confidence intervals for the population mean
 </p>
@@ -547,8 +547,8 @@ level <span class="math inline">\(C\)</span> confidence interval for <span class
 <p><span class="math display">\[\bar{x} \pm z_{\ast} \cdot \frac{\sigma}{\sqrt{n}}\]</span></p>
 <p>The critical value <span class="math inline">\(z_{\ast}\)</span> is illustrated in a Figure below and
 depends on <span class="math inline">\(C\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-10"></span>
-<img src="_main_files/figure-html/unnamed-chunk-10-1.png" alt="The central area under the standard normal curve with confidence level \(C\)" width="672" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-20"></span>
+<img src="_main_files/figure-html/unnamed-chunk-20-1.png" alt="The central area under the standard normal curve with confidence level \(C\)" width="672" />
 <p class="caption">
 Figure 6.2: The central area under the standard normal curve with confidence level <span class="math inline">\(C\)</span>
 </p>
@@ -616,7 +616,7 @@ several important assumptions:</p>
 </table>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-44" class="example"><strong>Example 6.2  </strong></span>Playbill magazine reported that the mean annual household income of its
+<p><span id="exm:unlabeled-div-42" class="example"><strong>Example 6.2  </strong></span>Playbill magazine reported that the mean annual household income of its
 readers is $119,155. Assume this estimate is based on a sample of 80
 households, and that the population standard deviation is known to be
 <span class="math inline">\(\sigma = 30{,}000\)</span>.</p>
@@ -645,7 +645,7 @@ households, and that the population standard deviation is known to be
 between $110,534.96 and $127,775.04.</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-45" class="example"><strong>Example 6.3  </strong></span><strong>Scenario:</strong></p>
+<p><span id="exm:unlabeled-div-43" class="example"><strong>Example 6.3  </strong></span><strong>Scenario:</strong></p>
 <p>The number of cars sold annually by used car salespeople is known to be
 <strong>normally distributed</strong>, with a population standard deviation of
 <span class="math inline">\(\sigma = 15\)</span>. A random sample of <span class="math inline">\(n = 15\)</span> salespeople was taken, and
@@ -695,7 +695,7 @@ approximately. This type of estimate is correct 95% of the time.</strong></p>
 <p><em>Note: A sample is considered large if <span class="math inline">\(n \geq 30\)</span>.</em></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-46" class="example"><strong>Example 6.4  </strong></span>Suppose a student measuring the boiling temperature of a certain liquid
+<p><span id="exm:unlabeled-div-44" class="example"><strong>Example 6.4  </strong></span>Suppose a student measuring the boiling temperature of a certain liquid
 observes the readings (in degrees Celsius) 102.5, 101.7, 103.1, 100.9,
 100.5, and 102.2 on 6 different samples of the liquid. He calculates the
 sample mean to be 101.82. If he knows that the distribution of boiling
