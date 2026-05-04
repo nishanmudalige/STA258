@@ -1,21 +1,16 @@
----
+ ---
 title: "STA258: Statistics with Applied Probability"
-author: "Nishan Mudalige"
+author: "Nishan Mudalige, Masoud Ataei, Nurlana Alili, Xi (Bryan) Su"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output:
-  bookdown::html_document2:
-    toc: false
-    number_sections: false
+  bookdown::gitbook
 knit: bookdown::render_book
 documentclass: book
 github-repo: nishanmudalige/STA258
-bibliography: [references.bib, packages.bib]
-biblio-style: apalike
 link-citations: yes
 nocite: '@*'
-description: "Interactive landing page for STA258: Statistics with Applied Probability."
----
+description: "Bookdown hosted on github using bookdown::gitbook."
 ---
 
 <style>
@@ -106,7 +101,10 @@ invisible(quads3d(
 rgl.close()
 ```
 
+<!--
 <h2 style="text-align: center; color: #FF2C21;">Work in Progress</h2>
+-->
+<h2 style="text-align: center"> Landing Page </h2>
 
 ---
 

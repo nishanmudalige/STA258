@@ -1,14 +1,3 @@
-book_filename: "STA258"
+book_filename: "Book"
 delete_merged_file: true
 output_dir: "docs"
-
-language:
-  ui:
-    chapter_name: ""
-
-theorem:
-  definition: ["Note", "Notes"]
-  remark: ["Remark", "Remarks"]
-
-rmd_files:
-  - "index.Rmd"

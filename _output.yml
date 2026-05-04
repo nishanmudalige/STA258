@@ -1,5 +1,25 @@
-bookdown::html_document2:
+bookdown::gitbook:
   css: [style.css]
-  toc: false
-  number_sections: false
-  self_contained: false
+  config:
+    toc:
+      # before: |
+      #   <li><a href="./">STA258: Statistics with </a></li>
+      #   <li><a href="./">Applied Probability</a></li>
+      # after: |
+      #   <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    sharing:
+      github: yes
+      facebook: no
+bookdown::pdf_book:
+  keep_tex: yes
+  fig_crop: false
+  latex_engine: xelatex
+  citation_package: natbib
+  template: null
+  pandoc_args: [--top-level-division=chapter, --wrap=none]
+  toc_depth: 3
+  toc_unnumbered: no
+  toc_appendix: yes
+  highlight_bw: yes
+  quote_footer: ["\\VA{", "}{}"]
+bookdown::epub_book: default
