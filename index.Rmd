@@ -103,21 +103,29 @@ rgl.close()
 
 <!--
 <h2 style="text-align: center; color: #FF2C21;">Work in Progress</h2>
--->
+
 <h2 style="text-align: center"> Landing Page </h2>
+-->
 
 ---
 
-### Nishan Mudalige, Masoud Ataei, Nurlana Alili, Xi (Bryan) Su {.unlisted .unnumbered}
+<!--
+### Nishan Mudalige {.unlisted .unnumbered}
 
-This is a customized e-book for the course **STA258: Statistics with Applied Probability** at the University of Toronto Mississauga.
 
-The site is currently being developed as an interactive learning resource for probability, statistical inference, applied modelling, and computational statistics.
+This is the landing page for **STA258: Statistics with Applied Probability** at the University of Toronto Mississauga.
+-->
 
-<p style="text-align: center; margin-top: 1.5em;">
-  <strong>STA258 Interactive Course E-book</strong><br>
-  University of Toronto Mississauga
-</p>
+<h4>
+
+Click on a link below to access content:
+
+<ul>
+  <li> <a href="https://nishanmudalige.github.io/STA258_Book/">E-book</a>  </li>
+  <li> <a href="https://nishanmudalige.github.io/STA258_Tutorials/">Interactice R Tutorials</a>  </li>
+</ul>
+
+</h4>
 
 ---
 
