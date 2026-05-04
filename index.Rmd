@@ -1,0 +1,140 @@
+---
+title: "STA258: Statistics with Applied Probability"
+author: "Nishan Mudalige"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::html_document2:
+    toc: false
+    number_sections: false
+knit: bookdown::render_book
+documentclass: book
+github-repo: nishanmudalige/STA258
+bibliography: [references.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+nocite: '@*'
+description: "Interactive landing page for STA258: Statistics with Applied Probability."
+---
+---
+
+<style>
+/* Landing-page layout: hide the GitBook-generated sidebar on index.html. */
+.book .book-summary {
+  display: none;
+}
+
+/* Re-centre the page body after the sidebar is hidden. */
+.book.with-summary .book-body,
+.book .book-body,
+.book.with-summary .book-header.fixed,
+.book .book-header.fixed {
+  left: 0;
+}
+
+/* Hide the sidebar toggle button on the landing page. */
+.book .book-header .btn.pull-left {
+  display: none;
+}
+
+/* Keep the landing page content comfortably centred. */
+.book .book-body .page-wrapper .page-inner {
+  max-width: 980px;
+}
+</style>
+
+# STA258: Statistics with Applied Probability <br> University of Toronto Mississauga {.unnumbered .unlisted}
+
+```{r setup, include=FALSE}
+library(rgl)
+rgl::setupKnitr(autoprint = FALSE)
+
+knitr::opts_chunk$set(
+  echo    = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  webgl   = FALSE,
+  rgl     = FALSE
+)
+```
+
+<center>
+```{r, echo=FALSE, warning=FALSE, webgl=TRUE, fig.show="hide"}
+library(rgl); library(png); library(RCurl)
+
+# 1. load & flip
+myurl <- "https://raw.githubusercontent.com/nishanmudalige/STA258/main/Hex%20Badges/STA258_no_bg.png"
+img   <- readPNG(getURLContent(myurl))
+img   <- img[nrow(img):1, , ]
+
+# 2. flatten over white
+alpha      <- img[,,4]
+img[,,1]   <- img[,,1] * alpha + (1 - alpha)
+img[,,2]   <- img[,,2] * alpha + (1 - alpha)
+img[,,3]   <- img[,,3] * alpha + (1 - alpha)
+img[,,4]   <- 1
+
+# 3. build quad
+h  <- dim(img)[1]; w <- dim(img)[2]; sf <- max(w, h)/2
+front <- matrix(c(
+  -w/2, -h/2, 0,
+  w/2, -h/2, 0,
+  w/2,  h/2, 0,
+  -w/2,  h/2, 0
+), byrow=TRUE, ncol=3) / sf
+front <- rotate3d(front, angle=pi/2, x=1, y=0, z=0)
+
+# 4. texture coords
+tex <- matrix(c(0,0, 1,0, 1,1, 0,1), byrow=TRUE, ncol=2)
+
+# 5. draw & embed
+invisible(open3d())
+
+bg3d("white")
+view3d(theta=0, phi=-90, zoom=0.675)
+invisible(quads3d(
+  front,
+  texture   = img,
+  texcoords = tex,
+  lit       = FALSE,
+  col       = "white"
+))
+```
+</center>
+
+```{r cleanup-rgl, include=FALSE}
+rgl.close()
+```
+
+<h2 style="text-align: center; color: #FF2C21;">Work in Progress</h2>
+
+---
+
+### Nishan Mudalige, Masoud Ataei, Nurlana Alili, Xi (Bryan) Su {.unlisted .unnumbered}
+
+This is a customized e-book for the course **STA258: Statistics with Applied Probability** at the University of Toronto Mississauga.
+
+The site is currently being developed as an interactive learning resource for probability, statistical inference, applied modelling, and computational statistics.
+
+<p style="text-align: center; margin-top: 1.5em;">
+  <strong>STA258 Interactive Course E-book</strong><br>
+  University of Toronto Mississauga
+</p>
+
+---
+
+<!-- Script for GitHub buttons to work -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<p style="text-align: center;">
+<!-- Star -->
+<a class="github-button" href="https://github.com/nishanmudalige/STA258" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" aria-label="Star nishanmudalige/STA258 on GitHub">Star</a>
+<!-- Watch -->
+<a class="github-button" href="https://github.com/nishanmudalige/STA258/subscription" data-color-scheme="no-preference: dark; light: light; dark: dark;" data-icon="octicon-eye" data-size="large" aria-label="Watch nishanmudalige/STA258 on GitHub">Watch</a>
+<!-- Fork -->
+<a class="github-button" href="https://github.com/nishanmudalige/STA258/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" aria-label="Fork nishanmudalige/STA258 on GitHub">Fork</a>
+<!-- Issues -->
+<a class="github-button" href="https://github.com/nishanmudalige/STA258/issues" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue nishanmudalige/STA258 on GitHub">Issue</a>
+<!-- Discuss -->
+<a class="github-button" href="https://github.com/nishanmudalige/STA258/discussions" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-comment-discussion" data-size="large" aria-label="Discuss nishanmudalige/STA258 on GitHub">Discuss</a>
+</p>

@@ -1,0 +1,5 @@
+bookdown::html_document2:
+  css: [style.css]
+  toc: false
+  number_sections: false
+  self_contained: false
